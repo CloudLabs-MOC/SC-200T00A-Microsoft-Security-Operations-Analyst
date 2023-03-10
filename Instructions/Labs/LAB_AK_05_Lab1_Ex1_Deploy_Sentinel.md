@@ -123,18 +123,18 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 1. Run the following KQL statement.
 
-```KQL
-ThreatIntelligenceIndicator
-```
-**Note:** You may need to wait for 20 minutes to get the expected output.
+   ```KQL
+   ThreatIntelligenceIndicator
+   ```
+   **Note:** You may need to wait for 20 minutes to get the expected output.
 
-Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column.  
+   Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column.  
 
-```KQL
-ThreatIntelligenceIndicator
-| project DomainName
-```
+   ```KQL
+   ThreatIntelligenceIndicator
+   | project DomainName
+   ```
 
-![Picture 1](../Media/SC-200-img50.png)
+   ![Picture 1](../Media/SC-200-img50.png)
 
 ## You have completed the lab.
