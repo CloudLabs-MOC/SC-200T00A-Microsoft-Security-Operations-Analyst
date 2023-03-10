@@ -26,7 +26,7 @@ In this task, you will create a Log Analytics workspace for use with Microsoft D
 
 1. Enter *RG-Defender* and select **Ok**.
 
-1. For the Name, enter something unique like: *uniquenameDefender*.
+1. For the Name, enter *uniquenameDefender*.
 
 1. Select **Review + Create**.
 
