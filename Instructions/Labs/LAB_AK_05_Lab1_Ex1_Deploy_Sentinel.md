@@ -4,6 +4,19 @@
 
 You're a Security Operations Analyst working at a company that is implementing Microsoft Sentinel. You're responsible for setting up the Microsoft Sentinel environment to meet the company requirement to minimize cost, meet compliance regulations, and provide the most manageable environment for your security team to perform their daily job responsibilities.
 
+## Lab objectives
+ In this lab, you will perform the following:
+- Create a Log Analytics Workspace
+- Initialize the Microsoft Sentinel Workspace
+- Create a Watchlist
+- Create a Threat Indicator
+
+## Estimated time: 120 minutes
+
+## Architecture Diagram
+
+  ![Picture 1](../Media/SC200-Lab_Diagrams_Mod5_L1_Ex1.png)
+  
 ### Task 1: Create a Log Analytics Workspace
 
 In this task, you will create a Log Analytics workspace for use with Microsoft Defender for Cloud.
@@ -132,12 +145,17 @@ In this task, you will create an indicator in Microsoft Sentinel.
     ```
 
    ![Picture 1](../Media/SC-200-img50.png)
+ 
+   >**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
-## You have completed the lab
+### Review
+In this lab, you have completed the following:
+- Created a Log Analytics Workspace
+- Created a Watchlist
+- Created a Threat Indicator
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-- Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+## You have successfully completed the lab
