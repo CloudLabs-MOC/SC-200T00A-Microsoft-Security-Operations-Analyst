@@ -14,7 +14,7 @@ You start by initializing the Defender for the Endpoint environment. Next, you o
 - Onboard a Device
 - Configure Roles and Device Groups
 
-## Estimated time: 120 minutes
+## Estimated time: 60 minutes
 
 ## Architecture Diagram
 
