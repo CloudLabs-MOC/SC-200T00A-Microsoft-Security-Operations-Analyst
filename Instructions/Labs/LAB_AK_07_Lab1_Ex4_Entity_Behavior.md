@@ -1,19 +1,25 @@
----
-lab:
-    title: 'Exercise 4 - Explore Entity Behavior Analytics'
-    module: 'Learning Path 7 - Create detections and perform investigations using Microsoft Sentinel'
----
 
-# Learning Path 7 - Lab 1 - Exercise 4 - Explore Entity Behavior Analytics
+# Module 7 - Lab 1 - Exercise 4 - Explore Entity Behavior Analytics
 
 ## Lab scenario
 
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You already created Scheduled and Microsoft Security Analytics rules. 
 
-
 You need to configure Microsoft Sentinel to perform Entity Behavior Analytics to discover anomalies and provide entity analytic pages.
 
 >**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Explore%20entity%20behavior%20analytics)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
+
+## Lab objectives
+ In this lab, you will perform the following:
+
+- Understand the Attacks
+- Understand Detection Modeling
+
+## Estimated time:  minutes
+
+## Architecture Diagram
+
+  ![Picture 1](../Media/SC200-Lab_Diagrams_Mod7_L1_Ex4.png)
 
 ### Task 1: Explore Entity Behavior 
 
@@ -77,6 +83,8 @@ In this task, you will confirm Anomalies analytics rules are enabled.
 1. Select **Next: Review** and then **Save** to update the rule.
 
     >**Note:** You can upgrade the **Flighting** rule to **Production** by changing the setting on this rule and save the changes. The **Production** rule will become the **Flighting** rule afterwards.
-    
+
+### Review
+In this lab, you have understood the Attacks and Detection Modeling
 
 ## Proceed to Exercise 5
