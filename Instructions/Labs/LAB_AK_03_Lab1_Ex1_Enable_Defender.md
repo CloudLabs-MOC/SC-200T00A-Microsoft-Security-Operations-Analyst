@@ -100,7 +100,7 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 1. Select and right-click on the **WINServer** virtual machine from the virtual machine section in the middle and select start, then again right-click on the **WINServer** virtual machine and select **connect**.
 
-**Note** To enable the clipboard Right click on WIN1-xxxx and select hyper-v Settings and click on **enhanced session mode** and check the **use enhanced mode** click on apply Then restart your virtual machine, once vm starts you will get a configuration pop-up click on show more options and select local resources and make sure the clipboard is selected
+   >**Note** To enable the clipboard Right click on WIN1-xxxx and select hyper-v Settings and click on **enhanced session mode** and check the **use enhanced mode** click on apply Then restart your virtual machine, once vm starts you will get a configuration pop-up click on show more options and select local resources and make sure the clipboard is selected
 
 1. It asks you to press ctrl+alt+dlt, Go-to **actions** in the top of VM toolbar and click on **ctrl+alt+dlt** (**Skip if not asked**)
 
@@ -109,10 +109,10 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 1. Open the Microsoft Edge browser and navigate to the Azure portal at https://portal.azure.com.
 
 1. In the **Sign in** dialog box, copy, and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
-**NOTE**: You can use the clipboard in the toolbox of VM to copy and paste
+   >**NOTE**: You can use the clipboard in the toolbox of VM to copy and paste
 
 1. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
-**NOTE**: You can use the clipboard in the toolbox of VM to copy and paste
+   >**NOTE**: You can use the clipboard in the toolbox of VM to copy and paste
 
 1. In the Search bar of the Azure portal, type *Arc*, then select **Azure Arc**.
 
@@ -128,7 +128,7 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 1. Select the Resource group you created earlier. **Hint:** *RG-Defender*
 
-    **Note:** If you haven't already created a resource group, open another tab and create the resource group and start over.
+   >**Note:** If you haven't already created a resource group, open another tab and create the resource group and start over.
 
 1. Select a Region in this case choose **EAST-US**   
 
@@ -158,7 +158,7 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 1. Select **Refresh** until the WINServer server name appears.
 
-    **Note:** This could take a few minutes.
+    >**Note:** This could take a few minutes.
 
 
 ### Task 5: Protect an On-Premises Server
