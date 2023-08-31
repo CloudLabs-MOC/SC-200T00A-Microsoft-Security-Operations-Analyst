@@ -1,5 +1,21 @@
 # Module 7 - Lab 1 - Exercise 3 - Create a Scheduled Query
 
+## Lab scenario
+
+In this lab, you will  learn  how to create a scheduled query and connect it to the Teams channel you created in the previous exercise
+
+## Lab objectives
+ In this lab, you will perform the following:
+ 
+- Create a Scheduled Query
+- Test the new rule
+
+## Estimated time:  minutes
+
+## Architecture Diagram
+
+  ![Picture 1](../Media/SC200-Lab_Diagrams_Mod7_L1_Ex3.png)
+  
 ### Task 1: Create a Scheduled Query.
 
 In this task, you will create a scheduled query and connect it to the Teams channel you created in the previous exercise.
@@ -134,5 +150,9 @@ In this task, you will test your new scheduled query rule.
     ![Picture 1](../Media/SC-200-img30.png)
 
 18. Open Microsoft Teams by opening a browser tab and going to https://teams.microsoft.com. Go to the *SOC* Team and see the message post about the incident.
+### Review
+In this lab, you have completed the following:
+- Created a Scheduled Query
+- Tested the new rule    
 
 ## Proceed to Exercise 4
