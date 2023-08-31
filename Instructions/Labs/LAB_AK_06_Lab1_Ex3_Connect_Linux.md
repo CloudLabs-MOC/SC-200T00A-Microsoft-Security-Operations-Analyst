@@ -6,6 +6,19 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
   >**Important:** There are steps within the next Tasks that are done in different virtual machines. Look for the Virtual Machine name references
 
+## Lab objectives
+ In this lab, you will perform the following:
+ 
+- Connect a Linux Host using the Common Event Format connector
+- Connect a Linux host using the Syslog connector
+- Configure the facilities you want to collect and their severities for the Syslog connector
+
+## Estimated time: 30 minutes
+
+## Architecture Diagram
+
+  ![Picture 1](../Media/SC200-Lab_Diagrams_Mod6_L1_Ex3.png)
+
 ### Task 1: Access the Microsoft Sentinel Workspace
 
 In this task, you will access your Microsoft Sentinel workspace.
@@ -30,7 +43,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 1. Select **Data connectors** from the Configuration area in Microsoft Sentinel.
 
-1. Go-to content hub and search  **Common Event Format** and click on install
+1. Go to content hub and search  **Common Event Format** and click on install
 
 1. From the Data Connectors tab, search for the **Common Event Format (CEF) via Legacy agent** connector and select it from the list.
 
@@ -56,7 +69,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
    ![linux login](../Media/SC-200-img12updated.png)
 
-1. You are now ready to paste in the **1.2 Install the CEF collector on the Linux machine** from the earlier step. Make sure that the script from Azure is in the clipboard . In PowerShell right-click the top bar and choose **Edit** and then **Paste**. Once pasted add a **3** to the word *python* as shown below:
+1. You are now ready to paste in the **1.2 Install the CEF collector on the Linux machine** from the earlier step. Make sure that the script from Azure is in the clipboard. In PowerShell right-click the top bar and choose **Edit** and then **Paste**. Once pasted add a **3** to the word *python* as shown below:
 
    ![ConnectorScript](../Media/ConnectorScriptupdated.png)
    
@@ -77,7 +90,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 1. Select the Microsoft Sentinel Workspace you created in a previous lab.
 
-1. Go-to content hub in data connector window search for **syslog** and install it.
+1. Go to the content hub in data connector window search for **syslog** and install it.
   
 1. From the **Data Connectors tab**, search for the **Syslog** connector and select it from the list.
 
@@ -99,7 +112,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
    
 1. Open LIN2 Linux virtual machine and copy the Public IP address of **LIN2** paste on the notepad.
 
-1. Go back to the WIN1 virtual machine, launch a NEW Windows PowerShell as Administrator by right-clicking the Start menu icon and selecting **Windows PowerShell (Admin)**. Select **Yes** to allow the app to run in the User Account Control window that appears.
+1. Go back to the WIN1 virtual machine, and launch a NEW Windows PowerShell as Administrator by right-clicking the Start menu icon and selecting **Windows PowerShell (Admin)**. Select **Yes** to allow the app to run in the User Account Control window that appears.
 
    >**Note:** You can reuse the Windows PowerShell window if the **Installation completed** for the last task by entering **exit** to close the connection to LIN1.
 
@@ -144,15 +157,14 @@ In this task, you will configure the Syslog collection facilities.
 
 1. Select **Apply**.  You have completed this task.
 
-## You have completed this lab.
+   >**Note:** If you have not performed task 5 in exercise 1 because of Licenses take some time to reflect then please go back to page 2 and perform task 5 to successfully complete this lab.
 
-   >**Note:** If you have not perform task 5 in exercise 1 beacause of Licenses takes some time to reflect then please go back to the page 2 and perform task 5 to successfully complete this lab.
+### Review
+In this lab, you have completed the following:
+ 
+- Connected to a Linux Host using the Common Event Format connector
+- Connect to a Linux host using the Syslog connector
+- Configured the facilities you want to collect and their severities for the Syslog connector
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-- Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-- Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
+## You have successfully completed the lab
 
