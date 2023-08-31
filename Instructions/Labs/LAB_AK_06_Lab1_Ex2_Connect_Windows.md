@@ -3,7 +3,16 @@
 ## Lab scenario
   
  You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The next source of data are Windows virtual machines inside and outside of Azure, like On-Premises environments or other Public Clouds.
- 
+
+## Lab objective
+ In this lab, you will connect to Windows virtual machines, both within and outside of Azure, to Microsoft Sentinel using data connectors.
+
+## Estimated time: 30 minutes
+
+## Architecture Diagram
+
+  ![Picture 1](../Media/SC200-Lab_Diagrams_Mod6_L1_Ex2.png)
+  
 ### Task 1: Preparing the Microsoft 365 Defender workspace
 
 1. On the **Microsoft 365 Defender** (https://security.microsoft.com) portal, from the navigation menu, select **Settings** from the left.
@@ -40,7 +49,7 @@ In this task, you will create a Windows virtual machine in Azure.
 
     >**Note:** This will be a new resource group for tracking purposes. 
 
-  1. In Virtual machine name, enter **AZWIN01.**
+  1. In the Virtual machine name, enter **AZWIN01.**
 
   1. Leave the default value for **Region**.
 
@@ -63,11 +72,11 @@ In this task, you will connect an Azure Windows virtual machine to Microsoft Sen
 
  1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
- 1. Select your Microsoft Sentinel Workspace you created earlier.
+ 1. Select the Microsoft Sentinel Workspace you created earlier.
 
  1. Select **Data Connector** from configuration area.
  
- 1. GO-to conent hub and search for **Windows Security Events** and Install
+ 1. GO-to content hub and search for **Windows Security Events** and Install
  
  1. From the Data Connectors Tab, search for the **Windows Security Events via AMA** connector and select it from the list.
 
@@ -170,7 +179,7 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
  1. In the Search bar of the Azure portal, type **Sentinel**, then select **Microsoft Sentinel**.
 
- 1. Select your Microsoft Sentinel Workspace you created earlier.
+ 1. Select the Microsoft Sentinel Workspace you created earlier.
 
  1. From the Data Connectors Tab, search for the **Windows Security Events via AMA** connector and select it from the list.
 
@@ -204,11 +213,11 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
 1. Select **Settings** from the left menu bar, then from the Settings page select **Endpoints**.
 
-      >**Note:** If you do not see the **Endpoints** option under **Settings**, log out by selecting the top-right circle with your account initials and selecting **Sign out**. Other options that you might want to try is to refresh the page with Ctrl+F5 or open the page InPrivate. Login again with the **Username** and **Password** Provided in the environment details page. It will take 30-35 minutes to reflect you can procide with next exercise untill **Endpoints** are visible and then perform this task.
+      >**Note:** If you do not see the **Endpoints** option under **Settings**, log out by selecting the top-right circle with your account initials and selecting **Sign out**. Other options that you might want to try is to refresh the page with Ctrl+F5 or open the page InPrivate. Login again with the **Username** and **Password** Provided in the environment details page. It will take 30-35 minutes to reflect you can procide with next exercise untill **Endpoints** are visible and then performs this task.
       
-      >**Note:** You have to keep Checking  after each 10-15 mins so that you don't miss this task.
+      >**Note:** You have to keep checking  after each 10-15 mins so that you don't miss this task.
 
-1. Select **Onboarding** in the Device management section.
+1. Select **Onboarding** in the Device Management section.
 
  1. In the "1. Onboard a device" area make sure "Local Script (for up to 10 devices)" is displayed in the Deployment method drop-down and select the **Download onboarding package** button. 
 
@@ -226,7 +235,7 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
 1. Back in the Onboarding page from the Microsoft 365 Defender portal, under the section "2. Run a detection test", copy the detection test script by selecting the **Copy** button.  
 
-1. In the windows search bar of the WIN1 virtual machine, type **CMD** and choose to **Run as Administrator** on the right pane for the Command Prompt app. 
+1. In the Windows search bar of the WIN1 virtual machine, type **CMD** and choose to **Run as Administrator** on the right pane for the Command Prompt app. 
 
 1. When the "User Account Control" window is shown, select **Yes** to allow the app to run. 
 
@@ -235,5 +244,8 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 1. In the Microsoft 365 Defender portal, in the left-hand menu, under the **Assets** area, select **Devices**. If the device is not shown, complete the next task and come back to check it back later. It can take up to 60 minutes for the first device to be displayed in the portal.
 
     >**Note:** If you have completed the onboarding process and don't see devices in the Devices list after an hour, it might indicate an onboarding or connectivity problem.
+
+### Review
+In this lab, you have connected to Windows virtual machines, both within and outside of Azure, to Microsoft Sentinel using data connectors.
 
 ## Proceed to Exercise 3
