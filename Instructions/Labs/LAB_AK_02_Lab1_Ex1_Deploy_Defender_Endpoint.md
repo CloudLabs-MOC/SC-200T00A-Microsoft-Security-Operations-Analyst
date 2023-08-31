@@ -8,6 +8,18 @@ You start by initializing the Defender for the Endpoint environment. Next, you o
 
 >**Important:**  The lab Virtual Machines are used through different modules. SAVE your virtual machines. If you exit the lab without saving, you will be required to re-run some configurations again.
 
+## Lab objectives
+ In this lab, you will perform the following:
+- Initialize Microsoft Defender for Endpoint
+- Onboard a Device
+- Configure Roles and Device Groups
+
+## Estimated time: 120 minutes
+
+## Architecture Diagram
+
+  ![Picture 1](../Media/SC200-Lab_Diagrams_Mod2_L1_Ex1.png)
+  
 ### Task 1: Preparing the Microsoft 365 Defender workspace
 
 1. On the **Microsoft 365 Defender** portal(https://security.microsoft.com/), from the navigation menu, select **Settings** from the left.
@@ -73,7 +85,7 @@ In this task, you will onboard a device to Microsoft Defender for Endpoint using
 
 1. Back in the Onboarding page from the Microsoft 365 Defender portal, under the section "2. Run a detection test", copy the detection test script by selecting the **Copy** button.  
 
-1. In the windows search bar of the virtual machine, type **CMD** and choose **Run as Administrator** on the right pane for the Command Prompt app. 
+1. In the Windows search bar of the virtual machine, type **CMD** and choose **Run as Administrator** on the right pane for the Command Prompt app. 
 
 1. When the "User Account Control" window is shown, select **Yes** to allow the app to run. 
 
@@ -102,7 +114,7 @@ In this task, you will configure roles for use with device groups.
 
 1. Select **Groups** and then click on **New group**.
 
-1. Enter the below details for New group page :
+1. Enter the below details for the New group page :
 
    |Setting|Value|
     |---|---|
@@ -171,4 +183,11 @@ In this task, you will configure device groups that allow for access control and
 
 1. You are going to have two device groups now; the **Regular** you just created and the **Ungrouped devices (default)** with the same remediation level.
 
+### Review
+In this lab, you have completed the following:
+- Initialized Microsoft Defender for Endpoint
+- Onboarded a Device
+- Configured Roles and Device Groups
+
 ## Proceed to Exercise 2
+
