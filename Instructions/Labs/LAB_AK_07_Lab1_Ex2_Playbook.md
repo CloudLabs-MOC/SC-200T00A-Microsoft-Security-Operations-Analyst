@@ -1,5 +1,22 @@
 # Module 7 - Lab 1 - Exercise 2 - Create a Playbook
+### Lab scenario
 
+In this lab, you will  learn  how to create Microsoft Sentinel playbooks to respond to security threats
+
+## Lab Objectives
+  
+After completing this lab, you will be able to :
+
+- Create a Security Operations Center Team in Microsoft Teams
+- Create a Playbook in Microsoft Sentinel
+- Update a Playbook in Microsoft Sentinel
+
+## Estimated time:  minutes
+
+## Architecture Diagram
+
+  ![Picture 1](../Media/SC200-Lab_Diagrams_Mod7_L1_Ex2.png)
+  
 ### Task 1: Create a Security Operations Center Team in Microsoft Teams.
 
 In this task, you will create a Microsoft Teams team for use in the lab.
@@ -109,5 +126,11 @@ In this task, you will update the new playbook you created with the proper conne
 1. Select **Save** on the command bar.
 
 The Logic App will be used in a future lab.
+
+### Review
+In this lab, you have completed the following:
+- Created a Security Operations Center Team in Microsoft Teams
+- Created a Playbook in Microsoft Sentinel
+- Updated a Playbook in Microsoft Sentinel
 
 ## Proceed to Exercise 3
