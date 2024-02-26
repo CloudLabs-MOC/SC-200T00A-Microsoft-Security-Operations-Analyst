@@ -2,7 +2,7 @@
 
 ## Lab scenario
 
-You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The next source of data is Linux virtual machines using the Common Event Formatting (CEF) via Legacy Agent and Syslog connectors.
+You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The next source of data is Linux virtual machines using the Common Event Formatting (CEF) via Legacy Agent and Microsoft Sysmon For Linux connectors.
 
 >**Important:** There are steps within the next Tasks that are done in different virtual machines. Look for the Virtual Machine name references.
 
@@ -10,8 +10,8 @@ You are a Security Operations Analyst working at a company that implemented Micr
  In this lab, you will perform the following: 
 - Task 1: Access the Microsoft Sentinel Workspace
 - Task 2: Connect a Linux Host using the Common Event Format connector
-- Task 3: Connect a Linux host using the Syslog connector
-- Task 4: Configure the facilities you want to collect and their severities for the Syslog connector
+- Task 3: Connect a Linux host using the Microsoft Sysmon For Linux connector
+- Task 4: Configure the facilities you want to collect and their severities for the Microsoft Sysmon For Linux connector
 
 ## Estimated timing: 40 minutes
 
@@ -79,9 +79,9 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
    
 1. Type **exit** to close the remote shell connection to LIN1.
 
-### Task 3: Connect a Linux host using the Syslog connector
+### Task 3: Connect a Linux host using the Microsoft Sysmon For Linux connector
 
-In this task, you will connect a Linux host to Microsoft Sentinel with the Syslog connector.
+In this task, you will connect a Linux host to Microsoft Sentinel with the Microsoft Sysmon For Linux connector.
 
 1. Go back to the Edge browser. 
 
@@ -89,9 +89,9 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 1. Select the Microsoft Sentinel Workspace you created in a previous lab.
 
-1. Go-to content hub in data connector window search for **syslog** and install it.
+1. Go-to content hub and search for **Microsoft Sysmon For Linux** and install it.
   
-1. From the **Data Connectors tab**, search for the **Syslog** connector and select it from the list.
+1. From the **Data Connectors tab**, search for the **Microsoft Sysmon For Linux** connector and select it from the list.
 
 1. Select the **Open connector page** on the connector information blade.
 
@@ -135,11 +135,11 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 1. When it finished, type **exit** to close the remote shell connection to LIN2.
 
-### Task 4: Configure the facilities you want to collect and their severities for the Syslog connector
+### Task 4: Configure the facilities you want to collect and their severities for the Microsoft Sysmon For Linux connector
 
 In this task, you will configure the Syslog collection facilities.
 
-1. Go back to the Edge browser where you have your Microsoft Sentinel Portal open and close the "Log Analytics workspace" page and the "Syslog" data connector page by selecting the 'x' in the top right corner twice.
+1. Go back to the Edge browser where you have your Microsoft Sentinel Portal open and close the "Log Analytics workspace" page and the "Microsoft Sysmon For Linux" data connector page by selecting the 'x' in the top right corner twice.
 
 1. In Microsoft Sentinel portal, select **Settings** from *Configuration* area and then select **Workspace settings** from the settings blade.
 
@@ -163,7 +163,7 @@ In this task, you will configure the Syslog collection facilities.
 In this lab, you have completed the following:
 - able to access the Microsoft Sentinel Workspace
 - Connected a Linux Host using the Common Event Format connector
-- Connected a Linux host using the Syslog connector
-- Configured the facilities you want to collect and their severities for the Syslog connector
+- Connected a Linux host using the Microsoft Sysmon For Linux connector
+- Configured the facilities you want to collect and their severities for the Microsoft Sysmon For Linux connector
 
 ## You have successfully completed this lab.
