@@ -17,7 +17,7 @@
 
 1. On the **Microsoft 365 Defender** (https://security.microsoft.com) portal, from the navigation menu, select **Settings** from the left.
 
-1. On the **Settings** page select **Microsoft 365 Defender**. You are going to see an image of a coffee mug and a message that reads: *Hang on! We're preparing new spaces for your data and connecting them.*. It will take several minutes to finish, so leave the page open but make sure it finishes since it is required for the next Lab. 
+1. On the **Settings** page select **Microsoft Defender XDR**. You are going to see an image of a coffee mug and a message that reads: *Hang on! We're preparing new spaces for your data and connecting them.*. It will take several minutes to finish, so leave the page open but make sure it finishes since it is required for the next Lab. 
 
     >**Note:** If you get the error message "We didn't plan it will fail, but something went wrong." retry the step later or do it before the next Lab.
 
@@ -41,9 +41,7 @@ In this task, you will create a Windows virtual machine in Azure.
 
  1. In the **Search services and marketplace** box, enter *Windows 10* and select **Microsoft Window 10** from the drop-down list.
 
- 1. Open the *Plan* drop-down list and select **Windows 10 Enterprise, version 21H2**. Select **Start with a pre-set configuration** to continue.
- 
- 1. On **Choose recommended defaults that match your workload**  page select **Continue to Create a VM**
+ 1. Open the *Plan* drop-down list and select **Windows 10 Enterprise, version 21H2**. you will be landing on **Create Virtual    Machine** Page.
 
  1. On **Create a virtual machine** page, select resource group **RG-AZWIN01** from the drop down.
 
@@ -53,7 +51,9 @@ In this task, you will create a Windows virtual machine in Azure.
 
   1. Leave the default value for **Region**.
 
-  1. Scroll down and review the **Size** for the virtual machine. If it appears empty, select **See all sizes**, choose the first VM size under *Most used by Azure users*, and click **Select**.
+  1. Security type should be **Standard**.
+
+  1. Scroll down and review the **Standard_B2s** for the virtual machine. If it appears empty, select **See all sizes**, choose the Standard_B2s size under *Most used by Azure users*, and click **Select**.
 
   1. Enter a **Username** as **azureuser**.
 
@@ -88,8 +88,6 @@ In this task, you will connect an Azure Windows virtual machine to Microsoft Sen
  1. Select +Add resource(s).
 
  1. Expand **RG-AZWIN01**, then select AZWIN01.
-
- 1. Select **Apply**.
 
  1. Select **Next: Collect**, then **Next: Review + create.**
 
@@ -178,8 +176,6 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
  1. In the Search bar of the Azure portal, type **Sentinel**, then select **Microsoft Sentinel**.
 
  1. Select the Microsoft Sentinel Workspace you created earlier.
- 
- 1. Go to the content hub search for **Windows Security Events** and click on install. Then go to the data connector page and refresh you should find **Windows Security Events via AMA**
 
  1. From the Data Connectors Tab, search for the **Windows Security Events via AMA** connector and select it from the list.
 
@@ -192,8 +188,6 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
  1. Select **+Add resource(s)**.
 
  1. Expand **rg-defender** (or the Resource Group you are created), then select **WIN-xxxx**.
-
- 1. Select **Apply**.
 
  1. Select **Next: Collect**, then **Next: Review + create**.
 
