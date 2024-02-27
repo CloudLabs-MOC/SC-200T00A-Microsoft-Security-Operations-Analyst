@@ -56,7 +56,7 @@ In this task, you will create an Azure DevOps repository.
 
 1. *Enter characters you see*, then **Continue**.
 
-1. On the *Create a project to get started* page, enter **My Sentinel Content** and then select **Create project**.
+1. On the *Create a project to get started* page, enter **My Sentinel Content** and then select **+ Create project**.
 
 1. Navigate to **Repos** on the left pane.
 

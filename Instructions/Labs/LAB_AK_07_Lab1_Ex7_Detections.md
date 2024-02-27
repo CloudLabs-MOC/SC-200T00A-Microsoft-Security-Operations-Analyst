@@ -29,6 +29,8 @@ In this task, you will create a detection for the first attack of the previous e
 
 1. Select **Logs** from the *General* section.
 
+    >**Note:** Close the **Queries** page.
+
 1. **Run** the following KQL Statement again to recall the tables where we have this data:
 
     ```KQL
@@ -110,9 +112,9 @@ In this task, you will create a detection for the first attack of the previous e
 
 1. Select **Apply**
 
-1. Select the **Next: Review >** button.
+1. Select the **Next: Review + create >** button.
   
-1. On the *Review and create* tab, select the **Create** button to create the new Scheduled Analytics rule.
+1. On the *Review + create* tab, select the **Save** button to create the new Scheduled Analytics rule.
 
 ### Task 2: Privilege Elevation Attack Detection
 
@@ -192,7 +194,7 @@ In this task, you will create a detection for the second attack of the previous 
 
 1. For the *Incident settings* tab, leave the default values and select **Next: Automated response >** button.
 
-1. On the *Automated response* tab under *Automation rules*, select **Add new**.
+1. On the *Automated response* tab under *Automation rules*, select **+ Add new**.
 
 1. Use the settings in the table to configure the automation rule.
 
@@ -207,9 +209,9 @@ In this task, you will create a detection for the second attack of the previous 
 
 1. Select **Apply**
 
-1. Select the **Next: Review and create >** button.
+1. Select the **Next: Review + create >** button.
   
-1. On the *Review and create* tab, select the **Create** button to create the new Scheduled Analytics rule.
+1. On the *Review + create* tab, select the **Save** button to create the new Scheduled Analytics rule.
 
 ## Review
 In this lab, you have completed the following:
