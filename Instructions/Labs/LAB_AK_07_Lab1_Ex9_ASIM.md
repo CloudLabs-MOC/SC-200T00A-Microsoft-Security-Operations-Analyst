@@ -28,7 +28,7 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
 1. Scroll down and next to **Registry**, select the **Deploy to Azure** button.
 
-1. For *Resource Group*, select **RG-Defender** where your Sentinel workspace resides.
+1. For *Resource Group*, select **RG-DEFENDER** where your Sentinel workspace resides.
 
 1. For *Workspace*, type your Sentinel workspace name, like *uniquenameDefender*.
 
