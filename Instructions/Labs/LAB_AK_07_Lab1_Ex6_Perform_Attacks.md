@@ -24,9 +24,13 @@ You are going to simulate the attacks that you will later use to detect and inve
 
 1. In the Command Prompt, create a Temp folder in the root directory. Remember to press Enter after the last row:
 
-    ```CommandPrompt
+     ```CommandPrompt
     cd \
+    ```
+    ```CommandPrompt
     mkdir temp
+    ```
+    ```CommandPrompt
     cd temp
     ```
 
@@ -44,7 +48,7 @@ You are going to simulate the attacks that you will later use to detect and inve
     notepad c2.ps1
     ```
 
-1. Select **Yes** to create a new file and copy the following PowerShell script into *c2.ps1*.
+1. Select **Yes** to create a new file and copy and paste the following PowerShell script into *c2.ps1*.
 
     >**Note:** Pasting into the virtual machine file might not show the full script length. Make sure the script matches the instructions within the *c2.ps1* file.
 
@@ -120,7 +124,7 @@ In this task, you will perform attacks on the host connected with Azure Arc that
 
 1. Follow the instructions to log into WINServer again.
 
-1. In the search of the taskbar, enter *Command*. A Command Prompt will be displayed in the search results. Right-click on the Command Prompt and select **Run as Administrator**. Select **Yes** in the User Account Control window that appears to allow the app to run.
+1. In the search of the taskbar, enter *Command*. A Command Prompt will be displayed in the search results. Right-click on the Command Prompt and select **Run as Administrator**.
 
 1. In the Command Prompt, create a Temp folder in the root directory. Remember to press Enter after the last row:
 

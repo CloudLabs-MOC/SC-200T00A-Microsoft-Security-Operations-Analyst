@@ -28,16 +28,16 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
 2. Select your Microsoft Sentinel Workspace.
 
-3. Select **Analytics** from the Configuration area.
+3. From the left navigation menu, select **Analytics** from the Configuration area.
 
 4. Make sure that you are in the *Rule templates* tab in the command bar and search for the **New CloudShell User** rule.
 
 5. From the rule summary blade, make sure you're receiving data by reviewing the green icon under *Data sources: Azure Activity*.
 
-    >**Note:** If you do not see it in a connected state, follow the below Task to **connect to Azure Activity data connector**:
+    >**Note:** If you do not see it in a connected state, follow the below task to **connect to Azure Activity data connector**:
     
     > Task 2: Connect to Azure Activity data connector
-    >1. In the Microsoft Sentinel left menus, scroll down to the *Content management* section and select **Content Hub**.
+    >1. In the Microsoft Sentinel left menu, scroll down to the *Content management* section and select **Content Hub**.
     >1. In the *Content hub*, search for the **Azure Activity** solution and select it from the list.
     >1. On the Azure Activity solution page select **Install**.
     >1. When the installation completes, go to Data connectors page in Microsoft Sentinel. The *Azure Activity* solution installs the *Azure Activity* Data connector, 12 Analytic rules, 14 Hunting queries and 1 Workbook.
@@ -54,7 +54,7 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
 1. Once, you've received data by reviewing the green icon under *Data sources: Azure Activity*.
 
-1. Select **Create rule** and select Scheduled query rule to continue.
+1. Make sure you are on the **Microsoft Sentinel | Analytics** page. Select **+ Create rule**.
 
 1. In the Analytics rule wizard, on the *General* tab, change the *Severity* to **Medium**.
 
@@ -62,7 +62,7 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
 1. For the rule query, select **View query results**. You shouldn't receive any results nor any errors.
 
-1. Close the *Logs* window by selecting the upper right **X** and select **OK** to discard to save changes to go back to the wizard.
+1. Close the *Logs* window by selecting the upper right **X**.
 
 1. Scroll down and under *Query scheduling* set the following:
 
@@ -83,7 +83,7 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
 1. Select the **Next: Automated response >** button.
 
-1. On the *Automated response* tab under *Automation rules*, select **Add new**.
+1. On the *Automated response* tab under *Automation rules*, select **+ Add new**.
 
 1. For the *Automation rule name*, enter **Tier 2**.
 
@@ -91,17 +91,19 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
 1. Then select **Assign to me**. Then select **+ Add action**.
 
-1. Use the *And then* drop-down menus to select **Run playbook**
+1. Use the *And then* drop-down menu to select **Run playbook**
 
 1. A second drop-down menu appears with an *Information (i)* message regarding playbook permissions and a **Manage playbook permissions link**
 
     >**Note:** The playbooks will appear grayed out in the drop-down list until permissions are configured.
 
-1. Select the **Manage playbook permissions link**
+1. Select the **Manage playbook permissions** link.
 
 1. On the *Manage Permissions* page, select the **RG-Playbooks** resource group you created in the previous lab, and select **Apply**.
 
 1. From the drop-down menu, select the playbook **PostMessageTeams-OnIncident** you created in the previous exercise.
+
+    >**Note:** If **PostMessageTeams-OnIncident** is disabled, refresh the page, and re-perform Task-3.
 
 1. Select **Apply**
 
