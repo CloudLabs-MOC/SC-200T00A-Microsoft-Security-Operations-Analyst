@@ -1,46 +1,54 @@
----
-lab:
-    title: 'Exercise 5 - Understand Detection Modeling'
-    module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
----
+# Module 9 - Lab 1 - Exercise 5 - Understand Detection Modeling
 
-# Learning Path 9 - Lab 1 - Exercise 5 - Understand Detection Modeling
+### Lab Scenario
 
-## Lab scenario
+In this lab, you will understand the attacks and about Detection Modeling
 
-![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod7_L1_Ex5.png)
+## Lab objectives
+ In this lab, you will understand the following:
+- Task 1: Understand the Attacks
+- Attack 1 - Persistence with Registry Key Add.
+- Attack 2 - User Add and Elevate Privilege
+- Attack 3 - DNS / C2 
+- Task 2: Understand Detection Modeling.
 
-### Estimated time to complete this lab: 30 minutes
+## Estimated timing: 10 minutes
+
+## Architecture Diagram
+
+  ![Lab overview.](../Media/sc-200ex5.png)
 
 ### Task 1: Understand the Attacks
 
->**Important: You will perform no actions in this exercise.**  These instructions are only an explanation of the attacks you will perform in the next exercise. Please carefully read this page.
+**IMPORTANT: You will perform no actions in this exercise.**  These instructions are only an explanation of the attacks you will perform in the next exercise. Please carefully read this page.
 
-The attack patterns are based on an open-source project: <https://github.com/redcanaryco/atomic-red-team>
+The attack patterns are based on an open-source project: https://github.com/redcanaryco/atomic-red-team
 
-#### Attack 1 - Persistence with Registry Key Add
+   **Note:** Some settings are triggered in a smaller time frame just for our lab purpose.
 
-Attackers will add a program in the Run Registry key. This achieves persistence by making the program run every time the user logs on.
+#### Attack 1 - Persistence with Registry Key Add.
 
-```
+This attack is run from a command prompt:
+
+```Command
 REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
 ```
 
 #### Attack 2 - User Add and Elevate Privilege
 
-Attackers will add new users and elevate the new user to the Administrators group. This enables the attacker to logon with a different account that is privileged.
+Attackers will add new users and elevate the new user to the Administrators group.  This enables the attacker to logon with a different account that is privileged.
 
-```
+```Command
 net user theusernametoadd /add
 net user theusernametoadd ThePassword1!
 net localgroup administrators theusernametoadd /add
 ```
 
-#### Attack 3 - DNS / C2
+#### Attack 3 - DNS / C2 
 
-Attacker will send a large volume of DNS queries to a command and control (C2) server. The intent is to trigger threshold-based detection on the number of DNS queries either from a single source system or to a single target domain.
+This attack will simulate a command and control (C2) communication.
 
-```
+```PowerShell
 param(
     [string]$Domain = "microsoft.com",
     [string]$Subdomain = "subdomain",
@@ -82,18 +90,26 @@ Do {
 Until ($TimeNow -ge $RunEnd)
 ```
 
-### Task 2: Understand Detection Modeling
+### Task 2: Understand Detection Modeling.
 
 The attack-detect configuration cycle used in this lab represents all data sources even though you are only focused on two specific data sources.
 
-To build a detection, you first start with building a KQL statement. Since you will attack a host, you will have representative data to start building the KQL statement.
+To build a detection, you first start with building a KQL statement.  Since you will attack a host, you will have representative data to start building the KQL statement.
+
+The following lab runs the same attacks on a Windows host with Defender for Endpoint installed and Windows with Sysmon installed.  As you build the detections, you will see the difference in data normalization for each.
 
 After you have the KQL statement, you create the Analytical Rule.
 
 Once the rule triggers and creates the alerts and incidents, you then investigate to decide if you are providing fields that help Security Operations Analysts in their investigation.
 
-Next, you will make other changes to the analytics rule.
+Next, make any other changes to the analytics rule.
 
->**Note:** Some alerts will be triggered in a smaller time-frame just for our lab purpose.
+## Review
+In this lab
+- You have understood attacks:
+   - Attack 1 - Persistence with Registry Key Add.
+   - Attack 2 - User Add and Elevate Privilege
+   - Attack 3 - DNS / C2 
+- You have understood Detection Modeling. 
 
-## Proceed to Exercise 6
+# Proceed to Exercise 6

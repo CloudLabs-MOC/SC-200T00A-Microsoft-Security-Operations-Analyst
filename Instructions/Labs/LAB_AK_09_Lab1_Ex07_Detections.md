@@ -1,40 +1,31 @@
----
-lab:
-    title: 'Exercise 7 - Create Detections'
-    module: 'Learning Path 9 - Create detections and perform investigations using Microsoft Sentinel'
----
-
-# Learning Path 9 - Lab 1 - Exercise 7 - Create Detections
+# Module 9 - Lab 1 - Exercise 7 - Create Detections
 
 ## Lab scenario
-
-![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod7_L1_Ex7.png)
 
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You are going to work with Log Analytics KQL queries and from there, you will create custom analytics rules to help discover threats and anomalous behaviors in your environment.
 
 Analytics rules search for specific events or sets of events across your environment, alert you when certain event thresholds or conditions are reached, generate incidents for your SOC to triage and investigate, and respond to threats with automated tracking and reMediation processes.
 
->**Important:** The lab exercises for Learning Path #9 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
+## Lab objectives
+ In this lab, you will Understand following:
+- Task 1: Persistence Attack Detection
+- Task 2: Privilege Elevation Attack Detection
 
-### Estimated time to complete this lab: 30 minutes
+## Estimated timing: 30 minutes
+
+## Architecture Diagram
+
+  ![Lab overview.](../Media/sc200ex7.png)
 
 ### Task 1: Persistence Attack Detection
 
->**Important:** The next steps are done in a different machine than the one you were previously working. Look for the Virtual Machine name references.
+>**Important:** The next steps are done on a different machine than the one you were previously working on. Look for the Virtual Machine name references.
 
 In this task, you will create a detection for the first attack of the previous exercise.
 
-1. Log in to WIN1 virtual machine as Admin with the password: **Pa55w.rd**.  
-
-1. In the Edge browser, navigate to the Azure portal at <https://portal.azure.com>.
-
-1. In the **Sign in** dialog box, copy and paste in the **Tenant Email** account provided by your lab hosting provider and then select **Next**.
-
-1. In the **Enter password** dialog box, copy and paste in the **Tenant Password** provided by your lab hosting provider and then select **Sign in**.
-
 1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-1. Select your Microsoft Sentinel Workspace.
+1. Select the Microsoft Sentinel Workspace you created earlier.
 
 1. Select **Logs** from the *General* section.
 
@@ -43,19 +34,21 @@ In this task, you will create a detection for the first attack of the previous e
     ```KQL
     search "temp\\startup.bat"
     ```
-
-    >**Note:** A result with the event might take up to 5 minutes to appear. Wait until it does. If it does not appear, make sure you have rebooted WINServer as instructed in the previous exercise and that you have completed the Task #3 of the Learning Path 6 Lab, Exercise 2.
-
-1. The table *SecurityEvent* looks to have the data already normalized and easy for us to query. Expand the row to see all the columns related to the record.
+   ![Lab overview.](../Media/sc200ex7temp.png)
+    
+    >**Note:** A result with the event might take up to 5 minutes to appear. Wait until it does. If it does not appear, make sure you have rebooted WINServer as instructed in the previous exercise and that you have completed Task #3 of the Learning Path 6 Lab, Exercise 2.
+     
+1. The table *SecurityEvent* looks to have the data already normalized and is easy for us to query. Expand the row to see all the columns related to the record.
 
 1. From the results, we now know that the Threat Actor is using reg.exe to add keys to the Registry key and the program is located in C:\temp. **Run** the following statement to replace the *search* operator with the *where* operator in our query:
 
     ```KQL
     SecurityEvent 
-    | where Activity startswith "4688" 
+    | where Activity startswith "4688"
     | where Process == "reg.exe" 
     | where CommandLine startswith "REG" 
     ```
+   ![Lab overview.](../Media/sc200ex7log.png)
 
 1. It is important to help the Security Operations Center Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph. **Run** the following query:
 
@@ -80,14 +73,14 @@ In this task, you will create a detection for the first attack of the previous e
 
 1. Select **Next: Set rule logic >** button.
 
-1. On the *Set rule logic* tab, the *Rule query* should be populated already with your KQL query.
-
-1. Configure the entities under *Alert enhancement - Entity mapping* using the parameters in the table below.
+1. On the *Set rule logic* tab, the *Rule query* should be populated already with you KQL query, as well as the entities under *Alert enrichment - Entity mapping*.
 
     |Entity|Identifier|Data Field|
     |:----|:----|:----|
     |Account|FullName|AccountCustomEntity|
     |Host|Hostname|HostCustomEntity|
+
+1. If **Hostname** isn't selected for *Host* Entity, select it from the drop-down list.
 
 1. For *Query scheduling* set the following:
 
@@ -117,9 +110,9 @@ In this task, you will create a detection for the first attack of the previous e
 
 1. Select **Apply**
 
-1. Select the **Next: Review + create >** button.
+1. Select the **Next: Review >** button.
   
-1. On the *Review and create* tab, select the **Save** button to create the new Scheduled Analytics rule.
+1. On the *Review and create* tab, select the **Create** button to create the new Scheduled Analytics rule.
 
 ### Task 2: Privilege Elevation Attack Detection
 
@@ -182,16 +175,9 @@ In this task, you will create a detection for the second attack of the previous 
     |Tactics|**Privilege Escalation**|
     |Severity|**High**|
 
-1. Select **Next: Set rule logic >** button.
+1. Select **Next: Set rule logic >** button. 
 
-1. On the *Set rule logic* tab, the *Rule query* should be populated already with you KQL query, as well the entities under *Alert enhancement - Entity mapping*.
-
-    |Entity|Identifier|Data Field|
-    |:----|:----|:----|
-    |Account|FullName|AccountCustomEntity|
-    |Host|Hostname|HostCustomEntity|
-
-1. If **Hostname** isn't selected for *Host* Entity, select it from the drop-down list and use the parameters in the preceding table to populate the fields.
+1. On the *Set rule logic* tab, the *Rule query* should be populated already with you KQL query, as well the entities under *Alert enrichment - Entity mapping*.
 
 1. For *Query scheduling* set the following:
 
@@ -215,7 +201,7 @@ In this task, you will create a detection for the second attack of the previous 
    |Automation rule name|SecurityEvent Local Administrators User Add|
    |Trigger|When incident is created|
    |Actions |Run playbook|
-   |playbook |PostMessageTeams-OnIncident|
+   |playbook |PostMessageTeams-OnAlert|
 
    >**Note:** You have already assigned permissions to the playbook, so it will be available.
 
@@ -224,5 +210,10 @@ In this task, you will create a detection for the second attack of the previous 
 1. Select the **Next: Review and create >** button.
   
 1. On the *Review and create* tab, select the **Create** button to create the new Scheduled Analytics rule.
+
+## Review
+In this lab, you have completed the following:
+- Persistence Attack Detection
+- Privilege Elevation Attack Detection
 
 ## Proceed to Exercise 8
