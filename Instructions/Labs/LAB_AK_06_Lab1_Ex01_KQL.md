@@ -1,11 +1,12 @@
 # Module 6 - Lab 1 - Exercise 1 - Create queries for Microsoft Sentinel using Kusto Query Language (KQL)
 
-## Lab scenario
+## Lab Scenario
 You are a Security Operations Analyst working at a company that is implementing Microsoft Sentinel. You are responsible for performing log data analysis to search for malicious activity, display visualizations, and perform threat hunting. To query log data, you use the Kusto Query Language (KQL).
 
 >**Important:** This lab involves entering many KQL scripts into Microsoft Sentinel. The scripts were provided in a file at the beginning of this lab. An alternate location to download them is:  https://github.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/master/Allfiles
 
-## Lab objectives
+## Lab Objectives
+
  In this lab, you will perform the following:
 
 - Task 1: Create a Log Analytics Workspace
@@ -16,7 +17,7 @@ You are a Security Operations Analyst working at a company that is implementing 
 - Task 6: Build multi-table statements in KQL
 - Task 7: Work with string data in KQL
 
-## Estimated timing: 90 minutes
+## Estimated Timing: 90 minutes
 
 ## Architecture Diagram
 
@@ -104,7 +105,7 @@ In this task, you will build basic KQL statements.
 
    ![Picture 1](../Media/logs.png)
 
-   >**Note:** You may encounter situations where some of the queries below don't work as expected. Please refer to the lab guide if needed—sometimes, the connector may take a little time to reach the desired state, which can affect how certain queries run. Your patience and understanding are greatly appreciated.
+   >**Note:** You may encounter situations where some queries below may not work as expected. If needed, refer to the **lab guide**—sometimes, the **connector** may take time to reach the desired state, affecting query execution. Your patience and understanding are greatly appreciated.
 
 1. The following statement demonstrates the **search** operator, which searches all columns in the table for the value. In the Query Window enter the following statement and select **Run**: 
 
@@ -122,14 +123,14 @@ In this task, you will build basic KQL statements.
 
 1. The following statements demonstrates the **where** operator, which filters on a specific predicate. In the Query Window enter the following statement and select **Run**: 
 
-    >**Important:** You should select **Run** after entering each query from the code blocks below.
+    >**Important:** Select **Run** after entering each query from the code blocks below.
 
     ```KQL
     SecurityEvent  
     | where TimeGenerated > ago(1h)
     ```
 
-    >**Note:** The *Time range* now shows *Set in query* since we are filtering with the TimeGenerated column.
+    >**Note:** The **Time range** now displays **Set in query** because we are filtering using the **TimeGenerated** column.
 
     ```KQL
     SecurityEvent  
@@ -171,7 +172,7 @@ In this task, you will build basic KQL statements.
     | where Account in (suspiciousAccounts)
     ```
 
-    >**Tip:** You can re-format the query easily by selecting the ellipsis (...) in the Query window and select **Format query**.
+    >**Tip:** You can easily reformat the query by selecting the **ellipsis (...)** in the Query window and then clicking **Format query**.
 
 1. The following statement demonstrates the use of the **let** statement to declare a *dynamic table*. In the Query Window enter the following statement and select **Run**: 
 
@@ -228,7 +229,7 @@ In this task, you will build basic KQL statements.
 
 ### Task 4: Analyze Results in KQL with the Summarize Operator
 
-In this task, you will build KQL statements to aggregate data. **Summarize** groups the rows according to the **by** group columns, and calculates aggregations over each group.
+In this task, you will build KQL statements to aggregate data. Summarize* groups the rows according to the by group columns, and calculates aggregations over each group.
 
 1. The following statement demonstrates the **count()** function, which returns a count of the group. In the Query Window enter the following statement and select **Run**: 
 
@@ -300,7 +301,7 @@ In this task, you will build KQL statements to aggregate data. **Summarize** gro
         | summarize arg_max(TimeGenerated, *) by Account
         ```
 
-    >**Note:**  You can also review the "Total CPU" and "Data used for processed query" by selecting the "Query details" link on the lower right and comparing the data between both statements.
+    >**Note:**  You can review **Total CPU** and **Data used for processed query** by selecting the **Query details** link in the lower right and comparing the data between both statements.
 
 1. The following statement demonstrates the **make_list()** function, which returns a *list* of all the values within the group. This KQL query will first filter the EventID with the where operator. Next, for each Computer, the results are a JSON array of Accounts. The resulting JSON array will include duplicate accounts. In the Query Window enter the following statement and select **Run**: 
 
@@ -378,7 +379,7 @@ In this task, you will build multi-table KQL statements.
         | union (SigninLogs | summarize count() | project count_)
         ```
 
-    >**Note:** The 'empty row' in the results will show the summarized count of **SigninLogs**.
+    >**Note:** The **'empty row'** in the results will display the summarized count of **SigninLogs**.
 
 1. The following statement demonstrates the **union** operator support to union multiple tables with wildcards. In the Query Window enter the following statement and select **Run**: 
 
@@ -461,7 +462,7 @@ In this task, you will work with structured and unstructured string fields with 
     | sort by Date
     ```
 
-    >**Important:** Although the dynamic type appears JSON-like, it can hold values that the JSON model does not represent because they do not exist in JSON. Therefore, when serializing dynamic values into a JSON representation, values that JSON cannot represent are serialized as string values.
+    >**Important:** Although the **dynamic** type appears JSON-like, it can hold values that are not represented in the JSON model because they do not exist in JSON. As a result, when serializing **dynamic** values into a JSON format, values that cannot be represented by JSON are serialized as **string** values.
 
 1. The following statements demonstrates operators to manipulate JSON stored in string fields. Many logs submit data in JSON format, which requires you to know how to transform JSON data to fields that can be queried. In the Query Window enter the following statement and select **Run**: 
 

@@ -1,6 +1,6 @@
 # Module 9 - Lab 1 - Exercise 7 - Create Detections
 
-## Lab scenario
+## Lab Scenario
 
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You are going to work with Log Analytics KQL queries and from there, you will create custom analytics rules to help discover threats and anomalous behaviors in your environment.
 
@@ -8,12 +8,12 @@ Analytics rules search for specific events or sets of events across your environ
 
 >**Important:** The lab exercises for Learning Path #9 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
-## Lab objectives
+## Lab Objectives
  In this lab, you will Understand following:
 - Task 1: Persistence Attack Detection
 - Task 2: Privilege Elevation Attack Detection
 
-## Estimated timing: 30 minutes
+## Estimated Timing: 30 minutes
 
 ## Architecture Diagram
 
@@ -29,7 +29,7 @@ In this task, you will create a detection for the first attack of the previous e
 
    ![Picture 1](../Media/sc-200-19.png)
 
-1. Select the Microsoft Sentinel Workspace you created earlier.
+1. Select **uniquenameDefender** Microsoft Sentinel Workspace.
 
 1. Select **Logs** from the *General* section.
 
@@ -106,7 +106,7 @@ In this task, you will create a detection for the first attack of the previous e
 
     >**Note:** You have already assigned permissions to the playbook, so it will be available.
 
-1. Select **Apply**
+1. After configuring the automation rule with the required settings, select **Apply** to save the changes.
 
 1. Select the **Next: Review + Create >** button.
   
@@ -216,7 +216,7 @@ In this task, you will create a detection for the second attack of the previous 
 
    >**Note:** You have already assigned permissions to the playbook, so it will be available.
 
-1. Select **Apply**
+1. After configuring the automation rule with the required settings, select **Apply** to save the changes.
 
 1. Select the **Next: Review and create >** button.
   

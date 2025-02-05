@@ -1,18 +1,19 @@
 # Module 5 - Lab 1 - Exercise 1 - Enable Microsoft Defender for Cloud
 
-## Lab scenario
+## Lab Scenario
 
 You're a Security Operations Analyst working at a company that is implementing cloud workload protections with Microsoft Defender for Cloud. In this lab, you enable Microsoft Defender for Cloud.
 
 >**Important:** The lab exercises for Learning Path #5 are conducted in a *standalone* environment. If you exit the lab before completion, you will need to re-run the configurations.
 
-## Lab objectives
+## Lab Objectives
+
  In this lab, you will perform the following:
 - Task 1: Enable Microsoft Defender for Cloud
 - Task 2: Understanding the Microsoft Defender for Cloud Dashboard
 - Task 3: Install Azure Arc on an On-Premises Server
 
-### Estimated timing: 15 minutes
+### Estimated Timing: 25 minutes
 
 ## Architecture Diagram
 
@@ -39,6 +40,14 @@ In this task, you'll enable and configure Microsoft Defender for Cloud.
 1. Review the Azure resources that are now protected with the Defender for Cloud plans.
 
     >**Important:** If all Defender plans are *Off*, click **Enable all plans**. Then, select the *$200/month Microsoft Defender for APIs Plan 1* and click **Save**. Finally, click **Save** again at the top of the page and wait for the notification *"Defender plans (for your) subscription were saved successfully!"* to appear.
+
+1. Review the **Azure resources** that are currently protected under the **Defender for Cloud plans**.
+
+1. In the **Cloud Security Posture Management (CSPM)** section, set **Defender CSPM** to **On**.
+
+1. In the **Cloud Workload Protection (CWP)** section, set **Servers Plan 2** to **On**.
+
+1. Click the **Save** button at the top of the page.
 
 1. Select the **Settings & monitoring** tab from the Settings area (next to Save).
 
@@ -72,9 +81,9 @@ In this task, you will explore the Microsoft Defender for Cloud dashboard to fam
 
    ![Picture 1](../Media/lab5-12.png)
 
-1. The Overview blade provides a unified view into the security posture and includes multiple independent cloud security pillars such as Security posture, Regulatory compliance, Workload protections, Firewall Manager, Inventory, and Information Protection (preview). Each of these pillars also has its dedicated dashboard allowing deeper insights and actions around that vertical, providing easy access and better visibility for security professionals.
+1. The **Overview blade** offers a unified view of the **security posture** and includes multiple independent **cloud security pillars**, such as **Security posture**, **Regulatory compliance**, **Workload protections**, **Firewall Manager**, **Inventory**, and **Information Protection (preview)**. Each pillar also has its own dedicated dashboard, providing **deeper insights** and **actions** for that area, ensuring **easy access** and **better visibility** for security professionals.
 
-    >**Note:** The top menu bar includes a **Subscriptions** button, allowing you to view and filter subscriptions. In this lab, we will use only one subscription, but selecting different or additional subscriptions will update the interface to reflect the security posture of the chosen subscriptions.
+    >**Note:** The top menu bar features a **Subscriptions** button, enabling you to view and filter subscriptions; in this lab, we will use just one subscription, but selecting different or additional subscriptions will update the interface to reflect the **security posture** of the selected subscriptions.
 
 1. Click on the **What’s new** icon link – a new tab opens with the latest release notes where you can stay current on the new features, bug fixes, and more.
 
@@ -86,9 +95,9 @@ In this task, you will explore the Microsoft Defender for Cloud dashboard to fam
 
    ![Picture 1](../Media/lab5-14.png)
 
-1. Return to the **Overview** page, and review the **Security posture** tile. You can see your current *Secure score* along with the number of completed controls and recommendations. Selecting this tile will redirect you to a drill-down view across subscriptions.
+1. Return to the **Overview** page, and review the **Security posture** tile. You can see your current **Secure score** along with the number of completed controls and recommendations. Selecting this tile will redirect you to a drill-down view across subscriptions.
 
-1. On the **Regulatory compliance** tile, you can get insights into your compliance posture based on continuous assessment of both Azure and hybrid cloud environments. This tile shows the following standards which are Microsoft Cloud Security benchmark, and Lowest compliance regulatory standard. To view the data we first need to add Security policies.
+1. On the **Regulatory compliance** tile, you can gain insights into your compliance posture through the continuous assessment of both **Azure** and **hybrid cloud environments**. This tile displays standards such as the **Microsoft Cloud Security benchmark** and the **Lowest compliance regulatory standard**. To view the data, you must first add **Security policies**.
 
    ![Picture 1](../Media/lab5-16.png)
 
@@ -104,16 +113,12 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
 >**Important:** The *Windows Security Events via AMA* data connector requires Azure Arc for non-Azure devices. 
 
-1. In the lab virtual machine, search for **Hyper-V Manager** from task bar and select to open.
+1. In the lab virtual machine, Select **WINserver** from the desktop.
 
-   ![](../Media/l8e1-13.png)
+   ![Picture 1](../Media/46.png)
 
-1. Select **WIN1-<inject key="DeploymentID" enableCopy="false"/> (1)**, then select **WIN2**. Right-click on the **WIN2 (2)** virtual machine and choose **Start**, then click **Continue**. After that, right-click on the **WIN2** virtual machine again and select **Connect (3)**.
+1. If **Connect to WINServer** prompted, click **Connect.**
 
-   ![](../Media/l8e1-12.png)
- 
-1. Inside **WIN2** Click on **connect**.
- 
    ![](../Media/l8e1-14.png)
 
 1. Enter the **Password** as `Password.1!!` when prompted then hit on **Enter**.

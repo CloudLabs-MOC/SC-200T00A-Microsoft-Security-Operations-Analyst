@@ -1,6 +1,6 @@
 # Module 9 - Lab 1 - Exercise 2 - Create a Playbook in Microsoft Sentinel
 
-## Lab scenario
+## Lab Scenario
 
 You're a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to detect and mitigate threats using Microsoft Sentinel. Now, you want to respond and reMediate actions that can be run from Microsoft Sentinel as a routine.
 
@@ -15,7 +15,7 @@ After completing this lab, you will be able to:
 - Task 2: Update a Playbook in Microsoft Sentinel
 - Task 3: Create an Automation Rule
 
-## Estimated timing: 30 minutes
+## Estimated Timing: 30 minutes
 
 ## Architecture Diagram
 
@@ -29,7 +29,7 @@ In this task, you'll create a Logic App that is used as a Playbook in Microsoft 
 
    ![Picture 1](../Media/sc-200-19.png)
 
-1. In Microsoft Sentinel, navigate to **Content Hub**.
+1. On Microsoft Sentinel page, navigate to **Content Hub**.
 
 1. Within the search bar, look for **Sentinel SOAR Essentials**.
 
@@ -55,11 +55,11 @@ In this task, you'll create a Logic App that is used as a Playbook in Microsoft 
 
    ![](../Media/8.png)
 
-1. Select **Next: Review and create**.
+1. On the **Create playbook** page, select **Next: Review and create**.
 
     ![](../Media/9.png)
 
-1. Now select **Create Playbook**.
+1. On the **Create playbook** page, select **Create Playbook**.
 
     ![](../Media/10.png)
 
@@ -73,7 +73,7 @@ In this task, you’ll update the new playbook you created with the proper conne
 
    ![Picture 1](../Media/sc-200-19.png)
 
-1. Select your **Microsoft Sentinel Workspace**.
+1. Select **uniquenameDefender** Microsoft Sentinel Workspace.
 
 1. Select **Automation** under the **Configuration** area and then select the **Active Playbooks** tab.
 
@@ -89,13 +89,13 @@ In this task, you’ll update the new playbook you created with the proper conne
 
     >**Note:** You may need to refresh the page.
 
-1. Select the **first block**, Microsoft Sentinel incident.
+1.  On the Microsoft Sentinel incident page, select the **first block**.
 
 1. Select the **Change connection** link.
 
     ![](../Media/13.png)
 
-1. Select Add new and select Sign in. 
+1. Select **Add new** and select **Sign **in**. 
 
     ![](../Media/14.png)
 
@@ -103,7 +103,7 @@ In this task, you’ll update the new playbook you created with the proper conne
 
    ![](../Media/15.png)
 
-1. Admin credentials when prompted.
+1. Select your Admin credentials when prompted.
 
     ![](../Media/16.png)
 
@@ -117,7 +117,7 @@ In this task, you’ll update the new playbook you created with the proper conne
 
 In this task, you will create an automation rule in Microsoft Sentinel that runs a playbook based on specific tactics.
 
-1. Within Microsoft Sentinel, go to Automation under Configuration.
+1. Within Microsoft Sentinel, go to **Automation** under **Configuration**.
 
 1. Select **+ Create (1)** and choose **Automation Rule (2)**.
 
@@ -125,11 +125,11 @@ In this task, you will create an automation rule in Microsoft Sentinel that runs
 
 1. Give the rule a name as **myautomationrule<inject key="DeploymentID" enableCopy="false"/>**
 
-1. Leave the incident provider as All.
+1. Leave the **incident provider** as **All**.
 
-1. Leave the Analytic rule name as All.
+1. Leave the **Analytic rule** name as **All**.
 
-1. Click Add and choose And.
+1. Click **+ Add** and Select **And**.
 
     ![](../Media/18.png)
 

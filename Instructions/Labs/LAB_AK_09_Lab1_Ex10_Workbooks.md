@@ -1,6 +1,6 @@
 # Module 9 - Lab 1 - Exercise 10 - Create workbooks
 
-## Lab scenario
+## Lab Scenario
 
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. Once you have connected your data sources to Microsoft Sentinel, you can visualize and monitor the data using the Microsoft Sentinel adoption of Azure Monitor Workbooks, which provides versatility in creating custom dashboards. 
 
@@ -10,13 +10,13 @@ Microsoft Sentinel allows you to create custom workbooks across your data and al
 
 >**Important:** The lab exercises for Learning Path #9 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
-## Lab objectives
+## Lab Objectives
  In this lab, you will Understand following:
  - Task 1: Explore workbook templates
  - Task 2: Save and modify a workbook template
  - Task 3: Create a Workbook
 
-## Estimated timing: 20 minutes
+## Estimated Timing: 20 minutes
 
 ## Architecture Diagram
 

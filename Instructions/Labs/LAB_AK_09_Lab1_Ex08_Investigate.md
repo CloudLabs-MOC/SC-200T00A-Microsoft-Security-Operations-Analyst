@@ -1,6 +1,6 @@
 # Module 9 - Lab 1 - Exercise 8 - Investigate Incidents
 
-## Lab scenario
+## Lab Scenario
 
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You already created Scheduled and Microsoft Security Analytics rules. The Fusion and Anomalies Analytics rules are also enabled in your environment. Now is the time to investigate the Incidents created by them.
 
@@ -8,11 +8,11 @@ An incident can include multiple alerts. It is an aggregation of all the relevan
 
 >**Important:** The lab exercises for Learning Path #9 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
-## Lab objectives
+## Lab Objectives
  In this lab, you will Understand the following:
  - Task 1: Investigate an incident
 
-## Estimated timing: 20 minutes
+## Estimated Timing: 20 minutes
 
 ## Architecture Diagram
 
@@ -24,7 +24,7 @@ In this task, you will investigate an incident.
 
 1. On the **Sentinal** page, select the **Incidents** page.
 
-1. Review the list of incidents.
+1. Review the list of **incidents**.
 
     >**Note:** The Analytics rules are generating alerts and incidents on the same specific log entry. Remember that this was done in the *Query scheduling* configuration to generate more alerts and incidents to be utilized in the lab.
   
@@ -42,7 +42,7 @@ In this task, you will investigate an incident.
 
     ![Picture 1](../Media/tag.png)
 
-1. Scroll down and in the *Write a comment...* box type: *I will research this* and select the **>** icon to submit the new comment.
+1. Scroll down and in the **Write a comment...** box type: **I will research this** and select the **>** icon to submit the new comment.
 
     ![Lab overview.](../Media/comment.png)
 

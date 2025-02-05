@@ -1,19 +1,19 @@
 # Module 8 - Lab 1 - Exercise 3 - Connect Linux hosts to Microsoft Sentinel using data connectors
 
-## Lab scenario
+## Lab Scenario
 
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The next source of data is Linux virtual machines using the Common Event Formatting (CEF) via Legacy Agent and Syslog connectors.
 
 >**Important:** The lab exercises for Learning Path #8 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
-## Lab objectives
+## Lab Objectives
  In this lab, you will perform the following: 
 - Task 1: Access the Microsoft Sentinel Workspace
 - Task 2: Connect a Linux Host using the Common Event Format connector
 - Task 3: Connect a Linux host using the Syslog connector
 - Task 4: Configure the facilities you want to collect and their severities for the Syslog connector
 
-## Estimated timing: 40 minutes
+## Estimated Timing: 40 minutes
 
 ## Architecture Diagram
 
@@ -27,7 +27,7 @@ In this task, you will access your Microsoft Sentinel workspace.
 
    ![](../Media/l8e129.png)
 
-1. Select the Microsoft Sentinel Workspace you created in a previous lab.
+1. Select the **uniquenameDefender** microsoft Sentinel Workspace you created in a previous lab.
 
 ### Task 2: Connect a Linux Host using the Common Event Format connector
 

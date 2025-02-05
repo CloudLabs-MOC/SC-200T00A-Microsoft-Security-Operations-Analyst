@@ -31,7 +31,7 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
 1. Select your Microsoft Sentinel Workspace.
 
-1. Select **Logs** .
+1. On the Select **Logs** .
 
 1. Enter the following KQL Statement in the *New Query 1* space:
 

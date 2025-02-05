@@ -1,6 +1,6 @@
 # Module 9 - Lab 1 - Exercise 6 - Conduct attacks
 
-## Lab scenario
+## Lab Scenario
 
 You are going to simulate the attacks that you will later use to detect and investigate in Microsoft Sentinel.
 
@@ -12,7 +12,7 @@ You are going to simulate the attacks that you will later use to detect and inve
 - Task 2: Command and Control Attack with DNS
 - Task 3: Privilege Elevation Attack with User Add
 
-## Estimated timing: 30 minutes
+## Estimated Timing: 30 minutes
 
 ## Architecture Diagram
 
@@ -53,7 +53,7 @@ In this task, you will simulate a privilege elevation attack by creating a new a
     net user theusernametoadd ThePassword1!
     net localgroup administrators theusernametoadd /add
     ```
-    >**Note:** If you face any issues during copy-paste, copy the prompt to a notepad and try pasting it to the cmd.
+    >**Note:** If you encounter any issues while copying and pasting, try copying the prompt into **Notepad** first, then paste it into the **Command Prompt (CMD)**.
 
 ### Task 3: Command and Control Attack with DNS
 
@@ -67,7 +67,7 @@ In this task, you will simulate a DNS-based Command and Control (C2) attack by c
 
 1. Select **Yes** to create a new file and copy the following PowerShell script into *c2.ps1*.
 
-    >**Note:** Pasting into the virtual machine file might not show the full script length. Make sure the script matches  the instructions within the *c2.ps1* file.
+    >**Note:** When pasting into the virtual machine file, the full script length might not be visible. Ensure that the script matches the instructions in the **c2.ps1** file before proceeding.
 
     ```PowerShell
     param(
@@ -115,19 +115,19 @@ In this task, you will simulate a DNS-based Command and Control (C2) attack by c
 
 1. Go back to the Command Prompt window, enter the following command and press Enter. 
 
-    >**Note:** You will see DNS resolve errors. This is expected.
+    >**Note:**You may encounter **DNS resolve errors**, which is expected behavior.
 
     ```CommandPrompt
     Start PowerShell.exe -file c2.ps1
     ```
 
-    >**Important:** Do not close these windows. Let this PowerShell script run in the background. The command needs to generate log entries for some hours. You can proceed to the next task and next exercises while this script runs. The data created by this task will be used in the Threat Hunting lab later. This process will not create substantial amounts of data or processing.
+    >**Important:** Keep these windows open and let the **PowerShell script** run in the background. The command needs to generate **log entries** for a few hours. You can continue with the next tasks and exercises while it runs. The data created here will be used later in the **Threat Hunting lab**. This process will not generate a significant amount of data or processing load.
 
 ## Review
 In this lab, you have completed the following:
 
 - Persistence Attack with Registry Key Add
 - Command and Control Attack with DNS
-- Privilege Elevation Attack with User Add
+- Privileged Elevation Attack with User Add
 
 ## Select **Next** to continue to Lab 7

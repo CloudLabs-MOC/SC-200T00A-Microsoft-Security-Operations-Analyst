@@ -1,12 +1,12 @@
 # Module 7 - Lab 1 - Exercise 1 - Configure your Microsoft Sentinel environment
 
-## Lab scenario
+## Lab Scenario
 
 You're a Security Operations Analyst working at a company that is implementing Microsoft Sentinel. You're responsible for setting up the Microsoft Sentinel environment to meet the company requirements to minimize cost, meet compliance regulations, and provide the most manageable environment for your security team to perform their daily job responsibilities.
 
 >**Important:** The lab exercises for Learning Path #7 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
-## Lab objectives
+## Lab Objectives
  In this lab, you will perform the following:
 
 - Task 1: Create a Log Analytics Workspace
@@ -16,7 +16,7 @@ You're a Security Operations Analyst working at a company that is implementing M
 - Task 5: Create a Threat Indicator
 - Task 6: Configure log retention
 
-## Estimated timing: 60 minutes
+## Estimated Timing: 60 minutes
 
 ## Architecture Diagram
 
@@ -38,7 +38,7 @@ In this task, you will create a Log Analytics workspace for use with Microsoft D
 
     - Select **Create new** under Resource Group and provide the name **RG-Defender (1)**. Select **Ok**.
     - For the Name, enter **uniquenameDefender (2)**.
-    - Leave the **default Region **(3)**.
+    - Leave the **default Region (3)**.
     - Select **Review + Create (4)**.
 
       ![Picture 1](../Media/loganalytics1.png)

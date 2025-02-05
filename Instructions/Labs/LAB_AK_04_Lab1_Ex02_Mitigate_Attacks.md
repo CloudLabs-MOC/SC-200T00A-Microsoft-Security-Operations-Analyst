@@ -1,20 +1,21 @@
 
 # Module 4 - Lab 1 - Exercise 2 - Mitigate Attacks with Microsoft Defender for Endpoint
 
-## Lab scenario
+## Lab Scenario
 
 You are a Security Operations Analyst working at a company that is implementing Microsoft Defender for Endpoint. Your manager plans to onboard a few devices to provide insight into required changes to the Security Operations (SecOps) team response procedures.
 
 To explore the Defender for Endpoint attack mitigation capabilities, you will run two simulated attacks.
 
-## Lab objectives
+## Lab Objectives
+
  In this lab, you will perform the following:
 - Task 1: Verify Device onboarding
 - Task 2: Investigate alerts and incidents
 - Task 3: Simulate an Attack
 - Task 4: Investigate the simulated attack as a single incident
 
-## Estimated timing: 60 minutes
+## Estimated Timing: 60 minutes
 
   ![](../Media/Mod4_L1_Ex2.png)
   
@@ -22,19 +23,19 @@ To explore the Defender for Endpoint attack mitigation capabilities, you will ru
 
 In this task, you will confirm that the device is onboarded successfully and create a test alert.
 
-1. If you're not already on the Microsoft Defender XDR portal in your Microsoft Edge browser, navigate to the [Security portal](https://security.microsoft.com), log in using **Email/Username: <inject key="AzureAdUserEmail"></inject>** and **Password: <inject key="AzureAdUserPassword"></inject>**, then select **Sign in**.
+1. If you're not already on the **Microsoft Defender XDR portal** in your **Microsoft Edge** browser, go to the [Security portal](https://security.microsoft.com), log in using **Email/Username: <inject key="AzureAdUserEmail"></inject>** and **Password: <inject key="AzureAdUserPassword"></inject>**, then select **Sign in**.
 
 1. In the left-hand menu, under the **Assets** area, select **Devices (1)**. Please wait until a device appears **(2)** on the Devices page before you continue. Otherwise, you might need to repeat this task to see the alerts that will be generated later.
 
     ![Picture 1](../Media/vm1.png)
 
-    >**Note:** If you've completed the onboarding process but no devices appear in the Devices list after an hour, there may be an issue with onboarding or connectivity.
+    >**Note:** If you've completed the onboarding process but no devices appear in the **Devices** list after an hour, there may be an issue with **onboarding** or **connectivity**.
 
 1. Select **Settings (1)** from the left menu bar, then from the Settings page select **Endpoints (2)**.
 
     ![Picture 1](../Media/endpt1.png)
 
-1. Select **Onboarding** in the Device Management section and make sure *"Windows 10 and 11"* is selected as an operating system. The *"First device onboarded"* message now shows *Completed*.
+1. Select **Onboarding** in the **Device Management** section and ensure that **"Windows 10 and 11"** is selected as the operating system. The **"First device onboarded"** message should now show **Completed**.
 
 1. Scroll down and under the section *"2. Run a detection test"*, copy the detection test script by selecting the **Copy** button.  
 

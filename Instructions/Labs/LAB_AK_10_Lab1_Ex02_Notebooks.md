@@ -1,15 +1,15 @@
 # Module 10 - Lab 1 - Exercise 2 - Threat Hunting using Notebooks with Microsoft Sentinel
 
-## Lab scenario
+## Lab Scenario
 You are a Security Operations Analyst working at a company that implemented Sentinel. You need to explore the benefits of threat hunting with Microsoft Sentinel Notebooks.
 
 >**Important:** The lab exercises for Learning Path #10 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
-## Lab objectives
+## Lab Objectives
  In this lab, you will Understand the following:
   -  Task 1: Explore Notebooks
 
-## Estimated time: 30 minutes
+## Estimated Time: 30 minutes
 
 ## Architecture Diagram
 
@@ -25,9 +25,9 @@ In this task, you will explore using notebooks in Microsoft Sentinel.
 
      ![Picture 1](../Media/MLupd.png)
 
-1. In the Subscription box, select your subscription.
+1. In the Subscription box, select your **subscription**.
 
-1. Select **Create new** for the Resource group and enter *RG-MachineLearning* for the Name and select **OK**. 
+1. Select **Create new** for the Resource group and enter **RG-MachineLearning** for the Name and select **OK**. 
 
 1. In the Workspace details section do the following:
 

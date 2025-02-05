@@ -1,6 +1,6 @@
 # Module 2 - Lab 1 - Exercise 1 - Explore Microsoft Security Copilot
 
-## Lab scenario
+## Lab Scenario
 
 The organization you work for wants to increase the efficiency and capabilities for its security operations analysts, and to improve security outcomes. In support of that objective, the office of the CISO determined that deploying Microsoft Security Copilot is a key step towards that objective. As a Security administrator for your organization, you're tasked with setting up Copilot.
 
@@ -14,7 +14,7 @@ In this lab, you will perform:
 - Task 2: Explore the Microsoft Security Copilot standalone experience
 - Task 3: Explore the Microsoft Security Copilot embedded experience
 
-## Estimated timing: 45 minutes
+## Estimated Timing: 45 minutes
 
 ## Architecture Diagram
 
@@ -29,6 +29,8 @@ This task should take approximately **15** minutes to complete.
 In this task, you walk through the process of ensuring you have the appropriate role permissions. This starts by enabling access management for Azure resources.
 
 1. In the Search bar of the Azure portal, type **Microsoft Entra ID**, then select **Microsoft Entra ID**.
+
+   ![Picture 1](../Media/entraid.png)
 
 1. From the left navigation panel, expand **Manage**.
 
@@ -154,7 +156,7 @@ This task should take approximately **15** minutes to complete.
 
 1. Select the **home menu icon** to open the home menu.
 
-1. Select **Owner settings**from the left menu. These settings are available to you as a Copilot owner. A Copilot contributor does have not access to these menu options.
+1. SSelect **Owner settings**. These settings are available to you as a Copilot owner. A Copilot contributor does not have access to these menu options.
 
    ![](../Media/lab2-19.png)
 
@@ -390,7 +392,7 @@ This exercise should take approximately **30** minutes to complete.
 
 1. Return to the incident page by selecting the **Attack story** tab from the top of the page.
 
-1. Select the ellipses next to Copilot's Incident summary and select **Open in Copilot for Security**.
+1. Select the ellipses next to Copilot's Incident summary and select **Open in Security Copilot**.
 
 1. Copilot opens in the standalone experience and shows the incident summary. You can also run more prompts. In this case, you'll run the promptbook for an incident. Select the **prompt icon**. 
 

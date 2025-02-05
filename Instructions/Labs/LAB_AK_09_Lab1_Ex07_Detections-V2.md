@@ -1,6 +1,6 @@
 # Module 9 - Lab 1 - Exercise 7 - Create Detections
 
-## Lab scenario
+## Lab Scenario
 
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You are going to work with Log Analytics KQL queries and from there, you will create custom analytics rules to help discover threats and anomalous behaviors in your environment.
 
@@ -8,12 +8,12 @@ Analytics rules search for specific events or sets of events across your environ
 
 >**Important:** The lab exercises for Learning Path #9 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
-## Lab objectives
+## Lab Objectives
  In this lab, you will Understand following:
 - Task 1: Persistence Attack Detection
 - Task 2: Privilege Elevation Attack Detection
 
-## Estimated timing: 30 minutes
+## Estimated Timing: 30 minutes
 
 ## Architecture Diagram
 
@@ -21,15 +21,13 @@ Analytics rules search for specific events or sets of events across your environ
 
 ### Task 1: Persistence Attack Detection
 
->**Important:** The next steps are done on a different machine than the one you were previously working on. Look for the Virtual Machine name references.
-
 In this task, you will create a detection for the first attack of the previous exercise.
 
 1. In the Azure portal's search bar type **Microsoft sentinel (1)**, and select **Microsoft Sentinel (2)**.
 
    ![Picture 1](../Media/sc-200-19.png)
 
-1. Select the Microsoft Sentinel Workspace you created earlier.
+1. Select **uniquenameDefender** Microsoft Sentinel Workspace.
 
 1. Select **Logs** from the *General* section.
 
@@ -54,7 +52,7 @@ In this task, you will create a detection for the first attack of the previous e
 
 1. Now that you have a good detection rule, in the Logs window, select the **+ New alert rule** in the command bar and then select **Create Microsoft Sentinel alert**. This will create a new Scheduled rule. **Hint:** You might need to select the ellipsis (...) button in the command bar.
 
-1. This starts the "Analytics rule wizard". For the *General* tab type:
+1. This starts the **Analytics rule wizard**. For the *General* tab type:
 
     |Setting|Value|
     |---|---|
@@ -65,7 +63,7 @@ In this task, you will create a detection for the first attack of the previous e
 
 1. Select **Next: Set rule logic >** button.
 
-1. On the *Set rule logic* tab, the *Rule query* should be populated already with you KQL query, as well as the entities under *Alert enrichment - Entity mapping*.
+1. On the **Set rule logic** tab, the *Rule query* should be populated already with you KQL query, as well as the entities under *Alert enrichment - Entity mapping*.
 
     |Entity|Identifier|Data Field|
     |:----|:----|:----|
@@ -74,14 +72,14 @@ In this task, you will create a detection for the first attack of the previous e
 
 1. If **Hostname** isn't selected for *Host* Entity, select it from the drop-down list.
 
-1. For *Query scheduling* set the following:
+1. For **Query scheduling** set the following:
 
     |Setting|Value|
     |---|---|
     |Run Query every|5 minutes|
     |Lookup data from the last|1 Days|
 
-    >**Note:** We are purposely generating many incidents for the same data. This enables the Lab to use these alerts.
+    >**Note:** We are intentionally generating multiple **incidents** for the same data to ensure that the **Lab** can utilize these alerts effectively.
 
 1. Leave the rest of the options with the defaults. Select **Next: Incident settings>** button.
 
@@ -89,18 +87,18 @@ In this task, you will create a detection for the first attack of the previous e
 
 1. On the *Automated response* tab under *Automation rules*, select **Add new**.
 
-1. Use the settings in the table to configure the automation rule.
+1. Use the settings provided in the table below to configure the automation rule.
 
     |Setting|Value|
     |:----|:----|
-    |Automation rule name|Startup RegKey|
-    |Trigger|When incident is created|
-    |Actions |Run playbook|
-    |playbook |Defender_XDR_Ransomware_Playbook_for_SecOps-Tasks|
+    |Automation rule name|Enter **Startup RegKey**|
+    |Trigger|Select the **When incident is created**|
+    |Actions |Select **Run playbook**|
+    |playbook | Select **Defender_XDR_Ransomware_Playbook_for_SecOps-Tasks**|
 
-    >**Note:** You have already assigned permissions to the playbook, so it will be available.
+    >**Note:** Since you have already assigned **permissions** to the **playbook**, it will be readily available for use.
 
-1. Select **Apply**
+1. After configuring the automation rule with the required settings, select **Apply** to save the changes.
 
 1. Select the **Next: Review + Create >** button.
   
@@ -195,14 +193,14 @@ In this task, you will create a detection for the second attack of the previous 
 
    |Setting|Value|
    |:----|:----|
-   |Automation rule name|SecurityEvent Local Administrators User Add|
-   |Trigger|When incident is created|
-   |Actions |Run playbook|
-   |playbook |Defender_XDR_Ransomware_Playbook_for_SecOps-Tasks|
+   |Automation rule name| Enter **SecurityEvent Local Administrators User Add**|
+   |Trigger|Select **When incident is created**|
+   |Actions |Select **Run playbook**|
+   |playbook | Select **Defender_XDR_Ransomware_Playbook_for_SecOps-Tasks**|
 
    >**Note:** You have already assigned permissions to the playbook, so it will be available.
 
-1. Select **Apply**
+1. After configuring the automation rule with the required settings, select **Apply** to save the changes.
 
 1. Select the **Next: Review and create >** button.
   
