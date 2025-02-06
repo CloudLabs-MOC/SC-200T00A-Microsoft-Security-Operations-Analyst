@@ -182,13 +182,13 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 1. Select **+ Add New (2)** from the command bar.
 
-   ![](../Media/l7-15.png)
+    ![](../Media/l7-15.png)
 
 1. Review the different indicator types available in the ***Types*** dropdown. Select the **domain-name**. Enter your initials in the Domain box. You can use **onmicrosoft.com**.
 
 1. For the ***Threat types***, click on **+ (1)**, enter tag **malicious-activity (1)** and select **Apply (3)**.
 
-   ![](../Media/l7-16.png)
+    ![](../Media/l7-16.png)
 
 1. For the ***Name (1)***, enter indicator. 
 
@@ -196,9 +196,9 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 1. Select **Apply (4)**.
 
-    ![](../Media/l7-17.png)
+     ![](../Media/l7-17.png)
 
-    **Note:** It could take a couple of minutes for the indicator to appear.
+     >**Note:** It could take a couple of minutes for the indicator to appear.
 
 1. On the left Menu, Select the **Logs (1** option in the **General** area. You may need to disable the "Always show queries" option and close the *Queries* window to run the statements by clickin on **Run (2)**.
 
@@ -227,23 +227,23 @@ In this task, you will change the retention period for the SecurityEvent table.
 
 1. In Microsoft Sentinel, select the **Settings (1)** option under the ***Configuration*** area then select **Workspace settings (2)**.
 
-   ![](../Media/l7-20.png)
+    ![](../Media/l7-20.png)
 
 1. In Log Analytics workspace, select the **Tables (1)** option under the **Settings** area.
 
 1. Search and select the table **SecurityEvent (2)**, and then right click on **Security Event (3)** table.
 
-   ![](../Media/l7-21.png)
+    ![](../Media/l7-21.png)
 
 1. Select **Manage Table**.
 
-   ![](../Media/l7-22.png)
+    ![](../Media/l7-22.png)
 
 1. Select **180 days (1)** for ***Total retention period***. Notice that ***Archive period*** is only 150 days, since it uses 30 days from the (default) ***Interactive retention***.
 
 1. Select **Save (2)** to apply the changes.
 
-   ![](../Media/l7-23.png)
+    ![](../Media/l7-23.png)
 
 ## Review
 In this lab, you have completed the following:
