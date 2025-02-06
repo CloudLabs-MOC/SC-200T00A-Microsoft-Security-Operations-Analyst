@@ -182,13 +182,13 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 1. Select **+ Add New (2)** from the command bar.
 
-    ![](../Media/l7-15.png)
+      ![](../Media/l7-15.png)
 
 1. Review the different indicator types available in the ***Types*** dropdown. Select the **domain-name**. Enter your initials in the Domain box. You can use **onmicrosoft.com**.
 
 1. For the ***Threat types***, click on **+ (1)**, enter tag **malicious-activity (1)** and select **Apply (3)**.
 
-    ![](../Media/l7-16.png)
+      ![](../Media/l7-16.png)
 
 1. For the ***Name (1)***, enter indicator. 
 
@@ -196,9 +196,9 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 1. Select **Apply (4)**.
 
-     ![](../Media/l7-17.png)
+      ![](../Media/l7-17.png)
 
-     >**Note:** It could take a couple of minutes for the indicator to appear.
+      >**Note:** It could take a couple of minutes for the indicator to appear.
 
 1. On the left Menu, Select the **Logs (1** option in the **General** area. You may need to disable the "Always show queries" option and close the *Queries* window to run the statements by clickin on **Run (2)**.
 
@@ -210,7 +210,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
     
    ![](../Media/l7-19.png)
 
-    **Note:** You may need to wait for 20 minutes to get the expected output.
+    >**Note:** You may need to wait for 20 minutes to get the expected output.
 
     Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column.  
 
