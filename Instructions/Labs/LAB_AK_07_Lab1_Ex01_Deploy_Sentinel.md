@@ -204,22 +204,22 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 1. Run the following KQL statement.
 
-    ```KQL
-    ThreatIntelligenceIndicator
-    ```
-    
-   ![](../Media/l7-19.png)
+      ```KQL
+      ThreatIntelligenceIndicator
+      ```
+      
+      ![](../Media/l7-19.png)
 
-    >**Note:** You may need to wait for 20 minutes to get the expected output.
+      >**Note:** You may need to wait for 20 minutes to get the expected output.
 
-    Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column.  
+      Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column.  
 
-    ```KQL
-    ThreatIntelligenceIndicator
-    | project DomainName
-    ```
+      ```KQL
+      ThreatIntelligenceIndicator
+      | project DomainName
+      ```
 
-   ![Picture 1](../Media/SC-200-img50.png)
+      ![Picture 1](../Media/SC-200-img50.png)
 
 ### Task 6: Configure log retention
 
@@ -227,23 +227,23 @@ In this task, you will change the retention period for the SecurityEvent table.
 
 1. In Microsoft Sentinel, select the **Settings (1)** option under the ***Configuration*** area then select **Workspace settings (2)**.
 
-    ![](../Media/l7-20.png)
+     ![](../Media/l7-20.png)
 
 1. In Log Analytics workspace, select the **Tables (1)** option under the **Settings** area.
 
 1. Search and select the table **SecurityEvent (2)**, and then right click on **Security Event (3)** table.
 
-    ![](../Media/l7-21.png)
+     ![](../Media/l7-21.png)
 
 1. Select **Manage Table**.
 
-    ![](../Media/l7-22.png)
+     ![](../Media/l7-22.png)
 
 1. Select **180 days (1)** for ***Total retention period***. Notice that ***Archive period*** is only 150 days, since it uses 30 days from the (default) ***Interactive retention***.
 
 1. Select **Save (2)** to apply the changes.
 
-    ![](../Media/l7-23.png)
+     ![](../Media/l7-23.png)
 
 ## Review
 In this lab, you have completed the following:
