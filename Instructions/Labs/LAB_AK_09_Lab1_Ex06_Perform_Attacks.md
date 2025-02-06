@@ -115,7 +115,7 @@ In this task, you will simulate a DNS-based Command and Control (C2) attack by c
 
 1. Go back to the Command Prompt window, enter the following command and press Enter. 
 
-    >**Note:**You may encounter **DNS resolve errors**, which is expected behavior.
+    >**Note:** You may encounter **DNS resolve errors**, which is expected behavior.
 
     ```CommandPrompt
     Start PowerShell.exe -file c2.ps1
