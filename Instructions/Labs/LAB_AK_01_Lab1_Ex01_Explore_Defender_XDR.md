@@ -101,17 +101,27 @@ In this task, you will assign preset security policies for Exchange Online Prote
 
 1. Under **Strict protection**, select **Manage protection settings**. **Hint:** *Strict protection* is found under "Email & Collaboration - Policies & rules - Threat policies - Preset security policies".
 
-1. In the *Apply Exchange Online Protection* page, select **Specific recipients** and under **Groups** start writing **Sg-IT-<inject key="DeploymentID" enableCopy="false"/>**, select it, and then select **Next**. Notice that this configuration applies policies for anti-spam, outbound spam filters, anti-malware, and anti-phishing.
+   ![Enter Your Username](../Media/lab1y1.png)
+
+1. In the *Apply Exchange Online Protection* page, select **Specific recipients (1)** and under **Groups** start writing **Sg-IT-<inject key="DeploymentID" enableCopy="false"/> (2)**, select it, and then select **Next (3)**. Notice that this configuration applies policies for anti-spam, outbound spam filters, anti-malware, and anti-phishing.
+
+   ![Enter Your Username](../Media/lab1y2.png)
 
    >**Note**: If a group is already selected, ensure it is **Sg-IT-<inject key="DeploymentID" enableCopy="false"/>**. If not, remove the selected group and add the correct one.
 
 1. In the *Apply protection to* page, apply the same configuration as the previous step and select **Next**. Notice that this configuration applies policies for **anti-phishing, Safe Attachments, and Safe Links.**
 
+   ![Enter Your Username](../Media/lab1y3.png)
+
 1. In the *Impersonation protection* page, select **Next** for next all steps i.e. (4x times) to continue.
 
-1. In the *Policy mode* page, make sure the **Turn on the policy when finished** radio button is selected, and then select **Next**.
+1. In the *Policy mode* page, make sure the **Turn on the policy when finished (1)** radio button is selected, and then select **Next (2)**.
+
+   ![Enter Your Username](../Media/lab1y4.png)
 
 1. Read the content under *Review and confirm your changes* and select **Confirm** to apply the changes and then select **Done** to finish.
+
+   ![Enter Your Username](../Media/lab1y5.png)
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
