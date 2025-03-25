@@ -36,12 +36,12 @@ In this task, you will create a Log Analytics workspace for use with Microsoft D
 
 1. To create a **log analytics workspace**, follow these steps:
 
-    - Select **Create new** under Resource Group and provide the name **RG-Defender (1)**. Select **Ok**.
+    - Select **RG-Defender (1)**, for Resource group.
     - For the Name, enter **uniquenameDefender (2)**.
     - Leave the **default Region (3)**.
     - Select **Review + Create (4)**.
 
-      ![Picture 1](../Media/loganalytics1.png)
+      ![Picture 1](../Media/lab7y1.png)
 
 1. Once the workspace validation has passed, select **Create**.
 
@@ -75,7 +75,7 @@ In this task, you will deploy Microsoft Sentinel to an existing Log Analytics wo
 
 1. Expand the *Settings* section in the navigation menu and select **Usage and estimated costs (1)** then Select **Data retention (2)**.
 
-   ![](../Media/l7-1.png)
+   ![](../Media/lab7y2.png)
 
 1. Change data retention period to **180 days (1)** then Select **OK (2)**.
 
@@ -151,9 +151,9 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
 1. The screen returns to the Watchlist page.
 
-1. Select the *HighValueHosts* watchlist and on the right pane, select **View in logs**.
+1. Select the *HighValueHosts (1)* watchlist and on the right pane, select **View in logs (2)**.
 
-     ![](../Media/l7-12.png)
+     ![](../Media/lab7y3.png)
 
     >**Important:** It could take up to ten minutes for the watchlist to appear. **Please continue with the following task and run this command in the next lab**.
      
@@ -178,48 +178,58 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
 In this task, you will create an indicator in Microsoft Sentinel.
 
-1. In Microsoft Sentinel, On the left menu, select the **Threat intelligence** option in the **Threat management (1)** area.
+1. In Microsoft Sentinel, select the **Threat intelligence (1)** option in the Threat management area.
+
+   ![](../Media/lab7y5.png)
 
 1. Select **+ Add New (2)** from the command bar.
 
-      ![](../Media/l7-15.png)
+1. Select the **TI Object (3)**.
 
-1. Review the different indicator types available in the ***Types*** dropdown. Select the **domain-name**. Enter your initials in the Domain box. You can use **onmicrosoft.com**.
+1. From the *Object type* dropdown, select **Indicator (1)**.
 
-1. For the ***Threat types***, click on **+ (1)**, enter tag **malicious-activity (1)** and select **Apply (3)**.
+1. Select the **+ New observable** dropdown and select **Domain name (2)**.
 
-      ![](../Media/l7-16.png)
+   ![](../Media/lab7y6.png)
 
-1. For the ***Name (1)***, enter indicator. 
+1. For Domain, enter a domain name, for example type *contoso.com (3)*.
 
-1. Set the **Valid from (2)** field to today's date. and **valid till (3)** to next day.
+1. In the **Name** field enter the same value (4) used for the Domain.
 
-1. Select **Apply (4)**.
+1. In the *Indicator types*, select **malicious-activity (5)**.
 
-      ![](../Media/l7-17.png)
+1. Set the **Valid from (6)** field to today's date.
 
-      >**Note:** It could take a couple of minutes for the indicator to appear.
+   ![](../Media/lab7y7.png)
 
-1. On the left Menu, Select the **Logs (1** option in the **General** area. You may need to disable the "Always show queries" option and close the *Queries* window to run the statements by clickin on **Run (2)**.
+1. Scroll down to the **Description** and enter *This domain is known to be malicious (7)*.
+
+1. Select **Add (8)**.
+
+1. Select the **Logs** option under the *General* area of the *Sentinel* navigation menu. You might want to disable the "Always show queries" option and close the *Queries* window to run the KQL statements.
+
+    >**Note:** In the default *New Query 1* tab, the **_GetWatchList('HighValueHosts')** query should still be there, and will now produce results if run.
+
+1. Select the *+* sign to create a new query tab.
 
 1. Run the following KQL statement.
 
-      ```KQL
-      ThreatIntelligenceIndicator
-      ```
-      
-      ![](../Media/l7-19.png)
+    ```KQL
+    ThreatIntelligenceIndicator
+    ```
 
-      >**Note:** You may need to wait for 20 minutes to get the expected output.
+    >**Note:** It could take up to five minutes for the indicator to appear.
 
-      Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column.  
+   ![](../Media/lab7y8.png)
 
-      ```KQL
-      ThreatIntelligenceIndicator
-      | project DomainName
-      ```
+1. Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column.
 
-      ![Picture 1](../Media/SC-200-img50.png)
+    ```KQL
+    ThreatIntelligenceIndicator 
+    | project DomainName
+    ```
+
+   ![](../Media/lab7y9.png)
 
 ### Task 6: Configure log retention
 
@@ -227,23 +237,23 @@ In this task, you will change the retention period for the SecurityEvent table.
 
 1. In Microsoft Sentinel, select the **Settings (1)** option under the ***Configuration*** area then select **Workspace settings (2)**.
 
-     ![](../Media/l7-20.png)
+   ![](../Media/l7-20.png)
 
 1. In Log Analytics workspace, select the **Tables (1)** option under the **Settings** area.
 
 1. Search and select the table **SecurityEvent (2)**, and then right click on **Security Event (3)** table.
 
-     ![](../Media/l7-21.png)
+   ![](../Media/lab7y10.png)
 
-1. Select **Manage Table**.
+1. Select **Manage Table (4)**.
 
-     ![](../Media/l7-22.png)
+1. Change the *Interactive retention period* to **90 days**.
 
-1. Select **180 days (1)** for ***Total retention period***. Notice that ***Archive period*** is only 150 days, since it uses 30 days from the (default) ***Interactive retention***.
+   ![](../Media/lab7y11.png)
 
-1. Select **Save (2)** to apply the changes.
+1. Reset the *Total retention period* to **180 days** (if needed). Notice that *Archive period* is set now set to *90 days*, because *Azure Monitor* automatically treats the remaining 90 days of total retention as low-cost, long-term retention.
 
-     ![](../Media/l7-23.png)
+1. Select **Save** to apply the changes.
 
 ## Review
 In this lab, you have completed the following:
