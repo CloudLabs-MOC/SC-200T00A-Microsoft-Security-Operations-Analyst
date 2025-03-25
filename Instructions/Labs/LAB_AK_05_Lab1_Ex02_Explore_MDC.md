@@ -27,28 +27,35 @@ In this task, you will load sample security alerts and review the alert details.
 
    ![Picture 1](../Media/lab5-8.png)
 
-1. Under **Cloud Security**, select **Regulatory compliance** in the portal menu.
+1. Under *Cloud Security (1)*, select **Regulatory compliance (2)** from the left menu items.
 
     >**Note:** You may need to refresh this page if you do not see the *toolbar* tabs.
 
+   ![Picture 1](../Media/lab5y3.png)
 
-1. Select **Manage compliance standards** on the toolbar.
+1. Select **Manage compliance standards (3)** on the toolbar.
 
-1. Select available **subscription**.
+1. Select your **Subscription**.
 
-   ![Picture 1](../Media/lab5-3.png)
+   ![Picture 1](../Media/lab5y4.png)
 
-1. On the **Defender plans** page enable **Defender CSPM** and Click on **Save**.
- 
-   ![Picture 1](../Media/l5-4.png)
+1. Under *Settings*, select **Security policies (1)** in the portal menu.
 
-1. On the left menu Under *Policy settings*, select **Security policies** in the portal menu.
+   ![Picture 1](../Media/lab5y5.png)
 
-1. Review the **Microsoft security benchmark** available to you by default.
+1. Scroll down and review the "Security standards" available to you by default.
 
-   ![Picture 1](../Media/lab5-2.png)
+1. Use the search box to find *ISO 27001:2013 (2)*.
 
-1. Select Microsoft Defender for Cloud below the search box to return to the main blade.
+1. Select and move the **Status** slider to right of *ISO 27001:2013* to **On (3)**.
+
+    >**Note:** Some standards require you to assign an Azure Policy initiative.
+
+1. Select **Refresh** on the page menu to confirm that *ISO 27001:2013* is set to *On* for your subscription.
+
+1. Close the *Security policies* page by selecting the 'X' on the upper right of the page to go back to the **Environment settings**.
+
+    >**Note:** You might want to return later to *Regulatory compliance* to review the new standard controls and recommendations.
 
 ### Task 2: Explore Security Recommendations (Read-Only)
 
@@ -72,7 +79,7 @@ In this task, you'll review cloud security posture management.  The Secure Score
 
    ![Picture 1](../Media/l5-7.png)
 
-    >**Note:** If you don't see **Machines - Azure Arc** listed, make sure you have completed Learning Path 5 - Lab 1 - Task 3.
+    >**Note:** It may take some time for the **Machines - Azure Arc** to appear.
 
 1. Select any recommendation where the status isn't **Completed**.
 
