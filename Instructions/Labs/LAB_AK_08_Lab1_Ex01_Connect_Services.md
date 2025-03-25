@@ -55,7 +55,9 @@ In this task, you will access your Microsoft Sentinel workspace.
   
     ![](../Media/l8e131.png)
 
-1. Select **uniquenameDefender**  Microsoft Sentinel Workspace that you created in the previous lab.
+1. Select the **uniquenameDefender** microsoft Sentinel Workspace you created earlier.
+
+   ![](../Media/uniquenamedefender.png)
 
 ### Task 2: Connect the Microsoft Defender for Cloud data connector
 
@@ -73,7 +75,7 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
 
 1. When the installation completes,  search for the **Microsoft Defender for Cloud** solution and select it.
 
-1. On the *Microsoft Defender for Cloud* solution details page select **Manage**.
+1. On the **Microsoft Defender for Cloud** solution details page select **Manage**.
 
     ![](../Media/l8e137.png)
 
@@ -96,6 +98,8 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
 1. Select the **X (Close)** button on the upper right to close the *Getting started* page. You should be back on the *Microsoft Defender for Cloud* configuration page.
 
 1. The *Status* for the **Subscription** should now be **Connected** and *Bi-directional sync* should be **Enabled**.
+
+   ![](../Media/bi-enabled.png)
 
     <!--- 1. Scroll down and under the *Create incidents - Recommended!* area, verify that *Create incidents automatically from all alerts generated in this connected service* is **Enabled**. --->
 
@@ -133,9 +137,13 @@ In this task, you will connect the *Azure Activity* data connector.
 
 1. Select the **Remediation** tab and select the **Create a remediation task** checkbox. This action will apply the policy to existing Azure resources.
 
+   ![](../Media/remediation.png)
+
 1. Select the **Review + Create** button to review the configuration.
 
 1. Select **Create** to finish.
+
+   ![](../Media/policy.png)
 
 ## Review
 In this lab, you have completed the following:

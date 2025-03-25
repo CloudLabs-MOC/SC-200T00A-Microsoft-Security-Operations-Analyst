@@ -27,7 +27,9 @@ In this task, you will access your Microsoft Sentinel workspace.
 
    ![](../Media/l8e129.png)
 
-1. Select the **uniquenameDefender** microsoft Sentinel Workspace you created in a previous lab.
+1. Select the **uniquenameDefender** microsoft Sentinel Workspace you created earlier.
+
+   ![](../Media/uniquenamedefender.png)
 
 ### Task 2: Connect a Linux Host using the Common Event Format connector
 
@@ -111,6 +113,8 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 1. Select the tab for **Linux servers**.
 
+   ![](../Media/linuxservers.png)
+
     >**Note:** Your Log Analytics workspace should show **1 Linux computer connected**. This corresponds to the LIN1 (ubuntu1) virtual machine connected earlier with the CEF connector.
 
 1. Select **Log Analytics agent instructions**.
@@ -137,7 +141,9 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
    ![linux login](../Media/sc-200-M6-Ex3.png)
 
-1. You are now ready to paste in the **Download and onboard agent for Linux** from the earlier step. Make sure that the script from Azure is in the clipboard. In PowerShell right-click the top bar and choose **Edit** and then **Paste**. 
+1. You are now ready to paste in the **Download and onboard agent for Linux** from the earlier step. Make sure that the script from Azure is in the clipboard. In PowerShell right-click the top bar and choose **Edit (1)** and then **Paste (2)**. 
+
+    ![linux login](../Media/cp.png)
 
    >**Note:** You can also copy from the notepad you have pasted earlier.
 

@@ -52,7 +52,7 @@ In this task, you'll create a Windows virtual machine in Azure.
     | Subscription | your default subscription **(1)** | 
     | Resource Group | Select **RG-AZWIN01 (2)**   |
     | Virtual machine name |  Enter **AZWIN01 (3)**  | 
-    | Region | **<inject key="location" enableCopy="false"/> (4)** |
+    | Region | **Use default region (4)** |
 
       ![](../Media/l8e1-6.png)
 
@@ -155,21 +155,21 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
    ![](../Media/l8e1-11.png)
 
-1. Enter *Administrator* for "Username" and *Passw0rd!* for "Password" if you get a UAC prompt.
+1. Enter **Administrator** for "Username" and **Passw0rd!** for "Password" if you get a UAC prompt.
 
-1. Enter: cd C:\Users\Administrator\Downloads
+1. Enter: **cd C:\Users\Administrator\Downloads**
 
     ![](../Media/l8e122.png)
 
     >**Important:** If you do not have this directory, most likely means that you are in the wrong machine. Go back to the beginning of Task 4 and change to WINServer and start over.
 
-1. Type *Set-ExecutionPolicy -ExecutionPolicy Unrestricted* and press enter.
+1. Type **Set-ExecutionPolicy -ExecutionPolicy Unrestricted** and press **enter**.
 
 1. Enter **A** for Yes to All and press enter.
 
     ![](../Media/l8e123.png)
 
-1. Type *.\OnboardingScript.ps1* and press enter. 
+1. Type **.\OnboardingScript.ps1** and press **enter**. 
 
     ![](../Media/l8e124.png)
 
@@ -201,7 +201,7 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
    ![](../Media/l8e129.png)
 
-1. Select your Microsoft Sentinel Workspace you created earlier.
+1. Select the **uniquenameDefender** microsoft Sentinel Workspace you created earlier.
 
    ![](../Media/l8e130.png)
 
@@ -223,9 +223,13 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
    ![](../Media/l8e3-14.png)
     
-1. In the *Configuration* section, under the *Instructions* tab, select the **Create data collection rule**.
+1. In the *Configuration* section, under the *Instructions* tab, select the **+ Create data collection rule**.
 
-1. Enter **AZWINDCR** for Rule Name, then select **Next: Resources**.
+   ![](../Media/createdatacollectionrule.png)
+
+1. Enter **AZWINDCR (1)** for Rule Name, then select **Next: Resources (2)**.
+
+   ![](../Media/azwindcr.png)
 
 1. Select **+Add resource(s)** to select the Virtual Machine we created.
 
@@ -233,11 +237,11 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
     ![](../Media/l8e3-13.png)
 
-1. Select **Apply** and then select **Next: Collect**.
-
-1. Review the different Security Event collection option. Keep *All Security Events* and then select **Next: Review + create**.
+1. Next, choose **Collect**, review the various Security Event collection options, keep the setting for *All Security Events*, and then click on **Next: Review + Create**.
 
 1. Select **Create** to save the Data Collection Rule.
+
+   ![](../Media/createrule.png)
 
 1. Wait a minute and then select **Refresh** to see the new data collection rule listed.
 
