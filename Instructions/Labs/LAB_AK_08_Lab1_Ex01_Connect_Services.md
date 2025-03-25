@@ -63,7 +63,7 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
 
   >**Important:** To *Enable* Bi-directional sync, please rerun  **[Lab 05 Exercise 1](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_05_Lab1_Ex01_Enable_MDC.html)**, Task 2, and select **Setup** from the *Microsoft Defender for Cloud* navigation menu to verify all eligible Azure subscriptions are onboarded.
 
-1. In the Microsoft Sentinel navigation menu, scroll down to the **Content management (1)** section and select **Content Hub**.
+1. In the Microsoft Sentinel navigation menu, scroll down to the **Content management** section and select **Content Hub (1)**.
 
 1.  In the **Content hub**, search for the **Microsoft Defender for Cloud (2)** solution and select **Microsoft Defender for Cloud (3)** from the list.
 

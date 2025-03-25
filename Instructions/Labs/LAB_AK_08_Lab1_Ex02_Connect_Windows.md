@@ -52,7 +52,7 @@ In this task, you'll create a Windows virtual machine in Azure.
     | Subscription | your default subscription **(1)** | 
     | Resource Group | Select **RG-AZWIN01 (2)**   |
     | Virtual machine name |  Enter **AZWIN01 (3)**  | 
-    | Region | **<inject key="Region" enableCopy="false" /> (4)** |
+    | Region | **<inject key="location" enableCopy="false"/> (4)** |
 
       ![](../Media/l8e1-6.png)
 
