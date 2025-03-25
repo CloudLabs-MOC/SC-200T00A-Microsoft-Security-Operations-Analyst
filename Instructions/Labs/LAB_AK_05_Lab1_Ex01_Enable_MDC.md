@@ -125,7 +125,7 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
    ![](../Media/l8e3-16.png)
 
-1. In the **WIN2**, click on the Azure Portal icon as shown below:
+1. In the **WINserver**, click on the Azure Portal icon as shown below:
  
    ![Launch Azure Portal](../Media/sc900-image(1).png)
 
@@ -171,7 +171,7 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
    ![](../Media/l8e1-11.png)
 
-1. Enter *Administrator* for "Username" and *Passw0rd!* for "Password" if you get a UAC prompt.
+1. Enter *Administrator* for "Username" and *Password.1!!* for "Password" if you get a UAC prompt.
 
 1. Enter: cd C:\Users\Administrator\Downloads
 
