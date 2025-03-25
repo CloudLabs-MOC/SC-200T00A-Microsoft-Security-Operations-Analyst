@@ -43,11 +43,13 @@ In this task, you'll enable and configure Microsoft Defender for Cloud.
 
 1. Review the **Azure resources** that are currently protected under the **Defender for Cloud plans**.
 
-1. In the **Cloud Security Posture Management (CSPM)** section, set **Defender CSPM** to **On**.
+1. In the **Cloud Security Posture Management (CSPM)** section, set **Defender CSPM** to **On (1)**.
 
-1. In the **Cloud Workload Protection (CWP)** section, set **Servers Plan 2** to **On**.
+   ![Picture 1](../Media/lab5y1.png)
 
-1. Click the **Save** button at the top of the page.
+1. In the **Cloud Workload Protection (CWP)** section, set **Servers Plan 2 (2)** to **On (3)**.
+
+1. Click the **Save (4)** button at the top of the page.
 
 1. Select the **Settings & monitoring** tab from the Settings area (next to Save).
 
@@ -60,14 +62,6 @@ In this task, you'll enable and configure Microsoft Defender for Cloud.
    ![Picture 1](../Media/lab5-11.png)
 
 1. Close the settings page by selecting the 'X' on the upper right of the page to go back to the **Environment settings**.
-
-<!---1. Select the Log analytics workspace you created earlier *uniquenameDefender* to review the available options and pricing.
-
-1. Select **Enable all plans** (to the right of Select Defender plan) and then select **Save**. Wait for the *"Microsoft Defender plan for workspace uniquenameDefender were saved successfully!"* notification to appear.
-
-    >**Note:** If the page is not being displayed, refresh your Edge browser and try again.
-
-1. Close the Defender plans page by selecting the 'X' on the upper right of the page to go back to the **Environment settings**. --->
 
 ### Task 2: Understanding the Microsoft Defender for Cloud Dashboard
 
