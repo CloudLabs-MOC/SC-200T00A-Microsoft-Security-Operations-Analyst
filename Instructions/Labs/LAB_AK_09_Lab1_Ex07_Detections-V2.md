@@ -36,7 +36,6 @@ In this task, you will create a detection for the first attack of the previous e
     ```KQL
     search "temp\\startup.bat"
     ```
-   ![Lab overview.](../Media/sc200ex7tempupd.png)
     
     >**Note:** A result with the event might take up to 48 hours to appear, if you donot see the logs, you can proceed with the further steps.
 
