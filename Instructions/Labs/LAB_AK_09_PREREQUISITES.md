@@ -202,7 +202,7 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
      ![Picture 1](../Media/sc-200-23.png)
 
-1. On the **Crete data Coollection Rule** page, Select **Create**.
+1. On the **Create data Collection Rule** page, Select **Create**.
 
 1. Wait a few minutes and then select **Refresh** to see the new data collection rule listed.
 
