@@ -8,7 +8,7 @@ In this hands-on lab, you will explore security operations and hybrid cloud mana
 
 ## Objective
 
-This lab is designed to equip participants with hands-on experience in using Azure OpenAI to build powerful AI applications. By completing this lab, participants will learn to:
+By completing this lab, you will learn to:
 
 - **Onboard Windows Servers to Azure Arc**: Onboard on-premises servers to Azure Arc-enabled servers for centralized management and governance.
 - **Enable Microsoft Defender for Cloud**: Configure security monitoring and threat protection by setting up a Subscription, creating a Log Analytics Workspace, enabling Microsoft Defender for Cloud, installing Azure Arc on an on-premises server, and implementing security measures to protect it.
