@@ -109,6 +109,8 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 1. Select and right-click on the **WINServer** virtual machine from the virtual machine section in the middle and select start, then again right-click on the **WINServer** virtual machine and select **connect**.
 
+    ![Picture 1](../Media/hyper-v-01.png)
+
 1. It asks you to press ctrl+alt+dlt, Go-to **actions** in the top of VM toolbar and click on **ctrl+alt+dlt** (**Skip if not asked**)
 
 1. Enter the **Password** as `Password.1!!` when prompted.
