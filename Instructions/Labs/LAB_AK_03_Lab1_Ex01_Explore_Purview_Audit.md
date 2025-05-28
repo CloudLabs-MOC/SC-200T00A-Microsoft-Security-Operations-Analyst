@@ -22,19 +22,20 @@ In this task, you'll assign preset security policies for Exchange Online Protect
 
 1. In the Microsoft Edge browser, go to the Microsoft Defender XDR portal at (<https://security.microsoft.com>).
 
-1. You'll see the **Sign into Microsoft Defender XDR portal** tab. Here, enter your **Username: <inject key="AzureAdUserEmail"></inject>** to log in:
- 
-1. Next, provide your **Password: <inject key="AzureAdUserPassword"></inject>** to continue.
+1. You'll see the **Sign into Microsoft Defender XDR portal** tab. Here, enter the username and password as below:
 
-1. From the navigation menu, expand *Operational technology* and select **More resources**.
+    - **Username: <inject key="AzureAdUserEmail"></inject>** 
+    - **Password: <inject key="AzureAdUserPassword"></inject>** 
 
-1. In the **More resources (1)** pane, select the **Open (2)** button om the *Microsoft Purview portal* tile.
+1. From the navigation menu, click on **More resources (1)** and select **Open (2)** button on *Microsoft Purview portal* tile
 
    ![Screenshot showing the Welcome to the new Microsoft Purview portal screen.](../Media/lab3-1.png)
 
 1. When the Microsoft Purview portal opens, a message about the *new Microsoft Purview portal* will appear on the screen. Select the option to agree with the terms of data flow disclosure and the privacy statement, then select **Get started**.
 
     ![Screenshot showing the Welcome to the new Microsoft Purview portal screen.](../Media/lab3-2.png)
+
+    >**Note:** If you see a message that _the Compliance portal is retired_, please wait for a few seconds, it will redirect you to the new portal. 
 
 1. Select **Solutions** from the left sidebar, then select **Audit**.
 
@@ -43,6 +44,8 @@ In this task, you'll assign preset security policies for Exchange Online Protect
 1. On the **Search** page, select the blue **Start recording user and admin activity** bar to enable audit logging.
 
     ![Screenshot showing the Start recording user and admin activity button.](../Media/enable-audit-button.png)
+
+    >**Note:** If you get a message to _complete the organizational setup_, click on Yes. 
 
 1. Once you select this option, the blue bar should disappear from this page.
 
