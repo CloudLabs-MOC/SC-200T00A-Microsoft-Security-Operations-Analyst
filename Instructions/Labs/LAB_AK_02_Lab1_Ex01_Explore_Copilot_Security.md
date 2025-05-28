@@ -156,7 +156,7 @@ This task should take approximately **15** minutes to complete.
 
 1. Select the **home menu icon** to open the home menu.
 
-1. SSelect **Owner settings**. These settings are available to you as a Copilot owner. A Copilot contributor does not have access to these menu options.
+1. Select **Owner settings**. These settings are available to you as a Copilot owner. A Copilot contributor does not have access to these menu options.
 
    ![](../Media/lab2-19.png)
 
