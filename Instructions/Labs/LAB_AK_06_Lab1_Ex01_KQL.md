@@ -137,7 +137,7 @@ In this task, you will build basic KQL statements.
     ```KQL
     SecurityEvent  
     | where TimeGenerated > ago(1h)
-    | where EventID == 4624  
+    | where EventID == 4673 
     | where AccountType =~ "user"
     ```
 
@@ -234,19 +234,19 @@ In this task, you will build KQL statements to aggregate data. Summarize* groups
 
 1. The following statements demonstrate the importance of understanding results based on the order of the *pipe*. In the Query Window enter the following queries and run each query separately: 
 
-    1. **Query 1** will have Accounts for which the last activity was a login. The SecurityEvent table will first be summarized and return the most current row for each Account. Then only rows with EventID equals 4624 (login) will be returned.
+    1. **Query 1** returns the most recent SecurityEvent record per account, and then filters those results to show only records where EventID == 4673, which represents:
 
         ```KQL
         SecurityEvent  
         | summarize arg_max(TimeGenerated, *) by Account 
-        | where EventID == 4624  
+        | where EventID == 4673 
         ```
 
-    1. **Query 2** will have the most recent login for Accounts that have logged in. The SecurityEvent table will be filtered to only include EventID = 4624. Then these results will be summarized for the most current login row by Account.
+    1. **Query 2** first filters for only privileged service call events (EventID 4673), then returns the most recent one per account.
 
         ```KQL
         SecurityEvent  
-        | where EventID == 4624  
+        | where EventID == 4673
         | summarize arg_max(TimeGenerated, *) by Account
         ```
 
@@ -329,23 +329,6 @@ In this task, you will build multi-table KQL statements.
         ```
 
     >**Note:** The **'empty row'** in the results will display the summarized count of **SigninLogs**.
-
-1. The following statement demonstrates the **join** operator, which merges the rows of two tables to form a new table by matching values of the specified column(s) from each table. In the Query Window enter the following statement and select **Run**: 
-
-    ```KQL
-    SecurityEvent  
-    | where EventID == 4624 
-    | summarize LogOnCount=count() by  EventID, Account
-    | project LogOnCount, Account
-    | join kind = inner( 
-     SecurityEvent  
-    | where EventID == 4634 
-    | summarize LogOffCount=count() by  EventID, Account
-    | project LogOffCount, Account
-    ) on Account
-    ```
-
-    >**Important:** The first table specified in the join is considered the **Left** table, while the table after the **join** operator is the **Right** table. When working with columns from the tables, use `$left.ColumnName` and `$right.ColumnName` to distinguish which table's column is being referenced. The **join** operator supports a full range of types: flouter, inner, innerunique, leftanti, leftantisemi, leftouter, leftsemi, rightanti, rightantisemi, rightouter, and rightsemi.
 
 1. Change back the **Time range** to **Last 24 hours** in the Query Window.
 
