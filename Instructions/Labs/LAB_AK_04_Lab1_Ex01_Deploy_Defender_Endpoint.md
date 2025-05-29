@@ -44,6 +44,8 @@ In this task, you will perform the initialization of the Microsoft Defender for 
     
 1. In the Discovery setup make sure **Standard discovery (recommended)** is selected. 
 
+    ![Picture 1](../Media/52.png)
+
     >**Hint:** If the option is not visible, try refreshing the page.
     
 ### Task 2: Onboard a Device
