@@ -25,7 +25,7 @@ In this task, you'll create a Windows virtual machine in Azure.
 
     ![](../Media/l8e1-1.png)
 
-1. In the **Search services and marketplace** box, enter **Windows 11 (1)** and select **Microsoft Window 11 (2)** from the drop-down list.
+1. In the **Search services and marketplace** box, enter **Windows 11 (1)** and select **Windows 11 (2)** from the drop-down list.
 
     ![](../Media/l8e1-2.png)
 
