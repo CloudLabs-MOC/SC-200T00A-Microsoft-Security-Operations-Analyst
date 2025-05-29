@@ -1,17 +1,17 @@
 # Module 9 - Lab 1 - Exercise 9 - Deploy ASIM parsers
 
-## Lab scenario
+## Lab Scenario
 
 You're a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You need to model ASIM parsers for a specific Windows registry event. These parsers will be finalized at a later time following the [Advanced Security Information Model (ASIM) Registry Event normalization schema reference](https://docs.microsoft.com/azure/sentinel/registry-event-normalization-schema).
 
 >**Important:** The lab exercises for Learning Path #9 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
-## Lab objectives
+## Lab Objectives
  In this lab, you will Understand following:
 
  - Task 1: Deploy the Registry Schema ASIM parsers
 
-## Estimated timing: 30 minutes
+## Estimated Timing: 30 minutes
 
 ## Architecture Diagram
 
@@ -23,7 +23,7 @@ In this task, you'll review the Registry Schema parsers that are included with t
 
 1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
-1. Select your Microsoft Sentinel Workspace.
+1. Select **uniquenameDefender** Microsoft Sentinel Workspace.
 
 <!--- 1. In the Edge browser, open a new tab (Ctrl+T) and navigate to the Microsoft Sentinel GitHub ASIM page <https://github.com/Azure/Azure-Sentinel/tree/master/ASIM>.
 
@@ -49,9 +49,9 @@ In this task, you'll review the Registry Schema parsers that are included with t
 
 1. Select the **Functions** tab (next to the Tables and Queries tabs). **Hint:** You might need to select the ellipsis icon **(...)** to select the tab.
 
-1. In the *Search* bar type **registry**, and scroll down through the ASIM parser functions until you see the following *_Im_RegistryEvent_MicrosoftWindowsEventxxx*for Microsoft Windows under the *Microsoft Sentinel* heading.
+1. In the *Search* bar type **registry**, and scroll down through the ASIM parser functions until you see the following **_Im_RegistryEvent_MicrosoftWindowsEventxxx** for Microsoft Windows under the *Microsoft Sentinel* heading.
 
-    >**Note:** We're using the xxx in the ASIM parser function name to account for version changes. At the time this lab was updated the function was _Im_RegistryEvent_MicrosoftWindowsEvent*V02*.
+    >**Note:** We're using the xxx in the ASIM parser function name to account for version changes. At the time this lab was updated the function was **_Im_RegistryEvent_MicrosoftWindowsEventV02**.
 
 1. Hover over the **_Im_RegistryEvent_MicrosoftWindowsEventxxx** ASIM function and then select **Load the function code** in the popup window.
 

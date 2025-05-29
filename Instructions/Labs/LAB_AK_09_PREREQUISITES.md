@@ -1,11 +1,17 @@
 
 # LAB PREREQUISITES
 
-## Estimated timing: 40 minutes
+## Estimated Timing: 40 minutes
 
 ## Prerequisites to be completed before proceeding to further exercises
 
 ### Prerequisite 01
+
+## Lab Objectives
+
+ In this lab, you will perform the following:
+
+ - Task 1: Connect a non-Azure Windows Machine
 
 ### Task 1: Connect a non-Azure Windows Machine
 
@@ -62,7 +68,7 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
    > - From there click on allow enhanced mode policy Under **Server** and enable the option.
    > - Again, click on allow enhanced mode under **User** and enable the option. Restart the WINSERVER machine once to reflect the changes.
 
-   >**Note:** If the copy-paste functionality is still not working, copy the content that has to be pasted then from the top navigation pane of the WINSERVER Hyper-V VM click on **Clipboard** and choose **Type Clipboard text** to paste.
+   >**Note:** If the copy-paste function is still not working, first copy the required content. Then, in the top navigation pane of the WINSERVER Hyper-V VM, click on **Clipboard** and select **Type Clipboard Text** to paste it.
       
    > ![Picture 1](../Media/x0.png)
 
@@ -154,33 +160,24 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
         
 1. Once the workspace validation has passed, select **Create**. Wait for the new workspace to be provisioned, this may take a few minutes.
 
-1. In the Azure portal's search bar, type **Log Analytics workspaces** and Select the **uniquenameDefender (1)** you just created, click on **Virtual machines (deprecated) (3)** under **classic (3)** from the left panel, then select **WIN1 (4)** virtual machine.
-
-   ![Picture 1](../Media/111.png)
-
-1. On the WIN1 page, click on **Connect**.
-
-   ![Picture 1](../Media/112.png)
-
-1. Wait until its get connected.
-
-   ![Picture 1](../Media/113.png)
-
-1. In the Azure portal's search bar, type **Microsoft Sentinel (1)** and select it **Microsoft Sentinel (2)**.
+1. In the Azure portal search bar, type **Microsoft Sentinel (1)** and select it **Microsoft Sentinel (2)**.
 
      ![Picture 1](../Media/sc-200-19.png)
 
-1. Click on **+ Create**.
+1. On **Microsoft Sentinel** page, Click on **+ Create**.
 
-1. Next, in Add Microsoft Sentinel to a workspace page select the existing workspace **(1)** that was created in the previous lab, then select **Add (2)**. This could take a few minutes.
+1. Next, in Add Microsoft Sentinel to a workspace page select the **uniquenameDefender (1)** that was created in the previous lab, then select **Add (2)**. This could take a few minutes.
 
      ![Picture 1](../Media/sc-200-20.png)
 
-1. Select the Microsoft Sentinel Workspace you created.
+1. Select the **Microsoft Sentinel Workspace** you created.
  
-1. Click on **Go to the content hub (1)**, search for **Windows Security Events (2)**, and select it(3) and click on **Install (4)**.
+1. On the **Microsoft Sentinel | News & guides** page, select **Go to the content hub** under **Get started** tab.
 
-     ![Picture 1](../Media/contenthub.png)
+   ![Picture 1](../Media/contenthub.png)
+
+1. On the **Microsoft Sentinel | Content hub (1)** page, search for **Windows Security Events (2)**, and select **Windows Security Events (3)** and click on **Install (4)**.
+
      ![Picture 1](../Media/installWSEvents.png)
 
 1. Once the installation is completed, go to the **Data connector (1)** page and refresh you should find **Windows Security Events via AMA (2)**.
@@ -189,7 +186,7 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
 1. Select the **Windows Security Events via AMA** connector and click on **Open connector page** on the connector information blade. 
 
-    >**Note:** You  may have to click on the arrowhead that appears to see the **Open Connector Page Option**
+    >**Note:** You may need to click on the arrowhead that appears to reveal the **Open Connector Page** option.
 
     ![Picture 1](../Media/m1.png)
  
@@ -205,15 +202,18 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
      ![Picture 1](../Media/sc-200-23.png)
 
-1. Select **Create**.
+1. On the **Create data Collection Rule** page, Select **Create**.
 
 1. Wait a few minutes and then select **Refresh** to see the new data collection rule listed.
 
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   - If you receive a success message, you can proceed to the next task.
-   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- If you receive a success message, you can proceed to the next task.
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
  
-   <validation step="07c96102-f314-44cd-b6a4-10fbb89a449b" />
+<validation step="07c96102-f314-44cd-b6a4-10fbb89a449b" />
 
-**PROCEED TO  THE NEXT EXERCISE**
+## Review
+-  Connected a non-Azure Windows Machine
+
+## PROCEED TO  THE NEXT EXERCISE

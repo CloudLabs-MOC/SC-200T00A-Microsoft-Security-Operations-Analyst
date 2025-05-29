@@ -10,7 +10,7 @@ In this lab, you will perform:
 - Task 2: Apply Microsoft Defender XDR for Office 365 to present security policies
 - Task 3: Preparing the Microsoft Defender XDR workspace
     
-## Estimated timing: 60 minutes
+## Estimated Timing: 60 minutes
 
 ## Architecture Diagram
 
@@ -20,11 +20,15 @@ In this lab, you will perform:
 
 In this task, you will create a new group in Microsoft Entra ID using the Azure portal.
 
-1. In the Search bar of the Azure portal, type **Microsoft Entra ID**, then select **Microsoft Entra ID**.
+1. In the Search bar of the Azure portal, type **Entra ID (1)**, then select **Microsoft Entra ID (2)**.
+
+   ![Picture 1](../Media/entraid.png)
 
 1. Select **Groups** and then click on **New group**.
 
-1. Enter the details below for the new group page:
+   ![Picture 1](../Media/grp.png)
+
+1. Enter the below details for the new group page:
 
    |Setting|Value|
     |---|---|
@@ -39,17 +43,17 @@ In this task, you will create a new group in Microsoft Entra ID using the Azure 
 
 1. Click on **No members selected** and select the **ODL_user <inject key="DeploymentID" enableCopy="false"/>** from the list and then click on **Select**.
 
-   > **Note**: Make sure you have selected **Group type** as Microsoft 365.
+   >**Note**: Make sure you have selected **Group type** as **Microsoft 365**.
 
-1. Select **Create**.
+1. On the **New Group** page, click on **Create**.
 
 ### Task 2: Apply Microsoft Defender XDR for Office 365 preset security policies
 
 In this task, you will assign preset security policies for Exchange Online Protection (EOP) and Microsoft Defender XDR for Office 365 in the Microsoft  security portal.
 
-1. In the Edge browser, go to the Microsoft  Defender XDR portal at (https://security.microsoft.com).
+1. In the Edge browser, navigate to the [Microsoft Defender XDR portal](https://security.microsoft.com) via the **Security portal**.
 
-1. You'll see the **Sign into Microsoft Defender XDR portal** tab. Here, enter your credentials to log in:
+1. You will see the **Sign into Microsoft Defender XDR portal** tab. Here, enter your credentials to log in:
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
@@ -61,17 +65,17 @@ In this task, you will assign preset security policies for Exchange Online Prote
  
       ![Enter Your Password](../Media/sc900-image-2.png)
 
-    >**Note:** If you see the message **"The operation could not be completed. Please try again later. If the issue persists, contact Microsoft Support."**, click **OK** to proceed.
+    >**Note:** If you encounter the message **"The operation could not be completed. Please try again later. If the issue persists, contact Microsoft Support."**, click **OK** to continue.
 
 1. If shown, please close the **Microsoft Defender XDR quick tour** to go ahead.
 
-1. From the navigation menu, under *Email & Collaboration* area, select **Policies & rules**.
+1. From the navigation menu, under **Email & Collaboration** area, select **Policies & rules**.
 
-1. On the *Policy & rules* dashboard, select **Threat policies**.
+1. On the **Policy & rules** dashboard, select **Threat policies**.
 
-1. On the *Threat policies* dashboard, select **Preset Security Policies**.
+1. On the **Threat policies** dashboard, select **Preset Security Policies**.
 
-   >**Note:** If you receive the message *"Client Error - Error when getting bip rule"* select **OK** to continue. The error is due to the hydration status of your tenant at Office 365, which is not enabled by default.
+    >**Note:** If you receive the message *"Client Error - Error when getting bip rule"* select **OK** to continue. The error is due to the hydration status of your tenant at Office 365, which is not enabled by default.
 
     >**Note:** If you see the message *"Client Error - An error occurred when retrieving preset security policies. Please try again later."*, select **OK** to continue, then refresh your browser by pressing **Ctrl+F5**.
 
@@ -81,18 +85,19 @@ In this task, you will assign preset security policies for Exchange Online Prote
 
    ![Standart protection](../Media/standard-protection-2905.png)
 
-    >**Hint:** If you see this option greyed out, refresh your browser by pressing **Ctrl+F5**.
+    >**Hint:** If this option appears greyed out, refresh your browser by pressing **Ctrl+F5**.
 
-    >**Note:** After clicking on **Manage protection settings**, the content may take **40 to 60 minutes** to load completely. Wait for the page to fully load, then return to the same page after the waiting period. You may need to sign out of **Microsoft Defender XDR**, sign back in, and then repeat the steps to continue.
+    >**Note:** After clicking **Manage protection settings**, the content may take **40 to 60 minutes** to load completely. Wait for the page to fully load, then revisit the same page after the waiting period. If needed, sign out of **Microsoft Defender XDR**, sign back in, and repeat the steps to continue.
 
-1. In the Apply Exchange Online Protection page, select **Specific recipients** under **Apply protection to:** and under **Domains** you can see that your domain is selected **(1)**, if not start writing your tenant's domain name, select it, and then select **Next (2)**.
+1. In the Apply Exchange Online Protection page, select **Specific recipients** under **Apply protection to:** and under **Domains** you can see that your **domain is selected (1)**, if not start writing your tenant's domain name, select it, and then select **Next (2)**.
 
    ![Standart protection](../Media/standard-protection2-2905.png)                                                                    
+  
     >**Hint:** The domain name for your tenant is the same as your admin account, usually in the format *mocholxxxxx.onmicrosoft.com*. This setup enforces policies for anti-spam, outbound spam filtering, anti-malware, and anti-phishing.
 
-1. In the **Apply Defender for Office 365 protection** page, apply the same configuration as the previous step and select **Next**. Notice that this configuration applies policies for anti-phishing, Safe Attachments, and Safe Links.
+1. On the **Apply Defender for Office 365 protection** page, apply the same configuration as in the previous step and select **Next**. This configuration enforces policies for **anti-phishing, Safe Attachments, and Safe Links**.
 
-1. In the *Impersonation protection* page, select **Next** for next all steps i.e. (4x times) to continue.
+1. In the Impersonation protection page, select **Next** for next all steps i.e. (4x times) to continue.
 
 1. If a popup appears for *Policy mode* page, make sure the **Turn on the policy when finished** radio button is selected, and then select **Next**.
 
@@ -110,15 +115,20 @@ In this task, you will assign preset security policies for Exchange Online Prote
 
    ![Standart protection](../Media/strict-protection2-2905.png) 
 
-   >**Note**: If a group is already selected, make sure it is **Sg-IT-<inject key="DeploymentID" enableCopy="false"/>**. If it is not, remove the selected group and add the correct one.
+   >**Note**: If a group is already selected, ensure it is **Sg-IT-<inject key="DeploymentID" enableCopy="false"/>**. If not, remove the selected group and add the correct one.
 
-1. In the *Apply protection to* page, apply the same configuration as the previous step and select **Next**. Notice that this configuration applies policies for anti-phishing, Safe Attachments, and Safe Links.
+1. In the *Apply protection to* page, apply the same configuration as the previous step and select **Next**. Notice that this configuration applies policies for **anti-phishing, Safe Attachments, and Safe Links.**
+
+   ![Enter Your Username](../Media/lab1y3.png)
 
 1. In the *Impersonation protection* page, select **Next** for next all steps i.e. (4x times) to continue.
 
-1. In the *Policy mode* page, make sure the **Turn on the policy when finished** radio button is selected, and then select **Next**.
+1. In the *Policy mode* page, make sure the **Turn on the policy when finished (1)** radio button is selected, and then select **Next (2)**.
+
+   ![Enter Your Username](../Media/lab1y4.png)
 
 1. Read the content under *Review and confirm your changes* and select **Confirm** to apply the changes and then select **Done** to finish.
+
 
 ### Task 3: Preparing the Microsoft Defender XDR workspace
 
@@ -135,6 +145,7 @@ In this task, you will assign preset security policies for Exchange Online Prote
    ![Standart protection](../Media/home-2905.png)
    ![Standart protection](../Media/settings1-2905.png)
    ![Standart protection](../Media/settings3-2905.png) 
+
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.

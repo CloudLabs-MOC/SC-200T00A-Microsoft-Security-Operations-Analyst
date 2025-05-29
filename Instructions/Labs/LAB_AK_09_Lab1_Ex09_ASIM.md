@@ -1,18 +1,17 @@
 # Module 9 - Lab 1 - Exercise 9 - Deploy ASIM parsers
 
-## Lab scenario
-
+## Lab Scenario
 
 You're a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You need to model ASIM parsers for a specific User Management event. These parsers will be finalized at a later time following the [Advanced Security Information Model (ASIM) User Management Event normalization schema reference].
 
 >**Important:** The lab exercises for Learning Path #9 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
-## Lab objectives
+## Lab Objectives
  In this lab, you will Understand following:
 
  - Task 1: Deploy the User Management Schema ASIM parsers
 
-## Estimated timing: 30 minutes
+## Estimated Timing: 30 minutes
 
 ## Architecture Diagram
 

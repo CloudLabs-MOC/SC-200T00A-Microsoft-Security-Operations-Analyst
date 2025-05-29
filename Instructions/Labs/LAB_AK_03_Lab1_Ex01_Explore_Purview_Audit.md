@@ -14,13 +14,13 @@ In this lab, you will perform:
 
   ![Picture 1](../Media/archdialab3.png)
 
-### Estimated timing: 15 minutes
+### Estimated Timing: 15 minutes
 
 ### Task 1: Enable Purview Audit logs
 
 In this task, you'll assign preset security policies for Exchange Online Protection (EOP) and Microsoft Defender for Office 365 in the Microsoft 365 security portal.
 
-1. In the Microsoft Edge browser, go to the Microsoft Defender XDR portal at (<https://security.microsoft.com>).
+1. In the **Microsoft Edge** browser, navigate to the **Microsoft Defender XDR portal** at [Microsoft Defender XDR portal](https://security.microsoft.com).
 
 1. You'll see the **Sign into Microsoft Defender XDR portal** tab. Here, enter the username and password as below:
 
@@ -31,7 +31,7 @@ In this task, you'll assign preset security policies for Exchange Online Protect
 
    ![Screenshot showing the Welcome to the new Microsoft Purview portal screen.](../Media/lab3-1.png)
 
-1. When the Microsoft Purview portal opens, a message about the *new Microsoft Purview portal* will appear on the screen. Select the option to agree with the terms of data flow disclosure and the privacy statement, then select **Get started**.
+1. When the **Microsoft Purview portal** opens, a message about the *new Microsoft Purview portal* will appear on the screen. Select the option to agree with the **terms of data flow disclosure** and the **privacy statement**, then click **Get started**.
 
     ![Screenshot showing the Welcome to the new Microsoft Purview portal screen.](../Media/lab3-2.png)
 
@@ -47,7 +47,7 @@ In this task, you'll assign preset security policies for Exchange Online Protect
 
     >**Note:** If you get a message to _complete the organizational setup_, click on Yes. 
 
-1. Once you select this option, the blue bar should disappear from this page.
+1. Once you select this option, the **blue bar** should disappear from the page.
 
     >**Note:** It might take 60 minutes to start recording activities.
 

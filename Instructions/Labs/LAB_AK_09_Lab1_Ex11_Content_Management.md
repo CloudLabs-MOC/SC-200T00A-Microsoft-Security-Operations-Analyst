@@ -8,13 +8,13 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
 >**Important:** The lab exercises for Learning Path #9 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
-## Lab objectives
+## Lab Objectives
  In this lab, you will Understand following:
  - Task 1: Create and export an analytical rule
  - Task 2: Create our Azure DevOps environment
  - Task 3: Connect Sentinel to Azure DevOps.
 
-## Estimated timing: 30 minutes
+## Estimated Timing: 30 minutes
 
 ## Architecture Diagram
 
@@ -28,7 +28,7 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
    ![Picture 1](../Media/sc-200-19.png)
 
-1. Select your Microsoft Sentinel Workspace.
+1. Select **uniquenameDefender** Microsoft Sentinel Workspace.
 
 1. Select **Analytics** under the *Configuration* area from the left blade.
 
@@ -118,11 +118,11 @@ In this task, you will connect Microsoft Sentinel to Azure DevOps to manage cont
 
 1. Select the Branch **refsheads/main**. **Hint:** You might need to scroll down within the drop-down to see the branch.
 
-1. Select all content types.
+1. Select **all content types**.
 
 1. Then select **Create**.
 
-1. Go back to Microsoft Sentinel workspace if needed
+1. Go back to Microsoft Sentinel workspace if needed.
 
 1. Go to the *Repositories (Preview)* page, select **Refresh**. Wait until the last deployment status* is **Failed**.  
 
@@ -131,7 +131,7 @@ In this task, you will connect Microsoft Sentinel to Azure DevOps to manage cont
    >**Note:** The *Failed* status is due to limitations in the hosted lab environment. You would normally see *Succeeded*. Then you can see in the *Analytics* the imported rule *Rule from Azure DevOps*.
 
 ## Review
--  Explored Microsoft sentinel
+- Explored Microsoft sentinel
 - Created a playbook and set it for automation.
 - Initiated the attack and created detections for those and investigated it
    

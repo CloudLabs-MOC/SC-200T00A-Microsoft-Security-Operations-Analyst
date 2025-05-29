@@ -1,6 +1,6 @@
 # Module 10 - Lab 1 - Exercise 1 - Perform Threat Hunting in Microsoft Sentinel
 
-## Lab scenario
+## Lab Scenario
 
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You have received threat intelligence about a Command and Control (C2 or C&C) technique.  You need to perform a hunt and watch for the threat.
 
@@ -8,14 +8,14 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
    >**Note:** The log data created in the previous Learning Path *Perform Attacks* lab exercises will not be available in this lab without rerunning the **Attack 3** on WIN1 server in Exercise 5.
 
-## Lab objectives
+## Lab Objectives
  In this lab, you will perform the following:
  - Task 1: Create a hunting query 
  - Task 2: Create a NRT query rule
  - Task 3: Create a Search
  - Task 4: Create a hunt that combines multiple queries into a MITRE tactic
  
-## Estimated timing: 40 minutes
+## Estimated Timing: 40 minutes
 
 ## Architecture Diagram
 
@@ -25,13 +25,13 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
 In this task, you will create a hunting query, bookmark a result, and create a Livestream.
 
-1. 1. In the Azure portal's search bar type **Microsoft sentinel (1)**, and select **Microsoft Sentinel (2)**.
+1. In the Azure portal's search bar type **Microsoft sentinel (1)**, and select **Microsoft Sentinel (2)**.
 
    ![Picture 1](../Media/sc-200-19.png)
 
-1. Select your Microsoft Sentinel Workspace.
+1. Select **uniquenameDefender** Microsoft Sentinel Workspace.
 
-1. Select **Logs** 
+1. On the **Microsoft sentinel** page, select **Logs**.
 
 1. Enter the following KQL Statement in the *New Query 1* space:
 
@@ -277,9 +277,9 @@ In this task, you will learn how to create a hunt in Microsoft Sentinel that com
 
 ## Review
 In this lab, you have completed the following:
-- We created a hunting query.
-- We created an NRT query rule.
-- We Created a Search.
-- We Created a hunt that combines multiple queries into a MITRE tactic.
+- Created a hunting query.
+- Created an NRT query rule.
+- Created a Search.
+- Created a hunt that combines multiple queries into a MITRE tactic.
 
 ## Click on **Next** to proceed to Lab 2 

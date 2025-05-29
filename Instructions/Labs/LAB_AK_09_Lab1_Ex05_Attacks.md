@@ -106,10 +106,10 @@ Next, make any other changes to the analytics rule.
 
 ## Review
 In this lab
-- You have understood attacks:
+- Understood attacks:
    - Attack 1 - Persistence with Registry Key Add.
    - Attack 2 - User Add and Elevate Privilege
    - Attack 3 - DNS / C2 
-- You have understood Detection Modeling. 
+- Understood Detection Modeling. 
 
 ## Select **Next** to continue to Lab  6

@@ -1,6 +1,6 @@
 # Module 9 - Lab 1 - Exercise 4 - Explore Entity Behavior Analytics
 
-## Lab scenario
+## Lab Scenario
 
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You already created Scheduled and Microsoft Security Analytics rules. 
 
@@ -10,12 +10,12 @@ You need to configure Microsoft Sentinel to perform Entity Behavior Analytics to
 
 >**Important:** The lab exercises for Learning Path #9 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
-## Lab objectives
+## Lab Objectives
  In this lab, you will perform the following:
 - Task 1: Explore Entity Behavior 
 - Task 2: Confirm and review Anomalies rules
 
-## Estimated timing: 20 minutes
+## Estimated Timing: 20 minutes
 
 ## Architecture Diagram
 
@@ -27,9 +27,9 @@ In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
 
 1. In the Azure portal's search bar type **Microsoft sentinel (1)**, and select **Microsoft Sentinel (2)**.
 
-   ![Picture 1](../Media/sc-200-19.png).
+   ![Picture 1](../Media/sc-200-19.png)
 
-1. Select the Microsoft Sentinel Workspace you created earlier.
+1. Select **uniquenameDefender** Microsoft Sentinel Workspace.
 
 1. On the left menu Select the **Entity behavior** page.
 
@@ -37,9 +37,7 @@ In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
 
     ![Lab overview.](../Media/ueba.png)
 
-1. On the **Settings** tab under *Entity behaviour analytics*, scroll down the *Anomalies* section and verify read through the paragraph, and verify that the *switch* is **On (1)**.
-
-1. Select the **Go to analytics in oder to configure the anomalies (1)** link.
+1. On the **Settings** tab under *Entity Behavior Analytics*, scroll down to the *Anomalies* section, read through the paragraph, and verify that the **switch** is set to **On (1)**. Then, select the **Go to analytics in order to configure the anomalies (2)** link.
 
     ![Lab overview.](../Media/35.png)
 
@@ -47,15 +45,15 @@ In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
 
 In this task, you will confirm Anomalies analytics rules are enabled.
 
-1. You should be now at the *Analytics* page, *Anomalies* tab.
+1. You should be now at the **Analytics** page, **Anomalies** tab.
 
-1. Confirm status column of the rules is *Enabled*.
+1. Confirm status column of the rules is **Enabled**.
 
 1. Select any rule and then select **Edit** on the rule blade (Select ellipsis (...) icon at the right of the rule to see the Edit option).
 
     >**Note:** If you are not able to select the edit option, please refresh the page.
 
-1. Review the *General* tab information. Notice the *Mode* is **Production** and then select **Next: Configuration**.
+1. Review the **General** tab information. Notice the **Mode** is **Production** and then select **Next: Configuration**.
 
 1. Review the *Configuration* tab information. Notice that you cannot change the **Anomaly score threshold**.
 
@@ -77,7 +75,7 @@ In this task, you will confirm Anomalies analytics rules are enabled.
 
 1. Select **Next: Review + Create** and then **Save** to update the rule.
 
-    >**Note:** You can upgrade the **Flighting** rule to **Production** by changing the setting on this rule and saving the changes. The **Production** rule will become the **Flighting** rule afterward.
+    >**Note:** You can upgrade the **Flighting** rule to **Production** by modifying the setting on this rule and saving the changes. The existing **Production** rule will then become the new **Flighting** rule.
     
 ### Review
 In this lab, you completed follwing tasks:

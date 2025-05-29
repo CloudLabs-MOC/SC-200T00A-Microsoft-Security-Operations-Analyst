@@ -1,19 +1,19 @@
 # Module 8 - Lab 1 - Exercise 3 - Connect Linux hosts to Microsoft Sentinel using data connectors
 
-## Lab scenario
+## Lab Scenario
 
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The next source of data is Linux virtual machines using the Common Event Formatting (CEF) via Legacy Agent and Syslog connectors.
 
 >**Important:** The lab exercises for Learning Path #8 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
-## Lab objectives
+## Lab Objectives
  In this lab, you will perform the following: 
 - Task 1: Access the Microsoft Sentinel Workspace
 - Task 2: Connect a Linux Host using the Common Event Format connector
 - Task 3: Connect a Linux host using the Syslog connector
 - Task 4: Configure the facilities you want to collect and their severities for the Syslog connector
 
-## Estimated timing: 40 minutes
+## Estimated Timing: 40 minutes
 
 ## Architecture Diagram
 
@@ -27,7 +27,9 @@ In this task, you will access your Microsoft Sentinel workspace.
 
    ![](../Media/l8e129.png)
 
-1. Select the Microsoft Sentinel Workspace you created in a previous lab.
+1. Select the **uniquenameDefender** microsoft Sentinel Workspace you created earlier.
+
+   ![](../Media/uniquenamedefender.png)
 
 ### Task 2: Connect a Linux Host using the Common Event Format connector
 
@@ -111,6 +113,8 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 1. Select the tab for **Linux servers**.
 
+   ![](../Media/linuxservers.png)
+
     >**Note:** Your Log Analytics workspace should show **1 Linux computer connected**. This corresponds to the LIN1 (ubuntu1) virtual machine connected earlier with the CEF connector.
 
 1. Select **Log Analytics agent instructions**.
@@ -137,7 +141,9 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
    ![linux login](../Media/sc-200-M6-Ex3.png)
 
-1. You are now ready to paste in the **Download and onboard agent for Linux** from the earlier step. Make sure that the script from Azure is in the clipboard. In PowerShell right-click the top bar and choose **Edit** and then **Paste**. 
+1. You are now ready to paste in the **Download and onboard agent for Linux** from the earlier step. Make sure that the script from Azure is in the clipboard. In PowerShell right-click the top bar and choose **Edit (1)** and then **Paste (2)**. 
+
+    ![linux login](../Media/cp.png)
 
    >**Note:** You can also copy from the notepad you have pasted earlier.
 

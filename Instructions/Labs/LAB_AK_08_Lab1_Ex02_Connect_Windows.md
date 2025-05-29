@@ -1,24 +1,23 @@
 # Module 8 - Lab 1 - Exercise 2 - Connect Windows devices to Microsoft Sentinel using data connectors
 
-## Lab scenario
+## Lab Scenario
 
 You're a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The next source of data is Windows virtual machines inside and outside of Azure, like On-Premises environments or other Public Clouds.
 
 >**Important:** The lab exercises for Learning Path #8 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
-## Lab objectives
+## Lab Objectives
  In this lab, you will perform the following:
 - Task 1: Create a Windows Virtual Machine in Azure
 - Task 2: Install Azure Arc on an On-Premises Server
 - Task 3: Connect an Azure Windows virtual machine
 - Task 4: Connect a non-Azure Windows Machine
 
-### Estimated Duration: 30 minutes
+### Estimated Timing: 30 minutes
 
 ## Architecture Diagram
 
 ![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod6_L1_Ex2.png)
-
 
 ### Task 1: Create a Windows Virtual Machine in Azure
 
@@ -28,11 +27,11 @@ In this task, you'll create a Windows virtual machine in Azure.
 
     ![](../Media/l8e1-1.png)
 
-1. In the **Search services and marketplace** box, enter *Windows 10 (1)* and select **Microsoft Window 10 (2)** from the drop-down list.
+1. In the **Search services and marketplace** box, enter **Windows 10 (1)** and select **Microsoft Window 10 (2)** from the drop-down list.
 
     ![](../Media/l8e1-2.png)
 
-1. Select the box for **Microsoft Window 10**.
+1. On the **Mrketplace** page,  Select the box for **Microsoft Window 10**.
 
     ![](../Media/l8e1-3.png)
 
@@ -53,7 +52,7 @@ In this task, you'll create a Windows virtual machine in Azure.
     | Subscription | your default subscription **(1)** | 
     | Resource Group | Select **RG-AZWIN01 (2)**   |
     | Virtual machine name |  Enter **AZWIN01 (3)**  | 
-    | Region | **<inject key="Region" enableCopy="false" /> (4)** |
+    | Region | **Use default region (4)** |
 
       ![](../Media/l8e1-6.png)
 
@@ -156,21 +155,21 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
    ![](../Media/l8e1-11.png)
 
-1. Enter *Administrator* for "Username" and *Passw0rd!* for "Password" if you get a UAC prompt.
+1. Enter **Administrator** for "Username" and **Passw0rd!** for "Password" if you get a UAC prompt.
 
-1. Enter: cd C:\Users\Administrator\Downloads
+1. Enter: **cd C:\Users\Administrator\Downloads**
 
     ![](../Media/l8e122.png)
 
     >**Important:** If you do not have this directory, most likely means that you are in the wrong machine. Go back to the beginning of Task 4 and change to WINServer and start over.
 
-1. Type *Set-ExecutionPolicy -ExecutionPolicy Unrestricted* and press enter.
+1. Type **Set-ExecutionPolicy -ExecutionPolicy Unrestricted** and press **enter**.
 
 1. Enter **A** for Yes to All and press enter.
 
     ![](../Media/l8e123.png)
 
-1. Type *.\OnboardingScript.ps1* and press enter. 
+1. Type **.\OnboardingScript.ps1** and press **enter**. 
 
     ![](../Media/l8e124.png)
 
@@ -202,7 +201,7 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
    ![](../Media/l8e129.png)
 
-1. Select your Microsoft Sentinel Workspace you created earlier.
+1. Select the **uniquenameDefender** microsoft Sentinel Workspace you created earlier.
 
    ![](../Media/l8e130.png)
 
@@ -224,9 +223,13 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
    ![](../Media/l8e3-14.png)
     
-1. In the *Configuration* section, under the *Instructions* tab, select the **Create data collection rule**.
+1. In the *Configuration* section, under the *Instructions* tab, select the **+ Create data collection rule**.
 
-1. Enter **AZWINDCR** for Rule Name, then select **Next: Resources**.
+   ![](../Media/createdatacollectionrule.png)
+
+1. Enter **AZWINDCR (1)** for Rule Name, then select **Next: Resources (2)**.
+
+   ![](../Media/azwindcr.png)
 
 1. Select **+Add resource(s)** to select the Virtual Machine we created.
 
@@ -234,11 +237,11 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
     ![](../Media/l8e3-13.png)
 
-1. Select **Apply** and then select **Next: Collect**.
-
-1. Review the different Security Event collection option. Keep *All Security Events* and then select **Next: Review + create**.
+1. Next, choose **Collect**, review the various Security Event collection options, keep the setting for *All Security Events*, and then click on **Next: Review + Create**.
 
 1. Select **Create** to save the Data Collection Rule.
+
+   ![](../Media/createrule.png)
 
 1. Wait a minute and then select **Refresh** to see the new data collection rule listed.
 
@@ -262,13 +265,13 @@ In this task, you'll add an Azure Arc connected, non-Azure Windows virtual machi
 
     ![](../Media/l8e3-11.png)
 
-    >**Important:** If you do not see it, please refer to Learning Path 8, Exercise 2, Task 2, where you installed Azure Arc on this server.
+    >**Important:** If you do not see it, please refer to [Learning Path 8, Exercise 2, Task 2](w), where you installed **Azure Arc** on this server.
 
-1. Select **Next: Collect**, then **Next: Review + create**.
+1. On the **Edit Data Collection Rule** page, select **Next: Collect**, then **Next: Review + create**.
 
    ![](../Media/l8e3-10.png)
 
-1. Select **Create** after *Validation passed* is displayed.
+1. Once the **Vlidation Passed**, click on **Create**.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
