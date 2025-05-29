@@ -4,8 +4,6 @@
 
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The next source of data is Linux virtual machines using the Common Event Formatting (CEF) via Legacy Agent and Syslog connectors.
 
->**Important:** The lab exercises for Learning Path #8 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
-
 ## Lab Objectives
  In this lab, you will perform the following: 
 - Task 1: Access the Microsoft Sentinel Workspace
@@ -64,7 +62,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 1. Enter the following PowerShell command, adjusting for your specific Linux server information, and press enter:
 
     ```PowerShell
-    ssh insert your Linux IP address here -l insert Linux user name here
+    ssh insert your linux-IP-address-here -l insert-linux-user-name-here
     ```
     
      >**Note**: Replace **insert your linux IP address here** with pasted on the notepad Public Ip address of **LIN1** and **insert linux username here** with **Admin Username** provided under Resource group: **LIN1** in the **Environment Details** page of the lab guide.
