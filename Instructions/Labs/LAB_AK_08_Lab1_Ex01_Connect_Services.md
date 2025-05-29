@@ -2,13 +2,11 @@
 
 ## Lab Scenario
 
-You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The organization has data from Microsoft 365, Microsoft 365 Defender, Azure resources, non-azure virtual machines, etc. You start connecting the Microsoft sources first.
-
->**Important:** The lab exercises for Learning Path #8 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
+You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The organization has data from Microsoft 365, Microsoft 365 Defender, Azure resources, non-Azure virtual machines, etc. You start connecting the Microsoft sources first.
 
 ## Lab Objectives
  In this lab, you will perform the following:
-- Task 1: Access the Microsoft Sentinel Workspace
+- Task 1: Create the Microsoft Sentinel Workspace
 - Task 2: Connect the Microsoft Defender for Cloud data connector
 - Task 3: Connect the Azure Activity data connector
 
@@ -18,7 +16,7 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
   ![Picture 1](../Media/mod8arch.png)
 
-### Task 1: Access the Microsoft Sentinel Workspace
+### Task 1: Create the Microsoft Sentinel Workspace
 
 In this task, you will access your Microsoft Sentinel workspace.
 
