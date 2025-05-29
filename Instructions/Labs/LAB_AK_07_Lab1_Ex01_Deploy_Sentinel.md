@@ -178,13 +178,13 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
 In this task, you will create an indicator in Microsoft Sentinel.
 
-1. In Microsoft Sentinel, select the **Threat intelligence (1)** option in the Threat management area.
-
-    ![](../Media/lab7y5.png)
+1. In Microsoft Sentinel, select the **Threat intelligence (1)** option in the **Threat management** area.
 
 1. Select **+ New (2)** from the command bar.
 
 1. Select the **TI Object (3)**.
+
+    ![](../Media/nty1.png)
 
 1. From the *Object type* dropdown, select **Indicator (1)**.
 
