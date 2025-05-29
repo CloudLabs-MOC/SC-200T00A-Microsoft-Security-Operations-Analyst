@@ -67,6 +67,8 @@ In this task, you will deploy Microsoft Sentinel to an existing Log Analytics wo
 
 ### Task 3 : Configure data retention
 
+In this task, you will configure the data retention in the Log analytics workspace.
+
 1. In the Search bar of the Azure portal, type **Log Analytics (1)**, then select **Log Analytics workspaces (2)**. 
 
    ![](../Media/l8e132.png)
@@ -208,7 +210,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 1. Select the **Logs** option under the *General* area of the *Sentinel* navigation menu. You might want to disable the "Always show queries" option and close the *Queries* window to run the KQL statements.
 
-    >**Note:** In the default *New Query 1* tab, the **_GetWatchList('HighValueHosts')** query should still be there, and will now produce results if run.
+      >**Note:** In the default *New Query 1* tab, the **_GetWatchList('HighValueHosts')** query should still be there, and will now produce results if run.
 
 1. Select the *+* sign to create a new query tab.
 
@@ -220,7 +222,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
     >**Note:** It could take up to five minutes for the indicator to appear.
 
-    ![](../Media/lab7y8.png)
+      ![](../Media/lab7y8.png)
 
 1. Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column.
 
@@ -229,7 +231,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
     | project DomainName
     ```
 
-    ![](../Media/lab7y9.png)
+      ![](../Media/lab7y9.png)
 
 ### Task 6: Configure log retention
 
