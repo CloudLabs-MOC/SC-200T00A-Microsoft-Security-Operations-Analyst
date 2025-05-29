@@ -220,7 +220,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
     >**Note:** It could take up to five minutes for the indicator to appear.
 
-     ![](../Media/lab7y8.png)
+    ![](../Media/lab7y8.png)
 
 1. Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column.
 
@@ -229,7 +229,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
     | project DomainName
     ```
 
-     ![](../Media/lab7y9.png)
+    ![](../Media/lab7y9.png)
 
 ### Task 6: Configure log retention
 
