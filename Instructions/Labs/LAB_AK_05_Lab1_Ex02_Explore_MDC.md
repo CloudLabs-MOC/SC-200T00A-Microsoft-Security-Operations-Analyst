@@ -27,33 +27,25 @@ In this task, you will load sample security alerts and review the alert details.
 
    ![Picture 1](../Media/lab5-8.png)
 
-1. Under *Cloud Security (1)*, select **Regulatory compliance (2)** from the left menu items.
+1. Under **Cloud Security (1)**, select **Regulatory compliance (2)** from the left-hand menu. In the toolbar, click **Manage compliance standards (3)**.
 
     >**Note:** You may need to refresh this page if you do not see the *toolbar* tabs.
 
    ![Picture 1](../Media/lab5y3.png)
 
-1. Select **Manage compliance standards (3)** on the toolbar.
-
 1. Select your **Subscription**.
 
    ![Picture 1](../Media/lab5y4.png)
 
-1. Under *Settings*, select **Security policies (1)** in the portal menu.
+1. In the **Settings** section of the portal menu, select **Security policies (1)**. Scroll down to review the available **Security standards**. Use the search box to locate **ISO 27001:2013 (2)**, then toggle the **Status** slider to the right to turn it **On (3)**.
 
-   ![Picture 1](../Media/lab5y5.png)
-
-1. Scroll down and review the "Security standards" available to you by default.
-
-1. Use the search box to find *ISO 27001:2013 (2)*.
-
-1. Select and move the **Status** slider to right of *ISO 27001:2013* to **On (3)**.
+     ![Picture 1](../Media/lab5y5.png)
 
     >**Note:** Some standards require you to assign an Azure Policy initiative.
 
-1. Select **Refresh** on the page menu to confirm that *ISO 27001:2013* is set to *On* for your subscription.
+1. Select **Refresh** on the page menu to confirm that **ISO 27001:2013** is set to **On** for your subscription.
 
-1. Close the *Security policies* page by selecting the 'X' on the upper right of the page to go back to the **Environment settings**.
+1. Close the Security policies page by selecting the 'X' on the upper right of the page to go back to the **Environment settings**.
 
     >**Note:** You might want to return later to *Regulatory compliance* to review the new standard controls and recommendations.
 

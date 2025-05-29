@@ -115,7 +115,7 @@ In this task, you will configure roles for use with device groups.
 
    ![Picture 1](../Media/lab4y2.png)  
 
-1. On the **Microsoft Defender XDR** page, select **Permissions and roles (1)** and click **Go to Permissions and roles (2)**.  
+1. On the **Microsoft Defender XDR** page, select **Permissions and roles (1)** then locate **Active** then toggle the **Status** slider to the right to turn it **On (2)** and click **Go to Permissions and roles (3)**.  
 
    ![Picture 1](../Media/lab4y1.png)  
 
@@ -131,15 +131,19 @@ In this task, you will configure roles for use with device groups.
 
    ![Picture 1](../Media/lab4y5.png)
 
-1. Select **Next (6)**
+1. Select **Next (6)**.
 
-1. On the **Assign users and data sources** page, select **+Add assignment (1)** and provide the below details and click on **Add (5)**
+1. On the **Assign users and data sources** page, select **+ Add assignment**:
+
+   ![Picture 1](../Media/48.png)
+   
+1. Provide the below details and click on **Add (4)**
 
    |Settings | Value|
    |----------|-------|
    |Assignment name | **Support Assistant (2)** |
    |Employees | Search and select **Sg-IT (3)** |
-   |Data sources | **Microsoft Defender for Endpoint & Defender Vulnerability Management (4)**|
+   |Data sources | **Keep Default (4)**|
 
    ![Picture 1](../Media/lab4y6.png)
 
@@ -187,6 +191,18 @@ In this task, you will configure device groups that allow for access control and
 1. For the User access tab, select **sg-IT (1)** and then select **Add selected groups (2)** button. Make sure it appears under **Azure AD user groups with access to this device group**.
 
    ![Picture 1](../Media/lab4y13.png)
+
+   >**Note:** If you're unable to select the **sg-IT** group and prompted with the message **"Go to Roles settings to define one,"** click on the **Go to Roles settings to define one** link to proceed and follow below steps:
+
+    ![Picture 1](../Media/49.png)
+
+    - On the **Discard changes** pop-up select **Discard**.
+
+      ![Picture 1](../Media/50.png)
+    
+    - You will be redirected to the **Roles** tab. Click **Turn On roles**, then wait for 5–10 minutes. After that, refresh the page and restart **Task 4** from the beginning.
+
+      ![Picture 1](../Media/51.png)
 
 1. Click on **Submit (3)**, then click on **Done**.
 
