@@ -4,8 +4,6 @@
 
 You're a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The next source of data is Windows virtual machines inside and outside of Azure, like On-Premises environments or other Public Clouds.
 
->**Important:** The lab exercises for Learning Path #8 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
-
 ## Lab Objectives
  In this lab, you will perform the following:
 - Task 1: Create a Windows Virtual Machine in Azure
@@ -27,15 +25,15 @@ In this task, you'll create a Windows virtual machine in Azure.
 
     ![](../Media/l8e1-1.png)
 
-1. In the **Search services and marketplace** box, enter **Windows 10 (1)** and select **Microsoft Window 10 (2)** from the drop-down list.
+1. In the **Search services and marketplace** box, enter **Windows 11 (1)** and select **Microsoft Window 11 (2)** from the drop-down list.
 
     ![](../Media/l8e1-2.png)
 
-1. On the **Mrketplace** page,  Select the box for **Microsoft Window 10**.
+1. On the **Marketplace** page,  Select the box for **Microsoft Window 11**.
 
     ![](../Media/l8e1-3.png)
 
-1. Open the *Plan* drop-down list and select **Windows 10 Enterprise, version 22H2 (1)**.
+1. Open the *Plan* drop-down list and select **Windows 11 Enterprise, version 22H2 (1)**.
 
 1. Select **Start with a pre-set configuration (2)** to continue.
 
@@ -58,7 +56,7 @@ In this task, you'll create a Windows virtual machine in Azure.
 
     | Setting | Value |
     | --- | --- |
-    | Image | **Windows 10 Enterprise, version 22H2 (5)**  | 
+    | Image | **Windows 11 Enterprise, version 22H2 (5)**  | 
     | Size| Should be selected as **Standard_B2s**. If it appears empty, select **See all sizes**, choose the **Standard_DS1_v2 (6)** click **Select**. |
 
       ![](../Media/l8e1-7.png)
