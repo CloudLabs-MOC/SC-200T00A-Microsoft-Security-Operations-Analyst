@@ -180,7 +180,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 1. In Microsoft Sentinel, select the **Threat intelligence (1)** option in the Threat management area.
 
-    ![](../Media/lab7y5.png)
+     ![](../Media/lab7y5.png)
 
 1. Select **+ New (2)** from the command bar.
 
@@ -190,7 +190,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 1. Select the **+ New observable** dropdown and select **Domain name (2)**.
 
-    ![](../Media/lab7y6.png)
+     ![](../Media/lab7y6.png)
 
 1. For Domain, enter a domain name, for example type *contoso.com (3)*.
 
@@ -200,7 +200,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 1. Set the **Valid from (6)** field to today's date.
 
-    ![](../Media/lab7y7.png)
+     ![](../Media/lab7y7.png)
 
 1. Scroll down to the **Description** and enter *This domain is known to be malicious (7)*.
 
@@ -220,7 +220,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
     >**Note:** It could take up to five minutes for the indicator to appear.
 
-    ![](../Media/lab7y8.png)
+     ![](../Media/lab7y8.png)
 
 1. Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column.
 
@@ -229,7 +229,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
     | project DomainName
     ```
 
-    ![](../Media/lab7y9.png)
+     ![](../Media/lab7y9.png)
 
 ### Task 6: Configure log retention
 
@@ -237,19 +237,19 @@ In this task, you will change the retention period for the SecurityEvent table.
 
 1. In Microsoft Sentinel, select the **Settings (1)** option under the ***Configuration*** area then select **Workspace settings (2)**.
 
-    ![](../Media/l7-20.png)
+     ![](../Media/l7-20.png)
 
 1. In Log Analytics workspace, select the **Tables (1)** option under the **Settings** area.
 
 1. Search and select the table **SecurityEvent (2)**, and then right click on **Security Event (3)** table.
 
-    ![](../Media/lab7y10.png)
+     ![](../Media/lab7y10.png)
 
 1. Select **Manage Table (4)**.
 
 1. Change the *Interactive retention period* to **90 days**.
 
-    ![](../Media/lab7y11.png)
+     ![](../Media/lab7y11.png)
 
 1. Reset the *Total retention period* to **180 days** (if needed). Notice that *Archive period* is set now set to *90 days*, because *Azure Monitor* automatically treats the remaining 90 days of total retention as low-cost, long-term retention.
 
