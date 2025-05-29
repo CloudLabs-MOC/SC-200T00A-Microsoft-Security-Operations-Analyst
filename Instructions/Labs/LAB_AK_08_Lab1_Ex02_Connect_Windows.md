@@ -21,23 +21,23 @@ You're a Security Operations Analyst working at a company that implemented Micro
 
 In this task, you'll create a Windows virtual machine in Azure.
 
-1. In the azure portal, Select **+ Create a Resource**. **Hint:** If you were already in the Azure Portal, you might need to select *Microsoft Azure* from the top bar to go Home.
+1. In the Azure portal, Select **+ Create a Resource**. **Hint: If you are already in the Azure Portal, select ** Microsoft Azure ** from the top bar to return to the Home page. **
 
     ![](../Media/l8e1-1.png)
 
 1. In the **Search services and marketplace** box, enter **Windows 11 (1)** and select **Windows 11 (2)** from the drop-down list.
 
-    ![](../Media/l8e1-2.png)
+    ![](../Media/windows-11-3005.png)
 
 1. On the **Marketplace** page,  Select the box for **Microsoft Window 11**.
 
-    ![](../Media/l8e1-3.png)
+    ![](../Media/windows-11-2-3005.png)
 
 1. Open the *Plan* drop-down list and select **Windows 11 Enterprise, version 22H2 (1)**.
 
 1. Select **Start with a pre-set configuration (2)** to continue.
 
-   ![](../Media/l8e1-4.png)
+   ![](../Media/windows-11-3-3005.png)
 
 1. Select **Dev/Test** and then select **Continue to create a VM**.
 
@@ -59,7 +59,7 @@ In this task, you'll create a Windows virtual machine in Azure.
     | Image | **Windows 11 Enterprise, version 22H2 (5)**  | 
     | Size| Should be selected as **Standard_B2s**. If it appears empty, select **See all sizes**, choose the **Standard_DS1_v2 (6)** click **Select**. |
 
-      ![](../Media/l8e1-7.png)
+      ![](../Media/windows-11-4-3005.png)
 
     | Setting | Value |
     | --- | --- |
@@ -85,7 +85,7 @@ In this task, you'll create a Windows virtual machine in Azure.
 
 In this task, you install Azure Arc on an on-premises server to make onboarding easier.
 
->**Important:** The next steps are done in a different machine than the one you were previously working. Look for the Virtual Machine name references.
+>**Important:** The next steps are done on a different machine from the one you were previously working on. Look for the Virtual Machine name references.
 
 >**Important:** The *Windows Security Events via AMA* data connector requires Azure Arc for non-Azure devices. 
 
@@ -93,15 +93,15 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
     ![](../Media/l8e1-13.png)
 
-1. Select **WIN1-<inject key="DeploymentID" enableCopy="false"/> (1)**, then select **WIN2**. Right-click on the **WIN2 (2)** virtual machine and choose **Start**, then click **Continue**. After that, right-click on the **WIN2** virtual machine again and select **Connect (3)**.
+1. Select **LABVM (1)**, then select **WIN2**. Right-click on the **WIN2 (2)** virtual machine and choose **Start**, then click **Continue**. After that, right-click on the **WIN2** virtual machine again and select **Connect (3)**.
 
-    ![](../Media/l8e1-12.png)
+    ![](../Media/m8l1e2t2s2-3005.png)
  
 1. Inside **WIN2** Click on **connect**.
  
-    ![](../Media/l8e1-14.png)
+    ![](../Media/m8l1e2t2s3-3005.png)
 
-1. Enter the **Password** as `Password.1!!` when prompted then hit on **Enter**.
+1. Enter the **Password** as `Password.1!!` when prompted, then hit **Enter**.
 
      ![](../Media/l8e3-16.png)
 
@@ -111,9 +111,10 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
  
    ![Launch Azure Portal](../Media/sc900-image(1).png)
 
-1. In the **Sign in** dialog box, copy and paste **Email/Username: <inject key="AzureAdUserEmail"></inject>** and then select Next.
-
-1. In the **Enter password** dialog box, copy and paste **Password: <inject key="AzureAdUserPassword"></inject>** and then select **Sign in**.
+1. To sign in, use the credentials below:
+   
+    - **Email/Username: <inject key="AzureAdUserEmail"></inject>**
+    - **Password: <inject key="AzureAdUserPassword"></inject>**
 
 1. In the Search bar of the Azure portal, type **Azure arc (1)**, then select **Azure Arc (2)**.
 
@@ -129,7 +130,7 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
    ![](../Media/l8e1-17.png)
 
-1. In the **Add a server with Azure Arc** page, select the **RG-Defender (2)** Resource group under Project details.
+1. In the **Add a server with Azure Arc** page, select the **rg-defender (2)** Resource group under Project details.
  
 1. For *Region*, select **(US) East Us (3)** from the drop-down list.
 
@@ -155,29 +156,41 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
 1. Enter **Administrator** for "Username" and **Passw0rd!** for "Password" if you get a UAC prompt.
 
-1. Enter: **cd C:\Users\Administrator\Downloads**
+1. Run the below command to go to the **Downloads** folder:
 
-    ![](../Media/l8e122.png)
+     ```
+      cd C:\Users\Administrator\Downloads
+     ```
 
-    >**Important:** If you do not have this directory, most likely means that you are in the wrong machine. Go back to the beginning of Task 4 and change to WINServer and start over.
+   ![](../Media/l8e122.png)
 
-1. Type **Set-ExecutionPolicy -ExecutionPolicy Unrestricted** and press **enter**.
+   >**Important:** If you do not have this directory, it most likely means that you are on the wrong machine. Go back to the beginning of Task 4 and change to WINServer and start over.
 
-1. Enter **A** for Yes to All and press enter.
+1. Run the below command.
+
+    ```
+    Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+    ```
+    
+1. Enter **A** for Yes to All and press Enter.
 
     ![](../Media/l8e123.png)
 
-1. Type **.\OnboardingScript.ps1** and press **enter**. 
+1. Now run the below command to execute the **Onboarding script**, which we downloaded earlier. 
+
+    ```
+    .\OnboardingScript.ps1
+    ```
 
     ![](../Media/l8e124.png)
 
-    >**Important:** If you get the error *"The term .\OnboardingScript.ps1 is not recognized..."*, make sure you are doing the steps for Task 4 in the WINServer virtual machine. Other issue might be that the name of the file changed due to multiple downloads, search for *".\OnboardingScript (1).ps1"* or other file numbers in the running directory.
+    >**Important:** If you get the error *"The term .\OnboardingScript.ps1 is not recognized..."*, make sure you are doing the steps for Task 4 in the WINServer virtual machine. Another issue might be that the name of the file changed due to multiple downloads, search for *".\OnboardingScript (1).ps1"* or other file numbers in the running directory.
 
-1. Enter **R** to Run once and press enter (this may take a couple minutes).
+1. Enter **R** to Run once and press Enter (this may take a couple of minutes).
 
     ![](../Media/l8e125.png)
 
-1. The setup process opens a new Microsoft Edge browser tab to authenticate the Azure Arc agent. Select your admin account, wait for the message "Authentication complete" and then go back to the Windows PowerShell window.
+1. The setup process opens a new Microsoft Edge browser tab to authenticate the Azure Arc agent. Select your admin account, wait for the message "Authentication complete," and then go back to the Windows PowerShell window.
 
     ![](../Media/l8e126.png)
 
@@ -185,7 +198,7 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
     ![](../Media/l8e127.png)
 
-1. Select **Refresh** until WINServer server name appears and the Status is *Connected*.
+1. Select **Refresh** until WIN2 server name appears and the Status is *Connected*.
   
     ![](../Media/l8e128.png)
 
@@ -195,7 +208,7 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
 In this task, you'll connect an Azure Windows virtual machine to Microsoft Sentinel.
 
-1. In the Search bar of the Azure portal, type *micdoroft sentinel (1)*, then select **Microsoft Sentinel (2)**.
+1. In the Search bar of the Azure portal, type *Microsoft Sentinel (1)*, then select **Microsoft Sentinel (2)**.
 
    ![](../Media/l8e129.png)
 
@@ -211,7 +224,7 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
     ![](../Media/l8e3-17.png)
 
-1. When the installation completes select **Manage**.
+1. When the installation completes, select **Manage**.
 
     ![](../Media/l8e3-15.png)
 
@@ -227,25 +240,25 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
 1. Enter **AZWINDCR (1)** for Rule Name, then select **Next: Resources (2)**.
 
-   ![](../Media/azwindcr.png)
+   ![](../Media/dcr1-3005.png)
 
-1. Select **+Add resource(s)** to select the Virtual Machine we created.
+1. Select **Next: Resources>** to select the Virtual Machine we created.
 
 1. Expand **RG-AZWIN01**, then select **AZWIN01**.
 
-    ![](../Media/l8e3-13.png)
+    ![](../Media/dcr2-3005.png)
 
 1. Next, choose **Collect**, review the various Security Event collection options, keep the setting for *All Security Events*, and then click on **Next: Review + Create**.
 
 1. Select **Create** to save the Data Collection Rule.
 
-   ![](../Media/createrule.png)
+   ![](../Media/dcr3-3005.png)
 
 1. Wait a minute and then select **Refresh** to see the new data collection rule listed.
 
 ### Task 4: Connect a non-Azure Windows Machine
 
-In this task, you'll add an Azure Arc connected, non-Azure Windows virtual machine to Microsoft Sentinel.  
+In this task, you'll add an Azure Arc-connected, non-Azure Windows virtual machine to Microsoft Sentinel.  
 
    >**Note:** The *Windows Security Events via AMA* data connector requires Azure Arc for non-Azure devices.
 
@@ -259,9 +272,9 @@ In this task, you'll add an Azure Arc connected, non-Azure Windows virtual machi
 
     >**Hint:** You can expand the whole *Scope* hierarchy by selecting the ">" before the *Scope* column.
 
-1. Expand **RG-Defender** (or the Resource Group your created), then select **WIN-xxxxxxxxxx**.
+1. Expand **rg-defender** (or the Resource Group you created), then select **WIN-xxxxxxxxxx**.
 
-    ![](../Media/l8e3-11.png)
+    ![](../Media/edit-dcr-3005.png)
 
     >**Important:** If you do not see it, please refer to [Learning Path 8, Exercise 2, Task 2](w), where you installed **Azure Arc** on this server.
 
