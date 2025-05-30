@@ -2,13 +2,11 @@
 
 ## Lab Scenario
 
-You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The organization has data from Microsoft 365, Microsoft 365 Defender, Azure resources, non-azure virtual machines, etc. You start connecting the Microsoft sources first.
-
->**Important:** The lab exercises for Learning Path #8 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
+You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The organization has data from Microsoft 365, Microsoft 365 Defender, Azure resources, non-Azure virtual machines, etc. You start connecting the Microsoft sources first.
 
 ## Lab Objectives
  In this lab, you will perform the following:
-- Task 1: Access the Microsoft Sentinel Workspace
+- Task 1: Create the Microsoft Sentinel Workspace
 - Task 2: Connect the Microsoft Defender for Cloud data connector
 - Task 3: Connect the Azure Activity data connector
 
@@ -18,7 +16,7 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
   ![Picture 1](../Media/mod8arch.png)
 
-### Task 1: Access the Microsoft Sentinel Workspace
+### Task 1: Create the Microsoft Sentinel Workspace
 
 In this task, you will access your Microsoft Sentinel workspace.
 
@@ -32,7 +30,7 @@ In this task, you will access your Microsoft Sentinel workspace.
 
 1. To create a **log analytics workspace**, follow these steps:
 
-    - Select **Create new** under Resource Group and provide the name **RG-Defender (1)**. Select **Ok**.
+    - Select **rg-defender (1)** for the Resource group.
     - For the Name, enter **uniquenameDefender (2)**.
     - Leave the **default Region (3)**.
     - Select **Review + Create (4)**.
@@ -91,9 +89,9 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
 
 1. To enable bi-directional sync, select the **Enable Microsoft Defender for all subscriptions** link.
 
-1. On the **Microsoft Defender for Cloud - Getting started** page, the checkbox for the **Subscription** should be selected, and the *Microsoft Defender plan* should display *On - Partial (30 trial days left)*.
-
     ![](../Media/l8e140.png)
+
+1. On the **Microsoft Defender for Cloud - Getting started** page, the checkbox for the **Subscription** should be selected, and the *Microsoft Defender plan* should display *On - Partial (30 trial days left)*.
 
 1. Select the **X (Close)** button on the upper right to close the *Getting started* page. You should be back on the *Microsoft Defender for Cloud* configuration page.
 
@@ -123,7 +121,7 @@ In this task, you will connect the *Azure Activity* data connector.
 
     ![](../Media/l8e143.png)
 
-1. In the **Configuration** area under the **Instructions** tab, scroll down to "2. Connect your subscriptions...", and select **Launch Azure Policy Assignment Wizard>**.
+1. In the **Configuration** area under the **Instructions** tab, scroll down to "2. Connect your subscriptions through diagnostic settings new pipeline", and select **Launch Azure Policy Assignment Wizard>**.
 
     ![](../Media/l8e142.png)
 
@@ -148,7 +146,7 @@ In this task, you will connect the *Azure Activity* data connector.
 ## Review
 In this lab, you have completed the following:
 
-- Accessed the Microsoft Sentinel Workspace
+- Created and accessed the Microsoft Sentinel Workspace
 - Connected the Microsoft Defender for Cloud data connector
 - Connected the Azure Activity data connector
 
