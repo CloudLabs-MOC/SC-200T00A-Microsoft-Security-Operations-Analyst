@@ -23,13 +23,7 @@ To explore the Defender for Endpoint attack mitigation capabilities, you will ru
 
 In this task, you will confirm that the device is onboarded successfully and create a test alert.
 
-1. In the left-hand menu, under the **Assets** area, select **Devices (1)**. Please wait until a  **labvm (2)** device appears on the Devices page before you continue. Otherwise, you might need to repeat this task to see the alerts that will be generated later.
-
-    ![Picture 1](../Media/lab4y17.png)
-
-    >**Note:** If you've completed the onboarding process but no devices appear in the **Devices** list after an hour, there may be an issue with **onboarding** or **connectivity**. 
-
-1. Select **Settings (1)** from the left menu bar, then from the Settings page select **Endpoints (2)**.
+1. In the left-hand menu, Select **Settings (1)** from the left menu bar, then from the Settings page select **Endpoints (2)**.
 
     ![Picture 1](../Media/endpt1.png)
 
