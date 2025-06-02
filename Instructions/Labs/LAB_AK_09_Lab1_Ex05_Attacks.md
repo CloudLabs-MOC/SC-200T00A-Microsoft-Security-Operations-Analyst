@@ -1,4 +1,4 @@
-# Module 9 - Lab 1 - Exercise 5 - Understand Detection Modeling
+# Module 9 - Lab 1 - Exercise 5 - Prepare to perform simulated attacks
 
 ### Lab Scenario
 

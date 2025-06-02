@@ -59,7 +59,7 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
 1. Make sure that you are in the *Rule templates* tab in the command bar and search for the **New CloudShell User** rule.
 
-1. From the rule summary blade, make sure you're receiving data by reviewing the green icon under *Data sources: Azure Activity*.
+1. From the rule summary blade, make sure you're receiving data by reviewing the green icon under **Data sources: Azure Activity**.
     
 1. Select **Create rule** to continue under Rule templates in the Analytics tab.
 
