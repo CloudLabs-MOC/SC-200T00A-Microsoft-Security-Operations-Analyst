@@ -29,17 +29,21 @@ In this task, you'll create a Logic App that is used as a Playbook in Microsoft 
 
    ![Picture 1](../Media/sc-200-19.png)
 
-1. On Microsoft Sentinel page, navigate to **Content Hub**.
+1. Select **uniquenameDefender** Microsoft Sentinel Workspace.
 
-1. Within the search bar, look for **Sentinel SOAR Essentials**.
+   ![Picture 1](../Media/ss7.png)   
 
-1. Select the solution that appears in the results and click on **Install**.
+1. On Microsoft Sentinel page, click on **Go to Content Hub**.
 
-   ![](../Media/6.png)
+   ![Picture 1](../Media/ss10.png) 
+
+1. Within the search bar, search for **Sentinel SOAR Essentials (1)**, press **Enter** then select **Sentinel SOAR Essentials (2)** and then click on **Install (3)**.
+
+   ![](../Media/ss11.png)
 
 1. Within the solution details, select **Manage**.
 
-    ![](../Media/5.png)
+    ![](../Media/ss12.png)
 
 1. Find the **Defender_XDR_Ransomware_Playbook_for_SecOps-Tasks** playbook and select the name.
 
@@ -49,11 +53,13 @@ In this task, you'll create a Logic App that is used as a Playbook in Microsoft 
 
     ![](../Media/7.png)
 
-1. For Resource Group, select **Create New**, enter **RG-playbooks** and select OK.
+1. For Resource Group, select **Create New (1)**, enter **RG-playbooks (2)** and select **OK (3)**.
 
-1. For the **Playbook name**, enter **Defender_XDR_Ransomware_Playbook_SecOps-Tasks (1)** (note that this would exceed the limit of 64 characters). Then, click on Select **Connections (2)**.
+   ![](../Media/ss13.png)
 
-   ![](../Media/8.png)
+1. For the **Playbook name**, enter **Defender_XDR_Ransomware_Playbook_SecOps-Tasks (1)** (note that this would exceed the limit of 64 characters). Then, click on Select **Next:Connections (2)**.
+
+   ![](../Media/ss14.png)
 
 1. On the **Create playbook** page, select **Next: Review and create**.
 
