@@ -96,9 +96,13 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
 1. Select **Next** to get to the Download and run script tab.
 
-1. Scroll down and select the **Download** button. **Hint:** If your browser blocks the download, take action in the browser to allow it. In Edge Browser, select the ellipsis button (...) if needed and then select **Keep**.
+1. Scroll down and select the **Download** button. **Hint:** If your browser blocks the download, take action in the browser to allow it.
 
      ![Picture 1](../Media/sc-200-10.png)
+
+1. In Edge Browser, select the ellipsis button (...) if needed and then select **Keep**.
+     
+     ![Picture 1](../Media/ss1.png)     
 
 1. Right-click the Windows Start **(1)** button and select **Windows PowerShell (Admin) (2)**.
 
@@ -170,11 +174,9 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
      ![Picture 1](../Media/sc-200-20.png)
 
-1. Select the **Microsoft Sentinel Workspace** you created.
- 
 1. On the **Microsoft Sentinel | News & guides** page, select **Go to the content hub** under **Get started** tab.
 
-   ![Picture 1](../Media/contenthub.png)
+   ![Picture 1](../Media/ss2.png)
 
 1. On the **Microsoft Sentinel | Content hub (1)** page, search for **Windows Security Events (2)**, and select **Windows Security Events (3)** and click on **Install (4)**.
 
@@ -182,13 +184,15 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
 1. Once the installation is completed, go to the **Data connector (1)** page and refresh you should find **Windows Security Events via AMA (2)**.
 
-     ![Picture 1](../Media/dataconnectors.png)
+     ![Picture 1](../Media/ss3.png)
 
-1. Select the **Windows Security Events via AMA** connector and click on **Open connector page** on the connector information blade. 
+1. Select the **Windows Security Events via AMA (1)** connector and click on **Open connector page (2)** on the connector information blade. 
 
-    >**Note:** You may need to click on the arrowhead that appears to reveal the **Open Connector Page** option.
+     ![Picture 1](../Media/ss4.png)
 
-    ![Picture 1](../Media/m1.png)
+      >**Note:** You may need to click on the arrowhead that appears to reveal the **Open Connector Page** option.
+
+      ![Picture 1](../Media/m1.png)
  
 1. In the **Configuration** section, select the **+Create data collection rule**.
 
@@ -198,18 +202,24 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
      ![Picture 1](../Media/sc-200-22.png)
 
-1. Expand the **Subscription (1)** and the **RG-DEFENDER (2)** (or the Resource Group you have created), then select **WIN-xxxx (3)**. Then select **Next: Collect (4)** and **Next: Review + Create**.
+1. Expand the **Subscription (1)** and the **RG-DEFENDER (2)** (or the Resource Group you have created), then select **WIN-xxxx (3)**. Then select **Next: Collect (4)**.
 
      ![Picture 1](../Media/sc-200-23.png)
 
+1. Then click **Next: Review + Create**.    
+
+     ![Picture 1](../Media/ss5.png)
+
 1. On the **Create data Collection Rule** page, Select **Create**.
 
-1. Wait a few minutes and then select **Refresh** to see the new data collection rule listed.
+1. Wait a few minutes and then select **Refresh (1)** to see the new data collection rule listed **(2)**.
+
+     ![Picture 1](../Media/ss6.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 - If you receive a success message, you can proceed to the next task.
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.com. We are available 24/7 to help you out.
  
 <validation step="07c96102-f314-44cd-b6a4-10fbb89a449b" />
 
