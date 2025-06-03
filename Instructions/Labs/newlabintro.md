@@ -129,6 +129,6 @@ Learner Support Contacts:
 
 Click on Next from the lower right corner to move on to the next page.
 
-   ![Start Your Azure Journey](../Media/sc900-image(3).png)
+   ![Start Your Azure Journey](../Media/gss7.png)
 
 ## Happy Learning !!
