@@ -29,9 +29,13 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
    ![Picture 1](../Media/sc-200-19.png)
 
-1. Select your Microsoft Sentinel Workspace.
+1. Select your **uniquenameDefender** Microsoft Sentinel Workspace.
 
-1. On the Select **Logs** .
+   ![Picture 1](../Media/ss7.png)
+
+1. On the Select **Logs (1)**. Set the mode to **KQL mode (2)**.
+
+   ![Picture 1](../Media/ss126.png)
 
 1. Enter the following KQL Statement in the *New Query 1* space:
 
@@ -50,29 +54,37 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
 1. Review the different results. You have now identified PowerShell requests that are running in your environment.
 
-1. Select the checkbox of the results that shows the **azureuser** SubjectUsername.
+   ![Picture 1](../Media/ss127.png)
 
-1. In the middle command bar, select the **Add bookmark** button.
+1. Select the checkbox of the results that shows the **Administrator (1)** SubjectUsername.
 
-   ![Picture 1](../Media/logssupd.png)
+1. In the middle command bar, select the **Add bookmark (2)** button.
 
-1. Select **+ Add new entity** under *Entity mapping*.
+   ![Picture 1](../Media/ss128.png)
 
-1. For *Entity* select **Host**, then **Hostname** and **Computer** for the values.
+1. On the **Add bookmark** page,
 
-1. For *Tactics and Techniques*, select **Command and Control**.
+   - Select **+ Add new entity** under *Entity mapping*.
 
-1. Go back to the *Add bookmark* blade, and the select **Create**. We will map this bookmark to an incident later.
+   - For *Entity* select **Host**, then **Hostname** and **Computer** for the values **(1)**.
+
+   - For *Tactics and Techniques*, select **Command and Control (2)**.
+
+   - Go back to the *Add bookmark* blade, and the select **Create (3)**. We will map this bookmark to an incident later.
+
+     ![Picture 1](../Media/ss129.png)   
 
 1. Close the *Logs* window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
 
-1. Select your Microsoft Sentinel workspace again and select the **Hunting** page under the *Threat Management* area.
+1. Select your **uniquenameDefender** Microsoft Sentinel workspace again.
 
-1. Select the **Queries** tab and then **+ New Query** from the command bar.
+1. Select the **Hunting (1)** page under the *Threat Management* area. Click on the **Queries (1)** tab and then **+ New Query (3)** from the command bar.
 
-1. In the *Create custom query* window, for the *Name* enter **PowerShell Hunt**.
+   ![Picture 1](../Media/ss130.png)
 
-1. For the *Custom query* enter the following KQL statement:
+1. In the *Create custom query* window, for the *Name* enter **PowerShell Hunt (1)**.
+
+1. For the *Custom query* enter the following KQL statement **(2)**:
 
     ```KQL
     let lookback = 2d; 
@@ -85,38 +97,42 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
     | order by count_ desc nulls last 
     ```
 
-1. Scroll down and under *Entity mapping* select:
+1. Scroll down and under *Entity mapping* select **(3)**:
    
     - Select **+ Add new entity** under *Entity mapping*.
     - For the *Entity type* drop-down list select **Host**.
     - For the *Identifier* drop-down list select **HostName**.
     - For the *Value* drop-down list select **Computer**.
 
-1. Scroll down and under *Tactics & Techniques* select **Command and Control** and then select **Create** to create the hunting query.
+1. Scroll down and under *Tactics & Techniques* select **Command and Control (4)** and then select **Create (5)** to create the hunting query.
 
-1. In the *"Microsoft Sentinel - Hunting"* blade, search for the query you just created in the list, *PowerShell Hunt*.
+   ![Picture 1](../Media/ss131.png)
 
-1. Select **PowerShell Hunt** from the list.
+1. In the *"Microsoft Sentinel - Hunting"* blade, search for the query you just created in the list, **PowerShell Hunt**.
 
-   ![Picture 1](../Media/huntinggupd.png)
+1. Select **PowerShell Hunt (1)** from the list. Select the **View Results (2)** button from the right pane. 
 
-1. Review the number of results in the middle pane under the *Results* column.
+   ![Picture 1](../Media/ss132.png)
 
-1. Select the **View Results** button from the right pane. The KQL query will automatically run.
+1. The KQL query will automatically run.   
+
+   ![Picture 1](../Media/ss133.png)   
 
 1. Close the *Logs* window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
 
-1. Right-click the **PowerShell Hunt** query and select **Add to livestream**. **Hint:** This also can be done by sliding right and selecting the ellipsis **(...)** at the end of the row to open a context menu.
+1. Right-click the **PowerShell Hunt (1)** query and select **Add to livestream (2)**. **Hint:** This also can be done by sliding right and selecting the ellipsis **(...)** at the end of the row to open a context menu.
 
-1. Review that the *Status* is now *Running*. This is running every 30 seconds in the background and you'll receive a notification in the Azure portal (bell icon) when a new result is found. 
+   ![Picture 1](../Media/ss134.png)
 
-1. Select the **Bookmarks** tab in the middle pane.
+1. Review that the *Status* is now **Running**. This is running every 30 seconds in the background and you'll receive a notification in the Azure portal (bell icon) when a new result is found. 
 
-1. Select the bookmark you created from the results list.
+   ![Picture 1](../Media/ss135.png)
 
-1. On the right pane, scroll down and select the **Investigate** button. **Hint:** It might take a couple of minutes to show the investigation graph.
+1. Select the **Bookmarks (1)** tab in the middle pane. Click on the bookmark you created from the results list **(2)**.
 
-   ![Picture 1](../Media/bookmarkinvestigate.png)
+1. On the right pane, scroll down and select the **Investigate (3)** button. **Hint:** It might take a couple of minutes to show the investigation graph.
+
+   ![Picture 1](../Media/ss136.png)
 
 1. Explore the Investigation graph just like you did in the previous module. Notice the high number of *Related alerts* for *WINServer*.
 
@@ -126,11 +142,15 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
 1. Select **Add to existing incident (1)**. All the incidents appear in the right pane.
 
-1. Select one of the incidents and then select **Add (2)**. 
+   ![Picture 1](../Media/ss137.png)
 
-   ![Picture 1](../Media/addingbookmarkupd.png)
+1. Select one of the incidents **(1)** and then select **Add (2)**. 
+
+   ![Picture 1](../Media/ss138.png)
 
 1. Scroll left to notice that the *Severity* column is now populated with the incident's data.
+
+   ![Picture 1](../Media/ss139.png)
 
 ### Task 2: Create an NRT query rule
 
