@@ -110,7 +110,7 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
    
 1. In case you get a UAC prompt, enter **Administrator** for "Username" and **Passw0rd!** for "Password", else skip to the next step.
 
-1. Enter the below command
+1. Enter the below command.
 
     ```CommandPrompt
     cd C:\Users\Administrator\Downloads
@@ -156,7 +156,7 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
      ![Picture 1](../Media/sc-200-16.png)
     
-1. In the Azure portal's search bar, type **Log Analytics workspaces** and select it.
+1. In the Azure portal's search bar, type **Log Analytics workspaces (1)** and select **Log Analytics workspaces (2)**.
 
      ![Picture 1](../Media/sc-200-17.png)
 
