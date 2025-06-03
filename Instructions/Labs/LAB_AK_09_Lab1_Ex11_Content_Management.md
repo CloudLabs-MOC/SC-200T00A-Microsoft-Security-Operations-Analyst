@@ -140,7 +140,7 @@ In this task, you will connect Microsoft Sentinel to Azure DevOps to manage cont
 
 1. Provide the following details:
 
-   - Select the Organization you created earlier **odluser<inject key="AzureAdUserEmail"></inject>** **(1)**.
+   - Select the Organization you created earlier **odluser<inject key="DeploymentID" enableCopy="false"/>** **(1)**.
 
    - Select the Project you created earlier, **My Sentinel Content (2)**.
 
