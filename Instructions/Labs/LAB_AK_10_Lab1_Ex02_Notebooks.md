@@ -73,8 +73,6 @@ In this task, you will explore using notebooks in Microsoft Sentinel.
 1. Enter **Mycompute<inject key="DeploymentID" enableCopy="false"/> (1)** in the **Compute name** field. This will identify your compute instance.
 
      - Scroll down and select **Standard_DS11_v2 (2)**. 
-**Hint:** Workload type: Development on Notebooks and lightweight testing.
-
      - Select the **Review + Create (3)** button at the bottom of the screen.
 
        ![Picture 1](../Media/ss159.png)
