@@ -55,42 +55,52 @@ In this task, you will create a detection for the first attack of the previous e
     | extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = SubjectUserName
     ```
 
-     ![Picture 1](../Media/ss55.png)    
+     ![Picture 1](../Media/ss56.png)    
 
-1. Now that you have a good detection rule, in the Logs window, select the **+ New alert rule** in the command bar and then select **Create Microsoft Sentinel alert**. This will create a new Scheduled rule. **Hint:** You might need to select the ellipsis (...) button in the command bar.
+1. Now that you have a good detection rule, in the Logs window, selet the result **(1)**, then click on the elipses **(...) (2)** then, select the **+ New alert rule (3)** in the command bar and then select **Create Microsoft Sentinel alert (4)**. This will create a new Scheduled rule.
+
+   ![Picture 1](../Media/ss57.png)
 
 1. This starts the "Analytics rule wizard". For the *General* tab type:
 
     |Setting|Value|
     |---|---|
-    |Name|Startup RegKey|
-    |Description|Startup RegKey in c:\temp|
-    |Severity|High|
-    |MITRE ATT&CK|Persistence|
+    |Name|**Startup RegKey (1)**|
+    |Description|**Startup RegKey in c:\temp (2)**|
+    |Severity|**High (3)**|
+    |MITRE ATT&CK|**Persistence (4)**|
  
-1. Select **Next: Set rule logic >** button.
+1. Select **Next: Set rule logic > (5)** button.
 
-1. On the *Set rule logic* tab, the *Rule query* should be populated already with you KQL query, as well as the entities under *Alert enrichment - Entity mapping*, if not add it manually with the below details.
+   ![Picture 1](../Media/ss58.png)
+
+1. On the *Set rule logic* tab, the *Rule query* should be populated already with you KQL query, as well as the entities under **Alert enrichment - Entity mapping**, click on **+ Add new entity**. Add it manually with the below details.
 
     |Entity|Identifier|Data Field|
     |:----|:----|:----|
     |Account|FullName|AccountCustomEntity|
     |Host|Hostname|HostCustomEntity|
 
+    ![Picture 1](../Media/ss59.png)    
+
 1. For *Query scheduling* set the following:
 
     |Setting|Value|
     |---|---|
-    |Run Query every|5 minutes|
-    |Lookup data from the last|1 Days|
+    |Run Query every|5 minutes **(1)**|
+    |Lookup data from the last|1 Days **(2)**|
 
     >**Note:** We are purposely generating many incidents for the same data. This enables the Lab to use these alerts.
 
-1. Leave the rest of the options with the defaults. Select **Next: Incident settings>** button.
+1. Leave the rest of the options with the defaults. Select **Next: Incident settings> (3)** button.
+
+   ![Picture 1](../Media/ss60.png)
 
 1. For the *Incident settings* tab, leave the default values and select **Next: Automated response >** button.
 
-1. On the *Automated response* tab under **Automation rules**, select **Add new**.
+1. On the *Automated response* tab under **Automation rules**, select **+ Add new**.
+
+   ![Picture 1](../Media/ss61.png)
 
     >**Note:** If you are unable to add a new Automation Rule, follow these steps:  
     > 1. Open a new tab and navigate to your **Sentinel workspace**.  
@@ -100,18 +110,18 @@ In this task, you will create a detection for the first attack of the previous e
     > 5. Now fill the details again from Step 7.  
     > 5. You should now see the newly created Automation Rule under **Automated Response**.
 
-1. Use the settings in the table to configure the automation rule.
+1. Use the settings in the table to configure the automation rule and then click on **Apply (5)**:
 
     |Setting|Value|
     |:----|:----|
-    |Automation rule name|Startup RegKey|
-    |Trigger|When incident is created|
-    |Actions |Run playbook|
-    |playbook |Defender_XDR_Ransomware_Playbook_for_SecOps-Tasks|
+    |Automation rule name|Startup RegKey **(1)**|
+    |Trigger|When incident is created **(2)**|
+    |Actions |Run playbook **(3)**|
+    |playbook |Defender_XDR_Ransomware_Playbook_for_SecOps-Tasks **(4)**|
 
-    >**Note:** You have already assigned permissions to the playbook, so it will be available.
+    ![Picture 1](../Media/ss62.png)
 
-1. After configuring the automation rule with the required settings, select **Apply** to save the changes.
+     >**Note:** You have already assigned permissions to the playbook, so it will be available.
 
 1. Select the **Next: Review + Create >** button.
   
