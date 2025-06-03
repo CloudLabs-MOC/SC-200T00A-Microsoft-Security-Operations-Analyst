@@ -156,9 +156,11 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
 In this task, instead of using a LiveStream, you'll create an NRT analytics query rule. NRT rules run every minute and lookback one minute. The benefit to NRT rules are they can use the alert and incident creation logic.
 
-1. Select the **Analytics** page under *Configuration* in Microsoft Sentinel. 
+1. Select the **Analytics (1)** page under *Configuration* in Microsoft Sentinel. 
 
-1. Select the **Create** tab, then **NRT query rule (Preview)**.
+1. Select the **Create (2)** tab, then **NRT query rule (3)**.
+
+   ![Picture 1](../Media/ss140.png)
 
 1. This starts the "Analytics rule wizard". For the *General* tab type:
 
@@ -185,16 +187,20 @@ In this task, instead of using a LiveStream, you'll create an NRT analytics quer
 
 1. Select **View query results >** to make sure your query doesn't have any errors.
 
+   ![Picture 1](../Media/ss141.png)
+
 1. Close the *Logs* window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
 
-1. Under *Entity mapping* select:
+1. Under *Entity mapping*, provide the following details **(1)**:
      
     - Select **+ Add new entity** under *Entity mapping*.
     - For the *Entity type* drop-down list select **Host**.
     - For the *Identifier* drop-down list select **HostName**.
     - For the *Value* drop-down list select **Computer**.
 
-1. Scroll down and select **Next: Incident settings>** button.
+1. Scroll down and select **Next: Incident settings> (2)** button.
+
+   ![Picture 1](../Media/ss142.png)
 
 1. For the *Incident settings* tab, leave the default values and select **Next: Automated response>** button.
 
@@ -210,23 +216,33 @@ In this task, you'll use a Search job to look for a C2.
 
 1. On the left menu Select the **Search** page under **General** in Microsoft Sentinel.
 
-1. In the search box, enter **reg.exe** and then select **Start**.
+   ![Picture 1](../Media/ss143.png)
 
-1. A new window running the query opens. Select the ellipsis icon **(...)** from the top right and then toggle the **Search job mode**.
+1. In the search box, enter **reg.exe (1)** and then select **Start (2)**.
+
+   ![Picture 1](../Media/ss144.png)
+
+1. A new window running the query opens. Select the ellipsis icon **(...) (1)** from the top right and then toggle the **Search job mode (2)**.
+
+   ![Picture 1](../Media/ss145.png)
 
 1. Select **Search job** button from the command bar. 
+
+   >**Note**: Search job button needs some to get enable, meanwhile you can proceed with the next steps.
 
 1. The search job creates a new table with your results as soon as they arrive. The results can be consulted from the *Saved Searches* tab.
 
 1. Close the *Logs* window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
  
-1. Select the **Restoration** tab from the command bar and then the **Restore** button.
+1. Select the **Restoration (1)** tab from the command bar and then the **Restore (2)** button.
 
-1. Under *Select a table to restore*, search for and select **SecurityEvent**.
+   - Under *Select a table to restore*, search for and select **SecurityEvent (3)**.
 
-1. Review the options available and then select the **Cancel** button.
+   - Review the options available and then select the **Cancel (4)** button.
 
-    >**Note:** If you were running the job, the restore would run for a couple of minutes and your data would be available in a new table.
+     ![Picture 1](../Media/ss146.png)   
+
+      >**Note:** If you were running the job, the restore would run for a couple of minutes and your data would be available in a new table.
 
 ### Task 4: Create a hunt that combines multiple queries into a MITRE tactic
 
