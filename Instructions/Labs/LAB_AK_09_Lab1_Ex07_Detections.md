@@ -133,6 +133,8 @@ In this task, you will create a detection for the second attack of the previous 
 
 1. In the Microsoft Sentinel portal, select **Logs** from the General section in case you navigated away from this page.
 
+1. Make sure to set the mode to **KQL mode**.
+
 1. **Run** the following KQL Statement to identify any entry that refers to administrators:
 
     ```KQL
@@ -140,13 +142,19 @@ In this task, you will create a detection for the second attack of the previous 
     | summarize count() by $table
     ```
 
-1. The result might show events from different tables, but in our case, we want to investigate the SecurityEvent table. The EventID and Event that we are looking is "4732 - A member was added to a security-enabled local group". With this, we will identify adding a member to a privileged group. **Run** the following KQL query to confirm:
+1. The result might show events from different tables.
+
+   ![Picture 1](../Media/ss63.png)
+
+1. But in our case, we want to investigate the SecurityEvent table. The EventID and Event that we are looking is **4732 - A member was added to a security-enabled local group**. With this, we will identify adding a member to a privileged group. **Run** the following KQL query to confirm:
 
     ```KQL
     SecurityEvent 
     | where EventID == 4732
     | where TargetAccount == "Builtin\\Administrators"
     ```
+
+    ![Picture 1](../Media/ss64.png)    
 
 1. Expand the row to see all the columns related to the record. The username of the account added as Administrator does not show. The issue is that instead of storing the username, we have the Security IDentifier (SID). **Run** the following KQL to match the SID to the username that was added to the Administrators group:
 
@@ -174,9 +182,11 @@ In this task, you will create a detection for the second attack of the previous 
     | extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = UserName1
     ```
 
-1. Now that you have a good detection rule, in the Logs window, select **+ New alert rule** in the command bar and then select **Create Microsoft Sentinel alert**. **Hint:** You might need to select the ellipsis (...) button in the command bar.
+1. Now that you have a good detection rule, in the Logs window, select the result checkbox **(1)**, then click on the ellipsis **(...) (2)** button in the command bar. Select **+ New alert rule (3)** in the command bar and then select **Create Microsoft Sentinel alert (4)**. 
 
-1. This starts the "Analytics rule wizard". For the *General* tab type:
+   ![Picture 1](../Media/ss65.png)
+
+1. This starts the "Analytics rule wizard". For the *General* tab type provide the following details:
 
     |Setting|Value|
     |---|---|
@@ -185,14 +195,16 @@ In this task, you will create a detection for the second attack of the previous 
     |Severity|**High**|
     |MITRE ATT&CK|**Privilege Escalation**|
 
-1. Select **Next: Set rule logic >** button. 
+1. Then select **Next: Set rule logic >** button.
 
-1. On the *Set rule logic* tab, the *Rule query* should be populated already with you KQL query, as well the entities under *Alert enhancement - Entity mapping* f not add it manually.
+1. On the *Set rule logic* tab, the *Rule query* should be populated already with you KQL query, as well the entities under *Alert enhancement - Entity mapping* If not add it manually by selecting **+ Add new entity**:
 
     |Entity|Identifier|Data Field|
     |:----|:----|:----|
     |Account|FullName|AccountCustomEntity|
     |Host|Hostname|HostCustomEntity|
+
+    ![Picture 1](../Media/ss67.png)    
 
 1. For *Query scheduling* set the following:
 
@@ -207,7 +219,7 @@ In this task, you will create a detection for the second attack of the previous 
 
 1. For the *Incident settings* tab, leave the default values and select **Next: Automated response >** button.
 
-1. On the *Automated response* tab under *Automation rules*, select **Add new**.
+1. On the *Automated response* tab under *Automation rules*, select **+ Add new**.
 
     >**Note:** If you are unable to add a new Automation Rule, follow these steps:  
     > 1. Open a new tab and navigate to your **Sentinel workspace**.  
@@ -217,18 +229,18 @@ In this task, you will create a detection for the second attack of the previous 
     > 5. Now fill the details again from Step 7.  
     > 5. You should now see the newly created Automation Rule under **Automated Response**.
 
-1. Use the settings in the table to configure the automation rule.
+1. Use the settings in the table to configure the automation rule and the click **Apply (5)**:
 
    |Setting|Value|
    |:----|:----|
-   |Automation rule name|SecurityEvent Local Administrators User Add|
-   |Trigger|When incident is created|
-   |Actions |Run playbook|
-   |playbook |Defender_XDR_Ransomware_Playbook_for_SecOps-Tasks|
+   |Automation rule name|SecurityEvent Local Administrators User Add **(1)**|
+   |Trigger|When incident is created **(2)**|
+   |Actions |Run playbook **(3)**|
+   |playbook |Defender_XDR_Ransomware_Playbook_for_SecOps-Tasks **(4)**|
 
-   >**Note:** You have already assigned permissions to the playbook, so it will be available.
+   ![Picture 1](../Media/ss68.png)   
 
-1. After configuring the automation rule with the required settings, select **Apply** to save the changes.
+    >**Note:** You have already assigned permissions to the playbook, so it will be available.
 
 1. Select the **Next: Review and create >** button.
   
