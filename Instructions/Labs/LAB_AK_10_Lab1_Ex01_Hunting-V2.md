@@ -248,13 +248,11 @@ In this task, you'll use a Search job to look for a C2.
 
 1. The MITRE ATT&CK map helps you identify specific gaps in your detection coverage. Use predefined hunting queries for specific MITRE ATT&CK techniques as a starting point to develop new detection logic.
 
-1. In Microsoft Sentinel, expand **Threat management** from the left navigation menus.
+1. In Microsoft Sentinel, expand **Threat management (1)** from the left navigation menus. Select **MITRE ATT&CK (Preview) (2)**.
 
-1. Select **MITRE ATT&CK (Preview)**.
+1. Unselect items in the *Active rules* drop-down menu **(3)**.
 
-1. Unselect items in the *Active rules* drop-down menu.
-
-   ![](../Media/45.png)
+   ![](../Media/ss147.png)
 
 1. Select **Hunting queries** in the *Simulated rules* filter to see which techniques have hunting queries associated with them.
 
@@ -270,19 +268,17 @@ In this task, you'll use a Search job to look for a C2.
 
 1. This link takes you to a filtered view of the Queries tab on the Hunting page based on the technique you selected.
 
-1. Select all the queries for that technique by selecting the box near the top of the list on the left.
+1. Select all the queries for that technique by selecting the box near the top of the list on the left **(1)**.
 
-1. Select the **Hunt actions** drop down menu near the middle of the screen above the filters.
+   - Select the **Hunt actions (2)** drop down menu near the middle of the screen above the filters.
 
-1. Select **Create new hunt**. All the queries you selected are cloned for this new hunt.
+   - Select **Create new hunt (3)**. All the queries you selected are cloned for this new hunt.
 
-   ![](../Media/41.png)
+     ![](../Media/ss149.png)
 
-1. Fill out the hunt name as **myhunt** and optional fields. The description is a good place to verbalize your hypothesis. The Hypothesis pull down menu is where you set the status of your working hypothesis.
+1. Fill out the hunt name as **myhunt (1)** and optional fields. The description is a good place to verbalize your hypothesis. The Hypothesis pull down menu is where you set the status of your working hypothesis and then select **Create (2)** to get started.
 
-1. Select **Create** to get started.
-
-   ![](../Media/40.png)
+   ![](../Media/ss150.png)
 
 1. Select the **Hunts (Preview)** tab to view your new hunt.
 
@@ -292,16 +288,17 @@ In this task, you'll use a Search job to look for a C2.
 
 1. View the details pane with the Hunt name, Description, Content, Last update time, and Creation time.
 
-1. Select all of the queries by using the box next to the *Query* column.
+1. Select all of the queries by using the box next to the *Query* column **(1)**.
 
-1. Either select **Run selected queries** or uncheck the selected rows and *right click* and **Run** a single query.
+1. Either select **Run selected queries (2)** or uncheck the selected rows and *right click* and **Run** a single query.
+
+   ![](../Media/ss151.png)
 
 1. You can also select a single query and select **View results** in the details pane.
 
 1. Review which queries returned results.
 
 1. Based on the results, determine if there's enough strong evidence to validate the hypothesis. If there isn’t, close the Hunt and mark it as invalidated.
-
 
 1. Alternative Steps:
     - Go to Microsoft Sentinel.
