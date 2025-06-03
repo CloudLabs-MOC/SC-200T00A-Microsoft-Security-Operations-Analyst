@@ -31,13 +31,15 @@ In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
 
 1. Select **uniquenameDefender** Microsoft Sentinel Workspace.
 
-1. On the left menu Select the **Entity behavior** page.
+    ![](../Media/ss7.png)
 
-1. On the popup from **Entity behavior settings**, select **Set UEBA**.
+1. On the left menu Select the **Entity behavior (1)** page.
 
-    ![Lab overview.](../Media/ueba.png)
+1. On the popup from **Entity behavior settings**, select **Set UEBA (2)**.
 
-1. On the **Settings** tab under *Entity Behavior Analytics*, scroll down to the *Anomalies* section, read through the paragraph, and verify that the **switch** is set to **On (1)**. Then, select the **Go to analytics in order to configure the anomalies (2)** link.
+    ![Lab overview.](../Media/ss40.png)
+
+1. On the **Settings** tab under **Entity Behavior Analytics**, scroll down to the **Anomalies** section, read through the paragraph, and verify that the **switch** is set to **On (1)**. Then, select the **Go to analytics in order to configure the anomalies (2)** link.
 
     ![Lab overview.](../Media/35.png)
 
@@ -45,33 +47,49 @@ In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
 
 In this task, you will confirm Anomalies analytics rules are enabled.
 
-1. You should be now at the **Analytics** page, **Anomalies** tab.
+1. You should be now at the **Analytics** page, **Anomalies (1)** tab.
 
-1. Confirm status column of the rules is **Enabled**.
+1. Confirm status column of the rules is **Enabled (2)**.
 
-1. Select any rule and then select **Edit** on the rule blade (Select ellipsis (...) icon at the right of the rule to see the Edit option).
+    ![](../Media/ss41.png)
 
-    >**Note:** If you are not able to select the edit option, please refresh the page.
+1. Select any rule **(1)** then select **ellipsis (...) (2)** icon at the right of the rule and then click **Edit (3)**.
 
-1. Review the **General** tab information. Notice the **Mode** is **Production** and then select **Next: Configuration**.
+    ![](../Media/ss45.png)
+
+    >**Note:** If you are not able to select the edit option, please refresh the page. Navigate to other tabs then come back to the **Anomalies** tab.
+
+1. Review the **General** tab information. Notice the **Mode** is **Production (1)** and then select **Next: Configuration (2)**.
+
+    ![](../Media/ss43.png)
 
 1. Review the *Configuration* tab information. Notice that you cannot change the **Anomaly score threshold**.
+
+    ![](../Media/ss44.png)
 
 1. Then select **X** in the top right corner to exit the Analytics rule wizard.
 
 1. Scroll right to the analytics rule you selected until see and select the ellipsis **(...)** icon.
 
-1. Select **Duplicate** and scroll left to review the new rule with the **FLGT** tab at the beginning of the name.
+1. Select **Duplicate**.
 
-1. Select **FLGT** rule and then select **Edit** on the rule blade.
+    ![](../Media/ss46.png)
 
-     ![Lab overview.](../Media/flgt.png)
+1. Scroll left to review the new rule with the **FLGT** tab at the beginning of the name.
 
-1. Review the *General* tab information. Notice the *Mode* is **Flighting** and then select **Next: Configuration**.
+1. Select **FLGT (1)** rule and then select **Edit (2)** on the rule blade.
+
+    ![Lab overview.](../Media/ss47.png)
+
+1. Review the *General* tab information. Notice the *Mode* is **Flighting (1)** and then select **Next: Configuration (2)**.
+
+    ![Lab overview.](../Media/ss48.png)
 
 1. Review the *Configuration* tab information. Notice that you can now change the **Anomaly score threshold**.
 
-1. Set the value to **1** and then select **Next: Submit Feedback**.
+1. Set the value to **1 (1)** and then select **Next: Submit Feedback (2)**.
+
+    ![Lab overview.](../Media/ss49.png)
 
 1. Select **Next: Review + Create** and then **Save** to update the rule.
 
