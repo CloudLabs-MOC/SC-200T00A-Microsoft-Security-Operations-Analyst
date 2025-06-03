@@ -110,17 +110,25 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
    
 1. In case you get a UAC prompt, enter **Administrator** for "Username" and **Passw0rd!** for "Password", else skip to the next step.
 
-1. Enter: **cd C:\Users\Administrator\Downloads**
+1. Enter the below command
+
+    ```CommandPrompt
+    cd C:\Users\Administrator\Downloads
+    ```
 
     >**Note:** If you are not able to copy the content, then copy the required content to a notepad file using the Clipboard functionality in the top navigation pane of the Hyper V VM in the lab VM and paste it into the Powershell window.
  
-1. Type **Set-ExecutionPolicy -ExecutionPolicy Unrestricted** and press enter.
+1. Enter the below command and press enter.
+
+    ```CommandPrompt
+    Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+    ```
 
 1. Enter **A** for Yes to All and press enter.
 
      ![Picture 1](../Media/l8e123.png)
 
-1. Type **.\OnboardingScript.ps1** and press enter.  
+1. Type `.\OnboardingScript.ps1` and press enter.  
 
     >**Important:** If you get the error *"The term .\OnboardingScript.ps1 is not recognized..."*, make sure you are doing the steps for Task 3 on the WINSERVER virtual machine. Another issue might be that the name of the file changed due to multiple downloads, search for *".\OnboardingScript (1).ps1"* or other file numbers in the running directory.
 
