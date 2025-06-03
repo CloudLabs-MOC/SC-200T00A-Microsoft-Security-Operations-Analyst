@@ -29,17 +29,21 @@ In this task, you'll create a Logic App that is used as a Playbook in Microsoft 
 
    ![Picture 1](../Media/sc-200-19.png)
 
-1. On Microsoft Sentinel page, navigate to **Content Hub**.
+1. Select **uniquenameDefender** Microsoft Sentinel Workspace.
 
-1. Within the search bar, look for **Sentinel SOAR Essentials**.
+   ![Picture 1](../Media/ss7.png)   
 
-1. Select the solution that appears in the results and click on **Install**.
+1. On Microsoft Sentinel page, click on **Go to Content Hub**.
 
-   ![](../Media/6.png)
+   ![Picture 1](../Media/ss10.png) 
+
+1. Within the search bar, search for **Sentinel SOAR Essentials (1)**, press **Enter** then select **Sentinel SOAR Essentials (2)** and then click on **Install (3)**.
+
+   ![](../Media/ss11.png)
 
 1. Within the solution details, select **Manage**.
 
-    ![](../Media/5.png)
+    ![](../Media/ss12.png)
 
 1. Find the **Defender_XDR_Ransomware_Playbook_for_SecOps-Tasks** playbook and select the name.
 
@@ -49,11 +53,13 @@ In this task, you'll create a Logic App that is used as a Playbook in Microsoft 
 
     ![](../Media/7.png)
 
-1. For Resource Group, select **Create New**, enter **RG-playbooks** and select OK.
+1. For Resource Group, select **Create New (1)**, enter **RG-playbooks (2)** and select **OK (3)**.
 
-1. For the **Playbook name**, enter **Defender_XDR_Ransomware_Playbook_SecOps-Tasks (1)** (note that this would exceed the limit of 64 characters). Then, click on Select **Connections (2)**.
+   ![](../Media/ss13.png)
 
-   ![](../Media/8.png)
+1. For the **Playbook name**, enter **Defender_XDR_Ransomware_Playbook_SecOps-Tasks (1)** (note that this would exceed the limit of 64 characters). Then, click on Select **Next:Connections (2)**.
+
+   ![](../Media/ss14.png)
 
 1. On the **Create playbook** page, select **Next: Review and create**.
 
@@ -75,13 +81,15 @@ In this task, you’ll update the new playbook you created with the proper conne
 
 1. Select **uniquenameDefender** Microsoft Sentinel Workspace.
 
-1. Select **Automation** under the **Configuration** area and then select the **Active Playbooks** tab.
+   ![Picture 1](../Media/ss7.png)
+
+1. Select **Automation (1)** under the **Configuration** area and then select the **Active Playbooks (2)** tab.
 
 1. Select **Refresh** from the command bar in case you don’t see any playbooks. You should see the playbook created from the previous step.
 
-1. Select the **Defender_XDR_Ransomware_Playbook_SecOps_Tasks** playbook name.
+1. Select the **Defender_XDR_Ransomware_Playbook_SecOps_Tasks (3)** playbook name.
 
-   ![](../Media/11.png)
+   ![](../Media/ss15.png)
 
 1. On the Logic App page for **Defender_XDR_Ransomware_Playbook_SecOps_Tasks**, in the command menu, select Edit.
 
@@ -91,11 +99,13 @@ In this task, you’ll update the new playbook you created with the proper conne
 
 1.  On the Microsoft Sentinel incident page, select the **first block**.
 
+    ![](../Media/ss16.png)
+
 1. Select the **Change connection** link.
 
     ![](../Media/13.png)
 
-1. Select **Add new** and select **Sign **in**. 
+1. Select **Add new** and then select **Sign in**. 
 
     ![](../Media/14.png)
 
@@ -103,11 +113,13 @@ In this task, you’ll update the new playbook you created with the proper conne
 
    ![](../Media/15.png)
 
-1. Select your Admin credentials when prompted.
+1. Select your **<inject key="AzureAdUserEmail"></inject>** Admin credentials when prompted.
 
     ![](../Media/16.png)
 
 1. The last line of the block should now read **Connected to your-admin-username**.
+
+    ![](../Media/ss17.png)
 
 1. Select **Save** on the command bar. The Logic App will be used in a future lab.
 
@@ -117,21 +129,25 @@ In this task, you’ll update the new playbook you created with the proper conne
 
 In this task, you will create an automation rule in Microsoft Sentinel that runs a playbook based on specific tactics.
 
-1. Within Microsoft Sentinel, go to **Automation** under **Configuration**.
+1. Navigate back to **uniquenameDefender** Microsoft Sentinel Workspace.
+
+1. Select **Automation** under **Configuration**.
 
 1. Select **+ Create (1)** and choose **Automation Rule (2)**.
 
    ![](../Media/17.png)
 
-1. Give the rule a name as **myautomationrule<inject key="DeploymentID" enableCopy="false"/>**
+1. On the **Create new Automation Rule** page, provide the following details:
 
-1. Leave the **incident provider** as **All**.
+   - Give the rule a name as **myautomationrule<inject key="DeploymentID" enableCopy="false"/> (1)**
 
-1. Leave the **Analytic rule** name as **All**.
+   - Leave the **incident provider** as **All (2)**
 
-1. Click **+ Add** and Select **And**.
+   - Leave the **Analytic rule** name as **All (3)** 
 
-    ![](../Media/18.png)
+   - Click **+ Add (4)** and Select **Condition(And) (5)**
+
+     ![](../Media/ss18.png)
 
 1. From the drop down, select **Tactics (1)**.
 
@@ -149,22 +165,24 @@ In this task, you will create an automation rule in Microsoft Sentinel that runs
 
 1. Under Actions, select **Run Playbook (1)**.
 
-1. Select the link to **Manage playbook permissions**.
+1. Select the link to **Manage playbook permissions (2)**.
 
-1. On the *Manage Permissions* page, select the **rg-playbook** resource group you created in the previous lab, and select **Apply**.
+   ![](../Media/ss19.png)
 
-1. From the drop down list, select the **Defender_XDR_Ransomware_Playbook_SecOps_Tasks (2)** playbook.
+1. On the *Manage Permissions* page, select the **rg-playbook (1)** resource group you created in the previous lab, and select **Apply (2)**.
 
-1. Select **Apply (3)** at the bottom.
+   ![](../Media/ss20.png)
 
-   ![](../Media/20.png)
+1. From the drop down list, select the **Defender_XDR_Ransomware_Playbook_SecOps_Tasks (1)** playbook and then select **Apply (3)** at the bottom.
+
+   ![](../Media/ss21.png)
 
 From here, depending on your role, you will either continue doing more architect exercises or you will pivot to the analyst exercises.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
    <validation step="9a03fda7-3dc7-407d-bbea-d9650d728011" />
 

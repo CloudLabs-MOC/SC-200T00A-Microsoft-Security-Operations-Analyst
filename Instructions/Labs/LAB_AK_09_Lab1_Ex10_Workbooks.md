@@ -30,13 +30,21 @@ In this task, you will explore the Microsoft Sentinel workbook templates.
 
    ![Picture 1](../Media/sc-200-19.png)
 
-1. Select your Microsoft Sentinel Workspace.
+1. Select your **uniquenameDefender** Microsoft Sentinel Workspace.
 
-1. Select **Workbooks** under the *Threat Management* left blade. Select the *Templates* tab.
+   ![Picture 1](../Media/ss7.png)
 
-1. Search for and select the **Azure Activity** template workbook. In the right pane, scroll down and select the **View template** button.
+1. Select **Workbooks (1)** under the *Threat Management* left blade. Select the **Templates (2)** tab.
+
+   ![Picture 1](../Media/ss88.png)
+
+1. Search for **Azure Activity (1)** press **Enter**. Then select the **Azure Activity (2)** template workbook. In the right pane, scroll down and select the **View template (3)** button.
+
+   ![Picture 1](../Media/ss89.png)
 
 1. Review the contents of the workbook. It shows insights into your Azure subscription operations by collecting and analyzing the data from the Activity Log.
+
+   ![Picture 1](../Media/ss90.png)
 
 1. Close the workbook by selecting the **X** in the top-right corner.
 
@@ -56,21 +64,33 @@ In this task, you will save a workbook template and modify it.
 
 1. Select **Edit** in the command bar to enable changes in the workbook.
 
-1. Scroll down to the *Caller activities over time* area, look at the color of the *Activities* column since we are going to format those columns. Select the **Edit** button below the grid.
+   ![Picture 1](../Media/ss91.png)
+
+1. Scroll down to the **Caller activities over time** area, look at the color of the *Activities* column since we are going to format those columns. Select the **Edit** button below the grid.
 
    ![Picture 1](../Media/editcallerupd.png)
 
 1. Select the **Column Settings** button, it is located to the right of the *Run Query* command bar. **Hint:** This button only appears if there is data from the KQL query.
 
-1. In the *Edit column settings* blade that appears, within *Columns* select **Activities**.
+   ![Picture 1](../Media/ss92.png)
 
-1. Change the value for *Column renderer* to **Heatmap**. For *Colour palette*, scroll down to select **32-color categorical**.
+1. In the *Edit column settings* blade that appears, within *Columns* select **Activities (1)**.
 
-1. Select **Apply**, then **Save and Close**. Notice the change in the *Activities* column.
+   - Change the value for *Column renderer* to **Heatmap (2)**. For *Colour palette*, scroll down to select **32-color categorical (3)**.
+
+   - Select **Apply (4)**, then **Save and Close (5)**. Notice the change in the *Activities* column.
+
+     ![Picture 1](../Media/ss93.png)   
 
 1. Select **Done Editing** at the bottom of the query (not the top menu).
 
-1. Now select **Done Editing** at the top menu and select the **Save** icon. 
+   ![Picture 1](../Media/ss94.png)
+
+1. Now select **Done Editing** at the top menu.
+
+1. Then select the **Save** icon. 
+
+   ![Picture 1](../Media/ss95.png)
 
 1. Close the workbook by selecting the **X** in the top-right corner.
 
@@ -78,48 +98,65 @@ In this task, you will save a workbook template and modify it.
 
 In this task, you will create a new workbook with advanced visualizations.
 
-1. You should be back at the **Workbooks** area of the Microsoft Sentinel portal.
+1. You should be back at the **Workbooks (1)** area of the Microsoft Sentinel portal.
 
-1. Select **+ Add workbook** to create a new workbook from scratch. 
+1. Select **+ Add workbook (2)** to create a new workbook from scratch. 
+
+   ![Picture 1](../Media/ss96.png)
 
     >**Note:** Although it is a new workbook, a startup template is used.
 
-1. To edit the workbook, select **Edit**.
+1. To edit the workbook, select **Edit** from the top bar.
 
-1. Select the **Edit** button below the new workbook
-overview of the workbook.
+1. Select the **Edit** button below the new workbook overview of the workbook.
 
-1. Type *# My workbook* in a new line on top of *## New workbook*.
+   ![Picture 1](../Media/ss97.png)
 
-1. Select **Done Editing** on the bottom of this section, *Editing text item: text - 2*. Notice that your header increased in size and name changed.
+1. Type **# My workbook (1)** in a new line on top of *## New workbook*.
 
-1. To edit the workbook, select **Edit**.
+1. Select **Done Editing (2)** on the bottom of this section, *Editing text item: text - 2*. Notice that your header increased in size and name changed.
+
+   ![Picture 1](../Media/ss98.png)
 
 1. Select **Edit** below the only visible bar chart graph.
 
-1. Review the KQL statement that provides a *union* statement of counts across all tables.
+   ![Picture 1](../Media/ss99.png)
 
-1. Scroll down and select the **Done Editing** on the bottom menu.
+1. Review the KQL statement that provides a *union* statement of counts across all tables **(1)**. Scroll down and select the **Done Editing (2)** on the bottom menu.
 
-1. Select the ellipsis **...** next to the *Edit* button of the barchart graph, then select **+ Add**, then select **Add query**.
+   ![Picture 1](../Media/ss100.png)
 
-1. Type **SecurityEvent** into the query box.
+1. Select the ellipsis **... (1)** next to the *Edit* button of the barchart graph, then select **+ Add (2)**, then select **Add query (3)**.
 
-1. Change the *Time Range* to **Last hour**.
+   ![Picture 1](../Media/ss101.png)
 
-1. Change the *Visualization* to **Time chart**.
+1. Type **SecurityEvent (1)** into the query box.
+
+   - Change the *Time Range* to **Last hour (2)**.
+
+   - Change the *Visualization* to **Time chart (3)**.
+
+     ![Picture 1](../Media/ss102.png)   
 
 1. Select the **Style** tab from the query's command bar.
 
-1. Select the **Make this item a custom width** box.
+   ![Picture 1](../Media/ss103.png)
 
-1. Set the *Percent width* to **25** and *Maximum width* to **25**.
+1. On the **Edit query item** dialog box,
 
-1. Now select **Advanced Settings** tab from the query's command bar.
+   - Select the **Make this item a custom width (1)** box.
 
-1. Select **Show refresh icon when not editing** box. 
+   - Set the *Percent width* to **25 (2)** and *Maximum width* to **25 (3)**.
 
-1. Scroll down and select **Done Editing** on the bottom menu, for the new *Editing query item: query - 2*.
+   - Now select **Advanced Settings (3)** tab from the query's command bar.
+
+     ![Picture 1](../Media/ss104.png)   
+
+1. Select **Show refresh icon when not editing (1)** box. 
+
+1. Scroll down and select **Done Editing (2)** on the bottom menu, for the new *Editing query item: query - 2*.
+
+   ![Picture 1](../Media/ss105.png)
 
 1. Scroll down and at the bottom of the workbook select **+ Add (1)**, then **Add query (2)**.
 
@@ -135,29 +172,41 @@ overview of the workbook.
 
 1. Select **Style** from the query's command bar.
 
-1. Select **Make this item a custom width** box.
+1. On the **Edit query item** dialog  box,
 
-1. Set the *Percent width* to **75** and *Maximum width* to **75**.
+   - Select **Make this item a custom width (1)** box.
 
-   ![Picture 1](../Media/75.png)
+   - Set the *Percent width* to **75 (2)** and *Maximum width* to **75 (3)**.
 
-1. Scroll down and select **Done Editing** on the bottom menu, for the new *Editing query item: query - 3*.
+   - Scroll down and select **Done Editing (4)** on the bottom menu, for the new *Editing query item: query - 3*.   
+
+     ![Picture 1](../Media/ss106.png)
 
 1. Select **Done Editing** in Workbook's top command bar.
 
-1. Select the **Save** icon, change the *Title* to **My Workbook**.
+1. Select the **Save** icon.
 
-1. Select the **RG-Defender** resource group if needed and leave other values as default.
+1. On the **Save As** page,
 
-1.  Select **Save as** to commit the changes. 
+   - Change the *Title* to **My Workbook (1)**.
+
+   - Select the **RG-DEFENDER (2)** resource group if needed and leave other values as default.
+
+   - Select **Save as (3)** to commit the changes. 
+
+     ![Picture 1](../Media/ss107.png)   
 
 1. Close the workbook by selecting the **X** at the top-right or select **Workbooks** in the Microsoft Sentinel portal.
 
-1. Back in the *Workbooks* page, select the **My workbooks** tab.
+1. Back in the **Workbooks (1)** page, select the **My workbooks (2)** tab.
 
-1. Select the workbook you just created, **My workbook**.
+1. Select the workbook you just created, **My workbook (3)**.
+
+   ![Picture 1](../Media/ss108.png)
 
 1. On the right pane, select **View saved workbook** to review your workbook.
+
+   ![Picture 1](../Media/ss109.png)
 
 ## Review
 In this lab, you have completed the following:

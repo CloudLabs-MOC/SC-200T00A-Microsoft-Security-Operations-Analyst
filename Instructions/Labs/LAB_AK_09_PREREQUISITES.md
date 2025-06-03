@@ -96,9 +96,13 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
 1. Select **Next** to get to the Download and run script tab.
 
-1. Scroll down and select the **Download** button. **Hint:** If your browser blocks the download, take action in the browser to allow it. In Edge Browser, select the ellipsis button (...) if needed and then select **Keep**.
+1. Scroll down and select the **Download** button. **Hint:** If your browser blocks the download, take action in the browser to allow it.
 
      ![Picture 1](../Media/sc-200-10.png)
+
+1. In Edge Browser, select the ellipsis button (...) if needed and then select **Keep**.
+     
+     ![Picture 1](../Media/ss1.png)     
 
 1. Right-click the Windows Start **(1)** button and select **Windows PowerShell (Admin) (2)**.
 
@@ -106,17 +110,25 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
    
 1. In case you get a UAC prompt, enter **Administrator** for "Username" and **Passw0rd!** for "Password", else skip to the next step.
 
-1. Enter: **cd C:\Users\Administrator\Downloads**
+1. Enter the below command
+
+    ```CommandPrompt
+    cd C:\Users\Administrator\Downloads
+    ```
 
     >**Note:** If you are not able to copy the content, then copy the required content to a notepad file using the Clipboard functionality in the top navigation pane of the Hyper V VM in the lab VM and paste it into the Powershell window.
  
-1. Type **Set-ExecutionPolicy -ExecutionPolicy Unrestricted** and press enter.
+1. Enter the below command and press enter.
+
+    ```CommandPrompt
+    Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+    ```
 
 1. Enter **A** for Yes to All and press enter.
 
      ![Picture 1](../Media/l8e123.png)
 
-1. Type **.\OnboardingScript.ps1** and press enter.  
+1. Type `.\OnboardingScript.ps1` and press enter.  
 
     >**Important:** If you get the error *"The term .\OnboardingScript.ps1 is not recognized..."*, make sure you are doing the steps for Task 3 on the WINSERVER virtual machine. Another issue might be that the name of the file changed due to multiple downloads, search for *".\OnboardingScript (1).ps1"* or other file numbers in the running directory.
 
@@ -170,25 +182,25 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
      ![Picture 1](../Media/sc-200-20.png)
 
-1. Select the **Microsoft Sentinel Workspace** you created.
- 
 1. On the **Microsoft Sentinel | News & guides** page, select **Go to the content hub** under **Get started** tab.
 
-   ![Picture 1](../Media/contenthub.png)
+   ![Picture 1](../Media/ss2.png)
 
-1. On the **Microsoft Sentinel | Content hub (1)** page, search for **Windows Security Events (2)**, and select **Windows Security Events (3)** and click on **Install (4)**.
+1. On the **Microsoft Sentinel | Content hub (1)** page, search for **Windows Security Events (2)**, press **Enter** and select **Windows Security Events (3)** and click on **Install (4)**.
 
      ![Picture 1](../Media/installWSEvents.png)
 
 1. Once the installation is completed, go to the **Data connector (1)** page and refresh you should find **Windows Security Events via AMA (2)**.
 
-     ![Picture 1](../Media/dataconnectors.png)
+     ![Picture 1](../Media/ss3.png)
 
-1. Select the **Windows Security Events via AMA** connector and click on **Open connector page** on the connector information blade. 
+1. Select the **Windows Security Events via AMA (1)** connector and click on **Open connector page (2)** on the connector information blade. 
 
-    >**Note:** You may need to click on the arrowhead that appears to reveal the **Open Connector Page** option.
+     ![Picture 1](../Media/ss4.png)
 
-    ![Picture 1](../Media/m1.png)
+      >**Note:** You may need to click on the arrowhead that appears to reveal the **Open Connector Page** option.
+
+      ![Picture 1](../Media/m1.png)
  
 1. In the **Configuration** section, select the **+Create data collection rule**.
 
@@ -198,18 +210,24 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
      ![Picture 1](../Media/sc-200-22.png)
 
-1. Expand the **Subscription (1)** and the **RG-DEFENDER (2)** (or the Resource Group you have created), then select **WIN-xxxx (3)**. Then select **Next: Collect (4)** and **Next: Review + Create**.
+1. Expand the **Subscription (1)** and the **RG-DEFENDER (2)** (or the Resource Group you have created), then select **WIN-xxxx (3)**. Then select **Next: Collect (4)**.
 
      ![Picture 1](../Media/sc-200-23.png)
 
+1. Then click **Next: Review + Create**.    
+
+     ![Picture 1](../Media/ss5.png)
+
 1. On the **Create data Collection Rule** page, Select **Create**.
 
-1. Wait a few minutes and then select **Refresh** to see the new data collection rule listed.
+1. Wait a few minutes and then select **Refresh (1)** to see the new data collection rule listed **(2)**.
+
+     ![Picture 1](../Media/ss6.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 - If you receive a success message, you can proceed to the next task.
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.com. We are available 24/7 to help you out.
  
 <validation step="07c96102-f314-44cd-b6a4-10fbb89a449b" />
 

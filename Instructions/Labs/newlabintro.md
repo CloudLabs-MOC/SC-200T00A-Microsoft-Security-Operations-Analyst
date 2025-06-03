@@ -6,7 +6,13 @@ Welcome to your SC-200: Microsoft Security Operations Analyst workshop! We've pr
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../Media/AZ500(1).png)
+![Access Your VM and Lab Guide](../Media/gss1.png)
+
+## Lab Guide Zoom In/Zoom Out
+
+1. To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+
+   ![Manage Your Virtual Machine](../Media/gss5.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -16,19 +22,19 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../Media/env.png)
+![Explore Lab Resources](../Media/gss2.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![Use the Split Window Feature](../Media/spl.png)
+![Use the Split Window Feature](../Media/gss3.png)
  
 ## Managing Your Virtual Machine
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../Media/AZ500(4).png)
+![Manage Your Virtual Machine](../Media/gss4.png)
 
 ## **Lab Duration Extension**
 

@@ -22,11 +22,19 @@ You are going to simulate the attacks that you will later use to detect and inve
 
 In this task, you will simulate a persistence attack by adding a registry key that ensures a program runs each time the system starts.
 
-1. Click **Start** on the Windows taskbar, select **Power**, and then choose **Restart**.
+1. Click **Start (1)** on the Windows taskbar, select **Power (2)**, and then choose **Restart (3)**.
 
-1. Once the system restarts, follow the prompts to log back into **WINServer** from the desktop.
+    ![Lab overview.](../Media/ss50.png)
 
-1. In the search of the task bar, enter **Command**. Command Prompt will be displayed in the search results. Right-click on the Command Prompt and select **Run as Administrator**. Select **Yes** in the User Account Control window that appears to allow the app to run.
+     >**Note**: Choose **Planned** and then **Continue**.
+
+1. Once the system restarts, log back into **WINServer** from the desktop.
+
+1. If prompted, provide the Password `Password.1!!`.
+
+1. In the search of the task bar, enter **Command (1)**. Command Prompt will be displayed in the search results. Right-click on the Command Prompt and select **Run as Administrator (2)**. Select **Yes** in the User Account Control window that appears to allow the app to run.
+
+    ![Lab overview.](../Media/ss51.png)
 
 1. In the Command Prompt, create a Temp folder in the root directory. Remember to press Enter after the last row:
 
@@ -42,6 +50,8 @@ In this task, you will simulate a persistence attack by adding a registry key th
     REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
     ```
 
+     ![Lab overview.](../Media/ss52.png)    
+
 ### Task 2: Privilege Elevation Attack with User Add
 
 In this task, you will simulate a privilege elevation attack by creating a new admin user on the system. This exercise demonstrates how an attacker could escalate their privileges on a machine by adding a new user to the Administrators group.
@@ -53,7 +63,10 @@ In this task, you will simulate a privilege elevation attack by creating a new a
     net user theusernametoadd ThePassword1!
     net localgroup administrators theusernametoadd /add
     ```
-    >**Note:** If you encounter any issues while copying and pasting, try copying the prompt into **Notepad** first, then paste it into the **Command Prompt (CMD)**.
+
+     ![Lab overview.](../Media/ss53.png)    
+    
+     >**Note:** If you encounter any issues while copying and pasting, try copying the prompt into **Notepad** first, then paste it into the **Command Prompt (CMD)**.
 
 ### Task 3: Command and Control Attack with DNS
 
@@ -111,7 +124,9 @@ In this task, you will simulate a DNS-based Command and Control (C2) attack by c
     Until ($TimeNow -ge $RunEnd)
     ```
 
-1. In the Notepad menu, select **File** and then **Save**. 
+1. In the Notepad menu, select **File (1)** and then **Save (2)**.
+
+    ![Lab overview.](../Media/ss54.png)
 
 1. Go back to the Command Prompt window, enter the following command and press Enter. 
 

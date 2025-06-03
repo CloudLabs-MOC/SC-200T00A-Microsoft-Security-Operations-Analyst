@@ -25,19 +25,24 @@ In this task, you'll review the User Management Schema parsers that are included
 
    ![Picture 1](../Media/sc-200-19.png)
 
-1. Select your Microsoft Sentinel Workspace.
+1. Select your **uniquenameDefender** Microsoft Sentinel Workspace.
 
-1. Select **Logs** under the *General* left menu.
+   ![Picture 1](../Media/ss7.png)
 
-1. Open the *Schema and Filter* blade by selecting **>>** if needed.
+1. Select **Logs (1)** under the *General* left menu.
 
-1. Select the **Functions** tab (next to the Tables and Queries tabs). **Hint:** You might need to select the ellipsis icon **(...)** to select the tab.
+   - Open the *Schema and Filter* blade by selecting **>>** if needed
+   - Set the mode to **KQL mode (2)**
+   - Select the **Functions (3)** tab (next to the Tables and Queries tabs)
+   **Hint:** You might need to select the ellipsis icon **(...)** to select the tab
 
-1. In the *Search* bar type **user**, and scroll down through the ASIM parser functions until you see the following **_ASim_UserManagement** for Microsoft Windows under the *Microsoft Sentinel* heading.
+     ![Picture 1](../Media/ss85.png)   
 
-1. Hover over the **_ASim_UserManagement** ASIM function and then select **Load the function code** in the popup window.
+1. In the *Search* bar type **user (1)**, and scroll down through the ASIM parser functions until you see the following **_ASim_UserManagement** for Microsoft Windows under the *Microsoft Sentinel* heading.
 
-   ![Lab overview.](../Media/asim1.png)
+1. Hover over the **_ASim_UserManagement (2)** ASIM function and then select **Load the function code (3)** in the popup window.
+
+   ![Lab overview.](../Media/ss86.png)
 
 1. In *Logs* Open a New Query tab.
 
@@ -45,7 +50,9 @@ In this task, you'll review the User Management Schema parsers that are included
 
    ![Lab overview.](../Media/asim2.png)
 
-1. **Run** the ASIM function query. If you've completed the previous lab exercises you should see results and noerror messages.
+1. **Run** the ASIM function query. If you've completed the previous lab exercises you should see results and no error messages.
+
+   ![Picture 1](../Media/ss87.png)
 
 ## Review
 In this lab, you have completed the following:

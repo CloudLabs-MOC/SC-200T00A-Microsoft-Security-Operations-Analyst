@@ -27,47 +27,63 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
 1. In the Azure portal's search bar type **Microsoft sentinel (1)**, and select **Microsoft Sentinel (2)**.
 
-   ![Picture 1](../Media/sc-200-19.png).
+   ![Picture 1](../Media/sc-200-19.png)
 
 1. Select **uniquenameDefender** Microsoft Sentinel Workspace.
 
-1. In the Microsoft Sentinel left menus, scroll down to the **Content management** section and select **Content Hub**.
+   ![Picture 1](../Media/ss7.png)
 
-1. In the **Content hub**, search for the **Azure Activity** solution and select it from the list.
+1. In the Microsoft Sentinel left menus, scroll down to the **Content management (1)** section and select **Content Hub (2)**.
+
+   ![Picture 1](../Media/ss22.png)
+
+1. In the **Content hub**, search for the **Azure Activity (1)** solution, press **Enter** then select it from the list **(2)**. On the Azure Activity solution page ,select **Install (3)**.
+
+   ![Picture 1](../Media/ss23.png)
+
+1. When the installation completes, go to **Data connectors (1)** page under **Configuration** in Microsoft Sentinel. The **Azure Activity** solution installs the **Azure Activity (2)** Data connector, 12 Analytic rules, 14 Hunting queries and 1 Workbook.
+
+   ![Picture 1](../Media/ss24.png)
+
+1. Select the **Azure Activity (1)** Data connector and select **Open connector page (2)**.
+
+   ![Picture 1](../Media/ss25.png)
+
+1. In the **Configuration** area under the **Instructions** tab, scroll down to **2. Connect your subscriptions... (1)**, and select **Launch Azure Policy Assignment Wizard> (2)**.
+
+   ![Picture 1](../Media/ss26.png)
+
+1. In the **Basics** tab, select the ellipsis button **(...) (1)** under **Scope** and select your subscription from the drop-down list **(2)** and click **Select (3)**.
+
+   ![Picture 1](../Media/ss27.png)
+
+1. Select the **Parameters (1)** tab, choose **uniquenameDefender (2)** workspace from the **Primary Log Analytics workspace** drop-down list and then click **Select (3)**. This action will apply the subscription configuration to send the information to the Log Analytics workspace.
     
-1. On the Azure Activity solution page ,select **Install**.
+   ![Picture 1](../Media/ss28.png)
 
-1. When the installation completes, go to Data connectors page in Microsoft Sentinel. The **Azure Activity** solution installs the **Azure Activity** Data connector, 12 Analytic rules, 14 Hunting queries and 1 Workbook.
+1. Select the **Remediation** tab and select the **Create a remediation task (1)** checkbox. This action will apply the policy to existing Azure resources. Select the **Review + Create (2)** button to review the configuration.
 
-1. Select the **Azure Activity** Data connector and select **Open connector page**.
-
-1. In the **Configuration** area under the **Instructions** tab, scroll down to "2. Connect your subscriptions...", and select **Launch Azure Policy Assignment Wizard>**.
-
-1. In the **Basics** tab, select the ellipsis button (...) under **Scope** and select your subscription from the drop-down list and click **Select**.
-
-1. Select the **Parameters** tab, choose **uniquenameDefender** workspace from the **Primary Log Analytics workspace** drop-down list. This action will apply the subscription configuration to send the information to the Log Analytics workspace.
-    
-1. Select the **Remediation** tab and select the **Create a remediation task** checkbox. This action will apply the policy to existing Azure resources.
-
-1. Select the **Review + Create** button to review the configuration.
+   ![Picture 1](../Media/ss29.png)
 
 1. Select **Create** to finish.
 
-1. Please wait for the Azure Activity data connector to display a Connected status before proceeding. This process may take approximately 15-30 minutes. If the status does not update, try refreshing the page.
+1. Please wait for the Azure Activity data connector to display a Connected status before proceeding to the next task. This process may take approximately **15-30** minutes. **If the status does not update, try refreshing the page**.
 
-1. Select **Analytics** from the Configuration area.
+   ![Picture 1](../Media/ss30.png)
 
-1. Make sure that you are in the *Rule templates* tab in the command bar and search for the **New CloudShell User** rule.
+1. Navigate back to **Analytics (1)** from the **Configuration** area.
 
-1. From the rule summary blade, make sure you're receiving data by reviewing the green icon under *Data sources: Azure Activity*.
+   - Make sure that you are in the **Rule templates (2)** tab in the command bar and search for the **New CloudShell User (3)** rule
+
+   - From the rule summary blade, make sure you're receiving data by reviewing the green icon under **Data sources: Azure Activity (4)**.
+
+     ![Picture 1](../Media/ss31.png)
     
-1. Select **Create rule** to continue under Rule templates in the Analytics tab.
+1. Click on the **Elipses (...) (1)** from the right and then select **Create rule (2)** to continue under Rule templates in the Analytics tab.
 
-   ![](../Media/22.png)
+   ![](../Media/ss32.png)
 
-1. In the Analytics rule wizard, on the **General** tab, change the *Severity* to **Medium (1)**.
-
-1. Select **Next: Set rule logic > (2)** button:
+1. In the Analytics rule wizard, on the **General** tab, change the *Severity* to **Medium (1)** and then select **Next: Set rule logic > (2)** button:
 
    ![](../Media/23.png)
 
@@ -98,7 +114,13 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
 1. Select the **Next: Automated response >** button.
 
-1. Select the **Next: Review and create >** button then select **Save**.
+1. On the **Automated response** page, select the **Next: Review and create >** button.
+
+   ![Picture 1](../Media/ss33.png)
+
+1. Then select **Save**.
+
+   ![Picture 1](../Media/ss34.png)
 
 ### Task 2: Edit your new rule
 
@@ -109,6 +131,8 @@ In this task, you will modify the New CloudShell User rule in Microsoft Sentinel
    ![Picture 1](../Media/sc-200-19.png).
 
 1. Select **uniquenameDefender** Microsoft Sentinel Workspace.
+
+   ![Picture 1](../Media/ss7.png)
 
 1. Select **Analytics** from the Configuration area.
 
@@ -126,17 +150,21 @@ In this task, you will modify the New CloudShell User rule in Microsoft Sentinel
 
 1. On the Automated response tab under **Automation rules**, select **+ Add new**.
 
-1. For the *Automation rule name*, enter **Tier 2**.
+   ![](../Media/ss35.png)
 
-1. For the *Actions*, select **Assign owner**.
+1. On the **Create new Automation rule** page, provide the following details:   
 
-1. On the **Creaye new automation rule** page,select **<inject key="AzureAdUserEmail"></inject>**.
+   - For the *Automation rule name*, enter **Tier 2 (1)**
 
-   ![](../Media/27.png)
+   - For *Trigger*, choose the **When incident is created (2)**
 
-1. On the **Creaye new automation rule** page, select **Apply**.
+   - For the *Actions*, select **Assign owner (3)**
 
-   ![](../Media/a1.png)
+   - On the **Create new automation rule** page,select **<inject key="AzureAdUserEmail"></inject> (4)**
+
+   - Then select **Apply (5)**
+
+     ![](../Media/ss36.png)
 
 1. On the **Automation response** tab, select the **Next: Review and create >** button.
 
@@ -168,32 +196,38 @@ In this task, you test your new scheduled query rule.
 
 1. Wait until the Cloud Shell is **provisioned**, then **close** the Azure Cloud Shell window.
 
-1. In the Search bar of the Azure portal, type *Activity* and then select **Activity Log**.
+1. In the Search bar of the **Azure portal**, type **Activity Log (1)** and then select **Activity Log (2)**.
+
+    ![](../Media/ss37.png)
 
 1. Make sure the following **Operation name** items appear: **List Storage Account Keys** and **Update Storage Account Create**. These are the operations that the KQL query you reviewed earlier will match to generate the alert. **Hint:** You might need to select **Refresh** to update the list.
 
-    ![](../Media/33.png)
+    ![](../Media/ss38.png)
 
 1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
 
 1. Select **uniquenameDefender** Microsoft Sentinel Workspace.
 
-1. Select the **Incidents** menu option under *Threat management*.
+   ![](../Media/ss7.png)
+
+1. Select the **Incidents** menu option under **Threat management**.
 
 1. Select the **Auto-refresh incidents** toggle.
 
     ![](../Media/34.png)
 
-1. You should see the newly created Incident.
+1. You can not see the newly created Incident right now. As it takes some time.
 
-    >**Note:** The event that triggers the incident may take 5+ minutes to process. Continue with the next exercise, and you will come back to this view later.
+1. The event that triggers the incident may take 5+ minutes to process. Continue with the next exercise, and you will come back to this view later. You can check this 2-3 hrs later after completing some of the labs.
+
+    ![](../Media/ss39.png)
 
 1. Select the Incident and review the information in the right blade.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
    <validation step="3e75085e-0e87-4db0-a6ad-9facbd092df7" />
 

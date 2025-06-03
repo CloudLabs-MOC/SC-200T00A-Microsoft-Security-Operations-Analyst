@@ -29,6 +29,8 @@ In this task, you will activate a Microsoft Security rule.
    ![Picture 1](../Media/sc-200-19.png)
 
 1. Select **uniquenameDefender** Microsoft Sentinel Workspace.
+
+   ![Picture 1](../Media/ss7.png)
         
 1. Select **Analytics (1)** from the Configuration area. By default, you will see the **Active rules**.
 
@@ -36,17 +38,21 @@ In this task, you will activate a Microsoft Security rule.
 
    ![Picture 1](../Media/l9e1-1.png)
 
-1. Under Name, enter **Create incidents based on Defender for Endpoint (1)**.
+1. On the **Analytics rule wizard- Create a new Mocrosoft Security rule** page, provide the following details and then click on **Next: Automated response (5)**:
 
-1. Scroll down and under Microsoft security service select **Microsoft Defender for Endpoint (2)**. 
+   - Under Name, enter **Create incidents based on Defender for Cloud (1)**
 
-1. Under Filter by Severity, select the **Custom (3)** option select Low, Medium, and High for the severity level **(4)**.
+   - Scroll down and under Microsoft security service select **Microsoft Defender for Cloud (2)**
 
-   ![Picture 1](../Media/l9e1-2.png)
+   - Under Filter by Severity, select the **Custom (3)** option select Low, Medium, and High for the severity level **(4)**
+
+     ![Picture 1](../Media/ss8.png)
 
 1. Select the **Next: Automated response (5)** button and then select **Next: Review + create** button.
 
 1. On the **Analytics rule wizard- Create a new Mocrosoft Security rule** page, Click on **save**.
+
+   ![Picture 1](../Media/ss9.png)
 
 ### Review
 In this lab, you have completed the following:
