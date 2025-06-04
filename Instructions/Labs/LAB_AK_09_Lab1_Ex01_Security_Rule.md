@@ -59,4 +59,4 @@ In this lab, you have completed the following:
 
 - Activated a Microsoft Security Rule
 
-## Select **Next** to continue to Lab 2
+## Select **Next** to continue to Exercise 2
