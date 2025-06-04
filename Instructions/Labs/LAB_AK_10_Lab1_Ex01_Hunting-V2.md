@@ -316,4 +316,4 @@ In this lab, you have completed the following:
 - Created a Search.
 - Created a hunt that combines multiple queries into a MITRE tactic.
 
-## Click on **Next** to proceed to Lab 2 
+## Click on **Next** to proceed to Exercise 2 
