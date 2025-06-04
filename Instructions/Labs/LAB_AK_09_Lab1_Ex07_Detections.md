@@ -251,4 +251,4 @@ In this lab, you have completed the following:
 - Persistence Attack Detection
 - Privileged Elevation Attack Detection
 
-## Select **Next** to continue to Lab 8
+## Select **Next** to continue to Exercise 8
