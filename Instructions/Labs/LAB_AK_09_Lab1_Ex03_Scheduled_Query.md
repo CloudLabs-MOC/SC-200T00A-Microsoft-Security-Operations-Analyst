@@ -238,4 +238,4 @@ In this lab, you have completed the following:
 - Edited the Scheduled Query
 - Tested the new rule. 
 
-## Select **Next** to continue to Lab 4
+## Select **Next** to continue to Exercise 4

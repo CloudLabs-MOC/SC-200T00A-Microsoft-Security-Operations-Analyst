@@ -5,8 +5,6 @@
 
 ## Prerequisites to be completed before proceeding to further exercises
 
-### Prerequisite 01
-
 ## Lab Objectives
 
  In this lab, you will perform the following:
