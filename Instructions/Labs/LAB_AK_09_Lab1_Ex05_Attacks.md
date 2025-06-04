@@ -112,4 +112,4 @@ In this lab
    - Attack 3 - DNS / C2 
 - Understood Detection Modeling. 
 
-## Select **Next** to continue to Lab  6
+## Select **Next** to continue to Exercise 6
