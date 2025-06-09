@@ -34,31 +34,31 @@ Welcome to your Secure Windows Servers Azure Arc & Microsoft Defender Workshop! 
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
 
-   ![](../Media/lab6-100.png)
+   ![](../Media/GS1.png)
  
 ## Exploring Your Lab Resources
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-   ![](../Media/lab6-101.png)
+   ![](../Media/GS2.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-   ![](../Media/lab6-102.png)
+   ![](../Media/GS3.png)
 
 ## Managing Your Virtual Machine
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
 
-   ![](../Media/lab6-104.png)
+   ![](../Media/GS4.png)
 
 ## Lab Guide Zoom In/Zoom Out
  
 To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-   ![](../Media/new-get-start-25-6.png)
+   ![](../Media/GS5.png)
 
 ## Login to Azure Portal
 
