@@ -36,15 +36,15 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 1. Once the **Common Event Format** is installed. Click on **Data connectors (1)** present under Configuration in the left pane.
 
-1. From the Data Connectors tab, select **Common Event Format (CEF) via Legacy agent (2)** connector from the list.
+1. From the Data Connectors tab, select **Common Event Format (CEF) via AMA (2)** connector from the list.
 
 1. Select the **Open connector page (3)** on the connector information blade.
 
-     ![](../Media/lab6-2.png)
+     ![](../Media/upd-1.png)
 
-1. Under configuration, copy the command shown in **1.2 Install the CEF collector on the Linux machine** and paste it in a Notepad.
+1. Under configuration, copy the command shown in **Run the following command to install and apply the CEF collector** and paste it in a Notepad.
 
-     ![](../Media/lab6-3.png)
+     ![](../Media/upd-2.png)
 
 1. In the Search bar, type **virtual machine** and select **Virtual machine**.
 
