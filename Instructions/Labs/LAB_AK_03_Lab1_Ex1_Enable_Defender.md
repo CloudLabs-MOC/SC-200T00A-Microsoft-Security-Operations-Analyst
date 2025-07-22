@@ -23,7 +23,7 @@ In this lab, you will perform the following:
 
 In this task, you will create a Log Analytics workspace for use with Microsoft Defender for Cloud.
 
-1. In the Search bar of the Azure portal, type **Log Analytics**, then select **Log Analytics workspaces**.
+1. In the Search bar of the Azure portal, type **Log Analytics (1)**, then select **Log Analytics workspaces (2)**.
 
     ![Picture 1](../Media/secure6.png)
 
