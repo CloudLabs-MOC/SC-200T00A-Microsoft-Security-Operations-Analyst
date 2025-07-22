@@ -1,6 +1,6 @@
 # Lab 02: Enable Microsoft Defender for Cloud
 
-### Estimated Duration: 40 minutes
+### Estimated Duration: 40 Minutes
 
 ## Lab scenario
 
@@ -19,7 +19,7 @@ In this lab, you will perform the following:
 
   ![Picture 1](../Media/SC200-Lab_Diagrams_Mod3_L1_Ex1-1.png)
 
-### Task 1: Create a Log Analytics Workspace
+## Task 1: Create a Log Analytics Workspace
 
 In this task, you will create a Log Analytics workspace for use with Microsoft Defender for Cloud.
 
@@ -39,7 +39,7 @@ In this task, you will create a Log Analytics workspace for use with Microsoft D
 
 1. Once the workspace validation has passed, select **Create**. Wait for the new workspace to be provisioned.
 
-### Task 2: Enable Microsoft Defender for Cloud
+## Task 2: Enable Microsoft Defender for Cloud
 
 In this task, you'll enable and configure Microsoft Defender for Cloud.
 
@@ -69,7 +69,7 @@ In this task, you'll enable and configure Microsoft Defender for Cloud.
 
 1. Close the Defender plans page by selecting the 'X' on the upper right of the page to go back to the **Environment settings**
 
-### Task 3: Install Azure Arc on an On-Premises Server
+## Task 3: Install Azure Arc on an On-Premises Server
 
 In this task, you will install Azure Arc on an on-premises server to make onboarding easier.
 
@@ -148,7 +148,7 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
    
    - Operating system: **Keep it as default**
 
-   - Leave other values as default and Click on **Download and run script (3)**
+   - Leave other values as default and click on **Download and run script (3)**
 
         ![Picture 1](../Media/secure20.png)
 
@@ -168,7 +168,7 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
     cd C:\Users\Administrator\Downloads
     ```
 
-      > **Important:** If you do not have this directory, it most likely means that you are on the wrong machine. Go back to the beginning of Task 4 change to WINServer and start over.
+      > **Important:** If you do not have this directory, it most likely means that you are on the wrong machine. Go back to the beginning of Task 4, change to WINServer and start over.
 
 1. In PowerShell, run the below command to set the execution policy as unrestricted.
 
@@ -176,7 +176,7 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
     Set-ExecutionPolicy -ExecutionPolicy unrestricted
     ```
 
-1. Enter **A** for Yes to All and press enter.
+1. Enter **A** for Yes to All and press Enter.
 
 1. Run the below command and press enter:  
 
@@ -186,9 +186,9 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
     >**Important:** If you get the error *"The term .\OnboardingScript.ps1 is not recognized..."*, make sure you are doing the steps for Task 4 in the WINServer virtual machine. Other issues might be that the name of the file changed due to multiple downloads, search for *".\OnboardingScript (1).ps1"* or other file numbers in the running directory.
 
-1. Enter **R** to Run once and press enter (this may take a couple of minutes).
+1. Enter **R** to Run once and press Enter (this may take a couple of minutes).
 
-1. The setup process will open a new Edge browser tab to authenticate the Azure Arc agent. Select the ODL Account, wait for the message "Authentication complete" and then go back to the Windows PowerShell window.
+1. The setup process will open a new Edge browser tab to authenticate the Azure Arc agent. Select the ODL Account, wait for the message "Authentication complete", and then go back to the Windows PowerShell window.
 
 1. When the installation finishes, go back to the Azure portal page where you downloaded the script and select **Close**. Close the **Add servers with Azure Arc** to go back to the Azure Arc **Machines** page.
 
@@ -198,17 +198,17 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
       > **Note:** This could take a couple of minutes.
 
-### Task 4: Protect an On-Premises Server
+## Task 4: Protect an On-Premises Server
 
 In this task, you will manually install the required agent on the Windows Server.
 
-1. Search **Data Collection Rules** on azure portal search bar.
+1. Search **Data Collection Rules** on Azure portal search bar.
 
     ![Picture 1](../Media/newdata.png)
 
 1. Select **+ Create**.
 
-1. Provide the following details and click on **Next:Resources (3)**:
+1. Provide the following details and click on **Next: Resources (3)**:
 
    - Rule Name: Enter **WINServer (1)**
    - Resource Group: Select **RG-Defender (2)**
@@ -229,7 +229,7 @@ In this task, you will manually install the required agent on the Windows Server
 
       ![Picture 1](../Media/secure25.png)
 
-1. Click the **Destination** tab, select **+ Add Destination (1)**. Select **Azure Monitor Logs (2)** in the **Destination Type** dropdown. Select your **workspace (3)** from the drop down. Click on **Add data source (4)**.
+1. Click the **Destination** tab, select **+ Add Destination (1)**. Select **Azure Monitor Logs (2)** in the **Destination Type** dropdown. Select your **workspace (3)** from the drop-down. Click on **Add data source (4)**.
 
       ![Picture 1](../Media/secure26.png)
 
