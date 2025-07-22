@@ -12,7 +12,7 @@ Azure Arc allows you to manage your hybrid IT estate with a single pane of glass
 
 ## Task 1: Onboard On-prem servers to Azure Arc-enabled server
 
-In this exercise, you will deploy and configure the Azure Connected Machine agent on a Windows machine hosted outside of Azure, to ensure that it can be managed through Azure Arc-enabled servers.
+In this task, you will deploy and configure the Azure Connected Machine agent on a Windows machine hosted outside of Azure, to ensure that it can be managed through Azure Arc-enabled servers.
 
 1. If you are not logged in already, click on the Azure portal shortcut that is available on the desktop and log in with the Azure credentials below.
 
