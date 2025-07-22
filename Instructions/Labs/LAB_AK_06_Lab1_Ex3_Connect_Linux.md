@@ -1,6 +1,6 @@
 # Lab 05: Connect Linux hosts to Microsoft Sentinel using data connectors
 
-### Estimated Duration: 40 minutes
+### Estimated Duration: 40 Minutes
 
 ## Lab scenario
 
@@ -24,7 +24,9 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
    > **Note:** Ensure you are logged into Azure from the SmartHotelHost VM (Jump VM).
 
-1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
+1. In the Search bar of the Azure portal, type **Sentinel (1)**, then select **Microsoft Sentinel (2)**.
+
+      ![](../Media/ch-4.3.png)
 
 1. Click on the **uniquenameDefender (1)** workspace that we created earlier. Select **Content Hub (2)** under Content management from the left pane.
 
@@ -32,7 +34,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 1. Click on **Install (4)**.
 
-     ![](../Media/lab6-1.png)
+     ![](../Media/ch-4.4.png)
 
 1. Once the **Common Event Format** is installed. Click on **Data connectors (1)** present under Configuration in the left pane.
 
@@ -46,7 +48,10 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
      ![](../Media/upd-2.png)
 
-1. In the Search bar, type **virtual machine** and select **Virtual machine**.
+1. In the Search bar, type **virtual machine (1)** and select **Virtual machines (2)**.
+
+      ![](../Media/ch-1.0.png)
+
 
 1. Click on **LIN1** Linux virtual machine.
 
@@ -66,7 +71,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 1. Enter **yes** to confirm the connection and then type the user's **password provided under Resource group: LIN1** in the Environment tab and press **enter**. Your screen should look something like this:
 
-   ![linux login](../Media/SC-200-img12updated.png)
+   ![linux login](../Media/ch-4.5.png)
 
 1. Paste the **1.2 Install the CEF collector on the Linux machine** from the earlier step. 
 
@@ -84,15 +89,17 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 In this task, you will connect a Linux host to Microsoft Sentinel with the Syslog connector.
 
-1. In the Search bar of the Azure portal, type **Sentinel**, then select **Microsoft Sentinel**.
+1. In the Search bar of the Azure portal, type **Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
-1. Click on the **uniquenameDefender** workspace that we created earlier.
+      ![](../Media/ch-4.3.png) 
 
-1. Select **Content Hub (1)** under Content management from the left pane.
+1. Click on the **uniquenameDefender (1)** workspace that we created earlier.
 
-1. Search for **Syslog (2)** and select it. Once selected, click on **Install (3)**.
+1. Select **Content Hub (2)** under Content management from the left pane.
 
-      ![](../Media/lab6-7.png)  
+1. Search for **Syslog (3)** and select it. Once selected, click on **Install (4)**.
+
+      ![](../Media/ch-4.6.png)  
 
 1. Click on **Data connectors (1)** present under Configuration in the left pane. Select **Syslog via Legacy Agent (2)** connector from the list.
 
@@ -100,31 +107,31 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 1. Select the **Open connector page (3)** on the connector information blade.
 
-      ![](../Media/lab6-8.png)  
+      ![](../Media/ch-4.7.png)  
 
-1. Under **Configuration**, open the **Install agent on a non-Azure Linux Machine** section. Select the link for **Download & install agent for non-Azure Linux machine**. 
+1. Under **Configuration**, open the **Install agent on a non-Azure Linux Machine (1)** section. Select the link for **Download & install agent for non-Azure Linux machine (2)**. 
 
-      ![](../Media/lab6-9.png)  
+      ![](../Media/ch-4.8.png)  
 
     >**Note:** Your Log Analytics workspace should show **2 Windows computers connected**. This corresponds to WIN2 and AZWIN01 virtual machines connected earlier.
 
-1. Select the tab for **Linux servers**.
+1. Select the tab for **Linux servers (1)**.
 
     >**Note:** Your Log Analytics workspace should show **1 Linux computers connected**. This corresponds to the LIN1 (ubuntu1) virtual machine connected earlier with the CEF connector.
 
-1. Select **Log Analytics agent instructions**. Copy the command in the **Download and onboard agent for Linux** area to the clipboard and paste it into the notepad.
+1. Select **Log Analytics agent instructions**. Copy the command in the **Download and onboard agent for Linux (2)** area to the clipboard and paste it into the notepad.
 
-      ![](../Media/lab6-10.png)  
+      ![](../Media/ch-4.9.png)  
    
 1. Click on **LIN2** Linux virtual machine.
 
-      ![](../Media/lab6-11.png)  
+      ![](../Media/ch-5.0.png)  
 
 1. Click on **Connect (1)** from the left navigation pane, scroll down and click on **Select (2)** under the Native SSH.
 
 1. In the Native SSH pop-up window, **copy (3)** the command which is added under Copy and execute SSH command and paste it in a notepad.
 
-      ![](../Media/lab6-12.png)  
+      ![](../Media/ch-5.1.png)  
 
 1. Navigate back to the **WIN1** virtual machine.
 
@@ -134,7 +141,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
    
 1. Enter **yes** to confirm the connection and then type the user's **password provided under Resource group: LIN2** in the Environment tab and press enter. Your screen should look something like this:
 
-   ![linux login](../Media/sc-200-M6-Ex3.png)
+   ![linux login](../Media/ch-5.2.png)
 
 1. Paste the **Download and onboard agent for Linux** from the earlier step. 
 
@@ -148,11 +155,13 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 In this task, you will configure the Syslog collection facilities.
 
-1. In the Search bar of the Azure portal, type **Sentinel**, then select **Microsoft Sentinel**.
+1. In the Search bar of the Azure portal, type **Sentinel (1)**, then select **Microsoft Sentinel (2)**.
+
+      ![](../Media/ch-4.3.png) 
 
 1. Click on the **uniquenameDefender (1)** workspace. Click on **Settings (2)** and select **Workspace Settings (3)**.
 
-      ![](../Media/lab6-13.png) 
+      ![](../Media/ch-5.3.png) 
 
 1. From the left menu, select **Legacy agents management (1)** under the **Classic** area.
 
@@ -162,15 +171,15 @@ In this task, you will configure the Syslog collection facilities.
 
 1. Select **auth** from the drop-down menu for **Facility name**.
 
-      ![](../Media/lab6-14.png) 
+      ![](../Media/ch-5.5.png) 
 
-1. Select the **+ Add facility** button again.
+1. Select the **+ Add facility (1)** button again.
 
-1. Select **authpriv** from the drop-down menu for **Facility name**.
+1. Select **authpriv (2)** from the drop-down menu for **Facility name**.
 
 1. Click on **Apply**.
 
-      ![](../Media/lab6-15.png)    
+      ![](../Media/ch-5.6.png)    
 
 ## Review 
 In this lab, you have completed the following:

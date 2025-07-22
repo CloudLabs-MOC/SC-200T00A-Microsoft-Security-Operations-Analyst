@@ -1,6 +1,6 @@
 # Secure Windows Servers Azure Arc & Microsoft Defender
 
-### Overall Estimated Duration: 4 hours
+### Overall Estimated Duration: 4 Hours
 
 ## Overview
 
@@ -34,13 +34,13 @@ Welcome to your Secure Windows Servers Azure Arc & Microsoft Defender Workshop! 
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
 
-   ![](../Media/GS1.png)
+   ![](../Media/GS1-upd.png)
  
 ## Exploring Your Lab Resources
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-   ![](../Media/GS2.png)
+   ![](../Media/GS2-upd.png)
  
 ## Utilizing the Split Window Feature
  
@@ -52,7 +52,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
 
-   ![](../Media/GS4-upd.png)
+   ![](../Media/ch-5.9.3.png)
 
 ## Lab Guide Zoom In/Zoom Out
  
@@ -65,8 +65,6 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 1. In the JumpVM, click on the Azure portal shortcut of the Microsoft Edge browser from the desktop.
 
    ![](../Media/lab6-103.png)
-
-1. In the Welcome to Microsoft Edge page, select **Start without your data**, and on the help for importing Google browsing data page select **Continue without this data** button and proceed to select **Confirm and start browsing** on the next page.
    
 1. On the **Sign in to Microsoft Azure** tab you will see a login screen, enter the following email/username and then click on **Next**. 
 
@@ -123,3 +121,5 @@ Learner Support Contacts:
 Now, click on **Next** from the lower right corner to move on to the next page.
 
 ### Happy Learning!!
+### Click on Next >> to procced with next Lab.
+![](../Media/ch-5.7.png) 
