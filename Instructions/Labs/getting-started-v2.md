@@ -34,13 +34,13 @@ Welcome to your Secure Windows Servers Azure Arc & Microsoft Defender Workshop! 
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
 
-   ![](../Media/GS1.png)
+   ![](../Media/GS1-upd.png)
  
 ## Exploring Your Lab Resources
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-   ![](../Media/GS2.png)
+   ![](../Media/GS2-upd.png)
  
 ## Utilizing the Split Window Feature
  
@@ -52,7 +52,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
 Feel free to **Start, Stop, or Restart** your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
 
-   ![](../Media/GS4-upd.png)
+   ![](../Media/ch-5.9.3.png)
 
 ## Lab Guide Zoom In/Zoom Out
  
@@ -120,3 +120,5 @@ Learner Support Contacts:
 Now, click on **Next** from the lower right corner to move on to the next page.
 
 ### Happy Learning!!
+### Click on Next >> to procced with next Lab.
+![](../Media/ch-5.7.png) 

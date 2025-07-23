@@ -19,17 +19,17 @@ In this task, you will deploy and configure the Azure Connected Machine agent on
     * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
     * Azure Password: <inject key="AzureAdUserPassword"></inject>
 
-1. In the **search resources, services and docs bar**, type **Azure arc** and select it from suggestions, as shown below:
+1. In the **search resources, services and docs bar (1)**, type **Azure arc** and select **Azure arc (2)** from Services, as shown below:
    
-    ![Picture 1](../Media/searchazarc.png "search azure arc")
+    ![Picture 1](../Media/ch-1.png "search azure arc")
   
 1. On the **Azure Arc** page, select **Machines (1)** under **Azure Arc Resources**, click on **+ Add/create (2)** and then **Add a Machine (3)**.
     
-    ![Picture 1](../Media/secure1.png "search azure arc")
+    ![Picture 1](../Media/ch-2.png "search azure arc")
     
 1. In the **Add servers with Azure Arc** page, click **Generate script** under **Add a single server**.
 
-    ![Picture 1](../Media/secure2.png "search azure arc")
+    ![Picture 1](../Media/ch-3.png "search azure arc")
     
 1. Under the **Basics** tab, fill in the following details:
      
@@ -37,17 +37,17 @@ In this task, you will deploy and configure the Azure Connected Machine agent on
     
    - Resource group: **SmartHotelHostRG (1)**
   
-   - Region: Select **<inject key="Region" enableCopy="false" />**
+   - Region: Select **<inject key="Region" enableCopy="false" /> (3)**
    
-   - Operating system: **Windows (3)**
+   - Operating system: **Windows (4)**
    
-   - Leave other values as default and click on **Download and run script (4)**
-
-       ![Picture 1](../Media/secure3.png "search azure arc")
+   - Leave other values as default and Click on **Download and run script (5)**
+   
+       ![Picture 1](../Media/ch-4.png "search azure arc")
 
 1. Under the **Download and run script** tab, **copy (1)** the entire script and paste it into Notepad, as it will be used in the further steps and then click on **Close (2)**.
 
-    ![Picture 1](../Media/upd-copyscript.png "copy script")
+    ![Picture 1](../Media/ch-5.png "copy script")
     
 1. Go to the **Start (1)** button in the VM, search for **Hyper-V Manager (2)** there and select it. 
 
@@ -114,3 +114,5 @@ In this task, you will deploy and configure the Azure Connected Machine agent on
 In this lab, you explored how to deploy and configure the Azure Connected Machine agent on a Windows machine hosted outside of Azure. You learnt  about creating Azure Arc-enabled servers so that they can manage the Windows machine.
 
 ### You have successfully completed the lab!
+### Click on Next >> to procced with next Lab.
+![](../Media/ch-5.8.png) 

@@ -23,7 +23,7 @@ In this lab, you will perform the following:
 
 In this task, you will create a Log Analytics workspace for use with Microsoft Defender for Cloud.
 
-1. In the Search bar of the Azure portal, type **Log Analytics**, then select **Log Analytics workspaces**.
+1. In the Search bar of the Azure portal, type **Log Analytics (1)**, then select **Log Analytics workspaces (2)**.
 
     ![Picture 1](../Media/secure6.png)
 
@@ -35,7 +35,7 @@ In this task, you will create a Log Analytics workspace for use with Microsoft D
      - Name: Provide **uniquenameDefender (2)**  
      - Region: Keep the **default (3)**
 
-          ![Picture 1](../Media/secure7.png)
+          ![Picture 1](../Media/ch-6.png)
 
 1. Once the workspace validation has passed, select **Create**. Wait for the new workspace to be provisioned.
 
@@ -45,19 +45,19 @@ In this task, you'll enable and configure Microsoft Defender for Cloud.
 
 1. In the Search bar of the Azure portal, type *Defender*, then select **Microsoft Defender for Cloud**.
 
-1. In the left menu for Microsoft Defender for Cloud, under Management, select **Environment settings (1)** and select your **Subscription (2)** by expanding the Tenant Root Group.
+1. In the left menu for Microsoft Defender for Cloud, under **Management**, select **Environment settings (1)** and select your **Subscription (2)** by expanding the Tenant Root Group.
 
-    ![Picture 1](../Media/secure8.png)
+    ![Picture 1](../Media/ch-7.png)
 
 1. Review the Azure resources that are now protected with the Defender for Cloud plans.
 
-    >**Important:** If all Defender plans are *Off*, select **Enable all plans (1)**. Select the **Turn on the plan anyways (2)** and then click on **OK**. Select **Save (4)** at the top of the page and wait for the *"Defender plans (for your) subscription were saved successfully!"* notifications to appear.
+    >**Important:** If all Defender plans are *Off*, select **Enable all plans (1)**. Select the **Turn on the plan anyways (2)** and then click on **OK**. Select **Save (3)** at the top of the page and wait for the *"Defender plans (for your) subscription were saved successfully!"* notifications to appear.
 
       ![Picture 1](../Media/secure9.png)
 
 1. Select the **Settings & monitoring** tab from the Settings area (next to Save).
 
-      ![Picture 1](../Media/secure11.png)
+      ![Picture 1](../Media/ch-8.png)
 
 1. Review the monitoring extensions. It includes configurations for Virtual Machines, Containers and Storage Accounts. Close the "Settings & monitoring" page by selecting the 'X' on the upper right of the page.
 
@@ -65,7 +65,7 @@ In this task, you'll enable and configure Microsoft Defender for Cloud.
 
 1. Select the '>' to the left of your **subscription (2)** and select the **uniquenameDefender (3)** Log Analytics workspace you created earlier to review the available options and pricing.
 
-      ![Picture 1](../Media/secure12.png)
+      ![Picture 1](../Media/ch-9.png)
 
 1. Close the Defender plans page by selecting the 'X' on the upper right of the page to go back to the **Environment settings**
 
@@ -75,17 +75,22 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 >**Important:** The next steps are done on a different machine than the one you were previously working on. Look for the Virtual Machine name references.
 
-1. In the Search bar of the Azure portal, search for **Virtual Machines** and select it.
+1. In the Search bar of the Azure portal, search for **Virtual Machines (1)** and select **Virtual Machines (2)** from the Services.
 
-1. Select the **WIN1** VM.
+      ![Picture 1](../Media/ch-1.0.png)
+
+1. Click on **Virtual machines** on Compute infrastructure page, Select the **WIN1 (2)** VM.
+
+      ![Picture 1](../Media/ch-1.2.png)
 
 1. Click on **Connect** from the Connect dropdown.
 
-      ![Picture 1](../Media/win-1-1003.png)
+      ![Picture 1](../Media/ch-1.1.png)
 
 1. Click on **Download RDP file** and select **Keep** in the pop-up. Open file when the download completes.
 
-      ![Picture 1](../Media/win-1-rdp-1003.png)
+      ![Picture 1](../Media/ch-1.3.png)
+      ![Picture 1](../Media/ch-1.3.1.png)
 
 1. Click on **Connect**.
 
@@ -126,17 +131,17 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 1. Click on **Yes** on the Stay signed in dialog box.
 
-1. In the **search resources, services and docs bar**, type **Azure arc** and select it from suggestions, as shown below:
+1. In the **search resources, services and docs bar (1)**, type **Azure arc** and select **Azure arc (2)** from Services, as shown below:
    
-    ![Picture 1](../Media/searchazarc.png "search azure arc")
+    ![Picture 1](../Media/ch-1.png "search azure arc")
   
 1. On the **Azure Arc** page, select **Machines (1)** under **Azure Arc Resources**, click on **+Add/create (2)** and then **Add a Machine (3)**.
     
-    ![Picture 1](../Media/secure1.png "search azure arc")
+    ![Picture 1](../Media/ch-2.png "search azure arc")
     
 1. In the **Add servers with Azure Arc** page, click **Generate script** under **Add a single server**.
 
-    ![Picture 1](../Media/secure2.png "search azure arc")
+    ![Picture 1](../Media/ch-3.png "search azure arc")
 
 1. Under the **Basics** tab, fill in the following details:
      
@@ -144,13 +149,13 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
     
    - Resource group: **RG-Defender (1)**
   
-   - Region: Select **EAST US**
+   - Region: Select **EAST US (2)**
    
    - Operating system: **Keep it as default**
 
    - Leave other values as default and click on **Download and run script (3)**
 
-        ![Picture 1](../Media/secure20.png)
+        ![Picture 1](../Media/ch-1.4.png)
 
 1. Scroll down and select the **Download** button.
 
@@ -202,11 +207,13 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 In this task, you will manually install the required agent on the Windows Server.
 
-1. Search **Data Collection Rules** on Azure portal search bar.
+1. Search **Data Collection Rules (1)** on azure portal search bar and select **Data Collection Rules (2)** from Services.
 
-    ![Picture 1](../Media/newdata.png)
+    ![Picture 1](../Media/ch-1.5.png)
 
-1. Select **+ Create**.
+1. Select **+ Create** on **Data collection rules** page.
+
+      ![Picture 1](../Media/ch-1.6.png)
 
 1. Provide the following details and click on **Next: Resources (3)**:
 
@@ -235,15 +242,19 @@ In this task, you will manually install the required agent on the Windows Server
 
 1. Click on **Review + Create** and select **Create** after *Validation passed* is displayed.
 
+      ![Picture 1](../Media/ch-1.7.png)
+
       > **Note:** The **Data Collection Rule** creation initiates the installation of the *AzureMonitorWindowsAgent* extension on **WINServer (Azure Arc)**.
 
-1. In the *Search resources, services and docs* search bar, search for **Azure Arc**. 
+1. In the **Search resources, services and docs** search bar, search for **Azure Arc (1)**, and select **Azure Arc (2)** from the Services. 
+
+      ![Picture 1](../Media/ch-5.9.4.png)
 
 1. Select the **WINServer** which is associated with the **RG-Defender** resource group.
 
       ![Picture 1](../Media/secure27.png)
 
-1. Select **Extensions (2)** from the left pane under Settings. The **AzureMonitorWindowsAgent (2)** should be listed with a *Status* of **Succeeded**.
+1. Select **Extensions (1)** from the left pane under Settings. The **AzureMonitorWindowsAgent (2)** should be listed with a *Status* of **Succeeded**.
 
       ![Picture 1](../Media/secure28.png)
 
@@ -257,3 +268,5 @@ In this lab, you have completed the following:
 - Protected an On-Premises Server
 
 ### You have successfully completed the lab!
+### Click on Next >> to procced with next Lab.
+![](../Media/ch-5.9.png) 
