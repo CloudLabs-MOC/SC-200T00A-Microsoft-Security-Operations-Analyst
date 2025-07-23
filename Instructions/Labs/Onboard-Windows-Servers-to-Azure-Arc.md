@@ -10,11 +10,11 @@ Azure Arc allows you to manage your hybrid IT estate with a single pane of glass
 
 - Task 1: Onboard On-prem servers to Azure Arc-enabled server
 
-### Task 1: Onboard On-prem servers to Azure Arc-enabled server
+## Task 1: Onboard On-prem servers to Azure Arc-enabled server
 
-In this exercise, you will deploy and configure the Azure Connected Machine agent on a Windows machine hosted outside of Azure, to ensure that it can be managed through Azure Arc-enabled servers.
+In this task, you will deploy and configure the Azure Connected Machine agent on a Windows machine hosted outside of Azure, to ensure that it can be managed through Azure Arc-enabled servers.
 
-1. If you are not logged in already, click on the Azure portal shortcut that is available on the desktop and log in with below Azure credentials.
+1. If you are not logged in already, click on the Azure portal shortcut that is available on the desktop and log in with the Azure credentials below.
 
     * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
     * Azure Password: <inject key="AzureAdUserPassword"></inject>
@@ -23,7 +23,7 @@ In this exercise, you will deploy and configure the Azure Connected Machine agen
    
     ![Picture 1](../Media/ch-1.png "search azure arc")
   
-1. On the **Azure Arc** page, select **Machines (1)** under **Azure Arc Resources**, click on **+Add/create (2)** and then **Add a Machine (3)**.
+1. On the **Azure Arc** page, select **Machines (1)** under **Azure Arc Resources**, click on **+ Add/create (2)** and then **Add a Machine (3)**.
     
     ![Picture 1](../Media/ch-2.png "search azure arc")
     
@@ -42,10 +42,10 @@ In this exercise, you will deploy and configure the Azure Connected Machine agen
    - Operating system: **Windows (4)**
    
    - Leave other values as default and Click on **Download and run script (5)**
-
+   
        ![Picture 1](../Media/ch-4.png "search azure arc")
 
-1. Under the **Download and run script** tab, **copy (1)** the entire script and paste it into a notepad as it will be used in the further steps and then click on **Close (2)**.
+1. Under the **Download and run script** tab, **copy (1)** the entire script and paste it into Notepad, as it will be used in the further steps and then click on **Close (2)**.
 
     ![Picture 1](../Media/ch-5.png "copy script")
     
@@ -83,20 +83,20 @@ In this exercise, you will deploy and configure the Azure Connected Machine agen
 
    > **Note:** Type **Y** when prompted.
 
-1. Now, run the whole script that you copied in the notepad earlier in step 7.
+1. Now, run the whole script that you copied in Notepad earlier in step 7.
 
-1. After running the script, packages will be installed and then you will be directed to a pop-up browser page to log into your Azure account for authentication purposes. Use the below Azure credentials:
+1. After running the script, packages will be installed, and then you will be directed to a pop-up browser page to log into your Azure account for authentication purposes. Use the below Azure credentials:
 
     * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
     * Azure Password: <inject key="AzureAdUserPassword"></inject> 
 
-   > **Note:** Move back to the PowerShell pane and now you have connected your AzureArcVM to Azure successfully.
+   > **Note:** Move back to the PowerShell pane, and now you have connected your AzureArcVM to Azure successfully.
    
-   >**Note**: On the Welcome to Microsoft Edge page, select  **Start without your data**, on **Stay current with your browsing data** select **Confirm and continue** and on the help for importing Google browsing data page, select the  **Continue without this data**  button. Then, proceed to select  **Confirm and start browsing**  on the next page has a context menu.
+   >**Note**: On the Welcome to Microsoft Edge page, select  **Start without your data**. On **Stay current with your browsing data**, select **Confirm and continue**, and on the help for importing Google browsing data page, select the  **Continue without this data**  button. Then, proceed to select  **Confirm and start browsing**  on the next page has a context menu.
     
     ![Picture 1](../Media/upd-package.png)
      
- 1. Close the AzureArcVM, navigate to the Azure portal go back to the **Azure Arc** page, select **Machines (1)** under **Infrastructure** and now verify that a server is connected successfully **(2)**.
+ 1. Close the AzureArcVM, navigate to the Azure portal, go back to the **Azure Arc** page, select **Machines (1)** under **Infrastructure** and now verify that a server is connected successfully **(2)**.
 
     **Note:** The name of the new server added could be different. You might have to refresh to see the new server.
     

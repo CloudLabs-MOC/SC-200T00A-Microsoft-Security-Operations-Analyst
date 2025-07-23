@@ -10,11 +10,11 @@ In this hands-on lab, you will explore security operations and hybrid cloud mana
 
 By completing this lab, you will learn to:
 
-- **Onboard Windows Servers to Azure Arc**: Onboard on-premises servers to Azure Arc-enabled servers for centralized management and governance.
-- **Enable Microsoft Defender for Cloud**: Configure security monitoring and threat protection by setting up a Subscription, creating a Log Analytics Workspace, enabling Microsoft Defender for Cloud, installing Azure Arc on an on-premises server, and implementing security measures to protect it.
-- **Mitigate threats using Microsoft Defender for Cloud**: Enhance security and compliance awareness by exploring regulatory compliance, assessing security posture and recommendations, and mitigating security alerts effectively.
-- **Connect Windows devices to Microsoft Sentinel using data connectors**: Set up the Microsoft Defender XDR workspace and configure security monitoring by connecting both Azure and non-Azure Windows machines. Onboard a Windows device to Microsoft Defender for Endpoint to enhance threat protection and response.
-- **Connect Linux hosts to Microsoft Sentinel using data connectors**: Access the Microsoft Sentinel Workspace and connect a Linux host using the Common Event Format (CEF) connector. You will also connect another Linux host using the Syslog connector and configure facilities and severity levels for log collection.
+- **Onboard Windows Servers to Azure Arc:** Onboard on-premises servers to Azure Arc-enabled servers for centralized management and governance.
+- **Enable Microsoft Defender for Cloud:** Configure security monitoring and threat protection by setting up a Subscription, creating a Log Analytics Workspace, enabling Microsoft Defender for Cloud, installing Azure Arc on an on-premises server, and implementing security measures to protect it.
+- **Mitigate threats using Microsoft Defender for Cloud:** Enhance security and compliance awareness by exploring regulatory compliance, assessing security posture and recommendations, and mitigating security alerts effectively.
+- **Connect Windows devices to Microsoft Sentinel using data connectors:** Set up the Microsoft Defender XDR workspace and configure security monitoring by connecting both Azure and non-Azure Windows machines. Onboard a Windows device to Microsoft Defender for Endpoint to enhance threat protection and response.
+- **Connect Linux hosts to Microsoft Sentinel using data connectors:** Access the Microsoft Sentinel Workspace and connect a Linux host using the Common Event Format (CEF) connector. You will also connect another Linux host using the Syslog connector and configure facilities and severity levels for log collection.
 
 ## Prerequisites
 
@@ -50,7 +50,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
 
 ## Managing Your Virtual Machine
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **Start, Stop, or Restart** your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
 
    ![](../Media/ch-5.9.3.png)
 
@@ -62,19 +62,19 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 ## Login to Azure Portal
 
-1. In the JumpVM, click on the Azure portal shortcut of the Microsoft Edge browser from the desktop.
+1. In the JumpVM, click on the **Azure portal** shortcut of the Microsoft Edge browser from the desktop.
 
    ![](../Media/lab6-103.png)
    
-1. On the **Sign in to Microsoft Azure** tab you will see a login screen, enter the following email/username and then click on **Next**. 
+1. On the **Sign in to Microsoft Azure** tab, you will see a login screen. Enter the following email/username and then click on **Next**. 
 
-   **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
    
      ![](../Media/sc900-image-1.png)
      
 1. Now enter the following password and click on **Sign in**.
    
-   **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
    
      ![](../Media/sc900-image-2.png)
 
@@ -84,7 +84,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
  
    >**NOTE:** Do not enable MFA, select **Ask Later**.
      
-1. If prompted to **stay signed in**, you can click **"No"**.
+1. If prompted to **Stay signed in**, you can click **No**.
  
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
 
@@ -106,9 +106,8 @@ On the "Keep your account secure" page, select Next twice.
 1. On your phone, enter the number shown on your computer screen in the Authenticator app and select Next.
 
 1. If prompted to stay signed in, you can click "No."
-If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
-
-1. Please review the **Note** sections in the lab guide for enhanced comprehension and improved lab performance.
+ 
+1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Cancel" to skip the tour.
 
 ## Support Contact
  
