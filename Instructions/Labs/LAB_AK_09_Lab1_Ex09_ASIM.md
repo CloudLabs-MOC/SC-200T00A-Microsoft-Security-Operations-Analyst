@@ -1,4 +1,4 @@
-# Module 9 - Lab 1 - Exercise 9 - Deploy ASIM parsers
+# Lab 09 - Exercise 9 - Deploy ASIM parsers
 
 ## Lab Scenario
 

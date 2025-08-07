@@ -1,4 +1,4 @@
-# Module 9 - Lab 1 - Exercise 7 - Create Detections
+# Lab 09 - Exercise 7 - Create Detections
 
 ## Lab Scenario
 
