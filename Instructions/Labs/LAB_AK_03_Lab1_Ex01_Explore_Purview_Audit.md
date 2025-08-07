@@ -1,4 +1,4 @@
-# Module 3 - Lab 1 - Exercise 1 - Explore Microsoft Purview Audit logs
+# Lab 03 - Exercise 1 - Explore Microsoft Purview Audit logs
 
 ## Lab Scenario
 
