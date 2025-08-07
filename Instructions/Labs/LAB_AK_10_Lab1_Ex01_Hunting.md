@@ -1,4 +1,4 @@
-# Lab 10 - Exercise 1 - Perform Threat Hunting in Microsoft Sentinel
+# Lab 10 - Exercise 1: Perform Threat Hunting in Microsoft Sentinel
 
 ## Lab Scenario
 

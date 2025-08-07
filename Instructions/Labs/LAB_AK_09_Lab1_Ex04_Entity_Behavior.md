@@ -1,4 +1,4 @@
-# Lab 09 - Exercise 4 - Explore Entity Behavior Analytics
+# Lab 09 - Exercise 4: Explore Entity Behavior Analytics
 
 ## Lab Scenario
 

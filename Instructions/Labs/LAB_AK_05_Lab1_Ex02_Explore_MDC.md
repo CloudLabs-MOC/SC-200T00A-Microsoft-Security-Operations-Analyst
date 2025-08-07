@@ -1,4 +1,4 @@
-# Lab 05 - Exercise 2 - Mitigate threats using Microsoft Defender for Cloud
+# Lab 05 - Exercise 2: Mitigate threats using Microsoft Defender for Cloud
 
 ## Lab Scenario
 

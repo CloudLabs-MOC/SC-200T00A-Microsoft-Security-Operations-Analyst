@@ -1,4 +1,4 @@
-# Lab 04 - Exercise 1 - Deploy Microsoft Defender for Endpoint
+# Lab 04 Exercise 1: Deploy Microsoft Defender for Endpoint
 
 ## Lab Scenario
 

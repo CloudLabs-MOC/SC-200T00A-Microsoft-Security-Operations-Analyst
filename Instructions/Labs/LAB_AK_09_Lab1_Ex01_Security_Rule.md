@@ -1,4 +1,4 @@
-# Lab 09 - Exercise 1 - Modify a Microsoft Security rule
+# Lab 09 - Exercise 1: Modify a Microsoft Security rule
 
 ## Lab Scenario
 
