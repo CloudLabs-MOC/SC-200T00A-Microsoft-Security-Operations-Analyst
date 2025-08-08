@@ -17,11 +17,6 @@ You plan on using the Microsoft Sentinel data connectors to integrate the log da
 - Task 4: Connect the Microsoft Defender for Cloud connector
 - Task 5: Connect the Azure Activity connector
 
-
-## Architecture Diagram
-
-  ![Picture 1](./images/SC200-Lab_Diagrams_Mod6_L1_Ex1.png)
-
 ### Task 1: Access the Microsoft Sentinel Workspace
 
  In this task, you will create a Log Analytics workspace for use with Microsoft Defender for Cloud and you will access your Microsoft Sentinel workspace.  

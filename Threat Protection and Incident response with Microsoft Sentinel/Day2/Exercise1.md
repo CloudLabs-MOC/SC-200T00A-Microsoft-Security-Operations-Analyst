@@ -15,8 +15,6 @@ An incident can include multiple alerts. It is an aggregation of all the relevan
 - Task 1: Create and export an analytical rule
 - Task 2: Investigate an incident
 
-## Architecture Diagram
-
 
 ### Task 1: Create and export an analytical rule
 
@@ -124,6 +122,10 @@ In this task, you will investigate an incident.
 
 1. In the *Select classification* drop-down review the different options. After that, select **True positive - suspicious activity** and then select **Apply**.
 
-## Review
+## Summary
 In this lab, you have completed the following:
 - You have investigated an incident.
+
+### Now, click on **Next** from the lower right corner to move on to the next page.
+
+   ![](./images/Next.png)

@@ -12,7 +12,7 @@
 - Task 2: Create a Threat Indicator
 
 
-### Task 1: Connect the Threat Intelligence connector from content hub
+### Task 1: Connect the Threat Intelligence connector
 
 1. In the Azure portal search bar, type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
@@ -93,6 +93,14 @@ In this task, you will create an indicator in Microsoft Sentinel.
     | project DomainName
     ```
    ![](./images/Ex3-03.png)
+
+### Summary
+In this lab, 
+
+### Now, click on **Next** from the lower right corner to move on to the next page.
+
+   ![](./images/Next.png)
+
 
 
 
