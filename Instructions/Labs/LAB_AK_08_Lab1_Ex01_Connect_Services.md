@@ -1,4 +1,4 @@
-# Module 8 - Lab 1 - Exercise 1 - Connect data to Microsoft Sentinel using data connectors
+# Lab 08 - Exercise 1: Connect data to Microsoft Sentinel using data connectors
 
 ## Lab Scenario
 

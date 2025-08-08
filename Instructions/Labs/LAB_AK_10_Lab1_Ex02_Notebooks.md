@@ -1,4 +1,4 @@
-# Module 10 - Lab 1 - Exercise 2 - Threat Hunting using Notebooks with Microsoft Sentinel
+# Lab 10 - Exercise 2: Threat Hunting using Notebooks with Microsoft Sentinel
 
 ## Lab Scenario
 You are a Security Operations Analyst working at a company that implemented Sentinel. You need to explore the benefits of threat hunting with Microsoft Sentinel Notebooks.

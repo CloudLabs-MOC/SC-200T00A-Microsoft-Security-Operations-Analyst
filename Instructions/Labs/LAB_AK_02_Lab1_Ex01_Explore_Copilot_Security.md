@@ -1,4 +1,4 @@
-# Module 2 - Lab 1 - Exercise 1 - Explore Microsoft Security Copilot
+# Lab 02: Explore Microsoft Security Copilot
 
 ## Lab Scenario
 

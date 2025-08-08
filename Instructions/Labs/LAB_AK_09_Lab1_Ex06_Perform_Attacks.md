@@ -1,4 +1,4 @@
-# Module 9 - Lab 1 - Exercise 6 - Conduct attacks
+# Lab 09 - Exercise 6: Conduct attacks
 
 ## Lab Scenario
 

@@ -1,5 +1,5 @@
 
-# Module 4 - Lab 1 - Exercise 2 - Mitigate Attacks with Microsoft Defender for Endpoint
+# Lab 04 - Exercise 2: Mitigate Attacks with Microsoft Defender for Endpoint
 
 ## Lab Scenario
 
