@@ -75,6 +75,8 @@ The architecture for this lab involves the following key components:
 ## Getting Started with Lab
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
+![Image](./images/GettingStarted-00.png)
+
 ## Lab Guide Zoom In/Zoom Out
 
 To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
@@ -102,6 +104,8 @@ Feel free to **start, restart, or stop (2)** your virtual machine as needed from
 ## Let's Get Started with Azure Portal
  
 1. On your virtual machine, click on the **Azure Portal** icon.
+
+   ![Image](./images/GettingStarted-09.png)
 
 1. On the **Sign in to Microsoft Azure** tab you will see the login screen, in that enter the following email/username, and click on **Next (2)**. 
 
