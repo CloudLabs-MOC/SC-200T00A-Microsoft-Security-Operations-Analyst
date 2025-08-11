@@ -32,17 +32,17 @@ In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
 
     ![](./images/Ex4-12.png)
 
-1. On the *Settings* tab under *Entity behaviour analytics*, scroll down the **Anomalies** section and verify read through the paragraph, and verify that the *switch* is **On (1)**.
+1. On the *Settings* tab under *Entity behaviour analytics*, scroll down the **Anomalies** section and read through the paragraph, and verify that the *switch* is **On (1)**.
 
-1. Select the **Go to analytics in oder to configure the anomalies (2)** link.
+1. Select the **Go to analytics in order to configure the anomalies (2)** link.
 
    ![](./images/Ex4-13.png)
 
 ### Task 2: Confirm and review Anomalies rules
 
-In this task, you will confirm Anomalies analytics rules are enabled.
+In this task, you will confirm that Anomalies analytics rules are enabled.
 
-1. You should be now at the **Analytics Rules** page. On **Anomalies (1)** tab, confirm **Status is Enabled (2)** for all the rules.
+1. You should now be at the **Analytics Rules** page. On **Anomalies (1)** tab, confirm **Status is Enabled (2)** for all the rules.
 
    ![](./images/Ex4-01.png)
 
@@ -74,18 +74,17 @@ In this task, you will confirm Anomalies analytics rules are enabled.
 
    ![](./images/Ex4-08.png)
 
-1. On Submit feedback page, leave all options as Default, then select **Next: Review and Create>**.
+1. On the Submit feedback page, leave all options as Default, then select **Next: Review and Create>**.
 
    ![](./images/Ex4-09.png)
 
-1. Once the validation pass,then click **Save** to update the rule.
+1. Once the validation passes, click **Save** to update the rule.
 
    ![](./images/Ex4-10.png)
     
+ 1. You can upgrade the Mode of the rule from **Flighting** to **Production** by changing the the *General* tab settings for therule and save the changes following the previous steps. The **Production** rule will become the **Flighting** rule afterwards.
 
-    >**Note:** You can upgrade the Mode of the rule from **Flighting** to **Production** by changing the the *General* tab settings for therule and save the changes following the previous steps. The **Production** rule will become the **Flighting** rule afterwards.
-
-     ![](./images/Ex4-11.png)
+    ![](./images/Ex4-11.png)
 
 ## Summary
 
@@ -93,5 +92,6 @@ In this lab, you enabled UEBA in Microsoft Sentinel to profile entities, detect 
 
 ## You have successfully completed the lab!
 
-In this hands-on lab **Threat Protection and Incident response with Microsoft Sentinel- Day 1**, you successfully deployed Microsoft Sentinel, integrated key data sources, enriched insights with threat intelligence, and applied UEBA for anomaly detection. You are now equipped to build a robust security monitoring setup, detect potential threats, and respond effectively to incidents.
+In this hands-on lab, **Threat Protection and Incident response with Microsoft Sentinel- Day 1**, you successfully deployed Microsoft Sentinel, integrated key data sources, enriched insights with threat intelligence, and applied UEBA for anomaly detection. You are now equipped to build a robust security monitoring setup, detect potential threats, and respond effectively to incidents.
+
 
