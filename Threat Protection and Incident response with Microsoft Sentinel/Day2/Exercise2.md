@@ -86,7 +86,6 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
    ![Picture](./images/Ex2-119.png)
 
-
 1. On the Hunting page, select **Microsoft Sentinel - Hunting (1)** from the list and review the number of results in the middle pane under the *Results* column.
 
 1. Select the **View Results (2)** button from the right pane. The KQL query will automatically run.
@@ -149,7 +148,6 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
    ![Picture](./images/Ex2-06.png)
 
-
 1. In General section of the Watchlist wizard, enter the following details, then select **Next: Source > (4)**.
 
     |General setting|Value|
@@ -158,8 +156,7 @@ In this task, you will create a watchlist in Microsoft Sentinel.
     |Description|**High Value Hosts (2)**|
     |Watchlist alias|**HighValueHosts (3)**|
 
-
-   ![Picture](./images/Ex2-00.png)
+    ![Picture](./images/Ex2-00.png)
 
 1. In Source section of the Watchlist wizard, add the following details, then select **Next: Review and Create > (6).**
 

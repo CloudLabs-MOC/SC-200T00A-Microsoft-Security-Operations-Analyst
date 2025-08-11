@@ -177,7 +177,7 @@ In this task, you will create and investigate an incident.
    ![Picture](./images/Ex1-11.png)
 
 ## Summary
-In this erxercise, you successfully set up Microsoft Sentinel, created and exported an analytics rule, and investigated an incident. You have gained practical experience in configuring detection rules and managing security incidents within Sentinel.
+In this exercise, you successfully set up Microsoft Sentinel, created and exported an analytics rule, and investigated an incident. You have gained practical experience in configuring detection rules and managing security incidents within Sentinel.
 
 ## You have successfully completed the exercise!
 

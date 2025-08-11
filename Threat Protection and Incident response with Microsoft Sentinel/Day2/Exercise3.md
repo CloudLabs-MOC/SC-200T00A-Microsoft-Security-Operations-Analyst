@@ -124,6 +124,8 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. Scroll down and at the bottom of the workbook select **+ Add**, then **Add query**.
 
+    ![Picture](./images/Ex3-18.png)
+
 1. Type **Heartbeat (1)** into the query box.
 
 1. Change the *Time Range* to **Last hour (2)**.
@@ -134,7 +136,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. Scroll down and select **Done Editing (5)** on the bottom menu, for the new *Editing query item: query - 3*.
 
-  ![Picture](./images/Ex3-20.png)
+    ![Picture](./images/Ex3-20.png)
 
 1. Select **Done Editing (1)** in Workbook's top command bar, then select the **Save (2)** icon.
 
