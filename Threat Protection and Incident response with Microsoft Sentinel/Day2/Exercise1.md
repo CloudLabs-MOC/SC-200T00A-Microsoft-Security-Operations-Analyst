@@ -75,7 +75,6 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
    ![Picture](./images/Ex1-00.png) 
 
-
 1. On Analytics page, in search bar under Rule template type **Suspicious Resource deployment (1)** and press enter key, then select **Suspicious Resource deployment (2)** rule from the list and click **Create rule (3)**.
 
    ![Picture](./images/Ex1-01.png)
