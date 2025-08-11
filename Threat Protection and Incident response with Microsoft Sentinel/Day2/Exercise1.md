@@ -1,6 +1,6 @@
 # Exercise 1: Analytics Rules and Incident Management
 
-## Estimated Duration: 
+## Estimated Duration: 60 Minutes
 
 ## Overview
 In this exercise, you will configure **Microsoft Sentinel** to detect and respond to security threats. You will start by creating a Log Analytics Workspace and deploying Microsoft Sentinel to it. Next, you will create and export an analytics rule to detect suspicious activities. Finally, you will generate and investigate an incident to understand Sentinel’s incident management process.
@@ -21,11 +21,11 @@ In this task, you will create a Log Analytics workspace for use with Microsoft D
 
 1. In the Search bar of the Azure portal, type **Log Analytics (1)**, then select **Log Analytics workspaces (2)**.
 
-   ![](../Day1//images/Ex1-00.png)
+   ![](../Day1/images/Ex1-00.png)
 
 1. Select **+ Create** from the command bar.
 
-   ![](../Day1//images/Ex1-01.png)
+   ![](../Day1/images/Ex1-01.png)
 
 1. To create a **log analytics workspaces**, follow these steps:
 
@@ -35,15 +35,15 @@ In this task, you will create a Log Analytics workspace for use with Microsoft D
     - Leave the **Region (4)** as default.
     - Select **Review + Create (5)**.
 
-      ![Picture 1](../Day1//images/Ex1-02.png)
+      ![Picture 1](../Day1/images/Ex1-02.png)
 
 1. Once the workspace validation has passed, select **Create**.
 
-   ![](../Day1//images/Ex1-03.png)
+   ![](../Day1/images/Ex1-03.png)
 
 1. Wait for the new workspace to be provisioned, this may take a few minutes.
    
-   ![](../Day1//images/Ex1-04.png)
+   ![](../Day1/images/Ex1-04.png)
 
 ### Task 2 : Deploy Microsoft Sentinel to a workspace
 
@@ -51,19 +51,19 @@ In this task, you will deploy Microsoft Sentinel to an existing Log Analytics wo
 
 1. In the Search bar of the Azure portal, type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
-   ![](../Day1//images/Ex1-05.png)
+   ![](../Day1/images/Ex1-05.png)
 
 1. Select **+ Create** from the command bar.
 
-   ![](../Day1//images/Ex1-06.png)
+   ![](../Day1/images/Ex1-06.png)
 
 1. Select the newly created workspace named **uniquenameSentinel (1)** and click on **Add (2)**.
   
-   ![](../Day1//images/Ex1-07.png)
+   ![](../Day1/images/Ex1-07.png)
 
 1. In the **Microsoft Sentinel free trial activated** tab, select **Ok** to activate the free trial.
 
-   ![](../Day1//images/Ex1-08.png)
+   ![](../Day1/images/Ex1-08.png)
 
 1. Now you will see the **Getting started** page for Microsoft Sentinel.
 
@@ -178,6 +178,8 @@ In this task, you will create and investigate an incident.
 
 ## Summary
 In this erxercise, you successfully set up Microsoft Sentinel, created and exported an analytics rule, and investigated an incident. You have gained practical experience in configuring detection rules and managing security incidents within Sentinel.
+
+## You have successfully completed the exercise!
 
 ### Now, click on **Next >>** from the lower right corner to move on to the next page.
 

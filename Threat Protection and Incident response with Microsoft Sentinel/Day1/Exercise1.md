@@ -1,7 +1,7 @@
 
 # Exercise 1 - Microsoft Sentinel Deployment
 
-## Estimated Duration: 20 Minutes
+## Estimated Duration: 30 Minutes
 
 ## Overview
 
@@ -77,7 +77,7 @@ In this lab, you have completed the following:
 - Created a Log Analytics Workspace
 - Deployed Microsoft Sentinel to a workspace
 
-## You have successfully completed the lab
+## You have successfully completed the exercise!
 
 ### Now, click on **Next >>** from the lower right corner to move on to the next page.
 
