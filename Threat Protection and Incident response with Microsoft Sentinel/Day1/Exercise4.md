@@ -3,16 +3,16 @@
 
 ## Estimated Duration: 20 Minutes
 
-## Lab Scenario 
+## Overview 
 
-You need to configure Microsoft Sentinel to perform Entity Behavior Analytics to discover anomalies and provide entity analytic pages.
+In this lab, you will configure Microsoft Sentinel to perform Entity Behavior Analytics to discover anomalies and provide entity analytics pages. By enabling UEBA, Sentinel will profile users, hosts, and service accounts, analyze behavioral patterns, and surface unusual activities for investigation. This enhances threat detection by identifying potential security issues that may not be detected by traditional alert rules.
 
 
-## Lab objectives
+## Lab Objectives
  In this lab, you will perform the following:
 
 - Task 1: Explore Entity Behavior 
-- Task 2: Confirm and review Anomalies rules
+- Task 2: Confirm and review Anomalies Rules
 
 ### Task 1: Explore Entity Behavior 
 
@@ -32,7 +32,7 @@ In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
 
     ![](./images/Ex4-12.png)
 
-1. On the *Settings* tab under *Entity behaviour analytics*, scroll down the *Anomalies* section and verify read through the paragraph, and verify that the *switch* is **On (1)**.
+1. On the *Settings* tab under *Entity behaviour analytics*, scroll down the **Anomalies** section and verify read through the paragraph, and verify that the *switch* is **On (1)**.
 
 1. Select the **Go to analytics in oder to configure the anomalies (2)** link.
 
@@ -89,6 +89,9 @@ In this task, you will confirm Anomalies analytics rules are enabled.
 
 ## Summary
 
-### Now, click on **Next** from the lower right corner to move on to the next page.
+In this lab, you enabled UEBA in Microsoft Sentinel to profile entities, detect anomalies, and enhance threat detection beyond traditional alert rules.
 
-   ![](./images/Next.png)
+## You have successfully completed the lab!
+
+In this hands-on lab **Threat Protection and Incident response with Microsoft Sentinel- Day 1**, you successfully deployed Microsoft Sentinel, integrated key data sources, enriched insights with threat intelligence, and applied UEBA for anomaly detection. You are now equipped to build a robust security monitoring setup, detect potential threats, and respond effectively to incidents.
+

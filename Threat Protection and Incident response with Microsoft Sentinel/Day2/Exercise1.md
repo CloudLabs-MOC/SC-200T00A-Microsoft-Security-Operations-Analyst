@@ -2,37 +2,113 @@
 
 ## Estimated Duration: 
 
-## Lab Scenario
-
-You already created Microsoft Security Analytics rules. The Anomalies Analytics rules are also enabled in your environment. Now is the time to investigate the Incidents created by them.
-
-An incident can include multiple alerts. It is an aggregation of all the relevant evidence for a specific investigation. The properties related to the alerts, such as severity and status, are set at the incident level. After you let Microsoft Sentinel know what kinds of threats you are looking for and how to find them, you can monitor detected threats by investigating incidents.
+## Overview
+In this exercise, you will configure **Microsoft Sentinel** to detect and respond to security threats. You will start by creating a Log Analytics Workspace and deploying Microsoft Sentinel to it. Next, you will create and export an analytics rule to detect suspicious activities. Finally, you will generate and investigate an incident to understand Sentinel’s incident management process.
 
 
-## Lab objectives
+## Lab Objectives
+
  In this lab, you will perform the following:
 
-- Task 1: Create and export an analytical rule
-- Task 2: Investigate an incident
+- Task 1: Create a Log Analytics Workspace
+- Task 2: Deploy Microsoft Sentinel to a workspace
+- Task 3: Create and export an analytical rule
+- Task 4: Create and Investigate an incident
 
+### Task 1: Create a Log Analytics Workspace
 
-### Task 1: Create and export an analytical rule
+In this task, you will create a Log Analytics workspace for use with Microsoft Defender for Cloud.
+
+1. In the Search bar of the Azure portal, type **Log Analytics (1)**, then select **Log Analytics workspaces (2)**.
+
+   ![](../Day1//images/Ex1-00.png)
+
+1. Select **+ Create** from the command bar.
+
+   ![](../Day1//images/Ex1-01.png)
+
+1. To create a **log analytics workspaces**, follow these steps:
+
+    - Leave the **Subscription (1)** as default.
+    - Select **sentinel-rg (2),** for Resource group.
+    - For the Name, enter **uniquenameSentinel (3)**.
+    - Leave the **Region (4)** as default.
+    - Select **Review + Create (5)**.
+
+      ![Picture 1](../Day1//images/Ex1-02.png)
+
+1. Once the workspace validation has passed, select **Create**.
+
+   ![](../Day1//images/Ex1-03.png)
+
+1. Wait for the new workspace to be provisioned, this may take a few minutes.
+   
+   ![](../Day1//images/Ex1-04.png)
+
+### Task 2 : Deploy Microsoft Sentinel to a workspace
+
+In this task, you will deploy Microsoft Sentinel to an existing Log Analytics workspace, enabling it to collect, detect, and respond to security threats.
+
+1. In the Search bar of the Azure portal, type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
+
+   ![](../Day1//images/Ex1-05.png)
+
+1. Select **+ Create** from the command bar.
+
+   ![](../Day1//images/Ex1-06.png)
+
+1. Select the newly created workspace named **uniquenameSentinel (1)** and click on **Add (2)**.
+  
+   ![](../Day1//images/Ex1-07.png)
+
+1. In the **Microsoft Sentinel free trial activated** tab, select **Ok** to activate the free trial.
+
+   ![](../Day1//images/Ex1-08.png)
+
+1. Now you will see the **Getting started** page for Microsoft Sentinel.
+
+### Task 3: Create and export an analytical rule
 
 In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
-1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
+1. On **Microsoft Sentinel Workspace** page, select **Analytics (1)** under the **Configuration** from the left hand menu, and you will find a **Click here to go to the Defender portal (2)** link, click on it to navigate to the **Defender portal**.
 
-1. Select your Microsoft Sentinel Workspace.
+   ![Picture](./images/Ex1-00.png) 
 
-1. Select **Analytics** under the *Configuration* area from the left blade.
 
-1. Select the **Startup RegKey** rule that you created earlier.
+1. On Analytics page, in search bar under Rule template type **Suspicious Resource deployment (1)** and press enter key, then select **Suspicious Resource deployment (2)** rule from the list and click **Create rule (3)**.
 
-1. Select the **Export** from the toolbar. **Hint:** You might need to select the ellipsis icon **(...)** to see it.
+   ![Picture](./images/Ex1-01.png)
 
-   ![Picture 1](../Media/export.png)
+1. In the Analytics Rule Wizard, review the General section, then click **Next : set rule logic>.**
+
+   >**Note:** you can click either the tab at the top, or the button at the bottom to continue.
+
+   ![Picture](./images/Ex1-02.png)
+
+6. On the **Set rule logic** screen, you have the ability to create or modify the KQL query, control entity mapping, enable and adjust alert grouping, and define the scheduling and lookback time range, then **Next : Incident settings>**.
+
+	  ![Picture](./images/Ex1-03.png)
+
+7. On the **Incident settings** tab, note that **Incident creation** is **Enabled (1)**, and **Alert grouping** is **Disabled (2)**. Not every Alert detected by Sentinel must be promoted into an Incident - particularly noisy alerts! These settings can always be modified later if desired, then click **Next :Automated response>**.
+   
+	![Picture](./images/Ex1-04.png)
+
+1. On Automated response section, keep everything as default and click on **Review and Create**.
+
+9. On the *Review and create* tab, review the rule configuration, and then click **Save** to deploy your new rule to the Active rule set.
+
+1. Select the **Suspicious Resource deployment (1)** rule that you created.
+
+1. Select the **Export (2)** from the toolbar.
+
+   >**Note:** You might need to select the ellipsis icon **(...)** to see it.
+
+   ![Picture](./images/Ex1-05.png)
 
 1. The rule is exported to a text file named *Azure_Sentinel_analytic_rule.json*.
+
+   ![Picture](./images/Ex1-06.png)
 
 1. Select **Open file** below the name of the downloaded file and then select **More apps**.
 
@@ -40,92 +116,69 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
 1. Review the Azure Resource Manager template and the close it when done.
 
-### Task 2: Investigate an Incident
+### Task 4: Create and Investigate an Incident
 
-In this task, you will investigate an incident.
+In this task, you will create and investigate an incident.
 
-1. Select your Microsoft Sentinel Workspace you created earlier.
+1. in defender portal, navigate **Advanced Hunting (3)** by expanding **Hunting (2)** under **Investigation & response (1)**, enter the below given **query (4)** and click on **Run Query ()5**.
 
-1. Select the **Incidents** page.
+   ```KQL
+    let lookback = 1d;
+    Heartbeat
+    | where TimeGenerated >= ago(lookback)
+    | summarize LastSeen = max(TimeGenerated) by Computer, RemoteIPCountry, OSType, OSMajorVersion
+    | extend HoursSinceLastSeen = datetime_diff('hour', now(), LastSeen)
+    | project Computer, OSType, OSMajorVersion, RemoteIPCountry, LastSeen, HoursSinceLastSeen
+    | order by HoursSinceLastSeen desc
+    ```
+1. Select the **result (6)** shown and click on **Link to incident (7)**.
+    ![Picture](./images/Ex1-07.png)
 
-1. Review the list of incidents.
+1. On Link incident page, for Alert details, enter the following details:
 
-    >**Note:** The Analytics rules are generating alerts and incidents on the same specific log entry. Remember that this was done in the *Query scheduling* configuration to generate more alerts and incidents to be utilized in the lab.
-  
-1. Select one of the **Startup RegKey** incidents.
+   - **Connect a new incident (1)** should be check.
+   - Alert title: **Hunting Query incident (2)**.
+   - Severity: Select **Low (3)** from the drop down menu.
+   - Category: Select **Command and Control (4)** from the drop down menu.
+   - Description: Provide **Creating an incident form hunting query**.
+   - Then click on **Next (7)**.
 
-1. Review the incident details on the right blade that opened. Scroll down and select the **View full details** button.
+      ![Picture](./images/Ex1-08.png)
 
-1. If the "New incident experience" pop-up appears, follow the prompts by reading the information by selecting the **Next** button.
+1. On Entity mapping page, enter the following details:
 
-1. On the left blade of the incident, change the Status to **Active** and then select **Apply**.
+    - Click on **+ Add entity (1)**.
+    - Entity: Select **Devices(2)** form the dropdown menu.
+    - Identifier: Select **HostName (3)** from the dropdown menu.
+    - Colum: Select **Computer (4)** from the dropdown menu. 
 
-   ![Lab overview.](../Media/active.png)
+    - under Related Evidences, Click on **+ Add entity (5)**.
+    - Entity: Select **URL (6)** form the dropdown menu.
+    - Identifier: Select **URL (7)** from the dropdown menu.
+    - Colum: Select **Computer (8)** from the dropdown menu. 
+    - Click on **+ Add entity (5)** again to add another entity.
+    - Entity: Select **IP (9)** form the dropdown menu.
+    - Identifier: Select **Address (10)** from the dropdown menu.
+    - Colum: Select **RemoteIPCountry (11)** from the dropdown menu.
+    - Then click on **Next (12)**.
 
-1. Scroll down to the *Tags* area, select **+ (1)** and type **RegKey (2)** and select **OK (3)**.
+      ![Picture](./images/Ex1-9.png)
 
-    ![Picture 1](../Media/tag.png)
+1. On summary page, click on **Submit.**
 
-1. Scroll down and in the *Write a comment...* box type: *I will research this* and select the **>** icon to submit the new comment.
+    ![Picture](./images/Ex1-10.png)
 
-    ![Lab overview.](../Media/comment.png)
+1. Navigate to the **Incident** page under **Investigation & response** , clcick on the newly create incident **Hunting Query incident (2)**. 
 
-1. Hide the left blade by selecting the **<<** icon next to the owner.
+   ![Picture](./images/Ex1-13.png)
 
-1. Review the **Incident timeline** window. For the *Startup RegKey* alert, select the ellipsis **(...) (1)** icon and then **Run playbook (2)**. You will see the *PostMessageTeams-OnAlert* playbook. This option helps you to run playbooks manually.
+1. On **Hunting Query inciden** page, you will se the incident graph.
 
-    ![Lab overview.](../Media/runplaybook.png)
-
-1. Close the *Alert playbooks* blade by selecting the **x** icon in the top right.
-
-1. Review the **Entities** window. At least the *Host* entity that we mapped within the KQL query from the previous exercise should appear. **Hint:** If no entities are shown, refresh the page.
-
-1. Select the **Tasks (Preview)** button from the command bar.
-
-1. Select **+ Add task**, type **Review who owns the machine** in the Title box and select **Save**.
-
-1. Close the *Incident tasks (Preview)* blade by selecting the **x** icon in the top right.
-
-1. Select the new **Activity Log** button from the command bar.
-
-1. Review the actions you have taken during this exercise.
-
-1. Close the *Incident activity log* blade by selecting the **x** icon in the top right.
-
-1. From the almost hidden left blade, select the user icon named **Unassigned (1)**. The new incident experience allows quick changes from here.
-
-1. Select **Assign to me (2)** and then scroll down to select **Apply (3)** to save the changes.
-
-   ![Lab overview.](../Media/assignedtome.png)
-
-1. Expand the left blade by selecting the **>>** icon. and then select the **Investigate** button.
-
-      ![Lab overview.](../Media/clickinvestiagtion.png)
-
-1. **Hover** the WINServer entity icon and wait for new *exploration queries* to be shown. It looks like *Related Alerts* has more data on it. Select the name of the exploration query **Related Alerts** to bring them to the investigation graph or select **Events >** to investigate them with a KQL query.
-
-   ![Lab overview.](../Media/investigation.png) 
-
-   >**Hint:** If the icons are too small for your screen, select **(+)** to magnify them.   
-
-1. Close the query window by selecting the **X** icon at the top right to go back to the *Investigation* page.
-
-1. Now select the **WINServer** entity, a window on the right opens for more detailed information. Review the **Info** page.
-
-1. Select **Timeline** button. Hover the incidents and see which things on the graph occurred at what point in time.
-
-1. Select **Entities** button and review the *Entities* and *Alerts* related to *WINServer*.
-
-1. Close the investigation graph by selecting the **X** icon at the top right of the page.
-
-1. Back in the incident page, in the left pane select **Active Status** and select **Closed**. 
-
-1. In the *Select classification* drop-down review the different options. After that, select **True positive - suspicious activity** and then select **Apply**.
+   ![Picture](./images/Ex1-11.png)
 
 ## Summary
-In this lab, you have completed the following:
-- You have investigated an incident.
+In this erxercise, you successfully set up Microsoft Sentinel, created and exported an analytics rule, and investigated an incident. You have gained practical experience in configuring detection rules and managing security incidents within Sentinel.
 
-### Now, click on **Next** from the lower right corner to move on to the next page.
+### Now, click on **Next >>** from the lower right corner to move on to the next page.
 
    ![](./images/Next.png)

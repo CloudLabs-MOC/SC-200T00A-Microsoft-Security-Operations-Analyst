@@ -1,11 +1,13 @@
 
-# Exercise 1 - Microsoft Sentinal Deployment
+# Exercise 1 - Microsoft Sentinel Deployment
 
-## Estimated Duration: 60 Minutes
+## Estimated Duration: 20 Minutes
 
-## Lab Scenario
+## Overview
 
+In this exercise, you will set up the foundational components required for Microsoft Sentinel. First, you will create a Log Analytics Workspace, it is a central repository where your security data will be collected, stored, and queried. This workspace serves as the backbone for Sentinel’s analytics and threat detection capabilities.
 
+Next, you will deploy Microsoft Sentinel to the newly created workspace. Deploying Sentinel integrates advanced security analytics, threat intelligence, and incident response features into your environment. By completing this exercise, you will establish the core infrastructure that enables you to monitor security events, detect potential threats, and investigate incidents in subsequent exercises.
 
 
 ## Lab Objectives
@@ -60,9 +62,13 @@ In this task, you will deploy Microsoft Sentinel to an existing Log Analytics wo
   
    ![](./images/Ex1-07.png)
 
-1. In the **Microsoft Sentinel free trial activated** tab, select **Ok**.
+1. In the **Microsoft Sentinel free trial activated** tab, select **Ok** to activate the free trial.
 
    ![](./images/Ex1-08.png)
+
+1. Now you will see the **Getting started** page for Microsoft Sentinel.
+
+    ![](./images/Ex1-10.png)    
 
 
 ## Summary
@@ -73,6 +79,6 @@ In this lab, you have completed the following:
 
 ## You have successfully completed the lab
 
-### Now, click on **Next** from the lower right corner to move on to the next page.
+### Now, click on **Next >>** from the lower right corner to move on to the next page.
 
    ![](./images/Next.png)

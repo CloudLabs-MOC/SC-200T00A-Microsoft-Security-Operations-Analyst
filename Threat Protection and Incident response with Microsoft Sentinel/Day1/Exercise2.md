@@ -2,11 +2,10 @@
 
 ## Estimated Duration: 40 Minutes
 
-## Lab Scenario
+## Overview
 
-You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The organization has data from Microsoft 365, Microsoft 365 Defender, Azure resources, non-azure virtual machines, and network appliances.
+In this lab, you will enable and configure data connectors in Microsoft Sentinel to ingest logs and events from selected sources such as Microsoft Entra ID. You will explore available connectors, set up the integration, and verify that data is flowing into your Log Analytics workspace. This process establishes the data foundation required for analytics, threat hunting, and incident response in subsequent exercises.
 
-You plan on using the Microsoft Sentinel data connectors to integrate the log data from various sources. You need to write a connector plan for management that maps each of the organization's data sources to the proper Microsoft Sentinel data connector.
 
 ## Lab Objectives
  In this lab, you will perform the following:
@@ -99,12 +98,6 @@ In this task, you will connect the Microsoft Entra ID Protection connector to Mi
 
    ![Picture 1](./images/Ex2-13.png)
 
- > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    - If you receive a success message, you can proceed to the next task.
-    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
- 
- <validation step="15254bc0-c312-424f-aa2c-9e30d0101a0d" />
 
 ### Task 4: Connect the Microsoft Defender for Cloud connector
 
@@ -141,7 +134,7 @@ In this task, you will connect the Azure Activity connector.
 
    ![Picture](./images/Ex2-05.png)
 
-1. On **Content hub** page, select the ****Azure Activity (1)** Data connector, and select the **Open connector page (2)** on the connector information blade.
+1. On **Content hub** page, select the **Azure Activity (1)** Data connector, and select the **Open connector page (2)** on the connector information blade.
 
    ![Picture](./images/Ex2-06.png)
 
@@ -170,7 +163,7 @@ In this task, you will connect the Azure Activity connector.
 ### Summary
 In this lab, you have integrated log data from various data sources within the organization into Microsoft Sentinel using appropriate data connectors.
 
-### Now, click on **Next** from the lower right corner to move on to the next page.
+### Now, click on **Next >>** from the lower right corner to move on to the next page.
 
    ![](./images/Next.png)
 

@@ -2,14 +2,16 @@
 
 ## Estimated Duration: 
 
-## Lab Scenario
+## Overview
+
+In this exercise, you will learn how to use Microsoft Sentinel’s repository integration for managing and version-controlling security content. You will begin by exporting an analytical rule, then set up an Azure DevOps environment to store and manage your exported content. Finally, you will connect Microsoft Sentinel to your Azure DevOps repository, enabling centralized management, collaboration, and automated deployment of security rules.
 
 
+## Lab Objectives
 
-## Lab objectives
  In this lab, you will perform the following:
 
-- Task 1: Export an analytical rule 
+- Task 1: Export an Analytical Rule 
 - Task 2: Create our Azure DevOps environment
 - Task 3: Connect Sentinel to Azure DevOps
 
@@ -27,7 +29,7 @@
 
    ![Picture 1](./images/Ex4-00.png)
 
-1. On the **Defender portal**, navigate to **Analytics (1)** under the **Configuration** from the left hand menu,  elect the **Suspicious Resource deployment (2)** rule that you created earlier, then select the **Export (3)** from the toolbar. 
+1. On the **Defender portal**, navigate to **Analytics (1)** under the **Configuration** from the left hand menu, select the **Suspicious Resource deployment (2)** rule that you created earlier, then select the **Export (3)** from the toolbar. 
 
    >**Note:** You might need to select the ellipsis icon **(...)** to see it.
 
@@ -99,7 +101,13 @@ In this task, you will create an Azure DevOps repository.
 
 ### Task 3: Connect Sentinel to Azure DevOps
 
-1. Select the *Azure Portal*/*Microsoft Sentinel* tab in your browser.
+1. Navigate back to Azure portal, in search bar type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
+
+   ![](../Day1//images/Ex1-05.png)
+
+1. Select the **Microsoft Sentinel Workspace** to proceed.
+
+   ![](../Day1/images/Ex4-00.png)
 
 1. On Microsoft Sentinel workspace page, in **Overview (1)** section, you will find a **Click here to go to the Defender portal (2)** link, click on it to navigate to the **Defender portal**.
 
@@ -133,4 +141,6 @@ In this task, you will create an Azure DevOps repository.
 In this lab, you successfully exported an **analytical rule** from Microsoft Sentinel and stored it in a version-controlled **Azure DevOps** repository. You created a DevOps environment and established a connection between Sentinel and Azure DevOps to enable automated rule deployments. This integration supports DevSecOps practices, enhancing collaboration, traceability, and operational efficiency in managing security rules.
    
 ## You have successfully completed the lab!
+
+In this hands-on lab **Threat Protection and Incident response with Microsoft Sentinel- Day 2**, you have strengthened your expertise in Microsoft Sentinel’s threat detection, investigation, and automation capabilities. You worked with analytics rules, hunting queries, watchlists, advanced features, and repository integrations to create a comprehensive and proactive security monitoring environment. These skills will help you detect threats earlier, investigate incidents effectively, and streamline security operations for improved protection.
 

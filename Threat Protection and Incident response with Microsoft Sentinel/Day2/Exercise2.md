@@ -2,11 +2,11 @@
 
 ## Estimated Duration: 
 
-## Lab Scenario
+## Overview
+In this exercise, you will leverage Microsoft Sentinel’s proactive threat-hunting capabilities. You will begin by creating a hunting query to search for potential security threats in collected data. Then, you will bookmark significant query results for future reference and promote a bookmark to an incident for deeper investigation. Finally, you will create a watchlist to enrich your queries and streamline threat detection.
 
+## Lab Objectives
 
-
-## Lab objectives
  In this lab, you will perform the following:
 
 - Task 1: Create a hunting query
@@ -64,60 +64,42 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
    ![Picture](./images/Ex2-12.png)
 
-1. 
-
-1. For the *Custom query* enter the following KQL statement:
+1. On create hunting query page, enter name as **Microsoft Sentinel - Hunting**, for query add the below given query. 
 
     ```KQL
-    let lookback = 2d; 
-    SecurityEvent 
-    | where TimeGenerated >= ago(lookback) 
-    | where EventID == 4688 and Process =~ "powershell.exe"
-    | extend PwshParam = trim(@"[^/\\]*powershell(.exe)+" , CommandLine) 
-    | project TimeGenerated, Computer, SubjectUserName, PwshParam 
-    | summarize min(TimeGenerated), count() by Computer, SubjectUserName, PwshParam 
-    | order by count_ desc nulls last 
+    let lookback = 1d;
+    Heartbeat
+    | where TimeGenerated >= ago(lookback)
+    | summarize LastSeen = max(TimeGenerated) by Computer, RemoteIPCountry, OSType, OSMajorVersion
+    | extend HoursSinceLastSeen = datetime_diff('hour', now(), LastSeen)
+    | project Computer, OSType, OSMajorVersion, RemoteIPCountry, LastSeen, HoursSinceLastSeen
+    | order by HoursSinceLastSeen desc
     ```
 
-1. Scroll down and under *Entity mapping* select:
+1. Scroll down and under *Entity mapping*, click on **+ Add new Entity (3)**, then select:
 
-    - For the *Entity type* drop-down list select **Host**.
-    - For the *Identifier* drop-down list select **HostName**.
-    - For the *Value* drop-down list select **Computer**.
+    - For the *Entity type* drop-down list select **Host (4)**.
+    - For the *Identifier* drop-down list select **HostName (5)**.
+    - For the *Value* drop-down list select **Computer (6)**.
 
 1. Scroll down and under *Tactics & Techniques* select **Command and Control** and then select **Create** to create the hunting query.
 
-1. In the *"Microsoft Sentinel - Hunting"* blade, search for the query you just created in the list, *PowerShell Hunt*.
+   ![Picture](./images/Ex2-119.png)
 
-1. Select **PowerShell Hunt** from the list.
 
-1. Review the number of results in the middle pane under the *Results* column.
+1. On the Hunting page, select **Microsoft Sentinel - Hunting (1)** from the list and review the number of results in the middle pane under the *Results* column.
 
-1. Select the **View Results** button from the right pane. The KQL query will automatically run.
+1. Select the **View Results (2)** button from the right pane. The KQL query will automatically run.
+
+   ![Picture](./images/Ex2-18.png)
 
 1. Close the *Logs* window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
 
-1. Right-click the **PowerShell Hunt** query and select **Add to livestream**. **Hint:** This also can be done by sliding right and selecting the ellipsis **(...)** at the end of the row to open a context menu.
+1. Select **Microsoft Sentinel - Hunting (1)** query, click on the **ellipsis (...) (2)**, then select **+ Add to livestream (3)**.
+
+   ![Picture](./images/Ex2-17.png)
 
 1. Review that the *Status* is now *Running*. This will be running every 30 seconds in the background and you will receive a notification in the Azure Portal (bell icon) when a new result is found. 
-
-1. Select the **Bookmarks** tab in the middle pane.
-
-1. Select the bookmark you just created from the results list.
-
-1. On the right pane, scroll down and select the **Investigate** button. **Hint:** It might take a couple of minutes to show the investigation graph.
-
-1. Explore the Investigation graph just like you did a the previous module. Notice the high number of *Related alerts* for *WINServer*.
-
-1. Close the *Investigation* graph window by selecting the **X** in the top-right of the window. 
-
-1. Hide the right blade by selecting the **>>** icon and then scroll right until you see the ellipsis **(...)** icon.
-
-1. Select **Add to existing incident**. All the incidents appear in the right pane.
-
-1. Select one of the incidents and then select **Add**.
-
-1. Scroll left to notice that the *Severity* column is now populated with the incident's data.
 
 ### Task 4: Create a Watchlist
 
@@ -206,8 +188,8 @@ In this task, you will create a watchlist in Microsoft Sentinel.
     ![Picture](./images/Ex2-09.png)
 
 ### Summary
-In this lab, 
+In this exercise, you created and executed a hunting query, bookmarked important findings, escalated a bookmark to an incident, and built a watchlist. You have gained hands-on experience in using Microsoft Sentinel to proactively identify, investigate, and track potential threats. 
 
-### Now, click on **Next** from the lower right corner to move on to the next page.
+### Now, click on **Next >>** from the lower right corner to move on to the next page.
 
    ![](./images/Next.png)
