@@ -128,7 +128,6 @@ In this task, you will create an Azure DevOps repository.
   
       ![Picture](./images/Repo-11.png)
 
-
 1. Go to the **Repositories** page, select **Refresh (1)**. Wait until the last deployment status is **Failed (2)**.  
 
     ![Picture](./images/Repo-12.png)
