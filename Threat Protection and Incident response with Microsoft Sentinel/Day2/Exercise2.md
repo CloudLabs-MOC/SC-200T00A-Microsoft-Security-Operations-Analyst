@@ -1,6 +1,6 @@
 # Exercise 2: Hunting queries and Watchlists
 
-## Estimated Duration: 
+## Estimated Duration: 40 Minutes
 
 ## Overview
 In this exercise, you will leverage Microsoft Sentinel’s proactive threat-hunting capabilities. You will begin by creating a hunting query to search for potential security threats in collected data. Then, you will bookmark significant query results for future reference and promote a bookmark to an incident for deeper investigation. Finally, you will create a watchlist to enrich your queries and streamline threat detection.

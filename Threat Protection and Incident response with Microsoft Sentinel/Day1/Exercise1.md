@@ -1,7 +1,7 @@
 
 # Exercise 1 - Microsoft Sentinel Deployment
 
-## Estimated Duration: 20 Minutes
+## Estimated Duration: 30 Minutes
 
 ## Overview
 
