@@ -35,13 +35,12 @@ Participants should have:
    - Awareness of security operations workflows such as incident investigation and threat hunting.
 
 ## Architecture
-
-In this lab, you will 
+ 
 In this lab, you will use Microsoft Sentinel to detect, investigate, and respond to security threats across your environment. Data from connected sources such as Azure Active Directory, Microsoft 365 Defender, and security appliances will be ingested into Sentinel, where Analytics Rules automatically identify suspicious activities and generate incidents for investigation. You will perform proactive threat hunting using Kusto Query Language (KQL) and enrich queries with Watchlists containing sensitive asset details or known threat indicators. Advanced features such as Content Hub for packaged detections, Threat Intelligence integration for external data enrichment. Finally, you will integrate Sentinel with GitHub or Azure DevOps repositories, enabling version-controlled collaboration on analytics rules, hunting queries, and security configurations, fostering a proactive, automated, and collaborative approach to enterprise threat protection and incident response.
 
 ## Architecture Diagram
 
-![Image](./images/.png)
+![Image](./images/ArcDay2.png)
 
 ## Explanation of Components
 
@@ -76,8 +75,6 @@ The architecture for this lab involves the following key components:
 ## Getting Started with Lab
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
-![Image](./images/GettingStarted-00.png)
-
 ## Lab Guide Zoom In/Zoom Out
 
 To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
@@ -104,9 +101,7 @@ Feel free to **start, restart, or stop (2)** your virtual machine as needed from
 
 ## Let's Get Started with Azure Portal
  
-1. On your virtual machine, click on the **Azure Portal** icon as shown below:
- 
-   ![Image](./images/GettingStarted-09.png)
+1. On your virtual machine, click on the **Azure Portal** icon.
 
 1. On the **Sign in to Microsoft Azure** tab you will see the login screen, in that enter the following email/username, and click on **Next (2)**. 
 
