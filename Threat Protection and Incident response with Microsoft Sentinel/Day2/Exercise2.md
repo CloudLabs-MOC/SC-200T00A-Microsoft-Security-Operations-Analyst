@@ -20,7 +20,7 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
 1. Navigate back to Azure portal, in search bar type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
-   ![](../Day1//images/Ex1-05.png)
+   ![](../Day1/images/Ex1-05.png)
 
 1. Select the **Microsoft Sentinel Workspace** to proceed.
 
@@ -135,7 +135,7 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
 1. Navigate back to Azure portal, in search bar type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
-   ![](../Day1//images/Ex1-05.png)
+   ![](../Day1/images/Ex1-05.png)
 
 1. Select the **Microsoft Sentinel Workspace** to proceed.
 
@@ -169,7 +169,7 @@ In this task, you will create a watchlist in Microsoft Sentinel.
    - Upload file: Select **Browse for files (4)** to add *HighValue.csv* file you created.
    - SearchKey: Select **Hostname (5)** from the dropdown menu.
 
-   ![Picture](./images/Ex2-01.png)
+     ![Picture](./images/Ex2-01.png)
 
 1. Review the settings you entered and select **Create**.
 
@@ -189,6 +189,8 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
 ### Summary
 In this exercise, you created and executed a hunting query, bookmarked important findings, escalated a bookmark to an incident, and built a watchlist. You have gained hands-on experience in using Microsoft Sentinel to proactively identify, investigate, and track potential threats. 
+
+## You have successfully completed the exercise!
 
 ### Now, click on **Next >>** from the lower right corner to move on to the next page.
 

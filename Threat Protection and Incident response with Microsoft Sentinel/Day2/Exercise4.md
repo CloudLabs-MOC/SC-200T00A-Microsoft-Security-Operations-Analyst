@@ -19,7 +19,7 @@ In this exercise, you will learn how to use Microsoft Sentinel’s repository in
 
 1. In the Search bar of the Azure portal, type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
-   ![](../Day1//images/Ex1-05.png)
+   ![](../Day1/images/Ex1-05.png)
 
 1. Select the **Microsoft Sentinel Workspace** you created earlier.
 
@@ -47,7 +47,7 @@ In this exercise, you will learn how to use Microsoft Sentinel’s repository in
 
 In this task, you will create an Azure DevOps repository.
 
-1. Open another tab in the browser and navigate to (https://aexprodcus1.vsaex.visualstudio.com/me?mkt=en-US).
+1. Open another tab in the browser and navigate to (https:/aexprodcus1.vsaex.visualstudio.com/me?mkt=en-US).
 
 1. On the *We need a few more details* page, leave everything as default, then select **Continue**.
 
@@ -85,8 +85,6 @@ In this task, you will create an Azure DevOps repository.
 
 1. Select **Browse** and select the file **Azure_Sentinel_analytic_rule.json** from your *Downloads* directory and select **Commit**.
 
-   ![Picture](./images/Repo-6.png)
-
 1. Select **Azure DevOps** on the top left corner of the page.  This displays your organization and projects.
 
 1. Select **Organization settings** from the bottom left of the page.
@@ -103,7 +101,7 @@ In this task, you will create an Azure DevOps repository.
 
 1. Navigate back to Azure portal, in search bar type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
-   ![](../Day1//images/Ex1-05.png)
+   ![](../Day1/images/Ex1-05.png)
 
 1. Select the **Microsoft Sentinel Workspace** to proceed.
 

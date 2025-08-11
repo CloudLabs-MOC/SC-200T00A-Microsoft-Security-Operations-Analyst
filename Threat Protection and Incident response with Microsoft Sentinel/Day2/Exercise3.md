@@ -22,15 +22,15 @@ In this task, you will connect the Threat Intelligence data connector in Microso
 
 1. In the Azure portal search bar, type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
-   ![](../Day1//images/Ex1-05.png)
+   ![](../Day1/images/Ex1-05.png)
 
 1. Select the **Microsoft Sentinel Workspace** you created earlier.
 
-   ![](../Day1//images/Ex4-00.png)
+   ![](../Day1/images/Ex4-00.png)
 
 1. In Microsoft Sentinel, on the left menu, select the **Content hub (1)** option under Content management, and you will find a **Click here to go to the Defender portal (2)** link, click on it to navigate to the **Defender portal**.
 
-   ![](../Day1//images/Ex3-04.png)
+   ![](../Day1/images/Ex3-04.png)
 
 1. On Defender portal, Content hub page will open, in search bar type **Threat intelligence (1)**, select **Threat intelligence (2)** from the list, then click on **Install (3)**. 
 
@@ -160,13 +160,15 @@ In this task, you will create a new workbook with advanced visualizations.
 
     ![Picture](./images/Ex3-23.png)
 
-1. Now, you will see thre newly created workbook.    
+1. Now, you will see the newly created workbook.    
 
     ![Picture](./images/Ex3-24.png)
 
 
 ### Summary
 In this exercise, you connected the Threat Intelligence data connector, explored workbook templates, customized an existing template, and created a new workbook. These steps equipped you with the skills to enhance security data visualization and leverage enriched threat intelligence within Microsoft Sentinel. 
+
+## You have successfully completed the exercise!
 
 ### Now, click on **Next >>** from the lower right corner to move on to the next page.
 
