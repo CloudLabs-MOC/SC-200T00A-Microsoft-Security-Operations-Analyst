@@ -10,7 +10,7 @@ In this lab, you will perform:
 - Task 2: Apply Microsoft Defender XDR for Office 365 to present security policies
 - Task 3: Preparing the Microsoft Defender XDR workspace
     
-## Estimated Timing: 60 minutes
+## Estimated Timing: 60 Minutes
 
 ## Architecture Diagram
 
@@ -89,7 +89,7 @@ In this task, you will assign preset security policies for Exchange Online Prote
 
     >**Note:** After clicking **Manage protection settings**, the content may take **40 to 60 minutes** to load completely. Wait for the page to fully load, then revisit the same page after the waiting period. If needed, sign out of **Microsoft Defender XDR**, sign back in, and repeat the steps to continue.
 
-1. In the Apply Exchange Online Protection page, select **Specific recipients** under **Apply protection to:** and under **Domains** you can see that your **domain is selected (1)**, if not start writing your tenant's domain name, select it, and then select **Next (2)**.
+1. In the Apply Exchange Online Protection page, select **Specific recipients** under **Apply protection to:** and under **Domains** you can see that your **domain is selected (1)**. If not, start writing your tenant's domain name, select it, and then select **Next (2)**.
 
    ![Standart protection](../Media/standard-protection2-2905.png)                                                                    
   
@@ -97,7 +97,7 @@ In this task, you will assign preset security policies for Exchange Online Prote
 
 1. On the **Apply Defender for Office 365 protection** page, apply the same configuration as in the previous step and select **Next**. This configuration enforces policies for **anti-phishing, Safe Attachments, and Safe Links**.
 
-1. In the Impersonation protection page, select **Next** for next all steps i.e. (4x times) to continue.
+1. In the Impersonation protection page, select **Next** for all next steps, i.e., 4x times, to continue.
 
 1. If a popup appears for *Policy mode* page, make sure the **Turn on the policy when finished** radio button is selected, and then select **Next**.
 
@@ -107,13 +107,13 @@ In this task, you will assign preset security policies for Exchange Online Prote
 
 1. Under **Strict protection**, select **Manage protection settings**. **Hint:** *Strict protection* is found under "Email & Collaboration - Policies & rules - Threat policies - Preset security policies".
 
-   ![Standart protection](../Media/strict-protection1-2905.png) 
+   ![Standart protection](../Media/12-8-25-l1-1.1.png) 
 
    > **Note:** You might need to scroll down to find Strict protection. 
 
-1. In the *Apply Exchange Online Protection* page, select **Specific recipients** and under **Groups** start writing **Sg-IT-<inject key="DeploymentID" enableCopy="false"/>**, select it, and then select **Next**. Note that this configuration applies policies for anti-spam, outbound spam filters, anti-malware, and anti-phishing protection.
+1. In the *Apply Exchange Online Protection* page, select **Specific recipients (1)** and under **Groups** start writing **Sg-IT-<inject key="DeploymentID" enableCopy="false"/> (2)**, select it, and then select **Next (3)**. Note that this configuration applies policies for anti-spam, outbound spam filters, anti-malware, and anti-phishing protection.
 
-   ![Standart protection](../Media/strict-protection2-2905.png) 
+   ![Standart protection](../Media/12-8-25-l1-2.png) 
 
    >**Note**: If a group is already selected, ensure it is **Sg-IT-<inject key="DeploymentID" enableCopy="false"/>**. If not, remove the selected group and add the correct one.
 
@@ -127,10 +127,12 @@ In this task, you will assign preset security policies for Exchange Online Prote
 
    ![Enter Your Username](../Media/lab1y4.png)
 
-1. Read the content under *Review and confirm your changes* and select **Confirm** to apply the changes and then select **Done** to finish.
+1. Read the content under *Review and confirm your changes* and select **Confirm** to apply the changes, and then select **Done** to finish.
 
 
 ### Task 3: Preparing the Microsoft Defender XDR workspace
+
+> **Note:** If you do not see **Devices** under the **Assets** section in the **Defender portal**, it may be due to a **glitch or an issue** in the **Microsoft Defender portal**. In this case, try refreshing the page. If it still doesn’t appear, just go through the lab guide for this task.  
 
 1. At the **Microsoft Defender** portal *Home* screen, scroll down the navigation menu items to the **Assets (1)** section, and select **Devices (2)**.
 
