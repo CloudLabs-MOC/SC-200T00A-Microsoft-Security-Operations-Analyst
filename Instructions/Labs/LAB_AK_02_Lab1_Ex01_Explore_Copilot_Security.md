@@ -28,7 +28,7 @@ This task should take approximately **15** minutes to complete.
 
 In this task, you walk through the process of ensuring you have the appropriate role permissions. This starts by enabling access management for Azure resources.
 
-1. In the Search bar of the Azure portal, type **Microsoft Entra ID**, then select **Microsoft Entra ID**.
+1. In the Search bar of the Azure portal, type **Entra ID (1)**, then select **Microsoft Entra ID (2)**.
 
    ![Picture 1](../Media/entraid.png)
 
@@ -62,13 +62,13 @@ In this task, you walk through the process of ensuring you have the appropriate 
 
 1. Select **+ Select members (1)**.
 
-1. **Avery Howard** is the first name on this list, select the **+** to the right of the name.  Avery Howard (2) is now listed under selected members. Select the **Select (3)** button, then select **Next (4)**.
+1. **Avery Howard** is the first name on this list, select the **+** to the right of the name.  **Avery Howard (2)** is now listed under selected members. Select the **Select (4)** button, then select **Next (5)**.
 
    ![](../Media/lab2-2.png)
 
 1. Select **Allow user to assign all roles except privileged administrator roles, Owner, UAA, RBAC (Recommended) (1)**.
 
-1. Select **Review + assign (3)**, then select **Review + assign** one last time.
+1. Select **Review + assign (2)**, then select **Review + assign** one last time.
 
    ![](../Media/lab2-3.png)
 
@@ -83,7 +83,7 @@ In this task, you walk through the process of ensuring you have the appropriate 
    - Resource group: From the drop-down, select **RG-1 (2)**.
    - Capacity name: Enter **Mycapacity-<inject key="DeploymentID" enableCopy="false"></inject> (3)**
    - Prompt evaluation location [Geo]: From the drop-down, select **United Status (4)**.
-   - You can choose whether you want to select the option, "If this location has too much traffic, allow Copilot to evaluate prompts anywhere in the world (recommended for optimal performance) (5).
+   - You can choose whether you want to select the option, "If this location has too much traffic, allow Copilot to evaluate prompts anywhere in the world (recommended for optimal performance) **(5)**.
    - **Capacity region (6)** is set based on location selected.
 
      ![](../Media/lab2-8.png)
