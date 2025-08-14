@@ -14,7 +14,7 @@ In this lab, you will perform:
 - Task 2: Explore the Microsoft Security Copilot standalone experience
 - Task 3: Explore the Microsoft Security Copilot embedded experience
 
-## Estimated Timing: 45 minutes
+## Estimated Timing: 45 Minutes
 
 ## Architecture Diagram
 

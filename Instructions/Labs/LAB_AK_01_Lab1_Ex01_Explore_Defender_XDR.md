@@ -24,9 +24,11 @@ In this task, you will create a new group in Microsoft Entra ID using the Azure 
 
    ![Picture 1](../Media/entraid.png)
 
-1. Select **Groups** and then click on **New group**.
+1. Under **Manage** select **Groups** and then click on **New group**.
 
    ![Picture 1](../Media/grp.png)
+
+   ![Picture 1](../Media/14-8-25-l1-1.png)
 
 1. Enter the below details for the new group page:
 
@@ -37,7 +39,7 @@ In this task, you will create a new group in Microsoft Entra ID using the Azure 
 
    ![Picture 1](../Media/create-group-1.png)
 
-1. Click on **No owners selected (1)** and  select the **ODL_user <inject key="DeploymentID" enableCopy="false"/>** from the list and then click on **Select**.
+1. Click on **No owners selected** and  select the **ODL_user <inject key="DeploymentID" enableCopy="false"/>** from the list and then click on **Select**.
 
    ![Picture 1](../Media/create-group-2.png)
 
@@ -69,17 +71,21 @@ In this task, you will assign preset security policies for Exchange Online Prote
 
 1. If shown, please close the **Microsoft Defender XDR quick tour** to go ahead.
 
-1. From the navigation menu, under **Email & Collaboration** area, select **Policies & rules**.
+1. From the navigation menu, under **Email & Collaboration** area, select **Policies & rules (1)**.
 
-1. On the **Policy & rules** dashboard, select **Threat policies**.
+1. On the **Policy & rules** dashboard, select **Threat policies (2)**.
+
+   ![Picture 1](../Media/14-8-25-l1-2.png)
 
 1. On the **Threat policies** dashboard, select **Preset Security Policies**.
 
-    >**Note:** If you receive the message *"Client Error - Error when getting bip rule"* select **OK** to continue. The error is due to the hydration status of your tenant at Office 365, which is not enabled by default.
+   ![Picture 1](../Media/14-8-25-l1-3.png)
 
-    >**Note:** If you see the message *"Client Error - An error occurred when retrieving preset security policies. Please try again later."*, select **OK** to continue, then refresh your browser by pressing **Ctrl+F5**.
+    >**Note:** If you receive the message **"Client Error - Error when getting bip rule"** select **OK** to continue. The error is due to the hydration status of your tenant at Office 365, which is not enabled by default.
 
-1. On the **Learn about preset security policies** *pop-out* page, select **Cancel**.
+    >**Note:** If you see the message **"Client Error - An error occurred when retrieving preset security policies. Please try again later."**, select **OK** to continue, then refresh your browser by pressing **Ctrl+F5**.
+
+1. On the **Learn about preset security policies** **pop-out** page, select **Cancel**.
 
 1. Under **Standard protection**, select **Manage protection settings**. 
 
@@ -99,19 +105,19 @@ In this task, you will assign preset security policies for Exchange Online Prote
 
 1. In the Impersonation protection page, select **Next** for all next steps, i.e., 4x times, to continue.
 
-1. If a popup appears for *Policy mode* page, make sure the **Turn on the policy when finished** radio button is selected, and then select **Next**.
+1. If a popup appears for **Policy mode** page, make sure the **Turn on the policy when finished** radio button is selected, and then select **Next**.
 
-1. Read the content under *Review and confirm your changes* and select **Confirm** to apply the changes, and then select **Done** to finish.
+1. Read the content under **Review and confirm your changes** and select **Confirm** to apply the changes, and then select **Done** to finish.
 
    > **Note:** If you see a pop-up stating _Organizational setup in progress_, please wait for 15 minutes and try signing in again to the Defender portal. 
 
-1. Under **Strict protection**, select **Manage protection settings**. **Hint:** *Strict protection* is found under "Email & Collaboration - Policies & rules - Threat policies - Preset security policies".
+1. Under **Strict protection**, select **Manage protection settings**. **Hint:** **Strict protection** is found under "Email & Collaboration - Policies & rules - Threat policies - Preset security policies".
 
    ![Standart protection](../Media/12-8-25-l1-1.1.png) 
 
    > **Note:** You might need to scroll down to find Strict protection. 
 
-1. In the *Apply Exchange Online Protection* page, select **Specific recipients (1)** and under **Groups** start writing **Sg-IT-<inject key="DeploymentID" enableCopy="false"/> (2)**, select it, and then select **Next (3)**. Note that this configuration applies policies for anti-spam, outbound spam filters, anti-malware, and anti-phishing protection.
+1. In the **Apply Exchange Online Protection** page, select **Specific recipients (1)** and under **Groups** start writing **Sg-IT-<inject key="DeploymentID" enableCopy="false"/> (2)**, select it, and then select **Next (3)**. Note that this configuration applies policies for anti-spam, outbound spam filters, anti-malware, and anti-phishing protection.
 
    ![Standart protection](../Media/12-8-25-l1-2.png) 
 
@@ -121,26 +127,26 @@ In this task, you will assign preset security policies for Exchange Online Prote
 
    ![Enter Your Username](../Media/lab1y3.png)
 
-1. In the *Impersonation protection* page, select **Next** for next all steps i.e. (4x times) to continue.
+1. In the **Impersonation protection** page, select **Next** for next all steps i.e. (4x times) to continue.
 
-1. In the *Policy mode* page, make sure the **Turn on the policy when finished (1)** radio button is selected, and then select **Next (2)**.
+1. In the **Policy mode** page, make sure the **Turn on the policy when finished (1)** radio button is selected, and then select **Next (2)**.
 
    ![Enter Your Username](../Media/lab1y4.png)
 
-1. Read the content under *Review and confirm your changes* and select **Confirm** to apply the changes, and then select **Done** to finish.
+1. Read the content under **Review and confirm your changes** and select **Confirm** to apply the changes, and then select **Done** to finish.
 
 
 ### Task 3: Preparing the Microsoft Defender XDR workspace
 
 > **Note:** If you do not see **Devices** under the **Assets** section in the **Defender portal**, it may be due to a **glitch or an issue** in the **Microsoft Defender portal**. In this case, try refreshing the page. If it still doesn’t appear, just go through the lab guide for this task.  
 
-1. At the **Microsoft Defender** portal *Home* screen, scroll down the navigation menu items to the **Assets (1)** section, and select **Devices (2)**.
+1. At the **Microsoft Defender** portal **Home** screen, scroll down the navigation menu items to the **Assets (1)** section, and select **Devices (2)**.
 
    ![Standart protection](../Media/devices-2905.png) 
 
-1. The process to deploy the Defender XDR workspace should start, and you should see messages saying *loading and Initializing* briefly displayed at the top of the page, and then you're going to see an image of a coffee mug and a message that reads: **Hang on! We're preparing new spaces for your data and connecting them.** It takes approximately 5 minutes to finish. *Leave the page open and make sure it finishes since it's required for the next Lab.*
+1. The process to deploy the Defender XDR workspace should start, and you should see messages saying **loading and Initializing** briefly displayed at the top of the page, and then you're going to see an image of a coffee mug and a message that reads: **Hang on! We're preparing new spaces for your data and connecting them.** It takes approximately 5 minutes to finish. **Leave the page open and make sure it finishes since it's required for the next Lab.**
 
-    >**Note:** Disregard pop-up error messages saying *Some of your data cannot be retrieved*. If the message "Hang on! We're preparing new spaces for your data and connecting them" does not appear, or the "Settings > Microsoft Defender XDR > Account" page opens, but you see the message *Failed to load data storage location. Please try again later*, select "Alert service settings" from the "General" menu.
+    >**Note:** Disregard pop-up error messages saying **Some of your data cannot be retrieved**. If the message "Hang on! We're preparing new spaces for your data and connecting them" does not appear, or the "Settings > Microsoft Defender XDR > Account" page opens, but you see the message **Failed to load data storage location. Please try again later**, select "Alert service settings" from the "General" menu.
 
 1. When the new workspace initialization completes successfully, the **Home** portal page will display a **Get your SIEM and XDR in one place** banner. And, in **Settings (1)**, the Microsoft Defender XDR General settings for Account, Email notifications, **Preview Features (2)**, Alert service settings, Permissions and roles and Streaming API are now turned on.
 
