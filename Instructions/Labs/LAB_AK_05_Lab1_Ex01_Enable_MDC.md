@@ -13,7 +13,7 @@ You're a Security Operations Analyst working at a company that is implementing c
 - Task 2: Understanding the Microsoft Defender for Cloud Dashboard
 - Task 3: Install Azure Arc on an On-Premises Server
 
-### Estimated Timing: 25 minutes
+### Estimated Timing: 25 Minutes
 
 ## Architecture Diagram
 
@@ -27,7 +27,7 @@ In this task, you'll enable and configure Microsoft Defender for Cloud.
 
    ![Picture 1](../Media/lab5-8.png)
 
-1. In the left navigation menu for Microsoft Defender for Cloud, expand the *Management* section , and select **Environment settings**.
+1. In the left navigation menu for Microsoft Defender for Cloud, expand the **Management** section , and select **Environment settings**.
 
    ![Picture 1](../Media/lab5-9.png)
 
@@ -39,17 +39,17 @@ In this task, you'll enable and configure Microsoft Defender for Cloud.
 
 1. Review the Azure resources that are now protected with the Defender for Cloud plans.
 
-    >**Important:** If all Defender plans are *Off*, click **Enable all plans**. Then, select the *$200/month Microsoft Defender for APIs Plan 1* and click **Save**. Finally, click **Save** again at the top of the page and wait for the notification *"Defender plans (for your) subscription were saved successfully!"* to appear.
+    >**Important:** If all Defender plans are *Off*, click **Enable all plans**. Then, select the **$200/month Microsoft Defender for APIs Plan 1** and click **Save**. Finally, click **Save** again at the top of the page and wait for the notification **"Defender plans (for your) subscription were saved successfully!"** to appear.
 
 1. Review the **Azure resources** that are currently protected under the **Defender for Cloud plans**.
 
 1. In the **Cloud Security Posture Management (CSPM)** section, set **Defender CSPM** to **On (1)**.
 
-   ![Picture 1](../Media/lab5y1.png)
-
 1. In the **Cloud Workload Protection (CWP)** section, set **Servers Plan 2 (2)** to **On (3)**.
 
 1. Click the **Save (4)** button at the top of the page.
+
+   ![Picture 1](../Media/lab5y1.png)
 
 1. Select the **Settings & monitoring** tab from the Settings area (next to Save).
 
@@ -97,7 +97,7 @@ In this task, you will explore the Microsoft Defender for Cloud dashboard to fam
 
 1. Selecting this tile will redirect you to the **Regulatory compliance** dashboard – where you can add additional standards and explore the current ones.
 
-1. We will continue exploring *Microsoft Defender for Cloud* **Security posture** and **Regulatory compliance** in the next exercise.
+1. We will continue exploring **Microsoft Defender for Cloud** **Security posture** and **Regulatory compliance** in the next exercise.
 
 ### Task 3: Install Azure Arc on an On-Premises Server
 
@@ -105,7 +105,7 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
 >**Important:** The next steps will be performed on a different machine than the one you were previously using. Be sure to check the Virtual Machine name references. 
 
->**Important:** The *Windows Security Events via AMA* data connector requires Azure Arc for non-Azure devices. 
+>**Important:** The **Windows Security Events via AMA** data connector requires Azure Arc for non-Azure devices. 
 
 1. In the lab virtual machine, Select **WINserver** from the desktop.
 
@@ -143,7 +143,7 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
 1. In the **Add a server with Azure Arc** page, select the **RG-Defender (2)** Resource group under Project details.
  
-1. For *Region*, select **(US) East Us (3)** from the drop-down list.
+1. For **Region**, select **(US) East Us (3)** from the drop-down list.
 
    ![](../Media/l8e118.png)
 
@@ -165,7 +165,7 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
    ![](../Media/l8e1-11.png)
 
-1. Enter *Administrator* for "Username" and *Password.1!!* for "Password" if you get a UAC prompt.
+1. Enter **Administrator** for "Username" and **Password.1!!** for "Password" if you get a **UAC prompt**.
 
 1. Enter: cd C:\Users\Administrator\Downloads
 
@@ -183,7 +183,7 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
    ![](../Media/l8e124.png)
 
-   >**Important:** If you get the error **"The term .\OnboardingScript.ps1 is not recognized..."**, ensure you're following the steps for Task 4 in the WINServer virtual machine. Another issue could be that the file name changed due to multiple downloads; try searching for *".\OnboardingScript (1).ps1"* or other numbered versions in the current directory.
+   >**Important:** If you get the error **"The term .\OnboardingScript.ps1 is not recognized..."**, ensure you're following the steps for Task 4 in the WINServer virtual machine. Another issue could be that the file name changed due to multiple downloads; try searching for **".\OnboardingScript (1).ps1"** or other numbered versions in the current directory.
 
 1. Enter **R** to Run once and press enter (this may take a couple minutes).
 
@@ -197,7 +197,7 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
     ![](../Media/l8e127.png)
 
-1. Select **Refresh** until WINServer server name appears and the Status is *Connected*.
+1. Select **Refresh** until WINServer server name appears and the Status is **Connected**.
   
    ![](../Media/l8e128.png)
 

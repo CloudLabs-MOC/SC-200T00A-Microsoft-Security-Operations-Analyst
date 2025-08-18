@@ -14,7 +14,7 @@ In this lab, you will perform:
 
   ![Picture 1](../Media/archdialab3.png)
 
-### Estimated Timing: 15 minutes
+### Estimated Timing: 15 Minutes
 
 ### Task 1: Enable Purview Audit logs
 
@@ -27,19 +27,19 @@ In this task, you'll assign preset security policies for Exchange Online Protect
     - **Username: <inject key="AzureAdUserEmail"></inject>** 
     - **Password: <inject key="AzureAdUserPassword"></inject>** 
 
-1. From the navigation menu, click on **More resources (1)** and select **Open (2)** button on *Microsoft Purview portal* tile
+1. From the navigation menu, click on **More resources (1)** and select **Open (2)** button on **Microsoft Purview portal** tile
 
    ![Screenshot showing the Welcome to the new Microsoft Purview portal screen.](../Media/lab3-1.png)
 
-1. When the **Microsoft Purview portal** opens, a message about the *new Microsoft Purview portal* will appear on the screen. Select the option to agree with the **terms of data flow disclosure** and the **privacy statement**, then click **Get started**.
+1. When the **Microsoft Purview portal** opens, a message about the **Welcome to the new Microsoft Purview portal** will appear on the screen. Select the option to agree with the **terms of data flow disclosure** and the **privacy statement**, then click **Get started**.
 
     ![Screenshot showing the Welcome to the new Microsoft Purview portal screen.](../Media/lab3-2.png)
 
     >**Note:** If you see a message that _the Compliance portal is retired_, please wait for a few seconds, it will redirect you to the new portal. 
 
-1. Select **Solutions** from the left sidebar, then select **Audit**.
+1. Select **Solutions (1)** from the left sidebar, then select **Audit (2)**.
 
-   ![Screenshot showing the Start recording user and admin activity button.](../Media/lab3-3.png)
+   ![Screenshot showing the Start recording user and admin activity button.](../Media/14-8-25-l3-1.png)
 
 1. On the **Search** page, select the blue **Start recording user and admin activity** bar to enable audit logging.
 
@@ -49,7 +49,7 @@ In this task, you'll assign preset security policies for Exchange Online Protect
 
 1. Once you select this option, the **blue bar** should disappear from the page.
 
-    >**Note:** It might take 60 minutes to start recording activities.
+    >**Note:** It might take **60 minutes** to start recording activities.
 
 ### Review
  In this lab, you have completed the following:

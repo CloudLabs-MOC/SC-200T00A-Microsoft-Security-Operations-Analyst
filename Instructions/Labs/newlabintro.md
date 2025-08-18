@@ -6,13 +6,13 @@ Welcome to your SC-200: Microsoft Security Operations Analyst workshop! We've pr
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../Media/gss1.png)
+ ![Access Your VM and Lab Guide](../Media/12-8-25-g1-1.png)
 
 ## Lab Guide Zoom In/Zoom Out
 
-1. To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-   ![Manage Your Virtual Machine](../Media/gss5.png)
+ ![Manage Your Virtual Machine](../Media/12-8-25-g1-2.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -22,25 +22,25 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../Media/gss2.png)
+![Explore Lab Resources](../Media/12-8-25-g1-5.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![Use the Split Window Feature](../Media/gss3.png)
+![Use the Split Window Feature](../Media/12-8-25-g1-3.png)
  
 ## Managing Your Virtual Machine
  
 Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../Media/gss4.png)
+![Manage Your Virtual Machine](../Media/12-8-25-g1-4.png)
 
 ## **Lab Duration Extension**
 
 1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
 
-    ![Manage Your Virtual Machine](../Media/gext.png)
+    ![Manage Your Virtual Machine](../Media/12-8-25-g1-6.png)
 
     >**Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
 

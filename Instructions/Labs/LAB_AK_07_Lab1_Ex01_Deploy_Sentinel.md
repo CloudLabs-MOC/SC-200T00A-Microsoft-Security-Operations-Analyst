@@ -16,7 +16,7 @@ You're a Security Operations Analyst working at a company that is implementing M
 - Task 5: Create a Threat Indicator
 - Task 6: Configure log retention
 
-## Estimated Timing: 60 minutes
+## Estimated Timing: 60 Minutes
 
 ## Architecture Diagram
 
@@ -59,11 +59,15 @@ In this task, you will deploy Microsoft Sentinel to an existing Log Analytics wo
 
 1. Select **+ Create** from the command bar.
 
-1. Select the newly created workspace and click on **Add**.
+   ![](../Media/14-8-25-l6-1.png)
+
+1. Select the newly created **uniquenameDefender (1)** workspace and click on **Add (2)**.
   
    ![](../Media/l8e131.png)
 
 1. In the Microsoft Sentinel free trial activated tab, select **Ok**.
+
+   ![](../Media/14-8-25-l6-2.png)
 
 ### Task 3 : Configure data retention
 
@@ -75,7 +79,9 @@ In this task, you will configure the data retention in the Log analytics workspa
 
 1. Select **uniquenameDefender** Log Analytics workspaces. 
 
-1. Expand the *Settings* section in the navigation menu and select **Usage and estimated costs (1)** then Select **Data retention (2)**.
+   ![](../Media/14-8-25-l6-0.png)
+
+1. Expand the **Settings** section in the navigation menu and select **Usage and estimated costs (1)** then Select **Data retention (2)**.
 
    ![](../Media/lab7y2.png)
 
@@ -153,7 +159,7 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
 1. The screen returns to the Watchlist page.
 
-1. Select the *HighValueHosts (1)* watchlist and on the right pane, select **View in logs (2)**.
+1. Select the **HighValueHosts (1)** watchlist and on the right pane, select **View in logs (2)**.
 
      ![](../Media/lab7y3.png)
 
@@ -161,7 +167,7 @@ In this task, you will create a watchlist in Microsoft Sentinel.
      
     >**Note:** You can now use the `_GetWatchlist('HighValueHosts')` in your own KQL statements to access the list. The column to reference would be **Hostname**.
 
-1. Close the *Logs* window by selecting the 'x' in the top-right. 
+1. Close the **Logs** window by selecting the 'x' in the top-right. 
 
     ![](../Media/l7-13.png)
 
@@ -186,33 +192,35 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 1. Select the **TI Object (3)**.
 
-     ![](../Media/nty1.png)
+     ![](../Media/14-8-25-l6-8.png)
 
-1. From the *Object type* dropdown, select **Indicator (1)**.
+1. From the **Object type** dropdown, select **Indicator (1)**.
 
 1. Select the **+ New observable** dropdown and select **Domain name (2)**.
 
      ![](../Media/lab7y6.png)
 
-1. For Domain, enter a domain name, for example type *contoso.com (3)*.
+1. For Domain, enter a domain name, for example type **contoso.com (3)**.
 
 1. In the **Name** field enter the same value (4) used for the Domain.
 
-1. In the *Indicator types*, select **malicious-activity (5)**.
+1. In the **Indicator types**, select **malicious-activity (5)**.
 
 1. Set the **Valid from (6)** field to today's date.
 
      ![](../Media/lab7y7.png)
 
-1. Scroll down to the **Description** and enter *This domain is known to be malicious (7)*.
+1. Scroll down to the **Description** and enter **This domain is known to be malicious (7)**.
 
 1. Select **Add (8)**.
 
-1. Select the **Logs** option under the *General* area of the *Sentinel* navigation menu. You might want to disable the "Always show queries" option and close the *Queries* window to run the KQL statements.
+1. Select the **Logs (1)** option under the **General** area of the **Sentinel** navigation menu. You might want to disable the "Always show queries" option and close the **Queries** window to run the KQL statements.
 
-      >**Note:** In the default *New Query 1* tab, the **_GetWatchList('HighValueHosts')** query should still be there, and will now produce results if run.
+      >**Note:** In the default **New Query 1** tab, the **_GetWatchList('HighValueHosts')** query should still be there, and will now produce results if run.
 
-1. Select the *+* sign to create a new query tab.
+1. Select the **+ (2)** sign to create a new query tab.
+
+    ![](../Media/14-8-25-l6-9.png)
 
 1. Run the following KQL statement.
 
@@ -222,7 +230,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
     >**Note:** It could take up to five minutes for the indicator to appear.
 
-      ![](../Media/lab7y8.png)
+    ![](../Media/lab7y8.png)
 
 1. Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column.
 
@@ -231,13 +239,13 @@ In this task, you will create an indicator in Microsoft Sentinel.
     | project DomainName
     ```
 
-      ![](../Media/lab7y9.png)
+    ![](../Media/lab7y9.png)
 
 ### Task 6: Configure log retention
 
 In this task, you will change the retention period for the SecurityEvent table.
 
-1. In Microsoft Sentinel, select the **Settings (1)** option under the ***Configuration*** area then select **Workspace settings (2)**.
+1. In Microsoft Sentinel, select the **Settings (1)** option under the **Configuration** area then select **Workspace settings (2)**.
 
      ![](../Media/l7-20.png)
 
@@ -249,11 +257,11 @@ In this task, you will change the retention period for the SecurityEvent table.
 
 1. Select **Manage Table (4)**.
 
-1. Change the *Interactive retention period* to **90 days**.
+1. Change the **Interactive retention period** to **90 days**.
 
      ![](../Media/lab7y11.png)
 
-1. Reset the *Total retention period* to **180 days** (if needed). Notice that *Archive period* is set now set to *90 days*, because *Azure Monitor* automatically treats the remaining 90 days of total retention as low-cost, long-term retention.
+1. Reset the **Total retention period** to **180 days** (if needed). Notice that **Archive period** is set now set to **90 days**, because **Azure Monitor** automatically treats the remaining 90 days of total retention as low-cost, long-term retention.
 
 1. Select **Save** to apply the changes.
 

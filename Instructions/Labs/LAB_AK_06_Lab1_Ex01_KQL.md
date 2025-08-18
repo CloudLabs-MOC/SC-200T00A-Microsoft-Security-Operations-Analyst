@@ -17,7 +17,7 @@ You are a Security Operations Analyst working at a company that is implementing 
 - Task 6: Build multi-table statements in KQL
 - Task 7: Work with string data in KQL
 
-## Estimated Timing: 90 minutes
+## Estimated Timing: 90 Minutes
 
 ## Architecture Diagram
 
@@ -67,6 +67,8 @@ In this task, you will set up a Microsoft Sentinel workspace within the Azure po
 
 1. Click on **+ Create**.  
 
+    ![](../Media/14-8-25-l6-1.png)
+
 1. Next, in Add Microsoft Sentinel to a workspace page.
 
 1. Select your existing  **log analytics workspace (1)** that was created in the previous task, then select **Add (2)**. This could take a few minutes.
@@ -75,15 +77,17 @@ In this task, you will set up a Microsoft Sentinel workspace within the Azure po
 
 1. In the Microsoft Sentinel free trial activated tab, select **Ok**.
 
+    ![](../Media/14-8-25-l6-2.png)
+
 ### Task 3: Run Basic KQL Statements
 
 In this task, you will build basic KQL statements.
 
    > **Important:** For each query, clear the previous statement from the Query Window or open a new Query Window by selecting **+** after the last opened tab (up to 25).
 
-1. Navigate to the Log Analytics workspace created in the earlier step, expand **Classic (1)**, select the **Virtual machine (deprecated) (2)** option, and on the right of the screen, click on the **WIN1 (3)** virtual machine displayed.
-
-   ![Picture 1](../Media/111.png)
+1. Navigate to the **Log Analytics workspace (1)** created in the earlier step, expand **Classic (2)**, select the **Virtual machine (deprecated) (3)** option, and on the right of the screen, click on the **WIN1 (4)** virtual machine displayed.
+   
+   ![](../Media/14-8-25-l6-3.png)
 
 1. Click on **Connect**. wait for the virtual machine status to change to **Connected**
 
@@ -97,9 +101,13 @@ In this task, you will build basic KQL statements.
 
    ![Picture 1](../Media/winevents.png)
 
-1. From the left navigation pane, click on **Data connectors** under the **Configuration** section.
+1. From the left navigation pane, click on **Data connectors (1)** under the **Configuration** section.
 
-1. Select the **Security Events via Legacy Agent** Connector and click on open connector, scroll down look for **Select which events to stream** Select the **All events** radio button and click on **Apply Changes**.
+1. Select the **Security Events via Legacy Agent (2)** Connector and click on **open connector page (3), scroll down look for **Select which events to stream** Select the **All events (4)** radio button and click on **Apply Changes (5)**.
+
+    ![](../Media/14-8-25-l6-5.png)
+
+    ![](../Media/14-8-25-l6-6.png)
 
    >**Note**: Please wait for at least 5 minutes for the data connector status to update to **Connected**
 
@@ -115,6 +123,8 @@ In this task, you will build basic KQL statements.
     ```KQL
     search in (SecurityEvent,App*) "new"
     ```
+
+    ![](../Media/14-8-25-l6-7.png)
 
 1. Change back the *Time range* to **Last 24 hours** in the Query Window.
 
