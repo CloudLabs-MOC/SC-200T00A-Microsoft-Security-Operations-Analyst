@@ -12,7 +12,7 @@ In this lab, you will understand the attacks and about Detection Modeling
 - Attack 3 - DNS / C2 
 - Task 2: Understand Detection Modeling.
 
-## Estimated timing: 10 minutes
+## Estimated timing: 10 Minutes
 
 ## Architecture Diagram
 

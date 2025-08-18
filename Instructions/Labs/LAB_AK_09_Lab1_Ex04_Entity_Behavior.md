@@ -8,14 +8,14 @@ You need to configure Microsoft Sentinel to perform Entity Behavior Analytics to
 
 >**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Explore%20entity%20behavior%20analytics)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same. 
 
->**Important:** The lab exercises for Learning Path #9 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
+>**Important:** The lab exercises for Learning Path #9 are in a **standalone** environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
 ## Lab Objectives
  In this lab, you will perform the following:
 - Task 1: Explore Entity Behavior 
 - Task 2: Confirm and review Anomalies rules
 
-## Estimated Timing: 20 minutes
+## Estimated Timing: 20 Minutes
 
 ## Architecture Diagram
 
@@ -37,7 +37,7 @@ In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
 
 1. On the popup from **Entity behavior settings**, select **Set UEBA (2)**.
 
-    ![Lab overview.](../Media/ss40.png)
+    ![Lab overview.](../Media/l9-e4-1.png)
 
 1. On the **Settings** tab under **Entity Behavior Analytics**, scroll down to the **Anomalies** section, read through the paragraph, and verify that the **switch** is set to **On (1)**. Then, select the **Go to analytics in order to configure the anomalies (2)** link.
 
@@ -61,9 +61,9 @@ In this task, you will confirm Anomalies analytics rules are enabled.
 
 1. Review the **General** tab information. Notice the **Mode** is **Production (1)** and then select **Next: Configuration (2)**.
 
-    ![](../Media/ss43.png)
+    ![](../Media/l9-e4-2.png)
 
-1. Review the *Configuration* tab information. Notice that you cannot change the **Anomaly score threshold**.
+1. Review the **Configuration** tab information. Notice that you cannot change the **Anomaly score threshold**.
 
     ![](../Media/ss44.png)
 
@@ -81,15 +81,15 @@ In this task, you will confirm Anomalies analytics rules are enabled.
 
     ![Lab overview.](../Media/ss47.png)
 
-1. Review the *General* tab information. Notice the *Mode* is **Flighting (1)** and then select **Next: Configuration (2)**.
+1. Review the **General** tab information. Notice the **Mode** is **Flighting (1)** and then select **Next: Configuration (2)**.
 
     ![Lab overview.](../Media/ss48.png)
 
-1. Review the *Configuration* tab information. Notice that you can now change the **Anomaly score threshold**.
+1. Review the **Configuration** tab information. Notice that you can now change the **Anomaly score threshold**.
 
 1. Set the value to **1 (1)** and then select **Next: Submit Feedback (2)**.
 
-    ![Lab overview.](../Media/ss49.png)
+    ![](../Media/l9-e4-3.png)
 
 1. Select **Next: Review + Create** and then **Save** to update the rule.
 
