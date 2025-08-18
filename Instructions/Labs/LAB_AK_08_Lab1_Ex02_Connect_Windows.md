@@ -11,7 +11,7 @@ You're a Security Operations Analyst working at a company that implemented Micro
 - Task 3: Connect an Azure Windows virtual machine
 - Task 4: Connect a non-Azure Windows Machine
 
-### Estimated Timing: 30 minutes
+### Estimated Timing: 30 Minutes
 
 ## Architecture Diagram
 
@@ -27,21 +27,21 @@ In this task, you'll create a Windows virtual machine in Azure.
 
 1. In the **Search services and marketplace** box, enter **Windows 11 (1)** and select **Windows 11 (2)** from the drop-down list.
 
-    ![](../Media/windows-11-3005.png)
+    ![](../Media/14-8-25-l4-2.png)
 
 1. On the **Marketplace** page,  Select the box for **Microsoft Window 11**.
 
     ![](../Media/windows-11-2-3005.png)
 
-1. Open the *Plan* drop-down list and select **Windows 11 Enterprise, version 22H2 (1)**.
+1. Open the **Plan** drop-down list and select **Windows 11 Enterprise, version 22H2 (1)**.
 
 1. Select **Start with a pre-set configuration (2)** to continue.
 
-   ![](../Media/windows-11-3-3005.png)
+   ![](../Media/14-8-25-l4-3.png)
 
-1. Select **Dev/Test** and then select **Continue to create a VM**.
+1. Select **Dev/Test (1)** and then select **Continue to create a VM (2)**.
 
-   ![](../Media/l8e1-5.png)
+   ![](../Media/14-8-25-l4-4.png)
 
 1. On **Create a virtual machine** page, configure the disk and then select **Review + create (11)**. 
 
@@ -59,7 +59,7 @@ In this task, you'll create a Windows virtual machine in Azure.
     | Image | **Windows 11 Enterprise, version 22H2 (5)**  | 
     | Size| Should be selected as **Standard_B2s**. If it appears empty, select **See all sizes**, choose the **Standard_DS1_v2 (6)** click **Select**. |
 
-      ![](../Media/windows-11-4-3005.png)
+      ![](../Media/14-8-25-l4-5.png)
 
     | Setting | Value |
     | --- | --- |
@@ -79,7 +79,7 @@ In this task, you'll create a Windows virtual machine in Azure.
 
     ![](../Media/l8e1-10.png)
 
-    >**Note:** If there is a *Networking* validation failure, select that tab, review its contents, and then select **Review + create** again.
+    >**Note:** If there is a **Networking** validation failure, select that tab, review its contents, and then select **Review + create** again.
 
 ### Task 2: Install Azure Arc on an On-Premises Server
 
@@ -132,7 +132,7 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
 1. In the **Add a server with Azure Arc** page, select the **rg-defender (2)** Resource group under Project details.
  
-1. For *Region*, select **(US) East Us (3)** from the drop-down list.
+1. For **Region**, select **(US) East Us (3)** from the drop-down list.
 
     ![](../Media/l8e118.png)
 
@@ -146,7 +146,7 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
    ![](../Media/l8e120.png)
 
-1. In Microsoft Edge Browser, select the ellipsis button (...) if needed and then select **Keep**.
+1. In Microsoft Edge Browser, select the ellipsis button (...) **(1)** if needed and then select **Keep (2)**.
 
    ![](../Media/l8e121.png)
     
@@ -184,7 +184,7 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
     ![](../Media/l8e124.png)
 
-    >**Important:** If you get the error *"The term .\OnboardingScript.ps1 is not recognized..."*, make sure you are doing the steps for Task 4 in the WINServer virtual machine. Another issue might be that the name of the file changed due to multiple downloads, search for *".\OnboardingScript (1).ps1"* or other file numbers in the running directory.
+    >**Important:** If you get the error **"The term .\OnboardingScript.ps1 is not recognized..."**, make sure you are doing the steps for Task 4 in the WINServer virtual machine. Another issue might be that the name of the file changed due to multiple downloads, search for **".\OnboardingScript (1).ps1"** or other file numbers in the running directory.
 
 1. Enter **R** to Run once and press Enter (this may take a couple of minutes).
 
@@ -198,7 +198,7 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
     ![](../Media/l8e127.png)
 
-1. Select **Refresh** until WIN2 server name appears and the Status is *Connected*.
+1. Select **Refresh** until WIN2 server name appears and the Status is **Connected**.
   
     ![](../Media/l8e128.png)
 
@@ -208,7 +208,7 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
 In this task, you'll connect an Azure Windows virtual machine to Microsoft Sentinel.
 
-1. In the Search bar of the Azure portal, type *Microsoft Sentinel (1)*, then select **Microsoft Sentinel (2)**.
+1. In the Search bar of the Azure portal, type **microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
    ![](../Media/l8e129.png)
 
@@ -216,31 +216,31 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
    ![](../Media/l8e130.png)
 
-1. In the Microsoft Sentinel left menus, scroll down to the *Content management* section and select **Content Hub**.
+1. In the Microsoft Sentinel left menus, scroll down to the **Content management** section and select **Content Hub (1)**.
 
-1. In the *Content hub*, search for the **Windows Security Events** solution and select it from the list.
+1. In the **Content hub**, search for the **Windows Security Events (2)** solution and select **Windows Security Events (3)** from the list.
 
-1. On the **Windows Security Events** solution page select **Install**.
+1. On the **Windows Security Events** solution page select **Install (4)**.
 
-    ![](../Media/l8e3-17.png)
+    ![](../Media/14-8-25-l4-6.png)
 
 1. When the installation completes, select **Manage**.
 
     ![](../Media/l8e3-15.png)
 
-    >**Note:** The *Windows Security Events* solution installs both the *Windows Security Events via AMA* and the *Security Events via Legacy Agent* Data connectors, along with 2 Workbooks, 20 Analytic Rules, and 43 Hunting Queries.
+    >**Note:** The **Windows Security Events** solution installs both the **Windows Security Events via AMA** and the **Security Events via Legacy Agent** Data connectors, along with 2 Workbooks, 20 Analytic Rules, and 43 Hunting Queries.
 
 1. Select the **Windows Security Events via AMA (1)** Data connector, and select **Open connector page (2)** on the connector information blade.
 
    ![](../Media/l8e3-14.png)
     
-1. In the *Configuration* section, under the *Instructions* tab, select the **+ Create data collection rule**.
+1. In the **Configuration** section, under the **Instructions** tab, select the **+ Create data collection rule**.
 
    ![](../Media/createdatacollectionrule.png)
 
 1. Enter **AZWINDCR (1)** for Rule Name, then select **Next: Resources (2)**.
 
-   ![](../Media/dcr1-3005.png)
+   ![](../Media/14-8-25-l4-7-new.png)
 
 1. Select **Next: Resources>** to select the Virtual Machine we created.
 
@@ -248,7 +248,7 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
     ![](../Media/dcr2-3005.png)
 
-1. Next, choose **Collect**, review the various Security Event collection options, keep the setting for *All Security Events*, and then click on **Next: Review + Create**.
+1. Next, choose **Collect**, review the various Security Event collection options, keep the setting for **All Security Events**, and then click on **Next: Review + Create**.
 
 1. Select **Create** to save the Data Collection Rule.
 
@@ -260,17 +260,17 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
 In this task, you'll add an Azure Arc-connected, non-Azure Windows virtual machine to Microsoft Sentinel.  
 
-   >**Note:** The *Windows Security Events via AMA* data connector requires Azure Arc for non-Azure devices.
+   >**Note:** The **Windows Security Events via AMA** data connector requires Azure Arc for non-Azure devices.
 
 1. Make sure you are in the **Windows Security Events via AMA** data connector configuration in your Microsoft Sentinel workspace.
 
-1. In the **Instructions** tab, under the *Configuration* section, edit the **AZWINDCR** *data collection rule* by selecting the *pencil* icon.
+1. In the **Instructions** tab, under the **Configuration** section, edit the **AZWINDCR** **data collection rule** by selecting the **pencil** icon.
 
    ![](../Media/l8e3-12.png)
     
-1. Select **Next: Resources**, and expand your *Subscription* under *Scope* on the *Resources* tab.
+1. Select **Next: Resources**, and expand your **Subscription** under **Scope** on the **Resources** tab.
 
-    >**Hint:** You can expand the whole *Scope* hierarchy by selecting the ">" before the *Scope* column.
+    >**Hint:** You can expand the whole **Scope** hierarchy by selecting the ">" before the **Scope** column.
 
 1. Expand **rg-defender** (or the Resource Group you created), then select **WIN-xxxxxxxxxx**.
 
