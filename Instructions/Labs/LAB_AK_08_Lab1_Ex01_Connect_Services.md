@@ -10,7 +10,7 @@ You are a Security Operations Analyst working at a company that implemented Micr
 - Task 2: Connect the Microsoft Defender for Cloud data connector
 - Task 3: Connect the Azure Activity data connector
 
-### Estimated Timing: 20 minutes
+### Estimated Timing: 20 Minutes
 
 ## Architecture Diagram
 
@@ -35,7 +35,7 @@ In this task, you will access your Microsoft Sentinel workspace.
     - Leave the **default Region (3)**.
     - Select **Review + Create (4)**.
 
-      ![Picture 1](../Media/loganalytics1.png)
+      ![Picture 1](../Media/14-8-25-l4-1.png)
 
 1. Once the workspace validation has passed, select **Create**.
 
@@ -49,6 +49,8 @@ In this task, you will access your Microsoft Sentinel workspace.
 
 1. Select **+ Create** from the command bar.
 
+   ![](../Media/14-8-25-l6-1.png)
+
  1. Select the newly created workspace **uniquenameDefender (1)** and click on **Add (1)**.
   
     ![](../Media/l8e131.png)
@@ -61,7 +63,7 @@ In this task, you will access your Microsoft Sentinel workspace.
 
 In this task, you will connect the Microsoft Defender for Cloud data connector.
 
-  >**Important:** To *Enable* Bi-directional sync, please rerun  **[Lab 05 Exercise 1](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_05_Lab1_Ex01_Enable_MDC.html)**, Task 2, and select **Setup** from the *Microsoft Defender for Cloud* navigation menu to verify all eligible Azure subscriptions are onboarded.
+  >**Important:** To **Enable** Bi-directional sync, please rerun  **[Lab 05 Exercise 1](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_05_Lab1_Ex01_Enable_MDC.html)**, Task 2, and select **Setup** from the **Microsoft Defender for Cloud** navigation menu to verify all eligible Azure subscriptions are onboarded.
 
 1. In the Microsoft Sentinel navigation menu, scroll down to the **Content management** section and select **Content Hub (1)**.
 
@@ -83,7 +85,7 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
 
    ![](../Media/l8e138.png)
 
-1. In the *Configuration* section, **select** the checkbox for the **Subscription** and either select the **Connect** link, or slide the **Status** option to the right
+1. In the **Configuration** section, **select** the checkbox for the **Subscription** and either select the **Connect** link, or slide the **Status** option to the right
 
     ![](../Media/l8e139.png)
 
@@ -91,11 +93,11 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
 
     ![](../Media/l8e140.png)
 
-1. On the **Microsoft Defender for Cloud - Getting started** page, the checkbox for the **Subscription** should be selected, and the *Microsoft Defender plan* should display *On - Partial (30 trial days left)*.
+1. On the **Microsoft Defender for Cloud - Getting started** page, the checkbox for the **Subscription** should be selected, and the **Microsoft Defender plan** should display **On - Partial (30 trial days left)**.
 
-1. Select the **X (Close)** button on the upper right to close the *Getting started* page. You should be back on the *Microsoft Defender for Cloud* configuration page.
+1. Select the **X (Close)** button on the upper right to close the **Getting started** page. You should be back on the **Microsoft Defender for Cloud** configuration page.
 
-1. The *Status* for the **Subscription** should now be **Connected** and *Bi-directional sync* should be **Enabled**.
+1. The **Status** for the **Subscription** should now be **Connected** and **Bi-directional sync** should be **Enabled**.
 
    ![](../Media/bi-enabled.png)
 
@@ -103,15 +105,15 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
 
 ### Task 3: Connect the Azure Activity data connector
 
-In this task, you will connect the *Azure Activity* data connector.
+In this task, you will connect the **Azure Activity** data connector.
 
-1. In the Microsoft Sentinel left menus, scroll down to the **Content management** section and select **Content Hub**.
+1. In the Microsoft Sentinel left menus, scroll down to the **Content management** section and select **Content Hub (1)**.
 
-1. In the **Content hub**, search for the **Azure Activity** solution and select it from the list.
+1. In the **Content hub**, search for the **Azure Activity (2)** solution and select **Azure Activity (3)** from the list.
 
-1. On the **Azure Activity** solution page select **Install**.
+1. On the **Azure Activity** solution page select **Install (3)**.
 
-   ![](../Media/l8e141.png)
+   ![](../Media/14-8-25-l4-9.png)
 
 1. When the installation completes select **Manage**.
 
@@ -129,15 +131,15 @@ In this task, you will connect the *Azure Activity* data connector.
 
     ![](../Media/l8e144.png)
 
-1. Select the **Parameters** tab, choose your *uniquenameDefender* workspace from the **Primary Log Analytics workspace** drop-down list. This action will apply the subscription configuration to send the information to the Log Analytics workspace.
+1. Select the **Parameters** tab, choose your **uniquenameDefender** workspace from the **Primary Log Analytics workspace** drop-down list. This action will apply the subscription configuration to send the information to the Log Analytics workspace.
 
     ![](../Media/l8e145.png)
 
-1. Select the **Remediation** tab and select the **Create a remediation task** checkbox. This action will apply the policy to existing Azure resources.
+1. Select the **Remediation** tab and select the **Create a remediation task (1)** checkbox. This action will apply the policy to existing Azure resources.
 
-   ![](../Media/remediation.png)
+   ![](../Media/14-8-25-l4-10.png)
 
-1. Select the **Review + Create** button to review the configuration.
+1. Select the **Review + Create (2)** button to review the configuration.
 
 1. Select **Create** to finish.
 

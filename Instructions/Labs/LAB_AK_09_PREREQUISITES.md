@@ -1,7 +1,7 @@
 
 # LAB PREREQUISITES
 
-## Estimated Timing: 40 minutes
+## Estimated Timing: 40 Minutes
 
 ## Prerequisites to be completed before proceeding to further exercises
 
@@ -17,7 +17,7 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
    >**Important:** The next steps are done on a different machine than the one you were previously working on. Look for the Virtual Machine name references.
 
-   >**Important:** The *Windows Security Events via AMA* data connector requires Azure Arc for non-Azure devices. 
+   >**Important:** The **Windows Security Events via AMA** data connector requires Azure Arc for non-Azure devices. 
 
 1. In the lab virtual machine, Select **WINserver** from the desktop.
 
@@ -33,7 +33,7 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
 1. Open the Microsoft Edge browser inside **WINSERVER**.
 
-1. On your virtual machine, click on the Azure Portal icon as shown below:
+1. On your virtual machine, click on the **Azure Portal** icon as shown below:
  
      ![Launch Azure Portal](../Media/portal.png)
  
@@ -128,7 +128,7 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
 1. Type `.\OnboardingScript.ps1` and press enter.  
 
-    >**Important:** If you get the error *"The term .\OnboardingScript.ps1 is not recognized..."*, make sure you are doing the steps for Task 3 on the WINSERVER virtual machine. Another issue might be that the name of the file changed due to multiple downloads, search for *".\OnboardingScript (1).ps1"* or other file numbers in the running directory.
+    >**Important:** If you get the error **"The term .\OnboardingScript.ps1 is not recognized..."**, make sure you are doing the steps for Task 3 on the WINSERVER virtual machine. Another issue might be that the name of the file changed due to multiple downloads, search for **".\OnboardingScript (1).ps1"** or other file numbers in the running directory.
 
     ![](../Media/l8e124.png)
 
@@ -160,6 +160,8 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
 1. Click on **+ Create**.
 
+     ![](../Media/l8e133.png)
+
 1. On the **Create Log Analytics workspace** provide the following details and click **Review + Create (4.)**
 
       - Subscription: Leave the default subscription **(1)**
@@ -176,13 +178,17 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
 1. On **Microsoft Sentinel** page, Click on **+ Create**.
 
+      ![](../Media/14-8-25-l6-1.png)
+
 1. Next, in Add Microsoft Sentinel to a workspace page select the **uniquenameDefender (1)** that was created in the previous lab, then select **Add (2)**. This could take a few minutes.
 
      ![Picture 1](../Media/sc-200-20.png)
 
-1. On the **Microsoft Sentinel | News & guides** page, select **Go to the content hub** under **Get started** tab.
+1. On the **Microsoft Sentinel | Guides** page, select **Go to content hub** under **Get started** tab.
 
-   ![Picture 1](../Media/ss2.png)
+   ![Picture 1](../Media/l9-e1-2.png)
+
+     > **Note:** If you do not see **Content hub page** in the Microsoft Sentinel portal, try refreshing the browser.
 
 1. On the **Microsoft Sentinel | Content hub (1)** page, search for **Windows Security Events (2)**, press **Enter** and select **Windows Security Events (3)** and click on **Install (4)**.
 

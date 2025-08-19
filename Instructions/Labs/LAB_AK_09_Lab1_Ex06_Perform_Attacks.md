@@ -4,7 +4,7 @@
 
 You are going to simulate the attacks that you will later use to detect and investigate in Microsoft Sentinel.
 
->**Important:** The lab exercises for Learning Path #9 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
+>**Important:** The lab exercises for Learning Path #9 are in a **standalone** environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
 ## Lab objectives
  In this lab, you will perform the following:
@@ -12,7 +12,7 @@ You are going to simulate the attacks that you will later use to detect and inve
 - Task 2: Command and Control Attack with DNS
 - Task 3: Privilege Elevation Attack with User Add
 
-## Estimated Timing: 30 minutes
+## Estimated Timing: 30 Minutes
 
 ## Architecture Diagram
 
@@ -22,15 +22,21 @@ You are going to simulate the attacks that you will later use to detect and inve
 
 In this task, you will simulate a persistence attack by adding a registry key that ensures a program runs each time the system starts.
 
-1. Click **Start (1)** on the Windows taskbar, select **Power (2)**, and then choose **Restart (3)**.
+1. Click **Start (1)** on the **WINServer** Windows taskbar, select **Power (2)**, and then choose **Restart (3)**.
 
     ![Lab overview.](../Media/ss50.png)
 
-     >**Note**: Choose **Planned** and then **Continue**.
+     >**Note**: Choose **Others(Planned)** and then **Continue**.
+
+    ![Lab overview.](../Media/l9e6-1.png)
 
 1. Once the system restarts, log back into **WINServer** from the desktop.
 
+     ![Picture 1](../Media/46.png)
+
 1. If prompted, provide the Password `Password.1!!`.
+
+    ![Picture 1](../Media/sc-200-4.png)
 
 1. In the search of the task bar, enter **Command (1)**. Command Prompt will be displayed in the search results. Right-click on the Command Prompt and select **Run as Administrator (2)**. Select **Yes** in the User Account Control window that appears to allow the app to run.
 
@@ -78,7 +84,7 @@ In this task, you will simulate a DNS-based Command and Control (C2) attack by c
     notepad c2.ps1
     ```
 
-1. Select **Yes** to create a new file and copy the following PowerShell script into *c2.ps1*.
+1. Select **Yes** to create a new file and copy the following PowerShell script into **c2.ps1**.
 
     >**Note:** When pasting into the virtual machine file, the full script length might not be visible. Ensure that the script matches the instructions in the **c2.ps1** file before proceeding.
 

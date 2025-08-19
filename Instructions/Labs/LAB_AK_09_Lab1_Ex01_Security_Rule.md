@@ -6,7 +6,7 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
 >**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Modify%20a%20Microsoft%20Security%20rule)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
->**Important:** The lab exercises for Learning Path #9 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
+>**Important:** The lab exercises for Learning Path #9 are in a **standalone** environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
 ## Lab Objectives
 
@@ -14,7 +14,7 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
  - Task 1: Activate a Microsoft Security Rule
 
-## Estimated Timing: 20 minutes
+## Estimated Timing: 20 Minutes
 
 ## Architecture Diagram
 
@@ -34,6 +34,8 @@ In this task, you will activate a Microsoft Security rule.
         
 1. Select **Analytics (1)** from the Configuration area. By default, you will see the **Active rules**.
 
+   > **Note:** If you do not see **Analytics page** in the Microsoft Sentinel portal, try refreshing the browser, Wait **5-10 Minutes**.
+
 1. Select the **+ Create (2)** button from the command bar and select the **Microsoft incident creation rule (3)**.
 
    ![Picture 1](../Media/l9e1-1.png)
@@ -44,7 +46,7 @@ In this task, you will activate a Microsoft Security rule.
 
    - Scroll down and under Microsoft security service select **Microsoft Defender for Cloud (2)**
 
-   - Under Filter by Severity, select the **Custom (3)** option select Low, Medium, and High for the severity level **(4)**
+   - Under Filter by Severity, select the **Custom (3)** option select **Low, Medium, and High** for the severity level **(4)**
 
      ![Picture 1](../Media/ss8.png)
 

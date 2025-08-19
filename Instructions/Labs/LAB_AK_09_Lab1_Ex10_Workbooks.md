@@ -8,7 +8,7 @@ Microsoft Sentinel allows you to create custom workbooks across your data and al
 
 >**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Create%20workbooks)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
->**Important:** The lab exercises for Learning Path #9 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
+>**Important:** The lab exercises for Learning Path #9 are in a **standalone** environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
 ## Lab Objectives
  In this lab, you will Understand following:
@@ -16,7 +16,7 @@ Microsoft Sentinel allows you to create custom workbooks across your data and al
  - Task 2: Save and modify a workbook template
  - Task 3: Create a Workbook
 
-## Estimated Timing: 20 minutes
+## Estimated Timing: 20 Minutes
 
 ## Architecture Diagram
 
@@ -34,9 +34,11 @@ In this task, you will explore the Microsoft Sentinel workbook templates.
 
    ![Picture 1](../Media/ss7.png)
 
-1. Select **Workbooks (1)** under the *Threat Management* left blade. Select the **Templates (2)** tab.
+1. Select **Workbooks (1)** under the **Threat Management** left blade. Select the **Templates (2)** tab.
 
    ![Picture 1](../Media/ss88.png)
+
+   > **Note:** If you do not see **Workbooks page** in the Microsoft Sentinel portal, try refreshing the browser.
 
 1. Search for **Azure Activity (1)** press **Enter**. Then select the **Azure Activity (2)** template workbook. In the right pane, scroll down and select the **View template (3)** button.
 
@@ -52,7 +54,7 @@ In this task, you will explore the Microsoft Sentinel workbook templates.
 
 In this task, you will save a workbook template and modify it.
 
-1. You should be back in the **Microsoft Sentinel - Workbooks - Templates** tab. Scroll down again and select the **Save** button for the *Azure Activity* workbook. 
+1. You should be back in the **Microsoft Sentinel - Workbooks - Templates** tab. Scroll down again and select the **Save** button for the **Azure Activity** workbook. 
 
    ![Picture 1](../Media/savedactivity.png)
 
@@ -66,19 +68,19 @@ In this task, you will save a workbook template and modify it.
 
    ![Picture 1](../Media/ss91.png)
 
-1. Scroll down to the **Caller activities over time** area, look at the color of the *Activities* column since we are going to format those columns. Select the **Edit** button below the grid.
+1. Scroll down to the **Caller activities over time** area, look at the color of the **Activities** column since we are going to format those columns. Select the **Edit** button below the grid.
 
-   ![Picture 1](../Media/editcallerupd.png)
+   ![Picture 1](../Media/l9-e9-3.png)
 
-1. Select the **Column Settings** button, it is located to the right of the *Run Query* command bar. **Hint:** This button only appears if there is data from the KQL query.
+1. Select the **Column Settings** button, it is located to the right of the **Run Query** command bar. **Hint:** This button only appears if there is data from the KQL query.
 
-   ![Picture 1](../Media/ss92.png)
+   ![Picture 1](../Media/l9-e9-4.png)
 
-1. In the *Edit column settings* blade that appears, within *Columns* select **Activities (1)**.
+1. In the **Edit column settings** blade that appears, within **Columns** select **Activities (1)**.
 
-   - Change the value for *Column renderer* to **Heatmap (2)**. For *Colour palette*, scroll down to select **32-color categorical (3)**.
+   - Change the value for **Column renderer** to **Heatmap (2)**. For **Colour palette**, scroll down to select **32-color categorical (3)**.
 
-   - Select **Apply (4)**, then **Save and Close (5)**. Notice the change in the *Activities* column.
+   - Select **Apply (4)**, then **Save and Close (5)**. Notice the change in the **Activities** column.
 
      ![Picture 1](../Media/ss93.png)   
 
@@ -106,15 +108,19 @@ In this task, you will create a new workbook with advanced visualizations.
 
     >**Note:** Although it is a new workbook, a startup template is used.
 
+    >**Note:** if **Workbook** page is not loading try refreshing the browser.
+    
 1. To edit the workbook, select **Edit** from the top bar.
+
+   ![Picture 1](../Media/l9-e9-5.png)
 
 1. Select the **Edit** button below the new workbook overview of the workbook.
 
    ![Picture 1](../Media/ss97.png)
 
-1. Type **# My workbook (1)** in a new line on top of *## New workbook*.
+1. Type **# My workbook (1)** in a new line on top of **## New workbook**.
 
-1. Select **Done Editing (2)** on the bottom of this section, *Editing text item: text - 2*. Notice that your header increased in size and name changed.
+1. Select **Done Editing (2)** on the bottom of this section, **Editing text item: text - 2**. Notice that your header increased in size and name changed.
 
    ![Picture 1](../Media/ss98.png)
 
@@ -132,9 +138,9 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. Type **SecurityEvent (1)** into the query box.
 
-   - Change the *Time Range* to **Last hour (2)**.
+   - Change the **Time Range** to **Last hour (2)**.
 
-   - Change the *Visualization* to **Time chart (3)**.
+   - Change the **Visualization** to **Time chart (3)**.
 
      ![Picture 1](../Media/ss102.png)   
 
@@ -146,7 +152,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
    - Select the **Make this item a custom width (1)** box.
 
-   - Set the *Percent width* to **25 (2)** and *Maximum width* to **25 (3)**.
+   - Set the **Percent width** to **25 (2)** and **Maximum width** to **25 (3)**.
 
    - Now select **Advanced Settings (3)** tab from the query's command bar.
 
@@ -154,7 +160,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. Select **Show refresh icon when not editing (1)** box. 
 
-1. Scroll down and select **Done Editing (2)** on the bottom menu, for the new *Editing query item: query - 2*.
+1. Scroll down and select **Done Editing (2)** on the bottom menu, for the new **Editing query item: query - 2**.
 
    ![Picture 1](../Media/ss105.png)
 
@@ -162,33 +168,37 @@ In this task, you will create a new workbook with advanced visualizations.
 
     ![Picture 1](../Media/addqueryupd.png)
 
-1. Type **SecurityEvent** into the query box.
+1. Type **SecurityEvent (1)** into the query box.
 
-1. Change the *Time Range* to **Last hour (1)**.
+1. Change the **Time Range** to **Last hour (2)**.
 
-1. Change the *Visualization* to **Grid (2)**.
+1. Change the **Visualization** to **Grid (3)**.
 
-   ![Picture 1](../Media/grid.png)
+   ![Picture 1](../Media/l9-e9-6.png)
 
-1. Select **Style** from the query's command bar.
+1. Select **Style (4)** from the query's command bar.
 
 1. On the **Edit query item** dialog  box,
 
    - Select **Make this item a custom width (1)** box.
 
-   - Set the *Percent width* to **75 (2)** and *Maximum width* to **75 (3)**.
+   - Set the **Percent width** to **75 (2)** and **Maximum width** to **75 (3)**.
 
-   - Scroll down and select **Done Editing (4)** on the bottom menu, for the new *Editing query item: query - 3*.   
+   - Scroll down and select **Done Editing (4)** on the bottom menu, for the new **Editing query item: query - 3**.   
 
      ![Picture 1](../Media/ss106.png)
 
 1. Select **Done Editing** in Workbook's top command bar.
 
+   ![Picture 1](../Media/l9-e9-7.png)
+
 1. Select the **Save** icon.
+
+   ![Picture 1](../Media/l9-e9-8.png)
 
 1. On the **Save As** page,
 
-   - Change the *Title* to **My Workbook (1)**.
+   - Change the **Title** to **My Workbook (1)**.
 
    - Select the **RG-DEFENDER (2)** resource group if needed and leave other values as default.
 
@@ -206,7 +216,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. On the right pane, select **View saved workbook** to review your workbook.
 
-   ![Picture 1](../Media/ss109.png)
+   ![Picture 1](../Media/l9-e9-9.png)
 
 ## Review
 In this lab, you have completed the following:

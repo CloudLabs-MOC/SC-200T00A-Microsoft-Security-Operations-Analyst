@@ -6,7 +6,7 @@ You're a Security Operations Analyst working at a company that implemented Micro
 
 Analytics rules search for specific events or sets of events across your environment, alert you when certain event thresholds or conditions are reached, generate incidents for your SOC to triage and investigate, and respond to threats with automated tracking and reMediation processes.
 
->**Important:** The lab exercises for Learning Path #9 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
+>**Important:** The lab exercises for Learning Path #9 are in a **standalone** environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
 ## Lab objectives
  In this lab, you will perform the following:
@@ -15,7 +15,7 @@ Analytics rules search for specific events or sets of events across your environ
 - Task 2: Edit your new rule
 - Task 3: Test your new rule
 
-## Estimated Timing: 40 minutes
+## Estimated Timing: 40 Minutes
 
 ## Architecture Diagram
 
@@ -39,11 +39,15 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
 1. In the **Content hub**, search for the **Azure Activity (1)** solution, press **Enter** then select it from the list **(2)**. On the Azure Activity solution page ,select **Install (3)**.
 
-   ![Picture 1](../Media/ss23.png)
+   ![Picture 1](../Media/l9-e3-11.png)
+
+    > **Note:** If you do not see **Content hub page** in the Microsoft Sentinel portal, try refreshing the browser.
 
 1. When the installation completes, go to **Data connectors (1)** page under **Configuration** in Microsoft Sentinel. The **Azure Activity** solution installs the **Azure Activity (2)** Data connector, 12 Analytic rules, 14 Hunting queries and 1 Workbook.
 
    ![Picture 1](../Media/ss24.png)
+
+   > **Note:** If you do not see **Data connectors page** in the Microsoft Sentinel portal, try refreshing the browser.
 
 1. Select the **Azure Activity (1)** Data connector and select **Open connector page (2)**.
 
@@ -91,9 +95,9 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
    ![](../Media/24.png)
 
-1. Close the *Logs* window by selecting the upper right **X** and select **OK** to discard to save changes to go back to the wizard.
+1. Close the **Logs** window by selecting the upper right **X** and select **OK** to discard to save changes to go back to the wizard.
 
-1. Scroll down and under *Query scheduling* set the following:
+1. Scroll down and under **Query scheduling** set the following:
 
     |Setting|Value|
     |---|---|
@@ -106,7 +110,7 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
 1. Under the **Alert threshold** area, leave the value unchanged since we want the alert to register every event.
 
-1. Under the *Event grouping* area, leave the **Group all events into a single alert** as the selected option since we want to generate a single alert every time it runs, as long as the query returns more results than the specified alert threshold above.
+1. Under the **Event grouping** area, leave the **Group all events into a single alert** as the selected option since we want to generate a single alert every time it runs, as long as the query returns more results than the specified alert threshold above.
 
 1. Select the **Next: Incident settings >** button.
 
@@ -138,6 +142,8 @@ In this task, you will modify the New CloudShell User rule in Microsoft Sentinel
 
 1. Make sure that you are in the **Active rules** tab in the command bar and select the **New CloudShell User** rule.
 
+   > **Note:** If you do not see **Analytics page** in the Microsoft Sentinel portal, try refreshing the browser.
+
 1. Right click the rule and select **Edit** from the **pop-up** menu.
 
    ![](../Media/26.png)
@@ -154,17 +160,17 @@ In this task, you will modify the New CloudShell User rule in Microsoft Sentinel
 
 1. On the **Create new Automation rule** page, provide the following details:   
 
-   - For the *Automation rule name*, enter **Tier 2 (1)**
+   - For the **Automation rule name**, enter **Tier 2 (1)**
 
-   - For *Trigger*, choose the **When incident is created (2)**
+   - For **Trigger**, choose the **When incident is created (2)**
 
-   - For the *Actions*, select **Assign owner (3)**
+   - For the **Actions**, select **Assign owner (3)**
 
    - On the **Create new automation rule** page,select **<inject key="AzureAdUserEmail"></inject> (4)**
 
    - Then select **Apply (5)**
 
-     ![](../Media/ss36.png)
+     ![](../Media/l9-e3-12.png)
 
 1. On the **Automation response** tab, select the **Next: Review and create >** button.
 
@@ -200,25 +206,29 @@ In this task, you test your new scheduled query rule.
 
     ![](../Media/ss37.png)
 
-1. Make sure the following **Operation name** items appear: **List Storage Account Keys** and **Update Storage Account Create**. These are the operations that the KQL query you reviewed earlier will match to generate the alert. **Hint:** You might need to select **Refresh** to update the list.
+1. Make sure the following **Operation name** items appear: **List Storage Account Keys (1)** and **Update Storage Account Create (2)**. These are the operations that the KQL query you reviewed earlier will match to generate the alert. **Hint:** You might need to select **Refresh** to update the list.
 
-    ![](../Media/ss38.png)
+    ![](../Media/l9-e3-13.png)
 
-1. In the Search bar of the Azure portal, type *Sentinel*, then select **Microsoft Sentinel**.
+1. In the Search bar of the Azure portal, type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
+
+   ![Picture 1](../Media/sc-200-19.png)
 
 1. Select **uniquenameDefender** Microsoft Sentinel Workspace.
 
    ![](../Media/ss7.png)
 
-1. Select the **Incidents** menu option under **Threat management**.
+1. Select the **Incidents (1)** menu option under **Threat management**.
 
-1. Select the **Auto-refresh incidents** toggle.
+1. Select the **Auto-refresh incidents (2)** toggle.
 
-    ![](../Media/34.png)
+    ![](../Media/l9-e3-14.png)
+
+      > **Note:** If you do not see **Incidents page** in the Microsoft Sentinel portal, try refreshing the browser.
 
 1. You can not see the newly created Incident right now. As it takes some time.
 
-1. The event that triggers the incident may take 5+ minutes to process. Continue with the next exercise, and you will come back to this view later. You can check this 2-3 hrs later after completing some of the labs.
+1. The event that triggers the incident may take **5+ minutes** to process. Continue with the next exercise, and you will come back to this view later. You can check this **2-3 hrs** later after completing some of the labs.
 
     ![](../Media/ss39.png)
 
