@@ -4,9 +4,9 @@
 
 You're a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You have received threat intelligence about a Command and Control (C2 or C&C) technique. You need to perform a hunt and watch for the threat.
 
-   >**Important:** The lab exercises for Learning Path #10 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
+   >**Important:** The lab exercises for Learning Path #10 are in a **standalone** environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
-   >**Note:** The log data created in the previous Learning Path *Perform Attacks* lab exercises will not be available in this lab without rerunning the **Attack 3** on WIN1 server in Exercise 5.
+   >**Note:** The log data created in the previous Learning Path **Perform Attacks** lab exercises will not be available in this lab without rerunning the **Attack 3** on WIN1 server in Exercise 5.
 
 ## Lab objectives
  In this lab, you will perform the following:
@@ -15,7 +15,7 @@ You're a Security Operations Analyst working at a company that implemented Micro
  - Task 3: Create a Search
  - Task 4: Create a hunt that combines multiple queries into a MITRE tactic
  
-## Estimated timing: 40 minutes
+## Estimated timing: 40 Minutes
 
 ## Architecture Diagram
 
@@ -37,9 +37,9 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
    ![Picture 1](../Media/ss126.png)
 
-1. Enter the following KQL Statement in the *New Query 1* space:
+1. Enter the following KQL Statement in the **New Query 1** space:
 
-   >**Important:** Please paste any KQL queries first in Notepad and then copy from there to the *New Query 1* Log window to avoid any errors.
+   >**Important:** Please paste any KQL queries first in Notepad and then copy from there to the **New Query 1** Log window to avoid any errors.
 
     ```KQL
     let lookback = 2d; 
@@ -54,7 +54,7 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
 1. Review the different results. You have now identified PowerShell requests that are running in your environment.
 
-   ![Picture 1](../Media/ss127.png)
+   ![Picture 1](../Media/l9-e11-1.png)
 
 1. Select the checkbox of the results that shows the **Administrator (1)** SubjectUsername.
 
@@ -64,27 +64,29 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
 1. On the **Add bookmark** page,
 
-   - Select **+ Add new entity** under *Entity mapping*.
+   - Select **+ Add new entity (1)** under **Entity mapping**.
 
-   - For *Entity* select **Host**, then **Hostname** and **Computer** for the values **(1)**.
+   - For **Entity** select **Host**, then **Hostname** and **Computer** for the values **(2)**.
 
-   - For *Tactics and Techniques*, select **Command and Control (2)**.
+   - For **Tactics and Techniques**, select **Command and Control (3)**.
 
-   - Go back to the *Add bookmark* blade, and the select **Create (3)**. We will map this bookmark to an incident later.
+   - Go back to the **Add bookmark** blade, and the select **Create (4)**. We will map this bookmark to an incident later.
 
-     ![Picture 1](../Media/ss129.png)   
+     ![Picture 1](../Media/l9-e11-2.png)   
 
-1. Close the *Logs* window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
+1. Close the **Logs** window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
 
 1. Select your **uniquenameDefender** Microsoft Sentinel workspace again.
 
-1. Select the **Hunting (1)** page under the *Threat Management* area. Click on the **Queries (1)** tab and then **+ New Query (3)** from the command bar.
+1. Select the **Hunting (1)** page under the **Threat Management** area. Click on the **Queries (1)** tab and then **+ New Query (3)** from the command bar.
 
    ![Picture 1](../Media/ss130.png)
 
-1. In the *Create custom query* window, for the *Name* enter **PowerShell Hunt (1)**.
+   > **Note:** If you do not see **Hunting page** in the Microsoft Sentinel portal, try refreshing the browser.
 
-1. For the *Custom query* enter the following KQL statement **(2)**:
+1. In the **Create custom query** window, for the **Name** enter **PowerShell Hunt (1)**.
+
+1. For the **Custom query** enter the following KQL statement **(2)**:
 
     ```KQL
     let lookback = 2d; 
@@ -97,18 +99,18 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
     | order by count_ desc nulls last 
     ```
 
-1. Scroll down and under *Entity mapping* select **(3)**:
+1. Scroll down and under **Entity mapping** select **(3)**:
    
     - Select **+ Add new entity** under *Entity mapping*.
-    - For the *Entity type* drop-down list select **Host**.
-    - For the *Identifier* drop-down list select **HostName**.
-    - For the *Value* drop-down list select **Computer**.
+    - For the **Entity type** drop-down list select **Host**.
+    - For the **Identifier** drop-down list select **HostName**.
+    - For the **Value** drop-down list select **Computer**.
 
 1. Scroll down and under *Tactics & Techniques* select **Command and Control (4)** and then select **Create (5)** to create the hunting query.
 
    ![Picture 1](../Media/ss131.png)
 
-1. In the *"Microsoft Sentinel - Hunting"* blade, search for the query you just created in the list, **PowerShell Hunt**.
+1. In the **"Microsoft Sentinel - Hunting"** blade, search for the query you just created in the list, **PowerShell Hunt**.
 
 1. Select **PowerShell Hunt (1)** from the list. Select the **View Results (2)** button from the right pane. 
 
@@ -116,15 +118,15 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
 1. The KQL query will automatically run.   
 
-   ![Picture 1](../Media/ss133.png)   
+   ![Picture 1](../Media/l9-e11-3.png)   
 
-1. Close the *Logs* window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
+1. Close the **Logs** window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
 
 1. Right-click the **PowerShell Hunt (1)** query and select **Add to livestream (2)**. **Hint:** This also can be done by sliding right and selecting the ellipsis **(...)** at the end of the row to open a context menu.
 
    ![Picture 1](../Media/ss134.png)
 
-1. Review that the *Status* is now **Running**. This is running every 30 seconds in the background and you'll receive a notification in the Azure portal (bell icon) when a new result is found. 
+1. Review that the **Status** is now **Running**. This is running every 30 seconds in the background and you'll receive a notification in the Azure portal (bell icon) when a new result is found. 
 
    ![Picture 1](../Media/ss135.png)
 
@@ -134,9 +136,9 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
    ![Picture 1](../Media/ss136.png)
 
-1. Explore the Investigation graph just like you did in the previous module. Notice the high number of *Related alerts* for *WINServer*.
+1. Explore the Investigation graph just like you did in the previous module. Notice the high number of **Related alerts** for **WINServer**.
 
-1. Close the *Investigation* graph window by selecting the **X** in the top-right of the window. 
+1. Close the **Investigation** graph window by selecting the **X** in the top-right of the window. 
 
 1. Hide the right blade by selecting the **>>** icon and then scroll right until you see the ellipsis **(...)** icon.
 
@@ -148,7 +150,7 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
    ![Picture 1](../Media/ss138.png)
 
-1. Scroll left to notice that the *Severity* column is now populated with the incident's data.
+1. Scroll left to notice that the **Severity** column is now populated with the incident's data.
 
    ![Picture 1](../Media/ss139.png)
 
@@ -156,24 +158,28 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
 In this task, instead of using a LiveStream, you'll create an NRT analytics query rule. NRT rules run every minute and lookback one minute. The benefit to NRT rules are they can use the alert and incident creation logic.
 
-1. Select the **Analytics (1)** page under *Configuration* in Microsoft Sentinel. 
+1. Select the **Analytics (1)** page under **Configuration** in Microsoft Sentinel. 
+
+   > **Note:** If you do not see **Analytics page** in the Microsoft Sentinel portal, try refreshing the browser.
 
 1. Select the **Create (2)** tab, then **NRT query rule (3)**.
 
    ![Picture 1](../Media/ss140.png)
 
-1. This starts the "Analytics rule wizard". For the *General* tab type:
+1. This starts the "Analytics rule wizard". For the **General** tab type:
 
     |Setting|Value|
     |---|---|
-    |Name|**NRT PowerShell Hunt**|
-    |Description|**NRT PowerShell Hunt**|
-    |Severity|**High**|
-    |Tactics|**Command and Control**|
+    |Name|**NRT PowerShell Hunt (1)**|
+    |Description|**NRT PowerShell Hunt (2)**|
+    |Severity|**High (3)**|
+    |Tactics|**Command and Control (4)**|
 
-1. Select **Next: Set rule logic >** button. 
+      ![Picture 1](../Media/l9-e11-4.png)
 
-1. For the *Rule query* enter the following KQL statement:
+1. Select **Next: Set rule logic > (5)** button. 
+
+1. For the **Rule query** enter the following KQL statement:
 
     ```KQL
     let lookback = 2d; 
@@ -189,34 +195,36 @@ In this task, instead of using a LiveStream, you'll create an NRT analytics quer
 
    ![Picture 1](../Media/ss141.png)
 
-1. Close the *Logs* window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
+1. Close the **Logs** window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
 
-1. Under *Entity mapping*, provide the following details **(1)**:
+1. Under **Entity mapping**, provide the following details **(1)**:
      
     - Select **+ Add new entity** under *Entity mapping*.
-    - For the *Entity type* drop-down list select **Host**.
-    - For the *Identifier* drop-down list select **HostName**.
-    - For the *Value* drop-down list select **Computer**.
+    - For the **Entity type** drop-down list select **Host**.
+    - For the **Identifier** drop-down list select **HostName**.
+    - For the **Value** drop-down list select **Computer**.
 
 1. Scroll down and select **Next: Incident settings> (2)** button.
 
    ![Picture 1](../Media/ss142.png)
 
-1. For the *Incident settings* tab, leave the default values and select **Next: Automated response>** button.
+1. For the **Incident settings** tab, leave the default values and select **Next: Automated response>** button.
 
-1. For the *Automated response* tab, leave the default values and select **Next: Review and create >** button.
+1. For the **Automated response** tab, leave the default values and select **Next: Review and create >** button.
 
-1. On the *Review and Create* tab, select the **Save** button to create and save the new Scheduled Analytics rule.
+1. On the **Review and Create** tab, select the **Save** button to create and save the new Scheduled Analytics rule.
 
 ### Task 3: Create a Search job
 
 In this task, you'll use a Search job to look for a C2.
 
->**Note:** The *Restore* operation incurs costs that can deplete your Azure subscription credits. For that reason, you won't be performing the restore operation in this lab. However, you can follow the steps below to perform the restore operation in your own environment.
+>**Note:** The **Restore** operation incurs costs that can deplete your Azure subscription credits. For that reason, you won't be performing the restore operation in this lab. However, you can follow the steps below to perform the restore operation in your own environment.
 
 1. On the left menu Select the **Search** page under **General** in Microsoft Sentinel.
 
    ![Picture 1](../Media/ss143.png)
+
+   > **Note:** If you do not see **Search page** in the Microsoft Sentinel portal, try refreshing the browser.
 
 1. In the search box, enter **reg.exe (1)** and then select **Start (2)**.
 
@@ -230,13 +238,13 @@ In this task, you'll use a Search job to look for a C2.
 
    >**Note**: Search job button needs some to get enable, meanwhile you can proceed with the next steps.
 
-1. The search job creates a new table with your results as soon as they arrive. The results can be consulted from the *Saved Searches* tab.
+1. The search job creates a new table with your results as soon as they arrive. The results can be consulted from the **Saved Searches** tab.
 
-1. Close the *Logs* window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
+1. Close the **Logs** window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
  
 1. Select the **Restoration (1)** tab from the command bar and then the **Restore (2)** button.
 
-   - Under *Select a table to restore*, search for and select **SecurityEvent (3)**.
+   - Under **Select a table to restore**, search for and select **SecurityEvent (3)**.
 
    - Review the options available and then select the **Cancel (4)** button.
 
@@ -250,11 +258,11 @@ In this task, you'll use a Search job to look for a C2.
 
 1. In Microsoft Sentinel, expand **Threat management (1)** from the left navigation menus. Select **MITRE ATT&CK (Preview) (2)**.
 
-1. Unselect items in the *Active rules* drop-down menu **(3)**.
+1. Unselect items in the **Active rules** drop-down menu **(3)**.
 
    ![](../Media/ss147.png)
 
-1. Select **Hunting queries** in the *Simulated rules* filter to see which techniques have hunting queries associated with them.
+1. Select **Hunting queries** in the **Simulated rules** filter to see which techniques have hunting queries associated with them.
 
    ![](../Media/44.png)
 
@@ -262,7 +270,7 @@ In this task, you'll use a Search job to look for a C2.
 
    ![](../Media/43.png)
 
-1. In the details pane, locate *Simulated coverage* and select the **View** link next to *Hunting queries*.
+1. In the details pane, locate **Simulated coverage** and select the **View** link next to **Hunting queries**.
 
    ![](../Media/42.png)
 
@@ -288,7 +296,7 @@ In this task, you'll use a Search job to look for a C2.
 
 1. View the details pane with the Hunt name, Description, Content, Last update time, and Creation time.
 
-1. Select all of the queries by using the box next to the *Query* column **(1)**.
+1. Select all of the queries by using the box next to the **Query** column **(1)**.
 
 1. Either select **Run selected queries (2)** or uncheck the selected rows and *right click* and **Run** a single query.
 
