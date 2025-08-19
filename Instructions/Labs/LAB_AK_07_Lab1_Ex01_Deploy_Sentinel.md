@@ -190,56 +190,55 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 1. In Microsoft Sentinel, select the **Threat intelligence (1)** option in the **Threat management** area.
 
-1. Select **+ New (2)** from the command bar.
+2. Select **+ New (2)** from the command bar.
 
-1. Select the **TI Object (3)**.
+3. Select the **TI Object (3)**.
 
      ![](../Media/14-8-25-l6-8.png)
 
-1. From the **Object type** dropdown, select **Indicator (1)**.
+4. From the **Object type** dropdown, select **Indicator (1)**.
 
-1. Select the **+ New observable** dropdown and select **Domain name (2)**.
+5. Select the **+ New observable** dropdown and select **Domain name (2)**.
 
      ![](../Media/lab7y6.png)
 
-1. For Domain, enter a domain name, for example type **contoso.com (3)**.
+6. For Domain, enter a domain name, for example, type **contoso.com (3)**.
 
-1. In the **Name** field enter the same value (4) used for the Domain.
+7. In the **Name** field, enter the same value (4) used for the Domain.
 
-1. In the **Indicator types**, select **malicious-activity (5)**.
+8. In the **Indicator types**, select **malicious-activity (5)**.
 
-1. Set the **Valid from (6)** field to today's date.
+9. Set the **Valid from (6)** field to today's date.
 
      ![](../Media/lab7y7.png)
 
-1. Scroll down to the **Description** and enter **This domain is known to be malicious (7)**.
+10. Scroll down to the **Description** and enter **This domain is known to be malicious (7)**.
 
-1. Select **Add (8)**.
+11. Select **Add (8)**.
 
-1. Select the **Logs (1)** option under the **General** area of the **Sentinel** navigation menu. You might want to disable the "Always show queries" option and close the **Queries** window to run the KQL statements.
+12. Select the **Logs (1)** option under the **General** area of the **Sentinel** navigation menu. You might want to disable the "Always show queries" option and close the **Queries** window to run the KQL statements.
 
       >**Note:** In the default **New Query 1** tab, the **_GetWatchList('HighValueHosts')** query should still be there, and will now produce results if run.
 
-1. Select the **+ (2)** sign to create a new query tab.
+13. Select the **+ (2)** sign to create a new query tab.
 
       ![](../Media/14-8-25-l6-9.png)
 
-1. Run the following KQL statement.
+14. Run the following KQL statement.
 
-    ```KQL
-    ThreatIntelligenceIndicator
-    ```
-      
+     ```KQL
+     ThreatIntelligenceIndicator
+     ```  
      ![](../Media/lab7y8.png)
 
-      > **Note:** It could take up to 5 minutes for the indicator to appear.
+     > **Note:** It could take up to 5 minutes for the indicator to appear.
 
-1. Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column.
+15. Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column.
 
-    ```KQL
-    ThreatIntelligenceIndicator 
-    | project DomainName
-    ```
+     ```KQL
+     ThreatIntelligenceIndicator 
+     | project DomainName
+     ```
 
      ![](../Media/lab7y9.png)
 
