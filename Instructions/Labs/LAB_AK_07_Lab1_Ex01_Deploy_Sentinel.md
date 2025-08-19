@@ -220,7 +220,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 1. Select the **+ (2)** sign to create a new query tab.
 
-    ![](../Media/14-8-25-l6-9.png)
+      ![](../Media/14-8-25-l6-9.png)
 
 1. Run the following KQL statement.
 
