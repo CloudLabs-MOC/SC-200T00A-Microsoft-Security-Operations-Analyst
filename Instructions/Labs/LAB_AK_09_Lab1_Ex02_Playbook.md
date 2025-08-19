@@ -33,11 +33,11 @@ In this task, you'll create a Logic App that is used as a Playbook in Microsoft 
 
    ![Picture 1](../Media/ss7.png)   
 
-1. On Microsoft Sentinel page,aelect **Guides (1)** and  click on **Go to Content Hub (2)**.
+1. On Microsoft Sentinel page, select **Guides (1)** and  click on **Go to content Hub (2)**.
 
    ![Picture 1](../Media/l9-e1-2.png) 
 
-   > **Note:** If you do not see **Content hub page** in the Microsoft Sentinel portal, try refreshing the browser or open in private window.
+   > **Note:** If you do not see **Content hub page** in the Microsoft Sentinel portal, try refreshing the browser or  opening the portal in a private/incognito window.
 
 1. Within the search bar, search for **Sentinel SOAR Essentials (1)**, press **Enter** then select **Sentinel SOAR Essentials (2)** and then click on **Install (3)**.
 

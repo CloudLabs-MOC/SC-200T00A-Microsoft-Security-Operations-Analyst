@@ -61,7 +61,7 @@ In this task, you will create a detection for the first attack of the previous e
 
    ![Picture 1](../Media/ss57.png)
 
-1. This starts the "Analytics rule wizard". For the *General* tab type:
+1. This starts the "Analytics rule wizard". For the **General** tab type:
 
     |Setting|Value|
     |---|---|
@@ -170,6 +170,7 @@ In this task, you will create a detection for the second attack of the previous 
     ```
 
     ![Picture 1](../Media/page-9-4.png)   
+
 1. Extend the row to show the resulting columns, in the last one, we see the name of the added user under the **UserName1** column we **project** within the KQL query. It is important to help the Security Operations Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph. **Run** the following query:
 
     ```KQL

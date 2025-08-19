@@ -35,7 +35,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 1. Select **Data connectors** from the Configuration area in Microsoft Sentinel.
 
-1. Go to **content hub (1)** and search **Common Event Format (2)** and select  **Common Event Format (3)** from list and click on **install (4)**.
+1. Go to **content hub (1)** and search **Common Event Format (2)** and select **Common Event Format (3)** from list and click on **install (4)**.
 
    ![](../Media/14-8-25-l4e-1.png)
 
