@@ -212,7 +212,7 @@ In this task, you will create a detection for the second attack of the previous 
 
     ![Picture 1](../Media/ss67.png)    
 
-1. For *Query scheduling* set the following:
+1. For **Query scheduling** set the following:
 
     |Setting|Value|
     |---|---|

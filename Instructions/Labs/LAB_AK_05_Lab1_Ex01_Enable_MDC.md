@@ -4,7 +4,7 @@
 
 You're a Security Operations Analyst working at a company that is implementing cloud workload protections with Microsoft Defender for Cloud. In this lab, you enable Microsoft Defender for Cloud.
 
->**Important:** The lab exercises for Learning Path #5 are conducted in a *standalone* environment. If you exit the lab before completion, you will need to re-run the configurations.
+>**Important:** The lab exercises for Learning Path #5 are conducted in a **standalone** environment. If you exit the lab before completion, you will need to re-run the configurations.
 
 ## Lab Objectives
 
@@ -206,7 +206,7 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
    <validation step="18d5bcdd-1127-45e5-a67e-66311175135e" />
 
@@ -218,4 +218,4 @@ In this lab, you have completed the following:
 - Explored the Microsoft Defender for Cloud Dashboard
 - Installed Azure Arc on an On-Premises Server
 
-## Select **Next** to continue to Lab 2
+## Select **Next** to continue to Exercise 2

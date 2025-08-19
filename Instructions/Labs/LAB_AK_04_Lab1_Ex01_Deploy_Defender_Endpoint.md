@@ -16,7 +16,7 @@ In this lab, you will perform the following:
 - Task 3: Configure Roles
 - Task 4: Configure Device Groups
 
-## Estimated Timing: 60 minutes
+## Estimated Timing: 60 Minutes
 
 ## Architecture Diagram
 
@@ -54,13 +54,15 @@ In this task, you will onboard a device to Microsoft Defender for Endpoint using
 
     ![Picture 1](../Media/endpt1.png)
 
+      > **Note:** The **Endpoints** option may take some time to appear under **Settings**. If it does not show up immediately, wait for a few minutes and refresh the browser before proceeding.
+
 1. Select **Onboarding (1)** in the **Device Management** section. In the **Deployment method**, ensure that **Local Script (for up to 10 devices) (2)** is displayed in the drop-down, then click the **Download onboarding package (3)** button. 
 
     ![Picture 1](../Media/onboarding.png)
 
     >**Note:** You can also onboard devices from the **Assets** section in the left menu bar. Expand **Assets** and select **Devices**. On the **Device Inventory** page, with **Computers & Mobile** selected, scroll down to **Onboard devices.** This will take you to the **Settings > Endpoints** page.
 
-1. Under the *Downloads* pop-up, highlight the **"WindowsDefenderATPOnboardingPackage.zip"** file with your mouse and click the folder icon **Show in folder**.
+1. Under the **Downloads** pop-up, highlight the **"WindowsDefenderATPOnboardingPackage.zip"** file with your mouse and click the folder icon **Show in folder**.
 
    >**Hint:** If you don't see it, the file should be located in the **C:\users\admin\downloads** directory.
 
@@ -222,4 +224,4 @@ In this lab, you have completed the following:
 - Configured Roles
 - Configured Device Groups
 
-## Select **Next** to continue to Lab 2
+## Select **Next** to continue to Exercise 2

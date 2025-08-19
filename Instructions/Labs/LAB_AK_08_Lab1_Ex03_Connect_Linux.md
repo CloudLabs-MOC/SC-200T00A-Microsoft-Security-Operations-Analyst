@@ -39,6 +39,8 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
    ![](../Media/14-8-25-l4e-1.png)
 
+    > **Note:** If the **Content hub** page does not load, refresh the browser until it appears.  
+
    >**Note:** If the **Common Event Format** option is not visible, click on **More content in the Content Hub**.
 
      ![](../Media/l8e3-9.png) 

@@ -73,6 +73,8 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
 
    ![](../Media/l8e136.png)
 
+    > **Note:** If the **Content hub** page does not load, refresh the browser until it appears.  
+
 1. When the installation completes,  search for the **Microsoft Defender for Cloud** solution and select it.
 
 1. On the **Microsoft Defender for Cloud** solution details page select **Manage**.
@@ -115,6 +117,8 @@ In this task, you will connect the **Azure Activity** data connector.
 
    ![](../Media/14-8-25-l4-9.png)
 
+    > **Note:** If the **Content hub** page does not load, refresh the browser until it appears.  
+
 1. When the installation completes select **Manage**.
 
     >**Note:** The **Azure Activity** solution installs the **Azure Activity** Data connector, 12 **Analytics rules**, 14 **Hunting queries**, and 1 **Workbook**.
@@ -152,4 +156,4 @@ In this lab, you have completed the following:
 - Connected the Microsoft Defender for Cloud data connector
 - Connected the Azure Activity data connector
 
-## Select **Next** to continue to Lab 2
+## Select **Next** to continue to Exercise 2

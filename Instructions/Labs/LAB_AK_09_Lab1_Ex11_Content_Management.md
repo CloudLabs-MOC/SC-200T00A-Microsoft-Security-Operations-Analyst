@@ -34,7 +34,7 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
 1. Select **Analytics (1)** under the **Configuration** area from the left blade.
 
-   > **Note:** If you do not see **Analytics page** in the Microsoft Sentinel portal, try refreshing the browser.
+   > **Note:** If you do not see **Analytics page** in the Microsoft Sentinel portal, try refreshing the browser. Wait 5 minutes and refresh again until it appears.
 
 1. Select the **Startup RegKey (2)** rule that you created earlier.
 

@@ -28,7 +28,7 @@ In this task, you will investigate an incident.
 
    ![Picture 1](../Media/ss69.png)
 
-    > **Note:** If you do not see **incidents page** in the Microsoft Sentinel portal, try refreshing the browser.
+    > **Note:** If you do not see **incidents page** in the Microsoft Sentinel portal,try refreshing the browser. Wait 5 minutes and refresh again until it appears.
 
     >**Note:** The Analytics rules are generating alerts and incidents on the same specific log entry. Remember that this was done in the **Query scheduling** configuration to generate more alerts and incidents to be utilized in the lab.
   

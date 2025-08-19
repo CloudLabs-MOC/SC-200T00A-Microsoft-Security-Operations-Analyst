@@ -53,7 +53,7 @@ In this task, you will create a Log Analytics workspace for use with Microsoft D
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
   <validation step="8edea4c7-f6fb-4714-9021-fcf6b6942abe" />
 
@@ -97,6 +97,8 @@ In this task, you will build basic KQL statements.
 
    ![Picture 1](../Media/contentmgmt.png)
 
+    > **Note:** If the **Content hub** page does not load, refresh the browser until it appears.
+
 1. Search for **Windows Security Events (1)** from the search bar and select **Windows Security Events (2)**, Click on **Install(3)** on the right navigation page that shows up.
 
    ![Picture 1](../Media/winevents.png)
@@ -115,7 +117,7 @@ In this task, you will build basic KQL statements.
 
    ![Picture 1](../Media/logs.png)
 
-   >**Note:** You may encounter situations where some queries below may not work as expected. If needed, refer to the **lab guide**—sometimes, the **connector** may take time to reach the desired state, affecting query execution. Your patience and understanding are greatly appreciated.
+   >**Note:** You may encounter situations where some queries below may not work as expected. If needed, refer to the **lab guide** sometimes, the **connector** may take time to reach the desired state, affecting query execution. Your patience and understanding are greatly appreciated.
 
 
 1. The following statement demonstrates **search** across tables listed within the **in** clause. In the Query Window enter the following statement and select **Run**: 
@@ -216,7 +218,7 @@ In this task, you will build basic KQL statements.
 
 ### Task 4: Analyze Results in KQL with the Summarize Operator
 
-In this task, you will build KQL statements to aggregate data. Summarize* groups the rows according to the by group columns, and calculates aggregations over each group.
+In this task, you will build KQL statements to aggregate data. Summarize groups the rows according to the by group columns, and calculates aggregations over each group.
 
 1. The following statement demonstrates the **count()** function, which returns a count of the group. In the Query Window enter the following statement and select **Run**: 
 
@@ -304,7 +306,7 @@ In this task, you will use generate visualizations with KQL statements.
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
     > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
    <validation step="43dbc561-34b3-4571-b014-c5b7d09e1b40" />
 
