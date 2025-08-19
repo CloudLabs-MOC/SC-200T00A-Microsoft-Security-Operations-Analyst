@@ -4,7 +4,7 @@
 
 You're a Security Operations Analyst working at a company that is implementing Microsoft Sentinel. You're responsible for setting up the Microsoft Sentinel environment to meet the company requirements to minimize cost, meet compliance regulations, and provide the most manageable environment for your security team to perform their daily job responsibilities.
 
->**Important:** The lab exercises for Learning Path #7 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
+>**Important:** The lab exercises for Learning Path #7 are in a **standalone** environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
 ## Lab Objectives
  In this lab, you will perform the following:
@@ -115,11 +115,11 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
    ![](../Media/l7-4.png)
 
-1. Name the file ***HighValue.csv (1)***, change the file type to **All files(*.*) (2)** and select **Save (3)**. 
+1. Name the file **HighValue.csv (1)**, change the file type to **All files (2)** and select **Save (3)**. 
 
    ![](../Media/l7-6.png)
 
-   >**Hint:** The file can be saved in the *Documents* folder.
+   >**Hint:** The file can be saved in the **Documents** folder.
 
 1. **Close** the Notepad.
 
@@ -133,6 +133,8 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
    ![](../Media/l7-7.png)
 
+   > **Note:** If the **Watchlist** page does not load, refresh the browser until it appears.  
+
 1. In the Watchlist wizard, enter the following then Select **Next: Source > (4)**:
 
     |General setting|Value|
@@ -143,11 +145,11 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
     ![](../Media/l7-8.png)
 
-1. Select **Browse for files** under *Upload file* and browse for the *HighValue.csv (1)* file you just created.
+1. Select **Browse for files** under **Upload file** and browse for the **HighValue.csv (1)** file you just created.
 
     ![](../Media/l7-9.png)
 
-1. In the ***SearchKey field*** select **Hostname (2)**.
+1. In the **SearchKey field** select **Hostname (2)**.
 
 1. Select **Next: Review + Create > (3)**.
 
@@ -178,7 +180,7 @@ In this task, you will create a watchlist in Microsoft Sentinel.
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
   <validation step="53b31791-6d4b-4f83-a56e-b7136bbba6a7" />
   
@@ -227,10 +229,10 @@ In this task, you will create an indicator in Microsoft Sentinel.
     ```KQL
     ThreatIntelligenceIndicator
     ```
+      
+     ![](../Media/lab7y8.png)
 
-    >**Note:** It could take up to five minutes for the indicator to appear.
-
-    ![](../Media/lab7y8.png)
+      > **Note:** It could take up to 5 minutes for the indicator to appear.
 
 1. Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column.
 
@@ -239,7 +241,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
     | project DomainName
     ```
 
-    ![](../Media/lab7y9.png)
+     ![](../Media/lab7y9.png)
 
 ### Task 6: Configure log retention
 

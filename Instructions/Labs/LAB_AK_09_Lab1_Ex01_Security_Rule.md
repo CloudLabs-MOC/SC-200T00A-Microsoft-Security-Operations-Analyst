@@ -34,7 +34,7 @@ In this task, you will activate a Microsoft Security rule.
         
 1. Select **Analytics (1)** from the Configuration area. By default, you will see the **Active rules**.
 
-   > **Note:** If you do not see **Analytics page** in the Microsoft Sentinel portal, try refreshing the browser, Wait **5-10 Minutes**.
+   > **Note:** If you do not see the **Analytics** page in the Microsoft Sentinel portal, try refreshing the browser. Wait **5 minutes** and refresh again until it appears.
 
 1. Select the **+ Create (2)** button from the command bar and select the **Microsoft incident creation rule (3)**.
 

@@ -236,7 +236,7 @@ This task should take approximately **15** minutes to complete.
 
 1. The window for the selected promptbook provides details such as the creator of the promptbook, tags, a brief description, the inputs required to run the promptbook, and a list of the prompts.
 
-1. Take note of the information about the promptbook and the available options. For this simulation, you won’t be starting a new session—this will be covered in a later exercise.
+1. Take note of the information about the promptbook and the available options. For this simulation, you won’t be starting a new session this will be covered in a later exercise.
 
 1. Click on **X** to close the window.
 
@@ -324,6 +324,8 @@ This exercise should take approximately **30** minutes to complete.
 
      ![](../Media/lab2-40.png)
 
+      > **Note:** If the **Incidents** option does not appear in the left navigation menu, wait for 5 minutes and refresh the browser. It may take a short time for the menu to fully load.
+
 1. Select the first incident in the list, **Incident Id: 30342** named Human-operated ransomware attack was launched from a compromised asset (attack disruption).
 
    ![](../Media/lab2-41.png)
@@ -403,6 +405,8 @@ This exercise should take approximately **30** minutes to complete.
 1. The promptbook page opens and asks for the Defender Incident ID. Enter **30342 (1)** then select **Run (2)**.
 
    ![](../Media/lab2-48.png)
+
+      > **Note:** If the See all promptbooks are not selectable, this indicates an issue with the Defender portal. In that case, refresh the browser, wait a few minutes, and try again.
 
 1. Review the information provided. By pivoting to the standalone experience and running the promptbook, the investigation is able to invoke capabilities from a broader set security solution, beyond just Defender XDR, based on the plugins enabled.
 

@@ -91,7 +91,7 @@ In this task, you will assign preset security policies for Exchange Online Prote
 
    ![Standart protection](../Media/standard-protection-2905.png)
 
-    >**Hint:** If this option appears greyed out, refresh your browser by pressing **Ctrl+F5**.
+    >**Hint:** If this option appears greyed out, wait for 5 minutes and refresh your browser by pressing **Ctrl+F5** until it becomes available.
 
     >**Note:** After clicking **Manage protection settings**, the content may take **40 to 60 minutes** to load completely. Wait for the page to fully load, then revisit the same page after the waiting period. If needed, sign out of **Microsoft Defender XDR**, sign back in, and repeat the steps to continue.
 
@@ -115,6 +115,8 @@ In this task, you will assign preset security policies for Exchange Online Prote
 
    ![Standart protection](../Media/12-8-25-l1-1.1.png) 
 
+   > **Hint:** If this option appears greyed out, wait for 5 minutes and refresh your browser by pressing **Ctrl+F5** until it becomes available.
+   
    > **Note:** You might need to scroll down to find Strict protection. 
 
 1. In the **Apply Exchange Online Protection** page, select **Specific recipients (1)** and under **Groups** start writing **Sg-IT-<inject key="DeploymentID" enableCopy="false"/> (2)**, select it, and then select **Next (3)**. Note that this configuration applies policies for anti-spam, outbound spam filters, anti-malware, and anti-phishing protection.
@@ -123,7 +125,7 @@ In this task, you will assign preset security policies for Exchange Online Prote
 
    >**Note**: If a group is already selected, ensure it is **Sg-IT-<inject key="DeploymentID" enableCopy="false"/>**. If not, remove the selected group and add the correct one.
 
-1. In the *Apply protection to* page, apply the same configuration as the previous step and select **Next**. Notice that this configuration applies policies for **anti-phishing, Safe Attachments, and Safe Links.**
+1. In the **Apply protection to** page, apply the same configuration as the previous step and select **Next**. Notice that this configuration applies policies for **anti-phishing, Safe Attachments, and Safe Links.**
 
    ![Enter Your Username](../Media/lab1y3.png)
 
@@ -158,7 +160,7 @@ In this task, you will assign preset security policies for Exchange Online Prote
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
    <validation step="cd91c5ce-77b6-4769-8216-ebe3792185a5" />
 

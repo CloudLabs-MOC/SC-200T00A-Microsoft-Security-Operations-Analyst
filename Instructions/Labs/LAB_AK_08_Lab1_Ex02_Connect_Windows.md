@@ -21,11 +21,11 @@ You're a Security Operations Analyst working at a company that implemented Micro
 
 In this task, you'll create a Windows virtual machine in Azure.
 
-1. In the Azure portal, Select **+ Create a Resource**. **Hint: If you are already in the Azure Portal, select ** Microsoft Azure ** from the top bar to return to the Home page. **
+1. In the Azure portal, Select **+ Create a Resource**. **Hint:** If you are already in the Azure Portal, select **Microsoft Azure** from the top bar to return to the Home page.
 
     ![](../Media/l8e1-1.png)
 
-1. In the **Search services and marketplace** box, enter **Windows 11 (1)** and select **Windows 11 (2)** from the drop-down list.
+1. In the **Search services and marketplace** box, enter **Windows 11 (1)** and select **windows 11 (2)** from the drop-down list.
 
     ![](../Media/14-8-25-l4-2.png)
 
@@ -87,7 +87,7 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
 >**Important:** The next steps are done on a different machine from the one you were previously working on. Look for the Virtual Machine name references.
 
->**Important:** The *Windows Security Events via AMA* data connector requires Azure Arc for non-Azure devices. 
+>**Important:** The **Windows Security Events via AMA** data connector requires Azure Arc for non-Azure devices. 
 
 1. In the lab virtual machine, search for **Hyper-V Manager** from task bar and select to open.
 
@@ -107,7 +107,7 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
 1. Open the Microsoft Edge browser inside **WIN2**.
 
-1. In the **WIN2**, click on the Azure Portal icon as shown below:
+1. In the **WIN2**, click on the **Azure Portal** icon as shown below:
  
    ![Launch Azure Portal](../Media/sc900-image(1).png)
 
@@ -224,6 +224,8 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
     ![](../Media/14-8-25-l4-6.png)
 
+     > **Note:** If the **Content hub** page does not load, refresh the browser until it appears.  
+
 1. When the installation completes, select **Manage**.
 
     ![](../Media/l8e3-15.png)
@@ -287,7 +289,7 @@ In this task, you'll add an Azure Arc-connected, non-Azure Windows virtual machi
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
  <validation step="cb8a9849-e7b9-487e-8717-e483d77a590a" />
 
@@ -299,4 +301,4 @@ In this lab, you have completed the following:
 - Connected an Azure Windows virtual machine
 - Connected a non-Azure Windows Machine
 
-## Select **Next** to continue to Lab 3
+## Select **Next** to continue to Exercise 3

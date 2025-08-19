@@ -29,7 +29,7 @@ In this task, you will load sample security alerts and review the alert details.
 
 1. Under **Cloud Security (1)**, select **Regulatory compliance (2)** from the left-hand menu. In the toolbar, click **Manage compliance standards (3)**.
 
-    >**Note:** You may need to refresh this page if you do not see the *toolbar* tabs.
+    >**Note:** You may need to refresh this page if you do not see the **toolbar** tabs.
 
    ![Picture 1](../Media/lab5y3.png)
 
@@ -109,7 +109,7 @@ In this task, you'll load sample security alerts and review the alert details.
 
     ![Picture 1](../Media/lab5-4.png)
 
-    >**Note:** This sample alert creation process may take a few minutes to complete, wait for the *"Successfully created sample alerts"* notification.
+    >**Note:** This sample alert creation process may take a few minutes to complete, wait for the **"Successfully created sample alerts"** notification.
 
 1. Once completed, select **Refresh** (if needed) to see the alerts appear under the **Security alerts** area.
 
