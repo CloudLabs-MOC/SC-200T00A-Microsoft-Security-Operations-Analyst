@@ -26,13 +26,17 @@ In this task, you will simulate a persistence attack by adding a registry key th
 
     ![Lab overview.](../Media/ss50.png)
 
-     >**Note**: Choose **Planned** and then **Continue**.
+     >**Note**: Choose **Others(Planned)** and then **Continue**.
 
     ![Lab overview.](../Media/l9e6-1.png)
 
 1. Once the system restarts, log back into **WINServer** from the desktop.
 
+     ![Picture 1](../Media/46.png)
+
 1. If prompted, provide the Password `Password.1!!`.
+
+    ![Picture 1](../Media/sc-200-4.png)
 
 1. In the search of the task bar, enter **Command (1)**. Command Prompt will be displayed in the search results. Right-click on the Command Prompt and select **Run as Administrator (2)**. Select **Yes** in the User Account Control window that appears to allow the app to run.
 

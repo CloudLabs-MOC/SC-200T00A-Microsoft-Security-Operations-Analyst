@@ -110,7 +110,7 @@ In this task, you will create an Azure DevOps repository.
 
    ![Picture 1](../Media/ss120.png)
 
-1. Select **Policies (1)** under the *Security* area of the left blade.
+1. Select **Policies (1)** under the **Security** area of the left blade.
 
    >**Note:** If the Policies option is not visible, click on the **Back arrow**, and it should appear.
 

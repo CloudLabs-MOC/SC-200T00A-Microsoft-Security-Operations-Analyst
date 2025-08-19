@@ -33,11 +33,11 @@ In this task, you'll create a Logic App that is used as a Playbook in Microsoft 
 
    ![Picture 1](../Media/ss7.png)   
 
-1. On Microsoft Sentinel page, click on **Go to Content Hub**.
+1. On Microsoft Sentinel page,aelect **Guides (1)** and  click on **Go to Content Hub (2)**.
 
    ![Picture 1](../Media/l9-e1-2.png) 
 
-   > **Note:** If you do not see **Content hub page** in the Microsoft Sentinel portal, try refreshing the browser.
+   > **Note:** If you do not see **Content hub page** in the Microsoft Sentinel portal, try refreshing the browser or open in private window.
 
 1. Within the search bar, search for **Sentinel SOAR Essentials (1)**, press **Enter** then select **Sentinel SOAR Essentials (2)** and then click on **Install (3)**.
 
@@ -69,7 +69,7 @@ In this task, you'll create a Logic App that is used as a Playbook in Microsoft 
 
 1. On the **Create playbook** page, select **Create Playbook**.
 
-    ![](../Media/l9-e3-1.png)
+    ![](../Media/l9-e3-1.1.png)
 
     >**Note:** Wait for the deployment to finish before proceeding to the next task.
 
@@ -87,13 +87,15 @@ In this task, you’ll update the new playbook you created with the proper conne
 
 1. Select **Automation (1)** under the **Configuration** area and then select the **Active Playbooks (2)** tab.
 
+   > **Note:** If you do not see **Automation page** in the Microsoft Sentinel portal, try refreshing the browser.
+
 1. Select **Refresh** from the command bar in case you don’t see any playbooks. You should see the playbook created from the previous step.
 
 1. Select the **Defender_XDR_Ransomware_Playbook_SecOps_Tasks (3)** playbook name.
 
    ![](../Media/ss15.png)
 
-1. On the Logic App page for **Defender_XDR_Ransomware_Playbook_SecOps_Tasks**, in the command menu, select Edit.
+1. On the Logic App page for **Defender_XDR_Ransomware_Playbook_SecOps_Tasks**, in the command menu, select **Edit**.
 
     ![](../Media/12.png)
 
@@ -135,6 +137,8 @@ In this task, you will create an automation rule in Microsoft Sentinel that runs
 
 1. Select **Automation (1)** under **Configuration**.
 
+   > **Note:** If you do not see **Automation page** in the Microsoft Sentinel portal, try refreshing the browser.
+
 1. Select **+ Create (2)** and choose **Automation Rule (3)**.
 
    ![](../Media/l9-e3-7.png)
@@ -143,7 +147,7 @@ In this task, you will create an automation rule in Microsoft Sentinel that runs
 
    - Give the rule a name as **myautomationrule<inject key="DeploymentID" enableCopy="false"/> (1)**
 
-   - Select **Trigger** as ***When incident is created (2)** 
+   - Select **Trigger** as **When incident is created (2)** 
    - Leave the **incident provider** as **All (3)**
 
    - Leave the **Analytic rule** name as **All (4)** 
@@ -152,7 +156,7 @@ In this task, you will create an automation rule in Microsoft Sentinel that runs
 
      ![](../Media/ss18.png)
 
-      > **Note:** If the **Condition** section is not automatically created and the **Incident provider** option is not available, manually add it as shown in the image below. Configure the **Analytic rule name** conditions accordingly. 
+      > **Note:** If the **Condition** section is not automatically created , manually add it as shown in the image below. if the **Incident provider** option is not available skip, Configure the **Analytic rule name** conditions accordingly. 
 
       ![](../Media/l9-e3-8.png)
 
@@ -176,7 +180,7 @@ In this task, you will create an automation rule in Microsoft Sentinel that runs
 
    ![](../Media/ss19.png)
 
-1. On the *Manage Permissions* page, select the **rg-playbook (1)** resource group you created in the previous lab, and select **Apply (2)**.
+1. On the **Manage Permissions** page, select the **rg-playbook (1)** resource group you created in the previous lab, and select **Apply (2)**.
 
    ![](../Media/ss20.png)
 

@@ -28,6 +28,8 @@ In this task, you will investigate an incident.
 
    ![Picture 1](../Media/ss69.png)
 
+    > **Note:** If you do not see **incidents page** in the Microsoft Sentinel portal, try refreshing the browser.
+
     >**Note:** The Analytics rules are generating alerts and incidents on the same specific log entry. Remember that this was done in the **Query scheduling** configuration to generate more alerts and incidents to be utilized in the lab.
   
 1. Select one of the **Startup RegKey** incidents.
@@ -66,9 +68,9 @@ In this task, you will investigate an incident.
 
 1. Close the **Run playbook on incident blade** by selecting the **X** icon in the top right.
 
-1. Review the **Entities** window. At least the **Host** entity that we mapped within the KQL query from the previous exercise should appear. **Hint:** If no entities are shown, refresh the page.
+1. Select **Entities (1)** tab and review the **Entities** window. At least the **Host** entity that we mapped within the KQL query from the previous exercise should appear **(2)**. **Hint:** If no entities are shown, refresh the page.
 
-    ![Lab overview.](../Media/l9-e8-1.png)
+    ![Lab overview.](../Media/l9-e8-1.1.png)
 
 1. Select the **Tasks** button from the command bar.
 

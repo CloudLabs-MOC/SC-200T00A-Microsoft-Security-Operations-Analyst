@@ -38,6 +38,8 @@ In this task, you will explore the Microsoft Sentinel workbook templates.
 
    ![Picture 1](../Media/ss88.png)
 
+   > **Note:** If you do not see **Workbooks page** in the Microsoft Sentinel portal, try refreshing the browser.
+
 1. Search for **Azure Activity (1)** press **Enter**. Then select the **Azure Activity (2)** template workbook. In the right pane, scroll down and select the **View template (3)** button.
 
    ![Picture 1](../Media/ss89.png)
@@ -106,6 +108,8 @@ In this task, you will create a new workbook with advanced visualizations.
 
     >**Note:** Although it is a new workbook, a startup template is used.
 
+    >**Note:** if **Workbook** page is not loading try refreshing the browser.
+    
 1. To edit the workbook, select **Edit** from the top bar.
 
    ![Picture 1](../Media/l9-e9-5.png)

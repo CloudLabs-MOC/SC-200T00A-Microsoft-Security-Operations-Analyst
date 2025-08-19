@@ -32,7 +32,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
 ## Managing Your Virtual Machine
  
-Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
+Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
 ![Manage Your Virtual Machine](../Media/12-8-25-g1-4.png)
 
@@ -115,8 +115,6 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
    > NOTE: While logging in again , enter the digits displayed on the screen in the **Authenticator app** and click on Yes.
 
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **"Cancel"** to skip the tour.
-
-1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
 
 ## Support Contact
  

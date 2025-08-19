@@ -37,6 +37,8 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
    ![Picture 1](../Media/ss126.png)
 
+   > **Note:** If you do not see **Logs page** in the Microsoft Sentinel portal, try refreshing the browser.
+
 1. Enter the following KQL Statement in the **New Query 1** space:
 
    >**Important:** Please paste any KQL queries first in Notepad and then copy from there to the **New Query 1** Log window to avoid any errors.
@@ -106,7 +108,7 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
     - For the **Identifier** drop-down list select **HostName**.
     - For the **Value** drop-down list select **Computer**.
 
-1. Scroll down and under *Tactics & Techniques* select **Command and Control (4)** and then select **Create (5)** to create the hunting query.
+1. Scroll down and under **Tactics & Techniques** select **Command and Control (4)** and then select **Create (5)** to create the hunting query.
 
    ![Picture 1](../Media/ss131.png)
 
@@ -236,7 +238,7 @@ In this task, you'll use a Search job to look for a C2.
 
 1. Select **Search job** button from the command bar. 
 
-   >**Note**: Search job button needs some to get enable, meanwhile you can proceed with the next steps.
+   >**Note**: Search job button needs some time to get enable, meanwhile you can proceed with the next steps.
 
 1. The search job creates a new table with your results as soon as they arrive. The results can be consulted from the **Saved Searches** tab.
 
@@ -298,7 +300,7 @@ In this task, you'll use a Search job to look for a C2.
 
 1. Select all of the queries by using the box next to the **Query** column **(1)**.
 
-1. Either select **Run selected queries (2)** or uncheck the selected rows and *right click* and **Run** a single query.
+1. Either select **Run selected queries (2)** or uncheck the selected rows and **right click** and **Run** a single query.
 
    ![](../Media/ss151.png)
 

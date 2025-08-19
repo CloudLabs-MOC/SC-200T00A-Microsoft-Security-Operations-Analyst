@@ -38,6 +38,8 @@ In this task, you'll review the User Management Schema parsers that are included
 
      ![Picture 1](../Media/ss85.png)   
 
+      >**Note:** Refresh the browser if log page is not loading
+
 1. In the **Search** bar type **user (1)**, and scroll down through the ASIM parser functions until you see the following **_ASim_UserManagement** for Microsoft Windows under the **Microsoft Sentinel** heading.
 
 1. Hover over the **_ASim_UserManagement (2)** ASIM function and then select **Load the function code (3)** in the popup window.
