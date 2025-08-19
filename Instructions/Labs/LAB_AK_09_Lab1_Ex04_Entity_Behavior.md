@@ -39,7 +39,7 @@ In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
 
     ![Lab overview.](../Media/l9-e4-1.png)
 
-    > **Note:** If **Entity behavior page** is not loading in the Microsoft Sentinel portal, try refreshing the browser.
+    > **Note:** If **Entity behavior page** is not loading in the Microsoft Sentinel portal, try refreshing the browser. Wait 5 minutes and refresh again until it appears.
 
 1. On the **Settings** tab under **Entity Behavior Analytics**, scroll down to the **Anomalies** section, read through the paragraph, and verify that the **switch** is set to **On (1)**. Then, select the **Go to analytics in order to configure the anomalies (2)** link.
 

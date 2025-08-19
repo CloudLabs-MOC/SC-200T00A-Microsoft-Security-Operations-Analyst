@@ -37,7 +37,7 @@ In this task, you'll create a Logic App that is used as a Playbook in Microsoft 
 
    ![Picture 1](../Media/l9-e1-2.png) 
 
-   > **Note:** If you do not see **Content hub page** in the Microsoft Sentinel portal, try refreshing the browser or  opening the portal in a private/incognito window.
+   > **Note:** If you do not see **Content hub page** in the Microsoft Sentinel portal, try refreshing the browser. Wait 5 minutes and refresh again until it appears.
 
 1. Within the search bar, search for **Sentinel SOAR Essentials (1)**, press **Enter** then select **Sentinel SOAR Essentials (2)** and then click on **Install (3)**.
 
@@ -87,7 +87,7 @@ In this task, you’ll update the new playbook you created with the proper conne
 
 1. Select **Automation (1)** under the **Configuration** area and then select the **Active Playbooks (2)** tab.
 
-   > **Note:** If you do not see **Automation page** in the Microsoft Sentinel portal, try refreshing the browser.
+   > **Note:** If you do not see **Automation page** in the Microsoft Sentinel portal, try refreshing the browser. Wait 5 minutes and refresh again until it appears.
 
 1. Select **Refresh** from the command bar in case you don’t see any playbooks. You should see the playbook created from the previous step.
 
@@ -137,7 +137,7 @@ In this task, you will create an automation rule in Microsoft Sentinel that runs
 
 1. Select **Automation (1)** under **Configuration**.
 
-   > **Note:** If you do not see **Automation page** in the Microsoft Sentinel portal, try refreshing the browser.
+   > **Note:** If you do not see **Automation page** in the Microsoft Sentinel portal, try refreshing the browser. Wait 5 minutes and refresh again until it appears.
 
 1. Select **+ Create (2)** and choose **Automation Rule (3)**.
 
@@ -156,7 +156,7 @@ In this task, you will create an automation rule in Microsoft Sentinel that runs
 
      ![](../Media/ss18.png)
 
-      > **Note:** If the **Condition** section is not automatically created , manually add it as shown in the image below. if the **Incident provider** option is not available skip, Configure the **Analytic rule name** conditions accordingly. 
+      > **Note:** If the **Condition** section is not created automatically, manually add it as shown in the image below. If the **Incident provider** option is not available, ignore it and configure the **Analytic rule name** conditions accordingly (if available).
 
       ![](../Media/l9-e3-8.png)
 

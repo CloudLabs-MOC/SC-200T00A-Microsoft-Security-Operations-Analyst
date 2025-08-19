@@ -41,13 +41,13 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
    ![Picture 1](../Media/l9-e3-11.png)
 
-    > **Note:** If you do not see **Content hub page** in the Microsoft Sentinel portal, try refreshing the browser.
+    > **Note:** If you do not see **Content hub page** in the Microsoft Sentinel portal, try refreshing the browser. Wait 5 minutes and refresh again until it appears.
 
 1. When the installation completes, go to **Data connectors (1)** page under **Configuration** in Microsoft Sentinel. The **Azure Activity** solution installs the **Azure Activity (2)** Data connector, 12 Analytic rules, 14 Hunting queries and 1 Workbook.
 
    ![Picture 1](../Media/ss24.png)
 
-   > **Note:** If you do not see **Data connectors page** in the Microsoft Sentinel portal, try refreshing the browser.
+   > **Note:** If you do not see **Data connectors page** in the Microsoft Sentinel portal, try refreshing the browser. Wait 5 minutes and refresh again until it appears.
 
 1. Select the **Azure Activity (1)** Data connector and select **Open connector page (2)**.
 
@@ -142,7 +142,7 @@ In this task, you will modify the New CloudShell User rule in Microsoft Sentinel
 
 1. Make sure that you are in the **Active rules** tab in the command bar and select the **New CloudShell User** rule.
 
-   > **Note:** If you do not see **Analytics page** in the Microsoft Sentinel portal, try refreshing the browser.
+   > **Note:** If you do not see **Analytics page** in the Microsoft Sentinel portal, try refreshing the browser. Wait 5 minutes and refresh again until it appears.
 
 1. Right click the rule and select **Edit** from the **pop-up** menu.
 
@@ -224,7 +224,7 @@ In this task, you test your new scheduled query rule.
 
     ![](../Media/l9-e3-14.png)
 
-      > **Note:** If you do not see **Incidents page** in the Microsoft Sentinel portal, try refreshing the browser.
+      > **Note:** If you do not see **Incidents page** in the Microsoft Sentinel portal, try refreshing the browser. Wait 5 minutes and refresh again until it appears.
 
 1. You can not see the newly created Incident right now. As it takes some time.
 

@@ -21,7 +21,7 @@ In this task, you will explore using notebooks in Microsoft Sentinel.
 
 1. In the Microsoft Sentinel Workspace, select **Notebooks (1)** under the **Threat management** area.
 
-     > **Note:** If you do not see **Notebooks page** in the Microsoft Sentinel portal, try refreshing the browser.
+     > **Note:** If you do not see **Notebooks page** in the Microsoft Sentinel portal, try refreshing the browser. Wait 5 minutes and refresh again until it appears.
 
 1. Next, you need to create an AzureML Workspace. Select **Configure Azure Machine Learning (2)** and then select the **Create new Azure ML workspace (3)** button in the command bar.
 
@@ -54,7 +54,7 @@ In this task, you will explore using notebooks in Microsoft Sentinel.
 
      ![Picture 1](../Media/ss155.png)
 
-     > **Note:** If you do not see **Notebooks page** in the Microsoft Sentinel portal, try refreshing the browser.
+     > **Note:** If you do not see **Notebooks page** in the Microsoft Sentinel portal, try refreshing the browser. Wait 5 minutes and refresh again until it appears.
 
 1. Select **A Getting Started Guide for Microsoft Sentinel ML Notebooks (1)**. 
 

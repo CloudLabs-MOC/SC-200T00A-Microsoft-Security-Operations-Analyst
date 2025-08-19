@@ -37,7 +37,7 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
    ![Picture 1](../Media/ss126.png)
 
-   > **Note:** If you do not see **Logs page** in the Microsoft Sentinel portal, try refreshing the browser.
+   > **Note:** If you do not see **Logs page** in the Microsoft Sentinel portal, try refreshing the browser. Wait 5 minutes and refresh again until it appears.
 
 1. Enter the following KQL Statement in the **New Query 1** space:
 
@@ -84,7 +84,7 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
    ![Picture 1](../Media/ss130.png)
 
-   > **Note:** If you do not see **Hunting page** in the Microsoft Sentinel portal, try refreshing the browser.
+   > **Note:** If you do not see **Hunting page** in the Microsoft Sentinel portal,try refreshing the browser. Wait 5 minutes and refresh again until it appears.
 
 1. In the **Create custom query** window, for the **Name** enter **PowerShell Hunt (1)**.
 
@@ -162,7 +162,7 @@ In this task, instead of using a LiveStream, you'll create an NRT analytics quer
 
 1. Select the **Analytics (1)** page under **Configuration** in Microsoft Sentinel. 
 
-   > **Note:** If you do not see **Analytics page** in the Microsoft Sentinel portal, try refreshing the browser.
+   > **Note:** If you do not see **Analytics page** in the Microsoft Sentinel portal,try refreshing the browser. Wait 5 minutes and refresh again until it appears.
 
 1. Select the **Create (2)** tab, then **NRT query rule (3)**.
 
@@ -226,7 +226,7 @@ In this task, you'll use a Search job to look for a C2.
 
    ![Picture 1](../Media/ss143.png)
 
-   > **Note:** If you do not see **Search page** in the Microsoft Sentinel portal, try refreshing the browser.
+   > **Note:** If you do not see **Search page** in the Microsoft Sentinel portal,try refreshing the browser. Wait 5 minutes and refresh again until it appears.
 
 1. In the search box, enter **reg.exe (1)** and then select **Start (2)**.
 

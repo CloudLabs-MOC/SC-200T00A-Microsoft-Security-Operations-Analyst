@@ -38,7 +38,7 @@ In this task, you will explore the Microsoft Sentinel workbook templates.
 
    ![Picture 1](../Media/ss88.png)
 
-   > **Note:** If you do not see **Workbooks page** in the Microsoft Sentinel portal, try refreshing the browser.
+   > **Note:** If you do not see **Workbooks page** in the Microsoft Sentinel portal, try refreshing the browser. Wait 5 minutes and refresh again until it appears.
 
 1. Search for **Azure Activity (1)** press **Enter**. Then select the **Azure Activity (2)** template workbook. In the right pane, scroll down and select the **View template (3)** button.
 

@@ -188,7 +188,7 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
    ![Picture 1](../Media/l9-e1-2.png)
 
-     > **Note:** If you do not see **Content hub page** in the Microsoft Sentinel portal, try refreshing the browser.
+     > **Note:** If you do not see **Content hub page** in the Microsoft Sentinel portal, try refreshing the browser. Wait 5 minutes and refresh again until it appears.
 
 1. On the **Microsoft Sentinel | Content hub (1)** page, search for **Windows Security Events (2)**, press **Enter** and select **Windows Security Events (3)** and click on **Install (4)**.
 
