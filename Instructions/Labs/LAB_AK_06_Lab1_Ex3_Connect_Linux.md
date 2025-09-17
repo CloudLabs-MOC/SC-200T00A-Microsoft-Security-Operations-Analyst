@@ -26,49 +26,39 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 1. In the Search bar of the Azure portal, type **Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
-      ![](../Media/ch-4.3.png)
+   ![](../Media/ee6.png)
 
 1. Click on the **uniquenameDefender (1)** workspace that we created earlier. Select **Content Hub (2)** under Content management from the left pane.
-
 1. Search for **Common Event Format (3)** and select it.
-
 1. Click on **Install (4)**.
 
-     ![](../Media/ch-4.4.png)
+   ![](../Media/ch-4.4.png)
 
 1. Once the **Common Event Format** is installed. Click on **Data connectors (1)** present under Configuration in the left pane.
-
 1. From the Data Connectors tab, select **Common Event Format (CEF) via AMA (2)** connector from the list.
-
 1. Select the **Open connector page (3)** on the connector information blade.
 
-     ![](../Media/upd-1.png)
+   ![](../Media/upd-1.png)
 
 1. Under configuration, copy the command shown in **Run the following command to install and apply the CEF collector** and paste it in a Notepad.
 
-     ![](../Media/upd-2.png)
+   ![](../Media/upd-2.png)
 
-1. In the Search bar, type **virtual machine (1)** and select **Virtual machines (2)**.
+1. In the Search bar, type **Virtual machines (1)** and select **Virtual machines (2)**.
 
-      ![](../Media/ch-1.0.png)
-
+   ![](../Media/ee3.png)
 
 1. Click on **LIN1** Linux virtual machine.
 
-      ![](../Media/lab6-4.png)  
+   ![](../Media/lab6-4.png)  
 
-1. Click on **Connect (1)** from the left navigation pane, scroll down and click on **Select (2)** under the Native SSH.
+1. Click on **Connect (1)** from the left navigation pane, scroll down to the Native SSH ,copy the **SSH command (2)** and paste it into the notepad.
    
-1. In the Native SSH pop-up window, **copy (3)** the command which is added under Copy and execute SSH command and paste it in a notepad.
-
-      ![](../Media/lab6-5.png)  
+   ![](../Media/ee10.png)  
 
 1. Go back to the WIN1 virtual machine.
-
 1. Launch Windows PowerShell as Administrator by right clicking the Start menu icon and selecting **Windows PowerShell (Admin)**.
-
 1. Paste the command which we copied from the Native SSH window
-
 1. Enter **yes** to confirm the connection and then type the user's **password provided under Resource group: LIN1** in the Environment tab and press **enter**. Your screen should look something like this:
 
    ![linux login](../Media/ch-4.5.png)
@@ -91,15 +81,13 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 1. In the Search bar of the Azure portal, type **Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
-      ![](../Media/ch-4.3.png) 
+   ![](../Media/ee6.png) 
 
 1. Click on the **uniquenameDefender (1)** workspace that we created earlier.
-
 1. Select **Content Hub (2)** under Content management from the left pane.
-
 1. Search for **Syslog (3)** and select it. Once selected, click on **Install (4)**.
 
-      ![](../Media/ch-4.6.png)  
+   ![](../Media/ch-4.6.png)  
 
 1. Click on **Data connectors (1)** present under Configuration in the left pane. Select **Syslog via Legacy Agent (2)** connector from the list.
 
@@ -107,13 +95,13 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 1. Select the **Open connector page (3)** on the connector information blade.
 
-      ![](../Media/ch-4.7.png)  
+   ![](../Media/ch-4.7.png)  
 
 1. Under **Configuration**, open the **Install agent on a non-Azure Linux Machine (1)** section. Select the link for **Download & install agent for non-Azure Linux machine (2)**. 
 
-      ![](../Media/ch-4.8.png)  
+   ![](../Media/ch-4.8.png)  
 
-    >**Note:** Your Log Analytics workspace should show **2 Windows computers connected**. This corresponds to WIN2 and AZWIN01 virtual machines connected earlier.
+   >**Note:** Your Log Analytics workspace should show **2 Windows computers connected**. This corresponds to WIN2 and AZWIN01 virtual machines connected earlier.
 
 1. Select the tab for **Linux servers (1)**.
 
@@ -121,17 +109,15 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 1. Select **Log Analytics agent instructions**. Copy the command in the **Download and onboard agent for Linux (2)** area to the clipboard and paste it into the notepad.
 
-      ![](../Media/ch-4.9.png)  
+   ![](../Media/ch-4.9.png)  
    
 1. Click on **LIN2** Linux virtual machine.
 
-      ![](../Media/ch-5.0.png)  
+   ![](../Media/ch-5.0.png)  
 
-1. Click on **Connect (1)** from the left navigation pane, scroll down and click on **Select (2)** under the Native SSH.
+1. Click on **Connect (1)** from the left navigation pane, scroll down to Native SSH ,copy the **SSH command (2)** and paste it into the notepad.
 
-1. In the Native SSH pop-up window, **copy (3)** the command which is added under Copy and execute SSH command and paste it in a notepad.
-
-      ![](../Media/ch-5.1.png)  
+   ![](../Media/ee11.png)  
 
 1. Navigate back to the **WIN1** virtual machine.
 
@@ -144,9 +130,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
    ![linux login](../Media/ch-5.2.png)
 
 1. Paste the **Download and onboard agent for Linux** from the earlier step. 
-
 1. Once the script is pasted in press enter. The script will run against your Linux server remotely. 
-
 1. Close the Powershell Window.
 
 ### Task 3: Configure the facilities you want to collect and their severities for the Syslog connector
@@ -157,29 +141,24 @@ In this task, you will configure the Syslog collection facilities.
 
 1. In the Search bar of the Azure portal, type **Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
-      ![](../Media/ch-4.3.png) 
+   ![](../Media/ee6.png) 
 
 1. Click on the **uniquenameDefender (1)** workspace. Click on **Settings (2)** and select **Workspace Settings (3)**.
 
-      ![](../Media/ch-5.3.png) 
+   ![](../Media/ch-5.3.png) 
 
 1. From the left menu, select **Legacy agents management (1)** under the **Classic** area.
-
 1. Click on the **Syslog (2)** tab.
-
 1. Click on the **+ Add facility (3)** button.
-
 1. Select **auth** from the drop-down menu for **Facility name**.
 
       ![](../Media/ch-5.5.png) 
 
 1. Select the **+ Add facility (1)** button again.
-
 1. Select **authpriv (2)** from the drop-down menu for **Facility name**.
-
 1. Click on **Apply**.
 
-      ![](../Media/ch-5.6.png)    
+   ![](../Media/ee12.png)    
 
 ## Review 
 In this lab, you have completed the following:
