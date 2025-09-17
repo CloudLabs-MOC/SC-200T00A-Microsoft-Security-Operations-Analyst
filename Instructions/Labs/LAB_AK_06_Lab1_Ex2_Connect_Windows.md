@@ -23,13 +23,13 @@ You're a Security Operations Analyst working at a company that implemented Micro
 
 ## Task 1: Create a Microsoft Sentinel Workspace
 
-  > **Note:** Perform this task in **SmartHotelHost** VM (Jump VM) 
+  > **Note:** Perform this task in **SmartHotelHost** VM (Jump VM). 
 
 In this task, you will connect the Microsoft Entra ID connector to Microsoft Sentinel.
 
  1. In the Search bar of the Azure portal, type **Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
-    ![Picture 1](../Media/ch-2.4.png)
+    ![Picture 1](../Media/ee6.png)
 
  1. Select **+Create** from the command bar.
     
@@ -43,29 +43,28 @@ In this task, you will connect the Microsoft Entra ID connector to Microsoft Sen
 
 ## Task 2: Create a Windows Virtual Machine in Azure
 
-  > **Note:** Perform this task in **SmartHotelHost** VM (Jump VM) 
+  > **Note:** Perform this task in **SmartHotelHost** VM (Jump VM). 
 
-In this task, you'll create a Windows virtual machine in Azure.
+In this task, you will create a Windows virtual machine in Azure.
 
 1. In the azure portal, Select **+ Create a Resource**. 
 
-    ![](../Media/l8e1-1.png)
+   ![](../Media/l8e1-1.png)
 
 1. In the **Search services and marketplace** box, enter **Windows 10 (1)** and select **Microsoft Window 10 (2)** from the drop-down list.
 
-    ![](../Media/l8e1-2.png)
+   ![](../Media/l8e1-2.png)
 
 1. On the **Marketplace** page,  Select the box for **Microsoft Window 10**.
 
-    ![](../Media/l8e1-3.png)
+   ![](../Media/l8e1-3.png)
 
 1. Open the *Plan* drop-down list and select **Windows 10 Enterprise, version 22H2 (1)**.
-
 1. Select **Start with a pre-set configuration (2)** to continue.
 
    ![](../Media/ch-2.7.png)
 
-    > **Note:** Select **Dev/Test** and then select **Continue to create a VM** if prompted.
+   > **Note:** Select **Dev/Test** and then select **Continue to create a VM** if prompted.
 
       ![](../Media/ch-2.8.png)
 
@@ -97,17 +96,17 @@ In this task, you'll create a Windows virtual machine in Azure.
     
 1. Select the Checkbox **(10)**, and click on **Review + create (11)**.
     
-    ![](../Media/l8e1-9.png)
+   ![](../Media/l8e1-9.png)
 
 1. Select **Create**. Wait for the Resource to be created, this may take a few minutes.
 
-    ![](../Media/l8e1-10.png)
+   ![](../Media/l8e1-10.png)
 
-    >**Note:** If there is a *Networking* validation failure, select that tab, review its contents, and then select **Review + create** again.
+   >**Note:** If there is a *Networking* validation failure, select that tab, review its contents, and then select **Review + create** again.
 
 ## Task 3: Install Azure Arc on an On-Premises Server
 
-In this task, you install Azure Arc on an on-premises server to make onboarding easier.
+In this task, you will install Azure Arc on an on-premises server to make onboarding easier.
 
 >**Important:** The next steps are done in a different machine than the one you were previously working. Look for the Virtual Machine name references.
 
@@ -117,36 +116,31 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
 1. In the **WIN1** virtual machine, search for **Hyper-V Manager** from task bar and select to open.
 
-    ![](../Media/l8e1-13.png)
+   ![](../Media/l8e1-13.png)
 
 1. Select **LABVM (1)**, then select **WIN2**. Right-click on the **WIN2 (2)** virtual machine and choose **Start**, then click **Continue**. After that, right-click on the **WIN2** virtual machine again and select **Connect (3)**.
 
-    ![](../Media/ch-3.0.png)
+   ![](../Media/ch-3.0.png)
  
 1. Inside **WIN2** Click on **connect**.
  
-    ![](../Media/l8e1-14.png)
+   ![](../Media/l8e1-14.png)
 
 1. Enter the **Password** as `Password.1!!` when prompted then hit on **Enter**.
 
-     ![](../Media/l8e3-16.png)
-
-1. Open the Microsoft Edge browser inside **WIN2**.
+   ![](../Media/l8e3-16.png)
 
 1. In the **WIN2**, click on the Azure Portal icon as shown below:
  
    ![Launch Azure Portal](../Media/sc900-image(1).png)
 
 1. In the **Sign in** dialog box, copy and paste **Email/Username: <inject key="AzureAdUserEmail"></inject>** and then select Next.
-
 1. In the **Enter password** dialog box, copy and paste **Password: <inject key="AzureAdUserPassword"></inject>** and then select **Sign in**.
+1. In the Search bar of the Azure portal, type **Azure Arc (1)**, then select **Azure Arc (2)**.
 
-1. In the Search bar of the Azure portal, type **Azure arc (1)**, then select **Azure Arc (2)**.
-
-   ![](../Media/ch-1.png)
+   ![](../Media/ee23.png)
 
 1. In the navigation pane under **Azure Arc resources** select **Machines (1)**
-
 1. Select **+ Add/Create (2)**, then select **Add a machine (3)**.
 
    ![](../Media/ch-2.png)
@@ -156,13 +150,11 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
    ![](../Media/ch-3.png)
 
 1. In the **Add a server with Azure Arc** page, select the **Default Subscription (1)**, select the **RG-Defender (2)** Resource group under Project details.
- 
 1. For *Region*, select **(US) East Us (3)** from the drop-down list.
 
     ![](../Media/ch-3.1.png)
 
 1. Review the Server details and Connectivity method options. Keep the default values and select **Next** to get to the Tags tab.
-
 1. Review the default available tags. Select **Next** to get to the Download and run script tab.
 
    ![](../Media/ch-3.2.png)
@@ -217,17 +209,17 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
 1. Select **Refresh** until WINServer server name appears and the Status is *Connected*.
   
-    ![](../Media/ch-3.5.png)
+    ![](../Media/ee25.png)
 
     >**Note:** This could take a couple of minutes.
 
 ## Task 4: Connect an Azure Windows virtual machine
 
-In this task, you'll connect an Azure Windows virtual machine to Microsoft Sentinel.
+In this task, you will connect an Azure Windows virtual machine to Microsoft Sentinel.
 
-1. In the Search bar of the Azure portal, type **micdoroft sentinel (1)**, then select **Microsoft Sentinel (2)**.
+1. In the Search bar of the Azure portal, type **Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
-   ![](../Media/l8e129.png)
+   ![](../Media/ee6.png)
 
 1. Select your Microsoft Sentinel Workspace you created earlier.
 
@@ -239,11 +231,11 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
 1. On the **Windows Security Events** solution page select **Install (4)**.
 
-    ![](../Media/ch-3.6.png)
+   ![](../Media/ch-3.6.png)
 
 1. When the installation completes select **Manage**.
 
-    ![](../Media/l8e3-15.png)
+   ![](../Media/l8e3-15.png)
 
     >**Note:** The *Windows Security Events* solution installs both the *Windows Security Events via AMA* and the *Security Events via Legacy Agent* Data connectors, along with 2 Workbooks, 20 Analytic Rules, and 43 Hunting Queries.
 
@@ -252,14 +244,13 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
    ![](../Media/l8e3-14.png)
     
 1. In the **Configuration section**, select the **Create data collection rule (1)**.
-
 1. Enter **AZWINDCR (2)** for Rule Name, then select **Next: Resources (3)**.
 
-    ![](../Media/ch-3.7.png)
+   ![](../Media/ch-3.7.png)
 
 1. Expand **RG-AZWIN01**, then select **AZWIN01**, and click on **Next: Collect**.
 
-    ![](../Media/ch-3.8.png)
+   ![](../Media/ch-3.8.png)
 
 
 1. Review the different Security Event collection option. Keep *All Security Events* and then select **Next: Review + create**.
@@ -274,21 +265,19 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
 ## Task 5: Connect a non-Azure Windows Machine
 
-In this task, you'll add an Azure Arc connected, non-Azure Windows virtual machine to Microsoft Sentinel.  
+In this task, you will add an Azure Arc connected, non-Azure Windows virtual machine to Microsoft Sentinel.  
 
    >**Note:** The *Windows Security Events via AMA* data connector requires Azure Arc for non-Azure devices.
 
 1. Make sure you are in the **Windows Security Events via AMA** data connector configuration in your Microsoft Sentinel workspace.
-
 1. In the **Instructions** tab, under the *Configuration* section, edit the **AZWINDCR** *data collection rule* by selecting the *pencil* icon.
 
    ![](../Media/l8e3-12.png)
     
 1. Select **Next: Resources**, and expand your **Subscription** under **Scope** on the **Resources** tab.
+1. Expand **RG-Defender** (or the Resource Group your created), then select both the **WIN-xxxxxxxxxx (1)**, click on **Next: Collect> (2)**.
 
-1. Expand **RG-Defender** (or the Resource Group your created), then select **WIN-xxxxxxxxxx (1)**, click on **Next: Collect>**.
-
-    ![](../Media/l8e3-11.png)
+    ![](../Media/ee9.png)
 
 1. On the **Edit Data Collection Rule** page, then **Next: Review + create**.
 
