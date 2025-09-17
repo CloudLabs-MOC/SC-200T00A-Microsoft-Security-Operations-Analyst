@@ -25,7 +25,7 @@ In this task, you will create a Log Analytics workspace for use with Microsoft D
 
 1. In the Search bar of the Azure portal, type **Log Analytics (1)**, then select **Log Analytics workspaces (2)**.
 
-    ![Picture 1](../Media/secure6.png)
+   ![Picture 1](../Media/ee2.png)
 
 1. Click on **+ Create** from the command bar.
 
@@ -35,25 +35,25 @@ In this task, you will create a Log Analytics workspace for use with Microsoft D
      - Name: Provide **uniquenameDefender (2)**  
      - Region: Keep the **default (3)**
 
-          ![Picture 1](../Media/ch-6.png)
+       ![Picture 1](../Media/ch-6.png)
 
 1. Once the workspace validation has passed, select **Create**. Wait for the new workspace to be provisioned.
 
 ## Task 2: Enable Microsoft Defender for Cloud
 
-In this task, you'll enable and configure Microsoft Defender for Cloud.
+In this task, you will enable and configure Microsoft Defender for Cloud.
 
 1. In the Search bar of the Azure portal, type *Defender*, then select **Microsoft Defender for Cloud**.
 
 1. In the left menu for Microsoft Defender for Cloud, under **Management**, select **Environment settings (1)** and select your **Subscription (2)** by expanding the Tenant Root Group.
 
-    ![Picture 1](../Media/ch-7.png)
+   ![Picture 1](../Media/ch-7.png)
 
 1. Review the Azure resources that are now protected with the Defender for Cloud plans.
 
     >**Important:** If all Defender plans are *Off*, select **Enable all plans (1)**. Select the **Turn on the plan anyways (2)** and then click on **OK**. Select **Save (3)** at the top of the page and wait for the *"Defender plans (for your) subscription were saved successfully!"* notifications to appear.
 
-      ![Picture 1](../Media/secure9.png)
+   ![Picture 1](../Media/secure9.png)
 
 1. Select the **Settings & monitoring** tab from the Settings area (next to Save).
 
@@ -77,9 +77,9 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 1. In the Search bar of the Azure portal, search for **Virtual Machines (1)** and select **Virtual Machines (2)** from the Services.
 
-      ![Picture 1](../Media/ch-1.0.png)
+      ![Picture 1](../Media/ee3.png)
 
-1. Click on **Virtual machines** on Compute infrastructure page, Select the **WIN1 (2)** VM.
+1. Click on **Virtual machines (1)** on Compute infrastructure page, Select the **WIN1 (2)** VM.
 
       ![Picture 1](../Media/ch-1.2.png)
 
@@ -89,26 +89,26 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 1. Click on **Download RDP file** and select **Keep** in the pop-up. Open file when the download completes.
 
-      ![Picture 1](../Media/ch-1.3.png)
+      ![Picture 1](../Media/ee4.png)
       ![Picture 1](../Media/ch-1.3.1.png)
 
 1. Click on **Connect**.
 
       ![Picture 1](../Media/secure15.png)
 
-1. Navigate to the **Environment** Details tab and copy the password which is listed under **Resource Group: WIN-1**.
+1. Navigate to the **Environment** Details tab and copy the VM Username and VM Password which is listed under **Resource Group: WIN-1**.
 
-      ![Picture 1](../Media/secure16.png)
+      ![Picture 1](../Media/ee19.png)
 
 1. **Paste (1)** it in the login pop-up and click on **OK (2)**.
 
-      ![Picture 1](../Media/secure17.png)
+      ![Picture 1](../Media/ee22.png)
 
 1. Click on **Yes**.
 
       ![Picture 1](../Media/secure18.png)
 
-1. Click on the Start button, search for **Hyper-V** from the bottom Windows search bar, and select to open.
+1. Click on the Start button, search for **Hyper-V Manager** from the bottom Windows search bar, and select to open.
 
 1. Click on **LABVM**.
 
@@ -131,9 +131,9 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 1. Click on **Yes** on the Stay signed in dialog box.
 
-1. In the **search resources, services and docs bar (1)**, type **Azure arc** and select **Azure arc (2)** from Services, as shown below:
+1. In the **search resources, services and docs bar (1)**, type **Azure Arc** and select **Azure Arc (2)** from Services, as shown below:
    
-    ![Picture 1](../Media/ch-1.png "search azure arc")
+    ![Picture 1](../Media/ee23.png "search azure arc")
   
 1. On the **Azure Arc** page, select **Machines (1)** under **Azure Arc Resources**, click on **+Add/create (2)** and then **Add a Machine (3)**.
     
@@ -189,7 +189,7 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
     .\OnboardingScript.ps1
     ```
 
-    >**Important:** If you get the error *"The term .\OnboardingScript.ps1 is not recognized..."*, make sure you are doing the steps for Task 4 in the WINServer virtual machine. Other issues might be that the name of the file changed due to multiple downloads, search for *".\OnboardingScript (1).ps1"* or other file numbers in the running directory.
+    >**Important:** If you get the error *"The term .\OnboardingScript.ps1 is not recognized..."*, make sure you are doing the steps for Task 3 in the WINServer virtual machine. Other issues might be that the name of the file changed due to multiple downloads, search for *".\OnboardingScript (1).ps1"* or other file numbers in the running directory.
 
 1. Enter **R** to Run once and press Enter (this may take a couple of minutes).
 
@@ -199,7 +199,7 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 1. Select **Refresh** until WINServer server name appears and the Status is *Connected*.
 
-      ![Picture 1](../Media/secure22.png)
+      ![Picture 1](../Media/ee24.png)
 
       > **Note:** This could take a couple of minutes.
 
@@ -207,9 +207,9 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 In this task, you will manually install the required agent on the Windows Server.
 
-1. Search **Data Collection Rules (1)** on azure portal search bar and select **Data Collection Rules (2)** from Services.
+1. Search **Data Collection Rules (1)** on azure portal search bar and select **Data collection rules (2)** from Services.
 
-    ![Picture 1](../Media/ch-1.5.png)
+    ![Picture 1](../Media/ee7.png)
 
 1. Select **+ Create** on **Data collection rules** page.
 
@@ -248,7 +248,7 @@ In this task, you will manually install the required agent on the Windows Server
 
 1. In the **Search resources, services and docs** search bar, search for **Azure Arc (1)**, and select **Azure Arc (2)** from the Services. 
 
-      ![Picture 1](../Media/ch-5.9.4.png)
+      ![Picture 1](../Media/ee8.png)
 
 1. Select the **WINServer** which is associated with the **RG-Defender** resource group.
 
