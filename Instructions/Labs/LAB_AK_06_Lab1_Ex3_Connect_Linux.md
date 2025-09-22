@@ -22,7 +22,7 @@ In this lab, you will perform the following:
 
 In this task, you will connect a Linux host to Microsoft Sentinel with the Common Event Format (CEF) connector.
 
-   > **Note:** Ensure you are logged into Azure from the SmartHotelHost VM (Jump VM).
+   > **Note:** Ensure you are logged into Azure from the SmartHotelHost VM (Lab VM).
 
 1. In the Search bar of the Azure portal, type **Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
@@ -75,7 +75,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 ## Task 2: Connect a Linux host using the Syslog connector
 
-   > **Note:** Perform this task from the SmartHotelHost VM (Jump VM).
+   > **Note:** Perform this task from the SmartHotelHost VM (Lab VM).
 
 In this task, you will connect a Linux host to Microsoft Sentinel with the Syslog connector.
 
@@ -135,7 +135,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 ### Task 3: Configure the facilities you want to collect and their severities for the Syslog connector
 
-   > **Note:** Perform this task from the SmartHotelHost VM (Jump VM).
+   > **Note:** Perform this task from the SmartHotelHost VM (Lab VM).
 
 In this task, you will configure the Syslog collection facilities.
 
