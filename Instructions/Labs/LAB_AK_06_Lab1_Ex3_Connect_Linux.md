@@ -167,3 +167,5 @@ In this lab, you have completed the following:
 - Configured the facilities you want to collect and their severities for the Syslog connector
 
 ### You have successfully completed this lab!
+
+By completing this lab **Secure Windows Servers with Azure Arc & Microsoft Defender**, you gained hands-on experience in strengthening hybrid cloud environments using Microsoft security and monitoring tools. You began by onboarding on-premises Windows Servers to Azure Arc, enabling centralized governance and management across hybrid infrastructures. You then configured Microsoft Defender for Cloud to monitor workloads, assess compliance, and mitigate threats through actionable security alerts. Moving further, you connected Windows and Linux machines to Microsoft Sentinel using data connectors such as CEF and Syslog, integrating diverse log sources for advanced threat detection and response. Through this process, you built a unified security architecture that leverages AI-driven intelligence, automated incident handling, and comprehensive visibility to safeguard both on-premises and cloud resources.
