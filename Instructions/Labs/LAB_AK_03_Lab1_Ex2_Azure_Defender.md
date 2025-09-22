@@ -40,7 +40,7 @@ In this task, you will load sample security alerts and review the alert details.
 
    ![Picture 1](../Media/ch-1.9.png)
 
-1. Select 'X' on the upper right of the pageto return to the main blade.
+1. Select 'X' on the upper right of the page to return to the main blade.
 
 ## Task 2: Explore Security posture and recommendations
 
