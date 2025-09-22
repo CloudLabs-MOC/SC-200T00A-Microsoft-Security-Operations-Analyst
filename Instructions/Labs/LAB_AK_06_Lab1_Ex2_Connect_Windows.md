@@ -23,7 +23,7 @@ You're a Security Operations Analyst working at a company that implemented Micro
 
 ## Task 1: Create a Microsoft Sentinel Workspace
 
-  > **Note:** Perform this task in **SmartHotelHost** VM (Jump VM). 
+  > **Note:** Perform this task in **SmartHotelHost** VM (Lab VM). 
 
 In this task, you will connect the Microsoft Entra ID connector to Microsoft Sentinel.
 
@@ -43,7 +43,7 @@ In this task, you will connect the Microsoft Entra ID connector to Microsoft Sen
 
 ## Task 2: Create a Windows Virtual Machine in Azure
 
-  > **Note:** Perform this task in **SmartHotelHost** VM (Jump VM). 
+  > **Note:** Perform this task in **SmartHotelHost** VM (Lab VM). 
 
 In this task, you will create a Windows virtual machine in Azure.
 
