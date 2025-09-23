@@ -34,53 +34,53 @@ Welcome to your Secure Windows Servers Azure Arc & Microsoft Defender Workshop! 
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
 
-   ![](../Media/GS1-upd.png)
+![](../Media/ee1.png)
  
 ## Exploring Your Lab Resources
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-   ![](../Media/GS2-upd.png)
+![](../Media/ee14.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-   ![](../Media/GS3.png)
+![](../Media/ee15.png)
 
 ## Managing Your Virtual Machine
  
 Feel free to **Start, Stop, or Restart** your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
 
-   ![](../Media/ch-5.9.3.png)
+![](../Media/ee16.png)
 
 ## Lab Guide Zoom In/Zoom Out
  
 To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-   ![](../Media/GS5.png)
+![](../Media/ee17.png)
 
 ## Login to Azure Portal
 
 1. In the JumpVM, click on the **Azure portal** shortcut of the Microsoft Edge browser from the desktop.
 
-   ![](../Media/lab6-103.png)
+   ![](../Media/ee21.png)
    
 1. On the **Sign in to Microsoft Azure** tab, you will see a login screen. Enter the following email/username and then click on **Next**. 
 
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
    
-     ![](../Media/sc900-image-1.png)
+       ![](../Media/sc900-image-1.png)
      
 1. Now enter the following password and click on **Sign in**.
    
    - **Password:** <inject key="AzureAdUserPassword"></inject>
    
-     ![](../Media/sc900-image-2.png)
+       ![](../Media/sc900-image-2.png)
 
 1. If you see the pop-up Action Required, click Ask Later.
 
-     ![](../Media/asklater.png)     
+   ![](../Media/asklater.png)     
  
    >**NOTE:** Do not enable MFA, select **Ask Later**.
      

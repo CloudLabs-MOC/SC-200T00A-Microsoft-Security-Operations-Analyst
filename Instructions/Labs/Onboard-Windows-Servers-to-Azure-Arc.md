@@ -1,5 +1,7 @@
 # Lab 01: Onboard Windows Servers to Azure Arc
 
+### Estimated Duration: 110 Minutes
+
 ## Overview
 
 In this lab, you will onboard on-premises Hyper-V VMs to Azure Arc for Azure Management.
