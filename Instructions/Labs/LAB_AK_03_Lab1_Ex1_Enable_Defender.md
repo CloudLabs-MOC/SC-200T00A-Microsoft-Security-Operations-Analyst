@@ -30,6 +30,7 @@ In this task, you will create a Log Analytics workspace for use with Microsoft D
 1. Click on **+ Create** from the command bar.
 1. Provide the following details and click on **Review + Create (4)**:
     
+     - Subscription: Select your **subscription**
      - Resource group: Select **RG-Defender (1)**
      - Name: Provide **uniquenameDefender (2)**  
      - Region: Keep the **default (3)**
