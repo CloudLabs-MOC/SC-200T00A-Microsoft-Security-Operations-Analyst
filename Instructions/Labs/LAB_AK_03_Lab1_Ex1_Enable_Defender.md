@@ -111,12 +111,12 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
    ![Picture 1](../Media/hyper-v-01.png)
 
-1. It asks you to press ctrl+alt+dlt, Go-to **actions** in the top of VM toolbar and click on **ctrl+alt+dlt** (**Skip if not asked**)
+1. If it asks you to press ctrl+alt+dlt, Go-to **actions** in the top of VM toolbar and click on **ctrl+alt+dlt** (**Skip if not asked**)
 1. Enter the **Password** as `Password.1!!` when prompted.
 
      > **Note:** To enable the clipboard Right-click on LABVM and select Hyper-V Settings click on **Enhanced session mode policy** and check the **Allow enhanced mode** click on apply Then restart your virtual machine, once vm starts you will get a configuration pop-up click on show more options and select local resources and make sure the clipboard is selected.
 
-1. Open the Microsoft Edge browser and navigate to the Azure portal at `https://portal.azure.com`.
+1. On the WINServer VM, click on the Azure Portal icon to open the portal.
 1. In the **Sign in** dialog box, provide the credentials as listed below:
 
     * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
