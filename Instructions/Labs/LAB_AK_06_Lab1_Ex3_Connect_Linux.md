@@ -101,11 +101,11 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
    ![](../Media/ch-4.8.png)  
 
-   >**Note:** Your Log Analytics workspace should show **2 Windows computers connected**. This corresponds to WIN2 and AZWIN01 virtual machines connected earlier.
+   >**Note:** Your Log Analytics workspace should show **2 or 3 Windows computers connected**. This corresponds to WIN2 and AZWIN01 virtual machines connected earlier.
 
 1. Select the tab for **Linux servers (1)**.
 
-    >**Note:** Your Log Analytics workspace should show **1 Linux computers connected**. This corresponds to the LIN1 (ubuntu1) virtual machine connected earlier with the CEF connector.
+    >**Note:** Your Log Analytics workspace should show **0 Linux computers connected**. This corresponds to the LIN1 (ubuntu1) virtual machine connected earlier with the CEF connector.
 
 1. Select **Log Analytics agent instructions**. Copy the command in the **Download and onboard agent for Linux (2)** area to the clipboard and paste it into the notepad.
 
@@ -133,7 +133,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 1. Once the script is pasted in press enter. The script will run against your Linux server remotely. 
 1. Close the Powershell Window.
 
-### Task 3: Configure the facilities you want to collect and their severities for the Syslog connector
+## Task 3: Configure the facilities you want to collect and their severities for the Syslog connector
 
    > **Note:** Perform this task from the SmartHotelHost VM (Lab VM).
 

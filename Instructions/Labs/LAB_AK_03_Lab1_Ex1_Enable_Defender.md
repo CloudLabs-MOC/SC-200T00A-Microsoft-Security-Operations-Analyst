@@ -30,6 +30,7 @@ In this task, you will create a Log Analytics workspace for use with Microsoft D
 1. Click on **+ Create** from the command bar.
 1. Provide the following details and click on **Review + Create (4)**:
     
+     - Subscription: Select your **subscription**
      - Resource group: Select **RG-Defender (1)**
      - Name: Provide **uniquenameDefender (2)**  
      - Region: Keep the **default (3)**
@@ -43,7 +44,7 @@ In this task, you will create a Log Analytics workspace for use with Microsoft D
 In this task, you will enable and configure Microsoft Defender for Cloud.
 
 1. In the Search bar of the Azure portal, type *Defender*, then select **Microsoft Defender for Cloud**.
-1. In the left menu for Microsoft Defender for Cloud, under **Management**, select **Environment settings (1)** and select your **Subscription (2)** by expanding the Tenant Root Group.
+1. In the left menu for Microsoft Defender for Cloud, under **Management**, select **Environment settings (1)** then scroll down to bottom and **select your Subscription (2)** by expanding the Tenant Root Group.
 
    ![Picture 1](../Media/ch-7.png)
 
@@ -110,12 +111,12 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
    ![Picture 1](../Media/hyper-v-01.png)
 
-1. It asks you to press ctrl+alt+dlt, Go-to **actions** in the top of VM toolbar and click on **ctrl+alt+dlt** (**Skip if not asked**)
+1. If it asks you to press ctrl+alt+dlt, Go-to **actions** in the top of VM toolbar and click on **ctrl+alt+dlt** (**Skip if not asked**)
 1. Enter the **Password** as `Password.1!!` when prompted.
 
      > **Note:** To enable the clipboard Right-click on LABVM and select Hyper-V Settings click on **Enhanced session mode policy** and check the **Allow enhanced mode** click on apply Then restart your virtual machine, once vm starts you will get a configuration pop-up click on show more options and select local resources and make sure the clipboard is selected.
 
-1. Open the Microsoft Edge browser and navigate to the Azure portal at `https://portal.azure.com`.
+1. On the WINServer VM, click on the Azure Portal icon to open the portal.
 1. In the **Sign in** dialog box, provide the credentials as listed below:
 
     * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
