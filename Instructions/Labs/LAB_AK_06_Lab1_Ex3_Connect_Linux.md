@@ -133,7 +133,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 1. Once the script is pasted in press enter. The script will run against your Linux server remotely. 
 1. Close the Powershell Window.
 
-### Task 3: Configure the facilities you want to collect and their severities for the Syslog connector
+## Task 3: Configure the facilities you want to collect and their severities for the Syslog connector
 
    > **Note:** Perform this task from the SmartHotelHost VM (Lab VM).
 
