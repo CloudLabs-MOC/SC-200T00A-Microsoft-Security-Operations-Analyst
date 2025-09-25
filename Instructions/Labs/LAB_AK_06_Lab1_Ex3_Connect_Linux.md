@@ -158,7 +158,7 @@ In this task, you will configure the Syslog collection facilities.
 1. Select **authpriv (2)** from the drop-down menu for **Facility name**.
 1. Click on **Apply**.
 
-   ![](../Media/azz122.png)    
+   ![](../Media/ee12.png)    
 
 ## Review 
 In this lab, you have completed the following:
