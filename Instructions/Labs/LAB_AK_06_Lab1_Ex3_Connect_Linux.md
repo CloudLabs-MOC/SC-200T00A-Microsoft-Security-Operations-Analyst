@@ -101,7 +101,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
    ![](../Media/ch-4.8.png)  
 
-   >**Note:** Your Log Analytics workspace should show **2 0r 3 Windows computers connected**. This corresponds to WIN2 and AZWIN01 virtual machines connected earlier.
+   >**Note:** Your Log Analytics workspace should show **2 or 3 Windows computers connected**. This corresponds to WIN2 and AZWIN01 virtual machines connected earlier.
 
 1. Select the tab for **Linux servers (1)**.
 
