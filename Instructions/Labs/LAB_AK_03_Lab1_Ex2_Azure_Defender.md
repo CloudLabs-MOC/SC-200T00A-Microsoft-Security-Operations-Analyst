@@ -51,6 +51,9 @@ In this task, you will review cloud security posture management. The Secure Scor
    ![Picture 1](../Media/ch-2.0.png)
 
 1. The Secure score most likely will show *N/A* until the score is calculated.
+   
+   > **Note:** The Secure score may initially be in a buffering state and may not display any value until the calculation is complete.
+   
 1. Under *General*, select **Recommendations** in the portal menu.
 
    ![Picture 1](../Media/ch-2.1.png)
