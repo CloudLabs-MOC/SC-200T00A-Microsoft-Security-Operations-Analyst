@@ -44,7 +44,7 @@ In this task, you will create a Log Analytics workspace for use with Microsoft D
 In this task, you will enable and configure Microsoft Defender for Cloud.
 
 1. In the Search bar of the Azure portal, type *Defender*, then select **Microsoft Defender for Cloud**.
-1. In the left menu for Microsoft Defender for Cloud, under **Management**, select **Environment settings (1)** and select your **Subscription (2)** by expanding the Tenant Root Group.
+1. In the left menu for Microsoft Defender for Cloud, under **Management**, select **Environment settings (1)** then scroll down to bottom and **select your Subscription (2)** by expanding the Tenant Root Group.
 
    ![Picture 1](../Media/ch-7.png)
 
