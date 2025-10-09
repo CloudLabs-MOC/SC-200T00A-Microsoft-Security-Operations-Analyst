@@ -118,6 +118,10 @@ Feel free to **start, restart, or stop (2)** your virtual machine as needed from
    
       ![Image](./images/GettingStarted-07.png "Enter Password")
 
+      >**Note:** If prompted to Enter Temporary Access Pass, enter the following **Password**: <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Sign in (2)**.
+
+      ![](./images/GS-0.png) 
+
 1. If you see the pop-up Action Required, click **Ask Later**.
 
    ![Image](./images/GettingStarted-08.png)
