@@ -104,7 +104,7 @@ Feel free to **start, restart, or stop (2)** your virtual machine as needed from
  
 1. On your virtual machine, click on the **Azure Portal** icon.
 
-  ![Image](./images/GettingStarted-09.png)
+    ![Image](./images/GettingStarted-09.png)
 
 1. On the **Sign in to Microsoft Azure** tab you will see the login screen, in that enter the following email/username, and click on **Next (2)**. 
 

@@ -66,11 +66,11 @@ In this lab, you will enable and configure data connectors in Microsoft Sentinel
 
  In this task, you will connect the Microsoft Entra ID connector to Microsoft Sentinel.
 
- 1. On the left side menu, in the Configuration area select **Data connectors**.
+ 1. On the left side menu, select **Data connectors (1)** under the Configuration. 
  
- 1. On the **Data connectors** page, click on **Content Hub.** 
+ 1. On the **Data connectors** page, click on **Content Hub (2).** 
 
-    ![Picture 1](./images/Ex2-01.png)
+    ![Picture 1](./images/Ex1.png)
  
  1. On the Content hub page, search for **Microsoft Entra ID (1)**, then select **Microsoft Entra ID (2)** Data connector from the dropdown list and click on **Install (3)** to install it.
 
@@ -84,6 +84,8 @@ In this lab, you will enable and configure data connectors in Microsoft Sentinel
 
     ![Picture](./images/Ex2-16.png)
 
+    >**Note:** It may take **15–20 minutes** for the **Microsoft Entra ID** data connector to show a **Connected** status after configuration. 
+
 ### Task 3: Connect the Microsoft Entra ID Protection connector
 
 In this task, you will connect the Microsoft Entra ID Protection connector to Microsoft Sentinel.
@@ -96,16 +98,17 @@ In this task, you will connect the Microsoft Entra ID Protection connector to Mi
  
 1. From the **Configuration** area select the **Connect** button.
 
-   ![Picture 1](./images/Ex2-13.png)
-
+   ![Picture 1](./images/Ex2-13.png) 
 
 ### Task 4: Connect the Microsoft Defender for Cloud connector
 
 In this task, you will connect the Microsoft Defender for Cloud connector.
 
-1. On the **Data connectors** page, click on **Content Hub.** 
+ 1. On the left side menu, select **Data connectors (1)** under the Configuration. 
+ 
+ 1. On the **Data connectors** page, click on **Content Hub (2).** 
 
-   ![Picture 1](./images/Ex2-01.png)
+    ![Picture 1](./images/Ex1.png)
 
 1. On **Content hub** page, search for **Microsoft Defender for Cloud (1)** and **expand it (2)** from the list, then select **Subscription-based Microsoft Defender for Cloud (Legacy) (3)** Data connector and click on **Install Solution (4)** to install it.
 
@@ -121,14 +124,15 @@ In this task, you will connect the Microsoft Defender for Cloud connector.
 
    ![Picture](./images/Ex2-04.png)
 
-
 ### Task 5: Connect the Azure Activity connector
 
 In this task, you will connect the Azure Activity connector.
 
-1. On the **Data connectors** page, click on **Content Hub.** 
+ 1. On the left side menu, select **Data connectors (1)** under the Configuration. 
+ 
+ 1. On the **Data connectors** page, click on **Content Hub (2).** 
 
-   ![Picture 1](./images/Ex2-01.png)
+    ![Picture 1](./images/Ex1.png)
 
 1. On **Content hub** page, search for **Azure Activity (1)** and select **Azure Activity (2)** Data connector from the list,  and click on **Install (3)** to install it.
 
@@ -159,6 +163,9 @@ In this task, you will connect the Azure Activity connector.
 1. On **Review + create**, select **Create** to finish. 
 
    ![Picture](./images/Ex2-11.png)
+
+    > **Note:** It may take **15–20 minutes** for the **Azure Activity** data connector to show a **Connected** status after configuration.
+
 
 ### Summary
 In this lab, you have integrated log data from various data sources within the organization into Microsoft Sentinel using appropriate data connectors.

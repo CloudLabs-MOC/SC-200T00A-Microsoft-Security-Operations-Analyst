@@ -15,7 +15,6 @@ In this lab, you will configure the Threat Intelligence data connector in Micros
 - Task 3: Create a Threat Indicator
 - Task 4: Configure log retention
 
-
 ### Task 1: Explore Content hub
 
 The Content hub delivers these content types as solutions and standalone items. Solutions are packages of Microsoft Sentinel content or Microsoft Sentinel API integrations that support an end-to-end product, domain, or industry vertical scenario in Microsoft Sentinel.
@@ -34,7 +33,6 @@ When you access the Content Hub, you can:
 
 In the next task, you will perform the practical implementation of the **Content hub** by installing **Threat Intelligence** data connector.  
 
-
 ### Task 2: Connect the Threat Intelligence connector
 
 In this task, you will connect the Threat Intelligence data connector in Microsoft Sentinel by installing it from the Content Hub to create threat indicators for analysis.
@@ -47,17 +45,19 @@ In this task, you will connect the Threat Intelligence data connector in Microso
 
    ![](./images/Ex4-00.png)
 
-1. In Microsoft Sentinel, on the left menu, select the **Content hub (1)** option under Content management, and you will find a **Click here to go to the Defender portal (2)** link, click on it to navigate to the **Defender portal**.
+ 1. On the left side menu, select **Data connectors (1)** under the Configuration. 
+ 
+ 1. On the **Data connectors** page, click on **Content Hub (2).** 
 
-   ![](./images/Ex3-04.png)
+    ![Picture 1](./images/Ex1.png)
 
-1. On Defender portal, Content hub page will open, in search bar type **Threat intelligence (1)**, select **Threat intelligence (2)** from the list, then click on **Install (3)**. 
+1. On the Content hub page search bar type **Threat intelligence (1)**, select **Threat intelligence (2)** from the list, then click on **Install (3)**. 
 
-   ![](./images/Ex3-25.png)
+   ![](./images/NewEx3Task2-0.png)
 
 1. Expand **Threat intelligence (1)** data connector, select **Microsoft Defender Threat intelligence (2)** and click on it, then select the **Open connector page (3)** on the connector information blade.
 
-   ![](./images/Ex3-26.png)
+   ![](./images/NewEx3Task2-1.png)
 
 1. On **Microsoft Defender Threat intelligence** data connection page, click **Connect** to connect the data connector. 
 
@@ -66,6 +66,14 @@ In this task, you will connect the Threat Intelligence data connector in Microso
 ### Task 3: Create a Threat Indicator
 
 In this task, you will create an indicator in Microsoft Sentinel.
+
+1. Select the **Microsoft Sentinel Workspace** you created earlier.
+
+    ![](./images/Ex4-00.png)
+
+ 1. On the left side menu, select **Threat intelligence (1)** under Threat management, then click on the link **Click here to go to the Defender portal (2)**.    
+
+    ![](./images/NewEx3Task3-0.png)
 
 1. Navigate to Defender Portal, expand **Threat intelligence (1)** from the left hand menu and select **Intel management (2)**. 
 
@@ -113,19 +121,22 @@ In this task, you will create an indicator in Microsoft Sentinel.
 1. Choose working mode as **KQL mode (2)**, enter the below given query **(3)**, then click **Run (4)** and in **Results (5)** section see the output of the query.  
 
     ```KQL
-    ThreatIntelligenceIndicator
+    ThreatIntelIndicators
     ```
-    ![](./images/Ex3-02.png)
+    ![](./images/KQL-0.png)
     
     >**Note:** You may need to wait for 20 minutes to get the expected output.
 
-1. Keep the working mode as **KQL mode (1)**, enter the below given query **(2)** to see the DomainName column, then click **Run (3)** and in **Results (5)** section you should now, see the **DomainName column with onmicrosoft.com domain** as an output of the query. 
+1. Keep the working mode as **KQL mode (1)**, enter the below given query **(2)** to see the Observable Value column, then click **Run (3)** and in **Results (5)** section you should now, see the **ObservableValue with onmicrosoft.com domain** as an output of the query. 
 
     ```KQL
-    ThreatIntelligenceIndicator
-    | project DomainName
+   ThreatIntelIndicators
+   | where ObservableValue ==  "onmicrosoft.com"
+   | project ObservableValue
     ```
-   ![](./images/Ex3-03.png)
+   ![](./images/KQL-1.png)
+
+    >**Note:** You may need to wait for 20 minutes to get the expected output.
 
 ### Task 4: Configure log retention
 

@@ -9,7 +9,6 @@ In this exercise, you will set up the foundational components required for Micro
 
 Next, you will deploy Microsoft Sentinel to the newly created workspace. Deploying Sentinel integrates advanced security analytics, threat intelligence, and incident response features into your environment. By completing this exercise, you will establish the core infrastructure that enables you to monitor security events, detect potential threats, and investigate incidents in subsequent exercises.
 
-
 ## Lab Objectives
  In this lab, you will perform the following:
 
@@ -20,13 +19,13 @@ Next, you will deploy Microsoft Sentinel to the newly created workspace. Deployi
 
 In this task, you will create a Log Analytics workspace for use with Microsoft Defender for Cloud.
 
-1. In the Search bar of the Azure portal, type **Log Analytics (1)**, then select **Log Analytics workspaces (2)**.
+1. In the Search bar of the Azure portal, type **Log Analytics workspaces (1)**, then select **Log Analytics workspaces (2)**.
 
-   ![](./images/Ex1-00.png)
+    ![](./images/Ex1-00.png)
 
 1. Select **+ Create** from the command bar.
 
-   ![](./images/Ex1-01.png)
+    ![](./images/Ex1-01.png)
 
 1. To create a **log analytics workspaces**, follow these steps:
 
@@ -40,11 +39,11 @@ In this task, you will create a Log Analytics workspace for use with Microsoft D
 
 1. Once the workspace validation has passed, select **Create**.
 
-   ![](./images/Ex1-03.png)
+    ![](./images/Ex1-03.png)
 
 1. Wait for the new workspace to be provisioned, this may take a few minutes.
    
-   ![](./images/Ex1-04.png)
+    ![](./images/Ex1-04.png)
 
 ### Task 2 : Deploy Microsoft Sentinel to a workspace
 
@@ -52,24 +51,21 @@ In this task, you will deploy Microsoft Sentinel to an existing Log Analytics wo
 
 1. In the Search bar of the Azure portal, type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
-   ![](./images/Ex1-05.png)
+    ![](./images/Ex1-05.png)
 
 1. Select **+ Create** from the command bar.
 
-   ![](./images/Ex1-06.png)
+    ![](./images/Ex1-06.png)
 
 1. Select the newly created workspace named **uniquenameSentinel (1)** and click on **Add (2)**.
   
-   ![](./images/Ex1-07.png)
+    ![](./images/Ex1-07.png)
 
 1. In the **Microsoft Sentinel free trial activated** tab, select **Ok** to activate the free trial.
 
-   ![](./images/Ex1-08.png)
+    ![](./images/Ex1-08.png)
 
-1. Now you will see the **Getting started** page for Microsoft Sentinel.
-
-    ![](./images/Ex1-10.png)    
-
+1. Now you will see the **Getting started** page for Microsoft Sentinel.   
 
 ## Summary
 In this lab, you have completed the following:
