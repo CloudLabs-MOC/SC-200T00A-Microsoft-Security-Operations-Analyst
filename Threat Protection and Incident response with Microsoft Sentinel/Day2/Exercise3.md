@@ -12,9 +12,8 @@ In this exercise, you will explore **Microsoft Sentinel’s** advanced capabilit
  In this lab, you will perform the following:
 
 - Task 1: Connect the Threat Intelligence connector
-- Task 2:  Explore Workbook templates
-- Task 3:  Save and modify a workbook template
-- Task 4:  Create a Workbook
+- Task 2: Save a Workbook template
+- Task 2:  Create a Workbook
 
 ### Task 1: Connect the Threat Intelligence connector
 

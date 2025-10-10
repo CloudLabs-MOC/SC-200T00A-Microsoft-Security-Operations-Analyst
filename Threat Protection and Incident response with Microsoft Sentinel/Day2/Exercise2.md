@@ -10,8 +10,6 @@ In this exercise, you will leverage Microsoft Sentinel’s proactive threat-hunt
  In this lab, you will perform the following:
 
 - Task 1: Create a hunting query
-- Task 2: Bookmarking hunting query results
-- Task 3: Promote a bookmark to an incident
 - Task 4: Create a Watchlist
 
 ### Task 1: Create a hunting query
@@ -102,7 +100,7 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
    ![Picture](./images/Ex2Hunt-0.png)
 
-### Task 4: Create a Watchlist
+### Task 2: Create a Watchlist
 
 In this task, you will create a watchlist in Microsoft Sentinel.
 
@@ -169,6 +167,9 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
      ![Picture](./images/Ex2-01.png)
 
+    >**Note:** To upload file click on **Browse for files**, upload window will open. Navigate to **This PC-> Documents (1)** path, select the **HighValue.csv (2)** file, then click on **Open (3).**
+      ![Picture](./images/NewEx2-0.png)
+
 1. Review the settings you entered and select **Create**.
 
    ![Picture](./images/Ex2-07.png)
@@ -179,7 +180,7 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
    ![Picture](./images/Ex2-08.png)
 
-    >**Important:** It could take up to ten minutes for the watchlist to appear. **Please continue to with the following task and run this command on the next lab**.
+    >**Important:** It could take up to ten minutes for the watchlist to appear. **Please continue to with the next lab**. You can check in between and perform the below step.
 
 1. You will be directed to the Advanced hunting page, in the query section ensure the *_GetWatchlist('HighValueHosts')* **(1)** query is there by default, click on **Run query (2)** and you will output in **Result (3)** section.
     

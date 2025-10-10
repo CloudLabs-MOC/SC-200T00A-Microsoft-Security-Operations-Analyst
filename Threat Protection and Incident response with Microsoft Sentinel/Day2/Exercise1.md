@@ -122,6 +122,8 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
    ![Picture](./images/Ex1-01.png)
 
+    > **Note:** If you are unable to find **Suspicious Resource deployment** under rule templates. Wait for **Azure Activity** data connector to show a **Connected** status after configuration.   
+
 1. In the Analytics Rule Wizard, review the General section, then click **Next : set rule logic>.**
 
    >**Note:** you can click either the tab at the top, or the button at the bottom to continue.
@@ -132,7 +134,7 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
 	  ![Picture](./images/Ex1-03.png)
 
-7. On the **Incident settings** tab, note that **Incident creation** is **Enabled (1)**, and **Alert grouping** is **Disabled (2)**. Not every Alert detected by Sentinel must be promoted into an Incident - particularly noisy alerts! These settings can always be modified later if desired, then click **Next :Automated response>**.
+7. On the **Incident settings** tab, note that **Incident creation** is **Enabled (1)**, and **Alert grouping** is **Disabled (2)**. Not every Alert detected by Sentinel must be promoted into an Incident - particularly noisy alerts! These settings can always be modified later if desired, then click **Next :Automated response> (3)**.
    
 	![Picture](./images/Ex1-04.png)
 
