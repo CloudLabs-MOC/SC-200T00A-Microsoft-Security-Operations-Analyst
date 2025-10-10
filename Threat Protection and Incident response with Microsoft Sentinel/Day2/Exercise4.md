@@ -6,7 +6,6 @@
 
 In this exercise, you will learn how to use Microsoft Sentinel’s repository integration for managing and version-controlling security content. You will begin by exporting an analytical rule, then set up an Azure DevOps environment to store and manage your exported content. Finally, you will connect Microsoft Sentinel to your Azure DevOps repository, enabling centralized management, collaboration, and automated deployment of security rules.
 
-
 ## Lab Objectives
 
  In this lab, you will perform the following:
@@ -25,7 +24,7 @@ In this exercise, you will learn how to use Microsoft Sentinel’s repository in
 
    ![](../Day1/images/Ex4-00.png)
 
-1. On **Microsoft Sentinel Workspace** page, select **Analytics (1)** under the **Configuration** from the left hand menu, and you will find a **Click here to go to the Defender portal (2)** link, click on it to navigate to the **Defender portal**.
+1. On the **Microsoft Sentinel Workspace** page, select **Analytics (1)** under the **Configuration** from the left-hand menu, and you will find a **Click here to go to the Defender portal (2)** link. Click on it to navigate to the **Defender portal**.
 
    ![Picture 1](./images/Ex4-00.png)
 
@@ -41,7 +40,7 @@ In this exercise, you will learn how to use Microsoft Sentinel’s repository in
 
 1. Select **Notepad** and then select **OK**.
 
-1. Review the Azure Resource Manager template and the close it when done.
+1. Review the Azure Resource Manager template and close it when done.
 
 ### Task 2: Create our Azure DevOps environment
 
@@ -61,9 +60,9 @@ In this task, you will create an Azure DevOps repository.
   
    ![Picture](./images/Repo-2.png)
 
-1. On the **Almost done...** page, Enter the following details:
+1. On the **Almost done...** page, enter the following details:
 
-   - Name your Azure DevOps organization: **Keep the deault Name (1)**
+   - Name your Azure DevOps organization: **Keep the default Name (1)**
    
    - We'll host your projects in: **Enter the country (2)** .
    - Enter the characters you see: **Enter the displayed characters (3)**
@@ -99,7 +98,7 @@ In this task, you will create an Azure DevOps repository.
 
 ### Task 3: Connect Sentinel to Azure DevOps
 
-1. Navigate back to Azure portal, in search bar type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
+1. Navigate back to the Azure portal, in the search bar type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
    ![](../Day1/images/Ex1-05.png)
 
@@ -107,11 +106,11 @@ In this task, you will create an Azure DevOps repository.
 
    ![](../Day1/images/Ex4-00.png)
 
-1. On Microsoft Sentinel workspace page, in **Overview (1)** section, you will find a **Click here to go to the Defender portal (2)** link, click on it to navigate to the **Defender portal**.
+1. On the Microsoft Sentinel workspace page, in the **Overview (1)** section, you will find a **Click here to go to the Defender portal (2)** link, then click on it to navigate to the **Defender portal**.
 
    ![Picture](./images/Repo-14.png)
 
-1. On Defender portal, navigate to **Repositories (1)** from the left hand menu under Content management, then click on **+ Add new (2)**.
+1. On the Defender portal, navigate to **Repositories (1)** from the left-hand menu under Content management, then click on **+ Add new (2)**.
 
    ![Picture](./images/Repo-9.png)
 
@@ -139,5 +138,6 @@ In this lab, you successfully exported an **analytical rule** from Microsoft Sen
    
 ## You have successfully completed the lab!
 
-In this hands-on lab **Threat Protection and Incident response with Microsoft Sentinel- Day 2**, you have strengthened your expertise in Microsoft Sentinel’s threat detection, investigation, and automation capabilities. You worked with analytics rules, hunting queries, watchlists, advanced features, and repository integrations to create a comprehensive and proactive security monitoring environment. These skills will help you detect threats earlier, investigate incidents effectively, and streamline security operations for improved protection.
+In this hands-on lab **Threat Protection and Incident Response with Microsoft Sentinel- Day 2**, you have strengthened your expertise in Microsoft Sentinel’s threat detection, investigation, and automation capabilities. You worked with analytics rules, hunting queries, watchlists, advanced features, and repository integrations to create a comprehensive and proactive security monitoring environment. These skills will help you detect threats earlier, investigate incidents effectively, and streamline security operations for improved protection.
+
 
