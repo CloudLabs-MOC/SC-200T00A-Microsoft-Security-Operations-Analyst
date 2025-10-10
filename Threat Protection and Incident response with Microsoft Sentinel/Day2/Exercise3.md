@@ -6,7 +6,6 @@
 
 In this exercise, you will explore **Microsoft Sentinel’s** advanced capabilities for enhancing security monitoring and visualization. You will start by connecting the Threat Intelligence data connector to enrich your environment with actionable threat indicators. Next, you will explore available workbook templates, customize a selected template, and create a new workbook to present security insights in a meaningful and interactive way.
 
-
 ## Lab Objectives
 
  In this lab, you will perform the following:
@@ -27,11 +26,11 @@ In this task, you will connect the Threat Intelligence data connector in Microso
 
    ![](../Day1/images/Ex4-00.png)
 
-1. In Microsoft Sentinel, on the left menu, select the **Content hub (1)** option under Content management, and you will find a **Click here to go to the Defender portal (2)** link, click on it to navigate to the **Defender portal**.
+1. In Microsoft Sentinel, on the left menu, select the **Content hub (1)** option under Content management, and you will find a **Click here to go to the Defender portal (2)** link. Click on it to navigate to the **Defender portal**.
 
    ![](../Day1/images/Ex3-04.png)
 
-1. On Defender portal, Content hub page will open, in search bar type **Threat intelligence (1)**, select **Threat intelligence (2)** from the list, then click on **Install (3)**. 
+1. On the Defender portal, the Content hub page will open. In the search bar, type **Threat intelligence (1)**, select **Threat intelligence (2)** from the list, then click on **Install (3)**. 
 
    ![](./images/Ex3-25.png)
 
@@ -42,7 +41,7 @@ In this task, you will connect the Threat Intelligence data connector in Microso
    ![](../Day1/images/Ex3-00.png)
 
 1. Review the different indicator types available in the ***Types*** dropdown. Select the **domain-name**. Enter your initials in the Domain box. You can use **onmicrosoft.com**.
-1. On **New TI objects** pane, enter the following details:
+1. On the **New TI objects** pane, enter the following details:
 
     - **Object type:** Select **Indicator (1)** from the dropdown menu.
 
@@ -66,7 +65,7 @@ In this task, you will connect the Threat Intelligence data connector in Microso
 
       **Note:** It could take a couple of minutes for the indicator to appear.
 
-1. On Microsoft Sentinel workspace page, in **Workbook (1)** section, you will find a **Click here to go to the Defender portal (2)** link, click on it to navigate to the **Defender portal**.
+1. On the Microsoft Sentinel workspace page, in the **Workbook (1)** section, you will find a **Click here to go to the Defender portal (2)** link. Click on it to navigate to the **Defender portal**.
 
    ![Picture](./images/Ex3-07.png)
 
@@ -76,7 +75,7 @@ In this task, you will connect the Threat Intelligence data connector in Microso
 
    ![Picture](./images/Ex3-10.png)
 
-1. Review the contents of the workbook. It shows insights of your Azure subscription operations by collecting and analyzing the data from the Activity Log.
+1. Review the contents of the workbook. It shows insights into your Azure subscription operations by collecting and analyzing the data from the Activity Log.
 
    ![Picture](./images/Ex3-08.png)
 
@@ -114,7 +113,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
     >**Note:** Although it is a new workbook, a startup template is used.
 
-1. A New Workbook template will open, click on **Edit** to edit the workbook.
+1. A New Workbook template will open. Click on **Edit** to edit the workbook.
 
    ![Picture](./images/Wb-3.png)
 
@@ -126,7 +125,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
    ![Picture](./images/Wb-0.png)
 
-1. Select **Edit** visible next to barchart graph.
+1. Select **Edit** visible next to the barchart.
 
    ![Picture](./images/Wb-2.png)
 
@@ -172,15 +171,15 @@ In this task, you will create a new workbook with advanced visualizations.
 
     ![Picture](./images/Wb-7.png)
 
-1. Select **Done Editing** in Workbook's top command bar.
+1. Select **Done Editing** in the Workbook's top command bar.
 
    ![Picture](./images/Wb-9.png)
 
-1. Select the **Save** icon in Workbook's top command bar.
+1. Select the **Save** icon in the Workbook's top command bar.
 
    ![Picture](./images/Wb-10.png)
 
-1. On **Save Workbook** pop-up, enter the following details:
+1. On the **Save Workbook** pop-up, enter the following details:
 
     - Change the *Title* to **My Workbook (1)**.
     - Keep the **Location (2)** as default region.
