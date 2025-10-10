@@ -82,7 +82,17 @@ In this task, you will create an Azure DevOps repository.
 
     ![Picture](./images/Repo-5.png)
 
-1. Select **Browse** and select the file **Azure_Sentinel_analytic_rule.json** from your *Downloads* directory and select **Commit**.
+1. On Commit window, click **Browse...** to upload file.
+
+    ![Picture](./images/Ex4-02.png)
+
+1. On the upload window, navigate to **Downloads (1)** path, and select the file **Azure_Sentinel_analytic_rule.json (2)** file and select **Open (3)**.
+
+    ![Picture](./images/Ex4-03.png)
+
+1. Once the file is uploaded, click on **Commit**.  
+
+    ![Picture](./images/Ex4-04.png)
 
 1. Select **Azure DevOps** on the top left corner of the page.  This displays your organization and projects.
 
