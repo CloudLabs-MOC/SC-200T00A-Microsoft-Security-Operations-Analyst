@@ -6,15 +6,13 @@
 
 In this exercise, you will explore **Microsoft Sentinel’s** advanced capabilities for enhancing security monitoring and visualization. You will start by connecting the Threat Intelligence data connector to enrich your environment with actionable threat indicators. Next, you will explore available workbook templates, customize a selected template, and create a new workbook to present security insights in a meaningful and interactive way.
 
-
 ## Lab Objectives
 
  In this lab, you will perform the following:
 
 - Task 1: Connect the Threat Intelligence connector
-- Task 2:  Explore Workbook templates
-- Task 3:  Save and modify a workbook template
-- Task 4:  Create a Workbook
+- Task 2: Save a Workbook template
+- Task 2:  Create a Workbook
 
 ### Task 1: Connect the Threat Intelligence connector
 
@@ -28,15 +26,46 @@ In this task, you will connect the Threat Intelligence data connector in Microso
 
    ![](../Day1/images/Ex4-00.png)
 
-1. In Microsoft Sentinel, on the left menu, select the **Content hub (1)** option under Content management, and you will find a **Click here to go to the Defender portal (2)** link, click on it to navigate to the **Defender portal**.
+1. In Microsoft Sentinel, on the left menu, select the **Content hub (1)** option under Content management, and you will find a **Click here to go to the Defender portal (2)** link. Click on it to navigate to the **Defender portal**.
 
    ![](../Day1/images/Ex3-04.png)
 
-1. On Defender portal, Content hub page will open, in search bar type **Threat intelligence (1)**, select **Threat intelligence (2)** from the list, then click on **Install (3)**. 
+1. On the Defender portal, the Content hub page will open. In the search bar, type **Threat intelligence (1)**, select **Threat intelligence (2)** from the list, then click on **Install (3)**. 
 
    ![](./images/Ex3-25.png)
 
-1. On Microsoft Sentinel workspace page, in **Workbook (1)** section, you will find a **Click here to go to the Defender portal (2)** link, click on it to navigate to the **Defender portal**.
+1. Navigate to Defender Portal, expand **Threat intelligence (1)** from the left hand menu and select **Intel management (2)**. 
+
+1. On **Intel management** page, click on **+ New (3)** under Indicator, then select **TI object (4)**.
+
+   ![](../Day1/images/Ex3-00.png)
+
+1. Review the different indicator types available in the ***Types*** dropdown. Select the **domain-name**. Enter your initials in the Domain box. You can use **onmicrosoft.com**.
+1. On the **New TI objects** pane, enter the following details:
+
+    - **Object type:** Select **Indicator (1)** from the dropdown menu.
+
+    - Click on **+ New observable (2)**, select **Domain name** from the drop down.
+
+    - **Domain name value:** Enter **onmicrosoft.com (3)**.
+
+    - **Name:** provide **Indicator-test (4)**.
+
+    - **Indicator types:** Select **Malicious activity (5)** from the dropdown menu.
+
+    - **Valid from:** Keep **today's date (6)**.
+
+    - **Valid untill:** Keep date of **next day (7)**.
+
+    - **Source:** Should be **Microsoft Sentinel (8)**.
+
+    - Then click on **Add (9)**.
+
+      ![](../Day1/images/Ex3-01.png)
+
+      **Note:** It could take a couple of minutes for the indicator to appear.
+
+1. On the Microsoft Sentinel workspace page, in the **Workbook (1)** section, you will find a **Click here to go to the Defender portal (2)** link. Click on it to navigate to the **Defender portal**.
 
    ![Picture](./images/Ex3-07.png)
 
@@ -46,7 +75,7 @@ In this task, you will connect the Threat Intelligence data connector in Microso
 
    ![Picture](./images/Ex3-10.png)
 
-1. Review the contents of the workbook. It shows insights of your Azure subscription operations by collecting and analyzing the data from the Activity Log.
+1. Review the contents of the workbook. It shows insights into your Azure subscription operations by collecting and analyzing the data from the Activity Log.
 
    ![Picture](./images/Ex3-08.png)
 
@@ -84,87 +113,89 @@ In this task, you will create a new workbook with advanced visualizations.
 
     >**Note:** Although it is a new workbook, a startup template is used.
 
-1. You will be navigated to Azure portal, to edit the workbook, select **Edit** to edit New workbook.
+1. A New Workbook template will open. Click on **Edit** to edit the workbook.
 
-   ![Picture](./images/Ex3-13.png)
+   ![Picture](./images/Wb-3.png)
 
 1. Select the **Edit** button below the first paragraph of the workbook.
 
-   ![Picture](./images/Ex3-14.png)
+   ![Picture](./images/Wb-8.png)
 
-1. Type **# My workbook** in a new line on top of **## New workbook**, then click **Done Editing** on the bottom of this section,
+1. Type **# My workbook (1)** in a new line on top of **## New workbook**, then scroll a bit to click **Done Editing (2)**.
 
-   ![Picture](./images/Ex3-15.png)
+   ![Picture](./images/Wb-0.png)
 
-1. Select **Edit** below the only visible barchart graph.
+1. Select **Edit** visible next to the barchart.
 
-   ![Picture](./images/Ex3-16.png)
+   ![Picture](./images/Wb-2.png)
 
 1. Review the KQL statement that provides a *union* statement of counts across all tables.
 
-1. Scroll down and select the **Done Editing** on the bottom menu.
+1. Scroll down and select the **X Cancel** on the bottom menu.
 
-    ![Picture](./images/Ex3-17.png)
+    ![Picture](./images/Wb-1.png)
 
-1. Select the **ellipsis (...) (1)** next to the *Edit* button of the barchart graph, then select **+ Add (2)**, then select **Add query (3)**.
+1. Select the **+ Add (1)** below the barchart, then select **Add data source + visualization (2)**.
 
-   ![Picture](./images/Ex3-18.png)
-
-1. Type **Heartbeat (1)** into the query box.
-
-1. Change the *Time Range* to **Last hour (2)**.
-
-1. Change the *Visualization* to **Time chart (3)**.
-
-1. Click on **Run Query (4)** and see the output.
-
-1. Scroll down and select **Done Editing** on the bottom menu.
-
-   ![Picture](./images/Ex3-19.png)
-
-1. Scroll down and at the bottom of the workbook select **+ Add**, then **Add query**.
-
-    ![Picture](./images/Ex3-18.png)
+   ![Picture](./images/Wb-5.png)
 
 1. Type **Heartbeat (1)** into the query box.
 
-1. Change the *Time Range* to **Last hour (2)**.
+1. Change the *Time Range* to **Last 4 hours (2)**.
+
+1. Change the *Visualization* to **Time Chart (3)**.
+
+1. Change the *Size* to **Small (4)**.
+
+1. Click on **Run Query (5)** and see the output.
+
+1. Scroll down and select **Done Editing (6)** on the bottom menu.
+
+   ![Picture](./images/Wb-6.png)
+
+1. Select the **+ Add (1)** below the barchart, then select **Add data source + visualization (2)**.
+
+   ![Picture](./images/Wb-5.png)
+
+1. Type **SecurityAlert (1)** into the query box.
+
+1. Change the *Time Range* to **Last 4 hours (2)**.
 
 1. Change the *Visualization* to **Grid (3)**.
 
-1. Click on **Run Query (4)** and see the output.
+1. Change the *Size* to **Small (4)**.
 
-1. Scroll down and select **Done Editing (5)** on the bottom menu, for the new *Editing query item: query - 3*.
+1. Click on **Run Query (5)** and see the output.
 
-    ![Picture](./images/Ex3-20.png)
+1. Scroll down and select **Done Editing (6)** on the bottom menu, for the new *Editing query item: query - 3*.
 
-1. Select **Done Editing (1)** in Workbook's top command bar, then select the **Save (2)** icon.
+    ![Picture](./images/Wb-7.png)
 
-   ![Picture](./images/Ex3-21.png)
+1. Select **Done Editing** in the Workbook's top command bar.
 
-1. On **Save As** page, enter the following details:
+   ![Picture](./images/Wb-9.png)
+
+1. Select the **Save** icon in the Workbook's top command bar.
+
+   ![Picture](./images/Wb-10.png)
+
+1. On the **Save Workbook** pop-up, enter the following details:
 
     - Change the *Title* to **My Workbook (1)**.
+    - Keep the **Location (2)** as default region.
+    - Click on **Save (3)**.
 
-    - Select the Default **Subscription (2)**.
+        ![Picture](./images/Wb-11.png)
 
-    -  Select the **sentinel-rg (3)** resource group.
-
-    - Keep the **Region (4)** as default.
-
-    - Click on **Save As (5)**.
-
-        ![Picture](./images/Ex3-22.png)
-
-1. Navigate back to the **Workbooks (1)** page in Defender potal, under **My workbooks** tab, select the workbook you just created, **My workbook (2)**.
+1. Navigate back to the **Workbooks (1)** page in Defender potal, under **My orkbooks** tab, select the workbook you just created, **My Workbook (2)**.
 
 1. On the right pane, select **View saved workbook (3)** to review your workbook.
 
-    ![Picture](./images/Ex3-23.png)
+    ![Picture](./images/Wb-12.png)
 
 1. Now, you will see the newly created workbook.    
 
-    ![Picture](./images/Ex3-24.png)
+    ![Picture](./images/Wb-13.png)
 
 
 ### Summary

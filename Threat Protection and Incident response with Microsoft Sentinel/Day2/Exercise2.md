@@ -10,15 +10,13 @@ In this exercise, you will leverage Microsoft Sentinel’s proactive threat-hunt
  In this lab, you will perform the following:
 
 - Task 1: Create a hunting query
-- Task 2: Bookmarking hunting query results
-- Task 3: Promote a bookmark to an incident
-- Task 4: Create a Watchlist
+- Task 2: Create a Watchlist
 
 ### Task 1: Create a hunting query
 
 In this task, you will create a hunting query, bookmark a result, and create a Livestream.
 
-1. Navigate back to Azure portal, in search bar type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
+1. Navigate back to the Azure portal, in the search bar type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
    ![](../Day1/images/Ex1-05.png)
 
@@ -50,21 +48,21 @@ In this task, you will create a hunting query, bookmark a result, and create a L
    - Click on **+ Add new entity (2)**.  
    - Entity mapping: Select **Host (3)** from the dropdown menu.
    - Then **Hostname (4)** and **Computer (5)** for the values.
-   - Tactics and Techniques: Select **Command and Control (6)** form the dropdown menu.
+   - Tactics and Techniques: Select **Command and Control (6)** from the dropdown menu.
 
      ![Picture](./images/Ex2-11.png) 
 
 1. Close the *Logs* window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
 
-1. On Microsoft Sentinel workspace page, in **Overview (1)** section, you will find a **Click here to go to the Defender portal (2)** link, click on it to navigate to the **Defender portal**.
+1. On the Microsoft Sentinel workspace page, in the **Overview (1)** section, you will find a **Click here to go to the Defender portal (2)** link, then click on it to navigate to the **Defender portal**.
 
    ![Picture](./images/Repo-14.png)
 
-1. On Defender portal, navigate to **Hunting (1)** option under the Threat management from the left hand menu, select **+ New query (2)**.
+1. On the Defender portal, navigate to the **Hunting (1)** option under the Threat management from the left-hand menu, select **+ New query (2)**.
 
    ![Picture](./images/Ex2-12.png)
 
-1. On create hunting query page, enter name as **Microsoft Sentinel - Hunting**, for query add the below given query. 
+1. On the Create hunting query page, enter the name as **Microsoft Sentinel - Hunting**. For the query, add the following query. 
 
     ```KQL
     let lookback = 1d;
@@ -98,9 +96,11 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
    ![Picture](./images/Ex2-17.png)
 
-1. Review that the *Status* is now *Running*. This will be running every 30 seconds in the background and you will receive a notification in the Azure Portal (bell icon) when a new result is found. 
+1. Review that the *Status* is now *Running*. This will be running every 30 seconds in the background, and you will receive a notification in the Azure Portal (bell icon) when a new result is found. 
 
-### Task 4: Create a Watchlist
+   ![Picture](./images/Ex2Hunt-0.png)
+
+### Task 2: Create a Watchlist
 
 In this task, you will create a watchlist in Microsoft Sentinel.
 
@@ -108,11 +108,10 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
     ![Picture](./images/Ex2-02.png)
 
-1. Type **Hostname** then press enter for a new line.
-
-1. From row 2 of the notepad, copy the following hostnames, each one in a different line:
+1. In the notepad, copy the following hostnames, each one in a different line:
 
     ```Notepad
+    Hostname
     Host1
     Host2
     Host3
@@ -126,13 +125,13 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
    ![Picture](./images/Ex2-05.png)
 
-1. On the **Save As** window, Enter File name as **HighValue.csv (1)**, for Save as type select **All Files**, then click **Save** to save the file. 
+1. On the **Save As** window, Enter File name as **HighValue.csv (1)**, for Save as type select **All Files (2)**, then click **Save (3)** to save the file. 
 
    >**Note:** The file will be saved in the *Documents* folder.
 
    ![Picture](./images/Ex2-04.png)
 
-1. Navigate back to Azure portal, in search bar type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
+1. Navigate back to the Azure portal, in the search bar type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
    ![](../Day1/images/Ex1-05.png)
 
@@ -140,15 +139,15 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
    ![](../Day1/images/Ex4-00.png)
 
-1. On Microsoft Sentinel workspace page, in **Overview (1)** section, you will find a **Click here to go to the Defender portal (2)** link, click on it to navigate to the **Defender portal**.
+1. On the Microsoft Sentinel workspace page, in the **Overview (1)** section, you will find a **Click here to go to the Defender portal (2)** link. Click on it to navigate to the **Defender portal**.
 
    ![Picture](./images/Repo-14.png)   
 
-1. On Defender portal, navigate to **Watchlist (1)** option under the Configuration from the left hand menu, select **+ New (2)** from **My Watchlists** section.
+1. On the Defender portal, navigate to the **Watchlist (1)** option under the Configuration from the left-hand menu, select **+ New (2)** from the **My Watchlists** section.
 
    ![Picture](./images/Ex2-06.png)
 
-1. In General section of the Watchlist wizard, enter the following details, then select **Next: Source > (4)**.
+1. In the General section of the Watchlist wizard, enter the following details, then select **Next: Source > (4)**.
 
     |General setting|Value|
     |---|---|
@@ -158,7 +157,7 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
     ![Picture](./images/Ex2-00.png)
 
-1. In Source section of the Watchlist wizard, add the following details, then select **Next: Review and Create > (6).**
+1. In the Source section of the Watchlist wizard, add the following details, then select **Next: Review and Create > (6).**
 
    - Source type: Ensure **Local file (1)** is selected.
    - File type: Select **CSV file with a header (.csv) (2)** from the dropdown menu.
@@ -168,19 +167,22 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
      ![Picture](./images/Ex2-01.png)
 
+    >**Note:** To upload file click on **Browse for files**, upload window will open. Navigate to **This PC-> Documents (1)** path, select the **HighValue.csv (2)** file, then click on **Open (3).**
+      ![Picture](./images/NewEx2-0.png)
+
 1. Review the settings you entered and select **Create**.
 
    ![Picture](./images/Ex2-07.png)
 
 1. The screen returns to the Watchlist page.
 
-1. You will be navigated back to Watchlist page, select the **HighValueHosts (1)** watchlist and on the right pane, select **View in logs (2)**.
+1. You will be navigated back to the Watchlist page, select the **HighValueHosts (1)** watchlist, and on the right pane, select **View in logs (2)**.
 
    ![Picture](./images/Ex2-08.png)
 
-    >**Important:** It could take up to ten minutes for the watchlist to appear. **Please continue to with the following task and run this command on the next lab**.
+    >**Important:** It could take up to ten minutes for the watchlist to appear. **Please continue with the next lab**. You can check in between and perform the steps below.
 
-1. You will be directed to the Advanced hunting page, in the query section ensure the *_GetWatchlist('HighValueHosts')* **(1)** query is there by default, click on **Run query (2)** and you will output in **Result (3)** section.
+1. You will be directed to the Advanced hunting page. In the query section, ensure the *_GetWatchlist('HighValueHosts')* **(1)** query is there by default, click on **Run query (2)**, and you will output in the **Result (3)** section.
     
     ![Picture](./images/Ex2-09.png)
 
@@ -190,5 +192,6 @@ In this exercise, you created and executed a hunting query, bookmarked important
 ## You have successfully completed the exercise!
 
 ### Now, click on **Next >>** from the lower right corner to move on to the next page.
+
 
    ![](./images/Next.png)
