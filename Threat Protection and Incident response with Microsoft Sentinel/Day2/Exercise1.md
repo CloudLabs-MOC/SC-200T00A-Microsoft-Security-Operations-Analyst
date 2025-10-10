@@ -5,7 +5,6 @@
 ## Overview
 In this exercise, you will configure **Microsoft Sentinel** to detect and respond to security threats. You will start by creating a Log Analytics Workspace and deploying Microsoft Sentinel to it. Next, you will create and export an analytics rule to detect suspicious activities. Finally, you will generate and investigate an incident to understand Sentinel’s incident management process.
 
-
 ## Lab Objectives
 
  In this lab, you will perform the following:
@@ -14,7 +13,7 @@ In this exercise, you will configure **Microsoft Sentinel** to detect and respon
 - Task 2: Deploy Microsoft Sentinel to a workspace
 - Task 3: Connect the Azure Activity connector
 - Task 4: Create and export an analytical rule
-- Task 5: Create and Investigate an incident
+- Task 5: Create and Investigate an Incident
 
 ### Task 1: Create a Log Analytics Workspace
 
@@ -46,7 +45,7 @@ In this task, you will create a Log Analytics workspace for use with Microsoft D
    
    ![](../Day1/images/Ex1-04.png)
 
-### Task 2 : Deploy Microsoft Sentinel to a workspace
+### Task 2: Deploy Microsoft Sentinel to a workspace
 
 In this task, you will deploy Microsoft Sentinel to an existing Log Analytics workspace, enabling it to collect, detect, and respond to security threats.
 
@@ -114,31 +113,31 @@ In this task, you will connect the Azure Activity connector.
 
 In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
-1. On **Microsoft Sentinel Workspace** page, select **Analytics (1)** under the **Configuration** from the left hand menu, and you will find a **Click here to go to the Defender portal (2)** link, click on it to navigate to the **Defender portal**.
+1. On the **Microsoft Sentinel Workspace** page, select **Analytics (1)** under the **Configuration** from the left-hand menu, and you will find a **Click here to go to the Defender portal (2)** link. Click on it to navigate to the **Defender portal**.
 
    ![Picture](./images/Ex1-00.png) 
 
-1. On Analytics page, in search bar under Rule template type **Suspicious Resource deployment (1)** and press enter key, then select **Suspicious Resource deployment (2)** rule from the list and click **Create rule (3)**.
+1. On the Analytics page, in the search bar under Rule template type **Suspicious Resource deployment (1)** and press the enter key, then select **Suspicious Resource deployment (2)** rule from the list and click **Create rule (3)**.
 
    ![Picture](./images/Ex1-01.png)
 
-    > **Note:** If you are unable to find **Suspicious Resource deployment** under rule templates. Wait for **Azure Activity** data connector to show a **Connected** status after configuration.   
+    > **Note:** If you are unable to find **Suspicious Resource deployment** under rule templates. Wait for the **Azure Activity** data connector to show a **Connected** status after configuration.   
 
-1. In the Analytics Rule Wizard, review the General section, then click **Next : set rule logic>.**
+1. In the Analytics Rule Wizard, review the General section, then click **Next: set rule logic>.**
 
-   >**Note:** you can click either the tab at the top, or the button at the bottom to continue.
+   >**Note:** You can click either the tab at the top or the button at the bottom to continue.
 
    ![Picture](./images/Ex1-02.png)
 
-6. On the **Set rule logic** screen, you have the ability to create or modify the KQL query, control entity mapping, enable and adjust alert grouping, and define the scheduling and lookback time range, then **Next : Incident settings>**.
+6. On the **Set rule logic** screen, you can create or modify the KQL query, control entity mapping, enable and adjust alert grouping, and define the scheduling and lookback time range, then **Next: Incident settings>**.
 
 	  ![Picture](./images/Ex1-03.png)
 
-7. On the **Incident settings** tab, note that **Incident creation** is **Enabled (1)**, and **Alert grouping** is **Disabled (2)**. Not every Alert detected by Sentinel must be promoted into an Incident - particularly noisy alerts! These settings can always be modified later if desired, then click **Next :Automated response> (3)**.
+7. On the **Incident settings** tab, note that **Incident creation** is **Enabled (1)**, and **Alert grouping** is **Disabled (2)**. Not every Alert detected by Sentinel must be promoted into an Incident - particularly noisy alerts! These settings can always be modified later if desired, then click **Next: Automated response> (3)**.
    
 	![Picture](./images/Ex1-04.png)
 
-1. On Automated response section, keep everything as default and click on **Review and Create**.
+1. In the Automated response section, keep everything as default and click on **Review and Create**.
 
 9. On the *Review and create* tab, review the rule configuration, and then click **Save** to deploy your new rule to the Active rule set.
 
@@ -158,7 +157,7 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
 1. Select **Notepad** and then select **OK**.
 
-1. Review the Azure Resource Manager template and the close it when done.
+1. Review the Azure Resource Manager template and close it when done.
 
 ### Task 5: Connect VM to the Log Analytics workspace
 
@@ -220,18 +219,18 @@ In this task, you will create and investigate an incident.
 1. Select the **result (6)** shown and click on **Link to incident (7)**.
     ![Picture](./images/Ex1-07.png)
 
-1. On Link incident page, for Alert details, enter the following details:
+1. On the Link incident page, for Alert details, enter the following details:
 
-   - **Connect a new incident (1)** should be check.
+   - **Connect a new incident (1)** should be checked.
    - Alert title: **Hunting Query incident (2)**.
-   - Severity: Select **Low (3)** from the drop down menu.
-   - Category: Select **Command and Control (4)** from the drop down menu.
+   - Severity: Select **Low (3)** from the drop-down menu.
+   - Category: Select **Command and Control (4)** from the drop-down menu.
    - Description: Provide **Creating an incident form hunting query**.
    - Then click on **Next (7)**.
 
       ![Picture](./images/Ex1-08.png)
 
-1. On Entity mapping page, enter the following details:
+1. On the Entity mapping page, enter the following details:
 
     - Click on **+ Add entity (1)**.
     - Entity: Select **Devices(2)** form the dropdown menu.
@@ -239,18 +238,18 @@ In this task, you will create and investigate an incident.
     - Colum: Select **Computer (4)** from the dropdown menu. 
 
     - under Related Evidences, Click on **+ Add entity (5)**.
-    - Entity: Select **URL (6)** form the dropdown menu.
+    - Entity: Select **URL (6)** from the dropdown menu.
     - Identifier: Select **URL (7)** from the dropdown menu.
     - Colum: Select **Computer (8)** from the dropdown menu. 
     - Click on **+ Add entity (5)** again to add another entity.
-    - Entity: Select **IP (9)** form the dropdown menu.
+    - Entity: Select **IP (9)** from the dropdown menu.
     - Identifier: Select **Address (10)** from the dropdown menu.
     - Colum: Select **RemoteIPCountry (11)** from the dropdown menu.
     - Then click on **Next (12)**.
 
       ![Picture](./images/Ex1-9.png)
 
-1. On summary page, click on **Submit.**
+1. On the summary page, click on **Submit.**
 
     ![Picture](./images/Ex1-10.png)
 
@@ -258,7 +257,7 @@ In this task, you will create and investigate an incident.
 
    ![Picture](./images/Ex1-13.png)
 
-1. On **Hunting Query inciden** page, you will se the incident graph.
+1. On the **Hunting Query incident** page, you will see the incident graph.
 
    ![Picture](./images/Ex1-11.png)
 
