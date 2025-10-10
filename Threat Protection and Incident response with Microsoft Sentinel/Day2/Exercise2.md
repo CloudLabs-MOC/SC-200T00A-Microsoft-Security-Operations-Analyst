@@ -100,6 +100,8 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
 1. Review that the *Status* is now *Running*. This will be running every 30 seconds in the background and you will receive a notification in the Azure Portal (bell icon) when a new result is found. 
 
+   ![Picture](./images/Ex2Hunt-0.png)
+
 ### Task 4: Create a Watchlist
 
 In this task, you will create a watchlist in Microsoft Sentinel.
@@ -108,11 +110,10 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
     ![Picture](./images/Ex2-02.png)
 
-1. Type **Hostname** then press enter for a new line.
-
-1. From row 2 of the notepad, copy the following hostnames, each one in a different line:
+1. In the notepad, copy the following hostnames, each one in a different line:
 
     ```Notepad
+    Hostname
     Host1
     Host2
     Host3
@@ -126,7 +127,7 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
    ![Picture](./images/Ex2-05.png)
 
-1. On the **Save As** window, Enter File name as **HighValue.csv (1)**, for Save as type select **All Files**, then click **Save** to save the file. 
+1. On the **Save As** window, Enter File name as **HighValue.csv (1)**, for Save as type select **All Files (2)**, then click **Save (3)** to save the file. 
 
    >**Note:** The file will be saved in the *Documents* folder.
 

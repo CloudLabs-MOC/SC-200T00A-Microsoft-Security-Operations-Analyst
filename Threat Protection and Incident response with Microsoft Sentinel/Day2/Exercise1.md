@@ -12,8 +12,9 @@ In this exercise, you will configure **Microsoft Sentinel** to detect and respon
 
 - Task 1: Create a Log Analytics Workspace
 - Task 2: Deploy Microsoft Sentinel to a workspace
-- Task 3: Create and export an analytical rule
-- Task 4: Create and Investigate an incident
+- Task 3: Connect the Azure Activity connector
+- Task 4: Create and export an analytical rule
+- Task 5: Create and Investigate an incident
 
 ### Task 1: Create a Log Analytics Workspace
 
@@ -67,7 +68,49 @@ In this task, you will deploy Microsoft Sentinel to an existing Log Analytics wo
 
 1. Now you will see the **Getting started** page for Microsoft Sentinel.
 
-### Task 3: Create and export an analytical rule
+### Task 3: Connect the Azure Activity connector
+
+In this task, you will connect the Azure Activity connector.
+
+ 1. On the left side menu, select **Data connectors (1)** under the Configuration. 
+ 
+ 1. On the **Data connectors** page, click on **Content Hub (2).** 
+
+    ![Picture 1](../Day1/images/Ex1.png)
+
+1. On **Content hub** page, search for **Azure Activity (1)** and select **Azure Activity (2)** Data connector from the list,  and click on **Install (3)** to install it.
+
+   ![Picture](../Day1/images/Ex2-05.png)
+
+1. On **Content hub** page, select the **Azure Activity (1)** Data connector, and select the **Open connector page (2)** on the connector information blade.
+
+   ![Picture](../Day1/images/Ex2-06.png)
+
+1. In the Configuration area, scroll down and under "2. Connect your subscriptions..." select **Launch Azure Policy Assignment wizard>**.
+
+   ![Picture](../Day1/images/Ex2-07.png)
+
+1. In the **Basics** tab, select the ellipsis button **(...) (1)** under **Scope** and select your **subscription (2)** from the drop-down list and click **Select (3)**.
+
+   ![Picture](../Day1/images/Ex2-08.png)
+
+1. In the **Primary** tab, click the ellipsis button **(...) (1)** next to **Primary Log Analytics workspace** and select your **workspace (2)** from the drop-down list and click **Select (3)**.
+
+   ![Picture](../Day1/images/Ex2-09.png)
+
+1. Select the **Remediation** tab and select the **Create a remediation task (1)** checkbox. This action will apply the policy to existing Azure resources.
+
+1. Select the **Review + Create (2)** button to review the configuration.
+
+   ![Picture](../Day1/images/Ex2-10.png)
+
+1. On **Review + create**, select **Create** to finish. 
+
+   ![Picture](../Day1/images/Ex2-11.png)
+
+    > **Note:** It may take **15–20 minutes** for the **Azure Activity** data connector to show a **Connected** status after configuration.
+
+### Task 4: Create and export an analytical rule
 
 In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
@@ -97,7 +140,7 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
 9. On the *Review and create* tab, review the rule configuration, and then click **Save** to deploy your new rule to the Active rule set.
 
-1. Select the **Suspicious Resource deployment (1)** rule that you created.
+1. On the Analytics page, select the **Suspicious Resource deployment (1)** rule that you created.
 
 1. Select the **Export (2)** from the toolbar.
 
@@ -115,7 +158,49 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
 1. Review the Azure Resource Manager template and the close it when done.
 
-### Task 4: Create and Investigate an Incident
+### Task 5: Connect VM to the Log Analytics workspace
+
+1. In the Search bar of the Azure portal, type **Log Analytics (1)**, then select **Log Analytics workspaces (2)**.
+
+    ![](../Day1/images/Ex1-00.png)
+
+1. On the **Log Analytics workspaces** and select **uniquenameSentinel** workspace you created in task-1.
+
+    ![](./images/VM-2.png)
+
+1. In the workspace, select **Virtual machines (deprecated) (1)** from the left navigation pane under Classic, then locate and select **WinVM (2)** from the list displayed.
+
+    ![](./images/VM-0.png)
+
+1. Click **Connect** to link it to the workspace.
+
+    ![](./images/VM-1.png)
+
+1. Wait until the **Status** shows **Connected**.
+
+1. In the Search bar of the Azure portal, type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
+
+   ![](../Day1/images/Ex1-05.png)
+
+1. Select the **Microsoft Sentinel Workspace** you created earlier.
+
+   ![](../Day1/images/Ex4-00.png)   
+
+1. Select the **Logs (1)** option under **General** on the left hand menu. 
+
+   >**Note:** You may need to disable the "Always show queries" option and close the *Queries* window to run the statements.
+
+1. Choose working mode as **KQL mode (2)**, enter the below given query **(3)**, then click **Run (4)** and in **Results (5)** section see the output of the query.  
+
+    ```KQL
+    Heartbeat | take 10
+    ```  
+
+    ![](./images/VM-3.png)
+
+   >**Note:** If no output is generated, wait 5–10 minutes, then rerun the query to confirm data ingestion.
+
+### Task 6: Create and Investigate an Incident
 
 In this task, you will create and investigate an incident.
 
