@@ -32,11 +32,13 @@ In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
 
     ![](./images/Ex4-12.png)
 
-1. On the *Settings* tab under *Entity behaviour analytics*, scroll down the **Anomalies** section and read through the paragraph, and verify that the *switch* is **On (1)**.
+1. Navigate to the **Settings (1)** tab under **Configuration** from the left navigation pane. 
 
-1. Select the **Go to analytics in order to configure the anomalies (2)** link.
+1. On the **Microsoft Sentinel | Settings** page, scroll down the **Anomalies** section and read through the paragraph, and verify that the *switch* is **On (2)**.
 
-    ![](./images/Ex4-13.png)
+1. Select the **Go to analytics in order to configure the anomalies (3)** link.
+
+    ![](./images/NewEx4Task1-1.png)
 
 ### Task 2: Confirm and review Anomalies rules
 

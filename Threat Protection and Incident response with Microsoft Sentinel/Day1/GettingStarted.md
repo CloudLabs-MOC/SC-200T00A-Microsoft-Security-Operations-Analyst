@@ -104,7 +104,7 @@ Feel free to **start, restart, or stop (2)** your virtual machine as needed from
  
 1. On your virtual machine, click on the **Azure Portal** icon.
 
-  ![Image](./images/GettingStarted-09.png)
+    ![Image](./images/GettingStarted-09.png)
 
 1. On the **Sign in to Microsoft Azure** tab you will see the login screen, in that enter the following email/username, and click on **Next (2)**. 
 
@@ -117,6 +117,10 @@ Feel free to **start, restart, or stop (2)** your virtual machine as needed from
    * **Password**: <inject key="AzureAdUserPassword"></inject> **(1)**
    
       ![Image](./images/GettingStarted-07.png "Enter Password")
+
+      >**Note:** If prompted to Enter Temporary Access Pass, enter the following **Password**: <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Sign in (2)**.
+
+      ![](./images/GS-0.png) 
 
 1. If you see the pop-up Action Required, click **Ask Later**.
 
