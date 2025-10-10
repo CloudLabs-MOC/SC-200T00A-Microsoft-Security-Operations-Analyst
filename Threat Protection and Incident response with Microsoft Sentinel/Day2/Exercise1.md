@@ -13,7 +13,8 @@ In this exercise, you will configure **Microsoft Sentinel** to detect and respon
 - Task 2: Deploy Microsoft Sentinel to a workspace
 - Task 3: Connect the Azure Activity connector
 - Task 4: Create and export an analytical rule
-- Task 5: Create and Investigate an Incident
+- Task 5: Connect VM to the Log Analytics workspace
+- Task 6: Create and Investigate an Incident
 
 ### Task 1: Create a Log Analytics Workspace
 
@@ -116,6 +117,8 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 1. On the **Microsoft Sentinel Workspace** page, select **Analytics (1)** under the **Configuration** from the left-hand menu, and you will find a **Click here to go to the Defender portal (2)** link. Click on it to navigate to the **Defender portal**.
 
    ![Picture](./images/Ex1-00.png) 
+
+     >**Note:** If you do not see the expected Microsoft Sentinel features or options, sign out of the Defender portal and sign back in to refresh your session.
 
 1. On the Analytics page, in the search bar under Rule template type **Suspicious Resource deployment (1)** and press the enter key, then select **Suspicious Resource deployment (2)** rule from the list and click **Create rule (3)**.
 
