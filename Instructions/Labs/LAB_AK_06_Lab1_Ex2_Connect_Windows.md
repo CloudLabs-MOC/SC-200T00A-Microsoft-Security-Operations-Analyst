@@ -2,14 +2,15 @@
 
 ### Estimated Duration: 30 Minutes
 
-## Lab Scenario
+## Overview
 
-You're a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The next source of data is Windows virtual machines inside and outside of Azure, like On-Premises environments or other Public Clouds.
+In this lab, you act as a Security Operations Analyst responsible for onboarding Windows hosts into Microsoft Sentinel. 
 
-  >**Important:** The lab exercises for Learning Path #8 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
+You will learn how to collect Windows security event telemetry from both Azure virtual machines and non‑Azure Windows servers (on‑premises or other clouds), using the Windows Security Events solution, the Azure Monitor Agent (AMA) with Data Collection Rules (DCRs), and Azure Arc where required.
 
-## Lab Objectives
- In this lab, you will perform the following:
+## Objectives
+
+ In this lab, you will perform the following tasks:
  
 - Task 1: Create a Microsoft Sentinel Workspace
 - Task 2: Create a Windows Virtual Machine in Azure
@@ -25,6 +26,10 @@ You're a Security Operations Analyst working at a company that implemented Micro
 
   > **Note:** Perform this task in **SmartHotelHost** VM (Lab VM). 
 
+  > **Note:** While accessing Sentinel workspace if you see an error that the page was moved to Defender portal, click on the link on the top left side of the page to access the old experience.
+
+   ![](../Media/old-experience.png) 
+
 In this task, you will connect the Microsoft Entra ID connector to Microsoft Sentinel.
 
  1. In the Search bar of the Azure portal, type **Sentinel (1)**, then select **Microsoft Sentinel (2)**.
@@ -39,7 +44,7 @@ In this task, you will connect the Microsoft Entra ID connector to Microsoft Sen
 
     ![Picture 1](../Media/ch-2.6.png)
 
-  > **Note:** In the Microsoft Sentinel free trial activated pop-up, click on **OK**.
+      > **Note:** In the Microsoft Sentinel free trial activated pop-up, click on **OK**.
 
 ## Task 2: Create a Windows Virtual Machine in Azure
 
@@ -51,18 +56,19 @@ In this task, you will create a Windows virtual machine in Azure.
 
    ![](../Media/l8e1-1.png)
 
-1. In the **Search services and marketplace** box, enter **Windows 10 (1)** and select **Microsoft Window 10 (2)** from the drop-down list.
+1. In the **Search services and marketplace** box, enter **Windows 10 (1)** and select **Windows 10 (2)** from the drop-down list.
 
-   ![](../Media/l8e1-2.png)
+   ![](../Media/L4T2S2-2410.png)
 
-1. On the **Marketplace** page,  Select the box for **Microsoft Window 10**.
+1. On the **Marketplace** page,  Select the box for **Windows 10**.
 
-   ![](../Media/l8e1-3.png)
+   ![](../Media/L4T2S3-2410.png)
 
 1. Open the *Plan* drop-down list and select **Windows 10 Enterprise, version 22H2 (1)**.
+
 1. Select **Start with a pre-set configuration (2)** to continue.
 
-   ![](../Media/ch-2.7.png)
+   ![](../Media/L4T2S5-2410.png)
 
    > **Note:** Select **Dev/Test** and then select **Continue to create a VM** if prompted.
 
@@ -112,7 +118,7 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 >**Important:** The *Windows Security Events via AMA* data connector requires Azure Arc for non-Azure devices. 
 
-1. Login to the **WIN1** VM by using the RDP file which we have downloaded in the previous exercise.
+1. Login to the **WIN1** VM by using the RDP file which we have downloaded in the previous lab.
 
 1. In the **WIN1** virtual machine, search for **Hyper-V Manager** from task bar and select to open.
 
@@ -135,7 +141,9 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
    ![Launch Azure Portal](../Media/sc900-image(1).png)
 
 1. In the **Sign in** dialog box, copy and paste **Email/Username: <inject key="AzureAdUserEmail"></inject>** and then select Next.
-1. In the **Enter password** dialog box, copy and paste **Password: <inject key="AzureAdUserPassword"></inject>** and then select **Sign in**.
+
+1. In the **Enter Temporary Access Pass** dialog box, copy and paste **Password: <inject key="AzureAdUserPassword"></inject>** and then select **Sign in**.
+
 1. In the Search bar of the Azure portal, type **Azure Arc (1)**, then select **Azure Arc (2)**.
 
    ![](../Media/ee23.png)
@@ -199,7 +207,7 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
     ![](../Media/l8e125.png)
 
-1. The setup process opens a new Microsoft Edge browser tab to authenticate the Azure Arc agent. Select your admin account, wait for the message "Authentication complete" and then go back to the Windows PowerShell window.
+1. The setup process opens a new Microsoft Edge browser tab to authenticate the Azure Arc agent. Select your admin account, wait for the message **"Authentication complete"** and then go back to the Windows PowerShell window.
 
     ![](../Media/ch-3.4.png)
 
@@ -270,11 +278,13 @@ In this task, you will add an Azure Arc connected, non-Azure Windows virtual mac
    >**Note:** The *Windows Security Events via AMA* data connector requires Azure Arc for non-Azure devices.
 
 1. Make sure you are in the **Windows Security Events via AMA** data connector configuration in your Microsoft Sentinel workspace.
-1. In the **Instructions** tab, under the *Configuration* section, edit the **AZWINDCR** *data collection rule* by selecting the *pencil* icon.
+
+1. Under the **Configuration** section, edit the **AZWINDCR** *data collection rule* by selecting the *pencil* icon.
 
    ![](../Media/l8e3-12.png)
     
 1. Select **Next: Resources**, and expand your **Subscription** under **Scope** on the **Resources** tab.
+
 1. Expand **RG-Defender** (or the Resource Group your created), then select both the **WIN-xxxxxxxxxx (1)**, click on **Next: Collect> (2)**.
 
     ![](../Media/ee9.png)
@@ -287,7 +297,8 @@ In this task, you will add an Azure Arc connected, non-Azure Windows virtual mac
 
     ![](../Media/ch-4.2.png)
 
-## Review
+## Summary
+
 In this lab, you have completed the following:
 
 - Created a Windows Virtual Machine in Azure
@@ -295,7 +306,6 @@ In this lab, you have completed the following:
 - Connected an Azure Windows virtual machine
 - Connected a non-Azure Windows Machine
 
-### You have successfully completed the lab!
-### Click on Next >> to procced with next Lab.
+### You have successfully completed the lab. Click on Next >> to procced with next Lab.
 ![](../Media/ch-5.9.2.png) 
 

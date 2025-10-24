@@ -2,14 +2,18 @@
 
 ### Estimated Duration: 40 Minutes
 
-## Lab scenario
+## Overview
 
-You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You must learn how to connect log data from the many data sources in your organization. The next source of data is Linux virtual machines using the Common Event Formatting (CEF) via Legacy Agent and Syslog connectors.
+In this lab you are a Security Operations Analyst working at a company that has implemented Microsoft Sentinel. 
+
+You will connect log data from Linux virtual machines using both the Common Event Format (CEF) via Legacy Agent and Syslog connectors to enable data collection for security monitoring and analysis.
 
 >**Important:** There are steps within the next Tasks that are done in different virtual machines. Look for the Virtual Machine name references.
 
-## Lab objectives
-In this lab, you will perform the following: 
+## Objectives
+
+In this lab, you will perform the following tasks: 
+
 - Task 1: Connect a Linux Host using the Common Event Format connector
 - Task 2: Connect a Linux host using the Syslog connector
 - Task 3: Configure the facilities you want to collect and their severities for the Syslog connector
@@ -18,7 +22,7 @@ In this lab, you will perform the following:
 
   ![](../Media/SC200-Lab_Diagrams_Mod6_L1_Ex3-1.png)
 
-## Task 1: Connect a Linux Host using the Common Event Format connector
+### Task 1: Connect a Linux Host using the Common Event Format connector
 
 In this task, you will connect a Linux host to Microsoft Sentinel with the Common Event Format (CEF) connector.
 
@@ -29,12 +33,15 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
    ![](../Media/ee6.png)
 
 1. Click on the **uniquenameDefender (1)** workspace that we created earlier. Select **Content Hub (2)** under Content management from the left pane.
+
 1. Search for **Common Event Format (3)** and select it.
+
 1. Click on **Install (4)**.
 
    ![](../Media/ch-4.4.png)
 
 1. Once the **Common Event Format** is installed. Click on **Data connectors (1)** present under Configuration in the left pane.
+
 1. From the Data Connectors tab, select **Common Event Format (CEF) via AMA (2)** connector from the list.
 1. Select the **Open connector page (3)** on the connector information blade.
 
@@ -57,6 +64,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
    ![](../Media/ee10.png)  
 
 1. Go back to the WIN1 virtual machine.
+
 1. Launch Windows PowerShell as Administrator by right clicking the Start menu icon and selecting **Windows PowerShell (Admin)**.
 1. Paste the command which we copied from the Native SSH window
 1. Enter **yes** to confirm the connection and then type the user's **password provided under Resource group: LIN1** in the Environment tab and press **enter**. Your screen should look something like this:
@@ -73,7 +81,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
    
 1. Close the Powershell Window.
 
-## Task 2: Connect a Linux host using the Syslog connector
+### Task 2: Connect a Linux host using the Syslog connector
 
    > **Note:** Perform this task from the SmartHotelHost VM (Lab VM).
 
@@ -84,6 +92,11 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
    ![](../Media/ee6.png) 
 
 1. Click on the **uniquenameDefender (1)** workspace that we created earlier.
+
+   > **Note:** If you see an error that the page was moved to Defender portal, click on the link on the left top side to access the old experience.
+
+      ![](../Media/old-experience.png) 
+
 1. Select **Content Hub (2)** under Content management from the left pane.
 1. Search for **Syslog (3)** and select it. Once selected, click on **Install (4)**.
 
@@ -111,7 +124,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
    ![](../Media/ch-4.9.png)  
    
-1. Click on **LIN2** Linux virtual machine.
+1. Navigate to Virtual macines page in Azure portal nd select the **LIN2** Linux virtual machine.
 
    ![](../Media/ch-5.0.png)  
 
@@ -130,10 +143,12 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
    ![linux login](../Media/ch-5.2.png)
 
 1. Paste the **Download and onboard agent for Linux** from the earlier step. 
-1. Once the script is pasted in press enter. The script will run against your Linux server remotely. 
-1. Close the Powershell Window.
 
-## Task 3: Configure the facilities you want to collect and their severities for the Syslog connector
+1. Once the script is pasted in press enter. The script will run against your Linux server remotely. 
+
+1. Close the Powershell Window once the script execution is completed. 
+
+### Task 3: Configure the facilities you want to collect and their severities for the Syslog connector
 
    > **Note:** Perform this task from the SmartHotelHost VM (Lab VM).
 
@@ -160,7 +175,8 @@ In this task, you will configure the Syslog collection facilities.
 
    ![](../Media/ee12.png)    
 
-## Review 
+## Summary 
+
 In this lab, you have completed the following:
 - Connected a Linux Host using the Common Event Format connector
 - Connected a Linux host using the Syslog connector
