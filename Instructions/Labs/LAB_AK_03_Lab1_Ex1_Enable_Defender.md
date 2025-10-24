@@ -2,13 +2,13 @@
 
 ### Estimated Duration: 40 Minutes
 
-## Lab scenario
+## Overview
 
-You are a Security Operations Analyst working at a company that is implementing cloud workload protection with Microsoft Defender for Cloud.  In this lab, you will enable Microsoft Defender for Cloud.
+In this lab, you will enable Microsoft Defender for Cloud. You are a Security Operations Analyst working at a company that is implementing cloud workload protection with Microsoft Defender for Cloud.  
 
-## Lab objectives
+## Objectives
 
-In this lab, you will perform the following:
+In this lab, you will perform the following tasks:
 
 - Task 1: Create a Log Analytics Workspace
 - Task 2: Enable Microsoft Defender for Cloud
@@ -106,10 +106,12 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
    ![Picture 1](../Media/secure18.png)
 
 1. Click on the Start button, search for **Hyper-V Manager** from the bottom Windows search bar, and select to open.
-1. Click on **LABVM**.
-1. Select and right-click on the **WINServer** virtual machine from the virtual machine section in the middle and select start, then again right-click on the **WINServer** virtual machine and select **connect**.
 
-   ![Picture 1](../Media/hyper-v-01.png)
+1. Click on **LABVM (1)**.
+
+1. Select and right-click on the **WINServer (2)** virtual machine from the virtual machine section in the middle and select start, then again right-click on the **WINServer** virtual machine and select **Connect (3)**.
+
+   ![Picture 1](../Media/L2T3S11-2410.png)
 
 1. If it asks you to press ctrl+alt+dlt, Go-to **actions** in the top of VM toolbar and click on **ctrl+alt+dlt** (**Skip if not asked**)
 1. Enter the **Password** as `Password.1!!` when prompted.
@@ -183,11 +185,14 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
     >**Important:** If you get the error *"The term .\OnboardingScript.ps1 is not recognized..."*, make sure you are doing the steps for Task 3 in the WINServer virtual machine. Other issues might be that the name of the file changed due to multiple downloads, search for *".\OnboardingScript (1).ps1"* or other file numbers in the running directory.
 
 1. Enter **R** to Run once and press Enter (this may take a couple of minutes).
-1. The setup process will open a new Edge browser tab to authenticate the Azure Arc agent. Select the ODL Account, wait for the message "Authentication complete", and then go back to the Windows PowerShell window.
-1. When the installation finishes, go back to the Azure portal page where you downloaded the script and select **Close**. Close the **Add servers with Azure Arc** to go back to the Azure Arc **Machines** page.
-1. Select **Refresh** until WINServer server name appears and the Status is *Connected*.
 
-   ![Picture 1](../Media/ee24.png)
+1. The setup process will open a new Edge browser tab to authenticate the Azure Arc agent. Select the ODL Account, wait for the message **"Authentication complete"**, and then go back to the Windows PowerShell window.
+
+1. When the installation finishes, go back to the Azure portal page where you downloaded the script and select **Close**. Close the **Add servers with Azure Arc** to go back to the Azure Arc **Machines** page.
+
+1. Select **Refresh** until WINServer server name appears and the Status is **Connected**.
+
+   ![Picture 1](../Media/L2T3S30-2410.png)
 
    > **Note:** This could take a couple of minutes.
 
@@ -237,13 +242,15 @@ In this task, you will manually install the required agent on the Windows Server
 
    ![Picture 1](../Media/ee8.png)
 
-1. Select the **WINServer** which is associated with the **RG-Defender** resource group.
+1. Navigate to **Machines (1)** under Azure Arc resources section and select the **WINServer (2)** which is associated with the **RG-Defender** resource group.
 
-   ![Picture 1](../Media/secure27.png)
+   ![Picture 1](../Media/L2T4S10-2410.png)
 
 1. Select **Extensions (1)** from the left pane under Settings. The **AzureMonitorWindowsAgent (2)** should be listed with a *Status* of **Succeeded**.
 
    ![Picture 1](../Media/secure28.png)
+
+   > **Note:** The extension can take 5-10 minutes to succeed. You can continue to the next lab and review the extension later. 
 
 ## Summary
 
@@ -254,6 +261,5 @@ In this lab, you have completed the following:
 - Installed Azure Arc on an On-Premises Server.
 - Protected an On-Premises Server
 
-### You have successfully completed the lab!
-### Click on Next >> to procced with next Lab.
+### You have successfully completed the lab. Click on Next >> to procced with next Lab.
 ![](../Media/ch-5.9.png) 

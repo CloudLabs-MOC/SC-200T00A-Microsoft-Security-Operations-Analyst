@@ -8,7 +8,9 @@ In this lab, you will onboard on-premises Hyper-V VMs to Azure Arc for Azure Man
 
 Azure Arc allows you to manage your hybrid IT estate with a single pane of glass by extending the Azure management experience to your on-premises servers that are not ideal candidates for migration. 
 
-## Lab Objectives
+## Objectives
+
+In this lab you will be performing the following task:
 
 - Task 1: Onboard On-prem servers to Azure Arc-enabled server
 
@@ -87,6 +89,8 @@ In this task, you will deploy and configure the Azure Connected Machine agent on
 
 1. Now, run the whole script that you copied in Notepad earlier in step 7.
 
+    > **Note:** If paste is not working, try pasting the script first in a Notepad in the AzureArcVM and then paste in the Powershell terminal.
+
 1. After running the script, packages will be installed, and then you will be directed to a pop-up browser page to log into your Azure account for authentication purposes. Use the below Azure credentials:
 
     * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
@@ -115,6 +119,5 @@ In this task, you will deploy and configure the Azure Connected Machine agent on
 
 In this lab, you explored how to deploy and configure the Azure Connected Machine agent on a Windows machine hosted outside of Azure. You learnt  about creating Azure Arc-enabled servers so that they can manage the Windows machine.
 
-### You have successfully completed the lab!
-### Click on Next >> to procced with next Lab.
+### You have successfully completed the lab. Click on Next >> to procced with next Lab.
 ![](../Media/ch-5.8.png) 
