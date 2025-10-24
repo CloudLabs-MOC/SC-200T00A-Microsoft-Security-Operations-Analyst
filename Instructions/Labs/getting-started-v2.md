@@ -26,6 +26,10 @@ By completing this lab, you will learn to:
 
 In this hands-on lab, you will implement a comprehensive security and hybrid cloud management architecture leveraging Microsoft security and monitoring tools. The workflow begins with onboarding on-premises Hyper-V VMs to Azure Arc, extending Azure’s management capabilities to hybrid and multi-cloud environments. This enables centralized governance, policy enforcement, and security monitoring across on-premises and cloud resources. Next, you will activate Microsoft Defender for Cloud, which provides security posture management and threat protection, continuously assessing workloads and generating security alerts based on detected vulnerabilities or threats. To enhance security operations, you will integrate Microsoft Sentinel, a cloud-native SIEM and SOAR solution, to collect, correlate, and analyze log data from diverse sources, including Microsoft 365, non-Azure VMs, network appliances, and Linux VMs. This integration is facilitated using CEF (Common Event Format) and Syslog connectors, enabling the ingestion of security events and logs from heterogeneous environments. By combining these tools, you will establish a proactive security posture, leveraging AI-driven threat intelligence, automated incident response, and centralized visibility into security events across your hybrid infrastructure.
 
+## Architecture Diagram
+
+![](../Media/arch-diag1.png)
+
 ## Getting started with the lab
  
 Welcome to your Secure Windows Servers Azure Arc & Microsoft Defender Workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
@@ -93,5 +97,6 @@ Learner Support Contacts:
 Now, click on **Next** from the lower right corner to move on to the next page.
 
 ### Happy Learning!!
+
 ### Click on Next >> to procced with next Lab.
 ![](../Media/ch-5.7.png) 
