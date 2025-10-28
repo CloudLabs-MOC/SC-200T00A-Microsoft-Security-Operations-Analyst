@@ -118,7 +118,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
    ![](../Media/L5T2S7-2810.png)  
 
-1. Pn the Virtual machines page select the LIN2 virtual machine.
+1. On the Virtual machines page select the LIN2 virtual machine.
 
    ![](../Media/L5T2S8-2810.png) 
 
