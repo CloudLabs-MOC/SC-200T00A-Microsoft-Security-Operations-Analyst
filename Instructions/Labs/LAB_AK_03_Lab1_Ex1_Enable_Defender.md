@@ -1,6 +1,6 @@
 # Lab 02: Enable Microsoft Defender for Cloud
 
-### Estimated Duration: 40 Minutes
+### Estimated Duration: 60 Minutes
 
 ## Overview
 
