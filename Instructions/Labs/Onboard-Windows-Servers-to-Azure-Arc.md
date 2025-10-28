@@ -1,6 +1,6 @@
 # Lab 01: Onboard Windows Servers to Azure Arc
 
-### Estimated Duration: 110 Minutes
+### Estimated Duration: 40 Minutes
 
 ## Overview
 
@@ -27,19 +27,15 @@ In this task, you will deploy and configure the Azure Connected Machine agent on
    
     ![Picture 1](../Media/ch-1.png "search azure arc")
   
-1. On the **Azure Arc** page, select **Machines (1)** under **Azure Arc Resources**, click on **+ Add/create (2)** and then **Add a Machine (3)**.
+1. On the **Azure Arc** page, select **Machines (1)** under **Azure Arc Resources**, click on **+ Onboard/Create (2)** and then **Onboard existing machine (3)**.
     
-    ![Picture 1](../Media/ch-2.png "search azure arc")
-    
-1. In the **Add servers with Azure Arc** page, click **Generate script** under **Add a single server**.
-
-    ![Picture 1](../Media/ch-3.png "search azure arc")
+    ![Picture 1](../Media/L1T1S3-2810.png "search azure arc")
     
 1. Under the **Basics** tab, fill in the following details:
      
-   - Subscription: **Select your subscription**
+   - Subscription: **Select your subscription (1)**
     
-   - Resource group: **SmartHotelHostRG (1)**
+   - Resource group: **SmartHotelHostRG (2)**
   
    - Region: Select **<inject key="Region" enableCopy="false" /> (3)**
    
@@ -47,11 +43,11 @@ In this task, you will deploy and configure the Azure Connected Machine agent on
    
    - Leave other values as default and Click on **Download and run script (5)**
    
-       ![Picture 1](../Media/ch-4.png "search azure arc")
+       ![Picture 1](../Media/L1T1S4-2810.png "search azure arc")
 
 1. Under the **Download and run script** tab, **copy (1)** the entire script and paste it into Notepad, as it will be used in the further steps and then click on **Close (2)**.
 
-    ![Picture 1](../Media/ch-5.png "copy script")
+    ![Picture 1](../Media/L1T1S5-2810.png "copy script")
     
 1. Go to the **Start (1)** button in the VM, search for **Hyper-V Manager (2)** there and select it. 
 
@@ -106,7 +102,7 @@ In this task, you will deploy and configure the Azure Connected Machine agent on
 
     **Note:** The name of the new server added could be different. You might have to refresh to see the new server.
     
-    ![Picture 1](../Media/secure5.png)
+    ![Picture 1](../Media/L1T1S15-2810.png)
      
      > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
      > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
