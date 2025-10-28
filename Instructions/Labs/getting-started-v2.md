@@ -20,7 +20,6 @@ By completing this lab, you will learn to:
 
 - Basic knowledge of on-premises Hyper-V infrastructure
 - Familiarity with Security Information and Event Management (SIEM) concepts
-- Basic understanding of KQL syntax for querying and analyzing logs
 
 ## Architecture
 
