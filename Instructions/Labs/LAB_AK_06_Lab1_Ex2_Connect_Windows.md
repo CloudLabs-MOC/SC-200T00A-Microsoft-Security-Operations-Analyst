@@ -26,7 +26,7 @@ You will learn how to collect Windows security event telemetry from both Azure v
 
   > **Note:** Perform this task in **SmartHotelHost** VM (Lab VM). 
 
-  > **Note:** While accessing Sentinel workspace if you see an error that the page was moved to Defender portal, click on the link on the top left side of the page to access the old experience.
+  > **Note:** While accessing Sentinel workspace if you see an error that the page was moved to Defender portal, click on the link on the top left side of the page to access the old experience and refresh your browser page. 
 
    ![](../Media/old-experience.png) 
 
@@ -224,7 +224,7 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 In this task, you will connect an Azure Windows virtual machine to Microsoft Sentinel.
 
-  > **Note:** While accessing Sentinel workspace if you see an error that the page was moved to Defender portal, click on the link on the top left side of the page to access the old experience.
+  > **Note:** While accessing Sentinel workspace if you see an error that the page was moved to Defender portal, click on the link on the top left side of the page to access the old experience and refresh your browser page.
 
    ![](../Media/old-experience.png) 
 
