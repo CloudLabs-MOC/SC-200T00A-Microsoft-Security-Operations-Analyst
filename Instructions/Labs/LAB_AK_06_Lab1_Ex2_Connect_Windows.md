@@ -1,6 +1,6 @@
 # Lab 04: Connect Windows devices to Microsoft Sentinel using data connectors
 
-### Estimated Duration: 30 Minutes
+### Estimated Duration: 60 Minutes
 
 ## Overview
 
@@ -26,7 +26,7 @@ You will learn how to collect Windows security event telemetry from both Azure v
 
   > **Note:** Perform this task in **SmartHotelHost** VM (Lab VM). 
 
-  > **Note:** While accessing Sentinel workspace if you see an error that the page was moved to Defender portal, click on the link on the top left side of the page to access the old experience.
+  > **Note:** While accessing Sentinel workspace if you see an error that the page was moved to Defender portal, click on the link on the top left side of the page to access the old experience and refresh your browser page. 
 
    ![](../Media/old-experience.png) 
 
@@ -149,27 +149,26 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
    ![](../Media/ee23.png)
 
 1. In the navigation pane under **Azure Arc resources** select **Machines (1)**
-1. Select **+ Add/Create (2)**, then select **Add a machine (3)**.
 
-   ![](../Media/ch-2.png)
+1. Select **+ Onboard/Create (2)**, then select **Onboard existing machine (3)**.
 
-1. Select **Generate script** from the "Add a single server" section.
+   ![](../Media/L1T1S3-2810.png)
 
-   ![](../Media/ch-3.png)
+1. In the **Onboard existing machines with Azure Arc** page, select the **Default Subscription**, select the **RG-Defender (1)** Resource group under Project details
 
-1. In the **Add a server with Azure Arc** page, select the **Default Subscription (1)**, select the **RG-Defender (2)** Resource group under Project details.
-1. For *Region*, select **(US) East Us (3)** from the drop-down list.
+1. For *Region*, select **(US) East Us (2)** from the drop-down list.
 
-    ![](../Media/ch-3.1.png)
+1. Review the Server details and Connectivity method options. Keep the default values and select **Next (3)** to get to the Tags tab.
 
-1. Review the Server details and Connectivity method options. Keep the default values and select **Next** to get to the Tags tab.
+    ![](../Media/L4T3S13-2810.png)
+
 1. Review the default available tags. Select **Next** to get to the Download and run script tab.
 
-   ![](../Media/ch-3.2.png)
+   ![](../Media/L4T3S15-2810.png)
 
 1. Scroll down and select the **Download** button. **Hint:** if your browser blocks the download, take action in the browser to allow it.
 
-   ![](../Media/ch-3.3.png)
+   ![](../Media/L4T3S16-2810.png)
 
 1. In Microsoft Edge Browser, select the ellipsis button (...) if needed and then select **Keep**.
 
@@ -207,23 +206,27 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
     ![](../Media/l8e125.png)
 
-1. The setup process opens a new Microsoft Edge browser tab to authenticate the Azure Arc agent. Select your admin account, wait for the message **"Authentication complete"** and then go back to the Windows PowerShell window.
+1. The setup process opens a new Microsoft Edge browser tab to authenticate the Azure Arc agent. Select your ODL user account, wait for the message **"Authentication complete"** and then go back to the Windows PowerShell window.
 
     ![](../Media/ch-3.4.png)
 
-1. When the installation finishes, go back to the Azure portal page where you downloaded the script and select **Close**. Close the **Add servers with Azure Arc** to go back to the Azure Arc **Machines** page.
+1. When the installation finishes, go back to the Azure portal page where you downloaded the script and select **Close**. Close the **Onboard existing machines with Azure Arc** to go back to the Azure Arc **Machines** page.
 
     ![](../Media/l8e127.png)
 
 1. Select **Refresh** until WINServer server name appears and the Status is *Connected*.
   
-    ![](../Media/ee25.png)
+    ![](../Media/L4T3S28-2810.png)
 
     >**Note:** This could take a couple of minutes.
 
 ## Task 4: Connect an Azure Windows virtual machine
 
 In this task, you will connect an Azure Windows virtual machine to Microsoft Sentinel.
+
+  > **Note:** While accessing Sentinel workspace if you see an error that the page was moved to Defender portal, click on the link on the top left side of the page to access the old experience and refresh your browser page.
+
+   ![](../Media/old-experience.png) 
 
 1. In the Search bar of the Azure portal, type **Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
