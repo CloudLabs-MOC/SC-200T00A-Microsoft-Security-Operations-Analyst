@@ -1,6 +1,6 @@
 # Lab 05: Connect Linux hosts to Microsoft Sentinel using data connectors
 
-### Estimated Duration: 40 Minutes
+### Estimated Duration: 60 Minutes
 
 ## Overview
 
@@ -27,6 +27,10 @@ In this lab, you will perform the following tasks:
 In this task, you will connect a Linux host to Microsoft Sentinel with the Common Event Format (CEF) connector.
 
    > **Note:** Ensure you are logged into Azure from the SmartHotelHost VM (Lab VM).
+
+   > **Note:** While accessing Sentinel workspace if you see an error that the page was moved to Defender portal, click on the link on the top left side of the page to access the old experience and refresh your browser page. 
+
+   ![](../Media/old-experience.png) 
 
 1. In the Search bar of the Azure portal, type **Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
@@ -57,7 +61,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 1. Click on **LIN1** Linux virtual machine.
 
-   ![](../Media/lab6-4.png)  
+   ![](../Media/L5T1S10-2810.png)  
 
 1. Click on **Connect (1)** from the left navigation pane, scroll down to the Native SSH ,copy the **SSH command (2)** and paste it into the notepad.
    
@@ -93,7 +97,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 1. Click on the **uniquenameDefender (1)** workspace that we created earlier.
 
-   > **Note:** If you see an error that the page was moved to Defender portal, click on the link on the left top side to access the old experience.
+   > **Note:** If you see an error that the page was moved to Defender portal, click on the link on the left top side to access the old experience and refresh the browser page. 
 
       ![](../Media/old-experience.png) 
 
@@ -110,49 +114,26 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
    ![](../Media/ch-4.7.png)  
 
-1. Under **Configuration**, open the **Install agent on a non-Azure Linux Machine (1)** section. Select the link for **Download & install agent for non-Azure Linux machine (2)**. 
+1. Under **Configuration**, open the **Install agent on a Azure Linux Machine (1)** section. Select the link for **Download & install agent for Azure Linux machine (2)**. 
 
-   ![](../Media/ch-4.8.png)  
+   ![](../Media/L5T2S7-2810.png)  
 
-   >**Note:** Your Log Analytics workspace should show **2 or 3 Windows computers connected**. This corresponds to WIN2 and AZWIN01 virtual machines connected earlier.
+1. Pn the Virtual machines page select the LIN2 virtual machine.
 
-1. Select the tab for **Linux servers (1)**.
+   ![](../Media/L5T2S8-2810.png) 
 
-    >**Note:** Your Log Analytics workspace should show **0 Linux computers connected**. This corresponds to the LIN1 (ubuntu1) virtual machine connected earlier with the CEF connector.
+1. Click on **Connect** and wait for the LIN2 VM to connect to the workspace. 
 
-1. Select **Log Analytics agent instructions**. Copy the command in the **Download and onboard agent for Linux (2)** area to the clipboard and paste it into the notepad.
+   ![](../Media/L5T2S9-2810.png) 
 
-   ![](../Media/ch-4.9.png)  
-   
-1. Navigate to Virtual macines page in Azure portal nd select the **LIN2** Linux virtual machine.
-
-   ![](../Media/ch-5.0.png)  
-
-1. Click on **Connect (1)** from the left navigation pane, scroll down to Native SSH ,copy the **SSH command (2)** and paste it into the notepad.
-
-   ![](../Media/ee11.png)  
-
-1. Navigate back to the **WIN1** virtual machine.
-
-1. Launch a NEW Windows PowerShell as Administrator by right-clicking the Start menu icon and selecting **Windows PowerShell (Admin)**. 
-
-1. Paste the command which we copied from the Native SSH window.
-   
-1. Enter **yes** to confirm the connection and then type the user's **password provided under Resource group: LIN2** in the Environment tab and press enter. Your screen should look something like this:
-
-   ![linux login](../Media/ch-5.2.png)
-
-1. Paste the **Download and onboard agent for Linux** from the earlier step. 
-
-1. Once the script is pasted in press enter. The script will run against your Linux server remotely. 
-
-1. Close the Powershell Window once the script execution is completed. 
+   ![](../Media/L5T2S10-2810.png)
 
 ### Task 3: Configure the facilities you want to collect and their severities for the Syslog connector
 
    > **Note:** Perform this task from the SmartHotelHost VM (Lab VM).
 
-In this task, you will configure the Syslog collection facilities.
+In this task, you configure the **Syslog connector** in Microsoft Sentinel to define which **facilities** and **severity levels** of log data will be collected from your environment. This setup ensures that relevant security and system event logs from Linux devices are captured. It helps enhance **threat detection and monitoring** by filtering and forwarding only the required log categories to Sentinel.
+
 
 1. In the Search bar of the Azure portal, type **Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
