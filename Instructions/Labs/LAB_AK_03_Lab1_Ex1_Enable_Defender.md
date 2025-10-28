@@ -54,6 +54,8 @@ In this task, you will enable and configure Microsoft Defender for Cloud.
 
    ![Picture 1](../Media/secure9.png)
 
+  > **Note:** You can ignore any errors for enabling plans for SQL databses or relational databases.
+
 1. Select the **Settings & monitoring** tab from the Settings area (next to Save).
 
    ![Picture 1](../Media/ch-8.png)
@@ -129,13 +131,9 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
    
    ![Picture 1](../Media/ee23.png "search azure arc")
   
-1. On the **Azure Arc** page, select **Machines (1)** under **Azure Arc Resources**, click on **+Add/create (2)** and then **Add a Machine (3)**.
+1. On the **Azure Arc** page, select **Machines (1)** under **Azure Arc Resources**, click on **+ Onboard/create (2)** and then **Onboard existing machine (3)**.
     
-   ![Picture 1](../Media/ch-2.png "search azure arc")
-    
-1. In the **Add servers with Azure Arc** page, click **Generate script** under **Add a single server**.
-
-   ![Picture 1](../Media/ch-3.png "search azure arc")
+   ![Picture 1](../Media/L1T1S3-2810.png "search azure arc")
 
 1. Under the **Basics** tab, fill in the following details:
      
@@ -149,7 +147,7 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
    - Leave other values as default and click on **Download and run script (3)**
 
-     ![Picture 1](../Media/ch-1.4.png)
+     ![Picture 1](../Media/L2T3S19-2810.png)
 
 1. Scroll down and select the **Download** button.
 
@@ -186,13 +184,13 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 1. Enter **R** to Run once and press Enter (this may take a couple of minutes).
 
-1. The setup process will open a new Edge browser tab to authenticate the Azure Arc agent. Select the ODL Account, wait for the message **"Authentication complete"**, and then go back to the Windows PowerShell window.
+1. The setup process will open a new Edge browser tab to authenticate the Azure Arc agent. Select the ODL email <inject key="AzureAdUserEmail"></inject>, wait for the message **"Authentication complete"**, and then go back to the Windows PowerShell window.
 
-1. When the installation finishes, go back to the Azure portal page where you downloaded the script and select **Close**. Close the **Add servers with Azure Arc** to go back to the Azure Arc **Machines** page.
+1. When the installation finishes, go back to the Azure portal page where you downloaded the script and select **Close**. Close the **Onboard existing machines with Azure Arc** to go back to the Azure Arc **Machines** page.
 
 1. Select **Refresh** until WINServer server name appears and the Status is **Connected**.
 
-   ![Picture 1](../Media/L2T3S30-2410.png)
+   ![Picture 1](../Media/L2T3S29-2810.png)
 
    > **Note:** This could take a couple of minutes.
 
@@ -242,9 +240,9 @@ In this task, you will manually install the required agent on the Windows Server
 
    ![Picture 1](../Media/ee8.png)
 
-1. Navigate to **Machines (1)** under Azure Arc resources section and select the **WINServer (2)** which is associated with the **RG-Defender** resource group.
+1. Navigate to **Machines** under Azure Arc resources section and select the **WINServer** which is associated with the **RG-Defender** resource group.
 
-   ![Picture 1](../Media/L2T4S10-2410.png)
+   ![Picture 1](../Media/L2T3S29-2810.png)
 
 1. Select **Extensions (1)** from the left pane under Settings. The **AzureMonitorWindowsAgent (2)** should be listed with a *Status* of **Succeeded**.
 
