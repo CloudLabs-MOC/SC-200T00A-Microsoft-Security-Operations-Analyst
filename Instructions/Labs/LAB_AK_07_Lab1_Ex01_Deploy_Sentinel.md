@@ -182,7 +182,7 @@ In this task, you will create a watchlist in Microsoft Sentinel.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  <validation step="53b31791-6d4b-4f83-a56e-b7136bbba6a7" />
+  <validation step="13a39631-f7c2-4385-bc6c-ca7dca47455d" />
   
 ### Task 5: Create a Threat Indicator
 

@@ -208,7 +208,7 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-   <validation step="18d5bcdd-1127-45e5-a67e-66311175135e" />
+   <validation step="c44a643a-102c-48dc-bde0-2977f48d8ef0" />
 
 ## Review
 
