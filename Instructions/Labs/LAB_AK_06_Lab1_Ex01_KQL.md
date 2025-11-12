@@ -55,7 +55,7 @@ In this task, you will create a Log Analytics workspace for use with Microsoft D
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  <validation step="8edea4c7-f6fb-4714-9021-fcf6b6942abe" />
+  <validation step="59cd8dba-04a4-4a2b-94b0-4a302e594187" />
 
 ### Task 2: Initialize the Microsoft Sentinel Workspace.
 
@@ -307,7 +307,7 @@ In this task, you will use generate visualizations with KQL statements.
     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
     > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-   <validation step="43dbc561-34b3-4571-b014-c5b7d09e1b40" />
+   <validation step="9ae27fd6-e398-4a13-a67d-95e7779a8317" />
 
 ### Task 6: Build multi-table statements in KQL
 

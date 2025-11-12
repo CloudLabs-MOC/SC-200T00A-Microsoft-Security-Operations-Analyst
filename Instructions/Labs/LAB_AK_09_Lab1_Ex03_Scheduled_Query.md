@@ -239,7 +239,7 @@ In this task, you test your new scheduled query rule.
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-   <validation step="3e75085e-0e87-4db0-a6ad-9facbd092df7" />
+   <validation step="dc07f2ce-5617-4f65-aa2f-bcfd49ad6cd1" />
 
 ### Review
 In this lab, you have completed the following:
