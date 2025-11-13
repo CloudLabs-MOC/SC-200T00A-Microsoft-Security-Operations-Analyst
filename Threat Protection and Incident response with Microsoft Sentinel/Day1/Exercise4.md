@@ -94,6 +94,6 @@ In this lab, you enabled UEBA in Microsoft Sentinel to profile entities, detect 
 
 ## You have successfully completed the lab!
 
-In this hands-on lab, **Threat Protection and Incident response with Microsoft Sentinel- Day 1**, you successfully deployed Microsoft Sentinel, integrated key data sources, enriched insights with threat intelligence, and applied UEBA for anomaly detection. You are now equipped to build a robust security monitoring setup, detect potential threats, and respond effectively to incidents.
+In this hands-on lab, **Threat Protection and Incident response with Microsoft Sentinel**, you successfully deployed Microsoft Sentinel, integrated key data sources, enriched insights with threat intelligence, and applied UEBA for anomaly detection. You are now equipped to build a robust security monitoring setup, detect potential threats, and respond effectively to incidents.
 
 

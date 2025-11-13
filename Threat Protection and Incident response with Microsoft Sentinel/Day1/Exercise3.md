@@ -104,7 +104,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
       ![](./images/Ex3-01.png)
 
-      **Note:** It could take a couple of minutes for the indicator to appear.
+    > **Note:** It could take a couple of minutes for the indicator to appear.
 
 1. In the Azure portal search bar, type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
@@ -116,7 +116,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 1. Select the **Logs (1)** option under **General** on the left hand menu. 
 
-   >**Note:** You may need to disable the "Always show queries" option and close the *Queries* window to run the statements.
+   >**Note:** You may need to disable the "Always show Queries hub" option and close the *Queries* window to run the statements.
 
 1. Choose working mode as **KQL mode (2)**, enter the below given query **(3)**, then click **Run (4)** and in **Results (5)** section see the output of the query.  
 
@@ -142,21 +142,19 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 In this task, you will change the retention period for the SecurityEvent table.
 
-1. In Microsoft Sentinel, select the **Settings** option under the *Configuration* area.
-
-1. Select **Workspace settings**.
-
-1. In Log Analytics workspace, select the **Tables** option under the *Settings* area.
+1. In Microsoft Sentinel, select the **Configuration** and select the **Tables** option.
 
    ![](./images/Ex3-07.png)
 
-1. To search  type **SecurityEvent (1)** in the search bar and select the table **SecurityEvent (2)**, then click the **ellipsis (...) (3)** and select **Manage Table (4)** from the list.
+1. To search  type **SecurityEvent (1)** in the search bar and select the table **SecurityEvent (2)**.
 
    ![](./images/Ex3-09.png)
 
-1. Select **180 days (1)** for **Total retention period**. Notice that **Long term retention** is only **150 days (2)**, since it uses 30 days from the (default) *Interactive retention*.
+1. Click on **Managed table**
 
-1. Select **Save (3)** to apply the changes. 
+   ![](./images/Ex3-09b.png)
+
+1. Select **180 days (1)** for **Total retention period**. Notice that **Total retention** is only **180 days (2)**, Same as Analytics retention and click on **Save (3)** to apply the changes. 
 
    ![](./images/Ex3-10.png)
 

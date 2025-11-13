@@ -10,59 +10,12 @@ In this lab, you will enable and configure data connectors in Microsoft Sentinel
 ## Lab Objectives
  In this lab, you will perform the following:
 
-- Task 1: Access the Microsoft Sentinel Workspace
-- Task 2: Connect the Microsoft Entra ID connector
-- Task 3: Connect the Microsoft Entra ID Protection connector
-- Task 4: Connect the Microsoft Defender for Cloud connector
-- Task 5: Connect the Azure Activity connector
+- Task 1: Connect the Microsoft Entra ID connector
+- Task 2: Connect the Microsoft Entra ID Protection connector
+- Task 3: Connect the Microsoft Defender for Cloud connector
+- Task 4: Connect the Azure Activity connector
 
-### Task 1: Access the Microsoft Sentinel Workspace
-
- In this task, you will create a Log Analytics workspace for use with Microsoft Defender for Cloud and you will access your Microsoft Sentinel workspace.  
-
- 1. In the Search bar of the Azure portal, type **Log Analytics workspaces (1)**, then select **Log Analytics workspaces (2)**.
-
-    ![](./images/Ex1-00.png)
-
-1. On the **Log Analytics workspaces** page, select **+ Create** from the command bar.
-
-   ![](./images/Ex1-01.png)
-
-1. To create a **log analytics workspaces**, follow these steps:
-
-    - Leave the **Subscription (1)** as default.
-    - Select **sentinel-rg (2),** for Resource group.
-    - For the Name, enter **uniquenameSentinel (3)**.
-    - Leave the **Region (4)** as default.
-    - Select **Review + Create (5)**.
-
-      ![Picture 1](./images/Ex1-02.png)
-
-1. Once the workspace validation has passed, select **Create**.
-
-   ![](./images/Ex1-03.png)
-
-1. Wait for the new workspace to be provisioned, this may take a few minutes.
-   
-   ![](./images/Ex1-04.png)
-
-1. In the Search bar of the Azure portal, type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
-
-   ![](./images/Ex1-05.png)
-
-1. On the **Microsoft Sentinel** page, select **+ Create** from the command bar.
-
-   ![](./images/Ex1-06.png)
-
-1. Select the newly created workspace named **uniquenameSentinel (1)** and click on **Add (2)**.
-  
-   ![](./images/Ex1-07.png)
-
-1. In the **Microsoft Sentinel free trial activated** tab, select **Ok**.
-
-   ![](./images/Ex1-08.png)
-
-### Task 2: Connect the Microsoft Entra ID connector
+### Task 1: Connect the Microsoft Entra ID connector
 
  In this task, you will connect the Microsoft Entra ID connector to Microsoft Sentinel.
 
@@ -86,7 +39,7 @@ In this lab, you will enable and configure data connectors in Microsoft Sentinel
 
     >**Note:** It may take **15–20 minutes** for the **Microsoft Entra ID** data connector to show a **Connected** status after configuration. 
 
-### Task 3: Connect the Microsoft Entra ID Protection connector
+### Task 2: Connect the Microsoft Entra ID Protection connector
 
 In this task, you will connect the Microsoft Entra ID Protection connector to Microsoft Sentinel.
 
@@ -100,7 +53,7 @@ In this task, you will connect the Microsoft Entra ID Protection connector to Mi
 
    ![Picture 1](./images/Ex2-13.png) 
 
-### Task 4: Connect the Microsoft Defender for Cloud connector
+### Task 3: Connect the Microsoft Defender for Cloud connector
 
 In this task, you will connect the Microsoft Defender for Cloud connector.
 
@@ -124,7 +77,7 @@ In this task, you will connect the Microsoft Defender for Cloud connector.
 
    ![Picture](./images/Ex2-04.png)
 
-### Task 5: Connect the Azure Activity connector
+### Task 4: Connect the Azure Activity connector
 
 In this task, you will connect the Azure Activity connector.
 
@@ -150,7 +103,7 @@ In this task, you will connect the Azure Activity connector.
 
    ![Picture](./images/Ex2-08.png)
 
-1. In the **Primary** tab, click the ellipsis button **(...) (1)** next to **Primary Log Analytics workspace** and select your **workspace (2)** from the drop-down list and click **Select (3)**.
+1. In the **Parameters** tab, click the ellipsis button **(...) (1)** next to **Primary Log Analytics workspace** and select your **workspace (2)** from the drop-down list and click **Select (3)**.
 
    ![Picture](./images/Ex2-09.png)
 
