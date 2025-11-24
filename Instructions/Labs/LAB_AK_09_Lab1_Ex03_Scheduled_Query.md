@@ -57,11 +57,11 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
    ![Picture 1](../Media/ss26.png)
 
-1. In the **Basics** tab, select the ellipsis button **(...) (1)** under **Scope** and select your subscription from the drop-down list **(2)** and click **Select (3)**.
+1. In the **Basics** tab, select the ellipsis button **(...) (1)** under **Scope** and select your subscription from the drop-down list **(2)** and click **Select (3)** and then select **Next**.
 
    ![Picture 1](../Media/ss27.png)
 
-1. Select the **Parameters (1)** tab, choose **uniquenameDefender (2)** workspace from the **Primary Log Analytics workspace** drop-down list and then click **Select (3)**. This action will apply the subscription configuration to send the information to the Log Analytics workspace.
+1. Select the **Parameters (1)** tab, select the ellipsis button **(...)** choose **uniquenameDefender (2)** workspace from the **Primary Log Analytics workspace** drop-down list and then click **Select (3)**. This action will apply the subscription configuration to send the information to the Log Analytics workspace.
     
    ![Picture 1](../Media/ss28.png)
 
