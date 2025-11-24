@@ -1,4 +1,4 @@
-# Lab 09 - Exercise 1: Modify a Microsoft Security rule
+# Lab 09 - Exercise 1: Modify a Scheduled query rule
 
 ## Lab Scenario
 
@@ -12,7 +12,7 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
  In this lab, you will perform the following:
 
- - Task 1: Activate a Microsoft Security Rule
+ - Task 1: Activate a Scheduled query rule
 
 ## Estimated Timing: 20 Minutes
 
@@ -20,7 +20,7 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
   ![Lab overview.](../Media/SC200-Lab_Diagrams_Mod7_L1_Ex1upd.png)
 
-### Task 1: Activate a Microsoft Security Rule
+### Task 1: Activate a Scheduled query rule
 
 In this task, you will activate a Microsoft Security rule.
 
@@ -36,25 +36,29 @@ In this task, you will activate a Microsoft Security rule.
 
    > **Note:** If you do not see the **Analytics** page in the Microsoft Sentinel portal, try refreshing the browser. Wait **5 minutes** and refresh again until it appears.
 
-1. Select the **+ Create (2)** button from the command bar and select the **Microsoft incident creation rule (3)**.
+1. Select the **+ Create (2)** button from the command bar and select the **Scheduled query rule (3)**.
 
-   ![Picture 1](../Media/l9e1-1.png)
+   ![Picture 1](../Media/s9.png)
 
-1. On the **Analytics rule wizard- Create a new Mocrosoft Security rule** page, provide the following details and then click on **Next: Automated response (5)**:
+1. On the **Analytics rule wizard- Create a new Scheduled query rule** page, provide the following details and then click on **Next: Set rule logic(3)**:
 
    - Under Name, enter **Create incidents based on Defender for Cloud (1)**
 
-   - Scroll down and under Microsoft security service select **Microsoft Defender for Cloud (2)**
+   - Scroll down to Severity, select **Medium (2)**
 
-   - Under Filter by Severity, select the **Custom (3)** option select **Low, Medium, and High** for the severity level **(4)**
+     ![Picture 1](../Media/s10.png)
 
-     ![Picture 1](../Media/ss8.png)
+     ![Picture 1](../Media/s11.png)
+
+1. On the **Set rule logic** pane, under **Rule query**, write the KQL query mentioned in the image, then select **Next: Incident settings**.
+
+   ![Picture 1](../Media/s12.png)
 
 1. Select the **Next: Automated response (5)** button and then select **Next: Review + create** button.
 
-1. On the **Analytics rule wizard- Create a new Mocrosoft Security rule** page, Click on **save**.
+1. On the **Analytics rule wizard- Create a new Scheduled query rule** page, Click on **save**.
 
-   ![Picture 1](../Media/ss9.png)
+   ![Picture 1](../Media/s13.png)
 
 ### Review
 In this lab, you have completed the following:
