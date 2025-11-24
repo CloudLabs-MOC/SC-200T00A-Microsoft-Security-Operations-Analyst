@@ -80,13 +80,13 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
 1. Select your **uniquenameDefender** Microsoft Sentinel workspace again.
 
-1. Select the **Hunting (1)** page under the **Threat Management** area. Click on the **Queries (1)** tab and then **+ New Query (3)** from the command bar.
+1. Select the **Hunting (1)** page under the **Threat Management** area. Click on the **Queries (2)** tab and then **+ New Query (3)** from the command bar.
 
    ![Picture 1](../Media/ss130.png)
 
    > **Note:** If you do not see **Hunting page** in the Microsoft Sentinel portal,try refreshing the browser. Wait 5 minutes and refresh again until it appears.
 
-1. In the **Create custom query** window, for the **Name** enter **PowerShell Hunt (1)**.
+1. In the **Create hunting query** window, for the **Name** enter **PowerShell Hunt (1)**.
 
 1. For the **Custom query** enter the following KQL statement **(2)**:
 
