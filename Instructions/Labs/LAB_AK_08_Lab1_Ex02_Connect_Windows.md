@@ -33,11 +33,11 @@ In this task, you'll create a Windows virtual machine in Azure.
 
     ![](../Media/windows-11-2-3005.png)
 
-1. Open the **Plan** drop-down list and select **Windows 11 Enterprise, version 22H2 (1)**.
+1. Open the **Plan** drop-down list and select **Windows 11 Enterprise, version 23H2 (1)**.
 
 1. Select **Start with a pre-set configuration (2)** to continue.
 
-   ![](../Media/14-8-25-l4-3.png)
+   ![](../Media/s52.png)
 
 1. Select **Dev/Test (1)** and then select **Continue to create a VM (2)**.
 
@@ -56,10 +56,10 @@ In this task, you'll create a Windows virtual machine in Azure.
 
     | Setting | Value |
     | --- | --- |
-    | Image | **Windows 11 Enterprise, version 22H2 (5)**  | 
+    | Image | **Windows 11 Enterprise, version 23H2 (5)**  | 
     | Size| Should be selected as **Standard_B2s**. If it appears empty, select **See all sizes**, choose the **Standard_DS1_v2 (6)** click **Select**. |
 
-      ![](../Media/14-8-25-l4-5.png)
+      ![](../Media/s53.png)
 
     | Setting | Value |
     | --- | --- |
@@ -105,8 +105,6 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
      ![](../Media/l8e3-16.png)
 
-1. Open the Microsoft Edge browser inside **WIN2**.
-
 1. In the **WIN2**, click on the **Azure Portal** icon as shown below:
  
    ![Launch Azure Portal](../Media/sc900-image(1).png)
@@ -114,23 +112,19 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 1. To sign in, use the credentials below:
    
     - **Email/Username: <inject key="AzureAdUserEmail"></inject>**
-    - **Password: <inject key="AzureAdUserPassword"></inject>**
+    - **Temporary Access Pass: <inject key="AzureAdUserPassword"></inject>**
 
 1. In the Search bar of the Azure portal, type **Azure arc (1)**, then select **Azure Arc (2)**.
 
    ![](../Media/l8e1-15.png)
 
-1. In the navigation pane under **Azure Arc resources** select **Machines (1)**
+1. In the navigation pane under **Infrastructure** select **Machines (1)**
 
-1. Select **+ Add/Create (2)**, then select **Add a machine (3)**.
+1. Select **+ Onboard/Create (2)**, then select **Onboard existing machines (3)**.
 
-   ![](../Media/l8e1-16.png)
+   ![](../Media/s4.png)
 
-1. Select **Generate script** from the "Add a single server" section.
-
-   ![](../Media/l8e1-17.png)
-
-1. In the **Add a server with Azure Arc** page, select the **rg-defender (2)** Resource group under Project details.
+1. In the **Add a server with Azure Arc** page, select your **subscription (1)** , select the **rg-defender (2)** Resource group under Project details.
  
 1. For **Region**, select **(US) East Us (3)** from the drop-down list.
 
@@ -215,6 +209,8 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 1. Select the **uniquenameDefender** microsoft Sentinel Workspace you created earlier.
 
    ![](../Media/l8e130.png)
+
+1. In the Microsoft Sentinel free trial activated tab, select **Ok**.
 
 1. In the Microsoft Sentinel left menus, scroll down to the **Content management** section and select **Content Hub (1)**.
 
