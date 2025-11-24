@@ -37,21 +37,11 @@ In the next task, you will perform the practical implementation of the **Content
 
 In this task, you will connect the Threat Intelligence data connector in Microsoft Sentinel by installing it from the Content Hub to create threat indicators for analysis.
 
-1. In the Azure portal search bar, type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
+1. On the left side menu, select **Microsoft Sentinel (1)** > **Content management (2)** and select **Content hub (3)** under the Configuration.
 
-   ![](./images/Ex1-05.png)
+   ![Picture 1](./images/Ex1.png)
 
-1. Select the **Microsoft Sentinel Workspace** you created earlier.
-
-   ![](./images/Ex4-00.png)
-
- 1. On the left side menu, select **Data connectors (1)** under the Configuration. 
- 
- 1. On the **Data connectors** page, click on **Content Hub (2).** 
-
-    ![Picture 1](./images/Ex1.png)
-
-1. On the Content hub page search bar type **Threat intelligence (1)**, select **Threat intelligence (2)** from the list, then click on **Install (3)**. 
+1. On the Content hub page search bar type **Threat Intelligence (NEW) (1)**, select **Threat Intelligence (NEW) (2)** from the list, then click on **Install (3)**. 
 
    ![](./images/NewEx3Task2-0.png)
 
@@ -67,15 +57,7 @@ In this task, you will connect the Threat Intelligence data connector in Microso
 
 In this task, you will create an indicator in Microsoft Sentinel.
 
-1. Select the **Microsoft Sentinel Workspace** you created earlier.
-
-    ![](./images/Ex4-00.png)
-
- 1. On the left side menu, select **Threat intelligence (1)** under Threat management, then click on the link **Click here to go to the Defender portal (2)**.    
-
-    ![](./images/NewEx3Task3-0.png)
-
-1. Navigate to Defender Portal, expand **Threat intelligence (1)** from the left hand menu and select **Intel management (2)**. 
+1. From your Defender Portal, expand **Threat intelligence (1)** from the left hand menu and select **Intel management (2)**. 
 
 1. On **Intel management** page, click on **+ New (3)** under Indicator, then select **TI object (4)**.
 
