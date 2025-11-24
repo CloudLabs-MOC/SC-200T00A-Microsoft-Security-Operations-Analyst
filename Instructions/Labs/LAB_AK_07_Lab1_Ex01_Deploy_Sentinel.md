@@ -165,6 +165,8 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
      ![](../Media/lab7y3.png)
 
+   >**Note:** On the left of the drop-down, make sure to select **KQL mode**.
+
     >**Important:** It could take up to ten minutes for the watchlist to appear. **Please continue with the following task and run this command in the next lab**.
      
     >**Note:** You can now use the `_GetWatchlist('HighValueHosts')` in your own KQL statements to access the list. The column to reference would be **Hostname**.
@@ -258,11 +260,11 @@ In this task, you will change the retention period for the SecurityEvent table.
 
 1. Select **Manage Table (4)**.
 
-1. Change the **Interactive retention period** to **90 days (1)**.
+1. Change the **Interactive retention period** to **90 days (1)** and Reset the **Total retention period** to **180 days (2)** (if needed).
 
-     ![](../Media/lab7y11.png)
+     ![](../Media/s5.png)
 
-1. Reset the **Total retention period** to **180 days (2)** (if needed). Notice that **Archive period** is set now set to **90 days**, because **Azure Monitor** automatically treats the remaining 90 days of total retention as low-cost, long-term retention.
+1. Notice that **Archive period** is now set to **90 days**, because **Azure Monitor** automatically treats the remaining 90 days of total retention as low-cost, long-term retention.
 
 1. Select **Save (3)** to apply the changes.
 
