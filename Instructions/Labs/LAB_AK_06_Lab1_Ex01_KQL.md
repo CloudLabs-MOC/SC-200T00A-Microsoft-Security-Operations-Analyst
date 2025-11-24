@@ -85,7 +85,7 @@ In this task, you will build basic KQL statements.
 
    > **Important:** For each query, clear the previous statement from the Query Window or open a new Query Window by selecting **+** after the last opened tab (up to 25).
 
-1. Navigate to the **Log Analytics workspace (1)** created in the earlier step, expand **Classic (2)**, select the **Virtual machine (deprecated) (3)** option, and on the right of the screen, click on the **WIN1 (4)** virtual machine displayed.
+1. Navigate to the **Log Analytics workspace** created in the earlier step, select **uniquenameDefender (1)**, expand **Classic (2)**, select the **Virtual machine (deprecated) (3)** option, and on the right of the screen, click on the **WIN1 (4)** virtual machine displayed.
    
    ![](../Media/14-8-25-l6-3.png)
 
@@ -113,13 +113,17 @@ In this task, you will build basic KQL statements.
 
    >**Note**: Please wait for at least 5 minutes for the data connector status to update to **Connected**
 
-7. Go to Sentinel, click on **Logs (1)**. Close **(2)** all the pop-ups if they appear.
+7. Go to Sentinel, click on **Logs (1)**. **Close (2)** all the pop-ups if they appear.
 
    ![Picture 1](../Media/logs.png)
 
    >**Note:** You may encounter situations where some queries below may not work as expected. If needed, refer to the **lab guide** sometimes, the **connector** may take time to reach the desired state, affecting query execution. Your patience and understanding are greatly appreciated.
 
-8. The following statement demonstrates **search** across tables listed within the **in** clause. In the Query Window enter the following statement and select **Run**: 
+8. On the left of the drop-down, make sure to choose **KQL mode**.
+
+   ![](../Media/s51.png)
+   
+9. The following statement demonstrates **search** across tables listed within the **in** clause. In the Query Window enter the following statement and select **Run**: 
 
     ```KQL
     search in (SecurityEvent,App*) "new"
@@ -127,9 +131,9 @@ In this task, you will build basic KQL statements.
 
     ![](../Media/14-8-25-l6-7.png)
 
-9. Change back the *Time range* to **Last 24 hours** in the Query Window.
+10. Change back the *Time range* to **Last 24 hours** in the Query Window.
 
-10. The following statements demonstrates the **where** operator, which filters on a specific predicate. In the Query Window enter the following statement and select **Run**: 
+11. The following statements demonstrates the **where** operator, which filters on a specific predicate. In the Query Window enter the following statement and select **Run**: 
 
     >**Important:** Select **Run** after entering each query from the code blocks below.
 
@@ -158,7 +162,7 @@ In this task, you will build basic KQL statements.
  
     ```
 
-11. The following statement demonstrates the use of the **let** statement to declare a *dynamic list*. In the Query Window enter the following statement and select **Run**: 
+12. The following statement demonstrates the use of the **let** statement to declare a *dynamic list*. In the Query Window enter the following statement and select **Run**: 
 
     ```KQL
     let suspiciousAccounts = datatable(account: string) [
@@ -172,9 +176,9 @@ In this task, you will build basic KQL statements.
 
     >**Tip:** You can easily reformat the query by selecting the **ellipsis (...)** in the Query window and then clicking **Format query**.
 
-12. Change the **Time range** to **Last hour** in the Query Window. This will limit our results for the following statements.
+13. Change the **Time range** to **Last hour** in the Query Window. This will limit our results for the following statements.
 
-13. The following statement demonstrates the **extend** operator, which creates a calculated column and adds it to the result set. In the Query Window enter the following statement and select **Run**: 
+14. The following statement demonstrates the **extend** operator, which creates a calculated column and adds it to the result set. In the Query Window enter the following statement and select **Run**: 
 
     ```KQL
     SecurityEvent  
@@ -183,7 +187,7 @@ In this task, you will build basic KQL statements.
     | extend StartDir =  substring(ProcessName,0, string_size(ProcessName)-string_size(Process))
     ```
 
-14. The following statement demonstrates the **order by** operator, which sorts the rows of the input table by one or more columns in ascending or descending order. The **order by** operator is an alias to the **sort by** operator. In the Query Window enter the following statement and select **Run**: 
+15. The following statement demonstrates the **order by** operator, which sorts the rows of the input table by one or more columns in ascending or descending order. The **order by** operator is an alias to the **sort by** operator. In the Query Window enter the following statement and select **Run**: 
 
     ```KQL
     SecurityEvent  
@@ -193,7 +197,7 @@ In this task, you will build basic KQL statements.
     | order by StartDir desc, Process asc
     ```
 
-15. The following statements demonstrate the **project** operator, which selects the columns to include in the order specified. In the Query Window enter the following statement and select **Run**: 
+16. The following statements demonstrate the **project** operator, which selects the columns to include in the order specified. In the Query Window enter the following statement and select **Run**: 
 
     ```KQL
     SecurityEvent  
@@ -204,7 +208,7 @@ In this task, you will build basic KQL statements.
     | project Process, StartDir
     ```
 
-16. The following statements demonstrate the **project-away** operator, which selects the columns to exclude from the output. In the Query Window enter the following statement and select **Run**: 
+17. The following statements demonstrate the **project-away** operator, which selects the columns to exclude from the output. In the Query Window enter the following statement and select **Run**: 
 
     ```KQL
     SecurityEvent  

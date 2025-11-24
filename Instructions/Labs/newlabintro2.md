@@ -36,20 +36,6 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
  
 ![Manage Your Virtual Machine](../Media/12-8-25-g1-4.png)
 
-## **Lab Duration Extension**
-
-1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
-
-    ![Manage Your Virtual Machine](../Media/12-8-25-g1-6.png)
-
-    >**Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
-
-2. Click **OK** to extend your lab duration.
- 
-   ![Manage Your Virtual Machine](../Media/gext2.png)
-
-3. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed.
-
 ## Let's Get Started with Azure Portal
  
 1. On your virtual machine, click on the Azure Portal icon as shown below:
@@ -62,11 +48,11 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
  
        ![Enter Your Username](../Media/sc900-image-1.png)
  
-3. Next, provide your password:
+3. Now enter the Temporary Access Pass and click on **Sign in**.
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
  
-     ![Enter Your Password](../Media/sc900-image-2.png)
+     ![Enter Your Password](../Media/s1.png)
  
 4. If prompted to stay signed in, you can click **No**.
 

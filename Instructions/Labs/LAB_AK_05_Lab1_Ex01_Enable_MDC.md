@@ -131,15 +131,11 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
    ![](../Media/l8e1-15.png)
 
-1. In the navigation pane under **Azure Arc resources** select **Machines (1)**.
+1. In the navigation pane under **Infrastructure** select **Machines (1)**.
 
-1. Select **+ Add/Create (2)**, then select **Add a machine (3)**.
+1. Select **+ Onboard/Create (2)**, then select **Onboard existing machines (3)**.
 
-   ![](../Media/l8e1-16.png)
-
-1. Select **Generate script** from the "Add a single server" section.
-
-   ![](../Media/l8e1-17.png)
+   ![](../Media/s4.png)
 
 1. In the **Add a server with Azure Arc** page, select the **RG-Defender (2)** Resource group under Project details.
  

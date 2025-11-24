@@ -37,7 +37,7 @@ In this task, you will create a new group in Microsoft Entra ID using the Azure 
     |Group Type| **Microsoft 365 (1)** |
     |Group Name| **Sg-IT-<inject key="DeploymentID" enableCopy="false"/> (2)**|
 
-   ![Picture 1](../Media/create-group-1.png)
+   ![Picture 1](../Media/s2.png)
 
 1. Click on **No owners selected** and  select the **ODL_user <inject key="DeploymentID" enableCopy="false"/>** from the list and then click on **Select**.
 
@@ -61,11 +61,11 @@ In this task, you will assign preset security policies for Exchange Online Prote
  
       ![Enter Your Username](../Media/sc900-image-1.png)
  
-1. Next, provide your password to continue:
+1. Now enter the Temporary Access Pass and click on **Sign in**.
+
+   - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
- 
-      ![Enter Your Password](../Media/sc900-image-2.png)
+      ![Enter Your Password](../Media/s1.png)
 
     >**Note:** If you encounter the message **"The operation could not be completed. Please try again later. If the issue persists, contact Microsoft Support."**, click **OK** to continue.
 
@@ -97,9 +97,9 @@ In this task, you will assign preset security policies for Exchange Online Prote
 
 1. In the Apply Exchange Online Protection page, select **Specific recipients** under **Apply protection to:** and under **Domains** you can see that your **domain is selected (1)**. If not, start writing your tenant's domain name, select it, and then select **Next (2)**.
 
-   ![Standart protection](../Media/standard-protection2-2905.png)                                                                    
+   ![Standart protection](../Media/s50.png)                                                                    
   
-    >**Hint:** The domain name for your tenant is the same as your admin account, usually in the format *mocholxxxxx.onmicrosoft.com*. This setup enforces policies for anti-spam, outbound spam filtering, anti-malware, and anti-phishing.
+    >**Hint:** The domain name for your tenant is the same as your admin account, usually in the format **cybervancexxxxx.onmicrosoft.com**. This setup enforces policies for anti-spam, outbound spam filtering, anti-malware, and anti-phishing.
 
 1. On the **Apply Defender for Office 365 protection** page, apply the same configuration as in the previous step and select **Next**. This configuration enforces policies for **anti-phishing, Safe Attachments, and Safe Links**.
 

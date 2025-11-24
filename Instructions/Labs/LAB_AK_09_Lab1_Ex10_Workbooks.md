@@ -154,7 +154,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
    - Set the **Percent width** to **25 (2)** and **Maximum width** to **25 (3)**.
 
-   - Now select **Advanced Settings (3)** tab from the query's command bar.
+   - Now select **Advanced Settings (4)** tab from the query's command bar.
 
      ![Picture 1](../Media/ss104.png)   
 

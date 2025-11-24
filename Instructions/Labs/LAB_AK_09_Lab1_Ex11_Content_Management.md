@@ -80,7 +80,7 @@ In this task, you will create an Azure DevOps repository.
 
 1. On the **Create a project to get started** page, enter **My Sentinel Content (1)**, select **Private (2)** and then select **+ Create project (3)**.
 
-   ![Picture 1](../Media/ss115.png)
+   ![Picture 1](../Media/s16.png)
 
 1. Navigate to **Repos (1)** on the left pane. At the bottom of the page in the area **Initialize main branch with a README or gitignore (2)**, select **Initialize (3)**.
 
@@ -126,9 +126,9 @@ In this task, you will connect Microsoft Sentinel to Azure DevOps to manage cont
 
    ![Picture 1](../Media/sc-200-19.png)
 
-1. In Microsoft Sentinel, select **Repositories (Preview) (1)** in the **Content Management** section. Select **+ Add new (2)** button from the toolbar.
+1. In Microsoft Sentinel, select **Repositories (1)** in the **Content Management** section. Select **+ Add new (2)** button from the toolbar.
 
-   ![Picture 1](../Media/ss122.png)
+   ![Picture 1](../Media/s17.png)
 
 1. On the **Create new deployment connection** page,
 
@@ -158,11 +158,11 @@ In this task, you will connect Microsoft Sentinel to Azure DevOps to manage cont
 
      ![Picture 1](../Media/ss124.png)   
 
-1. Go back to Microsoft Sentinel workspace if needed.
+1. Go back to the Microsoft Sentinel workspace if needed.
 
-1. Go to the **Repositories (Preview) (1)** page, select **Refresh (2)**. Wait until the last deployment status is **Failed (3)**.  
+1. Go to the **Repositories (1)** page, select **Refresh (2)**. Wait until the last deployment status is **Failed (3)**.  
 
-   ![Picture 1](../Media/ss125.png)
+   ![Picture 1](../Media/s18.png)
 
    >**Note:** The **Failed** status is due to limitations in the hosted lab environment. You would normally see **Succeeded**. Then you can see in the **Analytics** the imported rule **Rule from Azure DevOps**.
 

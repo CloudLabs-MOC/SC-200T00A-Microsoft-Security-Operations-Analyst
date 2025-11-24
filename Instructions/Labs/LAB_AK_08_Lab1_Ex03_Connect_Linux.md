@@ -29,6 +29,8 @@ In this task, you will access your Microsoft Sentinel workspace.
 
    ![](../Media/uniquenamedefender.png)
 
+1. In the Microsoft Sentinel free trial activated tab, select **Ok**.
+
 ### Task 2: Connect a Linux Host using the Common Event Format connector
 
 In this task, you will connect a Linux host to Microsoft Sentinel with the Common Event Format (CEF) connector.
@@ -179,56 +181,22 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
    ![](../Media/syslog-install2.png)
 
-1. Under **Configuration**, open the **Install agent on a non-Azure Linux Machine** section.
+1. Under **Configuration**, open the **Install agent on Azure Linux Machine** section.
 
-1. Select the link for **Download & install agent for non-Azure Linux machine**. 
+1. Select the link for **Download & install agent for Azure Linux machine**. 
 
-    ![](../Media/non-azure-agent.png)
+1. On the Virtual machines page select the **LIN2** virtual machine.
 
-    >**Note:** Your Log Analytics workspace should show **2 Windows computers connected**. This corresponds to the WIN2 and AZWIN01 virtual machines connected earlier.
+   ![](../Media/s54.png)
 
-1. Select the tab for **Linux servers (1)**.
+   >**Note: Kindly make sure the LIN2 virtual machine is running**.
 
-   ![](../Media/14-8-25-l4e-10.png)
+1. Click on **Connect** and wait for the LIN2 VM to connect to the workspace.
 
-    >**Note:** Your Log Analytics workspace should show **1 Linux computer connected**. This corresponds to the LIN1 (ubuntu1) virtual machine connected earlier with the CEF connector.
+   ![](../Media/s55.png)
 
-1. Select **Log Analytics agent instructions (2)**.
-
-1. Copy the command in the **Download and onboard agent for Linux** area to the clipboard and paste it into Notepad.
-
-   ![](../Media/non-azure-agent2.png)
+   ![](../Media/s56.png)
    
-1. Go to the LIN2 Linux virtual machine in the Azure portal and copy the Public IP address of **LIN2** and paste it into a notepad.
-
-1. Go back to the LabVM virtual machine, and launch a NEW Windows PowerShell as Administrator by right-clicking the **Start (1)** menu icon and selecting **Windows PowerShell (Admin) (2)**. Select **Yes** to allow the app to run in the User Account Control window that appears.
-   
-   ![](../Media/l8e1-11.png)
-   
-   >**Note:** You can reuse the Windows PowerShell window if the **Installation completed** for the last task by entering **exit** to close the connection to LIN1.
-
-1. Enter the following PowerShell command, adjusting for your specific Linux server information, and press Enter:
-
-    ```PowerShell
-    ssh insert-your-linux-IP-address-here -l insert-linux-user-name-here
-    ```
-
-    >**Note**: Replace **insert your linux IP address here** with pasted on the notepad Public Ip address of **LIN2** and **insert linux username here** with **Admin Username** provided under Resource group: **LIN2** in the Environment tab
-   
-1. Enter **yes** to confirm the connection and then type the user's **password provided under Resource group: LIN2** in the Environment tab and press Enter. Your screen should look something like this:
-
-   ![linux login](../Media/sc-200-M6-Ex3.png)
-
-1. You are now ready to paste in the **Download and onboard agent for Linux** from the earlier step. Make sure that the script from Azure is in the clipboard. In PowerShell, right-click the top bar and choose **Edit (1)** and then **Paste (2)**. 
-
-    ![linux login](../Media/cp.png)
-
-   >**Note:** You can also copy from the notepad you have pasted earlier.
-
-1. Once the script is pasted in press Enter. The script will run against your Linux server remotely. You have completed the task. No further labs in this course rely on this connection.
-
-1. When it finished, type **exit** to close the remote shell connection to LIN2.
-
 ### Task 4: Configure the facilities you want to collect and their severities for the Syslog connector
 
 In this task, you will configure the Syslog collection facilities.

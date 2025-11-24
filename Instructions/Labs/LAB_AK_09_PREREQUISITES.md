@@ -43,9 +43,9 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
  
       ![Enter Your Username](../Media/sc900-image-1.png)
  
-3. Next, provide your password:
+3. Now enter the Temporary Access Pass and click on **Sign in**.
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
  
      ![Enter Your Username](../Media/sc900-image-2.png)
 
@@ -74,13 +74,9 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
      ![Picture 1](../Media/l8e1-15.png)
 
-1. On the left side navigation pane under **Azure Arc resources** select **Machines (1)** and then click on **+ Add/Create (2)** drop dowm and then click on **Add a Machine (3)**.
+1. On the left side navigation pane under **Infrastructure** select **Machines (1)** and then click on **+ Onboard/Create (2)** drop down and then click on **Onboard existing machines (3)**.
 
-     ![Picture 1](../Media/l8e1-16.png)
-
-1. Select **Generate script** in the **"Add a single server"** section.
-
-     ![Picture 1](../Media/l8e1-17.png)
+     ![Picture 1](../Media/s4.png)
 
 1. First, select the **East US** region.
 
@@ -183,6 +179,8 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 1. Next, in Add Microsoft Sentinel to a workspace page select the **uniquenameDefender (1)** that was created in the previous lab, then select **Add (2)**. This could take a few minutes.
 
      ![Picture 1](../Media/sc-200-20.png)
+
+1. In the Microsoft Sentinel free trial activated tab, select **Ok**.
 
 1. On the **Microsoft Sentinel | Guides** page, select **Go to content hub** under **Get started** tab.
 
