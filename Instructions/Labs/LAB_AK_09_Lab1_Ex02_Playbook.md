@@ -47,7 +47,7 @@ In this task, you'll create a Logic App that is used as a Playbook in Microsoft 
 
     ![](../Media/ss12.png)
 
-1. Find the **Defender_XDR_Ransomware_Playbook_for_SecOps-Tasks** playbook and select the name.
+1. Find the **Defender_XDR_Ransomware_Playbook_for_SecOps-Tasks** playbook and select the name, and click on **configuration**.
 
    ![](../Media/4.png)
 
