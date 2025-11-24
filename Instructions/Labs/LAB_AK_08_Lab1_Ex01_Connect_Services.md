@@ -55,9 +55,11 @@ In this task, you will access your Microsoft Sentinel workspace.
   
     ![](../Media/l8e131.png)
 
-1. Select the **uniquenameDefender** microsoft Sentinel Workspace you created earlier.
+1. Select the **uniquenameDefender** Microsoft Sentinel Workspace you created earlier.
 
    ![](../Media/uniquenamedefender.png)
+
+1. In the Microsoft Sentinel free trial activated tab, select **Ok**.
 
 ### Task 2: Connect the Microsoft Defender for Cloud data connector
 
@@ -89,7 +91,7 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
 
 1. In the **Configuration** section, **select** the checkbox for the **Subscription** and either select the **Connect** link, or slide the **Status** option to the right
 
-    ![](../Media/l8e139.png)
+    ![](../Media/s6.png)
 
 1. To enable bi-directional sync, select the **Enable Microsoft Defender for all subscriptions** link.
 
@@ -137,7 +139,7 @@ In this task, you will connect the **Azure Activity** data connector.
 
 1. Select the **Parameters** tab, choose your **uniquenameDefender** workspace from the **Primary Log Analytics workspace** drop-down list. This action will apply the subscription configuration to send the information to the Log Analytics workspace.
 
-    ![](../Media/l8e145.png)
+    ![](../Media/s8.png)
 
 1. Select the **Remediation** tab and select the **Create a remediation task (1)** checkbox. This action will apply the policy to existing Azure resources.
 
