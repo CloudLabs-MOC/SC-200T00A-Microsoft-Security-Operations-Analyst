@@ -57,7 +57,11 @@ In this task, you will connect the Threat Intelligence data connector in Microso
 
 In this task, you will create an indicator in Microsoft Sentinel.
 
-1. From your Defender Portal, expand **Threat intelligence (1)** from the left hand menu and select **Intel management (2)**. 
+1. On the left side menu, under **Microsoft Sentine** click on **Threat management (1)** and select **Threat intelligence (2)** under the Configuration.
+
+    ![](./images/Ex4-00.png)
+
+1. Navigate to Defender Portal, expand **Threat intelligence (1)** from the left hand menu and select **Intel management (2)**. 
 
 1. On **Intel management** page, click on **+ New (3)** under Indicator, then select **TI object (4)**.
 
@@ -88,13 +92,13 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
     > **Note:** It could take a couple of minutes for the indicator to appear.
 
-1. In the Azure portal search bar, type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
+1. Navigate back to the Azure portal search bar, type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
-   ![](./images/Ex1-05.png)
+   ![](./images/Ex1-05-Az.png)
 
 1. Select the **Microsoft Sentinel Workspace** you created earlier.
 
-   ![](./images/Ex4-00.png)
+   ![](./images/Ex4-00-Az.png)
 
 1. Select the **Logs (1)** option under **General** on the left hand menu. 
 

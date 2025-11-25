@@ -11,9 +11,8 @@ In this lab, you will enable and configure data connectors in Microsoft Sentinel
  In this lab, you will perform the following:
 
 - Task 1: Connect the Microsoft Entra ID connector
-- Task 2: Connect the Microsoft Entra ID Protection connector
-- Task 3: Connect the Microsoft Defender for Cloud connector
-- Task 4: Connect the Azure Activity connector
+- Task 2: Connect the Microsoft Defender for Cloud connector
+- Task 3: Connect the Azure Activity connector
 
 ### Task 1: Connect the Microsoft Entra ID connector
 
@@ -43,21 +42,7 @@ In this lab, you will enable and configure data connectors in Microsoft Sentinel
 
     >**Note:** It may take **15–20 minutes** for the **Microsoft Entra ID** data connector to show a **Connected** status after configuration. 
 
-### Task 2: Connect the Microsoft Entra ID Protection connector
-
-In this task, you will connect the Microsoft Entra ID Protection connector to Microsoft Sentinel.
-
-1. On the left side menu, under Configuration, select **Data connectors (1)**.
-
-1. On the Data Connectors page, search for **Microsoft Entra ID Protection (2)** and select **Microsoft Entra ID Protection (3)** Data connector from the list, then click on **Open connector page (4)**.
-
-   ![Picture 1](./images/Ex2-12.png)
- 
-1. From the **Configuration** area select the **Connect** button.
-
-   ![Picture 1](./images/Ex2-13.png) 
-
-### Task 3: Connect the Microsoft Defender for Cloud connector
+### Task 2: Connect the Microsoft Defender for Cloud connector
 
 In this task, you will connect the Microsoft Defender for Cloud connector.
 
@@ -79,7 +64,7 @@ In this task, you will connect the Microsoft Defender for Cloud connector.
 
    ![Picture](./images/Ex2-04.png) 
 
-### Task 4: Connect the Azure Activity connector
+### Task 3: Connect the Azure Activity connector
 
 In this task, you will connect the Azure Activity connector.
 
