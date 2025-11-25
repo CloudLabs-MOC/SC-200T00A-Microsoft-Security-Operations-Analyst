@@ -18,31 +18,29 @@ In this lab, you will configure Microsoft Sentinel to perform Entity Behavior An
 
 In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
 
-1. In the Search bar of the Azure portal, type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
+1. In the Defender portal, mavigate to **Settings (2)** under **System (1)** and click on **Microsoft Sentinel (3)**
 
     ![](./images/Ex1-05.png)
 
 1. Select the **Microsoft Sentinel Workspace** you created earlier.
 
-    ![](./images/Ex4-00.png)
+    ![](./images/Ex4-00-1.png)
 
-1. On the **Microsoft Sentinel Workspace**, select **Entity behavior (1)** from the left hand pane. 
+1. On the **Microsoft Sentinel Workspace**, select **Entity behavior** from the from the drop down and then click on **Configure UEBA (2)**. 
 
-1. On the popup **Enable UEBA** from *Entity behavior settings*, select **Set UEBA (2)**.
+    ![](./images/Ex4-00-2.png)
 
-    ![](./images/Ex4-12.png)
+1. Enable the **Turn on UEBA feature (1)** toggle and then enable the **Azure Active Directory (2)** toggle. 
 
-1. Navigate to the **Settings (1)** tab under **Configuration** from the left navigation pane. 
-
-1. On the **Microsoft Sentinel | Settings** page, scroll down the **Anomalies** section and read through the paragraph, and verify that the *switch* is **On (2)**.
-
-1. Select the **Go to analytics in order to configure the anomalies (3)** link.
-
-    ![](./images/NewEx4Task1-1.png)
+    ![](./images/Ex4-00-3.png)
 
 ### Task 2: Confirm and review Anomalies rules
 
 In this task, you will confirm that Anomalies analytics rules are enabled.
+
+1. In the Microsoft Defender portal, select **Analytics** under **Configuration** from the left hand pane
+
+    ![](./images/Ex4-00-4.png)
 
 1. You should now be at the **Analytics Rules** page. On **Anomalies (1)** tab, confirm **Status is Enabled (2)** for all the rules.
 
@@ -56,7 +54,7 @@ In this task, you will confirm that Anomalies analytics rules are enabled.
 
     ![](./images/Ex4-03.png)
 
-1. Review the *Configuration* tab information. Notice that you cannot change the **Anomaly score threshold (1)**, then select **X (2)** in the top right corner to exit the **Analytics rule wizard**.
+1. Review the *Configuration* tab information. Notice that you cannot change the **Anomaly score threshold (1)**, then select **Cancel (2)** in the top right corner to exit the **Analytics rule wizard**.
 
     ![](./images/Ex4-04.png)
 
