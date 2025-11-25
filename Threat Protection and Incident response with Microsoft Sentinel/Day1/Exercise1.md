@@ -51,7 +51,7 @@ In this task, you will deploy Microsoft Sentinel to an existing Log Analytics wo
 
 1. In the Search bar of the Azure portal, type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
-    ![](./images/Ex1-05.png)
+    ![](./images/Ex1-05-Az.png)
 
 1. Select **+ Create** from the command bar.
 
