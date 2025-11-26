@@ -52,7 +52,7 @@ In this task, you will deploy Microsoft Sentinel to an existing Log Analytics wo
 
 1. In the Search bar of the Azure portal, type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
-   ![](../Day1/images/Ex1-05.png)
+   ![](../Day1/images/Ex1-05-Az.png)
 
 1. Select **+ Create** from the command bar.
 
@@ -72,9 +72,13 @@ In this task, you will deploy Microsoft Sentinel to an existing Log Analytics wo
 
 In this task, you will connect the Azure Activity connector.
 
- 1. On the left side menu, select **Data connectors (1)** under the Configuration. 
+ 1. Open a new tab in the web browser and navigate to **Microsoft Defender Portal**
+
+      ```
+      https://security.microsoft.com/
+      ```
  
- 1. On the **Data connectors** page, click on **Content Hub (2).** 
+ 1. On the left hand side menu, select **Microsoft Sentinel (1)** > **Content management (2)** and select **Content hub (3)** under the Configuration.
 
     ![Picture 1](../Day1/images/Ex1.png)
 
@@ -96,7 +100,7 @@ In this task, you will connect the Azure Activity connector.
 
 1. In the **Primary** tab, click the ellipsis button **(...) (1)** next to **Primary Log Analytics workspace** and select your **workspace (2)** from the drop-down list and click **Select (3)**.
 
-   ![Picture](../Day1/images/Ex2-09.png)
+   ![Picture](./images/Ex2-09-def.png)
 
 1. Select the **Remediation** tab and select the **Create a remediation task (1)** checkbox. This action will apply the policy to existing Azure resources.
 
@@ -114,15 +118,15 @@ In this task, you will connect the Azure Activity connector.
 
 In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
-1. On the **Microsoft Sentinel Workspace** page, select **Analytics (1)** under the **Configuration** from the left-hand menu, and you will find a **Click here to go to the Defender portal (2)** link. Click on it to navigate to the **Defender portal**.
+1. In the Microsoft Defender portal, select **Analytics (2)** under **Configuration (1)** from the left hand pane
 
-   ![Picture](./images/Ex1-00.png) 
+   ![Picture](../Day1/images/Ex4-00-4.png) 
 
      >**Note:** If you do not see the expected Microsoft Sentinel features or options, sign out of the Defender portal and sign back in to refresh your session.
 
-1. On the Analytics page, in the search bar under Rule template type **Suspicious Resource deployment (1)** and press the enter key, then select **Suspicious Resource deployment (2)** rule from the list and click **Create rule (3)**.
+1. On the Analytics page, in the search bar under **Rule template (1)** type **Suspicious Resource deployment (2)** and press the enter key, then select **Suspicious Resource deployment (3)** rule from the list and click **Create rule (4)**.
 
-   ![Picture](./images/Ex1-01.png)
+   ![Picture](./images/Ex1-01-def.png)
 
     > **Note:** If you are unable to find **Suspicious Resource deployment** under rule templates. Wait for the **Azure Activity** data connector to show a **Connected** status after configuration.   
 
@@ -184,11 +188,11 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
 1. In the Search bar of the Azure portal, type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
-   ![](../Day1/images/Ex1-05.png)
+   ![](../Day1/images/Ex1-05-Az.png)
 
 1. Select the **Microsoft Sentinel Workspace** you created earlier.
 
-   ![](../Day1/images/Ex4-00.png)   
+   ![](../Day1/images/Ex4-00-Az.png)   
 
 1. Select the **Logs (1)** option under **General** on the left hand menu. 
 
@@ -208,7 +212,7 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
 In this task, you will create and investigate an incident.
 
-1. in defender portal, navigate **Advanced Hunting (3)** by expanding **Hunting (2)** under **Investigation & response (1)**, enter the below given **query (4)** and click on **Run Query ()5**.
+1. Navigate to the Defender portal, navigate **Advanced Hunting (3)** by expanding **Hunting (2)** under **Investigation & response (1)**, enter the below given **query (4)** and click on **Run Query ()5**.
 
    ```KQL
     let lookback = 1d;

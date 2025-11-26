@@ -16,18 +16,6 @@ In this exercise, you will learn how to use Microsoft Sentinel’s repository in
 
 ### Task 1: Export an analytical rule
 
-1. In the Search bar of the Azure portal, type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
-
-   ![](../Day1/images/Ex1-05.png)
-
-1. Select the **Microsoft Sentinel Workspace** you created earlier.
-
-   ![](../Day1/images/Ex4-00.png)
-
-1. On the **Microsoft Sentinel Workspace** page, select **Analytics (1)** under the **Configuration** from the left-hand menu, and you will find a **Click here to go to the Defender portal (2)** link. Click on it to navigate to the **Defender portal**.
-
-   ![Picture 1](./images/Ex4-00.png)
-
 1. On the **Defender portal**, navigate to **Analytics (1)** under the **Configuration** from the left hand menu, select the **Suspicious Resource deployment (2)** rule that you created earlier, then select the **Export (3)** from the toolbar. 
 
    >**Note:** You might need to select the ellipsis icon **(...)** to see it.

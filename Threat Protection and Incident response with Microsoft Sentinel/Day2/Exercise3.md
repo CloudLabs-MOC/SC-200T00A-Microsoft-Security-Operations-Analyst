@@ -18,19 +18,17 @@ In this exercise, you will explore **Microsoft Sentinel’s** advanced capabilit
 
 In this task, you will connect the Threat Intelligence data connector in Microsoft Sentinel by installing it from the Content Hub to create threat indicators for analysis.
 
-1. In the Azure portal search bar, type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
+ 1. Navigate to **Microsoft Defender Portal**
 
-   ![](../Day1/images/Ex1-05.png)
+      ```
+      https://security.microsoft.com/
+      ```
 
-1. Select the **Microsoft Sentinel Workspace** you created earlier.
+ 1. On the left side menu, select **Microsoft Sentinel (1)** > **Content management (2)** and select **Content hub (3)** under the Configuration.
 
-   ![](../Day1/images/Ex4-00.png)
+     ![Picture 1](../Day1/images/Ex1.png)
 
-1. In Microsoft Sentinel, on the left menu, select the **Content hub (1)** option under Content management, and you will find a **Click here to go to the Defender portal (2)** link. Click on it to navigate to the **Defender portal**.
-
-   ![](../Day1/images/Ex3-04.png)
-
-1. On the Defender portal, the Content hub page will open. In the search bar, type **Threat intelligence (1)**, select **Threat intelligence (2)** from the list, then click on **Install (3)**. 
+1. In the search bar, type **Threat intelligence (1)**, select **Threat intelligence (2)** from the list, then click on **Install (3)**. 
 
    ![](./images/Ex3-25.png)
 
@@ -65,9 +63,9 @@ In this task, you will connect the Threat Intelligence data connector in Microso
 
       **Note:** It could take a couple of minutes for the indicator to appear.
 
-1. On the Microsoft Sentinel workspace page, in the **Workbook (1)** section, you will find a **Click here to go to the Defender portal (2)** link. Click on it to navigate to the **Defender portal**.
+1. From the left hand pane in Defender portal, click on **Workbooks (1)** under **Threat management (2)**.
 
-   ![Picture](./images/Ex3-07.png)
+   ![Picture](./images/Ex3-07-def.png)
 
 1. Select the *Templates* tab, and search for and select the **Threat Intelligence (1)** template workbook.
 
@@ -85,7 +83,7 @@ In this task, you will connect the Threat Intelligence data connector in Microso
 
 In this task, you will save a workbook template and modify it.
 
-1. You should be back in the **Microsoft Sentinel | Workbooks | Templates** tab with the **Threat Intelligence** workbook still selected.
+1. You should be back in the **Templates** tab with the **Threat Intelligence** workbook still selected.
 
 1. Scroll down again and select the **Save (2)** button in the **Threat Intelligence (1)** workbook details pane.
 

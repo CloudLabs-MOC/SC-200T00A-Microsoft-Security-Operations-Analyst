@@ -18,11 +18,11 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
 1. Navigate back to the Azure portal, in the search bar type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
-   ![](../Day1/images/Ex1-05.png)
+   ![](../Day1/images/Ex1-05-Az.png)
 
 1. Select the **Microsoft Sentinel Workspace** to proceed.
 
-   ![](../Day1/images/Ex4-00.png)
+   ![](../Day1/images/Ex4-00-Az.png)
 
 1. On Microsoft Sentinel workspace page, select **Logs (1)**, Choose working mode as **KQL mode (2)** and enter the following KQL Statement in the **New Query 1 (3)** space, then click on **Run (4)**.
 
@@ -54,11 +54,7 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
 1. Close the *Logs* window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
 
-1. On the Microsoft Sentinel workspace page, in the **Overview (1)** section, you will find a **Click here to go to the Defender portal (2)** link, then click on it to navigate to the **Defender portal**.
-
-   ![Picture](./images/Repo-14.png)
-
-1. On the Defender portal, navigate to the **Hunting (1)** option under the Threat management from the left-hand menu, select **+ New query (2)**.
+1. Navigate back to the Defender portal, navigate to the **Hunting (1)** option under the Threat management from the left-hand menu, select **+ New query (2)**.
 
    ![Picture](./images/Ex2-12.png)
 
@@ -76,6 +72,7 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
 1. Scroll down and under *Entity mapping*, click on **+ Add new Entity (3)**, then select:
 
+    - Name: **Heartbeat Health Check (1)**
     - For the *Entity type* drop-down list select **Host (4)**.
     - For the *Identifier* drop-down list select **HostName (5)**.
     - For the *Value* drop-down list select **Computer (6)**.
@@ -131,19 +128,7 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
    ![Picture](./images/Ex2-04.png)
 
-1. Navigate back to the Azure portal, in the search bar type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
-
-   ![](../Day1/images/Ex1-05.png)
-
-1. Select the **Microsoft Sentinel Workspace** to proceed.
-
-   ![](../Day1/images/Ex4-00.png)
-
-1. On the Microsoft Sentinel workspace page, in the **Overview (1)** section, you will find a **Click here to go to the Defender portal (2)** link. Click on it to navigate to the **Defender portal**.
-
-   ![Picture](./images/Repo-14.png)   
-
-1. On the Defender portal, navigate to the **Watchlist (1)** option under the Configuration from the left-hand menu, select **+ New (2)** from the **My Watchlists** section.
+1. Navigate back to the Defender portal, navigate to the **Watchlist (1)** option under the Configuration from the left-hand menu, select **+ New (2)** from the **My Watchlists** section.
 
    ![Picture](./images/Ex2-06.png)
 
