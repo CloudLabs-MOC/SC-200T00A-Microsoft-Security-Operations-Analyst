@@ -1,4 +1,4 @@
-# Threat Protection and Incident response with Microsoft Sentinel
+# Threat Protection and Incident response with Microsoft Sentinel within Unified Platform - Day 1
 
 ### Overall Estimated Duration: 4 Hours
 
