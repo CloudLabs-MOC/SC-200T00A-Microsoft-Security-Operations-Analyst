@@ -71,11 +71,13 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 1. Launch Windows PowerShell as Administrator by right clicking the Start menu icon and selecting **Windows PowerShell (Admin)**.
 1. Paste the command which we copied from the Native SSH window
-1. Enter **yes** to confirm the connection and then type the user's **password provided under Resource group: LIN1** in the Environment tab and press **enter**. Your screen should look something like this:
+1. Enter **yes** to confirm the connection and then type the user's **password provided under Resource group: LIN1** in the Environment tab of Lab Guide and press **enter**. Your screen should look something like this:
 
    ![linux login](../Media/ch-4.5.png)
 
-1. Paste the **1.2 Install the CEF collector on the Linux machine** from the earlier step. 
+   > **Note**: When a command prompts for a password, the characters are hidden for security. You can simply type your password and press Enter, even though nothing appears on the screen.
+
+1. Paste command **1.2 Install the CEF collector on the Linux machine** you have copied in earlier step. 
 
    ![ConnectorScript](../Media/ConnectorScriptupdated.png)
 
