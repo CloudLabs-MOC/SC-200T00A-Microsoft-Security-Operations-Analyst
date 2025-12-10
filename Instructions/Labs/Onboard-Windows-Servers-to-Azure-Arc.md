@@ -27,9 +27,9 @@ In this task, you will deploy and configure the Azure Connected Machine agent on
    
     ![Picture 1](../Media/ch-1.png "search azure arc")
   
-1. On the **Azure Arc** page, select **Machines (1)** under **Azure Arc Resources**, click on **+ Onboard/Create (2)** and then **Onboard existing machine (3)**.
+1. On the **Azure Arc** page, select **Machines (1)** under **Infrastructure**, click on **+ Onboard/Create (2)** and then **Onboard existing machine (3)**.
     
-    ![Picture 1](../Media/L1T1S3-2810.png "search azure arc")
+    ![Picture 1](../Media/UP_0023.png "search azure arc")
     
 1. Under the **Basics** tab, fill in the following details:
      
@@ -63,7 +63,7 @@ In this task, you will deploy and configure the Azure Connected Machine agent on
 
     ![Picture 1](../Media/HOL3-EX1-S11.png "Start AzureArcVM")    
     
-1. In Hyper-V Manager, select the **AzureArcVM (1)** VM, then select **Connect (2)** on the right.
+1. In Hyper-V Manager, select the **AzureArcVM (1)** VM, then select **Connect (2)** on the right side Actions pane.
 
     ![Picture 1](../Media/secure4.png "Connect to AzureArcVM")  
     
@@ -83,6 +83,8 @@ In this task, you will deploy and configure the Azure Connected Machine agent on
 
    > **Note:** Type **Y** when prompted.
 
+    ![Picture 1](../Media/UP_0001.png)
+
 1. Now, run the whole script that you copied in Notepad earlier in step 7.
 
     > **Note:** If paste is not working, try pasting the script first in a Notepad in the AzureArcVM and then paste in the Powershell terminal.
@@ -98,7 +100,7 @@ In this task, you will deploy and configure the Azure Connected Machine agent on
     
     ![Picture 1](../Media/upd-package.png)
      
- 1. Close the AzureArcVM, navigate to the Azure portal, go back to the **Azure Arc** page, select **Machines (1)** under **Azure Arc Resources** and now verify that a server is connected successfully **(2)**.
+ 1. Close the AzureArcVM, navigate to the Azure portal, go back to the **Azure Arc** page, select **Machines (1)** under **Infrastructure** and now verify that a server is connected successfully **(2)**.
 
     **Note:** The name of the new server added could be different. You might have to refresh to see the new server.
     

@@ -50,6 +50,8 @@ In this task, you will review cloud security posture management.
 
    >**Note:** The Secure Score information can take 24 hours to populate. 
 
+
+
 1. Navigate back to the Microsoft Defender for Cloud page and on the left menu Under *Cloud Security*, select **Security posture**.
 
    ![Picture 1](../Media/ch-2.0.png)
@@ -86,9 +88,13 @@ In this task, you will load sample security alerts and review the alert details.
 
     - Select the alert checkbox, and the alert detail pane should appear. Select **View full details**.
 
+      ![Picture 1](../Media/UP_0018.png)
+
     - Review and read the *Alert details* tab.
 
     - Select the **Take action** tab next to Alert details.
+
+      ![Picture 1](../Media/UP_0019.png)
 
     - Review the *Take action* information. Notice the sections available to take action depending on the type of alert: Inspect resource context, Mitigate the threat, Prevent future attacks, Trigger automated response and Suppress similar alerts.
 

@@ -46,7 +46,7 @@ In this task, you will enable and configure Microsoft Defender for Cloud.
 1. In the Search bar of the Azure portal, type *Defender*, then select **Microsoft Defender for Cloud**.
 1. In the left menu for Microsoft Defender for Cloud, under **Management**, select **Environment settings (1)** then scroll down to bottom and **select your Subscription (2)** by expanding the Tenant Root Group.
 
-   ![Picture 1](../Media/ch-7.png)
+   ![Picture 1](../Media/UP_0004.png)
 
 1. Review the Azure resources that are now protected with the Defender for Cloud plans.
 
@@ -54,17 +54,23 @@ In this task, you will enable and configure Microsoft Defender for Cloud.
 
    ![Picture 1](../Media/secure9.png)
 
-  > **Note:** You can ignore any errors for enabling plans for SQL databses or relational databases.
+    > **Note:** You can ignore any errors for enabling plans for SQL databses or relational databases.
 
 1. Select the **Settings & monitoring** tab from the Settings area (next to Save).
 
    ![Picture 1](../Media/ch-8.png)
 
-1. Review the monitoring extensions. It includes configurations for Virtual Machines, Containers and Storage Accounts. Close the "Settings & monitoring" page by selecting the 'X' on the upper right of the page.
+1. Review the monitoring extensions. It includes configurations for Virtual Machines, Containers and Storage Accounts. Close the "Settings & monitoring" page by selecting the **X** on the upper right of the page.
+
+   ![Picture 1](../Media/UP_0005.png)
+
+
 1. Close the settings page by selecting the 'X' on the upper right of the page to go back to the **Environment settings (1)**.
+
+
 1. Select the '>' to the left of your **subscription (2)** and select the **uniquenameDefender (3)** Log Analytics workspace you created earlier to review the available options and pricing.
 
-   ![Picture 1](../Media/ch-9.png)
+   ![Picture 1](../Media/UP_0007.png)
 
 1. Close the Defender plans page by selecting the 'X' on the upper right of the page to go back to the **Environment settings**.
 
@@ -109,6 +115,9 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 1. Click on the Start button, search for **Hyper-V Manager** from the bottom Windows search bar, and select to open.
 
+    ![Picture 1](../Media/UP_0009.png "Azure Portal")
+
+
 1. Click on **LABVM (1)**.
 
 1. Select and right-click on the **WINServer (2)** virtual machine from the virtual machine section in the middle and select start, then again right-click on the **WINServer** virtual machine and select **Connect (3)**.
@@ -118,9 +127,14 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 1. If it asks you to press ctrl+alt+dlt, Go-to **actions** in the top of VM toolbar and click on **ctrl+alt+dlt** (**Skip if not asked**)
 1. Enter the **Password** as `Password.1!!` when prompted.
 
+    ![Picture 1](../Media/UP_0010.png "Azure Portal")
+
      > **Note:** To enable the clipboard Right-click on LABVM and select Hyper-V Settings click on **Enhanced session mode policy** and check the **Allow enhanced mode** click on apply Then restart your virtual machine, once vm starts you will get a configuration pop-up click on show more options and select local resources and make sure the clipboard is selected.
 
 1. On the WINServer VM, click on the Azure Portal icon to open the portal.
+
+    ![Picture 1](../Media/UP_0011.png "Azure Portal")
+
 1. In the **Sign in** dialog box, provide the credentials as listed below:
 
     * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
@@ -131,9 +145,9 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
    
    ![Picture 1](../Media/ee23.png "search azure arc")
   
-1. On the **Azure Arc** page, select **Machines (1)** under **Azure Arc Resources**, click on **+ Onboard/create (2)** and then **Onboard existing machine (3)**.
+1. On the **Azure Arc** page, select **Machines (1)** under **Infrastructue**, click on **+ Onboard/create (2)** and then **Onboard existing machine (3)**.
     
-   ![Picture 1](../Media/L1T1S3-2810.png "search azure arc")
+    ![Picture 1](../Media/UP_0023.png "search azure arc")
 
 1. Under the **Basics** tab, fill in the following details:
      
@@ -155,11 +169,11 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
    > **Note:** Select **Keep** when prompted in the pop-up.
 
-1. From the **Start (1)** menu of the AzureArcVM, search for **Windows Powershell (2)** and open it **(3)**.
+1. From the **Start (1)** menu of the same VM, search for **Windows Powershell (2)** and open it **(3)**.
 
    ![Picture 1](../Media/upd-powershell.png)
 
-1. Run the below command:
+1. Run the below **command (1)**:
 
     ```
     cd C:\Users\Administrator\Downloads
@@ -167,14 +181,17 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
       > **Important:** If you do not have this directory, it most likely means that you are on the wrong machine. Go back to the beginning of Task 4, change to WINServer and start over.
 
-1. In PowerShell, run the below command to set the execution policy as unrestricted.
+1. In PowerShell, run the below **command (2)** to set the execution policy as unrestricted.
 
     ```
     Set-ExecutionPolicy -ExecutionPolicy unrestricted
     ```
 
-1. Enter **A** for Yes to All and press Enter.
-1. Run the below command and press enter:  
+1. Enter **A (3)** for Yes to All and press Enter.
+
+    ![Picture 1](../Media/UP_0012.png)
+
+1. Run the below **command (1)** and press enter:  
 
     ```
     .\OnboardingScript.ps1
@@ -182,9 +199,13 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
     >**Important:** If you get the error *"The term .\OnboardingScript.ps1 is not recognized..."*, make sure you are doing the steps for Task 3 in the WINServer virtual machine. Other issues might be that the name of the file changed due to multiple downloads, search for *".\OnboardingScript (1).ps1"* or other file numbers in the running directory.
 
-1. Enter **R** to Run once and press Enter (this may take a couple of minutes).
+1. Enter **R (2)** to Run once and press Enter (this may take a couple of minutes).
+
+    ![Picture 1](../Media/UP_0013.png)
 
 1. The setup process will open a new Edge browser tab to authenticate the Azure Arc agent. Select the ODL email <inject key="AzureAdUserEmail"></inject>, wait for the message **"Authentication complete"**, and then go back to the Windows PowerShell window.
+
+    ![Picture 1](../Media/UP_0014.png)
 
 1. When the installation finishes, go back to the Azure portal page where you downloaded the script and select **Close**. Close the **Onboard existing machines with Azure Arc** to go back to the Azure Arc **Machines** page.
 

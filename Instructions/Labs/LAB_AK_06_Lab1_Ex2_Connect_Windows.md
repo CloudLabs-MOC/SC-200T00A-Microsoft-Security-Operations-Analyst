@@ -274,6 +274,10 @@ In this task, you will connect an Azure Windows virtual machine to Microsoft Sen
 
 1. Wait a minute and then select **Refresh** to see the new data collection rule listed.
 
+    ![](../Media/UP_0021.png)
+
+
+
 ## Task 5: Connect a non-Azure Windows Machine
 
 In this task, you will add an Azure Arc connected, non-Azure Windows virtual machine to Microsoft Sentinel.  
