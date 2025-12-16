@@ -1,0 +1,25 @@
+[
+  {
+    "Name": "SC-200: Microsoft Security Operations Analyst",
+    "Language": "English",
+    "BaseURL": "https://github.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/cybervance",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/cybervance/Instructions/Labs/labintrosentinal.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/cybervance/Instructions/Labs/connectservices.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/cybervance/Instructions/Labs/connectwindows.md",
+        "Order": 3
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/cybervance/Instructions/Labs/connectlinux.md",
+        "Order": 4
+      }
+    ]
+  }
+]
