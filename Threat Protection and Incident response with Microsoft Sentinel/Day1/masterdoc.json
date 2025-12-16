@@ -23,6 +23,10 @@
              {
                 "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/gps-sandbox/Threat%20Protection%20and%20Incident%20response%20with%20Microsoft%20Sentinel/Day1/Exercise4.md",
                 "Order": 5
+             },
+             {
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/gps-sandbox/Threat%20Protection%20and%20Incident%20response%20with%20Microsoft%20Sentinel/Day1/Exercise5.md",
+                "Order": 6
              }
         ]
     }
