@@ -33,36 +33,33 @@ In this task, you will explore the Microsoft Sentinel data lake structure to und
 
     ![Picture](./images1/Ex7-02.png)
 
-1. Click on the **Data Lake Explorer (1)** button to view the data lake tier structure for long-term storage and cost-effective analysis.
+1. Navigate to the Azure portal and search for uniquenameSentinel Log analytics workspace and click on Logs
 
-    ![Picture](./images1/Ex7-03.png)
+    ![Picture](./images1/Ex7-05-az.png)
 
-1. Navigate to the **Logs (1)** section in the left menu under **General** to access the KQL query editor.
-
-    ![Picture](./images1/Ex7-05.png)
+    ![Picture](./images1/Ex7-05-az2.png)
 
 1. Ensure you are in **KQL mode (1)** for writing queries. The query editor provides syntax highlighting and query assistance.
 
-    ![Picture](./images1/Ex7-06.png)
+    ![Picture](./images1/Ex7-06-az.png)
 
 ### Task 2: Create Basic Threat Hunting Queries
 
 In this task, you will create basic KQL queries to hunt for common security threats and suspicious activities.
 
-1. In the KQL query editor, enter a query to identify **failed authentication attempts**:
+1. In the KQL query editor, enter a query to identify **SignIn logs**:
 
     ```KQL
     SigninLogs
-    | where ResultType != "0"
-    | where CreatedDateTime >= ago(24h)
-    | summarize FailedAttempts = count() by UserPrincipalName, ClientAppUsed
-    | where FailedAttempts > 5
-    | sort by FailedAttempts desc
+    | where ResultType == "0"
+    | extend Location = strcat(LocationDetails.countryOrRegion, "-", LocationDetails.city)
+    | summarize Locations = dcount(Location), LocationList = make_set(Location) by UserPrincipalName
+    | where Locations > 1
     ```
 
 1. Click **Run (1)** to execute the query and review the results showing users with multiple failed login attempts.
 
-    ![Picture](./images1/Ex7-07.png)
+    ![Picture](./images1/Ex7-067-az.png)
 
 1. Enter a query to detect **suspicious Azure Activity - unusual resource creation**:
 
@@ -76,37 +73,7 @@ In this task, you will create basic KQL queries to hunt for common security thre
     ```
 
 1. Click **Run (2)** to execute the query.
-
-    ![Picture](./images1/Ex7-08.png)
-
-1. Enter a query to identify **potentially malicious process execution**:
-
-    ```KQL
-    DeviceProcessEvents
-    | where Timestamp >= ago(24h)
-    | where ProcessCommandLine contains_any ("powershell.exe -nop", "cmd.exe /c", "wmic")
-    | project Timestamp, DeviceName, ProcessCommandLine, AccountName
-    | sort by Timestamp desc
-    ```
-
-1. Click **Run (3)** to view suspicious process executions on endpoints.
-
-    ![Picture](./images1/Ex7-09.png)
-
-1. Enter a query to detect **brute force attack patterns**:
-
-    ```KQL
-    SigninLogs
-    | where ResultType == "50058"
-    | where CreatedDateTime >= ago(24h)
-    | summarize SignInAttempts = count() by UserPrincipalName, IPAddress
-    | where SignInAttempts >= 10
-    | sort by SignInAttempts desc
-    ```
-
-1. Click **Run (4)** to identify potential brute force attacks.
-
-    ![Picture](./images1/Ex7-10.png)
+    > **Note:** This query may return no results since no Azure resources have been created; it is intended solely for demonstration purposes.
 
 ### Task 3: Build Advanced Hunting Queries with Multi-Source Correlation
 
@@ -125,10 +92,9 @@ In this task, you will create sophisticated queries that correlate data across m
     | project TimeGenerated, Activity, Result
     | sort by TimeGenerated desc
     ```
+    > **Note:** This query may return no results since no Azure resources have been created; it is intended solely for demonstration purposes.
 
 1. Click **Run (1)** to identify admin actions from users with suspicious login patterns.
-
-    ![Picture](./images1/Ex7-11.png)
 
 1. Enter a query to detect **lateral movement indicators**:
 
@@ -144,7 +110,7 @@ In this task, you will create sophisticated queries that correlate data across m
 
 1. Click **Run (2)** to identify potential lateral movement using suspicious ports.
 
-    ![Picture](./images1/Ex7-12.png)
+    > **Note:** This query may return no results since no Azure resources have been created; it is intended solely for demonstration purposes.
 
 1. Enter a query to **identify data exfiltration patterns**:
 
@@ -159,8 +125,7 @@ In this task, you will create sophisticated queries that correlate data across m
     ```
 
 1. Click **Run (3)** to detect large data transfers to external networks.
-
-    ![Picture](./images1/Ex7-13.png)
+    > **Note:** This query may return no results since no Azure resources have been created; it is intended solely for demonstration purposes.
 
 1. Enter a query to **correlate threat intelligence indicators with security alerts**:
 
@@ -177,8 +142,7 @@ In this task, you will create sophisticated queries that correlate data across m
     ```
 
 1. Click **Run (4)** to correlate known threat indicators with generated alerts.
-
-    ![Picture](./images1/Ex7-14.png)
+    > **Note:** This query may return no results since no Azure resources have been created; it is intended solely for demonstration purposes.
 
 ### Task 4: Save Hunting Queries for Reuse
 
@@ -188,37 +152,30 @@ In this task, you will save your hunting queries as saved queries for future use
 
     ```KQL
     SigninLogs
-    | where ResultType != "0"
-    | where CreatedDateTime >= ago(24h)
-    | summarize FailedAttempts = count() by UserPrincipalName
-    | where FailedAttempts > 5
-    | sort by FailedAttempts desc
+    | where ResultType == "0"
+    | extend Location = strcat(LocationDetails.countryOrRegion, "-", LocationDetails.city)
+    | summarize Locations = dcount(Location), LocationList = make_set(Location) by UserPrincipalName
+    | where Locations > 1
     ```
 
-1. Click **Save (1)** in the query editor toolbar.
+1. Click **Save (1)** in the query editor toolbar and select **Save as query**.
 
     ![Picture](./images1/Ex7-15.png)
 
 1. In the **Save query** dialog, enter the following details:
 
-    - **Query name:** Enter **Failed Login Attempts Hunting Query (1)**
-    - **Category:** Select **Threat Hunting (2)**
-    - **Description:** Enter description of the query **(3)**
+    - **Query name:** Enter **Login Attempts Hunting Query (1)**
+    - **Description:** Sign In logs **(2)**
+    - **Category:** Select **Security (3)**
     - Click **Save (4)**
 
     ![Picture](./images1/Ex7-16.png)
 
-1. Enter another hunting query and save it similarly with appropriate name and category.
-
-    ![Picture](./images1/Ex7-17.png)
-
-1. To view your saved queries, click **Saved queries (1)** in the left navigation.
+1. To view your saved queries, click **Queries (1)** in the left navigation and search for the query you created
 
     ![Picture](./images1/Ex7-18.png)
 
 1. Your saved hunting queries will appear in the list. Click on a saved query to **load and run (1)** it.
-
-    ![Picture](./images1/Ex7-19.png)
 
 1. You can also **share saved queries (1)** with your team by selecting the query and clicking **Share (2)**.
 
@@ -227,6 +184,8 @@ In this task, you will save your hunting queries as saved queries for future use
 1. To create a **hunting rule from a saved query**, select a saved query and click **Create rule (1)** to convert it into an analytics rule for automated detection.
 
     ![Picture](./images1/Ex7-22.png)
+
+    ![Picture](./images1/Ex7-23.png)
 
 ## Summary
 
