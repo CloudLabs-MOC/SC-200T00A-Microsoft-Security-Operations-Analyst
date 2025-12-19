@@ -79,6 +79,8 @@ In this task, you will create a new notebook from a template and configure it fo
 
     ![Picture](./images1/Ex08-02-e.png)
 
+1. 
+
 ### Task 3: Initialize MSTICPy and Connect to Sentinel Workspace
 
 In this task, you will initialize the MSTICPy library and establish a secure connection to your Microsoft Sentinel workspace.
