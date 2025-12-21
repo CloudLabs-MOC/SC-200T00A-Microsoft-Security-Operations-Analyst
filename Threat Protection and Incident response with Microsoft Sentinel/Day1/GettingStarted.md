@@ -15,6 +15,8 @@ By the end of this lab, participants will be able to:
 
   - **Enable and configure data connectors** to ingest security logs from various Microsoft and third-party services.
 
+  - **Getting a Connector via the Microsoft Security Store​** to ingest security logs from supported Microsoft and third-party services.
+
   - **Integrate threat intelligence** feeds and deploy relevant analytics/content from the Content Hub to enhance detection capabilities.
 
   - **Enable and use UEBA** in Microsoft Sentinel to detect abnormal user and entity behaviors.
