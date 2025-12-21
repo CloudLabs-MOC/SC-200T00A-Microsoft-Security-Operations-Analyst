@@ -76,7 +76,9 @@ In this task, you will create an analytics rule using a Microsoft-provided templ
 1. On the **Automated response** page:
 
     - **Alert automation rules:** Leave empty for now (you'll link playbooks via automation rules in later tasks)
-    - Click **Next: Review**
+    - Click **Next: Review + Create**
+
+    ![Picture](./images1/Ex6-09-create-00.png)
 
 1. Review the rule configuration:
 
@@ -87,7 +89,7 @@ In this task, you will create an analytics rule using a Microsoft-provided templ
 
     ![Picture](./images1/Ex6-09-create.png)
 
-1. The analytics rule is now created and active. You should see a success message (1).
+1. The analytics rule is now created and active. You should see a success message.
 
 1. The rule is now running and will generate alerts when a new user creates a CloudShell session. You can verify it's enabled by navigating to **Analytics** and seeing it in the list with **Status: Enabled (1)**.
 
@@ -112,27 +114,26 @@ In this task, you will create an automation rule that automatically assigns inci
 
     ![Picture](./images1/Ex6-03-ex6.png)
 
-1. Add a condition for severity. Click **+ Add** again:
+1. Add a condition for severity. Click **+ Add (1)** and then select **Condition (And) (2)**:
 
-    - **Property:** Select **Severity (2)**
-    - **Operation:** Select **Equals (3)**
-    - **Value:** Select **Medium (4)** and **High (5)**
-    - Click **Add (6)**
+    - **Incident property:** Select **Severity (3)**
+    - **Operation:** Select **Equals (4)**
+    - **Value:** Select **Low**, **Medium** and **High** **(5)**
 
-    ![Picture](./images1/Ex6-14-details.png)
+    ![Picture](./images1/Ex6-14-details-2.png)
 
-1. In the **Actions (1)** section, click **+ Add action (2)** and select **Assign owner** from the dropdown menu. In the **Assign owner (1)** action:
+1. In the **Actions** section, select **Assign owner (1)** from the dropdown menu. In the **Assign owner (1)** action:
 
-    - **Assigned to:** Select your Azure admin email address **(2)**
-    - Click **Add (3)**
-
-    ![Picture](./images1/Ex6-18-assign.png)
+    - **Assigned to:** <inject key="AzureAdUserEmail"></inject> (2)
+        ![Picture](./images1/Ex6-18-assign-2.png)
 
 1. Add another action by clicking **Change status (1)** and select **New (2)** from the dropdown menu and then **Apply (3)**
 
     ![Picture](./images1/Ex6-19-tag.png)
 
-1. The automation rule is now created. You should see it in the Automation rules list (1).
+1. The automation rule is now created. You should see it in the Automation rules list.
+
+    ![Picture](./images1/Ex6-18-assign-2-a.png).
 
 ### Task 3: Create a Playbook for Automated Response
 
@@ -151,9 +152,11 @@ In this task, you will create a playbook using Azure Logic Apps to automate inci
     - **Log Analytics workspace:** uniquenameSentinel **(5)**
     - Click **Next:Connections>** **(6)**
 
-    ![Picture](./images1/Ex6-26-create.png)
+        ![Picture](./images1/Ex6-26-create.png)
 
-1. Click on Next, and then click and click on **Create playbook** and once the playbook is created click on Close and go to playbook
+1. Click on Next, and then click and click on **Create playbook** and once the playbook is created click on **Close and go to playbook**
+
+    ![Picture](./images1/Ex6-26-create-2-a.png)
 
     ![Picture](./images1/Ex6-26-create-2.png)
 
@@ -167,10 +170,14 @@ In this task, you will create a playbook using Azure Logic Apps to automate inci
 
 1. On **Create connection** page click on Sign in and then select 
 **<inject key="AzureAdUserEmail"></inject>** in the pop-up browser
-
     ![Picture](./images1/Ex6-15-ex6-2.png)
+    ![Picture](./images1/Ex6-15-ex6-3.png)
 
-1. Enter the below details and click on **X**.
+> **Note:** If you see an error as pop-ups blocked by browser, follow the steps from the below image
+
+![Picture](./images1/Ex6-15-ex6-3-b.png) 
+
+7. Enter the below details and click on **X**.
     - **To:** <inject key="AzureAdUserEmail"></inject>
     - **Subject:** Incident alert email
     - **Body:**
@@ -179,6 +186,7 @@ In this task, you will create a playbook using Azure Logic Apps to automate inci
         User details: @{triggerBody()?['incidentUpdates']?['updatedBy']?['name']}
         Source: @{triggerBody()?['incidentUpdates']?['updatedBy']?['source']}
         ```
+        ![Picture](./images1/Ex6-19-ex6-0.png)
 
 1. Click **Save (1)** to save the playbook workflow.
 
@@ -209,11 +217,22 @@ In this task, you will create an automation rule that triggers your newly create
 
     ![Picture](./images1/Ex6-40-condition.png)
 
+1. You will see an error message **Only playbooks configured for the incident trigger can be selected. If a playbook appears unavailable, it means Microsoft Sentinel does not have explicit permissions to run it**, click on **Manage playbook permissions**
+
+    ![Picture](./images1/Ex6-40-sentinel-rg1.png)
+
+1. On the **Manage permissions** page, select **sentinel-rg (1)** and click on **Apply (2)**
+
+    ![Picture](./images1/Ex6-40-sentinel-rg.png)
+
+1. Now, create the Automation rule again follow from step 2 in the same task and select the same options
+
 1. In the **Actions (1)** section, click **+ Add action (2)** and select **Run playbook (3)** from the dropdown menu.
  In the **Run playbook** action:
-
     - **Playbook:** Select **Incident-Notification-Playbook (1)** from the dropdown
     - Click **Add (2)**
+
+   ![Picture](./images1/Ex6-42-playbook.png)
 
 1. Configure the rule settings:
 
@@ -226,7 +245,6 @@ In this task, you will create an automation rule that triggers your newly create
 1. The automation rule is now created and linked to your playbook. Verify it appears in the automation rules list (1).
 
     ![Picture](./images1/Ex6-44-list.png)
-
 
 ## Summary
 

@@ -1,6 +1,6 @@
 # Exercise 5: Advanced Threat Hunting with Jupyter Notebooks in Microsoft Sentinel
 
-## Estimated Duration: 90 Minutes
+## Estimated Duration: 45 Minutes
 
 ## Overview
 
@@ -39,11 +39,11 @@ In this task, you will access the Microsoft Sentinel notebook environment and co
 
     | Field | Value |
     |-------|-------|
-    | **Workspace name** | `aml` |
-    | **Subscription** | Select your Azure subscription |
+    | **Subscription** | Default subscription |
     | **Resource group** | sentinel-rg |
-    | **Region** | Same region as your Sentinel workspace (important for performance) |
-    | **Storage account** | Auto-created or select existing |
+    | **Workspace name** | `aml` |
+    | **Region** | Same region as sentinel |
+    | **Storage account** | Auto-created |
     | **Key vault** | Auto-created |
     | **Application Insights** | Auto-created |
 
@@ -79,173 +79,138 @@ In this task, you will create a new notebook from a template and configure it fo
 
     ![Picture](./images1/Ex08-02-e.png)
 
-1. 
+1. Wait for the Compute session to start, it may take upto 10 minutes, once it is ready you can see that the compute session is ready
 
-### Task 3: Initialize MSTICPy and Connect to Sentinel Workspace
+    ![Picture](./images1/Ex08-02-e2.png)
+
+### Task 3: Review the code and output for the Notebook
 
 In this task, you will initialize the MSTICPy library and establish a secure connection to your Microsoft Sentinel workspace.
 
 #### Import Required Libraries
 
-In a code cell, add and run the following Python code:
+1. Navigate to code cell, **2. Initializing the notebook and MSTICPy** and review the code block and then review the output 
 
-```python
-# Import required libraries
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-from datetime import datetime, timedelta
-import warnings
-warnings.filterwarnings('ignore')
+    ```python
+    # import some modules needed in this cell
+    from IPython.display import display, HTML
 
-# Import MSTICPy components
-import msticpy as mp
-from msticpy.nbtools import *
-from msticpy.nbtools import nbdisplay
-from msticpy.analysis import anomalies
+    display(HTML("Checking upgrade to latest msticpy version"))
+    %pip install --upgrade --quiet msticpy\[sentinel\]
 
-print(f"MSTICPy version: {mp.__version__}")
-print(f"Pandas version: {pd.__version__}")
-print(f"NumPy version: {np.__version__}")
-print("✓ All libraries imported successfully")
-```
 
-**Expected Output**: The code should display the version numbers for each library and print a success message confirming all libraries have been imported.
+    REQ_PYTHON_VER = "3.10"
+    REQ_MSTICPY_VER = "2.12.0"
 
-#### Initialize Notebook Environment
+    # initialize msticpy
+    import msticpy as mp
+    mp.init_notebook(namespace=globals());
+    ```
 
-Add and run the following code in the next cell:
+    **Output**: The code displays the version numbers for each library and print a success message confirming all libraries have been imported.
 
-```python
-# Initialize the notebook environment
-mp.init_notebook(
-    namespace=globals(),
-    extra_imports=['msticpy.analysis.anomalies', 'msticpy.analysis.clustering']
-)
+    ![Picture](./images1/Ex2-1-1.png)
 
-print("✓ Notebook environment initialized")
-print("✓ MSTICPy configuration loaded")
-```
+    > **Note:** You won’t be able to run the notebook because the compute isn’t configured; this exercise is intended for review only.
 
-**Expected Output**: 
-- Configuration loading messages will display
-- Success indicators will confirm initialization
-- Warnings about missing configuration are normal on the first run
+#### Configure MSTICPy Settings
 
-#### Configure MSTICPy Settings (First Time Only)
+1. Navigate to code cell, **3.1 Verifying Microsoft Sentinel settings** and review the code block and then review the output
 
-Run this code to launch the configuration editor for MSTICPy:
+    ```python
+    import msticpy
+    from msticpy.config import MpConfigFile, MpConfigEdit
+    import os
+    import json
+    from pathlib import Path
 
-```python
-from msticpy.config import MpConfigEdit
-import os
-from pathlib import Path
+    mp_conf = "msticpyconfig.yaml"
 
-# Check for existing configuration file
-mp_conf = "msticpyconfig.yaml"
-mp_env = os.environ.get("MSTICPYCONFIG")
-mp_conf = mp_env if mp_env and Path(mp_env).is_file() else mp_conf
+    # check if MSTICPYCONFIG is already an env variable
+    mp_env = os.environ.get("MSTICPYCONFIG")
+    mp_conf = mp_env if mp_env and Path(mp_env).is_file() else mp_conf
 
-# Launch configuration editor
-if not Path(mp_conf).is_file():
-    print("Creating new configuration. Please fill in your Sentinel workspace details...")
-    mp.config.mp_settings_editor.MpConfigEdit(
-        settings_path=mp_conf
-    )
-else:
-    print("Loading existing configuration...")
-    mpedit = mp.config.MpConfigEdit(mp_conf)
-    mpedit.set_tab("AzureSentinel")
-    display(mpedit)
-```
+    if not Path(mp_conf).is_file():
+        print(
+            "No msticpyconfig.yaml was found!",
+            "Please check that there is a config.json file in your workspace folder.",
+            "If this is not there, go back to the Microsoft Sentinel portal and launch",
+            "this notebook from there.",
+            sep="\n"
+        )
+    else:
+        mpedit = MpConfigEdit(mp_conf)
+        mpconfig = MpConfigFile(mp_conf)
+        print(f"Configured Sentinel workspaces: {json.dumps(mpconfig.settings, indent=4)}")
 
-**Configuration Setup Steps**:
+    msticpy.settings.refresh_config()
+    ```
 
-1. In the **AzureSentinel** tab of the configuration editor, enter the following details:
+    **Output**:
+    The Azure Sentinel workspace is successfully configured with the specified workspace name, workspace ID retrieved from Sentinel, and the associated Azure AD tenant ID.
 
-    - **Workspace name**: Your Sentinel workspace name
-    - **Workspace ID**: Your workspace ID (found in Sentinel > Settings > Workspace settings)
-    - **Tenant ID**: Your Azure AD tenant ID
+    ![Picture](./images1/Ex2-1-2.png)
 
-2. Click **Save Settings** and close the editor to save your configuration.
+    > **Note:** You won’t be able to run the notebook because the compute isn’t configured; this exercise is intended for review only.
+
+#### Load a QueryProvider
+
+1. Navigate to code cell, **3.3 Load a QueryProvider for Microsoft Sentinel** and review the code block and then review the output
+
+    ```python
+    # Refresh any config items that might have been saved
+    # to the msticpyconfig in the previous steps.
+    msticpy.settings.refresh_config()
+
+    # Initialize a QueryProvider for Microsoft Sentinel
+    qry_prov = mp.QueryProvider("AzureSentinel")
+    ```
+
+    **Output**:
+    The Azure Sentinel workspace is successfully configured with the specified workspace name, workspace ID retrieved from Sentinel, and the associated Azure AD tenant ID.
+
+    ![Picture](./images1/Ex2-1-4.png)
+
+    > **Note:** You won’t be able to run the notebook because the compute isn’t configured; this exercise is intended for review only.
 
 #### Establish Connection to Sentinel Workspace
 
-Add and run the following code in the next cell:
+1.Navigate to code cell, **3.4 Authenticate to the Microsoft Sentinel workspace** and review the code block and then review the output.
 
-```python
-# Create QueryProvider for Azure Sentinel
-from msticpy.data import QueryProvider
-from datetime import datetime, timedelta
+    ```python
+    # Get the default Microsoft Sentinel workspace details from msticpyconfig.yaml
 
-# Initialize QueryProvider for Azure Sentinel
-qry_prov = mp.QueryProvider(data_environment="LogAnalytics")
+    ws_config = mp.WorkspaceConfig()
 
-# Connect to Sentinel workspace
-print("Connecting to Microsoft Sentinel workspace...")
+    # Connect to Microsoft Sentinel with our QueryProvider and config details
+    qry_prov.connect(ws_config)
+    ```
+    
+**Output**:
+    The Azure Sentinel workspace is successfully authenticated.
 
-# This will prompt for authentication on first run
-qry_prov.connect()
-
-print("✓ Successfully connected to Sentinel workspace")
-print(f"✓ Available query sources: {list(qry_prov.data_sources.keys())}")
-```
-
-**Authentication Flow**:
-- You will be prompted to authenticate with your Azure credentials
-- A device code will be provided in the output
-- Follow the link provided to authenticate using your organizational account
-- Return to the notebook once authentication is complete
-
-**If authentication fails**, verify the following:
-- Check that you have the **LogAnalytics Reader** role on the workspace
-- Verify the **Workspace ID** and **Tenant ID** are correct in your configuration
-- Try restarting the kernel: Select **Kernel** > **Restart**
+   ![Picture](./images1/Ex2-1-3.png)
 
 #### Verify Connection with Test Query
 
-Run this code to verify your connection to Microsoft Sentinel is working correctly:
+1. Navigate to code cell, **3.5 Test your connection using a MSTICPy built-in Microsoft Sentinel query** and review the code block and then review the output.
 
-```python
-# Test connection with a simple query
-test_query = """
-SecurityAlert
-| where TimeGenerated > ago(7d)
-| summarize AlertCount=count() by AlertName
-| top 10 by AlertCount
-"""
-```
+    ```python
+    # The time parameters are taken from the qry_prov.query_prov time settings
+    # attribute, which provides the default query time range. You can
+    # change interactively this by running qry_prov.query_time.
+    alerts_df = qry_prov.SecurityAlert.list_alerts(start=qry_prov.query_time.start)
 
-### Task 4: Perform Advanced Threat Hunting Queries
+    if alerts_df.empty:
+        md("The query returned no rows for this time range. You might want to increase the time range")
 
-In this task, you will execute advanced threat hunting queries using KQL within your Jupyter notebook environment.
+    # display first 5 rows of any results
+    alerts_df.head() # If you have no data you will just see the column headings displayed
+    ```
+    **Output**:
+    The Azure Sentinel workspace logs are fetched from sentinel.
 
-1. Execute threat hunting queries by combining KQL with Python data processing.
-
-2. Analyze the results using pandas DataFrames for detailed investigation.
-
-3. Create reusable query templates for your security team.
-
-### Task 5: Create Visualizations
-
-In this task, you will generate meaningful visualizations to support your threat hunting analysis.
-
-1. Create charts and graphs to visualize threat hunting results.
-
-2. Build interactive dashboards within your notebook for incident analysis.
-
-3. Export visualization reports for stakeholder communication.
-
-### Task 6: Perform Anomaly Detection
-
-In this task, you will implement anomaly detection techniques to identify unusual security patterns.
-
-1. Configure MSTICPy anomaly detection algorithms.
-
-2. Analyze security events for statistical outliers and behavioral anomalies.
-
-3. Generate alerts based on detected anomalies.
+    ![Picture](./images1/Ex2-1-5.png)
 
 ## Summary
 
@@ -255,8 +220,6 @@ In this exercise, you successfully:
 - **Created and deployed** your first notebook with proper environment setup
 - **Initialized MSTICPy** and established a secure connection to your Sentinel workspace
 - **Executed advanced threat hunting** queries using KQL within Python
-- **Created visualizations** to support security analysis and incident investigation
-- **Implemented anomaly detection** to identify unusual security patterns
 
 ## You have successfully completed the exercise!
 
