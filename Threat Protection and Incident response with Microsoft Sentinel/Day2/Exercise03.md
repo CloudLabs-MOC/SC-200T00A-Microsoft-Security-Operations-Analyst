@@ -1,6 +1,6 @@
 # Exercise 3: Analytics Rules and Incident Management
 
-## Estimated Duration: 60 Minutes
+## Estimated Duration: 45 Minutes
 
 ## Overview
 In this exercise, you will configure **Microsoft Sentinel** to detect and respond to security threats. You will start by creating a Log Analytics Workspace and deploying Microsoft Sentinel to it. Next, you will create and export an analytics rule to detect suspicious activities. Finally, you will generate and investigate an incident to understand Sentinel’s incident management process.

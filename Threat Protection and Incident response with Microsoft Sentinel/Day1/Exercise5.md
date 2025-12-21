@@ -1,7 +1,7 @@
 
 # Exercise 5 - UEBA with Microsoft Sentinel
 
-## Estimated Duration: 20 Minutes
+## Estimated Duration: 30 Minutes
 
 ## Overview 
 

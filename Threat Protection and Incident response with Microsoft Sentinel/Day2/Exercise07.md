@@ -1,6 +1,6 @@
 # Exercise 7: Repositories in Microsoft Sentinel
 
-## Estimated Duration: 40 Minutes
+## Estimated Duration: 30 Minutes
 
 ## Overview
 

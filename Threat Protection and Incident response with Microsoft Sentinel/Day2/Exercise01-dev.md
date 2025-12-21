@@ -1,6 +1,6 @@
 # Exercise 1: Responding to Threats Using Automation
 
-## Estimated Duration: 120 Minutes
+## Estimated Duration: 60 Minutes
 
 ## Overview
 

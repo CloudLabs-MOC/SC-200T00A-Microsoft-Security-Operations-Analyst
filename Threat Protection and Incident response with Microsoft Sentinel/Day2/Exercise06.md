@@ -1,6 +1,6 @@
 # Exercise 6: Exploring Microsoft Sentinel Advanced Features
 
-## Estimated Duration: 40 Minutes
+## Estimated Duration: 20 Minutes
 
 ## Overview
 

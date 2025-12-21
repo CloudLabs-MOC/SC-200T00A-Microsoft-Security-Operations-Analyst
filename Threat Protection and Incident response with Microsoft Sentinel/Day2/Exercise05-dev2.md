@@ -1,6 +1,6 @@
 # Exercise 5: Advanced Threat Hunting with Jupyter Notebooks in Microsoft Sentinel
 
-## Estimated Duration: 45 Minutes
+## Estimated Duration: 30 Minutes
 
 ## Overview
 

@@ -1,6 +1,6 @@
 # Exercise 2: Hunt Threats Using KQL Across the Data Lake
 
-## Estimated Duration: 50 Minutes
+## Estimated Duration: 30 Minutes
 
 ## Overview
 

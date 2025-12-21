@@ -1,6 +1,6 @@
 # Exercise 2 - Enabling Data Connectors in Microsoft Sentinel in Microsoft Defender Portal
 
-## Estimated Duration: 40 Minutes
+## Estimated Duration: 60 Minutes
 
 ## Overview
 
