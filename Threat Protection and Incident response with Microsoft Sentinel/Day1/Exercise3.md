@@ -36,13 +36,27 @@ In this exercise, you will complete the following tasks:
 
 1. Once the deployment is complete, click on **Manage in Defender** 
 
-   ![](./images/Ex2-04-e.png)
+   ![](./images/Ex2-05-e.png)
 
 1. Select the **Microsoft Defender XDR solution**, scroll down on the right hand pane, select on **Install**.
 
-   ![](./images/Ex2-05-e.png)
+   ![](./images/Ex2-05-e1.png)
 
-1. Now you have installed the **Microsoft Defender XDR solution for Sentinel** for further configuration
+1. Click on **Manage** once the installation is complete.
+
+   ![](./images/Ex2-05-e3.png)
+
+1. On the installed content items click on **Microsoft Defender XDR (1)**, notice the Content and the **Status** of the **Data Connectors**. Now, click on **Open Connector Page (2)**
+
+   ![](./images/Ex2-05-e2.png)
+
+1. Select the necessary Events under **Connect events** on and click on Apply Changes
+
+   ![](./images/Ex2-05-e2-1.png)
+   
+   ![](./images/Ex2-05-e2-2.png)
+
+1. Now you have installed the **Microsoft Defender XDR solution for Sentinel** 
 
 ## Review
 
