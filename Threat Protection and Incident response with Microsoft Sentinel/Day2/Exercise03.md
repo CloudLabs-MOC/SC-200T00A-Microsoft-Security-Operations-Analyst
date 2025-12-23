@@ -9,112 +9,11 @@ In this exercise, you will configure **Microsoft Sentinel** to detect and respon
 
  In this lab, you will perform the following:
 
-- Task 1: Create a Log Analytics Workspace
-- Task 2: Deploy Microsoft Sentinel to a workspace
-- Task 3: Connect the Azure Activity connector
-- Task 4: Create and export an analytical rule
-- Task 5: Connect VM to the Log Analytics workspace
-- Task 6: Create and Investigate an Incident
+- Task 1: Create and export an analytical rule
+- Task 2: Connect VM to the Log Analytics workspace
+- Task 3: Create and Investigate an Incident
 
-### Task 1: Create a Log Analytics Workspace
-
-In this task, you will create a Log Analytics workspace for use with Microsoft Defender for Cloud.
-
-1. In the Search bar of the Azure portal, type **Log Analytics (1)**, then select **Log Analytics workspaces (2)**.
-
-   ![](../Day1/images/Ex1-00.png)
-
-1. Select **+ Create** from the command bar.
-
-   ![](../Day1/images/Ex1-01.png)
-
-1. To create a **log analytics workspaces**, follow these steps:
-
-    - Leave the **Subscription (1)** as default.
-    - Select **sentinel-rg (2),** for Resource group.
-    - For the Name, enter **uniquenameSentinel (3)**.
-    - Leave the **Region (4)** as default.
-    - Select **Review + Create (5)**.
-
-      ![Picture 1](../Day1/images/Ex1-02.png)
-
-1. Once the workspace validation has passed, select **Create**.
-
-   ![](../Day1/images/Ex1-03.png)
-
-1. Wait for the new workspace to be provisioned, this may take a few minutes.
-   
-   ![](../Day1/images/Ex1-04.png)
-
-### Task 2: Deploy Microsoft Sentinel to a workspace
-
-In this task, you will deploy Microsoft Sentinel to an existing Log Analytics workspace, enabling it to collect, detect, and respond to security threats.
-
-1. In the Search bar of the Azure portal, type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
-
-   ![](../Day1/images/Ex1-05-Az.png)
-
-1. Select **+ Create** from the command bar.
-
-   ![](../Day1/images/Ex1-06.png)
-
-1. Select the newly created workspace named **uniquenameSentinel (1)** and click on **Add (2)**.
-  
-   ![](../Day1/images/Ex1-07.png)
-
-1. In the **Microsoft Sentinel free trial activated** tab, select **Ok** to activate the free trial.
-
-   ![](../Day1/images/Ex1-08.png)
-
-1. Now you will see the **Getting started** page for Microsoft Sentinel.
-
-### Task 3: Connect the Azure Activity connector
-
-In this task, you will connect the Azure Activity connector.
-
- 1. Open a new tab in the web browser and navigate to **Microsoft Defender Portal**
-
-      ```
-      https://security.microsoft.com/
-      ```
- 
- 1. On the left hand side menu, select **Microsoft Sentinel (1)** > **Content management (2)** and select **Content hub (3)** under the Configuration.
-
-    ![Picture 1](../Day1/images/Ex1.png)
-
-1. On **Content hub** page, search for **Azure Activity (1)** and select **Azure Activity (2)** Data connector from the list,  and click on **Install (3)** to install it.
-
-   ![Picture](../Day1/images/Ex2-05.png)
-
-1. Navigate to **Data connectors** page, select the **Azure Activity (1)** Data connector, and select the **Open connector page (2)** on the connector information blade.
-
-   ![Picture](../Day1/images/Ex2-06-1.png)
-
-1. In the Configuration area, scroll down and under "2. Connect your subscriptions..." select **Launch Azure Policy Assignment wizard>**.
-
-   ![Picture](../Day1/images/Ex2-07.png)
-
-1. In the **Basics** tab, select the ellipsis button **(...) (1)** under **Scope** and select your **subscription (2)** from the drop-down list and click **Select (3)**.
-
-   ![Picture](../Day1/images/Ex2-08.png)
-
-1. In the **Primary** tab, click the ellipsis button **(...) (1)** next to **Primary Log Analytics workspace** and select your **workspace (2)** from the drop-down list and click **Select (3)**.
-
-   ![Picture](./images/Ex2-09-def.png)
-
-1. Select the **Remediation** tab and select the **Create a remediation task (1)** checkbox. This action will apply the policy to existing Azure resources.
-
-1. Select the **Review + Create (2)** button to review the configuration.
-
-   ![Picture](../Day1/images/Ex2-10.png)
-
-1. On **Review + create**, select **Create** to finish. 
-
-   ![Picture](../Day1/images/Ex2-11.png)
-
-    > **Note:** It may take **15–20 minutes** for the **Azure Activity** data connector to show a **Connected** status after configuration.
-
-### Task 4: Create and export an analytical rule
+### Task 1: Create and export an analytical rule
 
 In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
@@ -166,7 +65,7 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
 1. Review the Azure Resource Manager template and close it when done.
 
-### Task 5: Connect VM to the Log Analytics workspace
+### Task 2: Connect VM to the Log Analytics workspace
 
 1. In the Search bar of the Azure portal, type **Log Analytics (1)**, then select **Log Analytics workspaces (2)**.
 
@@ -208,7 +107,7 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
    >**Note:** If no output is generated, wait 5–10 minutes, then rerun the query to confirm data ingestion.
 
-### Task 6: Create and Investigate an Incident
+### Task 3: Create and Investigate an Incident
 
 In this task, you will create and investigate an incident.
 
@@ -269,7 +168,7 @@ In this task, you will create and investigate an incident.
    ![Picture](./images/Ex1-11.png)
 
 ## Summary
-In this exercise, you successfully set up Microsoft Sentinel, created and exported an analytics rule, and investigated an incident. You have gained practical experience in configuring detection rules and managing security incidents within Sentinel.
+In this exercise, you successfully created and exported an analytics rule, and investigated an incident. You have gained practical experience in configuring detection rules and managing security incidents within Sentinel.
 
 ## You have successfully completed the exercise!
 
