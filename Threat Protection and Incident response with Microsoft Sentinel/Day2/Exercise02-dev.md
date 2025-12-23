@@ -79,28 +79,28 @@ In this task, you will create basic KQL queries to hunt for common security thre
 
 In this task, you will create sophisticated queries that correlate data across multiple sources to identify advanced attack patterns.
 
-1. Enter a query to **correlate user actions across authentication and admin operations**:
+1. The below KQL query identifies users with multiple failed sign-ins in the last 24 hours and correlates them with any administrative actions they initiated, helping detect potentially compromised accounts performing admin operations.
 
     ```KQL
     let SuspiciousUsers = SigninLogs
     | where CreatedDateTime >= ago(24h)
     | where ResultType != "0"
     | summarize FailedLogins = count() by UserPrincipalName
-    | where FailedLogins > 10;
+    | where FailedLogins > 1;
     AuditLogs
     | where InitiatedBy.user.userPrincipalName in (SuspiciousUsers)
-    | project TimeGenerated, Activity, Result
     | sort by TimeGenerated desc
     ```
-    > **Note:** This query may return no results since no Azure resources have been created; it is intended solely for demonstration purposes.
+    > **Note:** This query may return no results since no alerts have have been created; it is intended solely for demonstration purposes.
 
-1. Click **Run (1)** to identify admin actions from users with suspicious login patterns.
+1. Click **Run (1)** to identify actions from users with suspicious login patterns.
 
-1. Enter a query to detect **lateral movement indicators**:
+1. The below KQL query scans the last 7 days of successful network connections to common lateral-movement ports (SMB, RDP, SSH, WinRM), counts how often each device connects on those ports, and flags devices with unusually high connection volumes as potential lateral movement indicators.
+
 
     ```KQL
     DeviceNetworkEvents
-    | where Timestamp >= ago(7d)
+    | where TimeGenerated >= ago(7d)
     | where RemotePort in (445, 3389, 22, 5985, 5986)
     | where ActionType == "ConnectionSuccess"
     | summarize ConnectionCount = count() by DeviceName, RemotePort
@@ -110,39 +110,38 @@ In this task, you will create sophisticated queries that correlate data across m
 
 1. Click **Run (2)** to identify potential lateral movement using suspicious ports.
 
-    > **Note:** This query may return no results since no Azure resources have been created; it is intended solely for demonstration purposes.
+    > **Note:** This query may return no results since no alerts have have been created; it is intended solely for demonstration purposes.
 
-1. Enter a query to **identify data exfiltration patterns**:
+1. Below query helps detect potential data exfiltration activity by identifying devices that are communicating with external (public) IP addresses
 
     ```KQL
     DeviceNetworkEvents
-    | where Timestamp >= ago(24h)
+    | where TimeGenerated >= ago(24h)
     | where RemoteIP !startswith "10." and RemoteIP !startswith "192.168."
-    | summarize TotalBytes = sum(BytesSent), UniqueRemoteIPs = dcount(RemoteIP)
-        by DeviceName
-    | where TotalBytes > 1000000
-    | sort by TotalBytes desc
     ```
 
 1. Click **Run (3)** to detect large data transfers to external networks.
-    > **Note:** This query may return no results since no Azure resources have been created; it is intended solely for demonstration purposes.
+    > **Note:** This query may return no results since no alerts have have been created; it is intended solely for demonstration purposes.
 
-1. Enter a query to **correlate threat intelligence indicators with security alerts**:
+1. Below query helps identify high-severity security alerts that may be related to known malicious IP addresses from your threat intelligence feeds. It combines alert data with active threat intelligence to prioritize incidents that are more likely to represent real threats.
 
     ```KQL
+    let TI_IPs =
+    ThreatIntelligenceIndicator
+    | where Active == true
+    | where ExpirationDateTime > now()
+    | where IndicatorType in ("IPv4", "IPv6")
+    | project NetworkIP;
+
     SecurityAlert
     | where TimeGenerated >= ago(24h)
-    | where Severity == "High"
-    | join kind=inner (
-        ThreatIntelIndicators
-        | where ExpirationTime >= now()
-    ) on Entities
-    | project TimeGenerated, DisplayName, AlertSeverity, IndicatorType
+    | where AlertSeverity == "High"
+    | project TimeGenerated, DisplayName, AlertSeverity
     | sort by TimeGenerated desc
     ```
 
 1. Click **Run (4)** to correlate known threat indicators with generated alerts.
-    > **Note:** This query may return no results since no Azure resources have been created; it is intended solely for demonstration purposes.
+    > **Note:** This query may return no results since no alerts have have been created; it is intended solely for demonstration purposes.
 
 ### Task 4: Save Hunting Queries for Reuse
 
