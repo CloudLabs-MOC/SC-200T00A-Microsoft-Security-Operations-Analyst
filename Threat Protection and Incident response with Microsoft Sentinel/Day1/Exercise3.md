@@ -50,7 +50,7 @@ In this exercise, you will complete the following tasks:
 
    ![](./images/Ex2-05-e2.png)
 
-1. Select the necessary Events under **Connect events** on and click on Apply Changes
+1. Select the necessary Events under **Connect events** on and click on **Apply Changes**
 
    ![](./images/Ex2-05-e2-1.png)
    
@@ -58,7 +58,12 @@ In this exercise, you will complete the following tasks:
 
 1. Now you have installed the **Microsoft Defender XDR solution for Sentinel** 
 
-## Review
+## Summary
 
-In this exercise, you have completed the following:
-- Deployed a Solution from Microsoft Security Store
+In this exercise, you have deployed Microsoft Defender XDR solution for Sentinel solution from Microsoft Security Store and configured it
+
+## You have successfully completed the exercise!
+
+### Now, click on **Next >>** from the lower right corner to move on to the next page.
+
+   ![](./images/Next.png)
