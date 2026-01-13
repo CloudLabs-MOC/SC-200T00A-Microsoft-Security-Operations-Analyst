@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this lab, you will learn how to connect Linux hosts to Microsoft Sentinel using the Common Event Format (CEF) and Syslog connectors. You will also configure the facilities and severities for the Syslog connector.
+In this lab, you will learn how to connect Linux hosts to Microsoft Sentinel using the Common Event Format (CEF) and Syslog connectors. You will also configure the facilities for the Syslog connector.
 
 >**Important:** There are steps within the next Tasks that are done in different virtual machines. Look for the Virtual Machine name references.
 
