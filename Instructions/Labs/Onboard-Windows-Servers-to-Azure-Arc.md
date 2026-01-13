@@ -4,9 +4,7 @@
 
 ## Overview
 
-In this lab, you will onboard on-premises Hyper-V VMs to Azure Arc for Azure Management.
-
-Azure Arc allows you to manage your hybrid IT estate with a single pane of glass by extending the Azure management experience to your on-premises servers that are not ideal candidates for migration. 
+In this lab, you will learn how to onboard on-premises Windows Servers to Azure Arc-enabled servers. Azure Arc extends Azure management and services to any infrastructure, enabling you to manage your on-premises, multi-cloud, and edge environments from a single control plane in Azure.
 
 ## Objectives
 
@@ -57,11 +55,11 @@ In this task, you will deploy and configure the Azure Connected Machine agent on
     
 1. In Hyper-V Manager, select **HOSTVMS<inject key="DeploymentID" enableCopy="false" />**. 
   
-    ![Picture 1](../Media/HOL3-EX1-S10.png "Hyper-V Manager")
+    ![Picture 1](../Media/L1T1S7-1301.png "Hyper-V Manager")
     
 1. In Hyper-V Manager, select the **AzureArcVM (1)** VM, then select **Start (2)** on the right if not already running.
 
-    ![Picture 1](../Media/HOL3-EX1-S11.png "Start AzureArcVM")    
+    ![Picture 1](../Media/L1T1S8-1301.png "Start AzureArcVM")    
     
 1. In Hyper-V Manager, select the **AzureArcVM (1)** VM, then select **Connect (2)** on the right side Actions pane.
 
@@ -69,8 +67,10 @@ In this task, you will deploy and configure the Azure Connected Machine agent on
     
 1. In the Connect to AzureArcVM pop-up, click on **Connect** and then log into the VM with the **Administrator password**: **<inject key="SmartHotel Admin Password" />** (the login screen may pick up your local keyboard mapping, use the 'eyeball' icon to check).
  
-    ![Picture 1](../Media/HOL3-EX1-S13.png)
+    ![Picture 1](../Media/L1T1S10-1301.png)
     
+    >**Note:** If the Server Manager windows open automatically, you can close it.
+
 1. From the **Start (1)** menu of the AzureArcVM, search for **Windows Powershell (2)** and open it **(3)**.
 
     ![Picture 1](../Media/upd-powershell.png)
@@ -91,8 +91,10 @@ In this task, you will deploy and configure the Azure Connected Machine agent on
 
 1. After running the script, packages will be installed, and then you will be directed to a pop-up browser page to log into your Azure account for authentication purposes. Use the below Azure credentials:
 
-    * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
-    * Azure Password: <inject key="AzureAdUserPassword"></inject> 
+    * **Azure Username/Email:** <inject key="AzureAdUserEmail"></inject> 
+    * **Azure Temporary Acess Pass:** <inject key="AzureAdUserPassword"></inject> 
+
+    > **Note:** It can take few minutes to complete the installation.
 
    > **Note:** Move back to the PowerShell pane, and now you have connected your AzureArcVM to Azure successfully.
    

@@ -32,24 +32,19 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
    ![](../Media/old-experience.png) 
 
-1. In the Search bar of the Azure portal, type **Sentinel (1)**, then select **Microsoft Sentinel (2)**.
+1. Close the **Windows Security Events via AMA** connector page if it is still open.
 
-   ![](../Media/ee6.png)
+1. In the *Sentinel* workspace, under **Content hub**, Search for **Common Event Format (1)** and select it.
 
-1. Click on the **uniquenameDefender (1)** workspace that we created earlier. Select **Content Hub (2)** under Content management from the left pane.
+1. Select the **Common Event Format (2)** and click on **Install (3)**.
 
-1. Search for **Common Event Format (3)** and select it.
+   ![](../Media/L5T1S3-1301.png)
 
-1. Click on **Install (4)**.
+1. Once the **Common Event Format** is installed, clck on **Manage**.
 
-   ![](../Media/ch-4.4.png)
+1. Select **Common Event Format (CEF) via AMA (1)** connector from the list, and click oon **Open connector page (2)**.
 
-1. Once the **Common Event Format** is installed. Click on **Data connectors (1)** present under Configuration in the left pane.
-
-1. From the Data Connectors tab, select **Common Event Format (CEF) via AMA (2)** connector from the list.
-1. Select the **Open connector page (3)** on the connector information blade.
-
-   ![](../Media/upd-1.png)
+   ![](../Media/L5T1S5-1301.png)
 
 1. Under configuration, copy the command shown in **Run the following command to install and apply the CEF collector** and paste it in a Notepad.
 
@@ -97,24 +92,23 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
    ![](../Media/ee6.png) 
 
-1. Click on the **uniquenameDefender (1)** workspace that we created earlier.
+1. Click on the **workspace-<inject key="DeploymentID" enableCopy="false" />** that we created earlier.
 
    > **Note:** If you see an error that the page was moved to Defender portal, click on the link on the left top side to access the old experience and refresh the browser page. 
 
       ![](../Media/old-experience.png) 
 
-1. Select **Content Hub (2)** under Content management from the left pane.
-1. Search for **Syslog (3)** and select it. Once selected, click on **Install (4)**.
+1. Select **Content Hub (1)** under Content management from the left pane.
 
-   ![](../Media/ch-4.6.png)  
+1. Search for **Syslog (2)** and select **(3)** it. Once selected, click on **Install (4)**.
 
-1. Click on **Data connectors (1)** present under Configuration in the left pane. Select **Syslog via Legacy Agent (2)** connector from the list.
+   ![](../Media/L5T2S4-1301.png)  
 
-   > **Note:** Refresh if the connector is not visible.
+1. Once the **Syslog** connector is installed, click on **Manage**.
 
-1. Select the **Open connector page (3)** on the connector information blade.
+1. Select the **Syslog via Legacy Agent (1)** from the list and click on **Open connector page (2)**.
 
-   ![](../Media/ch-4.7.png)  
+   ![](../Media/L5T2S6-1301.png)  
 
 1. Under **Configuration**, open the **Install agent on a Azure Linux Machine (1)** section. Select the link for **Download & install agent for Azure Linux machine (2)**. 
 
@@ -136,17 +130,16 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 In this task, you configure the **Syslog connector** in Microsoft Sentinel to define which **facilities** and **severity levels** of log data will be collected from your environment. This setup ensures that relevant security and system event logs from Linux devices are captured. It helps enhance **threat detection and monitoring** by filtering and forwarding only the required log categories to Sentinel.
 
+1. Navigate back to your Microsoft Sentinel Workspace.
 
-1. In the Search bar of the Azure portal, type **Sentinel (1)**, then select **Microsoft Sentinel (2)**.
+1. Click on **Settings (1)** under Configuration from the left pane, and select **Workspace settiings (2)**.
 
-   ![](../Media/ee6.png) 
-
-1. Click on the **uniquenameDefender (1)** workspace. Click on **Settings (2)** and select **Workspace Settings (3)**.
-
-   ![](../Media/ch-5.3.png) 
+   ![](../Media/L5T3S2-1301.png)
 
 1. From the left menu, select **Legacy agents management (1)** under the **Classic** area.
+
 1. Click on the **Syslog (2)** tab.
+
 1. Click on the **+ Add facility (3)** button.
 1. Select **auth** from the drop-down menu for **Facility name**.
 

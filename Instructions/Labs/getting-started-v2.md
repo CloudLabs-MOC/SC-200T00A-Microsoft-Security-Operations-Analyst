@@ -65,7 +65,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 ## Login to Azure Portal
 
-1. In the JumpVM, click on the **Azure portal** shortcut of the Microsoft Edge browser from the desktop.
+1. In the LabVM, click on the **Azure portal** shortcut of the Microsoft Edge browser from the desktop.
 
    ![](../Media/ee21.png)
    

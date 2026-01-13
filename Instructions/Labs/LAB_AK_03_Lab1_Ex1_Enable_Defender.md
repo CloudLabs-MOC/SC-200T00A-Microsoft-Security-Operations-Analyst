@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this lab, you will enable Microsoft Defender for Cloud. You are a Security Operations Analyst working at a company that is implementing cloud workload protection with Microsoft Defender for Cloud.  
+In this lab, you will enable Microsoft Defender for Cloud to enhance cloud workload protection and respond to security alerts. You will create a Log Analytics Workspace, enable Microsoft Defender for Cloud, install Azure Arc on an on-premises server, and implement security measures to protect it. 
 
 ## Objectives
 
@@ -32,10 +32,10 @@ In this task, you will create a Log Analytics workspace for use with Microsoft D
     
      - Subscription: Select your **subscription**
      - Resource group: Select **RG-Defender (1)**
-     - Name: Provide **uniquenameDefender (2)**  
+     - Name: Provide **workspace-<inject key="DeploymentID" enableCopy="false" /> (2)**  
      - Region: Keep the **default (3)**
 
-       ![Picture 1](../Media/ch-6.png)
+       ![Picture 1](../Media/L2T1S3-1301.png)
 
 1. Once the workspace validation has passed, select **Create**. Wait for the new workspace to be provisioned.
 
@@ -43,16 +43,19 @@ In this task, you will create a Log Analytics workspace for use with Microsoft D
 
 In this task, you will enable and configure Microsoft Defender for Cloud.
 
-1. In the Search bar of the Azure portal, type *Defender*, then select **Microsoft Defender for Cloud**.
-1. In the left menu for Microsoft Defender for Cloud, under **Management**, select **Environment settings (1)** then scroll down to bottom and **select your Subscription (2)** by expanding the Tenant Root Group.
+1. In the Search bar of the Azure portal, type *Microsoft Defender for Cloud (1)*, then select **Microsoft Defender for Cloud (2)**.
 
    ![Picture 1](../Media/UP_0004.png)
 
+1. In the left menu for Microsoft Defender for Cloud, under **Management**, select **Environment settings (1)** then scroll down to bottom and **select your Subscription (3)** by expanding **(2)** the Tenant Root Group.
+
+   ![Picture 1](../Media/L2T2S2-1301.png)
+
 1. Review the Azure resources that are now protected with the Defender for Cloud plans.
 
-    >**Important:** If all Defender plans are *Off*, select **Enable all plans (1)**. Select the **Turn on the plan anyways (2)** and then click on **OK**. Select **Save (3)** at the top of the page and wait for the *"Defender plans (for your) subscription were saved successfully!"* notifications to appear.
+    >**Important:** If all Defender plans are *Off*, select **Enable all plans (1)**. Select the **Turn on the plan anyways (2)** and then click on **OK (3)**. Select **Save (4)** at the top of the page and wait for the *"Defender plans (for your) subscription were saved successfully!"* notifications to appear.
 
-   ![Picture 1](../Media/secure9.png)
+   ![Picture 1](../Media/L2T2S3-1301.png)
 
     > **Note:** You can ignore any errors for enabling plans for SQL databses or relational databases.
 
@@ -64,13 +67,12 @@ In this task, you will enable and configure Microsoft Defender for Cloud.
 
    ![Picture 1](../Media/UP_0005.png)
 
-
 1. Close the settings page by selecting the 'X' on the upper right of the page to go back to the **Environment settings (1)**.
 
 
-1. Select the '>' to the left of your **subscription (2)** and select the **uniquenameDefender (3)** Log Analytics workspace you created earlier to review the available options and pricing.
+1. Select the '>' to the left of your **subscription (1)** and select the **workspace-<inject key="DeploymentID" enableCopy="false" />(2)** Log Analytics workspace you created earlier to review the available options and pricing.
 
-   ![Picture 1](../Media/UP_0007.png)
+   ![Picture 1](../Media/L2T2S6-1301.png)
 
 1. Close the Defender plans page by selecting the 'X' on the upper right of the page to go back to the **Environment settings**.
 
@@ -92,7 +94,7 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
    ![Picture 1](../Media/ch-1.1.png)
 
-1. Click on **Download RDP file** and select **Keep** in the pop-up. Open file when the download completes.
+1. Click on **Download RDP file** and select **Keep** in the pop-up. hen click on **Open file** when the download completes.
 
    ![Picture 1](../Media/ee4.png)
    ![Picture 1](../Media/ch-1.3.1.png)
@@ -115,8 +117,7 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 1. Click on the Start button, search for **Hyper-V Manager** from the bottom Windows search bar, and select to open.
 
-    ![Picture 1](../Media/UP_0009.png "Azure Portal")
-
+   ![Picture 1](../Media/UP_0009.png "Azure Portal")
 
 1. Click on **LABVM (1)**.
 
@@ -133,12 +134,12 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 1. On the WINServer VM, click on the Azure Portal icon to open the portal.
 
-    ![Picture 1](../Media/UP_0011.png "Azure Portal")
+    ![Picture 1](../Media/L2T3S14-1301.png "Azure Portal")
 
 1. In the **Sign in** dialog box, provide the credentials as listed below:
 
-    * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
-    * Azure Password: <inject key="AzureAdUserPassword"></inject>
+    * **Azure Username/Email:** <inject key="AzureAdUserEmail"></inject> 
+    * **Azure Temporary Acces Pass:** <inject key="AzureAdUserPassword"></inject>
 
 1. Click on **Yes** on the Stay signed in dialog box.
 1. In the **search resources, services and docs bar (1)**, type **Azure Arc** and select **Azure Arc (2)** from Services, as shown below:
@@ -189,7 +190,7 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 1. Enter **A (3)** for Yes to All and press Enter.
 
-    ![Picture 1](../Media/UP_0012.png)
+    ![Picture 1](../Media/L2T3S24-1301.png)
 
 1. Run the below **command (1)** and press enter:  
 
@@ -201,7 +202,7 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 1. Enter **R (2)** to Run once and press Enter (this may take a couple of minutes).
 
-    ![Picture 1](../Media/UP_0013.png)
+    ![Picture 1](../Media/L2T3S126-1301.png)
 
 1. The setup process will open a new Edge browser tab to authenticate the Azure Arc agent. Select the ODL email <inject key="AzureAdUserEmail"></inject>, wait for the message **"Authentication complete"**, and then go back to the Windows PowerShell window.
 
@@ -249,7 +250,7 @@ In this task, you will manually install the required agent on the Windows Server
 
 1. Click the **Destination** tab, select **+ Add Destination (1)**. Select **Azure Monitor Logs (2)** in the **Destination Type** dropdown. Select your **workspace (3)** from the drop-down. Click on **Add data source (4)**.
 
-   ![Picture 1](../Media/secure26.png)
+   ![Picture 1](../Media/L2T4S7-1301.png)
 
 1. Click on **Review + Create** and select **Create** after *Validation passed* is displayed.
 
@@ -273,12 +274,7 @@ In this task, you will manually install the required agent on the Windows Server
 
 ## Summary
 
-In this lab, you have completed the following:
-
-- Created a Log Analytics Workspace
-- Enabled Microsoft Defender for Cloud
-- Installed Azure Arc on an On-Premises Server.
-- Protected an On-Premises Server
+In this lab, you have enabled Microsoft Defender for Cloud to enhance cloud workload protection and respond to security alerts. You created a Log Analytics Workspace, enabled Microsoft Defender for Cloud, installed Azure Arc on an on-premises server, and implemented security measures to protect it.
 
 ### You have successfully completed the lab. Click on Next >> to procced with next Lab.
 ![](../Media/ch-5.9.png) 
