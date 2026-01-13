@@ -48,9 +48,7 @@ In this task, you will load sample security alerts and review the alert details.
 
 In this task, you will review cloud security posture management. 
 
-   >**Note:** The Secure Score information can take 24 hours to populate. 
-
-
+   >**Note:** The Secure Score information can take 24 hours to populate. If you do not see any data, please check back later.
 
 1. Navigate back to the Microsoft Defender for Cloud page and on the left menu Under *Cloud Security*, select **Security posture**.
 
@@ -84,29 +82,25 @@ In this task, you will load sample security alerts and review the alert details.
       > **Note:** This sample alert creation process may take a few minutes to complete, wait for the *"Successfully created sample alerts"* notification.
 
 1. Once completed, select **Refresh** to see the alerts appear under the *Security alerts* area.
+
 1. Choose an interesting alert with a *Severity* of *High* and perform the following actions:
 
     - Select the alert checkbox, and the alert detail pane should appear. Select **View full details**.
 
-      ![Picture 1](../Media/UP_0018.png)
+      ![Picture 1](../Media/L3T3S5.1-1301.png)
 
     - Review and read the *Alert details* tab.
 
     - Select the **Take action** tab next to Alert details.
 
-      ![Picture 1](../Media/UP_0019.png)
+      ![Picture 1](../Media/L3T3S5.2-1301.png)
 
     - Review the *Take action* information. Notice the sections available to take action depending on the type of alert: Inspect resource context, Mitigate the threat, Prevent future attacks, Trigger automated response and Suppress similar alerts.
 
 ## Summary
 
-In this lab, you have completed the following:
+In this lab, you have explored regulatory compliance, reviewed security posture management, and practiced mitigating security alerts using Microsoft Defender for Cloud.
 
-- Explored Regulatory Compliance
-- Explored Security posture and recommendations
-- Mitigated security alerts
-
-### You have successfully completed the lab!
-### Click on Next >> to procced with next Lab.
+### You have successfully completed the lab! Click on Next >> to procced with next Lab.
 ![](../Media/ch-5.9.1.png) 
 

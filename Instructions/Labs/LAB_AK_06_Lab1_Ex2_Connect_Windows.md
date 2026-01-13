@@ -40,9 +40,9 @@ In this task, you will connect the Microsoft Entra ID connector to Microsoft Sen
     
     ![Picture 1](../Media/ch-2.5.png)
 
- 1. Select **uniquenameDefender (1)** and click on **Add (2)**.
+ 1. Select **workspace-<inject key="DeploymentID" enableCopy="false" />(1)** and click on **Add (2)**.
 
-    ![Picture 1](../Media/ch-2.6.png)
+    ![Picture 1](../Media/L4T1S3-1301.png)
 
       > **Note:** In the Microsoft Sentinel free trial activated pop-up, click on **OK**.
 
@@ -68,9 +68,9 @@ In this task, you will create a Windows virtual machine in Azure.
 
 1. Select **Start with a pre-set configuration (2)** to continue.
 
-   ![](../Media/L4T2S5-2410.png)
+   ![](../Media/L4T2S5-1301.png)
 
-   > **Note:** Select **Dev/Test** and then select **Continue to create a VM** if prompted.
+1. Select **Dev/Test** and then select **Continue to create a VM** if prompted.
 
       ![](../Media/ch-2.8.png)
 
@@ -108,8 +108,6 @@ In this task, you will create a Windows virtual machine in Azure.
 
    ![](../Media/l8e1-10.png)
 
-   >**Note:** If there is a *Networking* validation failure, select that tab, review its contents, and then select **Review + create** again.
-
 ## Task 3: Install Azure Arc on an On-Premises Server
 
 In this task, you will install Azure Arc on an on-premises server to make onboarding easier.
@@ -130,7 +128,7 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
  
 1. Inside **WIN2** Click on **connect**.
  
-   ![](../Media/l8e1-14.png)
+   ![](../Media/L4T3S4-1301.png)
 
 1. Enter the **Password** as `Password.1!!` when prompted then hit on **Enter**.
 
@@ -138,9 +136,9 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 1. In the **WIN2**, click on the Azure Portal icon as shown below:
  
-   ![Launch Azure Portal](../Media/sc900-image(1).png)
+   ![Launch Azure Portal](../Media/L4T3S6-1301.png)
 
-1. In the **Sign in** dialog box, copy and paste **Email/Username: <inject key="AzureAdUserEmail"></inject>** and then select Next.
+1. In the **Sign in** dialog box, copy and paste **Email: <inject key="AzureAdUserEmail"></inject>** and then select Next.
 
 1. In the **Enter Temporary Access Pass** dialog box, copy and paste **Password: <inject key="AzureAdUserPassword"></inject>** and then select **Sign in**.
 
@@ -206,7 +204,7 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
     ![](../Media/l8e125.png)
 
-1. The setup process opens a new Microsoft Edge browser tab to authenticate the Azure Arc agent. Select your ODL user account, wait for the message **"Authentication complete"** and then go back to the Windows PowerShell window.
+1. The setup process should open a new Microsoft Edge browser tab to authenticate the Azure Arc agent. Select your ODL user account, wait for the message **"Authentication complete"** and then go back to the Windows PowerShell window.
 
     ![](../Media/ch-3.4.png)
 
@@ -234,7 +232,7 @@ In this task, you will connect an Azure Windows virtual machine to Microsoft Sen
 
 1. Select your Microsoft Sentinel Workspace you created earlier.
 
-   ![](../Media/l8e130.png)
+   ![](../Media/L4T4S2-1301.png)
 
 1. In the Microsoft Sentinel left menus, scroll down to the **Content management** section and select **Content Hub (1)**.
 
@@ -250,7 +248,7 @@ In this task, you will connect an Azure Windows virtual machine to Microsoft Sen
 
     >**Note:** The *Windows Security Events* solution installs both the *Windows Security Events via AMA* and the *Security Events via Legacy Agent* Data connectors, along with 2 Workbooks, 20 Analytic Rules, and 43 Hunting Queries.
 
-1. Select the **Windows Security Events via AMA (1)** Data connector, and select **Open connector page (2)** on the connector information blade.
+1. Select the check box for **Windows Security Events via AMA (1)** Data connector, and select **Open connector page (2)** on the connector information blade.
 
    ![](../Media/l8e3-14.png)
     
@@ -259,9 +257,9 @@ In this task, you will connect an Azure Windows virtual machine to Microsoft Sen
 
    ![](../Media/ch-3.7.png)
 
-1. Expand **RG-AZWIN01**, then select **AZWIN01**, and click on **Next: Collect**.
+1. Expand **RG-AZWIN01**, then select **AZWIN01 (1)**, and click on **Next: Collect (2)**.
 
-   ![](../Media/ch-3.8.png)
+   ![](../Media/L4T4S10-1301.png)
 
 
 1. Review the different Security Event collection option. Keep *All Security Events* and then select **Next: Review + create**.
@@ -306,12 +304,7 @@ In this task, you will add an Azure Arc connected, non-Azure Windows virtual mac
 
 ## Summary
 
-In this lab, you have completed the following:
-
-- Created a Windows Virtual Machine in Azure
-- Installed Azure Arc on an On-Premises Server
-- Connected an Azure Windows virtual machine
-- Connected a non-Azure Windows Machine
+In this lab, you have connected both an Azure Windows virtual machine and a non-Azure Windows server to Microsoft Sentinel using the *Windows Security Events via AMA* data connector.
 
 ### You have successfully completed the lab. Click on Next >> to procced with next Lab.
 ![](../Media/ch-5.9.2.png) 
