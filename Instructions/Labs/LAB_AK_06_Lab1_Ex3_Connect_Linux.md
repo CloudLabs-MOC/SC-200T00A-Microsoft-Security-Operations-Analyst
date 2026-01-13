@@ -4,9 +4,7 @@
 
 ## Overview
 
-In this lab you are a Security Operations Analyst working at a company that has implemented Microsoft Sentinel. 
-
-You will connect log data from Linux virtual machines using both the Common Event Format (CEF) via Legacy Agent and Syslog connectors to enable data collection for security monitoring and analysis.
+In this lab, you will learn how to connect Linux hosts to Microsoft Sentinel using the Common Event Format (CEF) and Syslog connectors. You will also configure the facilities and severities for the Syslog connector.
 
 >**Important:** There are steps within the next Tasks that are done in different virtual machines. Look for the Virtual Machine name references.
 
@@ -16,7 +14,7 @@ In this lab, you will perform the following tasks:
 
 - Task 1: Connect a Linux Host using the Common Event Format connector
 - Task 2: Connect a Linux host using the Syslog connector
-- Task 3: Configure the facilities you want to collect and their severities for the Syslog connector
+- Task 3: Configure Syslog facilities and severities using Data Collection Rules
 
 ## Architecture Diagram
 
@@ -106,57 +104,63 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 1. Once the **Syslog** connector is installed, click on **Manage**.
 
-1. Select the **Syslog via Legacy Agent (1)** from the list and click on **Open connector page (2)**.
+1. Select the **Syslog via AMA (1)** from the list and click on **Open connector page (2)**.
 
-   ![](../Media/L5T2S6-1301.png)  
+   ![](../Media/L5T2S6.1-1301.png)  
 
-1. Under **Configuration**, open the **Install agent on a Azure Linux Machine (1)** section. Select the link for **Download & install agent for Azure Linux machine (2)**. 
+1. Under **Configuration**, click on **+ Create data collection rule**.
 
-   ![](../Media/L5T2S7-2810.png)  
+   ![](../Media/L5T2S7-1301.png)  
 
-1. On the Virtual machines page select the LIN2 virtual machine.
+1. On the Create Data Collection Rule page, for the **Name**, enter **WINDCR2 (1)** and click on **Next: Resources (2)**.
 
-   ![](../Media/L5T2S8-2810.png) 
+   ![](../Media/L5T2S8-1301.png)
 
-1. Click on **Connect** and wait for the LIN2 VM to connect to the workspace. 
+1. On the **Resources** page, select the Lin-2 VM under the Lin-2 resource group, and click on **Next: Collect (2)**.
 
-   ![](../Media/L5T2S9-2810.png) 
+   ![](../Media/L5T2S9-1301.png)
 
-   ![](../Media/L5T2S10-2810.png)
+1. On the **Collect** page, keep everything as default and click on **Next: Review + create**.
 
-### Task 3: Configure the facilities you want to collect and their severities for the Syslog connector
+1. On the **Review + create** page, review the settings and click on **Create**.
+
+   ![](../Media/L5T2S10-1301.png)
+
+1. Once the Data Collection Rule is created, you will be redirected back to the Syslog connector page.
+
+    ![](../Media/L5T2S11-1301.png)  
+
+### Task 3: Configure Syslog facilities and severities using Data Collection Rules
 
    > **Note:** Perform this task from the SmartHotelHost VM (Lab VM).
 
-In this task, you configure the **Syslog connector** in Microsoft Sentinel to define which **facilities** and **severity levels** of log data will be collected from your environment. This setup ensures that relevant security and system event logs from Linux devices are captured. It helps enhance **threat detection and monitoring** by filtering and forwarding only the required log categories to Sentinel.
+In this task, you will update the **Data Collection Rule (DCR)** created in the previous task to specify the **Syslog facilities** and severity levels to be collected from Linux machines and sent to Microsoft Sentinel.
 
-1. Navigate back to your Microsoft Sentinel Workspace.
+1. On the search bar, search for **Data collection rule (1)** and select it **(2)**.
 
-1. Click on **Settings (1)** under Configuration from the left pane, and select **Workspace settiings (2)**.
+   ![](../Media/L5T3S1-1301.png)
 
-   ![](../Media/L5T3S2-1301.png)
 
-1. From the left menu, select **Legacy agents management (1)** under the **Classic** area.
+1. Select the **WINDCR2** data collection rule from the list.
 
-1. Click on the **Syslog (2)** tab.
+    ![](../Media/L5T3S2.1-1301.png)  
 
-1. Click on the **+ Add facility (3)** button.
-1. Select **auth** from the drop-down menu for **Facility name**.
+1. Under **Configurations**, click on **Data sources (1)**, and select the **Linux Syslog (2)** data source.
 
-      ![](../Media/ch-5.5.png) 
+   ![](../Media/L5T3S3-1301.png)
 
-1. Select the **+ Add facility (1)** button again.
-1. Select **authpriv (2)** from the drop-down menu for **Facility name**.
-1. Click on **Apply**.
+1. In the Add data source page, select the following **(1)** facilities and click on **Save (2)**:
+   - LOG_AUTH
+   - LOG_AUTHPRIV
 
-   ![](../Media/ee12.png)    
+   >**Note:** You can also select Minimum log level for both facilities.
+
+   ![](../Media/L5T3S4-1301.png)
+   
 
 ## Summary 
 
-In this lab, you have completed the following:
-- Connected a Linux Host using the Common Event Format connector
-- Connected a Linux host using the Syslog connector
-- Configured the facilities you want to collect and their severities for the Syslog connector
+In this lab, you learned how to connect Linux hosts to Microsoft Sentinel using the Common Event Format (CEF) and Syslog connectors. You also configured the facilities for the Syslog connector.
 
 ### You have successfully completed this lab!
 
