@@ -31,7 +31,7 @@ In this hands-on lab, you will implement a comprehensive security and hybrid clo
 
 ## Getting started with the lab
  
-Welcome to your Secure Windows Servers Azure Arc & Microsoft Defender Workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
+We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
 
 ## Accessing Your Lab Environment
  
@@ -77,7 +77,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
      
 1. Now enter the following password and click on **Sign in**.
    
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
    
        ![](../Media/pass-2310.png)
      
