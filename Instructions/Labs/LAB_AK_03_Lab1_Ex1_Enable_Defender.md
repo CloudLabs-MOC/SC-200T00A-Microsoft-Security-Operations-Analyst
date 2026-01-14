@@ -43,7 +43,7 @@ In this task, you will create a Log Analytics workspace for use with Microsoft D
 
 In this task, you will enable and configure Microsoft Defender for Cloud.
 
-1. In the Search bar of the Azure portal, type *Microsoft Defender for Cloud (1)*, then select **Microsoft Defender for Cloud (2)**.
+1. In the Search bar of the Azure portal, type **Microsoft Defender for Cloud (1)**, then select **Microsoft Defender for Cloud (2)** from the list.
 
    ![Picture 1](../Media/UP_0004.png)
 
@@ -64,13 +64,12 @@ In this task, you will enable and configure Microsoft Defender for Cloud.
    ![Picture 1](../Media/ch-8.png)
 
 1. Review the monitoring extensions. It includes configurations for Virtual Machines, Containers and Storage Accounts. Close the "Settings & monitoring" page by selecting the **X** on the upper right of the page.
-
+   
    ![Picture 1](../Media/UP_0005.png)
 
 1. Close the settings page by selecting the 'X' on the upper right of the page to go back to the **Environment settings (1)**.
 
-
-1. Select the '>' to the left of your **subscription (1)** and select the **workspace-<inject key="DeploymentID" enableCopy="false" />(2)** Log Analytics workspace you created earlier to review the available options and pricing.
+1. Select the **>** to the left of your **subscription (1)** and select the **workspace-<inject key="DeploymentID" enableCopy="false" />(2)** Log Analytics workspace you created earlier to review the available options and pricing.
 
    ![Picture 1](../Media/L2T2S6-1301.png)
 
@@ -103,7 +102,7 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
    ![Picture 1](../Media/secure15.png)
 
-1. Navigate to the **Environment** Details tab and copy the VM Username and VM Password which is listed under **Resource Group: WIN-1**.
+1. Navigate to the **Environment** tab above lab guide and copy the VM Username and VM Password which is listed under **Resource Group: WIN-1**.
 
    ![Picture 1](../Media/ee19.png)
 
