@@ -28,7 +28,7 @@ You will learn how to collect Windows security event telemetry from both Azure v
 
   > **Note:** While accessing Sentinel workspace if you see an error that the page was moved to Defender portal, click on the link on the top left side of the page to access the old experience and refresh your browser page. 
 
-   ![](../Media/old-experience.png) 
+   ![](../Media/sentinel-error-1401.png) 
 
 In this task, you will connect the Microsoft Entra ID connector to Microsoft Sentinel.
 
@@ -224,7 +224,7 @@ In this task, you will connect an Azure Windows virtual machine to Microsoft Sen
 
   > **Note:** While accessing Sentinel workspace if you see an error that the page was moved to Defender portal, click on the link on the top left side of the page to access the old experience and refresh your browser page.
 
-   ![](../Media/old-experience.png) 
+   ![](../Media/sentinel-error-1401.png) 
 
 1. In the Search bar of the Azure portal, type **Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
