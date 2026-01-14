@@ -20,7 +20,7 @@ You will learn how to collect Windows security event telemetry from both Azure v
 
 ## Architecture Diagram
 
-  ![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod6_L1_Ex2.png)
+  ![Lab overview.](../Media/Lab4-archdiag.png)
 
 ## Task 1: Create a Microsoft Sentinel Workspace
 
