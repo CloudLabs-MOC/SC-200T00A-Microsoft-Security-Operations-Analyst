@@ -27,10 +27,16 @@ In this lab, you will enable and configure data connectors in Microsoft Sentinel
  1. On the left side menu, select **Microsoft Sentinel (1)** > **Content management (2)** and select **Content hub (3)** under the Configuration.
 
      ![Picture 1](./images/Ex1.png)
+
+1. You will notice a message may appear advising that new spaces are being created, as this may take up to 10 minutes.
+
+    ![Image](./images/e2t3s2.png)
  
  1. On the Content hub page, search for **Microsoft Entra ID (1)**, then select **Microsoft Entra ID (2)** Data connector from the dropdown list and click on **Install (3)** to install it.
 
     ![Picture 1](./images/Ex2-14.png)
+
+    > **Note:** If you cannot be performed for successfully for several minutes, the instructions will redirect to Settings-Sentinel until then. Signing out of all sessions in the browser and then signing in again may speed things up. 
 
  1. From the left hand pane, click on **Configuration (1)** under **Microsoft Sentinel** select **Data connectors (2)** and expand **Microsoft Entra ID (3)** data connector and click on it, then select the **Open connector page (4)** on the connector information blade.
 
@@ -76,6 +82,8 @@ In this task, you will connect the Azure Activity connector.
 
    ![Picture](./images/Ex2-05.png)
 
+   >**Note:** If you cannot be performed for successfully for several minutes, the instructions will redirect to Settings-Sentinel until then. Signing out of all sessions in the browser and then signing in again may speed things up. 
+
 1. Now, navigate to **Data connectors** page, select the **Azure Activity (1)** Data connector, and select the **Open connector page (2)** on the connector information blade.
 
    ![Picture](./images/Ex2-06-1.png)
@@ -83,10 +91,6 @@ In this task, you will connect the Azure Activity connector.
 1. In the Configuration area, scroll down and under "2. Connect your subscriptions..." select **Launch Azure Policy Assignment wizard>**.
 
    ![Picture](./images/Ex2-07.png)
-
-1. In the **Basics** tab, select the ellipsis button **(...) (1)** under **Scope** and select your **subscription (2)** from the drop-down list and click **Select (3)**.
-
-   ![Picture](./images/Ex2-08.png)
 
 1. In the **Parameters** tab, click the ellipsis button **(...) (1)** next to **Primary Log Analytics workspace** and select your **workspace (2)** from the drop-down list and click **Select (3)**.
 

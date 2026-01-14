@@ -50,7 +50,7 @@ In this exercise, you will complete the following tasks:
 
    ![](./images/Ex2-05-e2.png)
 
-1. Select the necessary Events under **Connect events** on and click on **Apply Changes**
+1. Select under **Connect events** and check the box under **Microsoft Defender for Endpoint** on and click on **Apply Changes**.
 
    ![](./images/Ex2-05-e2-1.png)
    
