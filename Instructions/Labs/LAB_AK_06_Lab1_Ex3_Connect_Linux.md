@@ -28,7 +28,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
    > **Note:** While accessing Sentinel workspace if you see an error that the page was moved to Defender portal, click on the link on the top left side of the page to access the old experience and refresh your browser page. 
 
-   ![](../Media/old-experience.png) 
+   ![](../Media/sentinel-error-1401.png) 
 
 1. Close the **Windows Security Events via AMA** connector page if it is still open.
 
@@ -94,7 +94,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
    > **Note:** If you see an error that the page was moved to Defender portal, click on the link on the left top side to access the old experience and refresh the browser page. 
 
-      ![](../Media/old-experience.png) 
+      ![](../Media/sentinel-error-1401.png) 
 
 1. Select **Content Hub (1)** under Content management from the left pane.
 
@@ -153,10 +153,9 @@ In this task, you will update the **Data Collection Rule (DCR)** created in the 
    - LOG_AUTH
    - LOG_AUTHPRIV
 
-   >**Note:** You can also select Minimum log level for both facilities.
+       ![](../Media/L5T3S4-1301.png)
 
-   ![](../Media/L5T3S4-1301.png)
-   
+   >**Note:** You can also select Minimum log level for both facilities.
 
 ## Summary 
 
