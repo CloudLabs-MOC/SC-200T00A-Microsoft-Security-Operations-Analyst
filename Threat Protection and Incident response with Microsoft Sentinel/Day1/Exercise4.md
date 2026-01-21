@@ -57,11 +57,7 @@ In this task, you will connect the Threat Intelligence data connector in Microso
 
 In this task, you will create an indicator in Microsoft Sentinel.
 
-1. On the left side menu, under **Microsoft Sentine** click on **Threat management (1)** and select **Threat intelligence (2)** under the Configuration.
-
-    ![](./images/Ex4-00.png)
-
-1. Navigate to Defender Portal, expand **Threat intelligence (1)** from the left hand menu and select **Intel management (2)**. 
+1. On the left side menu, expand **Threat intelligence (1)** from the left hand menu and select **Intel management (2)**. 
 
 1. On **Intel management** page, click on **+ New (3)** under Indicator, then select **TI object (4)**.
 
@@ -100,7 +96,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
    ![](./images/Ex4-00-Az.png)
 
-1. Select the **Logs (1)** option under **General** on the left hand menu. 
+1. Select the **Logs (1)** option under **General** on the left hand menu and **Close** all the **pop-ups** if they appear.
 
    >**Note:** You may need to disable the "Always show Queries hub" option and close the *Queries* window to run the statements.
 
@@ -111,7 +107,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
     ```
     ![](./images/KQL-0.png)
     
-    >**Note:** You may need to wait for 20 minutes to get the expected output.
+    >**Note:** You may need to wait for 20 minutes to get the expected output. Feel free to continue with the next task and come back to check later.
 
 1. Keep the working mode as **KQL mode (1)**, enter the below given query **(2)** to see the Observable Value column, then click **Run (3)** and in **Results (5)** section you should now, see the **ObservableValue with onmicrosoft.com domain** as an output of the query. 
 
@@ -122,7 +118,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
     ```
    ![](./images/KQL-1.png)
 
-    >**Note:** You may need to wait for 20 minutes to get the expected output.
+    >**Note:** You may need to wait for 20 minutes to get the expected output. Feel free to continue with the next task and come back to check later.
 
 ### Task 4: Configure log retention
 

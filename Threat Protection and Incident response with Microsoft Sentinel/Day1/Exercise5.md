@@ -30,7 +30,7 @@ In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
 
     ![](./images/Ex4-00-2.png)
 
-1. Enable the **Turn on UEBA feature (1)** toggle and then enable the **Azure Active Directory (2)** toggle. 
+1. Enable the **Turn on UEBA feature (1)** toggle and then enable the **Microsoft Entra ID (2)** toggle. 
 
     ![](./images/Ex4-00-3.png)
 
@@ -38,7 +38,7 @@ In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
 
 In this task, you will confirm that Anomalies analytics rules are enabled.
 
-1. In the Microsoft Defender portal, select **Analytics** under **Configuration** from the left hand pane
+1. In the Microsoft Defender portal, select **Analytics (2)** under **Configuration (1)** from the left hand pane
 
     ![](./images/Ex4-00-4.png)
 
@@ -66,7 +66,7 @@ In this task, you will confirm that Anomalies analytics rules are enabled.
 
     ![](./images/Ex4-06.png)
 
-1. Review the *General* tab information. Notice the *Status* is set to **Disabled (1)** *Mode* is **Flighting (2)** and then select **Next: Configuration> (3)**.
+1. Review the *General* tab information. **Notice** the *Status* is set to **Disabled (1)** *Mode* is **Flighting (2)** and then select **Next: Configuration> (3)**.
 
     ![](./images/Ex4-07.png)
 
