@@ -1,6 +1,6 @@
 # Exercise 3: Analytics Rules and Incident Management
 
-## Estimated Duration: 45 Minutes
+## Estimated Duration: 40 Minutes
 
 ## Overview
 In this exercise, you will configure **Microsoft Sentinel** to detect and respond to security threats. You will start by creating a Log Analytics Workspace and deploying Microsoft Sentinel to it. Next, you will create and export an analytics rule to detect suspicious activities. Finally, you will generate and investigate an incident to understand Sentinel’s incident management process.
@@ -113,15 +113,16 @@ In this task, you will create and investigate an incident.
 
 1. Navigate to the Defender portal, navigate **Advanced Hunting (3)** by expanding **Hunting (2)** under **Investigation & response (1)**, enter the below given **query (4)** and click on **Run Query ()5**.
 
-   ```KQL
-    let lookback = 1d;
-    Heartbeat
-    | where TimeGenerated >= ago(lookback)
-    | summarize LastSeen = max(TimeGenerated) by Computer, RemoteIPCountry, OSType, OSMajorVersion
-    | extend HoursSinceLastSeen = datetime_diff('hour', now(), LastSeen)
-    | project Computer, OSType, OSMajorVersion, RemoteIPCountry, LastSeen, HoursSinceLastSeen
-    | order by HoursSinceLastSeen desc
-    ```
+   ```
+   Heartbeat
+   | summarize LastSeen = max(TimeGenerated) by Computer, RemoteIPCountry, OSType, OSMajorVersion
+   | extend HoursSinceLastSeen = datetime_diff('hour', now(), LastSeen)
+   | extend TimeGenerated = LastSeen
+   | project TimeGenerated, Computer, OSType, OSMajorVersion, RemoteIPCountry, LastSeen, HoursSinceLastSeen
+   | order by HoursSinceLastSeen desc
+   | extend Host_0_HostName = Computer
+   ```
+
 1. Select the **result (6)** shown and click on **Link to incident (7)**.
     ![Picture](./images/Ex1-07.png)
 
@@ -138,16 +139,16 @@ In this task, you will create and investigate an incident.
 
 1. On the Entity mapping page, enter the following details:
 
-    - Click on **+ Add entity (1)**.
+    - Click on **+ Add assets (1)**.
     - Entity: Select **Devices(2)** form the dropdown menu.
     - Identifier: Select **HostName (3)** from the dropdown menu.
     - Colum: Select **Computer (4)** from the dropdown menu. 
 
-    - under Related Evidences, Click on **+ Add entity (5)**.
+    - under Related Evidences, Click on **+ Add entities (5)**.
     - Entity: Select **URL (6)** from the dropdown menu.
     - Identifier: Select **URL (7)** from the dropdown menu.
     - Colum: Select **Computer (8)** from the dropdown menu. 
-    - Click on **+ Add entity (5)** again to add another entity.
+    - Click on **+ Add entities (5)** again to add another entity.
     - Entity: Select **IP (9)** from the dropdown menu.
     - Identifier: Select **Address (10)** from the dropdown menu.
     - Colum: Select **RemoteIPCountry (11)** from the dropdown menu.
@@ -159,7 +160,9 @@ In this task, you will create and investigate an incident.
 
     ![Picture](./images/Ex1-10.png)
 
-1. Navigate to the **Incident** page under **Investigation & response** , clcick on the newly create incident **Hunting Query incident (2)**. 
+1. Click on **Done**.
+
+1. In the left navigation pane, expand **Investigation & response (1)**, select **Incidents & alerts (2)**, and then click **Incidents (3)**. From the incidents list, select the **Hunting Query incident (4)** to view the incident details.
 
    ![Picture](./images/Ex1-13.png)
 

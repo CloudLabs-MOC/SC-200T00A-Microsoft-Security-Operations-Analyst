@@ -39,6 +39,8 @@ In this task, you will explore the Microsoft Sentinel data lake structure to und
 
     ![Picture](./images1/Ex7-05-az2.png)
 
+1. Select the **Logs** option under **General** on the left hand menu and **Close** all the **pop-ups** if they appear.
+
 1. Ensure you are in **KQL mode (1)** for writing queries. The query editor provides syntax highlighting and query assistance.
 
     ![Picture](./images1/Ex7-06-az.png)
@@ -59,7 +61,7 @@ In this task, you will create basic KQL queries to hunt for common security thre
 
 1. Click **Run (1)** to execute the query and review the results showing users with multiple failed login attempts.
 
-    ![Picture](./images1/Ex7-067-az.png)
+    > **Note:** This query may return no results since no alerts have have been created; it is intended solely for demonstration purposes.
 
 1. Enter a query to detect **suspicious Azure Activity - unusual resource creation**:
 
@@ -96,7 +98,6 @@ In this task, you will create sophisticated queries that correlate data across m
 1. Click **Run (1)** to identify actions from users with suspicious login patterns.
 
 1. The below KQL query scans the last 7 days of successful network connections to common lateral-movement ports (SMB, RDP, SSH, WinRM), counts how often each device connects on those ports, and flags devices with unusually high connection volumes as potential lateral movement indicators.
-
 
     ```KQL
     DeviceNetworkEvents
@@ -180,7 +181,8 @@ In this task, you will save your hunting queries as saved queries for future use
 
     ![Picture](./images1/Ex7-20.png)
 
-1. To create a **hunting rule from a saved query**, select a saved query and click **Create rule (1)** to convert it into an analytics rule for automated detection.
+1. **To create a hunting rule from a saved query**, select the saved query, click on **(…) (1)**, choose **New alert rule (2)**, and then select **Create Azure Monitor alert (3)** to convert the query into an analytics rule for automated detection.
+
 
     ![Picture](./images1/Ex7-22.png)
 

@@ -83,9 +83,11 @@ In this task, you will create a new notebook from a template and configure it fo
 
     ![Picture](./images1/Ex08-02-e2.png)
 
-### Task 3: Review the code and output for the Notebook
+### Task 3: Review the code and output for the Notebook [Read Only]
 
 In this task, you will initialize the MSTICPy library and establish a secure connection to your Microsoft Sentinel workspace.
+
+> **Note:** This exercise is intended for review only.
 
 #### Import Required Libraries
 
@@ -97,7 +99,6 @@ In this task, you will initialize the MSTICPy library and establish a secure con
 
     display(HTML("Checking upgrade to latest msticpy version"))
     %pip install --upgrade --quiet msticpy\[sentinel\]
-
 
     REQ_PYTHON_VER = "3.10"
     REQ_MSTICPY_VER = "2.12.0"
@@ -175,19 +176,17 @@ In this task, you will initialize the MSTICPy library and establish a secure con
 
 #### Establish Connection to Sentinel Workspace
 
-1.Navigate to code cell, **3.4 Authenticate to the Microsoft Sentinel workspace** and review the code block and then review the output.
+1. Navigate to code cell, **3.4 Authenticate to the Microsoft Sentinel workspace** and review the code block and then review the output.
 
     ```python
     # Get the default Microsoft Sentinel workspace details from msticpyconfig.yaml
-
     ws_config = mp.WorkspaceConfig()
 
     # Connect to Microsoft Sentinel with our QueryProvider and config details
     qry_prov.connect(ws_config)
     ```
     
-**Output**:
-    The Azure Sentinel workspace is successfully authenticated.
+   **Output**: The Azure Sentinel workspace is successfully authenticated.
 
    ![Picture](./images1/Ex2-1-3.png)
 

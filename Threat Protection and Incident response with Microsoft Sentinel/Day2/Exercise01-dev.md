@@ -10,10 +10,110 @@ In this exercise, you will explore **Microsoft Sentinel's** advanced automation 
 
 In this lab, you will perform the following:
 
-- Task 1: Create an Analytics Rule 
-- Task 2: Create an Automation Rule for Incident Assignment
-- Task 3: Create a Playbook for Automated Response
-- Task 4: Link Playbooks to Automation Rules
+- Task 1: Create a Log Analytics Workspace
+- Task 2: Deploy Microsoft Sentinel to a workspace
+- Task 4: Create an Analytics Rule 
+- Task 5: Create an Automation Rule for Incident Assignment
+- Task 6: Create a Playbook for Automated Response
+- Task 7: Link Playbooks to Automation Rules
+
+### Task 1: Create a Log Analytics Workspace
+
+In this task, you will create a Log Analytics workspace for use with Microsoft Defender for Cloud.
+
+1. In the Search bar of the Azure portal, type **Log Analytics workspaces (1)**, then select **Log Analytics workspaces (2)**.
+
+    ![](../Day1/images/Ex1-00.png)
+
+1. Select **+ Create** from the command bar.
+
+    ![](../Day1/images/Ex1-01.png)
+
+1. To create a **log analytics workspaces**, follow these steps:
+
+    - Leave the **Subscription (1)** as default.
+    - Select **sentinel-rg (2),** for Resource group.
+    - For the Name, enter **uniquenameSentinel (3)**.
+    - Leave the **Region (4)** as default.
+    - Select **Review + Create (5)**.
+
+      ![Picture 1](../Day1/images/Ex1-02.png)
+
+1. Once the workspace validation has passed, select **Create**.
+
+    ![](../Day1/images/Ex1-03.png)
+
+1. Wait for the new workspace to be provisioned, this may take a few minutes.
+   
+    ![](../Day1/images/Ex1-04.png)
+
+### Task 2 : Deploy Microsoft Sentinel to a workspace
+
+In this task, you will deploy Microsoft Sentinel to an existing Log Analytics workspace, enabling it to collect, detect, and respond to security threats.
+
+1. In the Search bar of the Azure portal, type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
+
+    ![](../Day1/images/Ex1-05-Az.png)
+
+1. Select **+ Create** from the command bar.
+
+    ![](../Day1/images/Ex1-06.png)
+
+1. Select the newly created workspace named **uniquenameSentinel (1)** and click on **Add (2)**.
+  
+    ![](../Day1/images/Ex1-07.png)
+
+1. In the **Microsoft Sentinel free trial activated** tab, select **Ok** to activate the free trial.
+
+    ![](../Day1/images/Ex1-08.png)
+
+1. Now you will see the **Getting started** page for Microsoft Sentinel.   
+
+### Task 3: Connect the Azure Activity connector
+
+In this task, you will connect the Azure Activity connector.
+
+1. On the left side menu, select **Microsoft Sentinel (1)** > **Content management (2)** and select **Content hub (3)** under the Configuration.
+
+   ![Picture 1](../Day1/images/Ex1.png)
+
+1. You will notice a message may appear advising that new spaces are being created, as this may take up to 10 minutes.
+
+    ![Image](../Day1/images/e2t3s2.png)
+
+1. On **Content hub** page, search for **Azure Activity (1)** and select **Azure Activity (2)** Data connector from the list,  and click on **Install (3)** to install it.
+
+   ![Picture](../Day1/images/Ex2-05.png)
+
+   >**Note:** If it doesn’t complete after a few minutes, you may be redirected to **Settings → Microsoft Sentinel**. Just **sign out** of all browser sessions and **sign in** again 2-3 times.  
+
+1. Now, navigate to **Data connectors** page, select the **Azure Activity (1)** Data connector, and select the **Open connector page (2)** on the connector information blade.
+
+   ![Picture](../Day1/images/Ex2-06-1.png)
+
+1. In the Configuration area, scroll down and under "2. Connect your subscriptions..." select **Launch Azure Policy Assignment wizard>**.
+
+   ![Picture](../Day1/images/Ex2-07.png)
+
+1. In the **Basics** tab, select the ellipsis button **(...) (1)** under **Scope** and select your **subscription (2)** from the drop-down list and click **Select (3)**.
+
+   ![Picture](../Day1/images/Ex2-08.png)
+
+1. In the **Parameters** tab, click the ellipsis button **(...) (1)** next to **Primary Log Analytics workspace** and select your **workspace (2)** from the drop-down list and click **Select (3)**.
+
+   ![Picture](../Day1/images/Ex2-09.png)
+
+1. Select the **Remediation** tab and select the **Create a remediation task (1)** checkbox. This action will apply the policy to existing Azure resources.
+
+1. Select the **Review + Create (2)** button to review the configuration.
+
+   ![Picture](../Day1/images/Ex2-10.png)
+
+1. On **Review + create**, select **Create** to finish. 
+
+   ![Picture](../Day1/images/Ex2-11.png)
+
+    > **Note:** It may take **15–20 minutes** for the **Azure Activity** data connector to show a **Connected** status after configuration.
 
 ### Task 1: Create an Analytics Rule  
 
@@ -164,7 +264,7 @@ In this task, you will create a playbook using Azure Logic Apps to automate inci
 
     ![Picture](./images1/Ex6-14-ex6.png)
 
-1. Search for and select **Send an email (V2)** action from the Office 365 Outlook connector.
+1. Search for and select **Send an email (V2)** action from the **Office 365 Outlook** connector.
 
     ![Picture](./images1/Ex6-15-ex6.png)
 
@@ -227,18 +327,18 @@ In this task, you will create an automation rule that triggers your newly create
 
 1. Now, create the Automation rule again follow from step 2 in the same task and select the same options
 
-1. In the **Actions (1)** section, click **+ Add action (2)** and select **Run playbook (3)** from the dropdown menu.
+1. In the **Actions** section, click **+ Add action** and select **Run playbook** from the dropdown menu.
  In the **Run playbook** action:
-    - **Playbook:** Select **Incident-Notification-Playbook (1)** from the dropdown
-    - Click **Add (2)**
+    - **Playbook:** Select **Incident-Notification-Playbook** from the dropdown
+    - Click **Add**
 
    ![Picture](./images1/Ex6-42-playbook.png)
 
 1. Configure the rule settings:
 
-    - **Rule expiration:** Leave as **Indefinite (1)**
-    - **Order:** Enter **2 (2)** (this will run after the assignment rule)
-    - Click **Apply (3)**
+    - **Rule expiration:** Leave as **Indefinite**
+    - **Order:** Enter **2** (this will run after the assignment rule)
+    - Click **Apply**
 
     ![Picture](./images1/Ex6-42-playbook.png)
 
