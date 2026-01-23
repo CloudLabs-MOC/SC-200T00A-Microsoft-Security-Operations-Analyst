@@ -13,9 +13,6 @@ In this lab, you will perform the following:
 - Task 1: Access and Configure Jupyter Notebooks in Microsoft Sentinel
 - Task 2: Create and Configure Your First Notebook
 - Task 3: Initialize MSTICPy and Connect to Sentinel Workspace
-- Task 4: Perform Advanced Threat Hunting Queries
-- Task 5: Create Visualizations
-- Task 6: Perform Anomaly Detection
 
 ### Task 1: Access and Configure Jupyter Notebooks in Microsoft Sentinel
 
