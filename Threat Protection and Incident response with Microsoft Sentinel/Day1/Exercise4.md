@@ -45,7 +45,7 @@ In this task, you will connect the Threat Intelligence data connector in Microso
 
    ![](./images/NewEx3Task2-0.png)
 
-1. Expand **Threat intelligence (1)** data connector, select **Microsoft Defender Threat intelligence (2)** and click on it, then select the **Open connector page (3)** on the connector information blade.
+1. On **Data connector (1)** page, select **Microsoft Defender Threat intelligence (2)** and click on it, then select the **Open connector page (3)** on the connector information blade.
 
    ![](./images/NewEx3Task2-1.png)
 
