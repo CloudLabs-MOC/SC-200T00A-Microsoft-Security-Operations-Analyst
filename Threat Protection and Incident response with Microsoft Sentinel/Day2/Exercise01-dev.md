@@ -12,7 +12,8 @@ In this lab, you will perform the following:
 
 - Task 1: Create a Log Analytics Workspace
 - Task 2: Deploy Microsoft Sentinel to a workspace
-- Task 4: Create an Analytics Rule 
+- Task 3: Connect the Azure Activity connector
+- Task 4: Create an Analytics Rule
 - Task 5: Create an Automation Rule for Incident Assignment
 - Task 6: Create a Playbook for Automated Response
 - Task 7: Link Playbooks to Automation Rules
@@ -73,6 +74,12 @@ In this task, you will deploy Microsoft Sentinel to an existing Log Analytics wo
 
 In this task, you will connect the Azure Activity connector.
 
+ 1. Navigate to **Microsoft Defender Portal**
+
+      ```
+      https://security.microsoft.com/
+      ```
+
 1. On the left side menu, select **Microsoft Sentinel (1)** > **Content management (2)** and select **Content hub (3)** under the Configuration.
 
    ![Picture 1](../Day1/images/Ex1.png)
@@ -115,15 +122,9 @@ In this task, you will connect the Azure Activity connector.
 
     > **Note:** It may take **15–20 minutes** for the **Azure Activity** data connector to show a **Connected** status after configuration.
 
-### Task 1: Create an Analytics Rule  
+### Task 4: Create an Analytics Rule  
 
 In this task, you will create an analytics rule using a Microsoft-provided template that detects when a new user creates an Azure CloudShell session. This will serve as the trigger for your automation workflows.
-
-1. Navigate to **Microsoft Defender Portal**
-
-    ```
-    https://security.microsoft.com/
-    ```
 
 1. On the left side menu, select **Microsoft Sentinel (1)** > **Configuration (2)** > **Analytics (3)**.
 
@@ -195,7 +196,7 @@ In this task, you will create an analytics rule using a Microsoft-provided templ
 
     ![Picture](./images1/Ex6-11-verify.png)
 
-### Task 2: Create an Automation Rule for Incident Assignment
+### Task 5: Create an Automation Rule for Incident Assignment
 
 In this task, you will create an automation rule that automatically assigns incidents to specific users or groups based on incident severity and other criteria.
 
@@ -235,7 +236,7 @@ In this task, you will create an automation rule that automatically assigns inci
 
     ![Picture](./images1/Ex6-18-assign-2-a.png).
 
-### Task 3: Create a Playbook for Automated Response
+### Task 6: Create a Playbook for Automated Response
 
 In this task, you will create a playbook using Azure Logic Apps to automate incident response actions such as sending notifications and enriching incident data.
 
@@ -292,7 +293,7 @@ In this task, you will create a playbook using Azure Logic Apps to automate inci
 
     ![Picture](./images1/Ex6-19-ex6.png)
 
-### Task 4: Link Playbooks to Automation Rules
+### Task 7: Link Playbooks to Automation Rules
 
 In this task, you will create an automation rule that triggers your newly created playbook when CloudShell incidents are generated.
 
