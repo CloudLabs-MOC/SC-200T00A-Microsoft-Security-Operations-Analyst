@@ -111,7 +111,13 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
 In this task, you will create and investigate an incident.
 
-1. Navigate to the Defender portal, navigate **Advanced Hunting (3)** by expanding **Hunting (2)** under **Investigation & response (1)**, enter the below given **query (4)** and click on **Run Query ()5**.
+1. Navigate to **Microsoft Defender Portal**
+
+   ```
+   https://security.microsoft.com/
+   ```
+
+1. Navigate **Advanced Hunting (3)** by expanding **Hunting (2)** under **Investigation & response (1)**, enter the below given **query (4)** and click on **Run Query (5)**.
 
    ```
    Heartbeat

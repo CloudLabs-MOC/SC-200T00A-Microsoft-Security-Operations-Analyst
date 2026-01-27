@@ -41,6 +41,9 @@ In this task, you will explore the Microsoft Sentinel data lake structure to und
 
 1. Select the **Logs** option under **General** on the left hand menu and **Close** all the **pop-ups** if they appear.
 
+    ![Picture](./images1/Ex7-06-aza.png)
+    ![Picture](./images1/Ex7-06-azb.png)
+
 1. Ensure you are in **KQL mode (1)** for writing queries. The query editor provides syntax highlighting and query assistance.
 
     ![Picture](./images1/Ex7-06-az.png)
@@ -150,6 +153,8 @@ In this task, you will save your hunting queries as saved queries for future use
 
 1. Enter a query in the editor:
 
+    > **Note:** This query may return no results since no alerts have have been created; it is intended solely for demonstration purposes.
+
     ```KQL
     SigninLogs
     | where ResultType == "0"
@@ -158,7 +163,7 @@ In this task, you will save your hunting queries as saved queries for future use
     | where Locations > 1
     ```
 
-1. Click **Save (1)** in the query editor toolbar and select **Save as query**.
+1. Click **Save (1)** in the query editor toolbar and select **Save as query (2)**.
 
     ![Picture](./images1/Ex7-15.png)
 
@@ -175,14 +180,13 @@ In this task, you will save your hunting queries as saved queries for future use
 
     ![Picture](./images1/Ex7-18.png)
 
-1. Your saved hunting queries will appear in the list. Click on a saved query to **load and run (1)** it.
+1. Your saved hunting queries will appear in the list. Click on a saved query to **load and run** it.
 
-1. You can also **share saved queries (1)** with your team by selecting the query and clicking **Share (2)**.
+1. You can also **share saved queries** with your team by selecting the query and clicking **Share**.
 
     ![Picture](./images1/Ex7-20.png)
 
 1. **To create a hunting rule from a saved query**, select the saved query, click on **(…) (1)**, choose **New alert rule (2)**, and then select **Create Azure Monitor alert (3)** to convert the query into an analytics rule for automated detection.
-
 
     ![Picture](./images1/Ex7-22.png)
 

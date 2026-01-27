@@ -18,19 +18,13 @@ In this lab, you will perform the following:
 
 In this task, you will access the Microsoft Sentinel notebook environment and configure the necessary resources for threat hunting.
 
-1. Open your web browser and navigate to **Microsoft Defender Portal**:
+1. In the Azure portal search bar, type **Azure Machine Learning (1)** and select **Azure Machine Learning (2)** from the Services list.
 
-    ```
-    https://security.microsoft.com/
-    ```
+    ![Picture](./images1/Ex08-01ba.png)
 
-1. In the left sidebar, locate the **Microsoft Sentinel** section and click to expand menu options under **Threat management**, select **Notebooks** from the menu options.
+1. On the Azure Machine Learning page, click **+ Create (1)** and select **New workspace (2)** to create a workspace.
 
-    ![Picture](./images1/Ex08-01.png)
-
-1. Click on the **Configure Azure Machine Learning** button to begin the setup process and select **Create a new ML workspace** from the available options.
-
-    ![Picture](./images1/Ex08-01b.png)
+    ![Picture](./images1/Ex08-01bc.png)
 
 1. Fill in the following details in the configuration form:
 
@@ -51,6 +45,16 @@ In this task, you will access the Microsoft Sentinel notebook environment and co
 ### Task 2: Create and Configure Your First Notebook
 
 In this task, you will create a new notebook from a template and configure it for your threat hunting analysis.
+
+1. Open your web browser and navigate to **Microsoft Defender Portal**:
+
+    ```
+    https://security.microsoft.com/
+    ```
+
+1. In the left sidebar, locate the **Microsoft Sentinel** section and click to expand menu options under **Threat management**, select **Notebooks** from the menu options.
+
+    ![Picture](./images1/Ex08-01.png)
 
 1. Click on **Templates (1)** and select **A Getting Started Guide For Microsoft Sentinel ML Notebooks (2)**
 

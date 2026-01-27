@@ -16,7 +16,18 @@ In this exercise, you will leverage Microsoft Sentinel’s proactive threat-hunt
 
 In this task, you will create a hunting query, bookmark a result, and create a Livestream.
 
-1. On the Create hunting query page, enter the name as **Microsoft Sentinel - Hunting**. For the query, add the following query. 
+1. From the left navigation pane, select **Hunting (1)**. On the **Queries** tab **(2)**, click **+ New query (3)** to create a new hunting query.
+
+   ![Picture](./images1/Ex2-119a.png)
+
+1. Scroll down and under *Entity mapping*, click on **+ Add new Entity (3)**, then select:
+
+   - Name: **Heartbeat Health Check (1)**
+   - For the *Entity type* drop-down list select **Host (4)**.
+   - For the *Identifier* drop-down list select **HostName (5)**.
+   - For the *Value* drop-down list select **Computer (6)**.
+
+1. Add the following query **(2)**.
 
     ```KQL
     let lookback = 1d;
@@ -28,30 +39,19 @@ In this task, you will create a hunting query, bookmark a result, and create a L
     | order by HoursSinceLastSeen desc
     ```
 
-1. Scroll down and under *Entity mapping*, click on **+ Add new Entity (3)**, then select:
-
-    - Name: **Heartbeat Health Check (1)**
-    - For the *Entity type* drop-down list select **Host (4)**.
-    - For the *Identifier* drop-down list select **HostName (5)**.
-    - For the *Value* drop-down list select **Computer (6)**.
-
 1. Scroll down and under *Tactics & Techniques* select **Command and Control (7)** and then select **Create (8)** to create the hunting query.
 
    ![Picture](./images/Ex2-119.png)
 
-1. On the Hunting page, select **Microsoft Sentinel - Hunting (1)** from the list and review the number of results in the middle pane under the *Results* column.
+1. From the left navigation pane, select **Hunting (1)**. On the **Queries** tab **(2)**, click **+ New query (3)** to create a new hunting query.
 
-1. Select the **View Results (2)** button from the right pane. The KQL query will automatically run.
+   ![Picture](./images1/Ex2-119a.png)
 
-   ![Picture](./images/Ex2-18.png)
-
-1. Close the *Logs* window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
-
-1. Select **Microsoft Sentinel - Hunting (1)** query, click on the **ellipsis (...) (2)**, then select **+ Add to livestream (3)**.
+1. Select **Heartbeat Health Check (1)** query, click on the **ellipsis (...) (2)**, then select **+ Add to livestream (3)**.
 
    ![Picture](./images/Ex2-17.png)
 
-1. Review that the *Status* is now *Running*. This will be running every 30 seconds in the background, and you will receive a notification in the Azure Portal (bell icon) when a new result is found. 
+1. Review that the *Status* is now *Running*. This will be running every 30 seconds in the background, and you will receive a notification in the Azure Portal (bell icon) when a new result is found. Click on the refresh.
 
    ![Picture](./images/Ex2Hunt-0.png)
 
@@ -111,7 +111,8 @@ In this task, you will create a watchlist in Microsoft Sentinel.
      ![Picture](./images/Ex2-01.png)
 
     >**Note:** To upload file click on **Browse for files**, upload window will open. Navigate to **This PC-> Documents (1)** path, select the **HighValue.csv (2)** file, then click on **Open (3).**
-      ![Picture](./images/NewEx2-0.png)
+
+    ![Picture](./images/NewEx2-0.png)
 
 1. Review the settings you entered and select **Create**.
 
@@ -123,7 +124,7 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
    ![Picture](./images/Ex2-08.png)
 
-    >**Important:** It could take up to ten minutes for the watchlist to appear. **Please continue with the next lab**. You can check in between and perform the steps below.
+    >**Important:** It could take up to **10** minutes for the watchlist to appear. **Please continue with the next lab**. You can check in between and perform the steps below.
 
 1. You will be directed to the Advanced hunting page. In the query section, ensure the *_GetWatchlist('HighValueHosts')* **(1)** query is there by default, click on **Run query (2)**, and you will output in the **Result (3)** section.
     
