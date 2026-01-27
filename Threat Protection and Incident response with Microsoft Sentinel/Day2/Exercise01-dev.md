@@ -269,14 +269,14 @@ In this task, you will create a playbook using Azure Logic Apps to automate inci
 
     ![Picture](./images1/Ex6-15-ex6.png)
 
-1. On **Create connection** page click on Sign in and then select 
-**<inject key="AzureAdUserEmail"></inject>** in the pop-up browser
+1. On **Create connection** page click on Sign in and then select **<inject key="AzureAdUserEmail"></inject>** in the pop-up browser
+
     ![Picture](./images1/Ex6-15-ex6-2.png)
     ![Picture](./images1/Ex6-15-ex6-3.png)
 
-> **Note:** If you see an error as pop-ups blocked by browser, follow the steps from the below image
+   >**Note:** If you see an error as pop-ups blocked by browser, follow the steps from the below image
 
-![Picture](./images1/Ex6-15-ex6-3-b.png) 
+    ![Picture](./images1/Ex6-15-ex6-3-b.png) 
 
 7. Enter the below details and click on **X**.
     - **To:** <inject key="AzureAdUserEmail"></inject>
