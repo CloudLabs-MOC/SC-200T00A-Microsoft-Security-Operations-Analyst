@@ -76,9 +76,9 @@ In this task, you will create a new notebook from a template and configure it fo
 
     ![Picture](./images1/Ex08-02-d.png)
 
-1. Once the Notebook is launched, select **Serverless Spark Compute** for Compute
+1. Once the Notebook is launched, open **A Getting Started Guide for Microsoft… (1)**. In the notebook toolbar, select **Azure Machine Learning Serverless Spark** as the compute and ensure **Serverless Spark Compute – Available (2)** is selected.
 
-    ![Picture](./images1/Ex08-02-e.png)
+    ![Picture](./images1/Ex08-02-ea.png)
 
 1. Wait for the Compute session to start, it may take upto 10 minutes, once it is ready you can see that the compute session is ready
 

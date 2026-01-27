@@ -73,11 +73,9 @@ In this task, you will connect the Threat Intelligence data connector in Microso
 
    ![Picture](./images/Ex3-10.png)
 
-1. Review the contents of the workbook. It shows insights into your Azure subscription operations by collecting and analyzing the data from the Activity Log.
+1. In the Threat Intelligence section, select the **Indicators Search** tab to view and analyze observed threat indicators and related logs.
 
-   ![Picture](./images/Ex3-08.png)
-
-1. Close the workbook by selecting the **X** in the top-right corner.
+   ![Picture](./images1/Ex3-08a.png)
 
 ### Task 2: Save a Workbook template
 
@@ -114,6 +112,8 @@ In this task, you will create a new workbook with advanced visualizations.
     >**Note:** Although it is a new workbook, a startup template is used.
 
 1. A New Workbook template will open. Click on **Edit** to edit the workbook.
+
+   >**Note:** The screenshot may differ from the actual lab experience, as some resources can take additional time to appear.
 
    ![Picture](./images/Wb-3.png)
 

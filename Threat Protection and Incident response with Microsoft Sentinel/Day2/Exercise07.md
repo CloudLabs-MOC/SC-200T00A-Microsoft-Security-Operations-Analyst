@@ -34,7 +34,11 @@ In this exercise, you will learn how to use Microsoft Sentinel’s repository in
 
 In this task, you will create an Azure DevOps repository.
 
-1. Open another tab in the browser and navigate to (https:/aexprodcus1.vsaex.visualstudio.com/me?mkt=en-US).
+1. Open another tab in the browser and navigate to:
+
+   ```
+   https:/aexprodcus1.vsaex.visualstudio.com/me?mkt=en-US
+   ```
 
 1. On the *We need a few more details* page, leave everything as default, then select **Continue**.
 
@@ -95,6 +99,12 @@ In this task, you will create an Azure DevOps repository.
    ![Picture](./images/Repo-8.png)
 
 ### Task 3: Connect Sentinel to Azure DevOps
+
+1. Navigate to **Microsoft Defender Portal**
+
+   ```
+   https://security.microsoft.com/
+   ```
 
 1. On the Defender portal, navigate to **Repositories (1)** under **Microsoft Sentinel** from the left-hand menu under Content management, then click on **+ Add new (2)**.
 
