@@ -95,9 +95,11 @@ In this task, you will save a workbook template and modify it.
 
 1. Select the **Threat Intelligence (1)** workbook, then select the **View saved workbook (2)** button.
 
+   >**Note:** It could take a couple of minutes for the indicator to appear.
+
    ![Picture](./images/Ex3-09.png)
 
-1. Close the workbook by selecting the **X** in the top-right corner.
+1. Close the workbook.
 
 ### Task 3: Create a Workbook
 

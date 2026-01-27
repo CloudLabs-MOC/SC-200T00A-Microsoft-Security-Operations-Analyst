@@ -34,9 +34,13 @@ In this lab, you will enable and configure data connectors in Microsoft Sentinel
  
  1. On the Content hub page, search for **Microsoft Entra ID (1)**, then select **Microsoft Entra ID (2)** Data connector from the dropdown list and click on **Install (3)** to install it.
 
+    > **Note:** If it doesn’t complete after a few minutes, you may be redirected to **Settings → Microsoft Sentinel**. Just **sign out** of all browser sessions and **sign in** again 2-3 times. 
+
     ![Picture 1](./images/Ex2-14.png)
 
-    > **Note:** If you cannot be performed for successfully for several minutes, the instructions will redirect to Settings-Sentinel until then. Signing out of all sessions in the browser and then signing in again may speed things up. 
+    > **Hint:** Zoom your browser to **70–80%** for a better view during the lab.
+
+    ![Picture 1](./images/Ex2-14a.png)
 
  1. From the left hand pane, click on **Configuration (1)** under **Microsoft Sentinel** select **Data connectors (2)** and expand **Microsoft Entra ID (3)** data connector and click on it, then select the **Open connector page (4)** on the connector information blade.
 
@@ -82,7 +86,7 @@ In this task, you will connect the Azure Activity connector.
 
    ![Picture](./images/Ex2-05.png)
 
-   >**Note:** If you cannot be performed for successfully for several minutes, the instructions will redirect to Settings-Sentinel until then. Signing out of all sessions in the browser and then signing in again may speed things up. 
+   >**Note:** If it doesn’t complete after a few minutes, you may be redirected to **Settings → Microsoft Sentinel**. Just **sign out** of all browser sessions and **sign in** again 2-3 times.  
 
 1. Now, navigate to **Data connectors** page, select the **Azure Activity (1)** Data connector, and select the **Open connector page (2)** on the connector information blade.
 
@@ -91,6 +95,10 @@ In this task, you will connect the Azure Activity connector.
 1. In the Configuration area, scroll down and under "2. Connect your subscriptions..." select **Launch Azure Policy Assignment wizard>**.
 
    ![Picture](./images/Ex2-07.png)
+
+1. In the **Basics** tab, select the ellipsis button **(...) (1)** under **Scope** and select your **subscription (2)** from the drop-down list and click **Select (3)**.
+
+   ![Picture](./images/Ex2-08.png)
 
 1. In the **Parameters** tab, click the ellipsis button **(...) (1)** next to **Primary Log Analytics workspace** and select your **workspace (2)** from the drop-down list and click **Select (3)**.
 
@@ -108,7 +116,6 @@ In this task, you will connect the Azure Activity connector.
 
     > **Note:** It may take **15–20 minutes** for the **Azure Activity** data connector to show a **Connected** status after configuration.
 
-
 ### Summary
 In this lab, you have integrated log data from various data sources within the organization into Microsoft Sentinel using appropriate data connectors.
 
@@ -117,4 +124,3 @@ In this lab, you have integrated log data from various data sources within the o
 ### Now, click on **Next >>** from the lower right corner to move on to the next page.
 
    ![](./images/Next.png)
-

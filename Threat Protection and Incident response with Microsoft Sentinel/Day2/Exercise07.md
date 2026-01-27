@@ -96,19 +96,7 @@ In this task, you will create an Azure DevOps repository.
 
 ### Task 3: Connect Sentinel to Azure DevOps
 
-1. Navigate back to the Azure portal, in the search bar type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
-
-   ![](../Day1/images/Ex1-05.png)
-
-1. Select the **Microsoft Sentinel Workspace** to proceed.
-
-   ![](../Day1/images/Ex4-00.png)
-
-1. On the Microsoft Sentinel workspace page, in the **Overview (1)** section, you will find a **Click here to go to the Defender portal (2)** link, then click on it to navigate to the **Defender portal**.
-
-   ![Picture](./images/Repo-14.png)
-
-1. On the Defender portal, navigate to **Repositories (1)** from the left-hand menu under Content management, then click on **+ Add new (2)**.
+1. On the Defender portal, navigate to **Repositories (1)** under **Microsoft Sentinel** from the left-hand menu under Content management, then click on **+ Add new (2)**.
 
    ![Picture](./images/Repo-9.png)
 
@@ -118,7 +106,7 @@ In this task, you will create an Azure DevOps repository.
    - **Source control:** Select **Azure DevOps (2)** from the dropdown menu.
    - Click on **Authorize (3)**.
    - **Organization**: Select the **organization (4)** you created earlier from the dropdown menu.
-   - **Project:** Select the Project you created earlier, **My Sentinel Content (5)**.
+   - **Project:** Select the Project you create4d earlier, **My Sentinel Content (5)**.
    - **Repository:** Select the Repository, **My Sentinel Content (6)**. 
    - **Branch:**  Select **refs/heads/main (7)** from the dropdown menu.
    - **Content types:** Select **Analytics rules** from the dropdown menu.

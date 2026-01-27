@@ -16,48 +16,6 @@ In this exercise, you will leverage Microsoft Sentinel’s proactive threat-hunt
 
 In this task, you will create a hunting query, bookmark a result, and create a Livestream.
 
-1. Navigate back to the Azure portal, in the search bar type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
-
-   ![](../Day1/images/Ex1-05-Az.png)
-
-1. Select the **Microsoft Sentinel Workspace** to proceed.
-
-   ![](../Day1/images/Ex4-00-Az.png)
-
-1. On Microsoft Sentinel workspace page, select **Logs (1)**, Choose working mode as **KQL mode (2)** and enter the following KQL Statement in the **New Query 1 (3)** space, then click on **Run (4)**.
-
-   >**Important:** Please paste any KQL queries first in Notepad and then copy from there to the *New Query 1* Log window to avoid any errors.
-
-    ```KQL
-    let lookback = 1d;
-    Heartbeat
-    | where TimeGenerated >= ago(lookback)
-    | summarize LastSeen = max(TimeGenerated) by Computer, RemoteIPCountry, OSType, OSMajorVersion
-    | extend HoursSinceLastSeen = datetime_diff('hour', now(), LastSeen)
-    | project Computer, OSType, OSMajorVersion, RemoteIPCountry, LastSeen, HoursSinceLastSeen
-    | order by HoursSinceLastSeen desc
-    ```
-
-1. In the *Results* section, select the **Computer (5)**, then click on **Add bookmark (6)** button.
-
-    ![Picture](./images/Ex2-10.png) 
-
-1. On the **Add Bookmark** window, add the following details, then click on **Create (7)**.
-
-   - Bookmark name: keep it as **Default (1)**.
-   - Click on **+ Add new entity (2)**.  
-   - Entity mapping: Select **Host (3)** from the dropdown menu.
-   - Then **Hostname (4)** and **Computer (5)** for the values.
-   - Tactics and Techniques: Select **Command and Control (6)** from the dropdown menu.
-
-     ![Picture](./images/Ex2-11.png) 
-
-1. Close the *Logs* window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
-
-1. Navigate back to the Defender portal, navigate to the **Hunting (1)** option under the Threat management from the left-hand menu, select **+ New query (2)**.
-
-   ![Picture](./images/Ex2-12.png)
-
 1. On the Create hunting query page, enter the name as **Microsoft Sentinel - Hunting**. For the query, add the following query. 
 
     ```KQL
@@ -77,7 +35,7 @@ In this task, you will create a hunting query, bookmark a result, and create a L
     - For the *Identifier* drop-down list select **HostName (5)**.
     - For the *Value* drop-down list select **Computer (6)**.
 
-1. Scroll down and under *Tactics & Techniques* select **Command and Control** and then select **Create** to create the hunting query.
+1. Scroll down and under *Tactics & Techniques* select **Command and Control (7)** and then select **Create (8)** to create the hunting query.
 
    ![Picture](./images/Ex2-119.png)
 
