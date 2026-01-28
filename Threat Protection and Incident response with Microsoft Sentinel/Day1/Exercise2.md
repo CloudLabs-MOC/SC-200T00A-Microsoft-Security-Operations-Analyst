@@ -88,9 +88,9 @@ In this task, you will connect the Azure Activity connector.
 
    >**Note:** If it doesn’t complete after a few minutes, you may be redirected to **Settings → Microsoft Sentinel**. Just **sign out** of all browser sessions and **sign in** again 2-3 times.  
 
-1. Now, navigate to **Data connectors** page, select the **Azure Activity (1)** Data connector, and select the **Open connector page (2)** on the connector information blade.
+1. Now, navigate to **Data connectors (1)** page, select the **Azure Activity (2)** Data connector, and select the **Open connector page (3)** on the connector information blade.
 
-   ![Picture](./images/Ex2-06-1.png)
+   ![Picture](../Day1/images/Ex2-05a.png)
 
 1. In the Configuration area, scroll down and under "2. Connect your subscriptions..." select **Launch Azure Policy Assignment wizard>**.
 
