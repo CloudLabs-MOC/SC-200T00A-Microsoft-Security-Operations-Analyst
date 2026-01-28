@@ -145,7 +145,7 @@ In this task, you will create sophisticated queries that correlate data across m
     ```
 
 1. Click **Run (4)** to correlate known threat indicators with generated alerts.
-    > **Note:** This query may return no results since no alerts have have been created; it is intended solely for demonstration purposes.
+    > **Note:** This query may return no results since no alerts have been created; it is intended solely for demonstration purposes.
 
 ### Task 4: Save Hunting Queries for Reuse
 
@@ -176,7 +176,7 @@ In this task, you will save your hunting queries as saved queries for future use
 
     ![Picture](./images1/Ex7-16.png)
 
-1. To view your saved queries, click **Queries (1)** in the left navigation and search for the query you created
+1. In the **Microsoft Sentinel** workspace, go to **Queries (1)**, search for **Login Attempts Hunting Query (2)**, and select it from the **Security** section **(3)** to view the results.
 
     ![Picture](./images1/Ex7-18.png)
 

@@ -130,6 +130,7 @@ In this task, you will create and investigate an incident.
    ```
 
 1. Select the **result (6)** shown and click on **Link to incident (7)**.
+
     ![Picture](./images/Ex1-07.png)
 
 1. On the Link incident page, for Alert details, enter the following details:
