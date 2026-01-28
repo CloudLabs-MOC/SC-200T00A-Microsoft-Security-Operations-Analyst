@@ -52,6 +52,13 @@ In this lab, you will enable and configure data connectors in Microsoft Sentinel
 
     >**Note:** It may take **15–20 minutes** for the **Microsoft Entra ID** data connector to show a **Connected** status after configuration. 
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="5465d7a5-7b5c-41c0-83e1-8e73c217f512" />
+
 ### Task 2: Connect the Microsoft Defender for Cloud connector
 
 In this task, you will connect the Microsoft Defender for Cloud connector.
@@ -115,6 +122,13 @@ In this task, you will connect the Azure Activity connector.
    ![Picture](./images/Ex2-11.png)
 
     > **Note:** It may take **15–20 minutes** for the **Azure Activity** data connector to show a **Connected** status after configuration.
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="911fb47b-7d69-4dcc-86db-017411fe9b5c" />
 
 ### Summary
 In this lab, you have integrated log data from various data sources within the organization into Microsoft Sentinel using appropriate data connectors.
