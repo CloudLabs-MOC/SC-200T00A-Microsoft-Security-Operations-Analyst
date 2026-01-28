@@ -69,17 +69,17 @@ In this task, you will connect the Microsoft Defender for Cloud connector.
 
 1. On **Content hub** page, search for **Microsoft Defender for Cloud (1)** and **expand it (2)** from the list, then select **Tenant-based Microsoft Defender for Cloud (3)** Data connector and click on **Install Solution (4)** to install it.
 
-   ![Picture 1](./images/Ex2-02.png)
+    ![Picture 1](./images/Ex2-02.png)
 
     >**Note:** The Microsoft Defender for Cloud solution installs the Tenant-based Microsoft Defender for Cloud Data connector, Subscription-based Microsoft Defender for Cloud (Legacy) Data connector, and an Analytics rule.
 
 1. On **Content hub** page, select the **Tenant-based Microsoft Defender for Cloud (1)** Data connector, and select the **Open connector page (2)** on the connector information blade.
    
-   ![Picture](./images/Ex2-03.png) 
+    ![Picture](./images/Ex2-03.png) 
 
 1. You will now be navigated to the Azure portal, where you can see the information like **Last Log Recieved**, **Data recieved**
 
-   ![Picture](./images/Ex2-04.png) 
+    ![Picture](./images/Ex2-04.png) 
 
 ### Task 3: Connect the Azure Activity connector
 
@@ -87,39 +87,39 @@ In this task, you will connect the Azure Activity connector.
 
 1. On the left side menu, select **Microsoft Sentinel (1)** > **Content management (2)** and select **Content hub (3)** under the Configuration.
 
-   ![Picture 1](./images/Ex1.png)
+    ![Picture 1](./images/Ex1.png)
 
 1. On **Content hub** page, search for **Azure Activity (1)** and select **Azure Activity (2)** Data connector from the list,  and click on **Install (3)** to install it.
 
-   ![Picture](./images/Ex2-05.png)
+    ![Picture](./images/Ex2-05.png)
 
-   >**Note:** If it doesn’t complete after a few minutes, you may be redirected to **Settings → Microsoft Sentinel**. Just **sign out** of all browser sessions and **sign in** again 2-3 times.  
+    >**Note:** If it doesn’t complete after a few minutes, you may be redirected to **Settings → Microsoft Sentinel**. Just **sign out** of all browser sessions and **sign in** again 2-3 times.  
 
 1. Now, navigate to **Data connectors (1)** page, select the **Azure Activity (2)** Data connector, and select the **Open connector page (3)** on the connector information blade.
 
-   ![Picture](../Day1/images/Ex2-05a.png)
+    ![Picture](../Day1/images/Ex2-05a.png)
 
 1. In the Configuration area, scroll down and under "2. Connect your subscriptions..." select **Launch Azure Policy Assignment wizard>**.
 
-   ![Picture](./images/Ex2-07.png)
+    ![Picture](./images/Ex2-07.png)
 
 1. In the **Basics** tab, select the ellipsis button **(...) (1)** under **Scope** and select your **subscription (2)** from the drop-down list and click **Select (3)**.
 
-   ![Picture](./images/Ex2-08.png)
+    ![Picture](./images/Ex2-08.png)
 
 1. In the **Parameters** tab, click the ellipsis button **(...) (1)** next to **Primary Log Analytics workspace** and select your **workspace (2)** from the drop-down list and click **Select (3)**.
 
-   ![Picture](./images/Ex2-09.png)
+    ![Picture](./images/Ex2-09.png)
 
 1. Select the **Remediation** tab and select the **Create a remediation task (1)** checkbox. This action will apply the policy to existing Azure resources.
 
 1. Select the **Review + Create (2)** button to review the configuration.
 
-   ![Picture](./images/Ex2-10.png)
+    ![Picture](./images/Ex2-10.png)
 
 1. On **Review + create**, select **Create** to finish. 
 
-   ![Picture](./images/Ex2-11.png)
+    ![Picture](./images/Ex2-11.png)
 
     > **Note:** It may take **15–20 minutes** for the **Azure Activity** data connector to show a **Connected** status after configuration.
 
