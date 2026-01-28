@@ -42,31 +42,38 @@ In this task, you will access the Microsoft Sentinel notebook environment and co
 
     ![Picture](./images1/Ex08-01c.png)
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="f17877bd-f1bc-41a3-b9b5-0d9ac0d1cd81" />
+
 ### Task 2: Create and Configure Your First Notebook
 
 In this task, you will create a new notebook from a template and configure it for your threat hunting analysis.
 
 1. Open your web browser and navigate to **Microsoft Defender Portal**:
 
-    ```
-    https://security.microsoft.com/
-    ```
+     ```
+     https://security.microsoft.com/
+     ```
 
 1. In the left sidebar, locate the **Microsoft Sentinel** section and click to expand menu options under **Threat management**, select **Notebooks** from the menu options.
 
-    ![Picture](./images1/Ex08-01.png)
+     ![Picture](./images1/Ex08-01.png)
 
 1. Click on **Templates (1)** and select **A Getting Started Guide For Microsoft Sentinel ML Notebooks (2)**
 
-    ![Picture](./images1/Ex08-02.png)
+     ![Picture](./images1/Ex08-02.png)
 
 1. Select **Create from template**
 
-    ![Picture](./images1/Ex08-02-b.png)
+     ![Picture](./images1/Ex08-02-b.png)
 
 1. Leave the name of your notebook to default and the Azure Machine Learning workspace to **aml** and cick **Save** to save the notebook configuration to your ML workspace.
 
-    ![Picture](./images1/Ex08-02-c.png)
+     ![Picture](./images1/Ex08-02-c.png)
 
 1. Click **Save** to save the notebook configuration to your ML workspace.
 
@@ -74,15 +81,15 @@ In this task, you will create a new notebook from a template and configure it fo
 
 1. Click **Launch notebook** to open the notebook in the Jupyter environment.
 
-    ![Picture](./images1/Ex08-02-d.png)
+     ![Picture](./images1/Ex08-02-d.png)
 
 1. Once the Notebook is launched, open **A Getting Started Guide for Microsoft… (1)**. In the notebook toolbar, select **Azure Machine Learning Serverless Spark** as the compute and ensure **Serverless Spark Compute – Available (2)** is selected.
 
-    ![Picture](./images1/Ex08-02-ea.png)
+     ![Picture](./images1/Ex08-02-ea.png)
 
 1. Wait for the Compute session to start, it may take upto 10 minutes, once it is ready you can see that the compute session is ready
 
-    ![Picture](./images1/Ex08-02-e2.png)
+     ![Picture](./images1/Ex08-02-e2.png)
 
 ### Task 3: Review the code and output for the Notebook [Read Only]
 

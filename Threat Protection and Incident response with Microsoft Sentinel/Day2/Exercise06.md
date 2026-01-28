@@ -99,6 +99,13 @@ In this task, you will save a workbook template and modify it.
 
 1. Close the workbook.
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="1e909770-fbca-40cc-bfbf-ab8d4ce5013d" />
+
 ### Task 3: Create a Workbook
 
 In this task, you will create a new workbook with advanced visualizations.
@@ -107,27 +114,27 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. Select **+ Add workbook** to create a new workbook from scratch. 
 
-   ![Picture](./images/Ex3-12.png)
+    ![Picture](./images/Ex3-12.png)
 
     >**Note:** Although it is a new workbook, a startup template is used.
 
 1. A New Workbook template will open. Click on **Edit** to edit the workbook.
 
-   >**Note:** The screenshot may differ from the actual lab experience, as some resources can take additional time to appear.
+    >**Note:** The screenshot may differ from the actual lab experience, as some resources can take additional time to appear.
 
-   ![Picture](./images/Wb-3.png)
+    ![Picture](./images/Wb-3.png)
 
 1. Select the **Edit** button below the first paragraph of the workbook.
 
-   ![Picture](./images/Wb-8.png)
+    ![Picture](./images/Wb-8.png)
 
 1. Type **# My workbook (1)** in a new line on top of **## New workbook**, then scroll a bit to click **Done Editing (2)**.
 
-   ![Picture](./images/Wb-0.png)
+    ![Picture](./images/Wb-0.png)
 
 1. Select **Edit** visible next to the barchart.
 
-   ![Picture](./images/Wb-2.png)
+    ![Picture](./images/Wb-2.png)
 
 1. Review the KQL statement that provides a *union* statement of counts across all tables.
 
@@ -137,7 +144,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. Select the **+ Add (1)** below the barchart, then select **Add data source + visualization (2)**.
 
-   ![Picture](./images/Wb-5.png)
+    ![Picture](./images/Wb-5.png)
 
 1. Type **Heartbeat (1)** into the query box.
 
@@ -151,11 +158,11 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. Scroll down and select **Done Editing (6)** on the bottom menu.
 
-   ![Picture](./images/Wb-6.png)
+    ![Picture](./images/Wb-6.png)
 
 1. Select the **+ Add (1)** below the barchart, then select **Add data source + visualization (2)**.
 
-   ![Picture](./images/Wb-5.png)
+    ![Picture](./images/Wb-5.png)
 
 1. Type **SecurityAlert (1)** into the query box.
 
@@ -173,11 +180,11 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. Select **Done Editing** in the Workbook's top command bar.
 
-   ![Picture](./images/Wb-9.png)
+    ![Picture](./images/Wb-9.png)
 
 1. Select the **Save** icon in the Workbook's top command bar.
 
-   ![Picture](./images/Wb-10.png)
+    ![Picture](./images/Wb-10.png)
 
 1. On the **Save Workbook** pop-up, enter the following details:
 

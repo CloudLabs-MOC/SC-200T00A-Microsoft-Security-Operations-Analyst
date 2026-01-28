@@ -48,6 +48,13 @@ In this task, you will create a Log Analytics workspace for use with Microsoft D
    
     ![](../Day1/images/Ex1-04.png)
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="cdac5534-9c7d-41c9-bfa7-e147839de7f0" />
+
 ### Task 2 : Deploy Microsoft Sentinel to a workspace
 
 In this task, you will deploy Microsoft Sentinel to an existing Log Analytics workspace, enabling it to collect, detect, and respond to security threats.
