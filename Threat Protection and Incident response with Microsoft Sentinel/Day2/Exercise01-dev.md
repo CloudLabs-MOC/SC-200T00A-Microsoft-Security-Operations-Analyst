@@ -53,7 +53,7 @@ In this task, you will create a Log Analytics workspace for use with Microsoft D
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="cdac5534-9c7d-41c9-bfa7-e147839de7f0" />
+<validation step="f3ebb19c-4e5c-43ba-9630-36236eefd257" />
 
 ### Task 2 : Deploy Microsoft Sentinel to a workspace
 

@@ -104,7 +104,7 @@ In this task, you will save a workbook template and modify it.
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="1e909770-fbca-40cc-bfbf-ab8d4ce5013d" />
+<validation step="52ef16d4-4132-4324-94b1-49f57a5593ec" />
 
 ### Task 3: Create a Workbook
 

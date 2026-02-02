@@ -135,7 +135,7 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="e7797283-ec3e-4c29-a1ff-06f5f1bf3189" />
+<validation step="e32747be-38a5-4620-97be-7baf78b1e7f3" />
 
 ### Summary
 In this exercise, you created and executed a hunting query, bookmarked important findings, escalated a bookmark to an incident, and built a watchlist. You have gained hands-on experience in using Microsoft Sentinel to proactively identify, investigate, and track potential threats. 

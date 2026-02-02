@@ -47,7 +47,7 @@ In this task, you will access the Microsoft Sentinel notebook environment and co
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="f17877bd-f1bc-41a3-b9b5-0d9ac0d1cd81" />
+<validation step="a158e4d7-27e4-4b9e-9c63-86f746aab061" />
 
 ### Task 2: Create and Configure Your First Notebook
 
