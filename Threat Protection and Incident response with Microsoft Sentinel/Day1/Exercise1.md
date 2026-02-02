@@ -71,7 +71,7 @@ In this task, you will deploy Microsoft Sentinel to an existing Log Analytics wo
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="dfefd2db-2c34-4bc8-a67e-9525c3a6cabe" />
+<validation step="9fc4dcf9-792d-401a-b9ca-7439805c6518" />
 
 ## Summary
 In this lab, you have completed the following:

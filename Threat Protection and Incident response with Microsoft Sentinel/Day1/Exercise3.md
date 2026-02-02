@@ -63,7 +63,7 @@ In this exercise, you will complete the following tasks:
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="61015a0b-769e-4f5f-9053-58a87ac350eb" />
+<validation step="18e52deb-5647-4c21-af83-f013f4e8c102" />
 
 ## Summary
 

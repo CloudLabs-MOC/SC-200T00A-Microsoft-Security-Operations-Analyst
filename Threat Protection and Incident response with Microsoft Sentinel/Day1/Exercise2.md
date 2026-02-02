@@ -57,7 +57,7 @@ In this lab, you will enable and configure data connectors in Microsoft Sentinel
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="5465d7a5-7b5c-41c0-83e1-8e73c217f512" />
+<validation step="66d2cc48-acaf-4143-a09a-a0106a933f31" />
 
 ### Task 2: Connect the Microsoft Defender for Cloud connector
 
@@ -128,7 +128,7 @@ In this task, you will connect the Azure Activity connector.
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="911fb47b-7d69-4dcc-86db-017411fe9b5c" />
+<validation step="904cf1d7-cd7e-423c-bfe4-7905dc62c8b3" />
 
 ### Summary
 In this lab, you have integrated log data from various data sources within the organization into Microsoft Sentinel using appropriate data connectors.
