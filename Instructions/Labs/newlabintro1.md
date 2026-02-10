@@ -23,13 +23,13 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../Media/12-8-25-g1-5.png)
+![Explore Lab Resources](../Media/sc-g1.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![Use the Split Window Feature](../Media/12-8-25-g1-3.png)
+![Use the Split Window Feature](../Media/sc-g2.png)
  
 ## Managing Your Virtual Machine
  
@@ -67,7 +67,7 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
  
    - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
  
-     ![Enter Your Password](../Media/lab1-s1.png)
+     ![Enter Your Password](../Media/lab1-s2.png)
  
 4. If prompted to stay signed in, you can click **No**.
 

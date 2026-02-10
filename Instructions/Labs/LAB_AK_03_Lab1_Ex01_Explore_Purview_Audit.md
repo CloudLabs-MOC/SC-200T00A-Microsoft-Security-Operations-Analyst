@@ -8,7 +8,7 @@ You're a Security Operations Analyst working at a company that is implementing M
 
 In this lab, you will perform:
 
-- Task 1: Enable Purview Audit logs
+- **Task 1:** Enable Purview Audit logs
 
 ## Architecture Diagram
 
@@ -31,9 +31,9 @@ In this task, you'll assign preset security policies for Exchange Online Protect
 
    ![Screenshot showing the Welcome to the new Microsoft Purview portal screen.](../Media/lab3-1.png)
 
-1. When the **Microsoft Purview portal** opens, a message about the **Welcome to the new Microsoft Purview portal** will appear on the screen. Select the option to agree with the **terms of data flow disclosure** and the **privacy statement**, then click **Get started**.
+1. When the **Microsoft Purview portal** opens, a message about the **Welcome to the new Microsoft Purview portal** will appear on the screen. Click **Get started** to continue
 
-    ![Screenshot showing the Welcome to the new Microsoft Purview portal screen.](../Media/lab3-2.png)
+    ![Screenshot showing the Welcome to the new Microsoft Purview portal screen.](../Media/lab3-s2.png)
 
     >**Note:** If you see a message that the Compliance portal is retired, please wait for a few seconds, it will redirect you to the new portal. 
 
@@ -45,13 +45,13 @@ In this task, you'll assign preset security policies for Exchange Online Protect
 
 1. On the **Search** page, select the blue **Start recording user and admin activity** bar to enable audit logging.
 
-    ![Screenshot showing the Start recording user and admin activity button.](../Media/enable-audit-button.png)
+    ![Screenshot showing the Start recording user and admin activity button.](../Media/lab3-s1.png)
 
-    >**Note:** If you get a message to complete the organizational setup, click on Yes. 
+    >**Note:** If you get a message to **Complete organizational setup**, click on **Yes**. 
 
 1. Once you select this option, the **blue bar** should disappear from the page.
 
-    >**Note:** It might take **60 minutes** to start recording activities. You can proceed with the next lab exercises.
+    >**Note:** It might take **60 Minutes** to start recording activities. You can proceed with the next lab exercises.
 
 ### Review
  In this lab, you have completed the following:
