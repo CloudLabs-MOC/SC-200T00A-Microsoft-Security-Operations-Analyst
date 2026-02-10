@@ -6,6 +6,11 @@ The organization you work for wants to increase the efficiency and capabilities 
 
 In this exercise, you go through the *first run experience* of Microsoft Security Copilot to provision Copilot with one security compute unit (SCU).
 
+>**Note:**
+> The environment for this exercise is a simulation generated from the product. As a limited simulation, links on a page may not be enabled and text-based inputs that fall outside of the specified script may not be supported. A pop-up message will display stating, **This feature is not available within the simulation.** When this occurs, select **OK** and continue the exercise steps.  
+
+![Pop-up error message](../Media/lab2-s2.png)
+
 ## Lab Objectives
 
 In this lab, you will perform:
@@ -28,9 +33,12 @@ This task should take approximately **15** minutes to complete.
 
 In this task, you walk through the process of ensuring you have the appropriate role permissions. This starts by enabling access management for Azure resources.
 
-1. In the Search bar of the Azure portal, type **Entra ID (1)**, then select **Microsoft Entra ID (2)**.
+1. Open the simulated environment by selecting this link: <https://app.highlights.guide/start/6d7270b9-7187-456a-ac16-97bc227d5c27?token=045faae1-1078-4eac-bf56-e12472eddaf9&link=1&azure-portal=true>.
 
-   ![Picture 1](../Media/entraid.png)
+
+1. In the Search bar of the Azure portal, type **Microsoft Entra ID (1)**, then select **Microsoft Entra ID (2)**.
+
+   ![Picture 1](../Media/lab1-s3.png)
 
 1. From the left navigation panel, expand **Manage**.
 
@@ -38,41 +46,41 @@ In this task, you walk through the process of ensuring you have the appropriate 
 
 1. Enable the toggle switch for **Access management for Azure resources (2)**, then select **Save (3)**.
 
-   ![](../Media/lab2-6.png)
+   ![](../Media/lab2-s1.png)
 
-   >**Note**: If **Access Management for Azure resources** is already enabled, proceed to the next step.
+   >**Note:** If **Access Management for Azure resources** is already enabled, proceed to the next step.
 
 1. From the blue banner on the top of the page, select **Microsoft Azure** to return to the landing page of the Azure portal.
 
 1. Select **Subscriptions** then select the subscription listed.
 
-   ![](../Media/lab2-1.png)
+   ![](../Media/lab2-s3.png)
      
 1. Select **Access control (IAM) (1)**.
 
 1. Select **+ Add (2)**, then **Add role assignment (3)**.
 
-   ![](../Media/lab2-4.png)
+   ![](../Media/lab2-s4.png)
 
 1. From the Role tab, select **Privileged administrator roles (1)**.
 
 1. Select **Owner (2)**, then select **Next (3)**.
 
-   ![](../Media/lab2-5.png)
+   ![](../Media/lab2-s5.png)
 
 1. Select **+ Select members (1)**.
 
 1. **Avery Howard** is the first name on this list, select the **+** to the right of the name.  **Avery Howard (2)** is now listed under selected members. Select the **Select (4)** button, then select **Next (5)**.
 
-   ![](../Media/lab2-2.png)
+   ![](../Media/lab2-s6.png)
 
 1. Select **Allow user to assign all roles except privileged administrator roles, Owner, UAA, RBAC (Recommended) (1)**.
 
 1. Select **Review + assign (2)**, then select **Review + assign** one last time.
 
-   ![](../Media/lab2-3.png)
+   ![](../Media/lab2-s7.png)
 
-1. Open a new tab and access the simulated environment by clicking on the following link: **[Microsoft Security Copilot](https://app.highlights.guide/start/6373500f-1f10-4584-a14e-ca0b4aa7399f?link=0&token=40f793d4-2956-40a4-b11a-6b3d4f92557f&azure-portal=true)**.
+1. Open a new tab and access the simulated environment by clicking on the following link: **[Microsoft Security Copilot](https://app.highlights.guide/start/6d7270b9-7187-456a-ac16-97bc227d5c27?token=045faae1-1078-4eac-bf56-e12472eddaf9&azure-portal=true)**.
 
 1. Follow the steps in the Wizard, select **Get started**.
 
@@ -92,19 +100,23 @@ In this task, you walk through the process of ensuring you have the appropriate 
    - Select the box, **"I acknowledge that I have read, understood, and agree to the Terms and Conditions (2)**.
    - Select **Continue (3)** on the bottom right corner of the page.
 
-     ![](../Media/1112.png)
+     ![](../Media/lab2-s8.png)
 
 1. The wizard displays information about where your customer data will be stored. The region displayed is based on the region you selected in the Prompt evaluation field. Select **Continue**.
 
    ![](../Media/lab2-9.png)
 
+   **Note:** Please continue if this is not coming up
+
 1. You can select options to help improve Copilot. You can select the toggle based on your preferences.  Select **Continue**.
 
    ![](../Media/lab2-10.png)
 
+1. On the **Copilot’s access and storage of Microsoft 365 service data** and **Logging audit data in Microsoft Purview** pages, review the settings and click **Continue**.
+
 1. As part of the initial setup, Copilot provides contributor access to everyone by default and includes Global administrators and Security administrators as Copilot owners. In your production environment, you can change who has access to Copilot, once you've completed the initial setup. Select **Continue**.
 
-   ![](../Media/lab2-11.png)
+   ![](../Media/lab2-s9.png)
 
 1. You're all set! Select **Finish**.
 
@@ -122,13 +134,13 @@ You're logged in as Avery Howard and have the Copilot owner role. You'll work in
 
 This task should take approximately **15** minutes to complete.
 
-1. Open a new tab and access the simulated environment by clicking on the following link: : **[Microsoft Security Copilot](https://app.highlights.guide/start/2cac767e-42c4-4058-afbb-a9413aac461d?link=0&token=40f793d4-2956-40a4-b11a-6b3d4f92557f&azure-portal=true)**.
+1. Open a new tab and access the simulated environment by clicking on the following link: **[Microsoft Security Copilot](https://app.highlights.guide/start/7608581a-ee3a-4fe0-be03-309a58b78c60?token=045faae1-1078-4eac-bf56-e12472eddaf9&azure-portal=true)**.
 
-1. Select the **Menu** icon, which is sometimes referred to as the hamburger icon.
+1. Select the **Menu (1)** icon, which is sometimes referred to as the hamburger icon.
 
-1. Select **My sessions** from the left menu and note the available options.
+1. Select **My sessions (2)** from the left menu and note the available options.
 
-   ![](../Media/lab2-14.png)
+   ![](../Media/lab2-s10.png)
 
 1. Select **Recent** to view the most recent sessions.
 
@@ -138,7 +150,7 @@ This task should take approximately **15** minutes to complete.
 
 1. Select **Promptbook library** from the left menu.
  
-   ![](../Media/lab2-15.png)
+   ![](../Media/lab2-s11.png)
 
 1. Select **My promptbooks** under **Promptbook library**. A subsequent task will provide a deeper dive into promptbooks.
 
@@ -158,25 +170,27 @@ This task should take approximately **15** minutes to complete.
 
 1. Select **Owner settings**. These settings are available to you as a Copilot owner. A Copilot contributor does not have access to these menu options.
 
-   ![](../Media/lab2-19.png)
+   ![](../Media/lab2-s12.png)
 
-1. For plugins in **Security Copilot**, select the drop-down under **Who can add and manage their own custom plugins** to view the available options.
+1. Select the drop-down for who can upload files to view the available options.
 
-1. Select the drop-down for **Who can add and manage custom plugins for everyone in the organization** to view the available options. Note that this option will be greyed out if **Who can add and manage their own custom plugins** is set to **owners only**.
+1. Return to the **Home** menu and explore the **Plugin settings** options:
 
-   ![](../Media/lab2-21.png)
+    ![](../Media/lab2-s13.png)
 
-1. Select the **information icon** next to **"Allow Security Copilot to access data from your Microsoft 365 Services."** This setting must be enabled if you want to use the Microsoft Purview plugin. You'll work with this setting in a later exercise.
+1. Select the Plugin settings for Who can add and manage their own custom plugins to view the available options.
 
-   ![](../Media/lab2-22.png)
+1. Select drop-down for Who can add and manage custom plugins for users of this workspace to view the available options. Note, this option is greyed out if Who can add and manage their own custom plugins is set to owners only.
 
-1. Select the drop-down for **Who can upload files** to view the available options.
+1. Select the information icon next to "Allow Security Copilot to access data from your Microsoft 365 Services."  This setting must be enabled if you want to use the Microsoft Purview plugin. You'll work with this setting in a later exercise.
+
+    ![](../Media/lab2-22.png)
 
 1. Select the **home menu icon** to open the home menu.
 
 1. Select **Role assignment** from the left menu.
 
-   ![](../Media/lab2-23.png)
+   ![](../Media/lab2-s14.png)
 
 1. Select **Add members**, then close the window.
 
@@ -188,13 +202,13 @@ This task should take approximately **15** minutes to complete.
 
 1. Expand **Contributor** to view the details.
 
-   ![](../Media/lab2-26.png)
+   ![](../Media/lab2-s16.png)
 
 1. Select the **home menu icon** to open the home menu.
 
 1. Select **Usage monitoring** from the left menu.
 
-   ![](../Media/lab2-27.png)
+   ![](../Media/lab2-s15.png)
 
 1. Select the **date filter** to view the available options.
       
@@ -206,7 +220,7 @@ This task should take approximately **15** minutes to complete.
 
 1. Choose **Settings** from the menu on the left.
 
-   ![](../Media/lab2-29.png)
+   ![](../Media/lab2-s17.png)
 
 1. Click on **Preferences**, scroll down to explore the available options, then select **Data and Privacy**, and finally click on **About**.
 
@@ -220,19 +234,13 @@ This task should take approximately **15** minutes to complete.
 
 1. Click on **Home** to go back to the landing page.
 
-1. The largest card represents your most recent session. Clicking on the title of any session card will take you to that specific session.
-
-1. Click on **View all sessions** to navigate to the My Sessions page.
-
-1. Click on **Microsoft Copilot for Security**, located next to the home menu icon, to return to the landing page.
-
-1. To the right of "Get started with these promptbooks," you'll see left and right arrow keys that let you scroll through the tiles for Microsoft security promptbooks. Click on the **right arrow >** to scroll forward.
-
-   ![](../Media/lab2-31.png)
+1. Select the **Promptbooks** button.
 
 1. Each tile displays the title of the promptbook, a brief description, the number of prompts, and a run icon. Click on the title of any promptbook tile to open it. For example, select **Vulnerability impact assessment** to open that promptbook.
 
-   ![](../Media/lab2-32.png)
+1. On the **Vulnerability impact assessment** promptbook tile, select the More options **(…) (1)** icon and choose **Details (2)** to open the promptbook.
+
+   ![](../Media/lab2-s18.png)
 
 1. The window for the selected promptbook provides details such as the creator of the promptbook, tags, a brief description, the inputs required to run the promptbook, and a list of the prompts.
 
@@ -240,19 +248,7 @@ This task should take approximately **15** minutes to complete.
 
 1. Click on **X** to close the window.
 
-1. Select **View the promptbook library**.
-
-   ![](../Media/lab2-33.png)
-
-1. To view the promptbooks you own, click on **My promptbooks**.
-
-1. Click on **Woodgrove** to see a list of promptbooks owned by Woodgrove, the name of a fictitious organization.
-
-1. Click on **Microsoft** to view the built-in, Microsoft-owned/developed promptbooks.
-
-1. Click on the filter icon to filter based on tags assigned to the workbook. To close the filter window, select the **X** in the New filter tab.
-
-1. Select **Microsoft Copilot for Security**, next to the home menu icon, to return to the landing page.
+1. Click on **Home** to go back to the landing page.
 
 1. From the prompt bar, you can select the prompts icon to select a built-in prompt or a promptbook. Select the **prompts icon (1)** then Select **See all promptbooks (2)** under **Get started using these examples**.
 
@@ -280,7 +276,7 @@ This task should take approximately **15** minutes to complete.
 
 1. Choose whether you want to view all plugins, those that are enabled **on (1)**, or those that are disabled **off (2)**.
 
-   ![](../Media/lab2-20.png)
+   ![](../Media/lab2-s19.png)
 
 1. Expand or collapse the list of Microsoft, non-Microsoft, and custom plugins as needed.
         
@@ -306,7 +302,7 @@ This task should take approximately **15** minutes to complete.
 
 1. Users with a minimum role of Service Support Administrator or Helpdesk Administrator role can submit a support case to the Microsoft support team. If you have this role, a headset icon is displayed. Close the contact support page.
 
-   ![](../Media/lab2-39.png)
+   ![](../Media/lab2-s20.png)
 
 ### Task 3: Explore the Microsoft Security Copilot embedded experience
 
@@ -316,49 +312,49 @@ You're logged in as Avery Howard and have the Copilot owner role. You'll work in
 
 This exercise should take approximately **30** minutes to complete.
 
-1. Open the simulated environment by selecting this link: **[Microsoft Defender portal](https://app.highlights.guide/start/f4f590f6-8937-40f9-91ec-632de546ab98?token=40f793d4-2956-40a4-b11a-6b3d4f92557f&azure-portal=true)**.
+1. Open the simulated environment by selecting this link: **[Microsoft Defender portal](https://app.highlights.guide/start/be8a91c3-3979-4048-ad38-fd38deaf7117?token=045faae1-1078-4eac-bf56-e12472eddaf9&azure-portal=true)**. 
 
 1. From the Microsoft Defender portal:
 
    - Expand **Investigation & response (1)**, then expand **Incidents & alerts (2)**, and finally select **Incidents (3)**.
 
-     ![](../Media/lab2-40.png)
+     ![](../Media/lab2-s24.png)
 
       > **Note:** If the **Incidents** option does not appear in the left navigation menu, wait for 5 minutes and refresh the browser. It may take a short time for the menu to fully load.
 
-1. Select the first incident in the list, **Incident Id: 30342** named Human-operated ransomware attack was launched from a compromised asset (attack disruption).
+1. Select the first incident in the list, **Incident Id: 185856** named Human-operated ransomware attack was launched from a compromised asset (attack disruption).
 
-   ![](../Media/lab2-41.png)
+   ![](../Media/lab2-s25.png)
 
-1. This is a complex incident. Defender XDR provides a great deal of information, but with 72 alerts it can be a challenge to know where to focus. On the right side of the incident page, Copilot automatically generates an **Incident summary** that helps guide your focus and response. Select **See more**.
+1. This is a complex incident. Defender XDR provides a great deal of information, but with 50 alerts it can be a challenge to know where to focus. On the right side of the incident page, Copilot automatically generates an **Incident summary** that helps guide your focus and response. Select **See more**.
 
-   ![](../Media/lab2-42.png)
+   ![](../Media/lab2-s26.png)
 
 1. Copilot's summary describes how this incident has evolved, including initial access, lateral movement, collection, credential access and exfiltration. It identifies specific devices, indicates that the PsExec tool was used to launch executable files, and more.
 
 1. These are all items you can leverage for further investigation. You explore some of these in subsequent tasks.
 
-1. Scroll down on the Copilot panel and just beneath the summary are **Guided responses**. Guided responses recommend actions in support of triage, containment, investigation, and remediation.
+1. Scroll down on the Copilot panel and just beneath the summary are **Guided responses**. Guided responses recommend actions in support of triage, contain, investigation, and remediation.
 
 1. The first item in the triage category it to Classify this incident. Select **Classify** to view the options. Review the guided responses in the other categories.
 
-1. Select the **Status** button at the top of the guided responses section and filter on **Completed**. Two completed activities show labeled as Attack Disruption. Automatic attack disruption is designed to contain attacks in progress, limit the impact on an organization's assets, and provide more time for security teams to remediate the attack fully.
+1. Select the **Status** button above the *Summary* and filter on **Completed**. Four completed activities show labeled as *Attack Disruption*. Automatic attack disruption is designed to contain attacks in progress, limit the impact on an organization's assets, and provide more time for security teams to remediate the attack fully.
 
-   ![](../Media/lab2-43.png)
+   ![](../Media/lab2-s27.png)
 
 1. Keep the incident page open, you'll use it in the next task.
 
-1. From the incident page, select the first alert **Suspicious URL clicked**.
+1. From the incident page, on the *Attack story* tab, scroll down through the alerts and select the **Suspicious RDP session** alert.
 
 1. Copilot  automatically generates an **Alert summary**, which provides a wealth of information for further analysis. For example, the summary identifies suspicious activity, it identifies data collection activities, credential access, malware, discovery activities, and more.
 
 1. There's a lot of information on the page, so to get a better view of this alert, select **Open alert page**. It's on the third panel on the alert page, next to the incident graph and below the alert title.
 
-   ![](../Media/lab2-45.png)
+   ![](../Media/lab2-s28.png)
 
 1. On the top of the page, is card for the device parkcity-win10v. Select the ellipses and note the options. Select **Summarize**. Copilot generates a **Device summary**. It's worth nothing that there are many ways you can access device summary and this is just one convenient method. The summary shows the device is a VM, identifies the owner of the device, it shows its compliance status against Intune policies, and more.
 
-1. Next to the device card is a card for the owner of the device. Select **parkcity\jonaw**. The third panel on the page updates from showing details of the alert to providing information about the user Jonathan Wolcott, an account executive, whose Microsoft Entra ID risk and Insider risk severity are classified as high. These aren't surprising given what you've learned from the Copilot incident and alert summaries. Select the ellipses then select  **Summarize** to obtain an identity summary generated by Copilot.
+1. Next to the device card is a card for the owner of the device. Select **parkcity\jonaw**. The third panel on the page updates from showing details of the alert to providing information about the user Jonathan Wolcott, an account executive, whose Microsoft Entra ID risk and Insider risk severity are classified as high. These aren't surprising given what you've learned from the Copilot incident and alert summaries. Select the ellipses then select **Summarize** to obtain an identity summary generated by Copilot.
 
 1. Keep the alert page open, you'll use it in the next task.
 
@@ -366,31 +362,39 @@ This exercise should take approximately **30** minutes to complete.
 
 1. Expand the first instance of **powershell.exe execute a script**, it's the one showing the timestamp of 2:27:11 PM. Copilot has the capability to analyze scripts. Select **Analyze**.
 
-   ![](../Media/lab2-46.png)
+   ![](../Media/lab2-s29.png)
 
 1. Copilot generates an analysis of the script and suggests it could be a phishing attempt or used to deliver a web-based exploit.
 
 1. Select **Show code**. The code shows a defanged URL.
 
-1. There are several other items that indicate powershell.exe executed a script. Expand the one labeled **powershell.exe -EncodedCommand...** . The original script was base 64 encoded, but Defender has decoded that for you. For the decoded version, select **Analyze**. The analysis highlights the sophistication of the script used in this attack.
+1. There are several other items that indicate powershell.exe executed a script. Expand the one labeled **powershell.exe -EncodedCommand...**. The original script was base 64 encoded, but Defender has decoded that for you. For the decoded version, select **Analyze**. The analysis highlights the sophistication of the script used in this attack.
 
-   ![](../Media/1111.png)
+   ![](../Media/lab2-s30.png)
+
+1. In the Copilot Script analysis, you have buttons for Show code and Show MITRE techniques
+
+1. Select the **Show MITRE Techniques** button and select the link labeled: T1105: Ingress Tool Transfer
+
+1. This opens the *MITRE | ATT&CK* site page describing the technique in detail.
 
 1. Close the alert story page by selecting the **X** (the X that is to the left of Copilot panel). Now use the breadcrumb to return to the incident. Select **Human-operated ransomware attack was launched from a compromised asset (attack disruption)**.
 
-1. You're back at the incident page. In the alert summary, Copilot identified the file Rubeus.exe, which is associated with the 'Kekeo' malware. You can use the file analysis capability in Defender XDR to see what other insights you can get. There are several ways to access files. From the top of the page, select the **Evidence and Response** tab.
+1. You're back at the incident page. In the alert summary, Copilot identified the file mimikatz.exe, which is associated with the 'Mimikatz' malware. You can use the file analysis capability in Defender XDR to see what other insights you can get. There are several ways to access files. From the top of the page, select the **Evidence and Response** tab.
 
 1. From the left side of the screen select **Files**.
 
-1. Select the first item from the list with the entity named **Rubeus.exe**.
+1. Select the first item from the list with the entity named **mimikatz.exe**.
 
-1. From the window that opens, select **Analyze(1)**. Copilot generates a summary.
+1. From the window that opens, select **Open file page**.
 
-   ![](../Media/lab2-47.png)
+   ![](../Media/lab2-s31.png)
+
+1. Select the Copilot icon (if File analysis doesn’t automatically open), and Copilot generates a File analysis.
 
 1. Review the detailed file analysis that Copilot generates.
 
-1. Close the file analysis window.
+1. Close the File page and use the breadcrumb to return to the incident. Select **Human-operated ransomware attack was launched from a compromised asset (attack disruption)**.
 
 1. Return to the incident page by selecting the **Attack story** tab from the top of the page.
 
@@ -402,9 +406,9 @@ This exercise should take approximately **30** minutes to complete.
 
 1. Select **Microsoft 365 Defender incident investigation**.
 
-1. The promptbook page opens and asks for the Defender Incident ID. Enter **30342 (1)** then select **Run (2)**.
+1. The promptbook page opens and asks for the Defender Incident ID. Enter **185856 (1)** then select **Submit (2)**.
 
-   ![](../Media/lab2-48.png)
+   ![](../Media/lab2-s32.png)
 
       > **Note:** If the See all promptbooks are not selectable, this indicates an issue with the Defender portal. In that case, refresh the browser, wait a few minutes, and try again.
 
