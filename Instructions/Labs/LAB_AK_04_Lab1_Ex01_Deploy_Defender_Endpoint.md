@@ -32,7 +32,13 @@ In this task, you will perform the initialization of the Microsoft Defender for 
 
 1. In the **Enter password** dialog box, copy and paste **Password: <inject key="AzureAdUserPassword"></inject>** and then select **Sign in**.
 
-1. On the **Microsoft Defender XDR** portal, from the navigation menu, select **Settings** from the left.
+1. Close the welcome page in **Microsoft Defender XDR** portal.
+
+   ![](../Media/sc200-close-welcome.png)
+
+1. On the **Microsoft Defender XDR** portal, from the left navigation menu, scroll down and under **System (1)**, select **Settings (2)** .
+
+   ![](../Media/sc200-lab4-1.png)
 
 1. On the **Settings** page, select **Device discovery**. 
 
@@ -90,9 +96,13 @@ In this task, you will configure roles for use with device groups.
 
    ![Picture 1](../Media/entraid.png)
    
-1. Select **Groups** and then click on **New group**.
+1. Select **Groups**.
 
     ![Picture 1](../Media/grp.png)
+
+1. Then click on **New group**.
+
+   ![](../Media/sc200-lab4-2.png)
 
 1. Enter the below details for the New group page:
 
@@ -111,7 +121,9 @@ In this task, you will configure roles for use with device groups.
 
    >**Note**: Make sure you have selected **Group type** as **Microsoft 365**.
 
-1. On the **New group** page, select **Create (2).**
+1. On the **New group** page, select **Create**.
+
+   ![](../Media/sc200-lab4-3.png)
 
 1. Navigate to the [Microsoft Defender XDR portal](https://security.microsoft.com/), select **Settings (1)** from the left menu bar, and then select **Microsoft Defender XDR (2)**.  
 
