@@ -5,7 +5,7 @@ Welcome to your SC-200: Microsoft Security Operations Analyst workshop! We've pr
 
 ## Accessing Your Lab Environment
  
-Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
  
  ![Access Your VM and Lab Guide](../Media/12-8-25-g1-1.png) 
 
@@ -65,9 +65,9 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
  
 3. Next, provide your password:
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
  
-     ![Enter Your Password](../Media/sc900-image-2.png)
+     ![Enter Your Password](../Media/lab1-s1.png)
  
 4. If prompted to stay signed in, you can click **No**.
 
@@ -75,7 +75,7 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
    
       ![Action Required](../Media/az500-2.png)
  
-5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel**.
+5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Maybe later**.
 
 ## Steps to Proceed with MFA Setup if "Ask Later" Option is Not Visible
 
@@ -115,7 +115,7 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
 
    > **NOTE:** While logging in again, enter the digits displayed on the screen in the **Authenticator app** and click on Yes.
 
-1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **"Cancel"** to skip the tour.
+1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Maybe later** to skip the tour.
 
 ## Support Contact
  
