@@ -15,9 +15,9 @@ In this exercise, you go through the *first run experience* of Microsoft Securit
 
 In this lab, you will perform:
 
-- Task 1: Provision Microsoft Security Copilot
-- Task 2: Explore the Microsoft Security Copilot standalone experience
-- Task 3: Explore the Microsoft Security Copilot embedded experience
+- **Task 1:** Provision Microsoft Security Copilot
+- **Task 2:** Explore the Microsoft Security Copilot standalone experience
+- **Task 3:** Explore the Microsoft Security Copilot embedded experience
 
 ## Estimated Timing: 45 Minutes
 
@@ -45,7 +45,7 @@ In this task, you walk through the process of ensuring you have the appropriate 
 
 1. Enable the toggle switch for **Access management for Azure resources (2)**, then select **Save (3)**.
 
-   ![](../Media/lab2-s1.png)
+   ![](../Media/lab2-s01.png)
 
    >**Note:** If **Access Management for Azure resources** is already enabled, proceed to the next step.
 
@@ -93,7 +93,7 @@ In this task, you walk through the process of ensuring you have the appropriate 
    - You can choose whether you want to select the option, "If this location has too much traffic, allow Copilot to evaluate prompts anywhere in the world (recommended for optimal performance) **(5)**.
    - **Capacity region (6)** is set based on location selected.
 
-     ![](../Media/lab2-8.png)
+     ![](../Media/lab2-s02.png)
 
    - **Security compute:** This field is automatically populated with the minimum required SCU units, which is 1. Leave  field with the value of **1 (1)**.
    - Select the box, **"I acknowledge that I have read, understood, and agree to the Terms and Conditions (2)**.
@@ -433,8 +433,7 @@ This exercise should take approximately **30** minutes to complete.
 
     - Review the Breakdown of the Kusto Query. This is very helpful if you’re just getting started with KQL.
 
-1. Copy the KQL query Copilot generated and return to the Defender XDR portal.
-**It's recommended that you copy the query into Notepad or another editor first to reduce formatting problems**.
+1. Copy the KQL query Copilot generated and return to the Defender XDR portal. **It's recommended that you copy the query into Notepad or another editor first to reduce formatting problems**.
 
 1. Defender XDR should still have the Investigations & response section open. Select **Hunting (1)** and then **Advanced hunting (2)** from the navigation menu.
 
