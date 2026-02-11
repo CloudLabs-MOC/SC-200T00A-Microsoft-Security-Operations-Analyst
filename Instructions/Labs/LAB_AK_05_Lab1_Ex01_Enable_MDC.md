@@ -133,29 +133,23 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
 1. In the navigation pane under **Azure Arc resources** select **Machines (1)**.
 
-1. Select **+ Add/Create (2)**, then select **Add a machine (3)**.
+1. Select **+ Onboard/Create (2)**, then select **Onboard existing machines (3)**.
 
-   ![](../Media/l8e1-16.png)
+   ![](../Media/sc200-lab5-1.png)
 
-1. Select **Generate script** from the "Add a single server" section.
-
-   ![](../Media/l8e1-17.png)
-
-1. In the **Add a server with Azure Arc** page, select the **RG-Defender (2)** Resource group under Project details.
+1. In the **Onboard existing machines with Azure Arc** page, select the your **subscription (1)** and **RG-Defender (2)** Resource group under Project details.
  
 1. For **Region**, select **(US) East Us (3)** from the drop-down list.
 
-   ![](../Media/l8e118.png)
-
-1. Review the **Server details** and **Connectivity method** options, keep the default values, and click **Next** to proceed to the **Tags** tab.
+   ![](../Media/sc200-lab5-2.png)
 
 1. Review the default available tags. Select **Next** to get to the **Download and run script** tab.
 
-   ![](../Media/l8e119.png)
+   ![](../Media/sc200-lab5-5.png)
 
 1. Scroll down and select the **Download** button. **Hint:** if your browser blocks the download, take action in the browser to allow it.
 
-   ![](../Media/l8e120.png)
+   ![](../Media/sc200-lab5-3.png)
 
 1. Click on the downloaded file in the Edge download bar **(1)**, or select the ellipsis button (...) and choose **Keep (2)** to open it.
 
@@ -167,11 +161,15 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
 1. Enter **Administrator** for "Username" and **Password.1!!** for "Password" if you get a **UAC prompt**.
 
-1. Enter: cd C:\Users\Administrator\Downloads
+1. Enter this command: 
+
+    ```
+    cd C:\Users\Administrator\Downloads
+    ```
 
    ![](../Media/l8e122.png)
 
-   >**Important:** If you do not have this directory, it most likely means you're on the wrong machine. Go back to the beginning of Task 4, switch to WINServer, and start over.
+   >**Important:** If you do not have this directory, it most likely means you're on the wrong machine. Go back to the beginning of Task 4, switch to **WINServer**, and start over.
 
 1. Type `Set-ExecutionPolicy -ExecutionPolicy Unrestricted` and press Enter.
 
@@ -199,16 +197,16 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
 1. Select **Refresh** until WINServer server name appears and the Status is **Connected**.
   
-   ![](../Media/l8e128.png)
+   ![](../Media/sc200-lab5-4.png)
 
    >**Note:** **WINServer** may take a couple of minutes to appear.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-   <validation step="18d5bcdd-1127-45e5-a67e-66311175135e" />
+ <validation step="18d5bcdd-1127-45e5-a67e-66311175135e" />
 
 ## Review
 
