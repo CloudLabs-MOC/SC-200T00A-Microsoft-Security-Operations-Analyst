@@ -251,23 +251,24 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
      ![](../Media/lab6-s16.png)
 
-14. Run the following KQL statement.
+1. Run the following KQL statement.
 
-      ```KQL
-      ThreatIntelIndicators
-      ```
-      ![](../Media/output.png)
+     ```KQL
+     ThreatIntelIndicators
+     ```  
 
-      > **Note:** It could take up to 5 minutes for the indicator to appear.
+     ![](../Media/output.png)
 
-15. Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column.
+     > **Note:** It could take up to 5 minutes for the indicator to appear.
 
-      ```KQL
-      ThreatIntelIndicators
-      | project ObservableValue
-      ```
+1. Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column.
 
-      ![](../Media/lab7-s28.png)
+     ```KQL
+     ThreatIntelIndicators
+     | project ObservableValue
+     ```
+
+     ![](../Media/lab7-s28.png)
 
 ### Task 6: Configure log retention
 
