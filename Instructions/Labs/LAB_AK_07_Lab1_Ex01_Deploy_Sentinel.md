@@ -211,7 +211,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 1. In the **Microsoft Sentinel** portal, in the left navigation pane, expand **Threat management (1)**, select **Threat intelligence (2)**, and then click **Open intel management (3)**.
 
-    ![](../Media/lab7-s24.1.png)
+     ![](../Media/lab7-s24.1.png)
 
 2. In the **Microsoft Defender** portal, on the **Intel management** page, select **+ New (1)**, and then click **TI object (2)**.
 
@@ -237,7 +237,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 11. Select **Add (8)**.
 
-12. Navigate to **Microsoft Sentinel**, open the **uniquenamedefender (1)** workspace, expand the **General** section and select **Logs (2)** from the navigation menu and close the Log Analytics video pop-up window that appears **(3)**.
+12. Navigate to **Microsoft Sentinel** in azure portal, open the **uniquenamedefender (1)** workspace, expand the **General** section and select **Logs (2)** from the navigation menu and close the Log Analytics video pop-up window that appears **(3)**.
 
       ![](../Media/lab6-s14.png)
 
@@ -253,21 +253,21 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 14. Run the following KQL statement.
 
-     ```KQL
-      ThreatIntelIndicators
-     ```  
-     ![](../Media/output.png)
+    ```KQL
+    ThreatIntelIndicators
+    ```  
+      ![](../Media/output.png)
 
-     > **Note:** It could take up to 5 minutes for the indicator to appear.
+      > **Note:** It could take up to 5 minutes for the indicator to appear.
 
 15. Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column.
 
-     ```KQL
-      ThreatIntelIndicators
-      | project ObservableValue
-     ```
+    ```KQL
+    ThreatIntelIndicators
+    | project ObservableValue
+    ```
 
-     ![](../Media/lab7-s28.png)
+    ![](../Media/lab7-s28.png)
 
 ### Task 6: Configure log retention
 
@@ -291,7 +291,7 @@ In this task, you will change the retention period for the SecurityEvent table.
 
 1. Select **Save (3)** to apply the changes.
 
-    ![](../Media/lab7-s27.png)
+     ![](../Media/lab7-s27.png)
 
 ## Review
 In this lab, you have completed the following:
