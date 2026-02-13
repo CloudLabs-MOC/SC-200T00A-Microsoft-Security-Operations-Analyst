@@ -28,24 +28,25 @@ In this task, you will create a Log Analytics workspace for use with Microsoft D
 
 1. In the Search bar of the Azure portal, type **Log Analytics (1)**, then select **Log Analytics workspaces (2)**.
 
-   ![](../Media/l8e132.png)
+   ![](../Media/lab6-s1.png)
 
 1. Select **+ Create** from the command bar.
 
-   ![](../Media/l8e133.png)
+   ![](../Media/lab6-s2.png)
 
 1. To create a **log analytics workspace**, follow these steps:
 
-    - Select **RG-Defender (1)**, for Resource group.
-    - For the Name, enter **uniquenameDefender (2)**.
-    - Leave the **default Region (3)**.
-    - Select **Review + Create (4)**.
+     - Subscription **Accept default subscription (1)**
+    - Select **rg-defender (2)**, for Resource group.
+    - For the Name, enter **uniquenameDefender (3)**.
+    - Leave the **default Region (4)**.
+    - Select **Review + Create (5)**.
 
-      ![Picture 1](../Media/lab7y1.png)
+      ![Picture 1](../Media/lab7-s1.png)
 
 1. Once the workspace validation has passed, select **Create**.
 
-   ![](../Media/l8e135.png)
+   ![](../Media/lab7-s2.png)
 
 1. Wait for the new workspace to be provisioned, this may take a few minutes.
 
@@ -55,19 +56,19 @@ In this task, you will deploy Microsoft Sentinel to an existing Log Analytics wo
 
 1. In the Search bar of the Azure portal, type **microsoft sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
-   ![](../Media/l8e129.png)
+   ![](../Media/lab6-s5.png)
 
 1. Select **+ Create** from the command bar.
 
-   ![](../Media/14-8-25-l6-1.png)
+   ![](../Media/lab6-s6.png)
 
 1. Select the newly created **uniquenameDefender (1)** workspace and click on **Add (2)**.
   
-   ![](../Media/l8e131.png)
+   ![](../Media/lab6-s7.png)
 
 1. In the Microsoft Sentinel free trial activated tab, select **Ok**.
 
-   ![](../Media/14-8-25-l6-2.png)
+   ![](../Media/lab6-s8.png)
 
 ### Task 3 : Configure data retention
 
@@ -75,19 +76,19 @@ In this task, you will configure the data retention in the Log analytics workspa
 
 1. In the Search bar of the Azure portal, type **Log Analytics (1)**, then select **Log Analytics workspaces (2)**. 
 
-   ![](../Media/l8e132.png)
+   ![](../Media/lab6-s1.png)
 
 1. Select **uniquenameDefender** Log Analytics workspaces. 
 
-   ![](../Media/14-8-25-l6-0.png)
+   ![](../Media/lab7-s3.png)
 
 1. Expand the **Settings** section in the navigation menu and select **Usage and estimated costs (1)** then Select **Data retention (2)**.
 
-   ![](../Media/lab7y2.png)
+   ![](../Media/lab7-s4.png)
 
 1. Change data retention period to **180 days (1)** then Select **OK (2)**.
 
-   ![](../Media/l7-2.png)
+   ![](../Media/lab7-s5.png)
 
 ### Task 4: Create a Watchlist
 
@@ -95,7 +96,7 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
 1. In the search box of your Labvm, enter **Notepad (1)**. Select **Notepad (2)** from the results.
 
-   ![](../Media/l7-3.png)
+   ![](../Media/lab7-s6.png)
 
 1. Type **Hostname** then enter for a new line.
 
@@ -109,29 +110,53 @@ In this task, you will create a watchlist in Microsoft Sentinel.
     Host5
     ```
 
-    ![](../Media/l7-5.png)
+    ![](../Media/lab7-s7.png)
 
 1. From the menu select, **File (1) - Save As (2)**.
 
-   ![](../Media/l7-4.png)
+   ![](../Media/lab7-s8.png)
 
 1. Name the file **HighValue.csv (1)**, change the file type to **All files (2)** and select **Save (3)**. 
 
-   ![](../Media/l7-6.png)
+   ![](../Media/lab7-s9.png)
 
    >**Hint:** The file can be saved in the **Documents** folder.
 
 1. **Close** the Notepad.
 
-1. In the Search bar of the Azure portal, type **microsoft sentinel**, then select **Microsoft Sentinel**.
+1. On a new tab in the browser, go to **https://security.microsoft.com**
 
-1. Select **uniquenameDefender** Microsoft Sentinel.
+1. In the left pane, expand **Microsoft Sentinel (1)** → **Configuration (2)** → select **Watchlist (3)**.
 
-   ![](../Media/l8e130.png)
+    ![](../Media/lab7-s10.png)
+
+1. In the **Microsoft Defender portal**, on the **Workspaces** page, select **Connect workspace**.
+
+    ![](../Media/lab7-s11.png)
+
+    > **Note:** After opening the **Microsoft Defender portal**, it may take **5–10 minutes** for the **Microsoft Sentinel workspace** to appear in the **Workspaces** list. If no workspace is displayed initially, **wait for a few minutes and refresh the page**, and then proceed to connect the workspace.  If the workspace is **already connected**, please **proceed to the next step**. 
+
+1. On the **Choose a workspace** page, select the workspace **uniquenameDefender (1)**, and then click **Next (2)**.
+
+    ![](../Media/lab7-s12.png)
+
+1. On the **Set a primary workspace** page, verify **uniquenameDefender (1)** is selected, and then click **Next (2)**.
+
+    ![](../Media/lab7-s13.png)
+
+1. On the **Review and finish** page, select **Connect**.
+
+    ![](../Media/lab7-s14.png)
+
+1. In the **You're about to connect a workspace** confirmation dialog, select **Connect**.
+
+    ![](../Media/lab7-s15.png)
+
+1. On the **Workspace successfully connected** page, select **Close**.
 
 1. In Microsoft Sentinel, On the left menu, select the **Watchlist (1)** option under the **Configuration** area then Select **+ New (2)** from the command bar.
 
-   ![](../Media/l7-7.png)
+   ![](../Media/lab7-s17.png)
 
    > **Note:** If the **Watchlist** page does not load, refresh the browser until it appears.  
 
@@ -143,39 +168,35 @@ In this task, you will create a watchlist in Microsoft Sentinel.
     |Description|**High Value Hosts (2)**|
     |Alias|**HighValueHosts (3)**|
 
-    ![](../Media/l7-8.png)
+    ![](../Media/lab7-s18.png)
 
 1. Select **Browse for files** under **Upload file** and browse for the **HighValue.csv (1)** file you just created.
 
-    ![](../Media/l7-9.png)
+    ![](../Media/lab7-s19.png)
 
 1. In the **SearchKey field** select **Hostname (2)**.
 
-1. Select **Next: Review + Create > (3)**.
+1. Select **Next: Review + Create >**.
 
-    ![](../Media/l7-10.png)
+    ![](../Media/lab7-s20.png)
+
+    ![](../Media/lab7-s21.png)
 
 1. Review the settings you entered and select **Create**.
 
-    ![](../Media/l7-11.png)
+    ![](../Media/lab7-s22.png)
 
 1. The screen returns to the Watchlist page.
 
 1. Select the **HighValueHosts (1)** watchlist and on the right pane, select **View in logs (2)**.
 
-     ![](../Media/lab7y3.png)
+     ![](../Media/lab7-s23.png)
 
-    >**Important:** It could take up to ten minutes for the watchlist to appear. **Please continue with the following task and run this command in the next lab**.
+     ![](../Media/lab7-s24.png)
+
+      >**Important:** It could take up to ten minutes for the watchlist to appear. **Please continue with the following task and run this command in the next lab**.
      
-    >**Note:** You can now use the `_GetWatchlist('HighValueHosts')` in your own KQL statements to access the list. The column to reference would be **Hostname**.
-
-1. Close the **Logs** window by selecting the 'x' in the top-right. 
-
-    ![](../Media/l7-13.png)
-
-1. Select **OK** to discard the unsaved edits.
-
-    ![](../Media/l7-14.png)
+      >**Note:** You can now use the `_GetWatchlist('HighValueHosts')` in your own KQL statements to access the list. The column to reference would be **Hostname**.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
@@ -188,19 +209,19 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
 In this task, you will create an indicator in Microsoft Sentinel.
 
-1. In Microsoft Sentinel, select the **Threat intelligence (1)** option in the **Threat management** area.
+1. In the **Microsoft Sentinel** portal, in the left navigation pane, expand **Threat management (1)**, select **Threat intelligence (2)**, and then click **Open intel management (3)**.
 
-2. Select **+ New (2)** from the command bar.
+    ![](../Media/lab7-s24.1.png)
 
-3. Select the **TI Object (3)**.
+2. In the **Microsoft Defender** portal, on the **Intel management** page, select **+ New (1)**, and then click **TI object (2)**.
 
-     ![](../Media/14-8-25-l6-8.png)
+     ![](../Media/lab7-s24.2.png)
 
 4. From the **Object type** dropdown, select **Indicator (1)**.
 
 5. Select the **+ New observable** dropdown and select **Domain name (2)**.
 
-     ![](../Media/lab7y6.png)
+     ![](../Media/lab7-s25.png)
 
 6. For Domain, enter a domain name, for example, type **contoso.com (3)**.
 
@@ -210,37 +231,43 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 9. Set the **Valid from (6)** field to today's date.
 
-     ![](../Media/lab7y7.png)
+     ![](../Media/lab7-s26.png)
 
 10. Scroll down to the **Description** and enter **This domain is known to be malicious (7)**.
 
 11. Select **Add (8)**.
 
-12. Select the **Logs (1)** option under the **General** area of the **Sentinel** navigation menu. You might want to disable the "Always show queries" option and close the **Queries** window to run the KQL statements.
+12. Navigate to **Microsoft Sentinel**, open the **uniquenamedefender (1)** workspace, expand the **General** section and select **Logs (2)** from the navigation menu and close the Log Analytics video pop-up window that appears **(3)**.
+
+      ![](../Media/lab6-s14.png)
 
       >**Note:** In the default **New Query 1** tab, the **_GetWatchList('HighValueHosts')** query should still be there, and will now produce results if run.
 
-13. Select the **+ (2)** sign to create a new query tab.
+1. Close the **Queries hub**.
 
-      ![](../Media/14-8-25-l6-9.png)
+     ![](../Media/lab6-s15.png)
+
+1. From the mode dropdown, switch from **Simple mode (1)** to **KQL mode (2)**.
+
+     ![](../Media/lab6-s16.png)
 
 14. Run the following KQL statement.
 
      ```KQL
-     ThreatIntelligenceIndicator
+      ThreatIntelIndicators
      ```  
-     ![](../Media/lab7y8.png)
+     ![](../Media/output.png)
 
      > **Note:** It could take up to 5 minutes for the indicator to appear.
 
 15. Scroll the results to the right to see the DomainName column. You can also run the following KQL statement to just see the DomainName column.
 
      ```KQL
-     ThreatIntelligenceIndicator 
-     | project DomainName
+      ThreatIntelIndicators
+      | project ObservableValue
      ```
 
-     ![](../Media/lab7y9.png)
+     ![](../Media/lab7-s28.png)
 
 ### Task 6: Configure log retention
 
@@ -248,23 +275,23 @@ In this task, you will change the retention period for the SecurityEvent table.
 
 1. In Microsoft Sentinel, select the **Settings (1)** option under the **Configuration** area then select **Workspace settings (2)**.
 
-     ![](../Media/l7-20.png)
+     ![](../Media/lab7-s29.png)
 
 1. In Log Analytics workspace, select the **Tables (1)** option under the **Settings** area.
 
 1. Search and select the table **SecurityEvent (2)**, and then right click on **Security Event (3)** table.
 
-     ![](../Media/lab7y10.png)
+     ![](../Media/lab7-s30.png)
 
 1. Select **Manage Table (4)**.
 
-1. Change the **Interactive retention period** to **90 days (1)**.
+1. Change the **Analytics retention** to **90 days (1)**.
 
-     ![](../Media/lab7y11.png)
-
-1. Reset the **Total retention period** to **180 days (2)** (if needed). Notice that **Archive period** is set now set to **90 days**, because **Azure Monitor** automatically treats the remaining 90 days of total retention as low-cost, long-term retention.
+1. Reset the **Total retention** to **180 days (2)** (if needed). Notice that **Long term retention** is set now set to **90 days**, because **Azure Monitor** automatically treats the remaining 90 days of total retention as low-cost, long-term retention.
 
 1. Select **Save (3)** to apply the changes.
+
+    ![](../Media/lab7-s27.png)
 
 ## Review
 In this lab, you have completed the following:
