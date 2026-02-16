@@ -104,11 +104,11 @@ In this task, you continue with the simulation and connect a Microsoft Sentinel 
 
 1. In the *Query* pane, you should see a (KQL) query that returns threat intelligence indicators. Select the **Run query (2)** button.
 
-     ![](../Media/lab8-s84.png)
+     ![](../Media/lab8-s89.png)
 
 1. You should see results returned in the *Results* pane.
 
-     ![](../Media/lab8-s85.png)
+     ![](../Media/lab8-s90.png)
 
 1. Expand the left main menu pane if collapsed and  expand the new **Microsoft Sentinel** menu items. You should see *Search*, *Threat management*, *Content management*, and *Configuration* selections.
 
@@ -129,3 +129,5 @@ In this lab, you have completed the following:
 
 - Connected Defender XDR
 - Connected Microsoft Sentinel and Microsoft Defender XDR
+
+## You have successfully completed this lab

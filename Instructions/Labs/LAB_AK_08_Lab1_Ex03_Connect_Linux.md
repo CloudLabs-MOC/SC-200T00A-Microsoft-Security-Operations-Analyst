@@ -253,4 +253,3 @@ In this lab, you have completed the following:
 - Connected a Linux Host using the Common Event Format connector
 - Connected a Linux host using the Syslog connector
 
-## You have successfully completed this lab
