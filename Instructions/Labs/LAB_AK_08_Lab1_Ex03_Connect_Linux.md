@@ -9,9 +9,8 @@ You are a Security Operations Analyst working at a company that implemented Micr
 - Task 1: Access the Microsoft Sentinel Workspace
 - Task 2: Connect a Linux Host using the Common Event Format connector
 - Task 3: Connect a Linux host using the Syslog connector
-- Task 4: Configure the facilities you want to collect and their severities for the Syslog connector
 
-## Estimated Timing: 40 Minutes
+## Estimated Timing: 60 Minutes
 
 ## Architecture Diagram
 
@@ -217,7 +216,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
    
 1. Enter **yes** to confirm the connection and then type the user's **password provided under Resource group: LIN2** in the Environment tab and press Enter. Your screen should look something like this:
 
-   ![linux login](../Media/sc-200-M6-Ex3.png)
+   ![linux login](../Media/lab8-s86.png)
 
    - **password/LIN2: <inject key="Admin Password"></inject>**
 
@@ -253,6 +252,5 @@ In this lab, you have completed the following:
 - Accessed the Microsoft Sentinel Workspace
 - Connected a Linux Host using the Common Event Format connector
 - Connected a Linux host using the Syslog connector
-- Configured the facilities you want to collect and their severities for the Syslog connector
 
 ## You have successfully completed this lab

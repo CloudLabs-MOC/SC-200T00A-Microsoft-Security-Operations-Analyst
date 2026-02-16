@@ -1,0 +1,29 @@
+[
+  {
+    "Name": "SC-200: Microsoft Security Operations Analyst",
+    "Language": "English",
+    "BaseURL": "https://github.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/prod-new",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/prod-new/Instructions/Labs/newlabintro3.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/prod-new/Instructions/Labs/LAB_AK_08_Lab1_Ex01_Connect_Services.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/prod-new/Instructions/Labs/LAB_AK_08_Lab1_Ex02_Connect_Windows.md",
+        "Order": 3
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/prod-new/Instructions/Labs/LAB_AK_08_Lab1_Ex03_Connect_Linux.md",
+        "Order": 4
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/prod-new/Instructions/Labs/LAB_AK_08_Lab1_Ex04_Connect_Defender_XDR.md",
+        "Order": 5
+      }
+    ]
+  }
+]

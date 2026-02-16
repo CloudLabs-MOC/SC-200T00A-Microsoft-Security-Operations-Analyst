@@ -70,9 +70,11 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
 
      ![](../Media/lab8-s1.png)
 
-1.  In the **Content hub**, search for the **Microsoft Defender for Cloud (2)** solution and select **Microsoft Defender for Cloud (3)** from the list.
+     > **Note:** If workspace is not connected, click on Connect workspace to connect. 
 
-1. On the **Microsoft Defender for Cloud** solution details page select **Install (4)**.
+1.  In the **Content hub**, search for the **Microsoft Defender for Cloud (1)** solution and select **Microsoft Defender for Cloud (2)** from the list.
+
+1. On the **Microsoft Defender for Cloud** solution details page select **Install (3)**.
 
    ![](../Media/lab8-s2.png)
 
@@ -143,11 +145,11 @@ In this task, you will connect the **Azure Activity** data connector.
 
 1. Select the **Review + Create (3)** button to review the configuration.
 
-     ![](../Media/lab8-s14.png)
+     ![](../Media/lab8-s13.png)
 
 1. Select **Create** to finish.
 
-   ![](../Media/lab8-s15.png)
+   ![](../Media/lab8-s14.png)
 
 ## Review
 In this lab, you have completed the following:
