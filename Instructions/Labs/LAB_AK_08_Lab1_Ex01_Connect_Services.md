@@ -20,58 +20,61 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
 In this task, you will access your Microsoft Sentinel workspace.
 
-1. In the Search bar of the Azure portal, type **Log Analytics (1)**, then select **Log Analytics workspaces (2)**.
+1. In the Search bar of the Azure portal, type **Log Analytics workspaces (1)**, then select **Log Analytics workspaces (2)**.
 
-   ![](../Media/l8e132.png)
+    ![](../Media/lab6-s1.png)
 
 1. Select **+ Create** from the command bar.
 
-   ![](../Media/l8e133.png)
+   ![](../Media/lab6-s2.png)
 
 1. To create a **log analytics workspace**, follow these steps:
 
-    - Select **rg-defender (1)** for the Resource group.
-    - For the Name, enter **uniquenameDefender (2)**.
-    - Leave the **default Region (3)**.
-    - Select **Review + Create (4)**.
+    - Subscription **Accept default subscription (1)**
+    - Select **rg-defender (2)** for the Resource group.
+    - For the Name, enter **uniquenameDefender (3)**.
+    - Leave the **default Region (4)**.
+    - Select **Review + Create (5)**.
 
-      ![Picture 1](../Media/14-8-25-l4-1.png)
+      ![Picture 1](../Media/lab7-s1.png)
 
 1. Once the workspace validation has passed, select **Create**.
 
-   ![](../Media/l8e135.png)
+    ![](../Media/lab7-s2.png)
 
 1. Wait for the new workspace to be provisioned, this may take a few minutes.
  
 1. In the Search bar of the Azure portal, type **microsoft sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
-   ![](../Media/l8e129.png)
+   ![](../Media/lab6-s5.png)
 
 1. Select **+ Create** from the command bar.
 
-   ![](../Media/14-8-25-l6-1.png)
+    ![](../Media/lab6-s6.png)
 
  1. Select the newly created workspace **uniquenameDefender (1)** and click on **Add (1)**.
   
-    ![](../Media/l8e131.png)
+    ![](../Media/lab6-s7.png)
 
-1. Select the **uniquenameDefender** microsoft Sentinel Workspace you created earlier.
+1. In the Microsoft Sentinel free trial activated tab, select **Ok**.
 
-   ![](../Media/uniquenamedefender.png)
+   ![](../Media/lab6-s8.png)
 
 ### Task 2: Connect the Microsoft Defender for Cloud data connector
 
 In this task, you will connect the Microsoft Defender for Cloud data connector.
 
-  >**Important:** To **Enable** Bi-directional sync, please rerun  **[Lab 05 Exercise 1](https://microsoftlearning.github.io/SC-200T00A-Microsoft-Security-Operations-Analyst/Instructions/Labs/LAB_AK_05_Lab1_Ex01_Enable_MDC.html)**, Task 2, and select **Setup** from the **Microsoft Defender for Cloud** navigation menu to verify all eligible Azure subscriptions are onboarded.
+1. On a new tab in the browser, go to **https://security.microsoft.com**
 
-1. In the Microsoft Sentinel navigation menu, scroll down to the **Content management** section and select **Content Hub (1)**.
+1. In the Microsoft Defender **Microsoft Sentinel (1)** navigation menu, scroll down to the **Content management (2)** section and select **Content Hub (3)**.
+
+     ![](../Media/lab8-s1.png)
 
 1.  In the **Content hub**, search for the **Microsoft Defender for Cloud (2)** solution and select **Microsoft Defender for Cloud (3)** from the list.
 
 1. On the **Microsoft Defender for Cloud** solution details page select **Install (4)**.
 
-   ![](../Media/l8e136.png)
+   ![](../Media/lab8-s2.png)
 
     > **Note:** If the **Content hub** page does not load, refresh the browser until it appears.  
 
@@ -79,75 +82,72 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
 
 1. On the **Microsoft Defender for Cloud** solution details page select **Manage**.
 
-    ![](../Media/l8e137.png)
+    ![](../Media/lab8-s3.png)
 
-    >**Note:** The **Microsoft Defender for Cloud** solution installs the **Subscription-based Microsoft Defender for Cloud (Legacy)** Data connector, the **Tenant-based Microsoft Defender for Cloud (Preview)** Data connector, and an **Analytics rule**. The **Tenant-based Microsoft Defender for Cloud (Preview)** Data connector is used when a tenant has multiple subscriptions.
+    >**Note:** The **Microsoft Defender for Cloud** solution installs the **Subscription-based Microsoft Defender for Cloud (Legacy)** Data connector, the **Tenant-based Microsoft Defender for Cloud (Preview)** Data connector, and an **Analytics rule**. The **Tenant-based Microsoft Defender for Cloud** Data connector is used when a tenant has multiple subscriptions.
 
-1. Select the **Subscription-based Microsoft Defender for Cloud (Legacy) (1)** Data connector check-box, and select **Open connector page (2)**.
+1. Select the **Back** arrow to view the content items and access the connector page.
 
-   ![](../Media/l8e138.png)
+     ![](../Media/lab8-s6.1.png)
 
-1. In the **Configuration** section, **select** the checkbox for the **Subscription** and either select the **Connect** link, or slide the **Status** option to the right
+1. Select the **Tenant-based Microsoft Defender for Cloud (1)** Data connector check-box, and select **Open connector page (2)**.
 
-    ![](../Media/l8e139.png)
+   ![](../Media/lab8-s5.png)
 
-1. To enable bi-directional sync, select the **Enable Microsoft Defender for all subscriptions** link.
+1. Verify that the **Tenant-based Microsoft Defender** for Cloud connector status shows **Connected**.
 
-    ![](../Media/l8e140.png)
+     ![](../Media/lab8-s6.png)
 
-1. On the **Microsoft Defender for Cloud - Getting started** page, the checkbox for the **Subscription** should be selected, and the **Microsoft Defender plan** should display **On - Partial (30 trial days left)**.
-
-1. Select the **X (Close)** button on the upper right to close the **Getting started** page. You should be back on the **Microsoft Defender for Cloud** configuration page.
-
-1. The **Status** for the **Subscription** should now be **Connected** and **Bi-directional sync** should be **Enabled**.
-
-   ![](../Media/bi-enabled.png)
-
-    <!--- 1. Scroll down and under the *Create incidents - Recommended!* area, verify that *Create incidents automatically from all alerts generated in this connected service* is **Enabled**. --->
 
 ### Task 3: Connect the Azure Activity data connector
 
 In this task, you will connect the **Azure Activity** data connector.
 
-1. In the Microsoft Sentinel left menus, scroll down to the **Content management** section and select **Content Hub (1)**.
+1. In the Microsoft Sentinel left menus, scroll down to the **Content management** section and select **Content Hub**.
 
-1. In the **Content hub**, search for the **Azure Activity (2)** solution and select **Azure Activity (3)** from the list.
+1. In the **Content hub**, search for the **Azure Activity (1)** solution and select **Azure Activity (2)** from the list.
 
 1. On the **Azure Activity** solution page select **Install (3)**.
 
-   ![](../Media/14-8-25-l4-9.png)
+   ![](../Media/lab8-s7.png)
 
     > **Note:** If the **Content hub** page does not load, refresh the browser until it appears.  
 
+1. Select the **Back** arrow to view the content items and access the connector page.
+
+     ![](../Media/lab8-s8.png)
+
 1. When the installation completes select **Manage**.
+
+    ![](../Media/lab8-s7.1.png)
 
     >**Note:** The **Azure Activity** solution installs the **Azure Activity** Data connector, 12 **Analytics rules**, 14 **Hunting queries**, and 1 **Workbook**.
 
 1. Select the **Azure Activity (1)** Data connector and select **Open connector page (2)**.
 
-    ![](../Media/l8e143.png)
+    ![](../Media/lab8-s9.png)
 
 1. In the **Configuration** area under the **Instructions** tab, scroll down to "2. Connect your subscriptions through diagnostic settings new pipeline", and select **Launch Azure Policy Assignment Wizard>**.
 
-    ![](../Media/l8e142.png)
+    ![](../Media/lab8-s10.png)
 
-1. In the **Basics** tab, select the ellipsis button **(...) (1)** under **Scope** and select your **subscription (2)** from the drop-down list and click **Select (3)**.
+1. It will open in new tab, in the **Basics** tab, select the ellipsis button **(...) (1)** under **Scope** and select your **subscription (2)** from the drop-down list and click **Select (3)**.
 
-    ![](../Media/l8e144.png)
+    ![](../Media/lab8-s11.png)
 
-1. Select the **Parameters** tab, choose your **uniquenameDefender** workspace from the **Primary Log Analytics workspace** drop-down list. This action will apply the subscription configuration to send the information to the Log Analytics workspace.
+1. Select **Parameters (1)**, click the workspace picker **(2)** for **Primary Log Analytics workspace**, choose **uniquenameDefender (3)**, and then select **Select (4)**.
 
-    ![](../Media/l8e145.png)
+    ![](../Media/lab8-s12.png)
 
-1. Select the **Remediation** tab and select the **Create a remediation task (1)** checkbox. This action will apply the policy to existing Azure resources.
+1. Select the **Remediation (1)** tab and select the **Create a remediation task (2)** checkbox. This action will apply the policy to existing Azure resources.
 
-   ![](../Media/14-8-25-l4-10.png)
+1. Select the **Review + Create (3)** button to review the configuration.
 
-1. Select the **Review + Create (2)** button to review the configuration.
+     ![](../Media/lab8-s14.png)
 
 1. Select **Create** to finish.
 
-   ![](../Media/policy.png)
+   ![](../Media/lab8-s15.png)
 
 ## Review
 In this lab, you have completed the following:
