@@ -241,8 +241,6 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
       ![](../Media/lab6-s14.png)
 
-      >**Note:** In the default **New Query 1** tab, the **_GetWatchList('HighValueHosts')** query should still be there, and will now produce results if run.
-
 1. Close the **Queries hub**.
 
      ![](../Media/lab6-s15.png)

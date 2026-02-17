@@ -116,7 +116,7 @@ In this task, you install the **Microsoft Sentinel Training Lab Solution** from 
 
      ![](../Media/lab6-s12.png)
     
-     >**Note:** It takes approximately ten minutes for the solution to be fully deployed and for all resources to be available.
+     >**Note:** It takes approximately 10-15 minutes for the solution to be fully deployed and for all resources to be available.
 
 1. Wait for the deployment to complete, then select **Home** from the breadcrumb navigation.
 
