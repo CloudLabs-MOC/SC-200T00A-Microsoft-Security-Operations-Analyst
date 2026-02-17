@@ -6,8 +6,6 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
 Microsoft Sentinel allows you to create custom workbooks across your data and also comes with built-in workbook templates to allow you to quickly gain insights across your data as soon as you connect a data source.
 
->**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Create%20workbooks)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
-
 >**Important:** The lab exercises for Learning Path #9 are in a **standalone** environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
 ## Lab Objectives
@@ -26,27 +24,17 @@ Microsoft Sentinel allows you to create custom workbooks across your data and al
 
 In this task, you will explore the Microsoft Sentinel workbook templates.
 
-1. In the Azure portal's search bar type **Microsoft sentinel (1)**, and select **Microsoft Sentinel (2)**.
+1. In the **Microsoft Defender** portal, expand **Threat management (1)** under **Microsoft Sentinel**, and then select **Workbooks (2)**.
 
-   ![Picture 1](../Media/sc-200-19.png)
+   ![Picture 1](../Media/lab9-ex9-1.png)
 
-1. Select your **uniquenameDefender** Microsoft Sentinel Workspace.
+1. On the **Workbooks** page, select the **Templates (1)** tab, search for **Azure Activity (2)**, select **Azure Activity (3)** from the results, and then choose **View Template (4)**.
 
-   ![Picture 1](../Media/ss7.png)
-
-1. Select **Workbooks (1)** under the **Threat Management** left blade. Select the **Templates (2)** tab.
-
-   ![Picture 1](../Media/ss88.png)
-
-   > **Note:** If you do not see **Workbooks page** in the Microsoft Sentinel portal, try refreshing the browser. Wait 5 minutes and refresh again until it appears.
-
-1. Search for **Azure Activity (1)** press **Enter**. Then select the **Azure Activity (2)** template workbook. In the right pane, scroll down and select the **View template (3)** button.
-
-   ![Picture 1](../Media/ss89.png)
+   ![Picture 1](../Media/lab9-ex9-2.png)
 
 1. Review the contents of the workbook. It shows insights into your Azure subscription operations by collecting and analyzing the data from the Activity Log.
 
-   ![Picture 1](../Media/ss90.png)
+   ![Picture 1](../Media/lab9-ex9-3.png)
 
 1. Navigate back to workbooks and select Azure Activity from templates
 
@@ -56,43 +44,31 @@ In this task, you will save a workbook template and modify it.
 
 1. You should be back in the **Microsoft Sentinel - Workbooks - Templates** tab. Scroll down again and select the **Save** button for the **Azure Activity** workbook. 
 
-   ![Picture 1](../Media/savedactivity.png)
+   ![Picture 1](../Media/lab9-ex9-4.png)
 
 1. Leave **East US** as the default value for *Region* and select **Yes**.
 
 1. Select the **View saved workbook** button.
 
-   ![Picture 1](../Media/savedworkbook.png)
+   ![Picture 1](../Media/lab9-ex9-5.png)
 
 1. Select **Edit** in the command bar to enable changes in the workbook.
 
-   ![Picture 1](../Media/ss91.png)
+   ![Picture 1](../Media/lab9-ex9-6.png)
 
-1. Scroll down to the **Caller activities over time** area, look at the color of the **Activities** column since we are going to format those columns. Select the **Edit** button below the grid.
+1. Scroll down to the **Caller activities over time** area, look at the color of the **Activities** column since we are going to format those columns. Select the **Edit**.
 
-   ![Picture 1](../Media/l9-e9-3.png)
+   ![Picture 1](../Media/lab9-ex9-7.png)
 
-1. Select the **Column Settings** button, it is located to the right of the **Run Query** command bar. **Hint:** This button only appears if there is data from the KQL query.
+1. In the workbook edit view, select **Visual Formatting (1)**, expand **Column Settings (2)**, choose **Activities (Heatmap) (3)** under **Columns**, set **Column renderer (4)** to **Heatmap**, select **Categorical (5)** for **Color palette**, scroll down and then choose **Done Editing (6)**.
 
-   ![Picture 1](../Media/l9-e9-4.png)
-
-1. In the **Edit column settings** blade that appears, within **Columns** select **Activities (1)**.
-
-   - Change the value for **Column renderer** to **Heatmap (2)**. For **Colour palette**, scroll down to select **32-color categorical (3)**.
-
-   - Select **Apply (4)**, then **Save and Close (5)**. Notice the change in the **Activities** column.
-
-     ![Picture 1](../Media/ss93.png)   
-
-1. Select **Done Editing** at the bottom of the query (not the top menu).
-
-   ![Picture 1](../Media/ss94.png)
+    ![Picture 1](../Media/lab9-ex9-8.png)
 
 1. Now select **Done Editing** at the top menu.
 
 1. Then select the **Save** icon. 
 
-   ![Picture 1](../Media/ss95.png)
+   ![Picture 1](../Media/lab9-ex9-9.png)
 
 ### Task 3: Create a Workbook
 
@@ -102,7 +78,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. Select **+ Add workbook (2)** to create a new workbook from scratch. 
 
-   ![Picture 1](../Media/ss96.png)
+   ![Picture 1](../Media/lab9-ex9-10.png)
 
     >**Note:** Although it is a new workbook, a startup template is used.
 
@@ -110,29 +86,29 @@ In this task, you will create a new workbook with advanced visualizations.
     
 1. To edit the workbook, select **Edit** from the top bar.
 
-   ![Picture 1](../Media/l9-e9-5.png)
+   ![Picture 1](../Media/lab9-ex9-11.png)
 
-1. Select the **Edit** button below the new workbook overview of the workbook.
+1. Select the **Edit** button above the new workbook overview of the workbook.
 
-   ![Picture 1](../Media/ss97.png)
+   ![Picture 1](../Media/lab9-ex9-12.png)
 
 1. Type **# My workbook (1)** in a new line on top of **## New workbook**.
 
 1. Select **Done Editing (2)** on the bottom of this section, **Editing text item: text - 2**. Notice that your header increased in size and name changed.
 
-   ![Picture 1](../Media/ss98.png)
+   ![Picture 1](../Media/lab9-ex9-13.png)
 
-1. Select **Edit** below the only visible bar chart graph.
+1. In the bar chart section, select **Edit**.
 
-   ![Picture 1](../Media/ss99.png)
+   ![Picture 1](../Media/lab9-ex9-13.1.png)
 
-1. Review the KQL statement that provides a *union* statement of counts across all tables **(1)**. Scroll down and select the **Done Editing (2)** on the bottom menu.
+1. Review the KQL statement that provides a *union* statement of counts across all tables **(1)**. Scroll down and select the **Cancel (2)** on the bottom menu.
 
-   ![Picture 1](../Media/ss100.png)
+   ![Picture 1](../Media/lab9-ex9-14.png)
 
-1. Select the ellipsis **... (1)** next to the *Edit* button of the barchart graph, then select **+ Add (2)**, then select **Add query (3)**.
+1. Select the drop-down arrow **(1)** next to **Edit**, choose **Add (2)**, and then select **Add data source + visualization (3)**.
 
-   ![Picture 1](../Media/ss101.png)
+   ![Picture 1](../Media/lab9-ex9-19.png)
 
 1. Type **SecurityEvent (1)** into the query box.
 
@@ -140,31 +116,19 @@ In this task, you will create a new workbook with advanced visualizations.
 
    - Change the **Visualization** to **Time chart (3)**.
 
-     ![Picture 1](../Media/ss102.png)   
+     ![Picture 1](../Media/lab9-ex9-16.png) 
 
-1. Select the **Style** tab from the query's command bar.
+1. Navigate to **Visual Formatting (1)** tab, expand **Size (2)**, select **Make this item a custom width (3)**, set **Percent width (4)** to `25`, set **Maximum width (5)** to `25`, and then close the editor.
 
-   ![Picture 1](../Media/ss103.png)
+    ![Picture 1](../Media/lab9-ex9-17.png)
 
-1. On the **Edit query item** dialog box,
+1. Navigate to **Step Settings (1)** tab, ensure **Refresh (2)** is selected under *Toolbar items*, and then select **Done Editing (3)**.
 
-   - Select the **Make this item a custom width (1)** box.
+   ![Picture 1](../Media/lab9-ex9-18.png)
 
-   - Set the **Percent width** to **25 (2)** and **Maximum width** to **25 (3)**.
+1. Select the drop-down arrow **(1)** next to **Edit**, choose **Add (2)**, and then select **Add data source + visualization (3)**.
 
-   - Now select **Advanced Settings (3)** tab from the query's command bar.
-
-     ![Picture 1](../Media/ss104.png)   
-
-1. Select **Show refresh icon when not editing (1)** box. 
-
-1. Scroll down and select **Done Editing (2)** on the bottom menu, for the new **Editing query item: query - 2**.
-
-   ![Picture 1](../Media/ss105.png)
-
-1. Scroll down and at the bottom of the workbook select **+ Add (1)**, then **Add query (2)**.
-
-    ![Picture 1](../Media/addqueryupd.png)
+   ![Picture 1](../Media/lab9-ex9-19.png)
 
 1. Type **SecurityEvent (1)** into the query box.
 
@@ -172,47 +136,35 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. Change the **Visualization** to **Grid (3)**.
 
-   ![Picture 1](../Media/l9-e9-6.png)
+   ![Picture 1](../Media/lab9-ex9-20.png)
 
-1. Select **Style (4)** from the query's command bar.
+1. In the **Visual Formatting (4)** tab, expand **Size**, select **Make this item a custom width (1)**, set **Percent width (2)** to `75`, set **Maximum width (3)** to `75`, and then select **Done Editing (4)**.
 
-1. On the **Edit query item** dialog  box,
-
-   - Select **Make this item a custom width (1)** box.
-
-   - Set the **Percent width** to **75 (2)** and **Maximum width** to **75 (3)**.
-
-   - Scroll down and select **Done Editing (4)** on the bottom menu, for the new **Editing query item: query - 3**.   
-
-     ![Picture 1](../Media/ss106.png)
+    ![Picture 1](../Media/lab9-ex9-21.png)
 
 1. Select **Done Editing** in Workbook's top command bar.
 
-   ![Picture 1](../Media/l9-e9-7.png)
+   ![Picture 1](../Media/lab9-ex9-22.png)
 
-1. Select the **Save** icon.
+1. Select the **Save (1)** icon.
 
-   ![Picture 1](../Media/l9-e9-8.png)
+1. On the **Save Workbook** page,
 
-1. On the **Save As** page,
+   - Change the **Title** to **My Workbook (2)**.
 
-   - Change the **Title** to **My Workbook (1)**.
+   - Select **Save (3)** to commit the changes. 
 
-   - Select the **RG-DEFENDER (2)** resource group if needed and leave other values as default.
-
-   - Select **Save as (3)** to commit the changes. 
-
-     ![Picture 1](../Media/ss107.png)   
+     ![Picture 1](../Media/lab9-ex9-23.png)
 
 1. Back in the **Workbooks (1)** page, select the **My workbooks (2)** tab.
 
 1. Select the workbook you just created, **My workbook (3)**.
 
-   ![Picture 1](../Media/ss108.png)
+   ![Picture 1](../Media/lab9-ex9-24.png)
 
 1. On the right pane, select **View saved workbook** to review your workbook.
 
-   ![Picture 1](../Media/l9-e9-9.png)
+   ![Picture 1](../Media/lab9-ex9-25.png)
 
 ## Review
 In this lab, you have completed the following:
