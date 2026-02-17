@@ -31,6 +31,12 @@ In this task, you'll create a Logic App that is used as a Playbook in Microsoft 
 
      ![](../Media/lab8-s1.png)
 
+     > **Note:** After opening the **Microsoft Defender portal**, it may take **5–10 minutes** for the **Microsoft Sentinel workspace** to appear in the **Workspaces** list. If no workspace is displayed initially, **wait for a few minutes and refresh the page**, and then proceed to connect the workspace.  If the workspace is **already connected**, please **proceed to the next step**. 
+
+     >**Note:** If the workspace is not populated with 5-10 minutes please reachout to cloudlabsupport@spektrasystems.com   
+
+     > **Important:** The total lab duration already includes any waiting time required for deployments, data connectors, or services (such as the **5–10 minutes** mentioned above). Please do not worry if certain steps take additional time to complete, and plan your activities accordingly while performing the lab.
+
 1. Within the search bar, search for **Sentinel SOAR Essentials (1)**, press **Enter** then select **Sentinel SOAR Essentials (2)** and then click on **Install (3)**.
 
    ![](../Media/lab9-s22.png)
@@ -82,8 +88,6 @@ In this task, you’ll update the new playbook you created with the proper conne
 1. It will navigate to azure portal, on the Logic App page for **Defender_XDR_Ransomware_Playbook_SecOps_Tasks**, in the command menu, select **Edit**.
 
     ![](../Media/lab9-s31.png)
-
-    >**Note:** You may need to refresh the page.
 
 1.  On the Microsoft Sentinel incident page, select the **first block**.
 
@@ -172,7 +176,7 @@ In this task, you will create an automation rule in Microsoft Sentinel that runs
 
 1. From the drop down list, select the **Defender_XDR_Ransomware_Playbook_SecOps_Tasks (1)** playbook and then select **Apply (2)** at the bottom.
 
-  ![](../Media/lab9-s36.png)
+    ![](../Media/lab9-s36.png)
 
 From here, depending on your role, you will either continue doing more architect exercises or you will pivot to the analyst exercises.
 

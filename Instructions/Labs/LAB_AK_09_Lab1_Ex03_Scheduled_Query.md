@@ -25,7 +25,7 @@ Analytics rules search for specific events or sets of events across your environ
 
 In this task, you will create a scheduled query and connect it to the Teams channel you created in the previous exercise.
 
-1. Navigate back to Microsoft Defender **Microsoft Sentinel** navigation menu.
+1. Navigate back to Microsoft Defender portal, **Microsoft Sentinel** navigation menu.
 
 1. In the Microsoft Sentinel left menus, scroll down to the **Content management** section and select **Content Hub**.
 

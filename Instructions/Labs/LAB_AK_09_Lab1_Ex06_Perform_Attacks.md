@@ -56,7 +56,7 @@ In this task, you will simulate a persistence attack by adding a registry key th
     REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
     ```
 
-     ![Lab overview.](../Media/ss52.png)    
+     ![Lab overview.](../Media/lab9-s77.png)    
 
 ### Task 2: Privilege Elevation Attack with User Add
 
@@ -70,7 +70,7 @@ In this task, you will simulate a privilege elevation attack by creating a new a
     net localgroup administrators theusernametoadd /add
     ```
 
-     ![Lab overview.](../Media/ss53.png)    
+     ![Lab overview.](../Media/lab9-s78.png)    
     
      >**Note:** If you encounter any issues while copying and pasting, try copying the prompt into **Notepad** first, then paste it into the **Command Prompt (CMD)**.
 
