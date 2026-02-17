@@ -25,51 +25,43 @@ After completing this lab, you will be able to:
 
 In this task, you'll create a Logic App that is used as a Playbook in Microsoft Sentinel.
 
-1. In the Azure portal's search bar type **Microsoft sentinel (1)**, and select **Microsoft Sentinel (2)**.
+1. On a new tab in the browser, go to **https://security.microsoft.com**
 
-   ![Picture 1](../Media/sc-200-19.png)
+1. In the Microsoft Defender **Microsoft Sentinel (1)** navigation menu, scroll down to the **Content management (2)** section and select **Content Hub (3)**.
 
-1. Select **uniquenameDefender** Microsoft Sentinel Workspace.
-
-   ![Picture 1](../Media/ss7.png)   
-
-1. On Microsoft Sentinel page, select **Guides (1)** and  click on **Go to content Hub (2)**.
-
-   ![Picture 1](../Media/l9-e1-2.png) 
-
-   > **Note:** If you do not see **Content hub page** in the Microsoft Sentinel portal, try refreshing the browser. Wait 5 minutes and refresh again until it appears.
+     ![](../Media/lab8-s1.png)
 
 1. Within the search bar, search for **Sentinel SOAR Essentials (1)**, press **Enter** then select **Sentinel SOAR Essentials (2)** and then click on **Install (3)**.
 
-   ![](../Media/ss11.png)
+   ![](../Media/lab9-s22.png)
 
 1. Within the solution details, select **Manage**.
 
-    ![](../Media/ss12.png)
+    ![](../Media/lab9-s23.png)
 
 1. Find the **Defender_XDR_Ransomware_Playbook_for_SecOps-Tasks** playbook and select the name.
 
-   ![](../Media/4.png)
+   ![](../Media/lab9-s24.png)
 
 1. Select the **Incident tasks - Microsoft Defender XDR Ransomware Playbook for SecOps (1)** template. Then, in the details pane, select **Create playbook (2)**.
 
-    ![](../Media/7.png)
+    ![](../Media/lab9-s25.png)
 
 1. For Resource Group, select **Create New (1)**, enter **RG-playbooks (2)** and select **OK (3)**.
 
-   ![](../Media/ss13.png)
+   ![](../Media/lab9-s26.png)
 
 1. For the **Playbook name**, enter **Defender_XDR_Ransomware_Playbook_SecOps-Tasks (1)** (note that this would exceed the limit of 64 characters). Then, click on Select **Next:Connections (2)**.
 
-   ![](../Media/ss14.png)
+   ![](../Media/lab9-s27.png)
 
 1. On the **Create playbook** page, select **Next: Review and create**.
 
-    ![](../Media/9.png)
+    ![](../Media/lab9-s28.png)
 
 1. On the **Create playbook** page, select **Create Playbook**.
 
-    ![](../Media/l9-e3-1.1.png)
+    ![](../Media/lab9-s29.png)
 
     >**Note:** Wait for the deployment to finish before proceeding to the next task.
 
@@ -77,37 +69,29 @@ In this task, you'll create a Logic App that is used as a Playbook in Microsoft 
 
 In this task, you’ll update the new playbook you created with the proper connection information.
 
-1. In the Azure portal's search bar type **Microsoft sentinel (1)**, and select **Microsoft Sentinel (2)**.
-
-   ![Picture 1](../Media/sc-200-19.png)
-
-1. Select **uniquenameDefender** Microsoft Sentinel Workspace.
-
-   ![Picture 1](../Media/ss7.png)
-
-1. Select **Automation (1)** under the **Configuration** area and then select the **Active Playbooks (2)** tab.
+1. Select **Automation (2)** under the **Configuration (1)** area and then select the **Active Playbooks (3)** tab.
 
    > **Note:** If you do not see **Automation page** in the Microsoft Sentinel portal, try refreshing the browser. Wait 5 minutes and refresh again until it appears.
 
 1. Select **Refresh** from the command bar in case you don’t see any playbooks. You should see the playbook created from the previous step.
 
-1. Select the **Defender_XDR_Ransomware_Playbook_SecOps_Tasks (3)** playbook name.
+1. Select the **Defender_XDR_Ransomware_Playbook_SecOps_Tasks (4)** playbook name.
 
-   ![](../Media/ss15.png)
+   ![](../Media/lab9-s30.png)
 
-1. On the Logic App page for **Defender_XDR_Ransomware_Playbook_SecOps_Tasks**, in the command menu, select **Edit**.
+1. It will navigate to azure portal, on the Logic App page for **Defender_XDR_Ransomware_Playbook_SecOps_Tasks**, in the command menu, select **Edit**.
 
-    ![](../Media/12.png)
+    ![](../Media/lab9-s31.png)
 
     >**Note:** You may need to refresh the page.
 
 1.  On the Microsoft Sentinel incident page, select the **first block**.
 
-    ![](../Media/ss16.png)
+    ![](../Media/lab9-s32.png)
 
 1. Select the **Change connection** link.
 
-    ![](../Media/l9-e3-2.png)
+    ![](../Media/lab9-s33.png)
 
 1. Select **Add new** and then select **Sign in**. 
 
@@ -127,13 +111,13 @@ In this task, you’ll update the new playbook you created with the proper conne
 
 1. Select **Save** on the command bar. The Logic App will be used in a future lab.
 
-    ![](../Media/21.png)
+    ![](../Media/lab9-s34.png)
 
 ### Task 3: Create an Automation Rule
 
 In this task, you will create an automation rule in Microsoft Sentinel that runs a playbook based on specific tactics.
 
-1. Navigate back to **uniquenameDefender** Microsoft Sentinel Workspace.
+1. Navigate back to **Microsoft Sentinel** in Defender Portal.
 
 1. Select **Automation (1)** under **Configuration**.
 
@@ -141,7 +125,7 @@ In this task, you will create an automation rule in Microsoft Sentinel that runs
 
 1. Select **+ Create (2)** and choose **Automation Rule (3)**.
 
-   ![](../Media/l9-e3-7.png)
+   ![](../Media/lab9-s35.png)
 
 1. On the **Create new Automation Rule** page, provide the following details:
 
@@ -172,7 +156,7 @@ In this task, you will create an automation rule in Microsoft Sentinel that runs
     - Exfiltration
     - PreAttack
 
-      ![](../Media/19.png)
+      ![](../Media/lab9-s37.png)
 
 1. Under Actions, select **Run Playbook (1)**.
 
@@ -184,9 +168,11 @@ In this task, you will create an automation rule in Microsoft Sentinel that runs
 
    ![](../Media/ss20.png)
 
-1. From the drop down list, select the **Defender_XDR_Ransomware_Playbook_SecOps_Tasks (1)** playbook and then select **Apply (3)** at the bottom.
+1. Now, create the Automation rule again follow from step 2 in the same task and select the same options
 
-   ![](../Media/l9-e3-10.png)
+1. From the drop down list, select the **Defender_XDR_Ransomware_Playbook_SecOps_Tasks (1)** playbook and then select **Apply (2)** at the bottom.
+
+  ![](../Media/lab9-s36.png)
 
 From here, depending on your role, you will either continue doing more architect exercises or you will pivot to the analyst exercises.
 

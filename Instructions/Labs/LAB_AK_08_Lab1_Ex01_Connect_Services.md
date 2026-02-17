@@ -72,6 +72,10 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
 
      > **Note:** If workspace is not connected, click on Connect workspace to connect. 
 
+     >**Note:** If the workspace is not populated with 5-10 minutes please reachout to cloudlabsupport@spektrasystems.com   
+
+     > **Important:** The total lab duration already includes any waiting time required for deployments, data connectors, or services (such as the **5–10 minutes** mentioned above). Please do not worry if certain steps take additional time to complete, and plan your activities accordingly while performing the lab.
+
 1.  In the **Content hub**, search for the **Microsoft Defender for Cloud (1)** solution and select **Microsoft Defender for Cloud (2)** from the list.
 
 1. On the **Microsoft Defender for Cloud** solution details page select **Install (3)**.

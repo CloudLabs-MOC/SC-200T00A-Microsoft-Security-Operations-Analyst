@@ -48,7 +48,7 @@ In this task, you will explore the Microsoft Sentinel workbook templates.
 
    ![Picture 1](../Media/ss90.png)
 
-1. Close the workbook by selecting the **X** in the top-right corner.
+1. Navigate back to workbooks and select Azure Activity from templates
 
 ### Task 2: Save and modify a workbook template
 
@@ -93,8 +93,6 @@ In this task, you will save a workbook template and modify it.
 1. Then select the **Save** icon. 
 
    ![Picture 1](../Media/ss95.png)
-
-1. Close the workbook by selecting the **X** in the top-right corner.
 
 ### Task 3: Create a Workbook
 
@@ -205,8 +203,6 @@ In this task, you will create a new workbook with advanced visualizations.
    - Select **Save as (3)** to commit the changes. 
 
      ![Picture 1](../Media/ss107.png)   
-
-1. Close the workbook by selecting the **X** at the top-right or select **Workbooks** in the Microsoft Sentinel portal.
 
 1. Back in the **Workbooks (1)** page, select the **My workbooks (2)** tab.
 
