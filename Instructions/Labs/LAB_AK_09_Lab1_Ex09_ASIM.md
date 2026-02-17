@@ -21,40 +21,21 @@ You're a Security Operations Analyst working at a company that implemented Micro
 
 In this task, you'll review the User Management Schema parsers that are included with the Microsoft Sentinel deployment.
 
-1. In the Azure portal's search bar type **Microsoft sentinel (1)**, and select **Microsoft Sentinel (2)**.
+1. Navigate back to **https://security.microsoft.com**
 
-   ![Picture 1](../Media/sc-200-19.png)
+1. In the **Microsoft Defender** portal, expand **Investigation & response (1)**, expand **Hunting (2)**, and then select **Advanced hunting (3)**.
 
-1. Select your **uniquenameDefender** Microsoft Sentinel Workspace.
+    ![Picture 1](../Media/lab9-ex7-1.png)
 
-   ![Picture 1](../Media/ss7.png)
+    >**Note:** Refresh the browser if log page is not loading
 
-1. Select **Logs (1)** under the **General** left menu.
+1. In **Advanced hunting**, select the **Functions (1)** tab, in the **Search** bar type **user (2)**, and scroll down through the ASIM parser functions until you see the following **_ASim_UserManagement (3)** for Microsoft Windows under the **Microsoft Sentinel** heading and then choose **Insert to query (4)**.
 
-   - Open the **Schema and Filter** blade by selecting **>>** if needed
-   - Set the mode to **KQL mode (2)**
-   - Select the **Functions (3)** tab (next to the Tables and Queries tabs)
-   **Hint:** You might need to select the ellipsis icon **(...)** to select the tab
-
-     ![Picture 1](../Media/ss85.png)   
-
-      >**Note:** Refresh the browser if log page is not loading
-
-1. In the **Search** bar type **user (1)**, and scroll down through the ASIM parser functions until you see the following **_ASim_UserManagement** for Microsoft Windows under the **Microsoft Sentinel** heading.
-
-1. Hover over the **_ASim_UserManagement (2)** ASIM function and then select **Load the function code (3)** in the popup window.
-
-   ![Lab overview.](../Media/ss86.png)
-
-1. In **Logs** Open a **+ New Query tab (1)**.
-
-1. Go back to the **Schema and Filter** blade and now hover the **_ASim_UserManagement** ASIM filtering parser for Microsoft Windows Events and Security Events and then select **Use function (2)**.
-
-   ![Lab overview.](../Media/l9-e9-1.png)
+    ![Picture 1](../Media/lab9-ex7-41.png)
 
 1. **Run** the ASIM function query. If you've completed the previous lab exercises you should see results and no error messages.
 
-   ![Picture 1](../Media/l9-e9-2.png)
+   ![Picture 1](../Media/lab9-ex7-42.png)
 
 ## Review
 In this lab, you have completed the following:

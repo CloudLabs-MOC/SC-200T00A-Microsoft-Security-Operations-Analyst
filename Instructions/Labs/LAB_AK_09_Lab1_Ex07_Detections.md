@@ -25,27 +25,23 @@ Analytics rules search for specific events or sets of events across your environ
 
 In this task, you will create a detection for the first attack of the previous exercise.
 
-1. In the Azure portal's search bar type **Microsoft sentinel (1)**, and select **Microsoft Sentinel (2)**.
+1. On a new tab in the browser, go to **https://security.microsoft.com**
 
-   ![Picture 1](../Media/sc-200-19.png)
+1. In the **Microsoft Defender** portal, expand **Investigation & response (1)**, expand **Hunting (2)**, and then select **Advanced hunting (3)**.
 
-1. Select **uniquenameDefender** Microsoft Sentinel Workspace.
+    ![Picture 1](../Media/lab9-ex7-1.png)
 
-   ![Picture 1](../Media/ss7.png)
-
-1. Select **Logs (1)** from the **General** section. Close the pop ups. Change the mode to **KQL (2)**.
-
-1. Provide the following KQL Statement again to recall the tables where we have this data **(3)**:
+1. Provide the following KQL Statement again to recall the tables where we have this data **(1)**:
 
     ```KQL
     search "temp\\startup.bat"
     ```    
 
-1. **Run (4)** the query, result with the event might take up to **5-10 minutes** to appear **(5)**.
+1. **Run query(2)** the query, result with the event might take up to **5-10 minutes** to appear **(3)**.
 
-   ![Picture 1](../Media/ss55.png)
+   ![Picture 1](../Media/lab9-ex7-2.png)
 
-1. It is important to help the Security Operations Center Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph. **Run** the following query:
+1. It is important to help the Security Operations Center Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph. **Run query** the following query:
 
     ```KQL
     SecurityEvent 
@@ -55,11 +51,13 @@ In this task, you will create a detection for the first attack of the previous e
     | extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = SubjectUserName
     ```
 
-     ![Picture 1](../Media/ss56.png)    
+     ![Picture 1](../Media/lab9-ex7-3.png)    
 
-1. Now that you have a good detection rule, in the Logs window, selet the result **(1)**, then click on the elipses **(...) (2)** then, select the **+ New alert rule (3)** in the command bar and then select **Create Microsoft Sentinel alert (4)**. This will create a new Scheduled rule.
+1. In **Advanced hunting**, select a result **(1)**, choose **Create detection rule (2)**, and then select **Create analytics rule instead** to continue with the unified experience.
 
-   ![Picture 1](../Media/ss57.png)
+   ![Picture 1](../Media/lab9-ex7-4.png) 
+
+   ![Picture 1](../Media/lab9-ex7-5.png) 
 
 1. This starts the "Analytics rule wizard". For the **General** tab type:
 
@@ -72,16 +70,18 @@ In this task, you will create a detection for the first attack of the previous e
  
 1. Select **Next: Set rule logic > (5)** button.
 
-   ![Picture 1](../Media/ss58.png)
+   ![Picture 1](../Media/lab9-ex7-6.png) 
 
-1. On the **Set rule logic** tab, the **Rule query** should be populated already with you KQL query, as well as the entities under **Alert enrichment - Entity mapping**, click on **+ Add new entity**. Add it manually with the below details.
+1. On the **Set rule logic** tab, the **Rule query** should be populated already with you KQL query, as well as the entities under **Alert enrichment - Entity mapping (1)**, click on **+ Add new entity (2)**. Add it manually with the below details.
 
     |Entity|Identifier|Data Field|
     |:----|:----|:----|
     |Account|FullName|AccountCustomEntity|
     |Host|Hostname|HostCustomEntity|
 
-    ![Picture 1](../Media/ss59.png)    
+    ![Picture 1](../Media/lab9-ex7-7.png)  
+
+    ![Picture 1](../Media/lab9-ex7-8.png) 
 
 1. For **Query scheduling** set the following:
 
@@ -94,13 +94,13 @@ In this task, you will create a detection for the first attack of the previous e
 
 1. Leave the rest of the options with the defaults. Select **Next: Incident settings> (3)** button.
 
-   ![Picture 1](../Media/ss60.png)
+   ![Picture 1](../Media/lab9-ex7-9.png) 
 
 1. For the **Incident settings** tab, leave the default values and select **Next: Automated response >** button.
 
 1. On the **Automated response** tab under **Automation rules**, select **+ Add new**.
 
-   ![Picture 1](../Media/ss61.png)
+   ![Picture 1](../Media/lab9-ex7-10.png) 
 
     >**Note:** If you are unable to add a new Automation Rule, follow these steps:  
     > 1. Open a new tab and navigate to your **Sentinel workspace**.  
@@ -119,7 +119,7 @@ In this task, you will create a detection for the first attack of the previous e
     |Actions |Run playbook **(3)**|
     |playbook |Defender_XDR_Ransomware_Playbook_for_SecOps-Tasks **(4)**|
 
-    ![Picture 1](../Media/ss62.png)
+    ![Picture 1](../Media/lab9-ex7-11.png) 
 
      >**Note:** You have already assigned permissions to the playbook, so it will be available.
 
@@ -127,13 +127,13 @@ In this task, you will create a detection for the first attack of the previous e
   
 1. On the **Review and create** tab, select the **Save** button to create the new Scheduled Analytics rule.
 
+     ![Picture 1](../Media/lab9-ex7-12.png) 
+
 ### Task 2: Privilege Elevation Attack Detection
 
 In this task, you will create a detection for the second attack of the previous exercise.
 
-1. In the Microsoft Sentinel portal, select **Logs** from the General section in case you navigated away from this page.
-
-1. Make sure to set the mode to **KQL mode**.
+1. In the Defender portal, select **Advanced hunting** from the Hunting section in case you navigated away from this page.
 
 1. **Run** the following KQL Statement to identify any entry that refers to administrators:
 
@@ -144,7 +144,7 @@ In this task, you will create a detection for the second attack of the previous 
 
 1. The result might show events from different tables.
 
-   ![Picture 1](../Media/page-9-2.png)
+   ![Picture 1](../Media/lab9-ex7-13.png)
 
 1. But in our case, we want to investigate the SecurityEvent table. The EventID and Event that we are looking is **4732 - A member was added to a security-enabled local group**. With this, we will identify adding a member to a privileged group. **Run** the following KQL query to confirm:
 
@@ -154,7 +154,7 @@ In this task, you will create a detection for the second attack of the previous 
     | where TargetAccount == "Builtin\\Administrators"
     ```
 
-    ![Picture 1](../Media/page-9-3.png)    
+    ![Picture 1](../Media/lab9-ex7-14.png)   
 
 1. Expand the row to see all the columns related to the record. The username of the account added as Administrator does not show. The issue is that instead of storing the username, we have the Security IDentifier (SID). **Run** the following KQL to match the SID to the username that was added to the Administrators group:
 
@@ -169,7 +169,7 @@ In this task, you will create a detection for the second attack of the previous 
         | project Acct1 = TargetSid, MachId1 = SourceComputerId, UserName1 = TargetUserName) on $left.MachId == $right.MachId1, $left.Acct == $right.Acct1
     ```
 
-    ![Picture 1](../Media/page-9-4.png)   
+    ![Picture 1](../Media/lab9-ex7-15.png) 
 
 1. Extend the row to show the resulting columns, in the last one, we see the name of the added user under the **UserName1** column we **project** within the KQL query. It is important to help the Security Operations Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph. **Run** the following query:
 
@@ -184,11 +184,13 @@ In this task, you will create a detection for the second attack of the previous 
         | project Acct1 = TargetSid, MachId1 = SourceComputerId, UserName1 = TargetUserName) on $left.MachId == $right.MachId1, $left.Acct == $right.Acct1
     | extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = UserName1
     ```
-    ![Picture 1](../Media/page-9-5.png)   
+    ![Picture 1](../Media/lab9-ex7-16.png)  
 
-1. Now that you have a good detection rule, in the Logs window, select the result checkbox **(1)**, then click on the ellipsis **(...) (2)** button in the command bar. Select **+ New alert rule (3)** in the command bar and then select **Create Microsoft Sentinel alert (4)**. 
+1. In **Advanced hunting**, select a result **(1)**, choose **Create detection rule (2)**, and then select **Create analytics rule instead** to continue with the unified experience.
 
-   ![Picture 1](../Media/ss65.png)
+   ![Picture 1](../Media/lab9-ex7-17.png)
+
+   ![Picture 1](../Media/lab9-ex7-5.png)
 
 1. This starts the "Analytics rule wizard". For the **General** tab type provide the following details:
 
@@ -199,7 +201,7 @@ In this task, you will create a detection for the second attack of the previous 
     |Severity|**High (3)**|
     |MITRE ATT&CK|**Privilege Escalation (4)**|
 
-    ![Picture 1](../Media/page-9-7.png)   
+    ![Picture 1](../Media/lab9-ex7-18.png)   
 
 1. Then select **Next: Set rule logic > (5)** button.
 
@@ -210,7 +212,7 @@ In this task, you will create a detection for the second attack of the previous 
     |Account|FullName|AccountCustomEntity|
     |Host|Hostname|HostCustomEntity|
 
-    ![Picture 1](../Media/ss67.png)    
+    ![Picture 1](../Media/lab9-ex7-19.png)   
 
 1. For **Query scheduling** set the following:
 
@@ -219,7 +221,7 @@ In this task, you will create a detection for the second attack of the previous 
     |Run Query every|5 minutes **(1)**|
     |Lookup data from the last|1 Days **(2)**|
 
-    ![Picture 1](../Media/page-9-8.png)   
+    ![Picture 1](../Media/lab9-ex7-20.png) 
 
     >**Note:** We are purposely generating many incidents for the same data. This enables the Lab to use these alerts.
 
@@ -246,7 +248,7 @@ In this task, you will create a detection for the second attack of the previous 
    |Actions |Run playbook **(3)**|
    |playbook |Defender_XDR_Ransomware_Playbook_for_SecOps-Tasks **(4)**|
 
-   ![Picture 1](../Media/ss68.png)   
+   ![Picture 1](../Media/lab9-ex7-21.png) 
 
     >**Note:** You have already assigned permissions to the playbook, so it will be available.
 
