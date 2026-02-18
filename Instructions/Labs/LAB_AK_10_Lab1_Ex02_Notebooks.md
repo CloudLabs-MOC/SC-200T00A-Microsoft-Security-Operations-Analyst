@@ -19,13 +19,11 @@ You are a Security Operations Analyst working at a company that implemented Sent
 
 In this task, you will explore using notebooks in Microsoft Sentinel.
 
-1. In the Microsoft Sentinel Workspace, select **Notebooks (1)** under the **Threat management** area.
+1. In the Microsoft Defender portal, expand **Microsoft Sentinel**, and then under **Threat management (1)**, select **Notebooks (2)**.
 
-     > **Note:** If you do not see **Notebooks page** in the Microsoft Sentinel portal, try refreshing the browser. Wait 5 minutes and refresh again until it appears.
+1. Next, you need to create an AzureML Workspace. the settings menu **(3)** and then select the **Create new Azure ML workspace (4)** button in the command bar.
 
-1. Next, you need to create an AzureML Workspace. Select **Configure Azure Machine Learning (2)** and then select the **Create new Azure ML workspace (3)** button in the command bar.
-
-     ![Picture 1](../Media/ss152.png)
+     ![Picture 1](../Media/lab10-s24.png)
 
 1. On the **Azure Machine Learning** page, 
      - In the Subscription box, select your **subscription (1)**.
@@ -40,19 +38,21 @@ In this task, you will explore using notebooks in Microsoft Sentinel.
 
      - At the bottom of the page, select **Review + Create (6)**. 
 
-       ![Picture 1](../Media/ss153.png)     
+       ![Picture 1](../Media/lab10-s25.png)    
      
 1. When you see the **"Validation passed"** message, select **Create**. 
 
-     ![Picture 1](../Media/l9-e12-1.png)
+     ![Picture 1](../Media/lab10-s26.png)
 
      >**Note:** It may take a few minutes to deploy the Machine Learning workspace.
+
+     >**Note:** If Azure ML workspace is not created follow from step 2 in the same task and select the RG-MachineLearning rg and same options 
 
 1. After **Your deployment is complete** message appears, return to the Microsoft Sentinel portal.
 
 1. Select **Notebooks (1)** again and then select the **Templates (2)** tab from the middle command bar. 
 
-     ![Picture 1](../Media/ss155.png)
+     ![Picture 1](../Media/lab10-s27.png)
 
      > **Note:** If you do not see **Notebooks page** in the Microsoft Sentinel portal, try refreshing the browser. Wait 5 minutes and refresh again until it appears.
 
@@ -60,15 +60,15 @@ In this task, you will explore using notebooks in Microsoft Sentinel.
 
 1. On the right pane, scroll down and select **Create from template (2)** button. 
 
-   ![Picture 1](../Media/ss156.png)
+   ![Picture 1](../Media/lab10-s28.png)
 
 1. Review the default options and then select **Save**.   
 
-     ![Picture 1](../Media/l9-e12-2.png)
+     ![Picture 1](../Media/lab10-s29.png)
 
 1. Once the saving is done, select the **Launch notebook** button. This will take you to the Microsoft Azure Machine Learning Studio.
 
-    ![Picture 1](../Media/ss157.png)
+    ![Picture 1](../Media/lab10-s30.png)
 
 1. Select **Close** if an informational window appears in the Microsoft Azure Machine Learning Studio.
 
@@ -105,21 +105,22 @@ In this task, you will explore using notebooks in Microsoft Sentinel.
 
 1. Run the **Python code** to initialize the cell by selecting the **Run cell** button (Play icon) to the left of the code.
 
-1. It should take approximately 15 seconds to run. Once it's done, review the output messages and disregard any warnings about the Python kernel version. The code ran successfully if **msticpyconfig.yaml** was created in the **utils** folder in the **file explorer** pane on the left. It may take another 30 seconds for the file to appear.
+1. It should take approximately 1-2 minutes to run. Once it's done, review the output messages and disregard any warnings about the Python kernel version. The code ran successfully if **msticpyconfig.yaml** was created in the **utils** folder in the **file explorer** pane on the left. It may take another 30 seconds for the file to appear.
 
-   ![Picture 1](../Media/pyconfig.png)
+   ![Picture 1](../Media/lab10-s31.png)
 
     >**Hint:** You can clear the output messages by selecting the ellipsis (...) on the left of the code window for the **Output menu** and selecting the **Clear output** (square with an **x**) icon.
 
 1. Select the **msticpyconfig.yaml** file in the **file explorer** pane on the left to review the contents of the file and then close it.
 
-     ![Picture 1](../Media/ss162.png)
+    ![Picture 1](../Media/lab10-s32.png)
+
+    > **Note:** If you don’t see the `msticpyconfig.yaml` file in the file explorer, select the **Refresh** icon in the left pane to see the file.
 
 1. Proceed to section **3 Querying data with MSTICPy** and review the contents. Don't run the **Multiple Microsoft Sentinel workspaces** code cell as it fails, but the other code cells can be run successfully.
 
      ![Picture 1](../Media/ss163.png)
 
->**Note:** If you cannot complete the steps above to access the Notebook, you can follow it on its GitHub viewer page instead. [Getting Started with Azure ML Notebooks and Microsoft Sentinel](https://nbviewer.org/github/Azure/Azure-Sentinel-Notebooks/blob/master/A%20Getting%20Started%20Guide%20For%20Azure%20Sentinel%20ML%20Notebooks.ipynb) 
 
 ## Review
 In this lab, you have completed the following:

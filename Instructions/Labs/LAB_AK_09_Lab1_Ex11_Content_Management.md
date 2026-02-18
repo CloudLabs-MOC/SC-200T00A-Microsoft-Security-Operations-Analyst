@@ -4,8 +4,6 @@
 
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You already created Scheduled and Microsoft Security Analytics rules.  You need to centralize analytical rules in an Azure DevOps repository.  Then connect Sentinel to the Azure DevOps repository and import the content. 
 
->**Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/SC-200%20Lab%20Simulation%20-%20Use%20repositories%20in%20Microsoft%20Sentinel)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
-
 >**Important:** The lab exercises for Learning Path #9 are in a **standalone** environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
 
 ## Lab Objectives
@@ -24,31 +22,21 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
 In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
-1. In the Azure portal's search bar type **Microsoft sentinel (1)**, and select **Microsoft Sentinel (2)**.
+1. Navigate back to the Microsoft Defender **https://security.microsoft.com**
 
-   ![Picture 1](../Media/sc-200-19.png)
+1. In the **Configuration (1)** section, select **Analytics (2)**, and then choose the **Startup RegKey (3)** rule.
 
-1. Select **uniquenameDefender** Microsoft Sentinel Workspace.
+    ![Picture 1](../Media/lab9-ex11-01.png)
 
-   ![Picture 1](../Media/ss7.png)
+1. Select the **Startup RegKey** rule then click on **Export (2)** from the toolbar. **Hint:** You might need to select the ellipsis icon **(...) (1)** to see it.
 
-1. Select **Analytics (1)** under the **Configuration** area from the left blade.
-
-   > **Note:** If you do not see **Analytics page** in the Microsoft Sentinel portal, try refreshing the browser. Wait 5 minutes and refresh again until it appears.
-
-1. Select the **Startup RegKey (2)** rule that you created earlier.
-
-   ![Picture 1](../Media/ss110.png)
-
-1. Select the **Startup RegKey (1)** rule then click on **Export (2)** from the toolbar. **Hint:** You might need to select the ellipsis icon **(...)** to see it.
-
-   ![Picture 1](../Media/ss111.png)
+   ![Picture 1](../Media/lab9-ex11-02.png)
 
 1. The rule is exported to a text file named **Azure_Sentinel_analytic_rule.json**.
 
 1. Select **Open file** below the name of the downloaded file.
 
-   ![Picture 1](../Media/ss112.png)
+   ![Picture 1](../Media/lab9-ex11-03.png)
 
 1. Then select **More apps**.
 
@@ -64,7 +52,7 @@ In this task, you will create an Azure DevOps repository.
 
 1. On the **We need a few more details** page, select **Continue**.
 
-   ![Picture 1](../Media/l9-e10-1.png)
+   ![Picture 1](../Media/lab9-ex11-2.png)
 
 1. On the **Get started with Azure DevOps** page, select **Create new organization**.
 
@@ -78,13 +66,13 @@ In this task, you will create an Azure DevOps repository.
 
    ![Picture 1](../Media/ss114.png)
 
-1. On the **Create a project to get started** page, enter **My Sentinel Content (1)**, select **Private (2)** and then select **+ Create project (3)**.
+1. On the **Create a project to get started** page, enter **My Sentinel Content (1)** and then select **+ Create project (2)**.
 
-   ![Picture 1](../Media/ss115.png)
+   ![Picture 1](../Media/lab9-ex11-3.png)
 
 1. Navigate to **Repos (1)** on the left pane. At the bottom of the page in the area **Initialize main branch with a README or gitignore (2)**, select **Initialize (3)**.
 
-     ![Picture 1](../Media/ss116.png)
+     ![Picture 1](../Media/lab9-ex11-4.png)
 
 1. The page should show the Files for the Repo.  the only file is README.me.
 
@@ -94,11 +82,11 @@ In this task, you will create an Azure DevOps repository.
 
 1. Select **Upload Files**.
 
-   ![Picture 1](../Media/uploadfilesinrepo.png)
+   ![Picture 1](../Media/lab9-ex11-5.png)
 
 1. Select **Browse (1)**, then navigate to **Downloads (2)**. Select the file **Azure_Sentinel_analytic_rule.json (3)** and then click **Open (4)**.
 
-   ![Picture 1](../Media/ss118.png)
+   ![Picture 1](../Media/lab9-ex11-04.png)
 
 1. Select **Commit**.
 
@@ -116,19 +104,16 @@ In this task, you will create an Azure DevOps repository.
 
 1. Toggle **On (2)** **Third-party application access via OAuth** under the **Application connection policies** area.
 
-   ![Picture 1](../Media/ss121.png)
+   ![Picture 1](../Media/lab9-ex11-6.png)
 
 ### Task 3: Connect Sentinel to Azure DevOps.
 
 In this task, you will connect Microsoft Sentinel to Azure DevOps to manage content and repositories.
 
-1. In the Azure portal's search bar type **Microsoft sentinel (1)**, and select **Microsoft Sentinel (2)**.
 
-   ![Picture 1](../Media/sc-200-19.png)
+1. Navigate back to **Defender portal**, expand Microsoft Sentinel, select **Repositories (1)** in the **Content Management** section. Select **+ Add new (2)** button from the toolbar.
 
-1. In Microsoft Sentinel, select **Repositories (Preview) (1)** in the **Content Management** section. Select **+ Add new (2)** button from the toolbar.
-
-   ![Picture 1](../Media/ss122.png)
+   ![Picture 1](../Media/lab9-ex11-7.png)
 
 1. On the **Create new deployment connection** page,
 
@@ -138,7 +123,7 @@ In this task, you will connect Microsoft Sentinel to Azure DevOps to manage cont
 
    - Select **Authorize (3)**. 
 
-     ![Picture 1](../Media/ss123.png)
+     ![Picture 1](../Media/lab9-ex11-8.png)
      
       >**Note**: If prompted, scroll down the permissions request and then select **Accept**.   
 
@@ -156,13 +141,13 @@ In this task, you will connect Microsoft Sentinel to Azure DevOps to manage cont
 
    - Then select **Create (6)**.
 
-     ![Picture 1](../Media/ss124.png)   
+     ![Picture 1](../Media/lab9-ex11-9.png)  
 
 1. Go back to Microsoft Sentinel workspace if needed.
 
-1. Go to the **Repositories (Preview) (1)** page, select **Refresh (2)**. Wait until the last deployment status is **Failed (3)**.  
+1. Go to the **Repositories(1)** page, select **Refresh (2)**. Wait until the last deployment status is **Failed (3)**.  
 
-   ![Picture 1](../Media/ss125.png)
+   ![Picture 1](../Media/lab9-ex11-10.png)
 
    >**Note:** The **Failed** status is due to limitations in the hosted lab environment. You would normally see **Succeeded**. Then you can see in the **Analytics** the imported rule **Rule from Azure DevOps**.
 
