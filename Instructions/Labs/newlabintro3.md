@@ -64,9 +64,9 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
  
 3. Next, provide your password:
  
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
+   - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
  
-     ![Enter Your Password](../Media/sc900-image-2.png)
+     ![Enter Your Password](../Media/lab1-s2.png)
  
 4. If prompted to stay signed in, you can click **No**.
 
@@ -74,7 +74,7 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
    
       ![Action Required](../Media/az500-2.png)
  
-5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel**.
+5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Maybe later**.
 
 ## Steps to Proceed with MFA Setup if "Ask Later" Option is Not Visible
 
@@ -114,7 +114,7 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
 
    > **NOTE:** While logging in again, enter the digits displayed on the screen in the **Authenticator app** and click on Yes.
 
-1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **"Cancel"** to skip the tour.
+1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Maybe later**.
 
 ## Support Contact
  

@@ -1,4 +1,4 @@
-# Lab 09 - Exercise 2: Create a Playbook in Microsoft Sentinel
+# Lab 09 - Exercise 1: Create a Playbook in Microsoft Sentinel
 
 ## Lab Scenario
 
