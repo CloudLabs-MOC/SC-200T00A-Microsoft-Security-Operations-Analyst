@@ -173,4 +173,4 @@ In this lab, you have completed the following:
  - Saved and modified a workbook template
  - Created a Workbook
 
-## Click on **Next** to proceed to Exercise 11
+## Click on **Next** to proceed to Exercise 10

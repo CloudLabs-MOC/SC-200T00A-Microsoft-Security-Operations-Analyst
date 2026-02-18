@@ -99,4 +99,4 @@ In this lab, you completed follwing tasks:
 - Explored Entity Behavior 
 - Confirmed and reviewed Anomalies rules
 
-## Select **Next** to continue to Exercise 5
+## Select **Next** to continue to Exercise 4

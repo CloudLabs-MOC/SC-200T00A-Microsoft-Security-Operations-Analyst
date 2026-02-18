@@ -42,4 +42,4 @@ In this lab, you have completed the following:
 
 -  Deployed the User Management Schema ASIM parser 
 
-## Proceed to Exercise 10
+## Proceed to Exercise 9

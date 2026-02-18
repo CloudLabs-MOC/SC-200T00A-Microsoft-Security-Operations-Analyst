@@ -159,6 +159,8 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
       - Name: Enter  **uniquenameDefender (3)**
 
         ![](../Media/lab6-s3.png)
+
+        >**Note:** If **uniquenameDefender** name is not available use **Defender<inject key="DeploymentID"></inject>**
         
 1. Once the workspace validation has passed, select **Create**. Wait for the new workspace to be provisioned, this may take a few minutes.
 
