@@ -152,8 +152,8 @@ In this task, you will connect Microsoft Sentinel to Azure DevOps to manage cont
    >**Note:** The **Failed** status is due to limitations in the hosted lab environment. You would normally see **Succeeded**. Then you can see in the **Analytics** the imported rule **Rule from Azure DevOps**.
 
 ## Review
-- Explored Microsoft sentinel
-- Created a playbook and set it for automation.
-- Initiated the attack and created detections for those and investigated it
+- Created and exported an analytical rule
+- Created our Azure DevOps environment
+- Connected Sentinel to Azure DevOps
    
 ## You have successfully completed the lab

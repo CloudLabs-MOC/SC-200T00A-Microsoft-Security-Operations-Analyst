@@ -21,7 +21,7 @@ In this task, you will explore using notebooks in Microsoft Sentinel.
 
 1. In the Microsoft Defender portal, expand **Microsoft Sentinel**, and then under **Threat management (1)**, select **Notebooks (2)**.
 
-1. Next, you need to create an AzureML Workspace. the settings menu **(3)** and then select the **Create new Azure ML workspace (4)** button in the command bar.
+1. Next, you need to create an AzureML Workspace. select the settings menu **(3)** and then select the **Create new Azure ML workspace (4)** button in the command bar.
 
      ![Picture 1](../Media/lab10-s24.png)
 
@@ -46,7 +46,7 @@ In this task, you will explore using notebooks in Microsoft Sentinel.
 
      >**Note:** It may take a few minutes to deploy the Machine Learning workspace.
 
-     >**Note:** If Azure ML workspace is not created follow from step 2 in the same task and select the RG-MachineLearning rg and same options 
+     >**Note:** If Azure ML workspace is not created follow from step 2 in the same task and select the RG-MachineLearning rg, same options and create.
 
 1. After **Your deployment is complete** message appears, return to the Microsoft Sentinel portal.
 

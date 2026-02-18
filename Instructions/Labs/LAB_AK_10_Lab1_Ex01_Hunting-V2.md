@@ -124,13 +124,13 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
    ![Picture 1](../Media/lab9-ex11-15.png) 
 
-1. Right-click the **PowerShell Hunt (1)** query and select **Add to livestream (2)**. **Hint:** This also can be done by sliding right and selecting the ellipsis **(...)** at the end of the row to open a context menu.
+1. In the **Microsoft Sentinel** menu, select **Hunting (1)**, right-click the **PowerShell Hunt (2)** query and select **Add to livestream (3)**. **Hint:** This also can be done by sliding right and selecting the ellipsis **(...)** at the end of the row to open a context menu.
 
-   ![Picture 1](../Media/ss134.png)
+   ![Picture 1](../Media/lab10-ex1-2.png)
 
 1. Review that the **Status** is now **Running**. This is running every 30 seconds in the background and you'll receive a notification in the Azure portal (bell icon) when a new result is found. 
 
-   ![Picture 1](../Media/ss135.png)
+   ![Picture 1](../Media/lab10-ex1-3.png)
 
 1. Select the **Bookmarks (1)** tab in the middle pane. Click on the bookmark you created from the results list **(2)**.
 
