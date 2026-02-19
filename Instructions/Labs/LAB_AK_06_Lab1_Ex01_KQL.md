@@ -130,6 +130,8 @@ In this task, you will build basic KQL statements.
 
    ![](../Media/lab6-s14.png)
 
+   >**Note:** If you see the message “This page has been moved to the Defender portal for the optimal, unified SecOps experience”, refresh the page and continue this lab in the Microsoft Azure portal, as the lab environment is configured for the Azure portal and the Microsoft Defender portal experience may take longer to load for this lab.
+
 1. Close the **Queries hub**.
 
      ![](../Media/lab6-s15.png)

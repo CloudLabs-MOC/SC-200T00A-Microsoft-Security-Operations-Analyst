@@ -280,6 +280,8 @@ In this task, you will change the retention period for the SecurityEvent table.
 
      ![](../Media/lab7-s29.png)
 
+     >**Note:** If you see the message “This page has been moved to the Defender portal for the optimal, unified SecOps experience”, refresh the page and continue this lab in the Microsoft Azure portal, as the lab environment is configured for the Azure portal and the Microsoft Defender portal experience may take longer to load for this lab.
+
 1. In Log Analytics workspace, select the **Tables (1)** option under the **Settings** area.
 
 1. Search and select the table **SecurityEvent (2)**, and then right click on **Security Event (3)** table.
