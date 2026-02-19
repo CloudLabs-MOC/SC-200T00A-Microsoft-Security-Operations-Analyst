@@ -174,7 +174,7 @@ In this task, you will save your hunting queries as saved queries for future use
     - **Category:** Select **Security (3)**
     - Click **Save (4)**
 
-    ![Picture](./images1/Ex7-16.png)
+        ![Picture](./images1/Ex7-16.png)
 
 1. In the **Microsoft Sentinel** workspace, go to **Queries (1)**, search for **Login Attempts Hunting Query (2)**, and select it from the **Security** section **(3)** to view the results.
 
@@ -188,7 +188,7 @@ In this task, you will save your hunting queries as saved queries for future use
 
 1. **To create a hunting rule from a saved query**, select the saved query, click on **(…) (1)**, choose **New alert rule (2)**, and then select **Create Azure Monitor alert (3)** to convert the query into an analytics rule for automated detection.
 
-    ![Picture](./images1/Ex7-22.png)
+    ![Picture](./images/p2t4s7.png)
 
     ![Picture](./images1/Ex7-23.png)
 

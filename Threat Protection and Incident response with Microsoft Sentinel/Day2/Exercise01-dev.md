@@ -75,7 +75,9 @@ In this task, you will deploy Microsoft Sentinel to an existing Log Analytics wo
 
     ![](../Day1/images/Ex1-08.png)
 
-1. Now you will see the **Getting started** page for Microsoft Sentinel.   
+1. Now you will see the **Getting started** page for Microsoft Sentinel.
+
+    ![](../Day1/images/p1t2s5.png)
 
 ### Task 3: Connect the Azure Activity connector
 
@@ -89,7 +91,7 @@ In this task, you will connect the Azure Activity connector.
 
 1. On the left side menu, select **Microsoft Sentinel (1)** > **Content management (2)** and select **Content hub (3)** under the Configuration.
 
-   ![Picture 1](../Day1/images/Ex1.png)
+   ![Picture 1](../Day1/images/p1t3s1.png)
 
 1. You will notice a message may appear advising that new spaces are being created, as this may take up to 10 minutes.
 
@@ -97,13 +99,13 @@ In this task, you will connect the Azure Activity connector.
 
 1. On **Content hub** page, search for **Azure Activity (1)** and select **Azure Activity (2)** Data connector from the list,  and click on **Install (3)** to install it.
 
-   ![Picture](../Day1/images/Ex2-05.png)
+   ![Picture](../Day1/images/p1t3s4.png)
 
    >**Note:** If it doesn’t complete after a few minutes, you may be redirected to **Settings → Microsoft Sentinel**. Just **sign out** of all browser sessions and **sign in** again 2-3 times.  
 
 1. Now, navigate to **Data connectors (1)** page, select the **Azure Activity (2)** Data connector, and select the **Open connector page (3)** on the connector information blade.
 
-   ![Picture](../Day1/images/Ex2-05a.png)
+   ![Picture](../Day1/images/p1t3s5.png)
 
 1. In the Configuration area, scroll down and under "2. Connect your subscriptions..." select **Launch Azure Policy Assignment wizard>**.
 
@@ -186,7 +188,7 @@ In this task, you will create an analytics rule using a Microsoft-provided templ
     - **Alert automation rules:** Leave empty for now (you'll link playbooks via automation rules in later tasks)
     - Click **Next: Review + Create**
 
-    ![Picture](./images1/Ex6-09-create-00.png)
+        ![Picture](./images1/Ex6-09-create-00.png)
 
 1. Review the rule configuration:
 
@@ -195,7 +197,7 @@ In this task, you will create an analytics rule using a Microsoft-provided templ
     - **Severity:** Medium
     - Click **Save (2)** to create the analytics rule
 
-    ![Picture](./images1/Ex6-09-create.png)
+        ![Picture](./images1/Ex6-09-create.png)
 
 1. The analytics rule is now created and active. You should see a success message.
 
@@ -220,7 +222,7 @@ In this task, you will create an automation rule that automatically assigns inci
     - **Automation rule name:** Enter **Auto-Assign Ḥigh Serverity Incidents (1)**
     - **Trigger:** Select **When incident is created (2)** from the dropdown menu
 
-    ![Picture](./images1/Ex6-03-ex6.png)
+        ![Picture](./images1/Ex6-03-ex6.png)
 
 1. Add a condition for severity. Click **+ Add (1)** and then select **Condition (And) (2)**:
 
@@ -228,7 +230,7 @@ In this task, you will create an automation rule that automatically assigns inci
     - **Operation:** Select **Equals (4)**
     - **Value:** Select **Low**, **Medium** and **High** **(5)**
 
-    ![Picture](./images1/Ex6-14-details-2.png)
+        ![Picture](./images1/Ex6-14-details-2.png)
 
 1. In the **Actions** section, select **Assign owner (1)** from the dropdown menu. In the **Assign owner (1)** action:
 
@@ -315,7 +317,7 @@ In this task, you will create an automation rule that triggers your newly create
     - **Automation rule name:** Enter **Trigger Notification Playbook (1)**
     - **Trigger:** Select **When incident is created (2)**
 
-    ![Picture](./images1/Ex6-39-details.png)
+      ![Picture](./images1/Ex6-39-details.png)
 
 1. In the **Conditions** section, click **+ Add condition (1)**:
 
@@ -323,7 +325,7 @@ In this task, you will create an automation rule that triggers your newly create
     - **Operation:** Select **Contains (3)**
     - **Value:** Type **New CloudShell user (4)**
 
-    ![Picture](./images1/Ex6-40-condition.png)
+      ![Picture](./images1/Ex6-40-condition.png)
 
 1. You will see an error message **Only playbooks configured for the incident trigger can be selected. If a playbook appears unavailable, it means Microsoft Sentinel does not have explicit permissions to run it**, click on **Manage playbook permissions**
 
@@ -340,7 +342,7 @@ In this task, you will create an automation rule that triggers your newly create
     - **Playbook:** Select **Incident-Notification-Playbook** from the dropdown
     - Click **Add**
 
-   ![Picture](./images1/Ex6-42-playbook.png)
+      ![Picture](./images1/Ex6-42-playbook.png)
 
 1. Configure the rule settings:
 
@@ -348,7 +350,7 @@ In this task, you will create an automation rule that triggers your newly create
     - **Order:** Enter **2** (this will run after the assignment rule)
     - Click **Apply**
 
-    ![Picture](./images1/Ex6-42-playbook.png)
+      ![Picture](./images1/Ex6-42-playbook.png)
 
 1. The automation rule is now created and linked to your playbook. Verify it appears in the automation rules list (1).
 

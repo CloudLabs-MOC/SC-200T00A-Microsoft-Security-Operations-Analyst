@@ -33,7 +33,7 @@ In this task, you will access the Microsoft Sentinel notebook environment and co
     | **Subscription** | Default subscription |
     | **Resource group** | sentinel-rg |
     | **Workspace name** | `aml` |
-    | **Region** | Same region as sentinel |
+    | **Region** | Same region as **Microsoft Sentinel** |
     | **Storage account** | Auto-created |
     | **Key vault** | Auto-created |
     | **Application Insights** | Auto-created |
@@ -90,6 +90,8 @@ In this task, you will create a new notebook from a template and configure it fo
 1. Wait for the Compute session to start, it may take upto 10 minutes, once it is ready you can see that the compute session is ready
 
      ![Picture](./images1/Ex08-02-e2.png)
+
+     > Note :  If you are not able to see **Ready**, instead of you are seeing session is not started, you can go with Task 3.
 
 ### Task 3: Review the code and output for the Notebook [Read Only]
 

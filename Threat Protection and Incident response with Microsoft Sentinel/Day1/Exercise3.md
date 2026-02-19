@@ -20,23 +20,23 @@ In this exercise, you will complete the following tasks:
 
 1. You will be navigated to Microsoft Security Store, search for **Microsoft Defender XDR solution for Sentinel**
 
-   ![](./images/Ex2-01-e.png)
+   ![](./images/l3t1s2.png)
 
 1. In the Solutions page, select the **Microsoft Defender XDR solution for Sentinel** tile
 
-   ![](./images/Ex2-02-e.png)
+   ![](./images/l3t1s3.png)
 
 1. Click on **Get Solution** in the *Microsoft Defender XDR solution for Sentinel* page. 
 
-   ![](./images/Ex2-03-e.png)
+   ![](./images/l3t1s4.png)
 
 1. On Get Solution page, the Deployment Configuration will automatically be configured, click on **Deploy**
 
-   ![](./images/Ex2-04-e-2.png)
+   ![](./images/l3t1s5.png)
 
 1. Once the deployment is complete, click on **Manage in Defender** 
 
-   ![](./images/Ex2-05-e.png)
+   ![](./images/l3t1s7.png)
 
 1. Select the **Microsoft Defender XDR solution**, scroll down on the right hand pane, select on **Install**.
 
@@ -54,7 +54,7 @@ In this exercise, you will complete the following tasks:
 
    ![](./images/Ex2-05-e2-1.png)
    
-   ![](./images/Ex2-05-e2-2.png)
+   ![](./images/l3t1s10.png)
 
 1. Now you have installed the **Microsoft Defender XDR solution for Sentinel** 
 
