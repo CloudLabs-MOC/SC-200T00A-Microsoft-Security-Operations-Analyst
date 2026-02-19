@@ -33,7 +33,7 @@ In this task, you'll create a Logic App that is used as a Playbook in Microsoft 
 
      > **Note:** After opening the **Microsoft Defender portal**, it may take **5–10 minutes** for the **Microsoft Sentinel workspace** to appear in the **Workspaces** list. If no workspace is displayed initially, **wait for a few minutes and refresh the page**, and then proceed to connect the workspace.  If the workspace is **already connected**, please **proceed to the next step**. 
 
-     >**Note:** If the workspace is not populated with 5-10 minutes please reachout to cloudlabsupport@spektrasystems.com   
+     >**Note:** If the option is still not visible after trying these steps, it may be an issue with the Defender portal. In that case, please contact Cloudlabs-Support@spektrasystems.com for assistance.  
 
      > **Important:** The total lab duration already includes any waiting time required for deployments, data connectors, or services (such as the **5–10 minutes** mentioned above). Please do not worry if certain steps take additional time to complete, and plan your activities accordingly while performing the lab.
 

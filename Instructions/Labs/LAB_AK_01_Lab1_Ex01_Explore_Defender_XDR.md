@@ -91,7 +91,7 @@ In this task, you will assign preset security policies for Exchange Online Prote
 
    ![Standart protection](../Media/standard-protection-2905.png)
 
-    >**Hint:** If this option appears greyed out, wait for 5 minutes and refresh your browser by pressing **Ctrl+F5** until it becomes available.
+    >**Hint:** If this option appears greyed out, wait for 5 minutes and refresh your browser by pressing **Ctrl+F5** or opening the portal in InPrivate mode. Then sign back in using your Tenant Email credentials. If the option is still not visible after trying these steps, it may be an issue with the Defender portal. In that case, please contact Cloudlabs-Support@spektrasystems.com for assistance.
 
     >**Note:** After clicking **Manage protection settings**, the content may take **40 to 60 minutes** to load completely. Wait for the page to fully load, then revisit the same page after the waiting period. If needed, sign out of **Microsoft Defender XDR**, sign back in, and repeat the steps to continue.
 
@@ -117,7 +117,7 @@ In this task, you will assign preset security policies for Exchange Online Prote
 
    ![Standart protection](../Media/lab1-s6.png) 
 
-   > **Hint:** If this option appears greyed out, wait for 5 minutes and refresh your browser by pressing **Ctrl+F5** until it becomes available.
+   > **Hint:** If this option appears greyed out, wait for 5 minutes and refresh your browser by pressing **Ctrl+F5** or opening the portal in InPrivate mode. Then sign back in using your Tenant Email credentials. If the option is still not visible after trying these steps, it may be an issue with the Defender portal. In that case, please contact Cloudlabs-Support@spektrasystems.com for assistance.
    
    > **Note:** You might need to scroll down to find Strict protection. 
 
@@ -147,6 +147,9 @@ In this task, you will assign preset security policies for Exchange Online Prote
 1. At the **Microsoft Defender** portal **Home** screen, scroll down the navigation menu items to the **Assets (1)** section, and select **Devices (2)**.
 
    ![Standart protection](../Media/devices-2905.png) 
+
+   >**Note:** If you don’t see the **Devices** under the **Assets** section in the **Defender portal**, sign out by selecting the circle with your initials in the top-right corner and choosing Sign out. You can also try refreshing the page using Ctrl+F5, waiting 30–45 minutes, or opening the portal in InPrivate mode. Then sign back in using your Tenant Email credentials. If the option is still not visible after trying these steps, it may be an issue with the Defender portal. In that case, please contact Cloudlabs-Support@spektrasystems.com for assistance.
+
 
 1. The process to deploy the Defender XDR workspace should start, and you should see messages saying **loading and Initializing** briefly displayed at the top of the page, and then you're going to see an image of a coffee mug and a message that reads: **Hang on! We're preparing new spaces for your data and connecting them.** It takes approximately 5 minutes to finish. **Leave the page open and make sure it finishes since it's required for the next Lab.**
 

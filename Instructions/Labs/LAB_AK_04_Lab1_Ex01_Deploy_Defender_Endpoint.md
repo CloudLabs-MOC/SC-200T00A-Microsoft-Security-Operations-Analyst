@@ -45,6 +45,8 @@ In this task, you will perform the initialization of the Microsoft Defender for 
     ![Picture 1](../Media/SC200-img1.png)
 
     >**Note:** If you do not see the **Device discovery** option under **Settings**, log out by selecting the top-right circle with your account initials and clicking **Sign out**. Other options to try include refreshing the page with **Ctrl+F5**, waiting for **30-45 minutes**, or opening the page in **InPrivate** mode. Then, log in again with your **Tenant Email** credentials.
+
+    >**Note:** If the option is still not visible after trying these steps, it may be an issue with the Defender portal. In that case, please contact Cloudlabs-Support@spektrasystems.com for assistance.
     
 1. In the Discovery setup make sure **Standard discovery (recommended)** is selected. 
 
@@ -61,6 +63,8 @@ In this task, you will onboard a device to Microsoft Defender for Endpoint using
     ![Picture 1](../Media/endpt1.png)
 
       > **Note:** The **Endpoints** option may take some time to appear under **Settings**. If it does not show up immediately, wait for a few minutes and refresh the browser before proceeding.
+
+      >**Note:** If the option is still not visible after trying these steps, it may be an issue with the Defender portal. In that case, please contact Cloudlabs-Support@spektrasystems.com for assistance.
 
 1. Select **Onboarding (1)** in the **Device Management** section. In the **Deployment method**, ensure that **Local Script (for up to 10 devices) (2)** is displayed in the drop-down, then click the **Download onboarding package (3)** button. 
 

@@ -132,6 +132,8 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
    ![](../Media/lab8-s60.png)
 
+   >**Note:** The **Common Event Format (CEF) via AMA** connector may take **30–40 minutes** to show the **Connected** status and start receiving logs after configuration. If the status does not update immediately, refresh the page using **Ctrl + F5**, or sign out and sign back in to the portal. You can also try opening the portal in **InPrivate/Incognito mode** and check again after some time.
+
 1. The data collection rule installs the Azure Monitor Agent (AMA), and the **CEF collector** install commands were pre-deployed on the LIN1 machine to install the CEF collector.
 
 1. Return to the **PowerShell Command Prompt** window. You should still be connected to the LIN1 virtual machine.

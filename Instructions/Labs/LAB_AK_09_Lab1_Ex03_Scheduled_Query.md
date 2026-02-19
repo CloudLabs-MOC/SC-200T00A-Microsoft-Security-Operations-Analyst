@@ -65,6 +65,8 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
    ![Picture 1](../Media/lab9-s44.png)
 
+   > **Note:** The **Azure Activity** connector may take **30–40 minutes** to show the **Connected** status and start receiving logs after configuration. If the status does not update immediately, refresh the page using **Ctrl + F5**, or sign out and sign back in to the portal. You can also try opening the portal in **InPrivate/Incognito mode** and check again after some time.
+
 1. Navigate back to **Analytics (1)** from the **Configuration** area.
 
    - Make sure that you are in the **Rule templates (2)** tab in the command bar and search for the **New CloudShell User (3)** rule

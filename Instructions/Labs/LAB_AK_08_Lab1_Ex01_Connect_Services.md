@@ -70,9 +70,9 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
 
      ![](../Media/lab8-s1.png)
 
-     > **Note:** If workspace is not connected, click on Connect workspace to connect. 
+     > **Note:** If workspace is not connected, click on Connect workspace to connect. If no workspace is displayed initially, try refreshing the page using **Ctrl + F5**, signing out by selecting the circle with your initials in the top-right corner and choosing **Sign out**, and then signing back in using your **Tenant Email** credentials. You can also try opening the portal in **InPrivate/Incognito mode**. If the workspace is **already connected**, please **proceed to the next step**. 
 
-     >**Note:** If the workspace is not populated with 5-10 minutes please reachout to cloudlabsupport@spektrasystems.com   
+     >**Note:** If the workspace is not populated with 5-10 minutes it may be an issue with the Defender portal. In that case, please contact Cloudlabs-Support@spektrasystems.com for assistance. 
 
      > **Important:** The total lab duration already includes any waiting time required for deployments, data connectors, or services (such as the **5–10 minutes** mentioned above). Please do not worry if certain steps take additional time to complete, and plan your activities accordingly while performing the lab.
 
