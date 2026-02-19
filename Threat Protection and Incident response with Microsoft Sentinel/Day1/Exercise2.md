@@ -26,17 +26,17 @@ In this lab, you will enable and configure data connectors in Microsoft Sentinel
 
  1. On the left side menu, select **Microsoft Sentinel (1)** > **Content management (2)** and select **Content hub (3)** under the Configuration.
 
-     ![Picture 1](./images/Ex1.png)
+     ![Picture 1](./images/p1t3s1.png)
 
 1. You will notice a message may appear advising that new spaces are being created, as this may take up to 10 minutes.
 
-    ![Image](./images/e2t3s2.png)
+    ![Image](./images/l2t1s3.png)
  
  1. On the Content hub page, search for **Microsoft Entra ID (1)**, then select **Microsoft Entra ID (2)** Data connector from the dropdown list and click on **Install (3)** to install it.
 
     > **Note:** If it doesn’t complete after a few minutes, you may be redirected to **Settings → Microsoft Sentinel**. Just **sign out** of all browser sessions and **sign in** again 2-3 times. 
 
-    ![Picture 1](./images/Ex2-14.png)
+    ![Picture 1](./images/l2t1s4.png)
 
     > **Hint:** Zoom your browser to **70–80%** for a better view during the lab.
 
@@ -44,7 +44,7 @@ In this lab, you will enable and configure data connectors in Microsoft Sentinel
 
  1. From the left hand pane, click on **Configuration (1)** under **Microsoft Sentinel** select **Data connectors (2)** and expand **Microsoft Entra ID (3)** data connector and click on it, then select the **Open connector page (4)** on the connector information blade.
 
-    ![Picture](./images/Ex2-15.png)
+    ![Picture](./images/l2t1s5.png)
 
  1. Check the box for **Sign-in Logs (1)** and **Audit Logs (2)** options under the Configuration, then select **Apply Changes (3)**.
 
@@ -65,7 +65,7 @@ In this task, you will connect the Microsoft Defender for Cloud connector.
 
 1. On the left side menu, select **Microsoft Sentinel (1)** > **Content management (2)** and select **Content hub (3)** under the Configuration.
 
-    ![Picture 1](./images/Ex1.png)
+    ![Picture 1](./images/p1t3s1.png)
 
 1. On **Content hub** page, search for **Microsoft Defender for Cloud (1)** and **expand it (2)** from the list, then select **Tenant-based Microsoft Defender for Cloud (3)** Data connector and click on **Install Solution (4)** to install it.
 
@@ -79,7 +79,7 @@ In this task, you will connect the Microsoft Defender for Cloud connector.
 
 1. You will now be navigated to the Azure portal, where you can see the information like **Last Log Recieved**, **Data recieved**
 
-    ![Picture](./images/Ex2-04.png) 
+    ![Picture](./images/l2t2s4.png) 
 
 ### Task 3: Connect the Azure Activity connector
 
@@ -87,11 +87,11 @@ In this task, you will connect the Azure Activity connector.
 
 1. On the left side menu, select **Microsoft Sentinel (1)** > **Content management (2)** and select **Content hub (3)** under the Configuration.
 
-    ![Picture 1](./images/Ex1.png)
+    ![Picture 1](./images/p1t3s1.png)
 
 1. On **Content hub** page, search for **Azure Activity (1)** and select **Azure Activity (2)** Data connector from the list,  and click on **Install (3)** to install it.
 
-    ![Picture](./images/Ex2-05.png)
+    ![Picture](./images/l2t3s2.png)
 
     >**Note:** If it doesn’t complete after a few minutes, you may be redirected to **Settings → Microsoft Sentinel**. Just **sign out** of all browser sessions and **sign in** again 2-3 times.  
 

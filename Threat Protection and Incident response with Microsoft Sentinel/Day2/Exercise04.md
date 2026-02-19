@@ -110,9 +110,9 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
      ![Picture](./images/Ex2-01.png)
 
-    >**Note:** To upload file click on **Browse for files**, upload window will open. Navigate to **This PC-> Documents (1)** path, select the **HighValue.csv (2)** file, then click on **Open (3).**
+      >**Note:** To upload file click on **Browse for files**, upload window will open. Navigate to **This PC-> Documents (1)** path, select the **HighValue.csv (2)** file, then click on **Open (3).**
 
-    ![Picture](./images/NewEx2-0.png)
+      ![Picture](./images/NewEx2-0.png)
 
 1. Review the settings you entered and select **Create**.
 
