@@ -289,48 +289,22 @@ In this task, you will create a playbook using Azure Logic Apps to automate inci
 
 7. Enter the below details and click on **X**.
     - **To:** <inject key="AzureAdUserEmail"></inject>
+
     - **Subject:** Incident alert email
+
     - **Body:**
+
         ```
         Incident Name:@{item()}
         User details: @{triggerBody()?['incidentUpdates']?['updatedBy']?['name']}
         Source: @{triggerBody()?['incidentUpdates']?['updatedBy']?['source']}
         ```
+        
         ![Picture](./images1/Ex6-19-ex6-0.png)
 
 1. Click **Save (1)** to save the playbook workflow.
 
     ![Picture](./images1/Ex6-19-ex6.png)
-
-1. Navigate to Azure Portal and click on **Cloudshell.**
-
-    ![Picture](./images1/322.png)
-
-1. Select **Powershell** in **Welcome to Azure Cloud Shell** box.
-
-    ![Picture](./images1/323.png)
-
-1. In **Getting started** pane select **Mount storage account (1)**, then select your current subscription in **Storage account and subscription (2)** and **Apply (3)**.
-
-    ![Picture](./images1/324.1.png)
-
-1. Select **We will create a storage account for you** and click on **Next.**
-
-    ![Picture](./images1/325.1.png)
-
-1. Wait for until deployment get finished.
-
-    ![Picture](./images1/326.png)
-
-1. Once cloudshell starts working then navigate to outlook and you will notice that got received.
-    
-    > Note: It may take more than 12 hours to get a mail, you can next task.
-    
-1. You will be noticing the incident in Incidents pane.
-
-    > Note: It may take more than 12 hours to get a incident, you can next task.
-
-    ![Picture](./images1/400.png)
 
 ### Task 7: Link Playbooks to Automation Rules
 
@@ -385,6 +359,38 @@ In this task, you will create an automation rule that triggers your newly create
 1. The automation rule is now created and linked to your playbook. Verify it appears in the automation rules list (1).
 
     ![Picture](./images1/Ex6-44-list.png)
+
+1. Navigate to Azure Portal and click on **Cloudshell.**
+
+    ![Picture](./images1/322.png)
+
+1. Select **Powershell** in **Welcome to Azure Cloud Shell** box.
+
+    ![Picture](./images1/323.png)
+
+1. In **Getting started** pane select **Mount storage account (1)**, then select your current subscription in **Storage account and subscription (2)** and **Apply (3)**.
+
+    ![Picture](./images1/324.1.png)
+
+1. Select **We will create a storage account for you** and click on **Next.**
+
+    ![Picture](./images1/325.1.png)
+
+1. Wait for until deployment get finished.
+
+    ![Picture](./images1/326.png)
+
+1. Once cloudshell starts working then navigate to outlook and you will notice that got received.
+    
+    > **Note:** It may take more than 12 hours to get a mail, you can proceed with next task.
+
+    ![Picture](./images1/1212.png)
+    
+1. You will be noticing the incident in Incidents pane.
+
+    > **Note:** It may take more than 12 hours to get an incident, you can proceed with next task.
+
+    ![Picture](./images1/2121.png)
 
 ## Summary
 
