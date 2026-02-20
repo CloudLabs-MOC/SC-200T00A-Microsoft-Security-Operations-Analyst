@@ -126,7 +126,7 @@ In this task, you will change the retention period for the SecurityEvent table.
 
 1. In Microsoft Sentinel, select the **Configuration** and select the **Tables** option.
 
-   ![](./images/Ex3-07.png)
+   ![](./images/321.png)
 
 1. To search  type **SecurityEvent (1)** in the search bar and select the table **SecurityEvent (2)**.
 

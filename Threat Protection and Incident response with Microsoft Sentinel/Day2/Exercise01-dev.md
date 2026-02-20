@@ -302,6 +302,30 @@ In this task, you will create a playbook using Azure Logic Apps to automate inci
 
     ![Picture](./images1/Ex6-19-ex6.png)
 
+1. Navigate to Azure Portal and click on **Cloudshell.**
+
+    ![Picture](./images1/322.png)
+
+1. Select **Powershell** in **Welcome to Azure Cloud Shell** box.
+
+    ![Picture](./images1/323.png)
+
+1. In **Getting started** pane select **Mount storage account (1)**, then select your current subscription in **Storage account and subscription (2)** and **Apply (3)**.
+
+    ![Picture](./images1/324.1.png)
+
+1. Select **We will create a storage account for you** and click on **Next.**
+
+    ![Picture](./images1/325.1.png)
+
+1. Wait for until deployment get finished.
+
+    ![Picture](./images1/326.png)
+
+1. Once cloudshell starts working then navigate to outlook and you will notice that mail got received.
+    
+    > Note: It may take more than 12 hours to get a mail
+
 ### Task 7: Link Playbooks to Automation Rules
 
 In this task, you will create an automation rule that triggers your newly created playbook when CloudShell incidents are generated.
