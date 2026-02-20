@@ -322,9 +322,15 @@ In this task, you will create a playbook using Azure Logic Apps to automate inci
 
     ![Picture](./images1/326.png)
 
-1. Once cloudshell starts working then navigate to outlook and you will notice that mail got received.
+1. Once cloudshell starts working then navigate to outlook and you will notice that got received.
     
-    > Note: It may take more than 12 hours to get a mail
+    > Note: It may take more than 12 hours to get a mail, you can next task.
+    
+1. You will be noticing the incident in Incidents pane.
+
+    > Note: It may take more than 12 hours to get a incident, you can next task.
+
+    ![Picture](./images1/400.png)
 
 ### Task 7: Link Playbooks to Automation Rules
 
