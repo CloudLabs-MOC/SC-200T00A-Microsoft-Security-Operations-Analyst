@@ -26,7 +26,7 @@ In this task, you will connect the Threat Intelligence data connector in Microso
 
  1. On the left side menu, select **Microsoft Sentinel (1)** > **Content management (2)** and select **Content hub (3)** under the Configuration.
 
-     ![Picture 1](../Day1/images/Ex1.png)
+     ![Picture 1](../Day1/images/p1t3s1.png)
 
 1. In the search bar, type **Threat intelligence (1)**, select **Threat intelligence (2)** from the list, then click on **Install (3)**. 
 
