@@ -117,13 +117,9 @@ Feel free to **start, restart, or stop (2)** your virtual machine as needed from
    
       ![Image](./images/GettingStarted-06.png "Enter Email")
      
-1. Now enter the following password and click on **Sign in (2)**.
+1. Now enter the following Temporary Access Pass and click on **Sign in (2)**.
    
-   * **Password**: <inject key="AzureAdUserPassword"></inject> **(1)**
-   
-      ![Image](./images/GettingStarted-07.png "Enter Password")
-
-      >**Note:** If prompted to Enter Temporary Access Pass, enter the following **Password**: <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Sign in (2)**.
+   * **Temporary Access Pass**: <inject key="AzureAdUserPassword"></inject> **(1)**
 
       ![](../Day1/images/GS-0.png) 
 
@@ -155,3 +151,4 @@ Click **Next >>** from the bottom right corner to embark on your Lab journey!
 ![Image](./images/Next.png)
 
 ### Happy Learning!!
+
