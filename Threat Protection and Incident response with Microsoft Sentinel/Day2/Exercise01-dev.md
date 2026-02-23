@@ -385,6 +385,30 @@ In this task, you will create an automation rule that triggers your newly create
     > **Note:** You can say that it may take about 12 hours, if you do not recieve the incident you can proceed to next task.
 
     ![Picture](./images1/2121.png)
+
+1. Navigate to the Outlook portal using the link below and click on **sign in.**
+
+    ```
+    https://www.microsoft.com/en-us/microsoft-365/outlook/log-in
+    ```
+
+    ![Image](./images/900.png "Enter Email")
+
+1. On the **Sign in** tab you will see the login screen, in that enter the following email/username, and click on **Next (2)**. 
+
+   * **Email/Username**: <inject key="AzureAdUserEmail"></inject> **(1)**
+   
+      ![Image](./images/901.png "Enter Email")
+     
+1. Now enter the following Temporary Access Pass and click on **Sign in (2)**.
+   
+   * **Temporary Access Pass**: <inject key="AzureAdUserPassword"></inject> **(1)**
+
+      ![](../Day1/images/GS-0.png)
+
+1. If you see the pop-up **Stay Signed in?**, select **No**.
+
+   ![Image](./images/GettingStarted-07.png)
     
 1. You will receive an mail in **Outlook.**
 
