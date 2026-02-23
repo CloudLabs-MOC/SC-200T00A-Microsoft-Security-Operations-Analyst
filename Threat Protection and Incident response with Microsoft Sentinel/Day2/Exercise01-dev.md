@@ -260,7 +260,7 @@ In this task, you will create a playbook using Azure Logic Apps to automate inci
     - **Resource group:** Select **sentinel-rg (2)**
     - **Name:** Enter **Incident-Notification-Playbook (3)**
     - **Enable diagnostics logs in Log Analytics:** Checked **(4)**
-    - **Log Analytics workspace:** uniquenameSentinel **(5)**
+    - **Log Analytics workspace:** **uniquenameSentinel** **(5)**
     - Click **Next: Connections>** **(6)**
 
         ![Picture](./images1/Ex6-26-create.png)
@@ -382,9 +382,9 @@ In this task, you will create an automation rule that triggers your newly create
 
     ![Picture](./images1/326.png)
 
-1. Once Cloud Shell starts working, navigate to **Incidents** under **Incidents & alerts** in the **Microsoft Defender** portal. You will notice an incident named **New CloudShell user.**
+1. Once Cloud Shell starts working, navigate to **Incidents** under **Incidents & alerts** in the **Microsoft Defender** portal. You will notice an incident named **New CloudShell user**.
     
-    > **Note:** You can say that it may take about 12 hours, if you do not recieve the incident you can proceed to next task.
+    > **Note:** It may take up to 12 hours for the incident to be triggered, as there can be a delay before it appears.
 
     ![Picture](./images1/2121.png)
 
@@ -412,9 +412,9 @@ In this task, you will create an automation rule that triggers your newly create
 
    ![Image](./images/GettingStarted-07.png)
     
-1. You will receive an mail in **Outlook.**
+1. You will receive an email in **Outlook.**
 
-    > **Note:** You can say that it may take about 12 hours, if you do not recieve the mail you can proceed to next task.
+    > **Note:** It may take up to 12 hours for the incident to be triggered. Since the incident is what activates the playbook that sends the email, you may not receive it immediately. If you do not see the email, you can still proceed to the next task.
 
     ![Picture](./images1/1212.png)
 

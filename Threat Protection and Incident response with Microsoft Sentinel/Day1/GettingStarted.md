@@ -4,7 +4,7 @@
 
 ## Overview
  
-In this lab, you will get hands-on experience with Microsoft Sentinel. Participants will learn how to deploy Sentinel, integrate critical data sources, enrich security insights using threat intelligence and content packs, and leverage User and Entity Behaviour Analytics (UEBA) to detect anomalous activities.
+In this lab, you will get hands-on experience with Microsoft Sentinel. Participants will learn how to deploy Sentinel, integrate critical data sources, enrich security insights using threat intelligence and content packs, and leverage User and Entity behaviour Analytics (UEBA) to detect anomalous activities.
 By completing this lab, learners will be equipped to set up a robust security monitoring environment, detect potential threats, and initiate effective incident response measures.
 
 ## Objective
