@@ -380,17 +380,17 @@ In this task, you will create an automation rule that triggers your newly create
 
     ![Picture](./images1/326.png)
 
-1. Once cloudshell starts working then navigate to outlook and you will notice that got received.
+1. Once Cloud Shell starts working, navigate to **Incidents** under **Incidents & alerts** in the **Microsoft Defender** portal. You will notice an incident named **New CloudShell user.**
     
-    > **Note:** It may take more than 12 hours to get a mail, you can proceed with next task.
-
-    ![Picture](./images1/1212.png)
-    
-1. You will be noticing the incident in Incidents pane.
-
-    > **Note:** It may take more than 12 hours to get an incident, you can proceed with next task.
+    > **Note:** You can say that it may take about 12 hours, if you do not recieve the incident you can proceed to next task.
 
     ![Picture](./images1/2121.png)
+    
+1. You will receive an mail in **Outlook.**
+
+    > **Note:** You can say that it may take about 12 hours, if you do not recieve the mail you can proceed to next task.
+
+    ![Picture](./images1/1212.png)
 
 ## Summary
 
