@@ -91,7 +91,7 @@ In this task, you will create a new notebook from a template and configure it fo
 
      ![Picture](./images1/Ex08-02-e2.png)
 
-     > Note :  If you are not able to see **Ready**, instead of you are seeing session is not started, you can go with Task 3.
+     > **Note :** If you do not see Ready and instead see Session not started, please proceed with Task 3.
 
 ### Task 3: Review the code and output for the Notebook [Read Only]
 
