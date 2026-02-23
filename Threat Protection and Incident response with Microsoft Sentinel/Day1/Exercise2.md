@@ -34,8 +34,6 @@ In this lab, you will enable and configure data connectors in Microsoft Sentinel
  
  1. On the Content hub page, search for **Microsoft Entra ID (1)**, then select **Microsoft Entra ID (2)** Data connector from the dropdown list and click on **Install (3)** to install it.
 
-    > **Note:** If it doesn’t complete after a few minutes, you may be redirected to **Settings → Microsoft Sentinel**. Just **sign out** of all browser sessions and **sign in** again 2-3 times. 
-
     ![Picture 1](./images/l2t1s4.png)
 
     > **Hint:** Zoom your browser to **70–80%** for a better view during the lab.
@@ -77,7 +75,7 @@ In this task, you will connect the Microsoft Defender for Cloud connector.
    
     ![Picture](./images/Ex2-03.png) 
 
-1. You will now be navigated to the Azure portal, where you can see the information like **Last Log Recieved**, **Data recieved**
+1. You will now be navigated to the Azure portal, where you can see the information like **Last Log Received**, **Data received**
 
     ![Picture](./images/l2t2s4.png) 
 

@@ -12,7 +12,7 @@ By the end of this lab, you will be able to:
 
   - **Responding to Threats Using Automation** to trigger playbooks and orchestrate incident response actions.
 
-  - **Hunt Threats Using KQL Across the Data Lake** to identify suspicious patterns and advanced attack behaviors.
+  - **Hunt Threats Using KQL Across the Data Lake** to identify suspicious patterns and advanced attack behaviours.
 
   - **Explore advanced Sentinel features**, such as Threat Intelligence, Content Hub, and automation playbooks.
 
@@ -122,18 +122,10 @@ Feel free to **start, restart, or stop (2)** your virtual machine as needed from
    * **Temporary Access Pass**: <inject key="AzureAdUserPassword"></inject> **(1)**
 
       ![](../Day1/images/GS-0.png) 
-
-1. If you see the pop-up Action Required, click **Ask Later**.
-
-   ![Image](./images/GettingStarted-08.png)
-
-   >**NOTE:** Do not enable MFA, select **Ask Later**.
      
 1. If you see the pop-up **Stay Signed in?**, select **No**.
 
    ![Image](./images/GettingStarted-07.png)
-
-1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
 
 1. If a **Welcome to Microsoft Azure** popup window appears, select **Maybe Later** to skip the tour.
 

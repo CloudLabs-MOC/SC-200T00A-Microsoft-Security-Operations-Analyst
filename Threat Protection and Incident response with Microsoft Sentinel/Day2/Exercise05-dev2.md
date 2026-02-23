@@ -63,7 +63,7 @@ In this task, you will create a new notebook from a template and configure it fo
 
      ![Picture](./images1/Ex08-01.png)
 
-1. Click on **Templates (1)** and select **A Getting Started Guide For Microsoft Sentinel ML Notebooks (2)**
+1. Click on **Templates (1)** and select **A Getting Started Guide For Microsoft Sentinel ML Notebooks (2).**
 
      ![Picture](./images1/Ex08-02.png)
 
@@ -71,7 +71,7 @@ In this task, you will create a new notebook from a template and configure it fo
 
      ![Picture](./images1/Ex08-02-b.png)
 
-1. Leave the name of your notebook to default and the Azure Machine Learning workspace to **aml** and cick **Save** to save the notebook configuration to your ML workspace.
+1. Leave the name of your notebook to default and the Azure Machine Learning workspace to **aml** and click **Save** to save the notebook configuration to your ML workspace.
 
      ![Picture](./images1/Ex08-02-c.png)
 
@@ -91,7 +91,7 @@ In this task, you will create a new notebook from a template and configure it fo
 
      ![Picture](./images1/Ex08-02-e2.png)
 
-     > Note :  If you are not able to see **Ready**, instead of you are seeing session is not started, you can go with Task 3.
+     > **Note :** If you do not see Ready and instead see Session not started, please proceed with Task 3.
 
 ### Task 3: Review the code and output for the Notebook [Read Only]
 
@@ -101,7 +101,7 @@ In this task, you will initialize the MSTICPy library and establish a secure con
 
 #### Import Required Libraries
 
-1. Navigate to code cell, **2. Initializing the notebook and MSTICPy** and review the code block and then review the output 
+1. Navigate to code cell, **2. Initializing the notebook and MSTICPy** and review the code block and then review the output. 
 
     ```python
     # import some modules needed in this cell

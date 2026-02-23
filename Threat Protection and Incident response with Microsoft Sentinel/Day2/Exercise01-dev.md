@@ -219,7 +219,7 @@ In this task, you will create an automation rule that automatically assigns inci
 
 1. On the **Create automation rule** page, enter the following details:
 
-    - **Automation rule name:** Enter **Auto-Assign Ḥigh Serverity Incidents (1)**
+    - **Automation rule name:** Enter **Auto-Assign Ḥigh Severity Incidents (1)**
     - **Trigger:** Select **When incident is created (2)** from the dropdown menu
 
         ![Picture](./images1/Ex6-03-ex6.png)
@@ -235,6 +235,7 @@ In this task, you will create an automation rule that automatically assigns inci
 1. In the **Actions** section, select **Assign owner (1)** from the dropdown menu. In the **Assign owner (1)** action:
 
     - **Assigned to:** <inject key="AzureAdUserEmail"></inject> (2)
+        
         ![Picture](./images1/Ex6-18-assign-2.png)
 
 1. Add another action by clicking **Change status (1)** and select **New (2)** from the dropdown menu and then **Apply (3)**
@@ -259,8 +260,8 @@ In this task, you will create a playbook using Azure Logic Apps to automate inci
     - **Resource group:** Select **sentinel-rg (2)**
     - **Name:** Enter **Incident-Notification-Playbook (3)**
     - **Enable diagnostics logs in Log Analytics:** Checked **(4)**
-    - **Log Analytics workspace:** uniquenameSentinel **(5)**
-    - Click **Next:Connections>** **(6)**
+    - **Log Analytics workspace:** **uniquenameSentinel** **(5)**
+    - Click **Next: Connections>** **(6)**
 
         ![Picture](./images1/Ex6-26-create.png)
 
@@ -281,6 +282,7 @@ In this task, you will create a playbook using Azure Logic Apps to automate inci
 1. On **Create connection** page click on Sign in and then select **<inject key="AzureAdUserEmail"></inject>** in the pop-up browser
 
     ![Picture](./images1/Ex6-15-ex6-2.png)
+
     ![Picture](./images1/Ex6-15-ex6-3.png)
 
    >**Note:** If you see an error as pop-ups blocked by browser, follow the steps from the below image
@@ -331,7 +333,7 @@ In this task, you will create an automation rule that triggers your newly create
 
       ![Picture](./images1/Ex6-40-condition.png)
 
-1. You will see an error message **Only playbooks configured for the incident trigger can be selected. If a playbook appears unavailable, it means Microsoft Sentinel does not have explicit permissions to run it**, click on **Manage playbook permissions**
+1. You will see an error message **Only playbooks configured for the incident trigger can be selected. If a playbook appears unavailable, it means Microsoft Sentinel does not have explicit permissions to run it**, click on **Manage playbook permissions.**
 
     ![Picture](./images1/Ex6-40-sentinel-rg1.png)
 
@@ -339,7 +341,7 @@ In this task, you will create an automation rule that triggers your newly create
 
     ![Picture](./images1/Ex6-40-sentinel-rg.png)
 
-1. Now, create the Automation rule again follow from step 2 in the same task and select the same options
+1. Now, create the Automation rule again follow from step 2 in the same task and select the same options.
 
 1. In the **Actions** section, click **+ Add action** and select **Run playbook** from the dropdown menu.
  In the **Run playbook** action:
@@ -364,7 +366,7 @@ In this task, you will create an automation rule that triggers your newly create
 
     ![Picture](./images1/322.png)
 
-1. Select **Powershell** in **Welcome to Azure Cloud Shell** box.
+1. Select **PowerShell** in **Welcome to Azure Cloud Shell** box.
 
     ![Picture](./images1/323.png)
 
@@ -380,17 +382,41 @@ In this task, you will create an automation rule that triggers your newly create
 
     ![Picture](./images1/326.png)
 
-1. Once cloudshell starts working then navigate to outlook and you will notice that got received.
+1. Once Cloud Shell starts working, navigate to **Incidents** under **Incidents & alerts** in the **Microsoft Defender** portal. You will notice an incident named **New CloudShell user**.
     
-    > **Note:** It may take more than 12 hours to get a mail, you can proceed with next task.
-
-    ![Picture](./images1/1212.png)
-    
-1. You will be noticing the incident in Incidents pane.
-
-    > **Note:** It may take more than 12 hours to get an incident, you can proceed with next task.
+    > **Note:** It may take up to 12 hours for the incident to be triggered and appear in the Microsoft Defender portal. You do not need to wait please proceed to the next steps.
 
     ![Picture](./images1/2121.png)
+
+1. Navigate to the Outlook portal using the link below and click on **sign in.**
+
+    ```
+    https://www.microsoft.com/en-us/microsoft-365/outlook/log-in
+    ```
+
+    ![Image](./images/900.png "Enter Email")
+
+1. On the **Sign in** tab you will see the login screen, in that enter the following email/username, and click on **Next (2)**. 
+
+   * **Email/Username**: <inject key="AzureAdUserEmail"></inject> **(1)**
+   
+      ![Image](./images/901.png "Enter Email")
+     
+1. Now enter the following Temporary Access Pass and click on **Sign in (2)**.
+   
+   * **Temporary Access Pass**: <inject key="AzureAdUserPassword"></inject> **(1)**
+
+      ![](../Day1/images/GS-0.png)
+
+1. If you see the pop-up **Stay Signed in?**, select **No**.
+
+   ![Image](./images/GettingStarted-07.png)
+    
+1. You will have received an email in **Outlook**.
+
+    > **Note:** It may take up to 12 hours for the incident to be triggered. Since the incident is what activates the playbook that sends the email, you may not receive it immediately. If you do not see the email, you can still proceed to the next task.
+
+    ![Picture](./images1/1212.png)
 
 ## Summary
 

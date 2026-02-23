@@ -5,20 +5,20 @@
 
 ## Overview 
 
-In this lab, you will configure Microsoft Sentinel to perform Entity Behavior Analytics to discover anomalies and provide entity analytics pages. By enabling UEBA, Sentinel will profile users, hosts, and service accounts, analyze behavioral patterns, and surface unusual activities for investigation. This enhances threat detection by identifying potential security issues that may not be detected by traditional alert rules.
+In this lab, you will configure Microsoft Sentinel to perform Entity Behaviour Analytics to discover anomalies and provide entity analytics pages. By enabling UEBA, Sentinel will profile users, hosts, and service accounts, analyze Behavioural patterns, and surface unusual activities for investigation. This enhances threat detection by identifying potential security issues that may not be detected by traditional alert rules.
 
 
 ## Lab Objectives
  In this lab, you will perform the following:
 
-- Task 1: Explore Entity Behavior 
+- Task 1: Explore Entity Behaviour 
 - Task 2: Confirm and review Anomalies Rules
 
-### Task 1: Explore Entity Behavior 
+### Task 1: Explore Entity Behaviour 
 
-In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
+In this task, you will explore Entity behaviour analytics in Microsoft Sentinel.
 
-1. In the Defender portal, mavigate to **Settings (2)** under **System (1)** and click on **Microsoft Sentinel (3)**
+1. In the Defender portal, navigate to **Settings (2)** under **System (1)** and click on **Microsoft Sentinel (3)**
 
     ![](./images/Ex1-05.png)
 
@@ -26,7 +26,7 @@ In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
 
     ![](./images/Ex4-00-1.png)
 
-1. On the **Microsoft Sentinel Workspace**, select **Entity behavior** from the from the drop down and then click on **Configure UEBA (2)**. 
+1. On the **Microsoft Sentinel Workspace**, select **Entity Behaviour** from the from the drop down and then click on **Configure UEBA (2)**. 
 
     ![](./images/Ex4-00-2.png)
 
@@ -82,7 +82,7 @@ In this task, you will confirm that Anomalies analytics rules are enabled.
 
     ![](./images/Ex4-10.png)
     
- 1. You can upgrade the Mode of the rule from **Flighting** to **Production** by changing the the *General* tab settings for therule and save the changes following the previous steps. The **Production** rule will become the **Flighting** rule afterwards.
+ 1. You can upgrade the Mode of the rule from **Flighting** to **Production** by changing the the *General* tab settings for the rule and save the changes following the previous steps. The **Production** rule will become the **Flighting** rule afterwards.
 
     ![](./images/Ex4-11.png)
 

@@ -53,7 +53,7 @@ In this task, you will connect the Threat Intelligence data connector in Microso
 
     - **Valid from:** Keep **today's date (6)**.
 
-    - **Valid untill:** Keep date of **next day (7)**.
+    - **Valid until:** Keep date of **next day (7)**.
 
     - **Source:** Should be **Microsoft Sentinel (8)**.
 
@@ -132,7 +132,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
     ![Picture](./images/Wb-0.png)
 
-1. Select **Edit** visible next to the barchart.
+1. Select **Edit** visible next to the bar chart.
 
     ![Picture](./images/Wb-2.png)
 
@@ -142,7 +142,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
     ![Picture](./images/Wb-1.png)
 
-1. Select the **+ Add (1)** below the barchart, then select **Add data source + visualization (2)**.
+1. Select the **+ Add (1)** below the bar chart, then select **Add data source + visualization (2)**.
 
     ![Picture](./images/Wb-5.png)
 
@@ -160,7 +160,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
     ![Picture](./images/Wb-6.png)
 
-1. Select the **+ Add (1)** below the barchart, then select **Add data source + visualization (2)**.
+1. Select the **+ Add (1)** below the bar chart, then select **Add data source + visualization (2)**.
 
     ![Picture](./images/Wb-5.png)
 
@@ -194,7 +194,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
         ![Picture](./images/Wb-11.png)
 
-1. Navigate back to the **Workbooks (1)** page in Defender potal, under **My orkbooks** tab, select the workbook you just created, **My Workbook (2)**.
+1. Navigate back to the **Workbooks (1)** page in Defender portal, under **My Workbooks** tab, select the workbook you just created, **My Workbook (2)**.
 
 1. On the right pane, select **View saved workbook (3)** to review your workbook.
 

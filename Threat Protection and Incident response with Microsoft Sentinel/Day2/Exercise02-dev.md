@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this exercise, you will develop advanced threat hunting capabilities using **Kusto Query Language (KQL)** across **Microsoft Sentinel's data lake**. You will start by understanding the structure and capabilities of the data lake tier for long-term storage and cost-effective querying. Next, you will craft sophisticated KQL queries to hunt for indicators of compromise, suspicious behaviors, and advanced attack patterns across multiple data sources. Finally, you will create hunting queries that can be saved and reused, establishing a repeatable threat hunting methodology for your security team.
+In this exercise, you will develop advanced threat hunting capabilities using **Kusto Query Language (KQL)** across **Microsoft Sentinel's data lake**. You will start by understanding the structure and capabilities of the data lake tier for long-term storage and cost-effective querying. Next, you will craft sophisticated KQL queries to hunt for indicators of compromise, suspicious behaviours, and advanced attack patterns across multiple data sources. Finally, you will create hunting queries that can be saved and reused, establishing a repeatable threat hunting methodology for your security team.
 
 ## Lab Objectives
 
@@ -33,7 +33,7 @@ In this task, you will explore the Microsoft Sentinel data lake structure to und
 
     ![Picture](./images1/Ex7-02.png)
 
-1. Navigate to the Azure portal and search for uniquenameSentinel Log analytics workspace and click on Logs
+1. Navigate to the Azure portal and search for uniquenameSentinel Log analytics workspace and click on Logs.
 
     ![Picture](./images1/Ex7-05-az.png)
 
@@ -64,7 +64,7 @@ In this task, you will create basic KQL queries to hunt for common security thre
 
 1. Click **Run (1)** to execute the query and review the results showing users with multiple failed login attempts.
 
-    > **Note:** This query may return no results since no alerts have have been created; it is intended solely for demonstration purposes.
+    > **Note:** This query may return no results since no alerts have been created; it is intended solely for demonstration purposes.
 
 1. Enter a query to detect **suspicious Azure Activity - unusual resource creation**:
 
@@ -96,7 +96,7 @@ In this task, you will create sophisticated queries that correlate data across m
     | where InitiatedBy.user.userPrincipalName in (SuspiciousUsers)
     | sort by TimeGenerated desc
     ```
-    > **Note:** This query may return no results since no alerts have have been created; it is intended solely for demonstration purposes.
+    > **Note:** This query may return no results since no alerts have been created; it is intended solely for demonstration purposes.
 
 1. Click **Run (1)** to identify actions from users with suspicious login patterns.
 
@@ -114,7 +114,7 @@ In this task, you will create sophisticated queries that correlate data across m
 
 1. Click **Run (2)** to identify potential lateral movement using suspicious ports.
 
-    > **Note:** This query may return no results since no alerts have have been created; it is intended solely for demonstration purposes.
+    > **Note:** This query may return no results since no alerts have been created; it is intended solely for demonstration purposes.
 
 1. Below query helps detect potential data exfiltration activity by identifying devices that are communicating with external (public) IP addresses
 
@@ -125,7 +125,7 @@ In this task, you will create sophisticated queries that correlate data across m
     ```
 
 1. Click **Run (3)** to detect large data transfers to external networks.
-    > **Note:** This query may return no results since no alerts have have been created; it is intended solely for demonstration purposes.
+    > **Note:** This query may return no results since no alerts have been created; it is intended solely for demonstration purposes.
 
 1. Below query helps identify high-severity security alerts that may be related to known malicious IP addresses from your threat intelligence feeds. It combines alert data with active threat intelligence to prioritize incidents that are more likely to represent real threats.
 
@@ -153,7 +153,7 @@ In this task, you will save your hunting queries as saved queries for future use
 
 1. Enter a query in the editor:
 
-    > **Note:** This query may return no results since no alerts have have been created; it is intended solely for demonstration purposes.
+    > **Note:** This query may return no results since no alerts have been created; it is intended solely for demonstration purposes.
 
     ```KQL
     SigninLogs
