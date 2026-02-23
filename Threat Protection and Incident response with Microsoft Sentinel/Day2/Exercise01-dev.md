@@ -384,7 +384,7 @@ In this task, you will create an automation rule that triggers your newly create
 
 1. Once Cloud Shell starts working, navigate to **Incidents** under **Incidents & alerts** in the **Microsoft Defender** portal. You will notice an incident named **New CloudShell user**.
     
-    > **Note:** It may take up to 12 hours for the incident to be triggered, as there can be a delay before it appears.
+    > **Note:** It may take up to 12 hours for the incident to be triggered and appear in the Microsoft Defender portal. You do not need to wait please proceed to the next steps.
 
     ![Picture](./images1/2121.png)
 
