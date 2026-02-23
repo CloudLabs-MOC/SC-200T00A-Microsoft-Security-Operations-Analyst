@@ -96,7 +96,7 @@ In this task, you will create sophisticated queries that correlate data across m
     | where InitiatedBy.user.userPrincipalName in (SuspiciousUsers)
     | sort by TimeGenerated desc
     ```
-    > **Note:** This query may return no results since no alerts have have been created; it is intended solely for demonstration purposes.
+    > **Note:** This query may return no results since no alerts have been created; it is intended solely for demonstration purposes.
 
 1. Click **Run (1)** to identify actions from users with suspicious login patterns.
 
