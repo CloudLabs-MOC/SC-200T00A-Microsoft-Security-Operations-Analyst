@@ -412,7 +412,7 @@ In this task, you will create an automation rule that triggers your newly create
 
    ![Image](./images/GettingStarted-07.png)
     
-1. You will receive an email in **Outlook.**
+1. You will have received an email in **Outlook**.
 
     > **Note:** It may take up to 12 hours for the incident to be triggered. Since the incident is what activates the playbook that sends the email, you may not receive it immediately. If you do not see the email, you can still proceed to the next task.
 
