@@ -219,7 +219,7 @@ In this task, you will create an automation rule that automatically assigns inci
 
 1. On the **Create automation rule** page, enter the following details:
 
-    - **Automation rule name:** Enter **Auto-Assign Ḥigh Serverity Incidents (1)**
+    - **Automation rule name:** Enter **Auto-Assign Ḥigh Severity Incidents (1)**
     - **Trigger:** Select **When incident is created (2)** from the dropdown menu
 
         ![Picture](./images1/Ex6-03-ex6.png)
@@ -235,6 +235,7 @@ In this task, you will create an automation rule that automatically assigns inci
 1. In the **Actions** section, select **Assign owner (1)** from the dropdown menu. In the **Assign owner (1)** action:
 
     - **Assigned to:** <inject key="AzureAdUserEmail"></inject> (2)
+        
         ![Picture](./images1/Ex6-18-assign-2.png)
 
 1. Add another action by clicking **Change status (1)** and select **New (2)** from the dropdown menu and then **Apply (3)**
@@ -260,7 +261,7 @@ In this task, you will create a playbook using Azure Logic Apps to automate inci
     - **Name:** Enter **Incident-Notification-Playbook (3)**
     - **Enable diagnostics logs in Log Analytics:** Checked **(4)**
     - **Log Analytics workspace:** uniquenameSentinel **(5)**
-    - Click **Next:Connections>** **(6)**
+    - Click **Next: Connections>** **(6)**
 
         ![Picture](./images1/Ex6-26-create.png)
 
@@ -332,7 +333,7 @@ In this task, you will create an automation rule that triggers your newly create
 
       ![Picture](./images1/Ex6-40-condition.png)
 
-1. You will see an error message **Only playbooks configured for the incident trigger can be selected. If a playbook appears unavailable, it means Microsoft Sentinel does not have explicit permissions to run it**, click on **Manage playbook permissions**
+1. You will see an error message **Only playbooks configured for the incident trigger can be selected. If a playbook appears unavailable, it means Microsoft Sentinel does not have explicit permissions to run it**, click on **Manage playbook permissions.**
 
     ![Picture](./images1/Ex6-40-sentinel-rg1.png)
 
@@ -340,7 +341,7 @@ In this task, you will create an automation rule that triggers your newly create
 
     ![Picture](./images1/Ex6-40-sentinel-rg.png)
 
-1. Now, create the Automation rule again follow from step 2 in the same task and select the same options
+1. Now, create the Automation rule again follow from step 2 in the same task and select the same options.
 
 1. In the **Actions** section, click **+ Add action** and select **Run playbook** from the dropdown menu.
  In the **Run playbook** action:
@@ -365,7 +366,7 @@ In this task, you will create an automation rule that triggers your newly create
 
     ![Picture](./images1/322.png)
 
-1. Select **Powershell** in **Welcome to Azure Cloud Shell** box.
+1. Select **PowerShell** in **Welcome to Azure Cloud Shell** box.
 
     ![Picture](./images1/323.png)
 

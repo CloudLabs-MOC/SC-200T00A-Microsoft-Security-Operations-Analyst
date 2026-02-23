@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this exercise, you will develop advanced threat hunting capabilities using **Kusto Query Language (KQL)** across **Microsoft Sentinel's data lake**. You will start by understanding the structure and capabilities of the data lake tier for long-term storage and cost-effective querying. Next, you will craft sophisticated KQL queries to hunt for indicators of compromise, suspicious behaviors, and advanced attack patterns across multiple data sources. Finally, you will create hunting queries that can be saved and reused, establishing a repeatable threat hunting methodology for your security team.
+In this exercise, you will develop advanced threat hunting capabilities using **Kusto Query Language (KQL)** across **Microsoft Sentinel's data lake**. You will start by understanding the structure and capabilities of the data lake tier for long-term storage and cost-effective querying. Next, you will craft sophisticated KQL queries to hunt for indicators of compromise, suspicious behaviours, and advanced attack patterns across multiple data sources. Finally, you will create hunting queries that can be saved and reused, establishing a repeatable threat hunting methodology for your security team.
 
 ## Lab Objectives
 
@@ -33,7 +33,7 @@ In this task, you will explore the Microsoft Sentinel data lake structure to und
 
     ![Picture](./images1/Ex7-02.png)
 
-1. Navigate to the Azure portal and search for uniquenameSentinel Log analytics workspace and click on Logs
+1. Navigate to the Azure portal and search for uniquenameSentinel Log analytics workspace and click on Logs.
 
     ![Picture](./images1/Ex7-05-az.png)
 

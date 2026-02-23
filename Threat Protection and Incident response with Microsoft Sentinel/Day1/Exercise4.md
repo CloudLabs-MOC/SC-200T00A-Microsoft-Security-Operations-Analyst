@@ -78,7 +78,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
     - **Valid from:** Keep **today's date (6)**.
 
-    - **Valid untill:** Keep date of **next day (7)**.
+    - **Valid until:** Keep date of **next day (7)**.
 
     - **Source:** Should be **Microsoft Sentinel (8)**.
 

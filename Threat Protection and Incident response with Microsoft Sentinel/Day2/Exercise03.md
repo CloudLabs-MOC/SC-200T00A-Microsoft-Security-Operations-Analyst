@@ -15,9 +15,9 @@ In this exercise, you will configure **Microsoft Sentinel** to detect and respon
 
 ### Task 1: Create and export an analytical rule
 
-In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
+In this task, you will enable Entity behaviour analytics in Microsoft Sentinel.
 
-1. In the Microsoft Defender portal, select **Analytics (2)** under **Configuration (1)** from the left hand pane
+1. In the Microsoft Defender portal, select **Analytics (2)** under **Configuration (1)** from the left hand pane.
 
    ![Picture](../Day1/images/Ex4-00-4.png) 
 
@@ -69,7 +69,7 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
 ### Task 2: Connect VM to the Log Analytics workspace
 
-1. In search bar of the Azure portal, search for **Virtual Machines** and selct it.
+1. In search bar of the Azure portal, search for **Virtual Machines** and select it.
 
     ![](./images/112.png)
 

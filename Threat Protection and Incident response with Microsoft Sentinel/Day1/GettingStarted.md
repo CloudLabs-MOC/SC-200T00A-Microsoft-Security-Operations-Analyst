@@ -4,7 +4,7 @@
 
 ## Overview
  
-In this lab, you will get hands-on experience with Microsoft Sentinel. Participants will learn how to deploy Sentinel, integrate critical data sources, enrich security insights using threat intelligence and content packs, and leverage User and Entity Behavior Analytics (UEBA) to detect anomalous activities.
+In this lab, you will get hands-on experience with Microsoft Sentinel. Participants will learn how to deploy Sentinel, integrate critical data sources, enrich security insights using threat intelligence and content packs, and leverage User and Entity Behaviour Analytics (UEBA) to detect anomalous activities.
 By completing this lab, learners will be equipped to set up a robust security monitoring environment, detect potential threats, and initiate effective incident response measures.
 
 ## Objective
@@ -19,7 +19,7 @@ By the end of this lab, participants will be able to:
 
   - **Integrate threat intelligence** feeds and deploy relevant analytics/content from the Content Hub to enhance detection capabilities.
 
-  - **Enable and use UEBA** in Microsoft Sentinel to detect abnormal user and entity behaviors.
+  - **Enable and use UEBA** in Microsoft Sentinel to detect abnormal user and entity behaviours.
 
 Understand the role of each component in the threat detection and incident response workflow.
 
@@ -37,13 +37,13 @@ Participants should have:
 
 ## Architecture
 
-In this lab, you will use Microsoft Sentinel to collect, analyze, and respond to security events from multiple data sources. The workflow begins by deploying a Log Analytics workspace and enabling Microsoft Sentinel for centralized log collection. You will connect various security data sources using built-in data connectors, including Azure Active Directory, Microsoft 365 Defender, and other supported services.Threat intelligence will be integrated into Sentinel to enrich alerts with known malicious indicators, enhancing the accuracy of detections. You will explore the Content Hub to deploy prebuilt analytics rules, hunting queries, and workbooks for faster detection and visualization. Additionally, you will enable User and Entity Behavior Analytics (UEBA) to profile normal user activity and detect anomalies.
+In this lab, you will use Microsoft Sentinel to collect, analyze, and respond to security events from multiple data sources. The workflow begins by deploying a Log Analytics workspace and enabling Microsoft Sentinel for centralized log collection. You will connect various security data sources using built-in data connectors, including Azure Active Directory, Microsoft 365 Defender, and other supported services. Threat intelligence will be integrated into Sentinel to enrich alerts with known malicious indicators, enhancing the accuracy of detections. You will explore the Content Hub to deploy prebuilt analytics rules, hunting queries, and workbooks for faster detection and visualization. Additionally, you will enable User and Entity Behavior Analytics (UEBA) to profile normal user activity and detect anomalies.
 
 Throughout the lab, you will investigate generated incidents, run hunting queries, and use automated playbooks to respond to threats, simulating a complete security operations workflow from detection to remediation.
 
 ## Architecture Diagram
 
-![Image](./images/ArcDay1.png)
+![Image](./images/903.png)
 
 ## Explanation of Components
 
@@ -65,7 +65,7 @@ The architecture for this lab involves the following key components:
 1. **Content Hub:** A repository of packaged security solutions (workbooks, analytics rules, hunting queries, playbooks, data connectors) for specific products, threats, or industries.
    - Allows quick deployment of best-practice detections and visualizations. 
 
-1. **UEBA (User and Entity Behavior Analytics):** A Sentinel feature that builds behavioral profiles for users and entities based on ingested data.
+1. **UEBA (User and Entity Behaviour Analytics):** A Sentinel feature that builds behaviourl profiles for users and entities based on ingested data.
    - Detects anomalies by comparing current activity to baseline behavior.
    - Useful for detecting insider threats, compromised accounts, and suspicious activity.
 
@@ -119,18 +119,10 @@ Feel free to **start, restart, or stop (2)** your virtual machine as needed from
    * **Temporary Access Pass**: <inject key="AzureAdUserPassword"></inject> **(1)**
 
       ![](./images/GS-0.png) 
-
-1. If you see the pop-up Action Required, click **Ask Later**.
-
-   ![Image](./images/GettingStarted-08.png)
-
-   >**NOTE:** Do not enable MFA, select **Ask Later**.
      
 1. If you see the pop-up **Stay Signed in?**, select **No**.
 
    ![Image](./images/GettingStarted-06.png)
-
-1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
 
 1. If a **Welcome to Microsoft Azure** popup window appears, select **Maybe Later** to skip the tour.
 
