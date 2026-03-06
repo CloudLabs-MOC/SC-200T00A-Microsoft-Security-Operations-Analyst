@@ -1,5 +1,5 @@
 
-# Lab 04 - Exercise 2: Mitigate Attacks with Microsoft Defender for Endpoint (Ready-Only)
+# Lab 04 - Exercise 2: Mitigate Attacks with Microsoft Defender for Endpoint (Read-Only)
 
 ## Lab Scenario
 
