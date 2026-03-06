@@ -1,4 +1,4 @@
-# Lab 04 Exercise 1: Deploy Microsoft Defender for Endpoint (Ready-Only)
+# Lab 04 Exercise 1: Deploy Microsoft Defender for Endpoint (Read-Only)
 
 ## Lab Scenario
 
