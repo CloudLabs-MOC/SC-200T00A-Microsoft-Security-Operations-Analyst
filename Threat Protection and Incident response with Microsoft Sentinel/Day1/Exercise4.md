@@ -136,7 +136,7 @@ In this task, you will change the retention period for the SecurityEvent table.
 
    ![](./images/Ex3-09b-1.png)
 
-1. Select **180 days (1)** for **Total retention period**. Notice that **Total retention** is only **180 days (2)**, Same as Analytics retention and click on **Save (3)** to apply the changes. 
+1. Select **180 days (1)** for **Analytics retention**. Notice that **Total retention** is only **180 days (2)**, Same as Analytics retention and click on **Save (3)** to apply the changes. 
 
    ![](./images/Ex3-10.png)
 

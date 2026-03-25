@@ -105,21 +105,21 @@ In this task, you will connect the Azure Activity connector.
 
 1. In the **Basics** tab, select the ellipsis button **(...) (1)** under **Scope** and select your **subscription (2)** from the drop-down list and click **Select (3)**.
 
-    ![Picture](./images/Ex2-08.png)
+    ![Picture](./images/ex2_t3_s5.png)
 
 1. In the **Parameters** tab, click the ellipsis button **(...) (1)** next to **Primary Log Analytics workspace** and select your **workspace (2)** from the drop-down list and click **Select (3)**.
 
-    ![Picture](./images/Ex2-09.png)
+    ![Picture](./images/ex2_t3_s6.png)
 
 1. Select the **Remediation** tab and select the **Create a remediation task (1)** checkbox. This action will apply the policy to existing Azure resources.
 
 1. Select the **Review + Create (2)** button to review the configuration.
 
-    ![Picture](./images/Ex2-10.png)
+    ![Picture](./images/ex2_t3_s8.png)
 
 1. On **Review + create**, select **Create** to finish. 
 
-    ![Picture](./images/Ex2-11.png)
+    ![Picture](./images/ex2_t3_s9.png)
 
     > **Note:** It may take **15–20 minutes** for the **Azure Activity** data connector to show a **Connected** status after configuration.
 
