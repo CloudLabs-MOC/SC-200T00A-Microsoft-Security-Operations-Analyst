@@ -26,7 +26,7 @@ In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
 
     ![](./images/Ex4-00-1.png)
 
-1. On the **Microsoft Sentinel Workspace**, select **Entity behavior** from the from the drop down and then click on **Configure UEBA (2)**. 
+1. On the **Microsoft Sentinel Workspace**, select **Entity behavior analytics** from the from the drop down and then click on **Configure UEBA (2)**. 
 
     ![](./images/Ex4-00-2.png)
 
@@ -54,7 +54,7 @@ In this task, you will confirm that Anomalies analytics rules are enabled.
 
     ![](./images/Ex4-03.png)
 
-1. Review the *Configuration* tab information. Notice that you cannot change the **Anomaly score threshold (1)**, then select **Cancel (2)** in the top right corner to exit the **Analytics rule wizard**.
+1. Review the *Configuration* tab information. Notice that you cannot change the **Anomaly score threshold (1)**, then select **Cancel (2)** in the bottom right corner to exit the **Analytics rule wizard**.
 
     ![](./images/Ex4-04.png)
 
