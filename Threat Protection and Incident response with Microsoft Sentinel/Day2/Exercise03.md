@@ -67,23 +67,25 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
 ### Task 2: Connect VM to the Log Analytics workspace
 
-1. In the Search bar of the Azure portal, type **Log Analytics (1)**, then select **Log Analytics workspaces (2)**.
+1. In search bar of the Azure portal, search for **Virtual Machines** and select it.
 
-    ![](../Day1/images/Ex1-00.png)
+    ![](../Day2/images1/Ex1-00-a2.png)
 
-1. On the **Log Analytics workspaces** and select **uniquenameSentinel** workspace you created in task-1.
+1. Select the **WinVM** Virtual Machine.
 
     ![](./images/VM-2.png)
 
-1. In the workspace, select **Virtual machines (deprecated) (1)** from the left navigation pane under Classic, then locate and select **WinVM (2)** from the list displayed.
+1. Click on **Insights (now Monitor) (1)** under Monitoring , then select **Configure (2)** in **Unlock enhanced monitoring.**
 
     ![](./images/VM-0.png)
 
-1. Click **Connect** to link it to the workspace.
+1. Enable two checkboxes and click on **Review + enable.**
 
     ![](./images/VM-1.png)
 
-1. Wait until the **Status** shows **Connected**.
+1. Review the monitoring configuration settings and click **Enable** to complete the setup for the virtual machine.
+
+    ![](./images/VM-5.png)
 
 1. In the Search bar of the Azure portal, type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
