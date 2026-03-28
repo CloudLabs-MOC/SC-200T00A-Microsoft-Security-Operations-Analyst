@@ -73,7 +73,7 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
 1. Select the **WinVM** Virtual Machine.
 
-    ![](./images/VM-2.png)
+    ![](./images/e3_t2_s2.png)
 
 1. Click on **Insights (now Monitor) (1)** under Monitoring , then select **Configure (2)** in **Unlock enhanced monitoring.**
 
