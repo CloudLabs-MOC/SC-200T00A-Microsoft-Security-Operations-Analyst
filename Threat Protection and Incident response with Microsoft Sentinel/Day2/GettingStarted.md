@@ -40,7 +40,7 @@ Participants should have:
 
 ## Architecture
  
-In this lab, you will use Microsoft Sentinel to detect, investigate, and respond to security threats across your environment. Data from connected sources such as Microsoft Entra ID, Microsoft 365 Defender, and security appliances will be ingested into Sentinel, where Analytics Rules automatically identify suspicious activities and generate incidents for investigation. You will perform proactive threat hunting using Kusto Query Language (KQL) and enrich queries with Watchlists containing sensitive asset details or known threat indicators. Advanced features such as Content Hub for packaged detections, Threat Intelligence integration for external data enrichment. Finally, you will integrate Sentinel with GitHub or Azure DevOps repositories, enabling version-controlled collaboration on analytics rules, hunting queries, and security configurations, fostering a proactive, automated, and collaborative approach to enterprise threat protection and incident response.
+In this lab, you will use Microsoft Sentinel to detect, investigate, and respond to security threats across your environment. Data from connected sources such as Azure Active Directory, Microsoft 365 Defender, and security appliances will be ingested into Sentinel, where Analytics Rules automatically identify suspicious activities and generate incidents for investigation. You will perform proactive threat hunting using Kusto Query Language (KQL) and enrich queries with Watchlists containing sensitive asset details or known threat indicators. Advanced features such as Content Hub for packaged detections, Threat Intelligence integration for external data enrichment. Finally, you will integrate Sentinel with GitHub or Azure DevOps repositories, enabling version-controlled collaboration on analytics rules, hunting queries, and security configurations, fostering a proactive, automated, and collaborative approach to enterprise threat protection and incident response.
 
 ## Architecture Diagram
 
@@ -66,7 +66,7 @@ The architecture for this lab involves the following key components:
    - Linked with bookmarks for potential incidents.
    - Integration with MITRE ATT&CK mapping. 
 
-1. Watchlists: Watchlists are custom data tables you can upload (CSV/JSON) to enhance analytics rules, hunting queries, and incident investigations.
+1. **Watchlists:** Watchlists are custom data tables you can upload (CSV/JSON) to enhance analytics rules, hunting queries, and incident investigations.
    - Store IP ranges, user lists, or sensitive assets.
    - Join or filter data within KQL queries.
    - Dynamic update without modifying query logic.  
@@ -93,7 +93,7 @@ Your virtual machine is your workhorse throughout the workshop. The guide is you
 ## Exploring Your Lab Resources
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
 
-![Image](./images/GettingStarted-02.png)
+![Image](./images/environment_tab_new.png)
 
 ## Utilizing the Split Window Feature
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.

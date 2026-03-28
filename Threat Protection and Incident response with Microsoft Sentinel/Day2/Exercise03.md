@@ -43,7 +43,7 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
    
 	![Picture](./images/Ex1-04.png)
 
-1. In the Automated response section, keep everything as default and click on **Review and Create**.
+1. In the **Automated response** section, keep everything as default and click on **Review and Create**.
 
 9. On the *Review and create* tab, review the rule configuration, and then click **Save** to deploy your new rule to the Active rule set.
 
@@ -69,7 +69,7 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
 1. In search bar of the Azure portal, search for **Virtual Machines** and select it.
 
-    ![](../Day2/images1/Ex1-00-a2.png)
+    ![](../Day2/images/e3_t2_s1.png)
 
 1. Select the **WinVM** Virtual Machine.
 
@@ -177,7 +177,7 @@ In this task, you will create and investigate an incident.
 
 1. On the **Hunting Query incident** page, you will see the incident graph.
 
-   ![Picture](./images/Ex1-11.png)
+   ![Picture](./images/e3_t3_s9.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - If you receive a success message, you can proceed to the next task.
