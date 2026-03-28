@@ -89,7 +89,7 @@ In this task, you will connect the Azure Activity connector.
 
 1. On the left side menu, select **Microsoft Sentinel (1)** > **Content management (2)** and select **Content hub (3)** under the Configuration.
 
-   ![Picture 1](../Day1/images/Ex1.png)
+   ![Picture 1](../Day2/images/e6_t1_s2.png)
 
 1. You will notice a message may appear advising that new spaces are being created, as this may take up to 10 minutes.
 
@@ -113,19 +113,19 @@ In this task, you will connect the Azure Activity connector.
 
    ![Picture](../Day1/images/Ex2-08.png)
 
-1. In the **Parameters** tab, click the ellipsis button **(...) (1)** next to **Primary Log Analytics workspace** and select your **workspace (2)** from the drop-down list and click **Select (3)**.
+1. In the **Parameters** tab, click the ellipsis button **(...) ** next to **Primary Log Analytics workspace** and select your **workspace (1)** from the drop-down list and click **Select (2)**.
 
-   ![Picture](../Day1/images/Ex2-09.png)
+   ![Picture](../Day1/images/ex2_t3_s6.png)
 
 1. Select the **Remediation** tab and select the **Create a remediation task (1)** checkbox. This action will apply the policy to existing Azure resources.
 
 1. Select the **Review + Create (2)** button to review the configuration.
 
-   ![Picture](../Day1/images/Ex2-10.png)
+   ![Picture](../Day1/images/ex2_t3_s8.png)
 
 1. On **Review + create**, select **Create** to finish. 
 
-   ![Picture](../Day1/images/Ex2-11.png)
+   ![Picture](../Day1/images/ex2_t3_s9.png)
 
     > **Note:** It may take **15–20 minutes** for the **Azure Activity** data connector to show a **Connected** status after configuration.
 
@@ -211,74 +211,81 @@ In this task, you will create an automation rule that automatically assigns inci
 
     ![Picture](./images1/Ex6-13-create.png)
 
-1. Click on **Automation rule (1)** and select **+ Create(2)**.
+1. Click on **Automation rule (1)** and select **+ Create (2)** 
 
-    ![Picture](./images1/Ex6-12-automation.png)
+    ![Picture](./images/e1_t5_s2.png)
 
 1. On the **Create automation rule** page, enter the following details:
-    - **Select Standard Rule (1)** 
-    - **Automation rule name:** Enter **Auto-Assign Ḥigh Serverity Incidents (2)**
-    - **Trigger:** Select **When incident is created (3)** from the dropdown menu
 
-    ![Picture](./images1/Ex6-03-ex6.png)
+    - **Select rule type:** Select **Standard rule (1)**
+    - **Automation rule name:** Enter **Auto-Assign High Severity Incidents (2)**
+    - **Trigger:** Select **When incident is created (3)** from the dropdown menu
+    - **Workspace:** Select your **Microsoft Sentinel workspace (4)** from the dropdown
+    
+
+    ![Picture](./images/e1_t5_s3.png)
 
 1. Add a condition for severity. Click **+ Add (1)** and then select **Condition (And) (2)**:
 
-    - **Incident property:** Select **Severity (4)**
-    - **Operation:** Select **Equals (5)**
-    - **Value:** Select **Low**, **Medium** and **High** **(6)**
+    - **Property:** Select **Severity (3)**
+    - **Operator:** Select **Equals (4)**
+    - **Value:** Select **Low**, **Medium** and **High** **(5)**
 
-    ![Picture](./images1/Ex6-14-details-2.png)
+    ![Picture](./images/e1_t5_s4.png)
 
 1. In the **Actions** section, select **Assign owner (1)** from the dropdown menu. In the **Assign owner (1)** action:
 
     - **Assigned to:** <inject key="AzureAdUserEmail"></inject> (2)
-        ![Picture](./images1/Ex6-18-assign-2.png)
+    - Click on **+ Add action (3)**
 
-1. Add another action by clicking **Change status (1)** and select **New (2)** from the dropdown menu and then **Apply (3)**
+        ![Picture](./images/e1_t5_s5.png)
+    
+1. Add another action by clicking **Change status (1)** and select **New (2)** from the dropdown menu and then **Create (3)**
 
-    ![Picture](./images1/Ex6-19-tag.png)
+    ![Picture](./images/e1_t5_s6.png)
 
-1. The automation rule is now created. You should see it in the Automation rules list.
-
-    ![Picture](./images1/Ex6-18-assign-2-a.png)
+1. The automation rule is now created.
 
 ### Task 6: Create a Playbook for Automated Response
 
 In this task, you will create a playbook using Azure Logic Apps to automate incident response actions such as sending notifications and enriching incident data.
 
-1. Still in the **Automation** section, click **+ Create (1)** and select **Playbook with incident trigger (2)** from the dropdown menu.
+1. Still in the **Automation** section, click on **Playbooks tab (1)** 
+  
+   - Start creation: Click on **+ Create (2)**
+   - Select playbook type: Choose **Logic App playbook (3)**
+   - Choose trigger type: Select **Playbook with incident trigger (4)** from the dropdown menu.
 
-    ![Picture](./images1/Ex6-25-playbook.png)
+    ![Picture](./images/e1_t6_s1.png)
 
-1. On the **Create playbook** page, enter the following details:
-
-    - **Name:** Enter **Incident-Notification-Playbook (1)**
+1. On the **Deploy: Playbook Template** page, enter the following details:
+  
+    - **Playbook Name:** Enter **Incident-Notification-Playbook** (1)
     - **Subscription:** Default subscription **(2)**
     - **Resource group:** Select **sentinel-rg (3)**
-    - **Enable diagnostics logs in Log Analytics:** Checked **(4)**
+    - **Enable diagnostic settings:** Ensure this option is checked **(4)**
     - **Log Analytics workspace:** uniquenameSentinel **(5)**
-    - Click **Next:Connections>** **(6)**
+    - Click **Next** **(6)**
 
-        ![Picture](./images1/Ex6-26-create.png)
+        ![Picture](./images/e1_t6_s2.png)
 
-1. Click on Next, and then click and click on **Create playbook** and once the playbook is created click on **Close and go to playbook**
+1. Click on Next, and then click on **Create playbook** and once the playbook is created click on **Close and go to playbook**
 
-    ![Picture](./images1/Ex6-26-create-2-a.png)
+    ![Picture](./images/e1_t6_s3.1.png)
 
-    ![Picture](./images1/Ex6-26-create-2.png)
+    ![Picture](./images/e1_t6_s3.2.png)
 
-1. Click **+ New step (1)** to add the first action in the workflow.
+1. Click **+ New (1)** then select **Add an action (2)** to add the first action in the workflow.
 
-    ![Picture](./images1/Ex6-14-ex6.png)
+    ![Picture](./images/e1_t6_s4.png)
 
 1. Search for and select **Send an email (V2)** action from the **Office 365 Outlook** connector.
 
-    ![Picture](./images1/Ex6-15-ex6.png)
+    ![Picture](./images/e1_t6_s5.png)
 
 1. On **Create connection** page click on Sign in and then select **<inject key="AzureAdUserEmail"></inject>** in the pop-up browser
 
-    ![Picture](./images1/Ex6-15-ex6-2.png)
+    ![Picture](./images/e1_t6_s6.png)
     ![Picture](./images1/Ex6-15-ex6-3.png)
 
    >**Note:** If you see an error as pop-ups blocked by browser, follow the steps from the below image
@@ -294,118 +301,150 @@ In this task, you will create a playbook using Azure Logic Apps to automate inci
         User details: @{triggerBody()?['incidentUpdates']?['updatedBy']?['name']}
         Source: @{triggerBody()?['incidentUpdates']?['updatedBy']?['source']}
         ```
-        ![Picture](./images1/Ex6-19-ex6-0.png)
+        ![Picture](./images/e1_t6_s7.png)
 
 1. Click **Save (1)** to save the playbook workflow.
 
-    ![Picture](./images1/Ex6-19-ex6.png)
+    ![Picture](./images/e1_t6_s8.png)
 
 ### Task 7: Link Playbooks to Automation Rules
 
 In this task, you will create an automation rule that triggers your newly created playbook when CloudShell incidents are generated.
 
-1. Go to Microsoft Azure Portal
+1.  Before linking automation rules, we need to Assign Role at Resource Group Level in Azure
 
-1. Navigate to your Resource Group: **Select sentinel-rg**
+    - Go to your **Azure account (1)**
+      Log in to the Azure Portal: https://portal.azure.com
+    - Navigate to **Resource Groups (2)**
+    - From the left-hand menu, click on Resource groups
+    - Select your **Resource Group (3)**
+    - Open **Access Control (IAM) (4)** from left panel
+    - Click on **+ Add (5)**
+    - Select **Add role assignment (6)** from the dropdown
 
-    ![Picture](./images1/new1.png)
+     ![Picture](./images/IAM1.png)
 
-1. Click on **Access Control (IAM)**
+1.  On the Add role assignment → Role tab
 
-    ![Picture](./images1/new2.png)
+    - Search for the role: In the search bar, type  **Microsoft Sentinel Automation Contributor (1)**
+    - Select the role: From the list, choose **Microsoft Sentinel Automation Contributor (2)**
+    - Click **Next (3)**
 
-1. Click **+Add → Add role assignment**
+     ![Picture](./images/IAM2.png)
 
-    ![Picture](./images1/new3.png)
+1.  On the Add role assignment → Members tab
 
-1. Configure the role assignment:
+    - Assign access to: **Select User, group, or service principal (1)**
+    - Select members: Click on **+ Select members (2)**
+    - Search: Type **Azure Security Insights (3)** in the search bar
+    - Select: Choose **Azure Security Insights Application (4)** from the list
+    - Click **Select (5)** to confirm
+    - Click **Next(6)** until reached **Review and assign**
 
-    - Add **Logic App Contributor**
+     ![Picture](./images/IAM3.png)
 
-        ![Picture](./images1/new4.png)
+1.  On the Add role assignment → **Review and assign (1)** tab
 
-    - Select **Managed Identity(1)**, click on **Select Memebers**, select **Logic App(2)** from dropdown list, and **Incident Notification Playbook(3)**,and click on **Next**.
-       
-        ![Picture](./images1/new5.png)
+    - Complete assignment: Click **Review + assign (2)** to finalize the role assignment
 
-    - Click Next: **Review + Assign**
-        
-        ![Picture](./images1/new6.png)
+     ![Picture](./images/IAM4.png)
 
-    - Perform the **+Add → Add role assignment** and add the **Microsoft Sentinel Automation Contributor(1)** and click on **Next(2)**.
-        
-        ![Picture](./images1/new7.png)
+1. Again go back to **Access Control (IAM)** from left panel , Click on **+ Add** and Select **Add role assignment** from the dropdown
 
-    - Select **Managed Identity(1)**, click on **Select Members** , Select **Logic App(2)** from dropdown list,and **Incident Notification Playbook(3)**,and click on **Next**.
+1. On the Add role assignment → Role tab
 
-        ![Picture](./images1/new8.png)
+    - Search for the role: In the search bar, type  **Microsoft Sentinel Automation Contributor (1)**
+    - Select the role: From the list, choose **Microsoft Sentinel Automation Contributor (2)**
+    - Click **Next (3)**
 
-    - Click Next: **Review + Assign**
+     ![Picture](./images/IAM2.png)
 
-        ![Picture](./images1/new9.png)
+1. On the Add role assignment → **Members tab(1)**
 
-    - Add **Microsoft Sentinel Automation Contributior(1)** again and click on **Next(2)**.
+    - Assign access to: **Managed identity (2)**
+    - Select members: Click on **+ Select members (3)**
+    - Subscription: Select your **Subscription (4)**
+    - Managed identity type: Choose **Logic app (5)**
+    - Select identity: Click on **Incident-Notification-Playbook (6)**
+    - Click **Select (7)** to confirm
+    - Click **Next(8)** until reached **Review and assign**
 
-        ![Picture](./images1/new10.png)
+     ![Picture](./images/IAM5.png) 
 
-    - Select **User, group or service principal(1)** option, Click on **Select Members** and Search for **Azure Security Insights(2)** and click on **Select(3)** and **Next(4)**
-        
-        ![Picture](./images1/new11.png)
-    
-    - Click Next: **Review + Assign**
+1.  On the Add role assignment → **Review and assign (1)** tab
 
-        ![Picture](./images1/new12.png)
+    - Complete assignment: Click **Review + assign (2)** to finalize the role assignment
 
+     ![Picture](./images/IAM6.png)
+
+1. Again go back to **Access Control (IAM)** from left panel , Click on **+ Add** and Select **Add role assignment** from the dropdown
+
+1. On the Add role assignment → Role tab
+
+    - Search for the role: In the search bar, type  **Logic App Contributor (1)**
+    - Select the role: From the list, choose **Logic App Contributor (2)**
+    - Click **Next (3)**
+
+     ![Picture](./images/IAM7.png)
+
+1. On the Add role assignment → **Members tab(1)**
+
+    - Assign access to: **Managed identity (2)**
+    - Select members: Click on **+ Select members (3)**
+    - Subscription: Select your **Subscription (4)**
+    - Managed identity type: Choose **Logic app (5)**
+    - Select identity: Click on **Incident-Notification-Playbook (6)**
+    - Click **Select (7)** to confirm
+    - Click **Next(8)** until reached **Review and assign**
+
+     ![Picture](./images/IAM5.png) 
+     
+1.  On the Add role assignment → **Review and assign (1)** tab
+
+    - Complete assignment: Click **Review + assign (2)** to finalize the role assignment
+
+     ![Picture](./images/IAM9.png)
 
 1. Navigate back to **Microsoft Sentinel (1)** > **Configuration (2)** > **Automation (3)**.
 
-1. Click **Automation rule (1)** and select **+Create(2)** from the dropdown menu.
+1. Click **Automation rule (1)** and select **+ Create (2)** .
 
-    ![Picture](./images1/Ex6-38-create.png)
+    ![Picture](./images/e1_t7_s2.png)
 
 1. On the **Create automation rule** page, enter the following details:
 
-    - **Automation rule name:** Enter **Trigger Notification Playbook (1)**
-    - **Trigger:** Select **When incident is created (2)**
+    - **Select rule type:** Select **Standard rule (1)**
+    - **Automation rule name:** Enter **Trigger Notification Playbook (2)**
+    - **Trigger:** Select **When incident is created (3)** from the dropdown menu
+    - **Workspace:** Select your **Microsoft Sentinel workspace (4)** from the dropdown
 
-    ![Picture](./images1/Ex6-39-details.png)
+    ![Picture](./images/e1_t7_s3.png)
 
 1. In the **Conditions** section, click **+ Add condition (1)**:
 
-    - **If:** Select **Analytic rule name (2)**
-    - **Operation:** Select **Contains (3)**
+    - **Property:** Select **Analytic rule name (2)**
+    - **Operator:** Select **Contains (3)**
     - **Value:** Type **New CloudShell user (4)**
 
-    ![Picture](./images1/Ex6-40-condition.png)
+    ![Picture](./images/e1_t7_s4.png)
 
-1. You will see an error message **Only playbooks configured for the incident trigger can be selected. If a playbook appears unavailable, it means Microsoft Sentinel does not have explicit permissions to run it**, click on **Manage playbook permissions**
+1. In the **Actions** section, click **+ Add action** 
+    - Action type: Select **Run Logic Apps playbook (1)**
+    - Playbook: Choose **Incident-Notification-Playbook (2)** from the dropdown
 
-    ![Picture](./images1/Ex6-40-sentinel-rg1.png)
-
-1. On the **Manage permissions** page, select **sentinel-rg (1)** and click on **Apply (2)**
-
-    ![Picture](./images1/Ex6-40-sentinel-rg.png)
-
-1. Now, create the Automation rule again follow from step 2 in the same task and select the same options
-
-1. In the **Actions** section, click **+ Add action** and select **Run playbook** from the dropdown menu.
- In the **Run playbook** action:
-    - **Playbook:** Select **Incident-Notification-Playbook** from the dropdown
-    - Click **Add**
-
-   ![Picture](./images1/Ex6-42-playbook.png)
+   ![Picture](./images/e1_t7_s5.png)
 
 1. Configure the rule settings:
 
     - **Rule expiration:** Leave as **Indefinite**
     - **Order:** Enter **2** (this will run after the assignment rule)
-    - Click **Apply**
+    - Click **Create**
 
-    ![Picture](./images1/Ex6-42-playbook.png)
+    ![Picture](./images/e1_t7_s6.png)
 
 1. The automation rule is now created and linked to your playbook. Verify it appears in the automation rules list (1).
 
-    ![Picture](./images1/Ex6-44-list.png)
+    ![Picture](./images/e1_t7_s7.png)
 
 ## Summary
 

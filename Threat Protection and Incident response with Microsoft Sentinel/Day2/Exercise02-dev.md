@@ -33,9 +33,29 @@ In this task, you will explore the Microsoft Sentinel data lake structure to und
 
     ![Picture](./images1/Ex7-02.png)
 
-1. Navigate to the Azure portal and search for uniquenameSentinel Log analytics workspace and click on Logs
+1. Navigate to the **Azure** portal and search for **uniquenameSentinel (1)** , select **uniquenameSentinel (2)** under Resources
 
-    ![Picture](./images1/Ex7-05-az.png)
+   ![Picture](./images/logIAM1.png)
+
+1. Click on **Access control (IAM) (1)** then Click on **+ Add (2)** and Select **Add role assignment (3)** from the dropdown
+
+   ![Picture](./images/logIAM2.png)
+
+1. On the Add role assignment → **Role** tab,
+Search for the role in the search bar, type **Microsoft Sentinel Contributor (1)** .
+Select the role from the list, choose **Microsoft Sentinel Contributor (2)**
+
+  ![Picture](./images/logIAM3.png)
+
+1. On the Add role assignment , Navigate to **Members (1)** tab 
+   - **Assign access to:** Select **User, group, or service principal (2)**  
+   - **Members:** Click on **+ Select members (3)**
+   - In the Select members pane: in Select user **Choose your user account (4)** and Click **Select (5)** to confirm
+   - Click **Review + assign (6)** to finalize the role assignment
+
+  ![Picture](./images/logIAM4.png)
+
+1. Now navigate to the **Logs** section.
 
     ![Picture](./images1/Ex7-05-az2.png)
 
@@ -170,21 +190,22 @@ In this task, you will save your hunting queries as saved queries for future use
 1. In the **Save query** dialog, enter the following details:
 
     - **Query name:** Enter **Login Attempts Hunting Query (1)**
-    - **Description:** Sign In logs **(2)**
-    - **Category:** Select **Security (3)**
+    - **Save as legacy query:** Ensure this option is **checked (2)**
+    - **Legacy category:** Enter **Security (3)**
     - Click **Save (4)**
 
-    ![Picture](./images1/Ex7-16.png)
+    ![Picture](./images/e2_t4_s3.png)
 
-1. In the **Microsoft Sentinel** workspace, go to **Queries (1)**, search for **Login Attempts Hunting Query (2)**, and select it from the **Security** section **(3)** to view the results.
+1. In the **Microsoft Sentinel** workspace, go to **Queries (1)**, search for **Login Attempts Hunting Query (2)**, and select it to view the results.
 
-    ![Picture](./images1/Ex7-18.png)
+    ![Picture](./images/e2_t4_s4.png)
 
 1. Your saved hunting queries will appear in the list. Click on a saved query to **load and run** it.
 
 1. You can also **share saved queries** with your team by selecting the query and clicking **Share**.
 
     ![Picture](./images1/Ex7-20.png)
+
 
 1. **To create a hunting rule from a saved query**, select the saved query, click on **(…) (1)**, choose **New alert rule (2)**, and then select **Create Azure Monitor alert (3)** to convert the query into an analytics rule for automated detection.
 

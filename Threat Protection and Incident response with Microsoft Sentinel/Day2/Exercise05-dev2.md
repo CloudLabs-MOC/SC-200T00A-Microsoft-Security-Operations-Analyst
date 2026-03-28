@@ -10,13 +10,13 @@ In this comprehensive lab exercise, you will leverage **Jupyter notebooks** inte
 
 In this lab, you will perform the following:
 
-- Task 1: Access and Configure Jupyter Notebooks in Microsoft Sentinel
+- Task 1: Create Azure Machine Learning Workspace
 - Task 2: Create and Configure Your First Notebook
 - Task 3: Initialize MSTICPy and Connect to Sentinel Workspace
 
-### Task 1: Access and Configure Jupyter Notebooks in Microsoft Sentinel
+### Task 1: Create Azure Machine Learning Workspace
 
-In this task, you will access the Microsoft Sentinel notebook environment and configure the necessary resources for threat hunting.
+In this task, you will create and configure an Azure Machine Learning workspace to enable advanced analytics and integration with Microsoft Sentinel.
 
 1. In the Azure portal search bar, type **Azure Machine Learning (1)** and select **Azure Machine Learning (2)** from the Services list.
 
@@ -41,6 +41,10 @@ In this task, you will access the Microsoft Sentinel notebook environment and co
 1. Click **Review + Create** and wait 3-5 minutes for the workspace to provision.
 
     ![Picture](./images1/Ex08-01c.png)
+
+1. Click **Create** and wait 3-5 minutes for the workspace to be created .
+
+    ![Picture](./images/e5_t1_s5.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - If you receive a success message, you can proceed to the next task.
@@ -87,9 +91,6 @@ In this task, you will create a new notebook from a template and configure it fo
 
      ![Picture](./images1/Ex08-02-ea.png)
 
-1. Wait for the Compute session to start, it may take upto 10 minutes, once it is ready you can see that the compute session is ready
-
-     ![Picture](./images1/Ex08-02-e2.png)
 
 ### Task 3: Review the code and output for the Notebook [Read Only]
 
@@ -223,7 +224,7 @@ In this task, you will initialize the MSTICPy library and establish a secure con
 
 In this exercise, you successfully:
 
-- **Accessed and configured** Jupyter notebooks in Microsoft Sentinel
+- **Created and deployed** your Azure Machine Learning Workspace
 - **Created and deployed** your first notebook with proper environment setup
 - **Initialized MSTICPy** and established a secure connection to your Sentinel workspace
 - **Executed advanced threat hunting** queries using KQL within Python
