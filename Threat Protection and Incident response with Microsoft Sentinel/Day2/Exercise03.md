@@ -53,7 +53,7 @@ In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
    >**Note:** You might need to select the ellipsis icon **(...)** to see it.
 
-   ![Picture](./images/Ex1-05.png)
+    ![Picture](./images/Ex1-05.png)
 
 1. The rule is exported to a text file named *Azure_Sentinel_analytic_rule.json*.
 

@@ -45,7 +45,7 @@ In this task, you will explore the Microsoft Sentinel data lake structure to und
 Search for the role in the search bar, type **Microsoft Sentinel Contributor (1)** .
 Select the role from the list, choose **Microsoft Sentinel Contributor (2)**
 
-  ![Picture](./images/logIAM3.png)
+   ![Picture](./images/logIAM3.png)
 
 1. On the Add role assignment , Navigate to **Members (1)** tab 
    - **Assign access to:** Select **User, group, or service principal (2)**  
@@ -53,7 +53,7 @@ Select the role from the list, choose **Microsoft Sentinel Contributor (2)**
    - In the Select members pane: in Select user **Choose your user account (4)** and Click **Select (5)** to confirm
    - Click **Review + assign (6)** to finalize the role assignment
 
-  ![Picture](./images/logIAM4.png)
+     ![Picture](./images/logIAM4.png)
 
 1. Now navigate to the **Logs** section.
 
@@ -62,6 +62,7 @@ Select the role from the list, choose **Microsoft Sentinel Contributor (2)**
 1. Select the **Logs** option under **General** on the left hand menu and **Close** all the **pop-ups** if they appear.
 
     ![Picture](./images1/Ex7-06-aza.png)
+
     ![Picture](./images1/Ex7-06-azb.png)
 
 1. Ensure you are in **KQL mode (1)** for writing queries. The query editor provides syntax highlighting and query assistance.
@@ -98,6 +99,7 @@ In this task, you will create basic KQL queries to hunt for common security thre
     ```
 
 1. Click **Run (2)** to execute the query.
+
     > **Note:** This query may return no results since no Azure resources have been created; it is intended solely for demonstration purposes.
 
 ### Task 3: Build Advanced Hunting Queries with Multi-Source Correlation
@@ -116,6 +118,7 @@ In this task, you will create sophisticated queries that correlate data across m
     | where InitiatedBy.user.userPrincipalName in (SuspiciousUsers)
     | sort by TimeGenerated desc
     ```
+
     > **Note:** This query may return no results since no alerts have have been created; it is intended solely for demonstration purposes.
 
 1. Click **Run (1)** to identify actions from users with suspicious login patterns.
@@ -145,6 +148,7 @@ In this task, you will create sophisticated queries that correlate data across m
     ```
 
 1. Click **Run (3)** to detect large data transfers to external networks.
+
     > **Note:** This query may return no results since no alerts have have been created; it is intended solely for demonstration purposes.
 
 1. Below query helps identify high-severity security alerts that may be related to known malicious IP addresses from your threat intelligence feeds. It combines alert data with active threat intelligence to prioritize incidents that are more likely to represent real threats.
@@ -165,6 +169,7 @@ In this task, you will create sophisticated queries that correlate data across m
     ```
 
 1. Click **Run (4)** to correlate known threat indicators with generated alerts.
+
     > **Note:** This query may return no results since no alerts have been created; it is intended solely for demonstration purposes.
 
 ### Task 4: Save Hunting Queries for Reuse
@@ -194,7 +199,7 @@ In this task, you will save your hunting queries as saved queries for future use
     - **Legacy category:** Enter **Security (3)**
     - Click **Save (4)**
 
-    ![Picture](./images/e2_t4_s3.png)
+      ![Picture](./images/e2_t4_s3.png)
 
 1. In the **Microsoft Sentinel** workspace, go to **Queries (1)**, search for **Login Attempts Hunting Query (2)**, and select it to view the results.
 
