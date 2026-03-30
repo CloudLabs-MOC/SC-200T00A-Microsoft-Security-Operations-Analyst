@@ -186,7 +186,7 @@ In this task, you will create an analytics rule using a Microsoft-provided templ
     - **Alert automation rules:** Leave empty for now (you'll link playbooks via automation rules in later tasks)
     - Click **Next: Review + Create**
 
-    ![Picture](./images1/Ex6-09-create-00.png)
+      ![Picture](./images1/Ex6-09-create-00.png)
 
 1. Review the rule configuration:
 
@@ -195,7 +195,7 @@ In this task, you will create an analytics rule using a Microsoft-provided templ
     - **Severity:** Medium
     - Click **Save (2)** to create the analytics rule
 
-    ![Picture](./images1/Ex6-09-create.png)
+      ![Picture](./images1/Ex6-09-create.png)
 
 1. The analytics rule is now created and active. You should see a success message.
 
@@ -220,10 +220,9 @@ In this task, you will create an automation rule that automatically assigns inci
     - **Select rule type:** Select **Standard rule (1)**
     - **Automation rule name:** Enter **Auto-Assign High Severity Incidents (2)**
     - **Trigger:** Select **When incident is created (3)** from the dropdown menu
-    - **Workspace:** Select your **Microsoft Sentinel workspace (4)** from the dropdown
-    
+    - **Workspace:** Select your **Microsoft Sentinel workspace (4)** from the dropdown   
 
-    ![Picture](./images/e1_t5_s3.png)
+      ![Picture](./images/e1_t5_s3.png)
 
 1. Add a condition for severity. Click **+ Add (1)** and then select **Condition (And) (2)**:
 
@@ -231,14 +230,14 @@ In this task, you will create an automation rule that automatically assigns inci
     - **Operator:** Select **Equals (4)**
     - **Value:** Select **Low**, **Medium** and **High** **(5)**
 
-    ![Picture](./images/e1_t5_s4.png)
+      ![Picture](./images/e1_t5_s4.png)
 
 1. In the **Actions** section, select **Assign owner (1)** from the dropdown menu. In the **Assign owner (1)** action:
 
     - **Assigned to:** <inject key="AzureAdUserEmail"></inject> (2)
     - Click on **+ Add action (3)**
 
-        ![Picture](./images/e1_t5_s5.png)
+      ![Picture](./images/e1_t5_s5.png)
     
 1. Add another action by clicking **Change status (1)** and select **New (2)** from the dropdown menu and then **Create (3)**
 
@@ -256,7 +255,7 @@ In this task, you will create a playbook using Azure Logic Apps to automate inci
    - Select playbook type: Choose **Logic App playbook (3)**
    - Choose trigger type: Select **Playbook with incident trigger (4)** from the dropdown menu.
 
-    ![Picture](./images/e1_t6_s1.png)
+     ![Picture](./images/e1_t6_s1.png)
 
 1. On the **Deploy: Playbook Template** page, enter the following details:
   
@@ -267,7 +266,7 @@ In this task, you will create a playbook using Azure Logic Apps to automate inci
     - **Log Analytics workspace:** uniquenameSentinel **(5)**
     - Click **Next** **(6)**
 
-        ![Picture](./images/e1_t6_s2.png)
+      ![Picture](./images/e1_t6_s2.png)
 
 1. Click on Next, and then click on **Create playbook** and once the playbook is created click on **Close and go to playbook**
 
@@ -286,21 +285,27 @@ In this task, you will create a playbook using Azure Logic Apps to automate inci
 1. On **Create connection** page click on Sign in and then select **<inject key="AzureAdUserEmail"></inject>** in the pop-up browser
 
     ![Picture](./images/e1_t6_s6.png)
+
     ![Picture](./images1/Ex6-15-ex6-3.png)
 
-   >**Note:** If you see an error as pop-ups blocked by browser, follow the steps from the below image
+    >**Note:** If you see an error as pop-ups blocked by browser, follow the steps from the below image
 
-    ![Picture](./images1/Ex6-15-ex6-3-b.png) 
+     ![Picture](./images1/Ex6-15-ex6-3-b.png) 
 
 7. Enter the below details and click on **X**.
+
     - **To:** <inject key="AzureAdUserEmail"></inject>
+
     - **Subject:** Incident alert email
+
     - **Body:**
+
         ```
         Incident Name:@{item()}
         User details: @{triggerBody()?['incidentUpdates']?['updatedBy']?['name']}
         Source: @{triggerBody()?['incidentUpdates']?['updatedBy']?['source']}
         ```
+
         ![Picture](./images/e1_t6_s7.png)
 
 1. Click **Save (1)** to save the playbook workflow.
@@ -322,7 +327,7 @@ In this task, you will create an automation rule that triggers your newly create
     - Click on **+ Add (5)**
     - Select **Add role assignment (6)** from the dropdown
 
-     ![Picture](./images/IAM1.png)
+      ![Picture](./images/IAM1.png)
 
 1.  On the Add role assignment → Role tab
 
@@ -341,13 +346,13 @@ In this task, you will create an automation rule that triggers your newly create
     - Click **Select (5)** to confirm
     - Click **Next(6)** until reached **Review and assign**
 
-     ![Picture](./images/IAM3.png)
+      ![Picture](./images/IAM3.png)
 
 1.  On the Add role assignment → **Review and assign (1)** tab
 
     - Complete assignment: Click **Review + assign (2)** to finalize the role assignment
 
-     ![Picture](./images/IAM4.png)
+      ![Picture](./images/IAM4.png)
 
 1. Again go back to **Access Control (IAM)** from left panel , Click on **+ Add** and Select **Add role assignment** from the dropdown
 
@@ -357,7 +362,7 @@ In this task, you will create an automation rule that triggers your newly create
     - Select the role: From the list, choose **Microsoft Sentinel Automation Contributor (2)**
     - Click **Next (3)**
 
-     ![Picture](./images/IAM2.png)
+      ![Picture](./images/IAM2.png)
 
 1. On the Add role assignment → **Members tab(1)**
 
@@ -369,13 +374,13 @@ In this task, you will create an automation rule that triggers your newly create
     - Click **Select (7)** to confirm
     - Click **Next(8)** until reached **Review and assign**
 
-     ![Picture](./images/IAM5.png) 
+      ![Picture](./images/IAM5.png) 
 
 1.  On the Add role assignment → **Review and assign (1)** tab
 
     - Complete assignment: Click **Review + assign (2)** to finalize the role assignment
 
-     ![Picture](./images/IAM6.png)
+      ![Picture](./images/IAM6.png)
 
 1. Again go back to **Access Control (IAM)** from left panel , Click on **+ Add** and Select **Add role assignment** from the dropdown
 
@@ -385,7 +390,7 @@ In this task, you will create an automation rule that triggers your newly create
     - Select the role: From the list, choose **Logic App Contributor (2)**
     - Click **Next (3)**
 
-     ![Picture](./images/IAM7.png)
+      ![Picture](./images/IAM7.png)
 
 1. On the Add role assignment → **Members tab(1)**
 
@@ -397,13 +402,13 @@ In this task, you will create an automation rule that triggers your newly create
     - Click **Select (7)** to confirm
     - Click **Next(8)** until reached **Review and assign**
 
-     ![Picture](./images/IAM5.png) 
+      ![Picture](./images/IAM5.png) 
      
 1.  On the Add role assignment → **Review and assign (1)** tab
 
     - Complete assignment: Click **Review + assign (2)** to finalize the role assignment
 
-     ![Picture](./images/IAM9.png)
+      ![Picture](./images/IAM9.png)
 
 1. Navigate back to **Microsoft Sentinel (1)** > **Configuration (2)** > **Automation (3)**.
 
@@ -418,7 +423,7 @@ In this task, you will create an automation rule that triggers your newly create
     - **Trigger:** Select **When incident is created (3)** from the dropdown menu
     - **Workspace:** Select your **Microsoft Sentinel workspace (4)** from the dropdown
 
-    ![Picture](./images/e1_t7_s3.png)
+      ![Picture](./images/e1_t7_s3.png)
 
 1. In the **Conditions** section, click **+ Add condition (1)**:
 
@@ -426,13 +431,14 @@ In this task, you will create an automation rule that triggers your newly create
     - **Operator:** Select **Contains (3)**
     - **Value:** Type **New CloudShell user (4)**
 
-    ![Picture](./images/e1_t7_s4.png)
+      ![Picture](./images/e1_t7_s4.png)
 
-1. In the **Actions** section, click **+ Add action** 
+1. In the **Actions** section, click **+ Add action**:
+
     - Action type: Select **Run Logic Apps playbook (1)**
     - Playbook: Choose **Incident-Notification-Playbook (2)** from the dropdown
 
-   ![Picture](./images/e1_t7_s5.png)
+      ![Picture](./images/e1_t7_s5.png)
 
 1. Configure the rule settings:
 
@@ -440,7 +446,7 @@ In this task, you will create an automation rule that triggers your newly create
     - **Order:** Enter **2** (this will run after the assignment rule)
     - Click **Create**
 
-    ![Picture](./images/e1_t7_s6.png)
+      ![Picture](./images/e1_t7_s6.png)
 
 1. The automation rule is now created and linked to your playbook. Verify it appears in the automation rules list (1).
 
