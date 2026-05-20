@@ -18,8 +18,8 @@ In this task, you will deploy and configure the Azure Connected Machine agent on
 
 1. If you are not logged in already, click on the Azure portal shortcut that is available on the desktop and log in with the Azure credentials below.
 
-    * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
-    * Azure Temporary Access Pass: <inject key="AzureAdUserPassword"></inject>
+    * **Azure Username/Email**: <inject key="AzureAdUserEmail"></inject> 
+    * **Azure Temporary Access Pass**: <inject key="AzureAdUserPassword"></inject>
 
 1. In the **search resources, services and docs bar (1)**, type **Azure arc** and select **Azure arc (2)** from Services, as shown below:
    

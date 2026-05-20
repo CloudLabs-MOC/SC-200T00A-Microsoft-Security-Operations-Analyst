@@ -6,7 +6,7 @@
 
 In this lab, you will learn how to respond to security alerts using Microsoft Defender for Cloud. 
 
-As a Security Operations Analyst, you'll explore regulatory compliance, review security posture management, and practice mitigating security alerts.
+As a Security Operations Analyst, you will explore regulatory compliance, review security posture management, and practice mitigating security alerts.
 
    > **Note:** Please perform this lab in the SmartHotelHost VM (Lab VM).
 
@@ -50,7 +50,7 @@ In this task, you will review cloud security posture management.
 
    >**Note:** The Secure Score information can take 24 hours to populate. If you do not see any data, please check back later.
 
-1. Navigate back to the Microsoft Defender for Cloud page and on the left menu Under *Cloud Security*, select **Security posture**.
+1. Navigate back to the Microsoft Defender for Cloud page and on the left menu Under **Cloud Security**, select **Security posture**.
 
    ![Picture 1](../Media/ch-2.0.png)
 
@@ -60,9 +60,10 @@ In this task, you will review cloud security posture management.
    
    > **Note:** The Secure score may initially be in a buffering state and may not display any value until the calculation is complete.
    
-1. Under *General*, select **Recommendations** in the portal menu.
+1. Under **General**, select **Recommendations** in the portal menu.
 
    ![Picture 1](../Media/ch-2.1.png)
+   >**Note:** The Recommandations information can take 24 hours to populate. If you do not see any data, please check back later.
 
 1. Explore the Recommendations provided.
 
@@ -81,15 +82,15 @@ In this task, you will load sample security alerts and review the alert details.
 
       > **Note:** This sample alert creation process may take a few minutes to complete, wait for the *"Successfully created sample alerts"* notification.
 
-1. Once completed, select **Refresh** to see the alerts appear under the *Security alerts* area.
+1. Once completed, select **Refresh** to see the sample alerts appear under the *Security alerts* area.
 
 1. Choose an interesting alert with a *Severity* of *High* and perform the following actions:
 
-    - Select the alert checkbox, and the alert detail pane should appear. Select **View full details**.
+    - Select the alert **(1)**, and the alert detail pane should appear. Select **View full details (2)**.
 
       ![Picture 1](../Media/L3T3S5.1-1301.png)
 
-    - Review and read the *Alert details* tab.
+    - Review and read the **Alert details** tab.
 
     - Select the **Take action** tab next to Alert details.
 

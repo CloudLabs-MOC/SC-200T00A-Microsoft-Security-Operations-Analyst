@@ -32,15 +32,15 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 1. Close the **Windows Security Events via AMA** connector page if it is still open.
 
-1. In the *Sentinel* workspace, under **Content hub**, Search for **Common Event Format (1)** and select it.
+1. In the **Sentinel** workspace, under **Content hub**, Search for **Common Event Format (1)** and select it.
 
 1. Select the **Common Event Format (2)** and click on **Install (3)**.
 
    ![](../Media/L5T1S3-1301.png)
 
-1. Once the **Common Event Format** is installed, clck on **Manage**.
+1. Once the **Common Event Format** is installed, click on **Manage**.
 
-1. Select **Common Event Format (CEF) via AMA (1)** connector from the list, and click oon **Open connector page (2)**.
+1. Select **Common Event Format (CEF) via AMA (1)** connector from the list, and click on **Open connector page (2)**.
 
    ![](../Media/L5T1S5-1301.png)
 
@@ -62,15 +62,19 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 1. Go back to the WIN1 virtual machine.
 
-1. Launch Windows PowerShell as Administrator by right clicking the Start menu icon and selecting **Windows PowerShell (Admin)**.
-1. Paste the command which we copied from the Native SSH window
+1. Right-click the Windows Start **(1)** button and select **Windows PowerShell (Admin) (2)**.
+
+   ![](../Media/l8e1-11.png)
+
+1. Paste the command which we copied from the Native SSH window in step 9.
+
 1. Enter **yes** to confirm the connection and then type the user's **password provided under Resource group: LIN1** in the Environment tab of Lab Guide and press **enter**. Your screen should look something like this:
 
    ![linux login](../Media/ch-4.5.png)
 
    > **Note**: When a command prompts for a password, the characters are hidden for security. You can simply type your password and press Enter, even though nothing appears on the screen.
 
-1. Paste command **1.2 Install the CEF collector on the Linux machine** you have copied in earlier step. 
+1. Paste command to **Install the CEF collector on the Linux machine** you have copied in step 6. 
 
    ![ConnectorScript](../Media/ConnectorScriptupdated.png)
 
