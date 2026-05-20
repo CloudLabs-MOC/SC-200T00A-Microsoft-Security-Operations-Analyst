@@ -43,13 +43,13 @@ Once you're ready to dive in, your virtual machine and lab guide will be right a
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![](../Media/ee14.png)
+![](../Media/envtab_newUI.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![](../Media/ee15.png)
+![](../Media/Split_window.png)
 
 ## Managing Your Virtual Machine
  
@@ -67,7 +67,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 1. In the LabVM, click on the **Azure portal** shortcut of the Microsoft Edge browser from the desktop.
 
-   ![](../Media/ee21.png)
+   ![](../Media/azureportal.png)
    
 1. On the **Sign in to Microsoft Azure** tab, you will see a login screen. Enter the following email/username and then click on **Next**. 
 

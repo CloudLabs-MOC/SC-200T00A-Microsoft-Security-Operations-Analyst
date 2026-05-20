@@ -52,7 +52,7 @@ In this task, you will connect the Microsoft Entra ID connector to Microsoft Sen
 
 In this task, you will create a Windows virtual machine in Azure.
 
-1. In the azure portal, Select **+ Create a Resource**. 
+1. In the azure portal, go to **Home** page and select **+ Create a Resource**. 
 
    ![](../Media/l8e1-1.png)
 
@@ -64,7 +64,7 @@ In this task, you will create a Windows virtual machine in Azure.
 
    ![](../Media/L4T2S3-2410.png)
 
-1. Open the *Plan* drop-down list and select **Windows 10 Enterprise, version 22H2 (1)**.
+1. Open the **Plan** drop-down list and select **Windows 10 Enterprise, version 22H2 (1)**.
 
 1. Select **Start with a pre-set configuration (2)** to continue.
 
@@ -88,7 +88,7 @@ In this task, you will create a Windows virtual machine in Azure.
     | Setting | Value |
     | --- | --- |
     | Image | **Windows 10 Enterprise, version 22H2 (5)**  | 
-    | Size| Should be selected as **Standard_B2s**. If it appears empty, select **See all sizes**, choose the **Standard_DS1_v2 (6)** click **Select**. |
+    | Size| Should be selected as **Standard_DS1_v2**. If not, select **See all sizes**, search and choose the **Standard_DS1_v2 (6)** then click **Select**. |
 
       ![](../Media/ch-2.9.2.png)
 
@@ -104,7 +104,7 @@ In this task, you will create a Windows virtual machine in Azure.
     
    ![](../Media/l8e1-9.png)
 
-1. Select **Create**. Wait for the Resource to be created, this may take a few minutes.
+1. Once the validation passed, select **Create**. Wait for the Resource to be created, this may take a few minutes.
 
    ![](../Media/l8e1-10.png)
 
@@ -146,31 +146,29 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
    ![](../Media/ee23.png)
 
-1. In the navigation pane under **Azure Arc resources** select **Machines (1)**
+1. On the **Azure Arc** page, select **Machines (1)** under **Infrastructue**, click on **+ Onboard/create (2)** and then **Onboard existing machine (3)**.
+    
+    ![Picture 1](../Media/UP_0023.png "search azure arc")
 
-1. Select **+ Onboard/Create (2)**, then select **Onboard existing machine (3)**.
+1. Under the **Basics** tab, fill in the following details:
+     
+   - Subscription: **Select your subscription**
+    
+   - Resource group: **RG-Defender (1)**
+  
+   - Region: Select **EAST US (2)**
+   
+   - Operating system: **Keep it as default**
 
-   ![](../Media/L1T1S3-2810.png)
+   - Leave other values as default and click on **Download and run script (3)**
 
-1. In the **Onboard existing machines with Azure Arc** page, select the **Default Subscription**, select the **RG-Defender (1)** Resource group under Project details
+     ![Picture 1](../Media/L2T3S19-2810.png)
 
-1. For *Region*, select **(US) East Us (2)** from the drop-down list.
+1. Scroll down and select the **Download** button.
 
-1. Review the Server details and Connectivity method options. Keep the default values and select **Next (3)** to get to the Tags tab.
+   ![Picture 1](../Media/secure21-1.png)
 
-    ![](../Media/L4T3S13-2810.png)
-
-1. Review the default available tags. Select **Next** to get to the Download and run script tab.
-
-   ![](../Media/L4T3S15-2810.png)
-
-1. Scroll down and select the **Download** button. **Hint:** if your browser blocks the download, take action in the browser to allow it.
-
-   ![](../Media/L4T3S16-2810.png)
-
-1. In Microsoft Edge Browser, select the ellipsis button (...) if needed and then select **Keep**.
-
-   ![](../Media/l8e121.png)
+   > **Note:** Select **Keep** when prompted in the pop-up.
     
 1. Right-click the Windows Start **(1)** button and select **Windows PowerShell (Admin) (2)**.
 
@@ -234,7 +232,7 @@ In this task, you will connect an Azure Windows virtual machine to Microsoft Sen
 
    ![](../Media/L4T4S2-1301.png)
 
-1. In the Microsoft Sentinel left menus, scroll down to the **Content management** section and select **Content Hub (1)**.
+1. In the Microsoft Sentinel left menu, scroll down to the **Content management** section and select **Content Hub (1)**.
 
 1. In the **Content hub**, search for the **Windows Security Events (2)** solution and select **Windows Security Events (3)** from the list.
 
@@ -257,12 +255,11 @@ In this task, you will connect an Azure Windows virtual machine to Microsoft Sen
 
    ![](../Media/ch-3.7.png)
 
-1. Expand **RG-AZWIN01**, then select **AZWIN01 (1)**, and click on **Next: Collect (2)**.
+1. Expand your **Subscription** then expand **RG-AZWIN01**, then select **AZWIN01 (1)**, and click on **Next: Collect (2)**.
 
    ![](../Media/L4T4S10-1301.png)
 
-
-1. Review the different Security Event collection option. Keep *All Security Events* and then select **Next: Review + create**.
+1. Review the different Security Event collection option. Keep **All Security Events** and then select **Next: Review + create**.
 
      ![](../Media/ch-3.9.png)
 
@@ -273,8 +270,6 @@ In this task, you will connect an Azure Windows virtual machine to Microsoft Sen
 1. Wait a minute and then select **Refresh** to see the new data collection rule listed.
 
     ![](../Media/UP_0021.png)
-
-
 
 ## Task 5: Connect a non-Azure Windows Machine
 

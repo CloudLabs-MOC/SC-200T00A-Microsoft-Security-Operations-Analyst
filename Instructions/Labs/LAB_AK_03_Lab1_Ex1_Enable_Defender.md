@@ -67,7 +67,9 @@ In this task, you will enable and configure Microsoft Defender for Cloud.
    
    ![Picture 1](../Media/UP_0005.png)
 
-1. Close the settings page by selecting the 'X' on the upper right of the page to go back to the **Environment settings (1)**.
+1. Close the settings page by selecting the 'X' on the upper right of the page to go back to the **Environment settings**.
+
+   ![Picture 1](../Media/ETS221.png)
 
 1. Select the **>** to the left of your **subscription (1)** and select the **workspace-<inject key="DeploymentID" enableCopy="false" />(2)** Log Analytics workspace you created earlier to review the available options and pricing.
 
@@ -93,10 +95,14 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
    ![Picture 1](../Media/ch-1.1.png)
 
-1. Click on **Download RDP file** and select **Keep** in the pop-up. hen click on **Open file** when the download completes.
+1. Click on **Download RDP file** and select **Keep** in the pop-up. Then click on **Open file** when the download completes.
 
    ![Picture 1](../Media/ee4.png)
    ![Picture 1](../Media/ch-1.3.1.png)
+
+1. Once downloaded, click on the **Open file**.
+
+   ![Picture 1](../Media/ETS231.png)
 
 1. Click on **Connect**.
 
@@ -104,7 +110,7 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
 1. Navigate to the **Environment** tab above lab guide and copy the VM Username and VM Password which is listed under **Resource Group: WIN-1**.
 
-   ![Picture 1](../Media/ee19.png)
+   ![Picture 1](../Media/ETS232.png)
 
 1. **Paste (1)** it in the login pop-up and click on **OK (2)**.
 
@@ -114,9 +120,11 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 
    ![Picture 1](../Media/secure18.png)
 
-1. Click on the Start button, search for **Hyper-V Manager** from the bottom Windows search bar, and select to open.
+1. Go to the **Start (1)** button in the VM, search for **Hyper-V Manager (2)** there and select it. 
 
-   ![Picture 1](../Media/UP_0009.png "Azure Portal")
+    ![Picture 1](../Media/upd-hyper-v-manager.png "Hyper-V Manager")
+
+   > **Note:** You can also open the **Hyper-V manager** by clicking on the icon that is present in the taskbar. 
 
 1. Click on **LABVM (1)**.
 
@@ -179,7 +187,7 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
     cd C:\Users\Administrator\Downloads
     ```
 
-      > **Important:** If you do not have this directory, it most likely means that you are on the wrong machine. Go back to the beginning of Task 4, change to WINServer and start over.
+      > **Important:** If you do not have this directory, it most likely means that you are on the wrong machine. Go back to the beginning of Task 3, change to WINServer and start over.
 
 1. In PowerShell, run the below **command (2)** to set the execution policy as unrestricted.
 
@@ -225,35 +233,48 @@ In this task, you will manually install the required agent on the Windows Server
 
 1. Select **+ Create** on **Data collection rules** page.
 
-   ![Picture 1](../Media/ch-1.6.png)
+   ![Picture 1](../Media/ETS241.png)
 
-1. Provide the following details and click on **Next: Resources (3)**:
+1. Provide the following details and click on **Next (3)**:
 
    - Rule Name: Enter **WINServer (1)**
    - Resource Group: Select **RG-Defender (2)**
    - Keep the default region
-   - Ensure the box for **Windows** is checked under Platform Type
 
-     ![Picture 1](../Media/secure24.png)
+     ![Picture 1](../Media/ETS242.png)
 
 1. In the **Resources** tab, click on **+ Add resources (1)**. In the **Select a scope** page, expand the *Scope* column for **RG-Defender**, then select **WINServer (Azure Arc) (2)** and select **Apply (3)**.
 
-   ![Picture 1](../Media/secure23-1.png)
+   ![Picture 1](../Media/ETS243.png)
 
    > **Note:** You may need to set the column filter for *Resource type* to *Server-Azure Arc* if **WINServer (Azure Arc)** is not displayed.
 
-1. Click on **Next: Collect and deliver**
-1. In the **Collect and deliver** tab, select **+ Add data source (1)**. In the **Add a data source** page, select **Performance Counters (2)** from *Data source type*.
+1. Click on **Next**.
 
-   ![Picture 1](../Media/secure25.png)
+   ![Picture 1](../Media/ETS244.png)
 
-1. Click the **Destination** tab, select **+ Add Destination (1)**. Select **Azure Monitor Logs (2)** in the **Destination Type** dropdown. Select your **workspace (3)** from the drop-down. Click on **Add data source (4)**.
+1. In the **Collect and deliver** tab, select **+ Add new data source**
 
-   ![Picture 1](../Media/L2T4S7-1301.png)
+   ![Picture 1](../Media/ETS245.png)
+
+1. In the **Add new data source** page, ensure below are selected and then click on **Next: Destination (3)**
+
+   - **Data source type**: Performance counters **(1)**
+   - **Performamce counter selection type**: Basic **(2)**.
+
+   ![Picture 1](../Media/ETS246.png)
+
+1. On the **Destination** tab, select **+ Add Destination (1)**. Ensure **Azure Monitor Metrics** in the **Destination Type** is selected. Then click on **Apply (2)**.
+
+   ![Picture 1](../Media/ETS248.png)
+
+1. Click on **Save** on the **Add new data source** page.
+
+   ![Picture 1](../Media/ETS249.png)
 
 1. Click on **Review + Create** and select **Create** after *Validation passed* is displayed.
 
-   ![Picture 1](../Media/ch-1.7.png)
+   ![Picture 1](../Media/ETS2411.png)
 
    > **Note:** The **Data Collection Rule** creation initiates the installation of the *AzureMonitorWindowsAgent* extension on **WINServer (Azure Arc)**.
 
