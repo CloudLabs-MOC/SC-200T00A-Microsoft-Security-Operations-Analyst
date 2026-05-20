@@ -24,13 +24,13 @@ You will learn how to collect Windows security event telemetry from both Azure v
 
 ## Task 1: Create a Microsoft Sentinel Workspace
 
+In this task, you will connect the Microsoft Entra ID connector to Microsoft Sentinel.
+
   > **Note:** Perform this task in **SmartHotelHost** VM (Lab VM). 
 
   > **Note:** While accessing Sentinel workspace if you see an error that the page was moved to Defender portal, click on the link on the top left side of the page to access the old experience and refresh your browser page. 
 
    ![](../Media/sentinel-error-1401.png) 
-
-In this task, you will connect the Microsoft Entra ID connector to Microsoft Sentinel.
 
  1. In the Search bar of the Azure portal, type **Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
@@ -48,9 +48,9 @@ In this task, you will connect the Microsoft Entra ID connector to Microsoft Sen
 
 ## Task 2: Create a Windows Virtual Machine in Azure
 
-  > **Note:** Perform this task in **SmartHotelHost** VM (Lab VM). 
-
 In this task, you will create a Windows virtual machine in Azure.
+
+  > **Note:** Perform this task in **SmartHotelHost** VM (Lab VM). 
 
 1. In the azure portal, go to **Home** page and select **+ Create a Resource**. 
 
