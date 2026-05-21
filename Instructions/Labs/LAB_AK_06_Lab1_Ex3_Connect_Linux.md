@@ -144,7 +144,6 @@ In this task, you will update the **Data Collection Rule (DCR)** created in the 
 
    ![](../Media/L5T3S1-1301.png)
 
-
 1. Select the **WINDCR2** data collection rule from the list.
 
     ![](../Media/L5T3S2.1-1301.png)  
