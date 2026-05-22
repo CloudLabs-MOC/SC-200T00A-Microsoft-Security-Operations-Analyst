@@ -61,7 +61,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 1. On **Intel management** page, click on **+ New (3)** under Indicator, then select **TI object (4)**.
 
-   ![](./images/Ex3-00.png)
+   ![](./images/image4.png)
 
 1. Review the different indicator types available in the ***Types*** dropdown. Select the **domain-name**. Enter your initials in the Domain box. You can use **onmicrosoft.com**.
 1. On **New TI objects** pane, enter the following details:
@@ -134,7 +134,7 @@ In this task, you will change the retention period for the SecurityEvent table.
 
 1. Click on **Data retention settings**
 
-   ![](./images/Ex3-09b-1.png)
+   ![](./images/image5.png)
 
 1. Select **180 days (1)** for **Total retention period**. Notice that **Total retention** is only **180 days (2)**, Same as Analytics retention and click on **Save (3)** to apply the changes. 
 

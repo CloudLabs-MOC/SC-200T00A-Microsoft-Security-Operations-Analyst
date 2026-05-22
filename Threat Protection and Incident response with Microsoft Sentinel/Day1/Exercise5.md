@@ -22,11 +22,11 @@ In this task, you will explore Entity behaviour analytics in Microsoft Sentinel.
 
     ![](./images/Ex1-05.png)
 
-1. Select the **Microsoft Sentinel Workspace** you created earlier.
+1. From the left pane, in **SIEM workspaces (1)**, select Microsoft Sentinel workspace **uniquenamesentinel (2)**.
 
     ![](./images/Ex4-00-1.png)
 
-1. On the **Microsoft Sentinel Workspace**, select **Entity Behaviour** from the from the drop down and then click on **Configure UEBA (2)**. 
+1. On the **Microsoft Sentinel Workspace** page, expand **Entity Behaviour analytics (1)** and from the drop down click on **Configure UEBA (2)**. 
 
     ![](./images/Ex4-00-2.png)
 
@@ -82,7 +82,7 @@ In this task, you will confirm that Anomalies analytics rules are enabled.
 
     ![](./images/Ex4-10.png)
     
- 1. You can upgrade the Mode of the rule from **Flighting** to **Production** by changing the the *General* tab settings for the rule and save the changes following the previous steps. The **Production** rule will become the **Flighting** rule afterwards.
+ 1. You can again upgrade the Mode of the rule from **Flighting** to **Production** by changing the the *General* tab settings for the rule and save the changes following the previous steps. The **Production** rule will become the **Flighting** rule afterwards.
 
     ![](./images/Ex4-11.png)
 
@@ -92,6 +92,6 @@ In this lab, you enabled UEBA in Microsoft Sentinel to profile entities, detect 
 
 ## You have successfully completed the lab!
 
-In this hands-on lab, **Threat Protection and Incident response with Microsoft Sentinel**, you successfully deployed Microsoft Sentinel, integrated key data sources, enriched insights with threat intelligence, and applied UEBA for anomaly detection. You are now equipped to build a robust security monitoring setup, detect potential threats, and respond effectively to incidents.
+In this hands-on lab, **Threat Protection and Incident response with Microsoft Sentinel within Unified Platform**, you successfully deployed Microsoft Sentinel, integrated key data sources, enriched insights with threat intelligence, and applied UEBA for anomaly detection. You are now equipped to build a robust security monitoring setup, detect potential threats, and respond effectively to incidents.
 
 
