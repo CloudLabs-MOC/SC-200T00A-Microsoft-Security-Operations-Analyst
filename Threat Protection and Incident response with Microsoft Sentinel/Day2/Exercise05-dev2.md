@@ -75,7 +75,7 @@ In this task, you will create a new notebook from a template and configure it fo
 
      ![Picture](./images1/Ex08-02-b.png)
 
-1. Leave the name of your notebook to default and the Azure Machine Learning workspace to **aml** and cick **Save** to save the notebook configuration to your ML workspace.
+1. Leave the name of your notebook to default and the Azure Machine Learning workspace to **aml** and click **Save** to save the notebook configuration to your ML workspace.
 
      ![Picture](./images1/Ex08-02-c.png)
 
