@@ -116,7 +116,7 @@ In this task, you will create an Azure DevOps repository.
    - **Source control:** Select **Azure DevOps (2)** from the dropdown menu.
    - Click on **Authorize (3)**.
    - **Organization**: Select the **organization (4)** you created earlier from the dropdown menu.
-   - **Project:** Select the Project you create4d earlier, **My Sentinel Content (5)**.
+   - **Project:** Select the Project you created earlier, **My Sentinel Content (5)**.
    - **Repository:** Select the Repository, **My Sentinel Content (6)**. 
    - **Branch:**  Select **refs/heads/main (7)** from the dropdown menu.
    - **Content types:** Select **Analytics rules** from the dropdown menu.
