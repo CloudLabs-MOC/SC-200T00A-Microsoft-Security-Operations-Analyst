@@ -66,7 +66,7 @@ The architecture for this lab involves the following key components:
    - Linked with bookmarks for potential incidents.
    - Integration with MITRE ATT&CK mapping. 
 
-1. Watchlists: Watchlists are custom data tables you can upload (CSV/JSON) to enhance analytics rules, hunting queries, and incident investigations.
+1. **Watchlists**: Watchlists are custom data tables you can upload (CSV/JSON) to enhance analytics rules, hunting queries, and incident investigations.
    - Store IP ranges, user lists, or sensitive assets.
    - Join or filter data within KQL queries.
    - Dynamic update without modifying query logic.  
@@ -93,7 +93,7 @@ Your virtual machine is your workhorse throughout the workshop. The guide is you
 ## Exploring Your Lab Resources
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
 
-![Image](./images/GettingStarted-02.png)
+![Image](./images/newenvtab.png)
 
 ## Utilizing the Split Window Feature
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.

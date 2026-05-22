@@ -26,13 +26,13 @@ In this task, you will connect the Threat Intelligence data connector in Microso
 
  1. On the left side menu, select **Microsoft Sentinel (1)** > **Content management (2)** and select **Content hub (3)** under the Configuration.
 
-     ![Picture 1](../Day1/images/p1t3s1.png)
+     ![Picture 1](../Day2/images/e6_t1_s2.png)
 
-1. In the search bar, type **Threat intelligence (1)**, select **Threat intelligence (2)** from the list, then click on **Install (3)**. 
+1. In the search bar, type **Threat intelligence (NEW) (1)**, select **Threat intelligence (NEW) (2)** from the list, then click on **Install (3)**. 
 
    ![](./images/Ex3-25.png)
 
-1. Navigate to Defender Portal, expand **Threat intelligence (1)** from the left hand menu and select **Intel management (2)**. 
+1. Navigate to Defender Portal, expand **Threat intelligence  (1)** from the left hand menu and select **Intel management (2)**. 
 
 1. On **Intel management** page, click on **+ New (3)** under Indicator, then select **TI object (4)**.
 
@@ -53,7 +53,7 @@ In this task, you will connect the Threat Intelligence data connector in Microso
 
     - **Valid from:** Keep **today's date (6)**.
 
-    - **Valid until:** Keep date of **next day (7)**.
+    - **Valid untill:** Keep date of **next day (7)**.
 
     - **Source:** Should be **Microsoft Sentinel (8)**.
 
@@ -128,11 +128,11 @@ In this task, you will create a new workbook with advanced visualizations.
 
     ![Picture](./images/Wb-8.png)
 
-1. Type **# My workbook (1)** in a new line on top of **## New workbook**, then scroll a bit to click **Done Editing (2)**.
+1. Type **# My workbook (1)** instead of **## New workbook**, then scroll a bit to click **Done Editing (2)**.
 
     ![Picture](./images/Wb-0.png)
 
-1. Select **Edit** visible next to the bar chart.
+1. Select **Edit** visible next to the barchart.
 
     ![Picture](./images/Wb-2.png)
 
@@ -142,9 +142,9 @@ In this task, you will create a new workbook with advanced visualizations.
 
     ![Picture](./images/Wb-1.png)
 
-1. Select the **+ Add (1)** below the bar chart, then select **Add data source + visualization (2)**.
+1. Select the **+ Add (1)** below the barchart, then select **Add data source + visualization (2)**.
 
-    ![Picture](./images/Wb-5.png)
+    ![Picture](./images/e6_t3_s9.png)
 
 1. Type **Heartbeat (1)** into the query box.
 
@@ -158,11 +158,13 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. Scroll down and select **Done Editing (6)** on the bottom menu.
 
-    ![Picture](./images/Wb-6.png)
+    ![Picture](./images/e6_t3_s15.1.png)
 
-1. Select the **+ Add (1)** below the bar chart, then select **Add data source + visualization (2)**.
+    ![Picture](./images/e6_t3_s15.2.png)
 
-    ![Picture](./images/Wb-5.png)
+1. Select the **+ Add (1)** below the barchart, then select **Add data source + visualization (2)**.
+
+    ![Picture](./images/e6_t3_s16.png)
 
 1. Type **SecurityAlert (1)** into the query box.
 
@@ -176,7 +178,9 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. Scroll down and select **Done Editing (6)** on the bottom menu, for the new *Editing query item: query - 3*.
 
-    ![Picture](./images/Wb-7.png)
+    ![Picture](./images/e6_t3_s22.png)
+
+    ![Picture](./images/e6_t3_s22.1.png)
 
 1. Select **Done Editing** in the Workbook's top command bar.
 
@@ -184,7 +188,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. Select the **Save** icon in the Workbook's top command bar.
 
-    ![Picture](./images/Wb-10.png)
+    ![Picture](./images/e6_t3_s24.png)
 
 1. On the **Save Workbook** pop-up, enter the following details:
 
@@ -194,7 +198,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
         ![Picture](./images/Wb-11.png)
 
-1. Navigate back to the **Workbooks (1)** page in Defender portal, under **My Workbooks** tab, select the workbook you just created, **My Workbook (2)**.
+1. Navigate back to the **Workbooks (1)** page in Defender potal, under **My Workbooks** tab, select the workbook you just created, **My Workbook (2)**.
 
 1. On the right pane, select **View saved workbook (3)** to review your workbook.
 
@@ -202,7 +206,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. Now, you will see the newly created workbook.    
 
-    ![Picture](./images/Wb-13.png)
+    ![Picture](./images/e6_t3_s28.png)
 
 
 ### Summary

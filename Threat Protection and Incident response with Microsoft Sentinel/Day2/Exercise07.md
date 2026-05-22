@@ -37,7 +37,7 @@ In this task, you will create an Azure DevOps repository.
 1. Open another tab in the browser and navigate to:
 
    ```
-   https:/aexprodcus1.vsaex.visualstudio.com/me?mkt=en-US
+   https://aex.dev.azure.com/me?mkt=en-US
    ```
 
 1. On the *We need a few more details* page, leave everything as default, then select **Continue**.
@@ -66,9 +66,9 @@ In this task, you will create an Azure DevOps repository.
 
    ![Picture](./images/Repo-13.png)
 
-1. On the **My Sentinel Content** project page, select **Repos (1)** from the left pane, then click **Initialize (2)** at the bottom of the page in the section **Initialize main branch with a README or gitignore**.
+1. On the **My Sentinel Content** project page, select **File (2) under Repos (1)** from the left pane, then click **Initialize (3)** at the bottom of the page in the section **Initialize main branch with a README or gitignore**.
 
-   ![Picture](./images/Repo-4.png)
+   ![Picture](./images/e7_t2_s7.png)
 
 1. Click on the **three vertical dots (1)** icon located at the top-right corner of the Files section and from the dropdown menu, select **Upload file(s) (2)** to add new files to the repository.
 
@@ -76,7 +76,7 @@ In this task, you will create an Azure DevOps repository.
 
 1. On Commit window, click **Browse...** to upload file.
 
-    ![Picture](./images/Ex4-02.png)
+    ![Picture](./images/e7_t2_s9.png)
 
 1. On the upload window, navigate to **Downloads (1)** path, and select the file **Azure_Sentinel_analytic_rule.json (2)** file and select **Open (3)**.
 
@@ -84,19 +84,19 @@ In this task, you will create an Azure DevOps repository.
 
 1. Once the file is uploaded, click on **Commit**.  
 
-    ![Picture](./images/Ex4-04.png)
+    ![Picture](./images/e7_t2_s11.png)
 
 1. Select **Azure DevOps** on the top left corner of the page.  This displays your organization and projects.
 
 1. Select **Organization settings** from the bottom left of the page.
 
-    ![Picture](./images/Repo-7.png)
+    ![Picture](./images/e7_t2_s13.png)
 
 1. Select **Policies (1)** under the *Security* area of the left blade.
 
 1. Toggle **On** **Third-party application access via OAuth (2)** under the **Application connection policies** section.
 
-   ![Picture](./images/Repo-8.png)
+   ![Picture](./images/e7_t2_s15.png)
 
 ### Task 3: Connect Sentinel to Azure DevOps
 
@@ -134,6 +134,4 @@ In this lab, you successfully exported an **analytical rule** from Microsoft Sen
    
 ## You have successfully completed the lab!
 
-In this hands-on lab **Threat Protection and Incident Response with Microsoft Sentinel- Day 2**, you have strengthened your expertise in Microsoft Sentinel’s threat detection, investigation, and automation capabilities. You worked with analytics rules, hunting queries, watchlists, advanced features, and repository integrations to create a comprehensive and proactive security monitoring environment. These skills will help you detect threats earlier, investigate incidents effectively, and streamline security operations for improved protection.
-
-
+In this hands-on lab **Threat Protection and Incident Response with Microsoft Sentinel within Unified Platform - Day 2**, you have strengthened your expertise in Microsoft Sentinel’s threat detection, investigation, and automation capabilities. You worked with analytics rules, hunting queries, watchlists, advanced features, and repository integrations to create a comprehensive and proactive security monitoring environment. These skills will help you detect threats earlier, investigate incidents effectively, and streamline security operations for improved protection.

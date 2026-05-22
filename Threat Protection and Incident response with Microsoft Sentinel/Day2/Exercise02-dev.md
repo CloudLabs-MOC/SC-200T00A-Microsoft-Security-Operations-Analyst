@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this exercise, you will develop advanced threat hunting capabilities using **Kusto Query Language (KQL)** across **Microsoft Sentinel's data lake**. You will start by understanding the structure and capabilities of the data lake tier for long-term storage and cost-effective querying. Next, you will craft sophisticated KQL queries to hunt for indicators of compromise, suspicious behaviours, and advanced attack patterns across multiple data sources. Finally, you will create hunting queries that can be saved and reused, establishing a repeatable threat hunting methodology for your security team.
+In this exercise, you will develop advanced threat hunting capabilities using **Kusto Query Language (KQL)** across **Microsoft Sentinel's data lake**. You will start by understanding the structure and capabilities of the data lake tier for long-term storage and cost-effective querying. Next, you will craft sophisticated KQL queries to hunt for indicators of compromise, suspicious behaviors, and advanced attack patterns across multiple data sources. Finally, you will create hunting queries that can be saved and reused, establishing a repeatable threat hunting methodology for your security team.
 
 ## Lab Objectives
 
@@ -33,15 +33,36 @@ In this task, you will explore the Microsoft Sentinel data lake structure to und
 
     ![Picture](./images1/Ex7-02.png)
 
-1. Navigate to the Azure portal and search for uniquenameSentinel Log analytics workspace and click on Logs.
+1. Navigate to the **Azure** portal and search for **uniquenameSentinel (1)** , select **uniquenameSentinel (2)** under Resources
 
-    ![Picture](./images1/Ex7-05-az.png)
+   ![Picture](./images/logIAM1.png)
+
+1. Click on **Access control (IAM) (1)** then Click on **+ Add (2)** and Select **Add role assignment (3)** from the dropdown
+
+   ![Picture](./images/logIAM2.png)
+
+1. On the Add role assignment → **Role** tab,
+Search for the role in the search bar, type **Microsoft Sentinel Contributor (1)** .
+Select the role from the list, choose **Microsoft Sentinel Contributor (2)**
+
+   ![Picture](./images/logIAM3.png)
+
+1. On the Add role assignment , Navigate to **Members (1)** tab 
+   - **Assign access to:** Select **User, group, or service principal (2)**  
+   - **Members:** Click on **+ Select members (3)**
+   - In the Select members pane: in Select user **Choose your user account (4)** and Click **Select (5)** to confirm
+   - Click **Review + assign (6)** to finalize the role assignment
+
+     ![Picture](./images/logIAM4.png)
+
+1. Now navigate to the **Logs** section.
 
     ![Picture](./images1/Ex7-05-az2.png)
 
 1. Select the **Logs** option under **General** on the left hand menu and **Close** all the **pop-ups** if they appear.
 
     ![Picture](./images1/Ex7-06-aza.png)
+
     ![Picture](./images1/Ex7-06-azb.png)
 
 1. Ensure you are in **KQL mode (1)** for writing queries. The query editor provides syntax highlighting and query assistance.
@@ -64,7 +85,7 @@ In this task, you will create basic KQL queries to hunt for common security thre
 
 1. Click **Run (1)** to execute the query and review the results showing users with multiple failed login attempts.
 
-    > **Note:** This query may return no results since no alerts have been created; it is intended solely for demonstration purposes.
+    > **Note:** This query may return no results since no alerts have have been created; it is intended solely for demonstration purposes.
 
 1. Enter a query to detect **suspicious Azure Activity - unusual resource creation**:
 
@@ -78,6 +99,7 @@ In this task, you will create basic KQL queries to hunt for common security thre
     ```
 
 1. Click **Run (2)** to execute the query.
+
     > **Note:** This query may return no results since no Azure resources have been created; it is intended solely for demonstration purposes.
 
 ### Task 3: Build Advanced Hunting Queries with Multi-Source Correlation
@@ -96,7 +118,8 @@ In this task, you will create sophisticated queries that correlate data across m
     | where InitiatedBy.user.userPrincipalName in (SuspiciousUsers)
     | sort by TimeGenerated desc
     ```
-    > **Note:** This query may return no results since no alerts have been created; it is intended solely for demonstration purposes.
+
+    > **Note:** This query may return no results since no alerts have have been created; it is intended solely for demonstration purposes.
 
 1. Click **Run (1)** to identify actions from users with suspicious login patterns.
 
@@ -114,7 +137,7 @@ In this task, you will create sophisticated queries that correlate data across m
 
 1. Click **Run (2)** to identify potential lateral movement using suspicious ports.
 
-    > **Note:** This query may return no results since no alerts have been created; it is intended solely for demonstration purposes.
+    > **Note:** This query may return no results since no alerts have have been created; it is intended solely for demonstration purposes.
 
 1. Below query helps detect potential data exfiltration activity by identifying devices that are communicating with external (public) IP addresses
 
@@ -125,7 +148,8 @@ In this task, you will create sophisticated queries that correlate data across m
     ```
 
 1. Click **Run (3)** to detect large data transfers to external networks.
-    > **Note:** This query may return no results since no alerts have been created; it is intended solely for demonstration purposes.
+
+    > **Note:** This query may return no results since no alerts have have been created; it is intended solely for demonstration purposes.
 
 1. Below query helps identify high-severity security alerts that may be related to known malicious IP addresses from your threat intelligence feeds. It combines alert data with active threat intelligence to prioritize incidents that are more likely to represent real threats.
 
@@ -145,6 +169,7 @@ In this task, you will create sophisticated queries that correlate data across m
     ```
 
 1. Click **Run (4)** to correlate known threat indicators with generated alerts.
+
     > **Note:** This query may return no results since no alerts have been created; it is intended solely for demonstration purposes.
 
 ### Task 4: Save Hunting Queries for Reuse
@@ -153,7 +178,7 @@ In this task, you will save your hunting queries as saved queries for future use
 
 1. Enter a query in the editor:
 
-    > **Note:** This query may return no results since no alerts have been created; it is intended solely for demonstration purposes.
+    > **Note:** This query may return no results since no alerts have have been created; it is intended solely for demonstration purposes.
 
     ```KQL
     SigninLogs
@@ -170,15 +195,15 @@ In this task, you will save your hunting queries as saved queries for future use
 1. In the **Save query** dialog, enter the following details:
 
     - **Query name:** Enter **Login Attempts Hunting Query (1)**
-    - **Description:** Sign In logs **(2)**
-    - **Category:** Select **Security (3)**
+    - **Save as legacy query:** Ensure this option is **checked (2)**
+    - **Legacy category:** Enter **Security (3)**
     - Click **Save (4)**
 
-        ![Picture](./images1/Ex7-16.png)
+      ![Picture](./images/e2_t4_s3.png)
 
-1. In the **Microsoft Sentinel** workspace, go to **Queries (1)**, search for **Login Attempts Hunting Query (2)**, and select it from the **Security** section **(3)** to view the results.
+1. In the **Microsoft Sentinel** workspace, go to **Queries (1)**, search for **Login Attempts Hunting Query (2)**, and select it to view the results.
 
-    ![Picture](./images1/Ex7-18.png)
+    ![Picture](./images/e2_t4_s4.png)
 
 1. Your saved hunting queries will appear in the list. Click on a saved query to **load and run** it.
 
@@ -186,9 +211,10 @@ In this task, you will save your hunting queries as saved queries for future use
 
     ![Picture](./images1/Ex7-20.png)
 
+
 1. **To create a hunting rule from a saved query**, select the saved query, click on **(…) (1)**, choose **New alert rule (2)**, and then select **Create Azure Monitor alert (3)** to convert the query into an analytics rule for automated detection.
 
-    ![Picture](./images/p2t4s7.png)
+    ![Picture](./images1/Ex7-22.png)
 
     ![Picture](./images1/Ex7-23.png)
 

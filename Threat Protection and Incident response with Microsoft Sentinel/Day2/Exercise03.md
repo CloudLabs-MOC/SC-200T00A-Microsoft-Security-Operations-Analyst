@@ -15,9 +15,9 @@ In this exercise, you will configure **Microsoft Sentinel** to detect and respon
 
 ### Task 1: Create and export an analytical rule
 
-In this task, you will enable Entity behaviour analytics in Microsoft Sentinel.
+In this task, you will enable Entity behavior analytics in Microsoft Sentinel.
 
-1. In the Microsoft Defender portal, select **Analytics (2)** under **Configuration (1)** from the left hand pane.
+1. In the Microsoft Defender portal, select **Analytics (2)** under **Configuration (1)** from the left hand pane
 
    ![Picture](../Day1/images/Ex4-00-4.png) 
 
@@ -43,47 +43,31 @@ In this task, you will enable Entity behaviour analytics in Microsoft Sentinel.
    
 	![Picture](./images/Ex1-04.png)
 
-1. In the Automated response section, keep everything as default and click on **Review and Create**.
+1. In the **Automated response** section, keep everything as default and click on **Review and Create**.
 
 9. On the *Review and create* tab, review the rule configuration, and then click **Save** to deploy your new rule to the Active rule set.
-
-   ![Picture](./images/p3t1s7.png)
-
-1. On the Analytics page, select the **Suspicious Resource deployment (1)** rule that you created.
-
-1. Select the **Export (2)** from the toolbar.
-
-   >**Note:** You might need to select the ellipsis icon **(...)** to see it.
-
-   ![Picture](./images/Ex1-05.png)
-
-1. The rule is exported to a text file named *Azure_Sentinel_analytic_rule.json*.
-
-   ![Picture](./images/Ex1-06.png)
-
-1. Select **Open file** below the name of the downloaded file and then select **More apps**.
-
-1. Select **Notepad** and then select **OK**.
-
-1. Review the Azure Resource Manager template and close it when done.
 
 ### Task 2: Connect VM to the Log Analytics workspace
 
 1. In search bar of the Azure portal, search for **Virtual Machines** and select it.
 
-    ![](./images/112.png)
+    ![](../Day2/images/e3_t2_s1.png)
 
-1. Select the Virtual Machine.
+1. Select the **WinVM** Virtual Machine.
 
-    ![](./images/113.png)
+    ![](./images/e3_t2_s2.png)
 
-1. Click on **Insights (1)** under **Monitoring** , then select **Configure (2)** in **Unlock enhanced monitoring.**
+1. Click on **Insights (now Monitor) (1)** under Monitoring , then select **Configure (2)** in **Unlock enhanced monitoring.**
 
-    ![](./images/111.png)
+    ![](./images/VM-0.png)
 
 1. Enable two checkboxes and click on **Review + enable.**
 
-    ![](./images/114.png)
+    ![](./images/VM-1.png)
+
+1. Review the monitoring configuration settings and click **Enable** to complete the setup for the virtual machine.
+
+    ![](./images/VM-5.png)
 
 1. In the Search bar of the Azure portal, type **Microsoft Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
@@ -175,8 +159,14 @@ In this task, you will create and investigate an incident.
 
 1. On the **Hunting Query incident** page, you will see the incident graph.
 
-   ![Picture](./images/Ex1-11.png)
+   ![Picture](./images/e3_t3_s9.png)
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+> - If you receive a success message, you can proceed to the next task.
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="802d33d4-17c0-46bd-8550-1cb3e6674d9b" />
 
 ## Summary
 In this exercise, you successfully created and exported an analytics rule, and investigated an incident. You have gained practical experience in configuring detection rules and managing security incidents within Sentinel.
