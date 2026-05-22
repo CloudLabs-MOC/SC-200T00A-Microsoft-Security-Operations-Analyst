@@ -128,7 +128,7 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
     >**Important:** It could take up to **10** minutes for the watchlist to appear. **Please continue with the next lab**. You can check in between and perform the steps below.
 
-1. You will be directed to the Advanced hunting page. In the query section, ensure the *_GetWatchlist('HighValueHosts')* **(1)** query is there by default, click on **Run query (2)**, and you will output in the **Result (3)** section.
+1. You will be directed to the Advanced hunting page. In the query section, ensure the *_GetWatchlist('HighValueHosts')* **(1)** query is there by default, click on **Run query (2)**, and you will see output in the **Result (3)** section.
     
     ![Picture](./images/Ex2-09.png)
 
