@@ -53,7 +53,7 @@ In this task, you will connect the Threat Intelligence data connector in Microso
 
     - **Valid from:** Keep **today's date (6)**.
 
-    - **Valid untill:** Keep date of **next day (7)**.
+    - **Valid until:** Keep date of **next day (7)**.
 
     - **Source:** Should be **Microsoft Sentinel (8)**.
 
@@ -198,7 +198,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
         ![Picture](./images/Wb-11.png)
 
-1. Navigate back to the **Workbooks (1)** page in Defender potal, under **My Workbooks** tab, select the workbook you just created, **My Workbook (2)**.
+1. Navigate back to the **Workbooks (1)** page in Defender portal, under **My Workbooks** tab, select the workbook you just created, **My Workbook (2)**.
 
 1. On the right pane, select **View saved workbook (3)** to review your workbook.
 
