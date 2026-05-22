@@ -83,6 +83,10 @@ In this task, you will connect the Microsoft Defender for Cloud connector.
 
 In this task, you will connect the Azure Activity connector.
 
+1. From the left navigation pane, click **Show navigation** to expand the full Microsoft Defender portal menu.
+
+    ![Picture](./images/image.png)
+
 1. On the left side menu, select **Microsoft Sentinel (1)** > **Content management (2)** and select **Content hub (3)** under the Configuration.
 
     ![Picture 1](./images/p1t3s1.png)

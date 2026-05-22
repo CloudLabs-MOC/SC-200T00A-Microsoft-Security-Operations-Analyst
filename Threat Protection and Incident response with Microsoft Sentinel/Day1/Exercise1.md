@@ -66,6 +66,8 @@ In this task, you will deploy Microsoft Sentinel to an existing Log Analytics wo
 
 1. Now you will see the **Getting started** page for Microsoft Sentinel.   
 
+    ![](./images/image1.png)
+
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - If you receive a success message, you can proceed to the next task.
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.

@@ -18,13 +18,13 @@ In this exercise, you will complete the following tasks:
     https://securitystore.microsoft.com/
     ```
 
-1. You will be navigated to Microsoft Security Store, search for **Microsoft Defender XDR solution for Sentinel**
+1. In the **Security Store** search bar, enter **Microsoft Defender XDR solution for Sentinel (1)**, then click the **Search (2)** icon to search for the solution.
 
-   ![](./images/l3t1s2.png)
+   ![](./images/image2.png)
 
-1. In the Solutions page, select the **Microsoft Defender XDR solution for Sentinel** tile
+1. From the **Solution recommendations** pane, select **Microsoft Defender XDR solution for Sentinel** to view the solution details and deployment options.
 
-   ![](./images/l3t1s3.png)
+   ![](./images/image3.png)
 
 1. Click on **Get Solution** in the *Microsoft Defender XDR solution for Sentinel* page. 
 
