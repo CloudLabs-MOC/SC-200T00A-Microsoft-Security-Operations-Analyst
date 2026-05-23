@@ -43,17 +43,19 @@ In this task, you will create a hunting query, bookmark a result, and create a L
 
    ![Picture](./images/Ex2-119.png)
 
-1. From the left navigation pane, select **Hunting (1)**. On the **Queries** tab **(2)**, click **+ New query (3)** to create a new hunting query.
+1. Open Microsoft Sentinel From the left-hand menu, click on **Hunting (1)** , from Access Queries tab select the **Queries (2)** tab 
 
-   ![Picture](./images1/Ex2-119a.png)
+   ![Picture](./images/e4_t1_s5.png)
 
 1. Select **Heartbeat Health Check (1)** query, click on the **ellipsis (...) (2)**, then select **+ Add to livestream (3)**.
 
    ![Picture](./images/Ex2-17.png)
 
-1. Review that the *Status* is now *Running*. This will be running every 30 seconds in the background, and you will receive a notification in the Azure Portal (bell icon) when a new result is found. Click on the refresh.
+1. You can observe that the query is **actively running**, as shown by the **execution notification** .
+Live stream results update in real time
+The result **count updates continuously** during execution .
 
-   ![Picture](./images/Ex2Hunt-0.png)
+   ![Picture](./images/e4_t1_s6.png)
 
 ### Task 2: Create a Watchlist
 
@@ -112,7 +114,7 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
       >**Note:** To upload file click on **Browse for files**, upload window will open. Navigate to **This PC-> Documents (1)** path, select the **HighValue.csv (2)** file, then click on **Open (3).**
 
-      ![Picture](./images/NewEx2-0.png)
+       ![Picture](./images/NewEx2-0.png)
 
 1. Review the settings you entered and select **Create**.
 
@@ -126,7 +128,7 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
     >**Important:** It could take up to **10** minutes for the watchlist to appear. **Please continue with the next lab**. You can check in between and perform the steps below.
 
-1. You will be directed to the Advanced hunting page. In the query section, ensure the *_GetWatchlist('HighValueHosts')* **(1)** query is there by default, click on **Run query (2)**, and you will output in the **Result (3)** section.
+1. You will be directed to the Advanced hunting page. In the query section, ensure the *_GetWatchlist('HighValueHosts')* **(1)** query is there by default, click on **Run query (2)**, and you will see output in the **Result (3)** section.
     
     ![Picture](./images/Ex2-09.png)
 
