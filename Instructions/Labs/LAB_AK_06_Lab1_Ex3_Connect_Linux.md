@@ -132,7 +132,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 1. Once the Data Collection Rule is created, you will be redirected back to the Syslog connector page.
 
-    ![](../Media/L5T2S11-1301.png)  
+    ![](../Media/L5T2S12.png)  
 
 ### Task 3: Configure Syslog facilities and severities using Data Collection Rules
 
