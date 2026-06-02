@@ -24,11 +24,7 @@ In this lab, you will perform the following tasks:
 
 In this task, you will connect a Linux host to Microsoft Sentinel with the Common Event Format (CEF) connector.
 
-   > **Note:** Ensure you are logged into Azure from the SmartHotelHost VM (Lab VM).
-
-   > **Note:** While accessing Sentinel workspace if you see an error that the page was moved to Defender portal, click on the link on the top left side of the page to access the old experience and refresh your browser page. 
-
-   ![](../Media/sentinel-error-1401.png) 
+   > **Note:** Ensure you are logged into Azure from the SmartHotelHost VM (Lab VM). 
 
 1. Close the **Windows Security Events via AMA** connector page if it is still open.
 
@@ -36,7 +32,9 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 1. Select the **Common Event Format (2)** and click on **Install (3)**.
 
-   ![](../Media/L5T1S3-1301.png)
+   ![](../Media/L5T1S3.png)
+
+   ![](../Media/L5T1S3ii.png)
 
 1. Once the **Common Event Format** is installed, click on **Manage**.
 
@@ -96,15 +94,17 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 1. Click on the **workspace-<inject key="DeploymentID" enableCopy="false" />** that we created earlier.
 
-   > **Note:** If you see an error that the page was moved to Defender portal, click on the link on the left top side to access the old experience and refresh the browser page. 
+1. Click on the **Click here to go to the Defender Portal** link on the Overview Page.
 
-      ![](../Media/sentinel-error-1401.png) 
+   ![](../Media/L4T4S3.png)
 
-1. Select **Content Hub (1)** under Content management from the left pane.
+1. Select **Content Hub (1)** under Content management located under **Microsoft Sentinel** from the left pane.
 
 1. Search for **Syslog (2)** and select **(3)** it. Once selected, click on **Install (4)**.
 
-   ![](../Media/L5T2S4-1301.png)  
+   ![](../Media/L5T2S4.png)
+
+   ![](../Media/L5T2S4ii.png) 
 
 1. Once the **Syslog** connector is installed, click on **Manage**.
 
@@ -112,23 +112,23 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
    ![](../Media/L5T2S6.1-1301.png)  
 
-1. Under **Configuration**, click on **+ Create data collection rule**.
+1. Under **Configuration (1)**, click on **+ Create data collection rule (2)**.
 
-   ![](../Media/L5T2S7-1301.png)  
+   ![](../Media/L4T4S7.png)  
 
 1. On the Create Data Collection Rule page, for the **Name**, enter **WINDCR2 (1)** and click on **Next: Resources (2)**.
 
-   ![](../Media/L5T2S8-1301.png)
+   ![](../Media/L5T2S9.png)
 
 1. On the **Resources** page, select the Lin-2 VM under the Lin-2 resource group, and click on **Next: Collect (2)**.
 
-   ![](../Media/L5T2S9-1301.png)
+   ![](../Media/L5T2S10.png)
 
 1. On the **Collect** page, keep everything as default and click on **Next: Review + create**.
 
 1. On the **Review + create** page, review the settings and click on **Create**.
 
-   ![](../Media/L5T2S10-1301.png)
+   ![](../Media/L5T2S11.png)
 
 1. Once the Data Collection Rule is created, you will be redirected back to the Syslog connector page.
 
