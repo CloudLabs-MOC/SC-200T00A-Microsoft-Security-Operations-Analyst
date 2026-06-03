@@ -260,9 +260,9 @@ In this task, you will manually install the required agent on the Windows Server
 1. In the **Add new data source** page, ensure below are selected and then click on **Next: Destination (3)**
 
    - **Data source type**: Performance counters **(1)**
-   - **Performamce counter selection type**: Basic **(2)**.
+   - **Performamce counter (1)**: Select all. **(2)**.
 
-   ![Picture 1](../Media/ETS246.png)
+      ![Picture 1](../Media/L2T4S7.png)
 
 1. On the **Destination** tab, select **+ Add Destination (1)**. Ensure **Azure Monitor Metrics** in the **Destination Type** is selected. Then click on **Apply (2)**.
 

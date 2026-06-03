@@ -219,11 +219,7 @@ In this task, you will install Azure Arc on an on-premises server to make onboar
 ## Task 4: Connect an Azure Windows virtual machine
 
 In this task, you will connect an Azure Windows virtual machine to Microsoft Sentinel.
-
-  > **Note:** While accessing Sentinel workspace if you see an error that the page was moved to Defender portal, click on the link on the top left side of the page to access the old experience and refresh your browser page.
-
-   ![](../Media/sentinel-error-1401.png) 
-
+ 
 1. In the Search bar of the Azure portal, type **Sentinel (1)**, then select **Microsoft Sentinel (2)**.
 
    ![](../Media/ee6.png)
@@ -232,17 +228,23 @@ In this task, you will connect an Azure Windows virtual machine to Microsoft Sen
 
    ![](../Media/L4T4S2-1301.png)
 
-1. In the Microsoft Sentinel left menu, scroll down to the **Content management** section and select **Content Hub (1)**.
+1. Click on the **Click here to go to the Defender Portal** link on the Overview Page.
 
-1. In the **Content hub**, search for the **Windows Security Events (2)** solution and select **Windows Security Events (3)** from the list.
+   ![](../Media/L4T4S3.png)
+
+1. In the Defender Portal, scroll down to the **Content management (2)** section under **Microsoft Sentinel (1)** and select **Content Hub (3)** from the left navigation pane.
+
+1. In the **Content hub**, search for the **Windows Security Events (4)** solution and select **Windows Security Events (5)** from the list.
+
+    ![](../Media/L4T4S4.png)
 
 1. On the **Windows Security Events** solution page select **Install (4)**.
 
-   ![](../Media/ch-3.6.png)
+   ![](../Media/L4T4S5.png)
 
 1. When the installation completes select **Manage**.
 
-   ![](../Media/l8e3-15.png)
+   ![](../Media/L4T4S6.png)
 
     >**Note:** The *Windows Security Events* solution installs both the *Windows Security Events via AMA* and the *Security Events via Legacy Agent* Data connectors, along with 2 Workbooks, 20 Analytic Rules, and 43 Hunting Queries.
 
@@ -250,26 +252,29 @@ In this task, you will connect an Azure Windows virtual machine to Microsoft Sen
 
    ![](../Media/l8e3-14.png)
     
-1. In the **Configuration section**, select the **Create data collection rule (1)**.
+1. In the **Configuration section (1)**, select the **Create data collection rule (2)**.
+
+   ![](../Media/L4T4S7.png)
+
 1. Enter **AZWINDCR (2)** for Rule Name, then select **Next: Resources (3)**.
 
-   ![](../Media/ch-3.7.png)
+   ![](../Media/L4T4S8.png)
 
 1. Expand your **Subscription** then expand **RG-AZWIN01**, then select **AZWIN01 (1)**, and click on **Next: Collect (2)**.
 
-   ![](../Media/L4T4S10-1301.png)
+   ![](../Media/L4T4S9.png)
 
 1. Review the different Security Event collection option. Keep **All Security Events** and then select **Next: Review + create**.
 
-     ![](../Media/ch-3.9.png)
+     ![](../Media/L4T4S10.png)
 
 1. Select **Create** to save the Data Collection Rule.
 
-    ![](../Media/ch-4.0.png)
+    ![](../Media/L4T4S11.png)
 
 1. Wait a minute and then select **Refresh** to see the new data collection rule listed.
 
-    ![](../Media/UP_0021.png)
+    ![](../Media/L4T4S12.png)
 
 ## Task 5: Connect a non-Azure Windows Machine
 
@@ -281,21 +286,21 @@ In this task, you will add an Azure Arc connected, non-Azure Windows virtual mac
 
 1. Under the **Configuration** section, edit the **AZWINDCR** *data collection rule* by selecting the *pencil* icon.
 
-   ![](../Media/l8e3-12.png)
+   ![](../Media/L4T5S2.png)
     
 1. Select **Next: Resources**, and expand your **Subscription** under **Scope** on the **Resources** tab.
 
 1. Expand **RG-Defender** (or the Resource Group your created), then select both the **WIN-xxxxxxxxxx (1)**, click on **Next: Collect> (2)**.
 
-    ![](../Media/ee9.png)
+    ![](../Media/L4T5S4.png)
 
 1. On the **Edit Data Collection Rule** page, then **Next: Review + create**.
 
-   ![](../Media/l8e3-10.png)
+   ![](../Media/L4T4S10.png)
 
 1. Once the validation has passed, click on **Create**.
 
-    ![](../Media/ch-4.2.png)
+    ![](../Media/L4T5S6.png)
 
 ## Summary
 
