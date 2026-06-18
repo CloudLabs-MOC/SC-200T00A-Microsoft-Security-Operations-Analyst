@@ -6,8 +6,11 @@
 ## Lab Objectives
 
 In this lab, you will perform:
+
 - **Task 1:** Create a Group in Microsoft Entra ID
+
 - **Task 2:** Apply Microsoft Defender XDR for Office 365 to present security policies
+
 - **Task 3:** Preparing the Microsoft Defender XDR workspace
     
 ## Estimated Timing: 90 Minutes
@@ -20,7 +23,7 @@ In this lab, you will perform:
 
 In this task, you will create a new group in Microsoft Entra ID using the Azure portal.
 
-1. In the Search bar of the Azure portal, type **Entra ID (1)**, then select **Microsoft Entra ID (2)**.
+1. In the Search bar of the Azure portal, type **Microsoft Entra ID (1)**, then select **Microsoft Entra ID (2)**.
 
    ![Picture 1](../Media/lab1-s3.png)
 
@@ -49,6 +52,8 @@ In this task, you will create a new group in Microsoft Entra ID using the Azure 
 
 1. On the **New Group** page, click on **Create**.
 
+   ![Picture 1](../Media/sc200-lab1-1.png)
+
 ### Task 2: Apply Microsoft Defender XDR for Office 365 preset security policies
 
 In this task, you will assign preset security policies for Exchange Online Protection (EOP) and Microsoft Defender XDR for Office 365 in the Microsoft  security portal.
@@ -69,13 +74,17 @@ In this task, you will assign preset security policies for Exchange Online Prote
 
      >**Note:** If you encounter the message **"The operation could not be completed. Please try again later. If the issue persists, contact Microsoft Support."**, click **OK** to continue.
 
-1. If shown, please close the **Microsoft Defender XDR quick tour** to go ahead.
+1. If prompted, please close the **Microsoft Defender XDR quick tour** to go ahead.
 
-1. From the navigation menu, under **Email & Collaboration** area, select **Policies & rules (1)**.
+1. On **Microsoft Defender** page, ff the left navigation pane is collapsed, select **Show navigation** to expand it.
 
-1. On the **Policy & rules** dashboard, select **Threat policies (2)**.
+   ![Picture 1](../Media/sc200-lab1-2.png)
 
-   ![Picture 1](../Media/14-8-25-l1-2.png)
+1. From the navigation menu, expand **Email & Collaboration (1)** area, select **Policies & rules (2)**.
+
+1. On the **Policy & rules** dashboard, select **Threat policies (3)**.
+
+   ![Picture 1](../Media/sc200-lab1-3.png)
 
 1. On the **Threat policies** dashboard, select **Preset Security Policies**.
 
@@ -89,13 +98,13 @@ In this task, you will assign preset security policies for Exchange Online Prote
 
 1. Under **Standard protection**, select **Manage protection settings**. 
 
-   ![Standart protection](../Media/standard-protection-2905.png)
+   ![Standart protection](../Media/sc200-lab1-4.png)
 
     >**Hint:** If this option appears greyed out, wait for 5 minutes and refresh your browser by pressing **Ctrl+F5** or opening the portal in InPrivate mode. Then sign back in using your Tenant Email credentials. If the option is still not visible after trying these steps, it may be an issue with the Defender portal. In that case, please contact Cloudlabs-Support@spektrasystems.com for assistance.
 
     >**Note:** After clicking **Manage protection settings**, the content may take **40 to 60 minutes** to load completely. Wait for the page to fully load, then revisit the same page after the waiting period. If needed, sign out of **Microsoft Defender XDR**, sign back in, and repeat the steps to continue.
 
-1. In the **Apply Exchange Online Protection** page, select **Specific recipients (1)** under **Apply protection to:** and under **Domains** you can see that your **domain is selected (2)**. If not, start writing your tenant's domain name, select it, and then select **Next (3)**.
+1. In the **Apply Exchange Online Protection** page, select **Specific recipients (1)** under **Apply protection to:** and under **Domains** you can see that your **domain is selected (2)**. If not, start writing your tenant's domain name (eg: mocholxxxxxx.onmicrosoft.com), select it, and then select **Next (3)**.
 
    ![Standart protection](../Media/lab1-s5.png)                                                                    
   
@@ -115,7 +124,7 @@ In this task, you will assign preset security policies for Exchange Online Prote
 
 1. Under **Strict protection**, select **Manage protection settings**. **Hint:** **Strict protection** is found under "Email & Collaboration - Policies & rules - Threat policies - Preset security policies".
 
-   ![Standart protection](../Media/lab1-s6.png) 
+   ![Standart protection](../Media/sc200-lab1-5.png) 
 
    > **Hint:** If this option appears greyed out, wait for 5 minutes and refresh your browser by pressing **Ctrl+F5** or opening the portal in InPrivate mode. Then sign back in using your Tenant Email credentials. If the option is still not visible after trying these steps, it may be an issue with the Defender portal. In that case, please contact Cloudlabs-Support@spektrasystems.com for assistance.
    
@@ -149,7 +158,6 @@ In this task, you will assign preset security policies for Exchange Online Prote
    ![Standart protection](../Media/devices-2905.png) 
 
    >**Note:** If you don’t see the **Devices** under the **Assets** section in the **Defender portal**, sign out by selecting the circle with your initials in the top-right corner and choosing Sign out. You can also try refreshing the page using Ctrl+F5, waiting 30–45 minutes, or opening the portal in InPrivate mode. Then sign back in using your Tenant Email credentials. If the option is still not visible after trying these steps, it may be an issue with the Defender portal. In that case, please contact Cloudlabs-Support@spektrasystems.com for assistance.
-
 
 1. The process to deploy the Defender XDR workspace should start, and you should see messages saying **loading and Initializing** briefly displayed at the top of the page, and then you're going to see an image of a coffee mug and a message that reads: **Hang on! We're preparing new spaces for your data and connecting them.** It takes approximately 5 minutes to finish. **Leave the page open and make sure it finishes since it's required for the next Lab.**
 

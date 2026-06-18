@@ -27,9 +27,15 @@ In this task, you'll assign preset security policies for Exchange Online Protect
     - **Username: <inject key="AzureAdUserEmail"></inject>** 
     - **Password: <inject key="AzureAdUserPassword"></inject>** 
 
+1. On **Microsoft Defender** page, ff the left navigation pane is collapsed, select **Show navigation** to expand it.
+
+   ![Picture 1](../Media/sc200-lab1-2.png)
+
 1. From the navigation menu, click on **More resources (1)** and select **Open (2)** button on **Microsoft Purview portal** tile
 
-   ![Screenshot showing the Welcome to the new Microsoft Purview portal screen.](../Media/lab3-1.png)
+   ![Screenshot showing the Welcome to the new Microsoft Purview portal screen.](../Media/sc200-lab3-1.png)
+
+1. When the Microsoft Purview portal opens, a message appears stating that The compliance Portal is retired. This message will timeout and redirect you to new Microsoft Purview portal.
 
 1. When the **Microsoft Purview portal** opens, a message about the **Welcome to the new Microsoft Purview portal** will appear on the screen. Click **Get started** to continue
 
@@ -41,15 +47,13 @@ In this task, you'll assign preset security policies for Exchange Online Protect
 
    ![Screenshot showing the Start recording user and admin activity button.](../Media/14-8-25-l3-1.png)
 
-    > **Note:** The **Audit** option may take some time to appear in the **Solutions** menu. If it does not show up immediately, 
+    > **Note:** The **Audit** option may take some time to appear in the **Solutions** menu. If it does not show up immediately,  wait for a few minutes and refresh the browser before proceeding. 
 
     > **Note:** The **Audit** option may take some time to appear in the **Solutions** menu. If it does not show up immediately, try refreshing the page using **Ctrl + F5**, signing out by selecting the circle with your initials in the top-right corner and choosing **Sign out**, and then signing back in using your **Tenant Email** credentials. You can also try opening the portal in **InPrivate/Incognito mode** or wait for **10–15 minutes** and check again.
 
     > If the option is still not visible after trying these steps, it may be an issue with the **Microsoft Defender portal**. In that case, please contact Cloudlabs-Support@spektrasystems.com for assistance.
     
     
-    wait for a few minutes and refresh the browser before proceeding.
-
 1. On the **Search** page, select the blue **Start recording user and admin activity** bar to enable audit logging.
 
     ![Screenshot showing the Start recording user and admin activity button.](../Media/lab3-s1.png)
