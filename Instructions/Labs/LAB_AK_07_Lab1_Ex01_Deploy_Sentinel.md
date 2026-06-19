@@ -11,10 +11,9 @@ You're a Security Operations Analyst working at a company that is implementing M
 
 - Task 1: Create a Log Analytics Workspace
 - Task 2: Deploy Microsoft Sentinel to a workspace
-- Task 3: Configure data retention
-- Task 4: Create a Watchlist
-- Task 5: Create a Threat Indicator
-- Task 6: Configure log retention
+- Task 3: Create a Watchlist
+- Task 4: Create a Threat Indicator
+- Task 5: Configure log retention
 
 ## Estimated Timing: 60 Minutes
 
@@ -70,27 +69,7 @@ In this task, you will deploy Microsoft Sentinel to an existing Log Analytics wo
 
    ![](../Media/lab6-s8.png)
 
-### Task 3 : Configure data retention
-
-In this task, you will configure the data retention in the Log analytics workspace.
-
-1. In the Search bar of the Azure portal, type **Log Analytics (1)**, then select **Log Analytics workspaces (2)**. 
-
-   ![](../Media/lab6-s1.png)
-
-1. Select **uniquenameDefender** Log Analytics workspaces. 
-
-   ![](../Media/lab7-s3.png)
-
-1. Expand the **Settings** section in the navigation menu and select **Usage and estimated costs (1)** then Select **Data retention (2)**.
-
-   ![](../Media/lab7-s4.png)
-
-1. Change data retention period to **180 days (1)** then Select **OK (2)**.
-
-   ![](../Media/lab7-s5.png)
-
-### Task 4: Create a Watchlist
+### Task 3: Create a Watchlist
 
 In this task, you will create a watchlist in Microsoft Sentinel.
 
@@ -128,7 +107,7 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
 1. In the left pane, expand **Microsoft Sentinel (1)** → **Configuration (2)** → select **Watchlist (3)**.
 
-    ![](../Media/lab7-s10.png)
+    ![](../Media/lab6-06-1.png)
 
 1. In the **Microsoft Defender portal**, on the **Workspaces** page, select **Connect workspace**.
 
@@ -160,7 +139,7 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
 1. In Microsoft Sentinel, On the left menu, select the **Watchlist (1)** option under the **Configuration** area then Select **+ New (2)** from the command bar.
 
-   ![](../Media/lab7-s17.png)
+   ![](../Media/lab6-06-2.png)
 
    > **Note:** If the **Watchlist** page does not load, refresh the browser until it appears.  
 
@@ -192,11 +171,13 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
 1. The screen returns to the Watchlist page.
 
+1. Select **Refresh** from the menu to see the new watchlist.
+
 1. Select the **HighValueHosts (1)** watchlist and on the right pane, select **View in logs (2)**.
 
      ![](../Media/lab7-s23.png)
 
-     ![](../Media/lab7-s24.png)
+     ![](../Media/lab6-06-6.png)
 
       >**Important:** It could take up to ten minutes for the watchlist to appear. **Please continue with the following task and run this command in the next lab**.
      
@@ -209,17 +190,17 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
   <validation step="53b31791-6d4b-4f83-a56e-b7136bbba6a7" />
   
-### Task 5: Create a Threat Indicator
+### Task 4: Create a Threat Indicator
 
 In this task, you will create an indicator in Microsoft Sentinel.
 
 1. In the **Microsoft Sentinel** portal, in the left navigation pane, expand **Threat management (1)**, select **Threat intelligence (2)**, and then click **Open intel management (3)**.
 
-     ![](../Media/lab7-s24.1.png)
+     ![](../Media/lab6-06-3.png)
 
 2. In the **Microsoft Defender** portal, on the **Intel management** page, select **+ New (1)**, and then click **TI object (2)**.
 
-     ![](../Media/lab7-s24.2.png)
+     ![](../Media/lab6-06-4.png)
 
 4. From the **Object type** dropdown, select **Indicator (1)**.
 
@@ -241,15 +222,15 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
 11. Select **Add (8)**.
 
-12. Navigate to **Microsoft Sentinel** in azure portal, open the **uniquenamedefender (1)** workspace, expand the **General** section and select **Logs (2)** from the navigation menu and close the Log Analytics video pop-up window that appears **(3)**.
+1. In the Microsoft Defender navigation menu, scroll up and expand the **Investigation & Response section (1)**.
 
-      ![](../Media/lab6-s14.png)
+1. Expand the **Hunting (2)** section and select **Advanced hunting (3)**.
 
-1. Close the **Queries hub**.
+     ![](../Media/lab6-06-5.png)
 
-     ![](../Media/lab6-s15.png)
+     > **Note:** In the default New Query 1 tab, the **_GetWatchList('HighValueHosts')** query should still be there, and will now produce results if run.
 
-1. From the mode dropdown, switch from **Simple mode (1)** to **KQL mode (2)**.
+1. Select the **+ sign** to create a new query editor.
 
      ![](../Media/lab6-s16.png)
 
@@ -259,7 +240,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
      ThreatIntelIndicators
      ```  
 
-     ![](../Media/output.png)
+     ![](../Media/lab6-06-7.png)
 
      > **Note:** It could take up to 5 minutes for the indicator to appear.
 
@@ -270,33 +251,37 @@ In this task, you will create an indicator in Microsoft Sentinel.
      | project ObservableValue
      ```
 
-     ![](../Media/lab7-s28.png)
+     ![](../Media/lab6-06-8.png)
 
-### Task 6: Configure log retention
+### Task 5: Configure log retention
 
 In this task, you will change the retention period for the SecurityEvent table.
 
-1. In Microsoft Sentinel, select the **Settings (1)** option under the **Configuration** area then select **Workspace settings (2)**.
+1. In the Microsoft Defender navigation menu, scroll down and expand the **Microsoft Sentinel (1)** section.
 
-     ![](../Media/lab7-s29.png)
+1. Expand the **Configuration (2)** section and select **Tables (3)**.
 
-     >**Note:** If you see the message “This page has been moved to the Defender portal for the optimal, unified SecOps experience”, refresh the page and continue this lab in the Microsoft Azure portal, as the lab environment is configured for the Azure portal and the Microsoft Defender portal experience may take longer to load for this lab.
+     ![](../Media/lab6-06-9.png)
 
-1. In Log Analytics workspace, select the **Tables (1)** option under the **Settings** area.
+1. In the Search box, type **SecurityEvent (1)**, and then select the table **SecurityEvent (2)** from the results.
 
-1. Search and select the table **SecurityEvent (2)**, and then right click on **Security Event (3)** table.
+     ![](../Media/lab6-06-10.png)
 
-     ![](../Media/lab7-s30.png)
+     >**Note:** There will be multiple variations of the SecurityEvent table. We recommend selecting the correct SecurityEvent_CL table.
 
-1. Select **Manage Table (4)**.
+1. Select the **Data retention settings** gear icon.
+
+      ![](../Media/lab6-06-11.png)
+
+      > **Note:** This opens a page with Analytics tier and Data lake tier settings.
 
 1. Change the **Analytics retention** to **90 days (1)**.
 
-1. Reset the **Total retention** to **180 days (2)** (if needed). Notice that **Long term retention** is set now set to **90 days**, because **Azure Monitor** automatically treats the remaining 90 days of total retention as low-cost, long-term retention.
+1. The **Total retention** is now **Same as Analytics retention (90 days) (2)**.
 
 1. Select **Save (3)** to apply the changes.
 
-     ![](../Media/lab7-s27.png)
+     ![](../Media/lab6-06-12.png)
 
 ## Review
 In this lab, you have completed the following:

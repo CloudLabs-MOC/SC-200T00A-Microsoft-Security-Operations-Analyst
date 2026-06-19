@@ -66,9 +66,13 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
 
 1. On a new tab in the browser, go to **https://security.microsoft.com**
 
+1. On **Microsoft Defender** page, if the left navigation pane is collapsed, select **Show navigation** to expand it.
+
+   ![Picture 1](../Media/sc200-lab1-2.png)
+
 1. In the Microsoft Defender **Microsoft Sentinel (1)** navigation menu, scroll down to the **Content management (2)** section and select **Content Hub (3)**.
 
-     ![](../Media/lab8-s1.png)
+     ![](../Media/lab7-06-12.png)
 
      > **Note:** If workspace is not connected, click on Connect workspace to connect. If no workspace is displayed initially, try refreshing the page using **Ctrl + F5**, signing out by selecting the circle with your initials in the top-right corner and choosing **Sign out**, and then signing back in using your **Tenant Email** credentials. You can also try opening the portal in **InPrivate/Incognito mode**. If the workspace is **already connected**, please **proceed to the next step**. 
 
@@ -80,7 +84,7 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
 
 1. On the **Microsoft Defender for Cloud** solution details page select **Install (3)**.
 
-   ![](../Media/lab8-s2.png)
+   ![](../Media/lab7-06-2.png)
 
     > **Note:** If the **Content hub** page does not load, refresh the browser until it appears.  
 
@@ -88,7 +92,7 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
 
 1. On the **Microsoft Defender for Cloud** solution details page select **Manage**.
 
-    ![](../Media/lab8-s3.png)
+    ![](../Media/lab7-06-3.png)
 
     >**Note:** The **Microsoft Defender for Cloud** solution installs the **Subscription-based Microsoft Defender for Cloud (Legacy)** Data connector, the **Tenant-based Microsoft Defender for Cloud (Preview)** Data connector, and an **Analytics rule**. The **Tenant-based Microsoft Defender for Cloud** Data connector is used when a tenant has multiple subscriptions.
 
@@ -98,12 +102,19 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
 
 1. Select the **Tenant-based Microsoft Defender for Cloud (1)** Data connector check-box, and select **Open connector page (2)**.
 
-   ![](../Media/lab8-s5.png)
+   ![](../Media/lab7-06-4.png)
 
-1. Verify that the **Tenant-based Microsoft Defender** for Cloud connector status shows **Connected**.
+1. A new browser tab will open on the Azure portal Data Connector page. Verify that the **Tenant-based Microsoft Defender** for Cloud connector status shows **Connected**.
 
      ![](../Media/lab8-s6.png)
 
+1. Review the Configuration section of the Instructions tab.
+
+1. Note that "Microsoft Defender for Cloud alerts are connected to stream through the Microsoft 365 Defender" now, and that you "Cannot disconnect while Microsoft Defender XDR is connected".
+
+1. Also note in the Details pane that the Data types use the SecurityAlert table.
+
+1. You can now close this browser tab and return to Microsoft Defender XDR.
 
 ### Task 3: Connect the Azure Activity data connector
 
@@ -115,7 +126,7 @@ In this task, you will connect the **Azure Activity** data connector.
 
 1. On the **Azure Activity** solution page select **Install (3)**.
 
-   ![](../Media/lab8-s7.png)
+   ![](../Media/lab7-06-5.png)
 
     > **Note:** If the **Content hub** page does not load, refresh the browser until it appears.  
 
@@ -125,13 +136,13 @@ In this task, you will connect the **Azure Activity** data connector.
 
 1. When the installation completes select **Manage**.
 
-    ![](../Media/lab8-s7.1.png)
+    ![](../Media/lab7-06-6.png)
 
-    >**Note:** The **Azure Activity** solution installs the **Azure Activity** Data connector, 12 **Analytics rules**, 14 **Hunting queries**, and 1 **Workbook**.
+    >**Note:** The **Azure Activity** solution installs the **Azure Activity** Data connector, 13 **Analytics rules**, 14 **Hunting queries**, and 1 **Workbook**.
 
 1. Select the **Azure Activity (1)** Data connector and select **Open connector page (2)**.
 
-    ![](../Media/lab8-s9.png)
+    ![](../Media/lab7-06-7.png)
 
 1. In the **Configuration** area under the **Instructions** tab, scroll down to "2. Connect your subscriptions through diagnostic settings new pipeline", and select **Launch Azure Policy Assignment Wizard>**.
 
@@ -154,6 +165,28 @@ In this task, you will connect the **Azure Activity** data connector.
 1. Select **Create** to finish.
 
    ![](../Media/lab8-s14.png)
+
+1. Note that the status should show **Connected**.
+
+    ![](../Media/lab7-06-8.png)
+
+    > **Note:** It may take 15–20 minutes for the Azure Activity data connector to show a Connected status after configuration.
+
+    > **Note:** If the status does not show as connected after 15–20 minutes, close the tab, reopen it, and then check again.
+
+1. In the **Setup** tab, Table management section, select the checkbox for the **AzureActivity (1)** table. The Gear wheel for Data retention settings appears.
+
+1. Select the **Data retention settings (2)** and review the Manage AzureActivity settings in Analytics tier.
+
+    ![](../Media/lab7-06-9.png)
+
+    > **Note:** This data connector is fully ported to Defender XDR.
+
+1. Close out of the Manage AzureActivity page by selecting the X in the upper right corner.
+
+1. Select the Advanced options tab at the top of page and review the Configure UEBA settings.
+
+    ![](../Media/lab7-06-10.png)
 
 ## Review
 In this lab, you have completed the following:

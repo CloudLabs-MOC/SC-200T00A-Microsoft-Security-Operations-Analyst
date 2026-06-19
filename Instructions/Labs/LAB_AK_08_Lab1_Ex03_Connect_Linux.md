@@ -24,7 +24,7 @@ In this task, you will access your Microsoft Sentinel workspace.
 
 1. In the Microsoft Defender **Microsoft Sentinel (1)** navigation menu, scroll down to the **Content management (2)** section and select **Content Hub (3)**.
 
-     ![](../Media/lab8-s1.png)
+     ![](../Media/lab7-06-12.png)
 
 ### Task 2: Connect a Linux Host using the Common Event Format connector
 
@@ -54,7 +54,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 1. Open **LIN1 (1)** Linux virtual machine and copy the **Public IP address (2)** of LIN1 from the **overview** and paste on the notepad.
 
-   ![](../Media/lab8-s49.png)
+   ![](../Media/lab7-06-15.png)
 
    ![](../Media/lab8-s50.png)
 
@@ -62,10 +62,10 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
    ![](../Media/lab8-s30.1.png)
 
-1. Enter the following PowerShell command, adjusting for your specific Linux server information, and press Enter:
+1. Enter the following PowerShell command, adjusting for your specific Linux server information, and press **Enter**:
 
     ```PowerShell
-    ssh insert your linux-IP-address-here -l insert-linux-user-name-here
+    ssh insert-your-linux-IP-address-here -l insert-linux-user-name-here
     ```
     
      >**Note:** Replace **insert your linux IP address here** with pasted on the notepad Public Ip address of **LIN1** and **insert linux username here** with **Admin Username:** **cloudlabs** provided under Resource group: **LIN1** in the **Environment Details** page of the lab guide.
@@ -90,7 +90,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 1. In the **Content hub**, search for the **Common Event Format (2)** solution and select **Common Event Format (3)** from the list.
 
-    ![](../Media/lab8-s53.png)
+    ![](../Media/lab7-06-16.png)
 
 1. On the **Common Event Format** solution page select **Manage**.
 
@@ -114,11 +114,11 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 1. Expand **LIN1 (2)** resource group, then select **LIN1 (3)**.
 
-   ![](../Media/lab8-s57.png)
+   ![](../Media/lab7-06-17.png)
 
     >**Note:** You're **LIN1** virtual machine may appear with a different name, like ubuntuxxx.
 
-1. Select **Next: Collect**. In the **Collect** tab, select the  **LOG_ALERT** drop-down menu, and select **LOG_WARNING (1)**.
+1. Select **Next: Collect (4)**. In the **Collect** tab, select the  **LOG_ALERT** drop-down menu, and select **LOG_WARNING (1)**.
 
    ![](../Media/lab8-s58.png)
 
@@ -156,7 +156,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 1. Go to the **Content hub (1)** in the data connector window, search for **Syslog (2)**, select **Syslog (3)** from the list and click on **Install**.
 
-   ![](../Media/lab8-s61.png)
+   ![](../Media/lab7-06-18.png)
 
    ![](../Media/lab8-s62.png)
 
@@ -182,7 +182,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
     >**Hint:** You can expand the whole *Scope* hierarchy by selecting the ">" before the *Scope* column.
 
-1. Expand **defender-RG (1)**, then select **LIN2 (2)**.
+1. Expand **LIN-2 (1)**, then select **LIN2 (2)**.
 
    ![](../Media/lab8-s67.png)
 
@@ -222,15 +222,15 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
    - **password/LIN2: <inject key="Admin Password"></inject>**
 
+1. You are now ready to paste in the command that we copied from the earlier step. Make sure that the script from Azure is in the clipboard. In PowerShell, right-click the top bar and choose **Edit** and then **Paste**. Once pasted add a **3** to the word *python* as shown below:
+
+   ![](../Media/lab7-06-19.png)
+
 1. At the linux prompt, paste the AMA Forwarder installation script you copied in the previous step.
 
     ![](../Media/lab8-s71.png)
 
     >**Note:** You can also copy from the notepad you have pasted earlier.
-
-1. You will need to edit the script for the correct *Python* version installed on your LIN2 machine.
-
-1. Change the script section that contains the *python Forwarder_AMA_installer.py* commands to *python3 Forwarder_AMA_installer.py*.
 
 1. Press **Enter** to run the script
 
@@ -246,7 +246,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
     >**Note:** You can query the *Syslog* table for Syslog events.
 
-1. Type **exit** to close the remote shell connection to LIN1.
+1. Type **exit** to close the remote shell connection to LIN2.
 
 ## Review 
 In this lab, you have completed the following:

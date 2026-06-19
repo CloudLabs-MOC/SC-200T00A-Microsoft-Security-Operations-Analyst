@@ -33,11 +33,11 @@ In this task, you'll create a Windows virtual machine in Azure.
 
     ![](../Media/windows-11-2-3005.png)
 
-1. Open the **Plan** drop-down list and select **Windows 11 Enterprise, version 23H2 (1)**.
+1. Open the **Plan** drop-down list and select **Windows 11 Enterprise, version 24H2 (1)**.
 
 1. Select **Start with a pre-set configuration (2)** to continue.
 
-   ![](../Media/lab8-s16.png)
+   ![](../Media/lab7-06-11.png)
 
 1. Select **Dev/Test (1)** and then select **Continue to create a VM (2)**.
 
@@ -56,10 +56,10 @@ In this task, you'll create a Windows virtual machine in Azure.
 
     | Setting | Value |
     | --- | --- |
-    | Image | **Windows 11 Enterprise, version 23H2 (5)**  | 
+    | Image | **Windows 11 Enterprise, version 24H2 (5)**  | 
     | Size| Should be selected as **Standard_B2s**. If it appears empty, select **See all sizes**, choose the **Standard_DS1_v2 (6)** click **Select**. |
 
-      ![](../Media/lab8-s19.png)
+      ![](../Media/lab7-06-13.png)
 
     | Setting | Value |
     | --- | --- |
@@ -204,7 +204,7 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
 1. On the **Windows Security Events** solution page select **Install (3)**.
 
-    ![](../Media/lab8-s36.png)
+    ![](../Media/lab7-06-14.png)
 
      > **Note:** If the **Content hub** page does not load, refresh the browser until it appears.  
 
