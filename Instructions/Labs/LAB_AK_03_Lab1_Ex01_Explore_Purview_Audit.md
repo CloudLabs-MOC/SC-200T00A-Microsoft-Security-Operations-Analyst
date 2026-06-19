@@ -27,7 +27,7 @@ In this task, you'll assign preset security policies for Exchange Online Protect
     - **Username: <inject key="AzureAdUserEmail"></inject>** 
     - **Password: <inject key="AzureAdUserPassword"></inject>** 
 
-1. On **Microsoft Defender** page, ff the left navigation pane is collapsed, select **Show navigation** to expand it.
+1. On **Microsoft Defender** page, if the left navigation pane is collapsed, select **Show navigation** to expand it.
 
    ![Picture 1](../Media/sc200-lab1-2.png)
 

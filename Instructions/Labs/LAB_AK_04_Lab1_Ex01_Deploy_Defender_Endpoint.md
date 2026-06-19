@@ -36,13 +36,17 @@ In this task, you will perform the initialization of the Microsoft Defender for 
 
    ![](../Media/sc200-close-welcome.png)
 
+1. On **Microsoft Defender** page, if the left navigation pane is collapsed, select **Show navigation** to expand it.
+
+   ![Picture 1](../Media/sc200-lab1-2.png)
+
 1. On the **Microsoft Defender XDR** portal, from the left navigation menu, scroll down and under **System (1)**, select **Settings (2)** .
 
-   ![](../Media/sc200-lab4-1.png)
+   ![](../Media/lab4-06-1.png)
 
 1. On the **Settings** page, select **Device discovery**. 
 
-    ![Picture 1](../Media/SC200-img1.png)
+    ![Picture 1](../Media/lab4-06-2.png)
 
     >**Note:** If you do not see the **Device discovery** option under **Settings**, log out by selecting the top-right circle with your account initials and clicking **Sign out**. Other options to try include refreshing the page with **Ctrl+F5**, waiting for **30-45 minutes**, or opening the page in **InPrivate** mode. Then, log in again with your **Tenant Email** credentials.
 
@@ -60,19 +64,28 @@ In this task, you will onboard a device to Microsoft Defender for Endpoint using
 
 1. In the Microsoft Defender XDR portal, select **Settings (1)** from the left menu bar, then from the Settings page select **Endpoints (2)**.
 
-    ![Picture 1](../Media/endpt1.png)
+    ![Picture 1](../Media/lab4-06-3.png)
 
       > **Note:** The **Endpoints** option may take some time to appear under **Settings**. If it does not show up immediately, wait for a few minutes and refresh the browser before proceeding.
 
+      > **Note:** The **Endpoints** option under **Settings** may take a few moments to appear after the initial setup.  
+      > If you don't see it navigate to [https://security.microsoft.com/securitysettings/endpoints/integration](https://security.microsoft.com/securitysettings/endpoints/integration) to go to the Endpoints page.
+
       >**Note:** If the option is still not visible after trying these steps, it may be an issue with the Defender portal. In that case, please contact Cloudlabs-Support@spektrasystems.com for assistance.
 
-1. Select **Onboarding (1)** in the **Device Management** section. In the **Deployment method**, ensure that **Local Script (for up to 10 devices) (2)** is displayed in the drop-down, then click the **Download onboarding package (3)** button. 
+1. Select **Onboarding (1)** in the **Device Management** section. 
 
-    ![Picture 1](../Media/onboarding.png)
+1. Leave the default operating system selection for **Windows 10 and 11 (2)**.
+
+    ![Picture 1](../Media/lab4-06-4.png)
 
     >**Note:** You can also onboard devices from the **Assets** section in the left menu bar. Expand **Assets** and select **Devices**. On the **Device Inventory** page, with **Computers & Mobile** selected, scroll down to **Onboard devices.** This will take you to the **Settings > Endpoints** page.
 
-1. Under the **Downloads** pop-up, highlight the **"WindowsDefenderATPOnboardingPackage.zip"** file with your mouse and click the folder icon **Show in folder**.
+1. In the **1. Onboard a device** area, leave the default *Connectivity* set to *Streamlined*, and the *Deployment method* set to **Local Script (for up to 10 devices) (1)** and then click the **Download onboarding package (2)** button. 
+
+   ![Picture 1](../Media/lab4-06-5.png)
+
+1. Under the **Downloads** pop-up, highlight the **"GatewayWindowsDefenderATPOnboardingPackage.zip"** file with your mouse and click the folder icon **Show in folder**.
 
    >**Hint:** If you don't see it, the file should be located in the **C:\users\admin\downloads** directory.
 
@@ -115,7 +128,7 @@ In this task, you will configure roles for use with device groups.
     |Group Type| **Microsoft 365 (1)**  |
     |Group Name| **Sg-IT (2)**  |
 
-   ![Picture 1](../Media/newgroup1.png)
+   ![Picture 1](../Media/lab4-06-6.png)
 
 1. Click on **No owners selected (1)** and select the **ODL_user <inject key="DeploymentID" enableCopy="false"/>** from the list and then click on **Select**.
 
@@ -131,11 +144,11 @@ In this task, you will configure roles for use with device groups.
 
 1. Navigate to the [Microsoft Defender XDR portal](https://security.microsoft.com/), select **Settings (1)** from the left menu bar, and then select **Microsoft Defender XDR (2)**.  
 
-   ![Picture 1](../Media/lab4y2.png)  
+   ![Picture 1](../Media/lab4-06-7.png)  
 
-1. On the **Microsoft Defender XDR** page, select **Permissions and roles (1)** then locate **Active** then toggle the **Status** slider to the right to turn it **On (2)** and click **Go to Permissions and roles (3)**.  
+1. On the **Microsoft Defender XDR** page, select **Permissions and roles (1)** under **General** section and then click **Go to Permissions and roles (2)**.  
 
-   ![Picture 1](../Media/lab4y1.png)  
+   ![Picture 1](../Media/lab4-06-8.png)  
 
 1. On the **Permissions and roles** page, select **+ Create Custom role**.  
 
@@ -145,11 +158,11 @@ In this task, you will configure roles for use with device groups.
  
    ![Picture 1](../Media/lab4y4.png)  
 
-1. On the **Choose permissions** page, select **Security operations (1)** under the permission group, choose **Select custom permissions (2)**, select **Select custom permissions (3)** under **Security data**, choose **Advanced live response (manage) (4)**, and click **Apply (5)**.
+1. On the **Choose permissions** page, select **Security operations (1)** under the permission group, choose **All read and manage permissions (2)**, and click **Apply (3)**.
 
-   ![Picture 1](../Media/lab4y5.png)
+   ![Picture 1](../Media/lab4-06-9.png)
 
-1. Select **Next (6)**.
+1. Select **Next (4)**.
 
 1. On the **Assign users and data sources** page, select **+ Add assignment**:
 
@@ -163,13 +176,13 @@ In this task, you will configure roles for use with device groups.
    |Employees | Search and select **Sg-IT (3)** |
    |Data sources | **Keep Default (4)**|
 
-   ![Picture 1](../Media/lab4y6.png)
+   ![Picture 1](../Media/lab4-06-10.png)
 
-1. Select **Next (6)**
+1. Select **Next**
 
 1. On the **Review and finish** page, select **Submit**.
 
-   ![Picture 1](../Media/lab4y7.png)
+   ![Picture 1](../Media/lab4-06-11.png)
 
 1. Select **Done**
 
@@ -181,11 +194,11 @@ In this task, you will configure device groups that allow for access control and
 
 1. In the Microsoft Defender XDR portal select **Settings** from the left menu bar, then select **Endpoints**. 
 
-1. Select **Device groups** under the permissions area.
+1. Select **Device groups (1)** under the permissions area.
 
-1. Select **+ Add device group** icon.
+1. Select **+ Add device group (2)** icon.
 
-   ![Picture 1](../Media/lab4y9.png)
+   ![Picture 1](../Media/lab4-06-12.png)
 
 1. Enter the following information on the General tab:
 

@@ -6,7 +6,7 @@ The organization you work for wants to increase the efficiency and capabilities 
 
 Security Copilot integrates with Microsoft Defender XDR to help you investigate and respond to security incidents. In this unit, you work through two interactive guides that take you through a complete incident investigation workflow—from understanding incident context to analyzing specific artifacts and performing advanced investigation.
 
->**Note:** `This exercise is designed to be completed on a local system. Selecting either image launches an interactive click-through simulation in your browser. Follow the guided steps in the simulation to complete the exercise.`
+>**Note:** `This exercise is designed to be complete on a local system. Follow the guided steps in the simulation to complete the exercise.`
 
 ## Lab Objectives
 

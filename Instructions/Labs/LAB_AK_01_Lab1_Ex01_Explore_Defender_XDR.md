@@ -76,7 +76,7 @@ In this task, you will assign preset security policies for Exchange Online Prote
 
 1. If prompted, please close the **Microsoft Defender XDR quick tour** to go ahead.
 
-1. On **Microsoft Defender** page, ff the left navigation pane is collapsed, select **Show navigation** to expand it.
+1. On **Microsoft Defender** page, if the left navigation pane is collapsed, select **Show navigation** to expand it.
 
    ![Picture 1](../Media/sc200-lab1-2.png)
 
@@ -155,7 +155,7 @@ In this task, you will assign preset security policies for Exchange Online Prote
 
 1. At the **Microsoft Defender** portal **Home** screen, scroll down the navigation menu items to the **Assets (1)** section, and select **Devices (2)**.
 
-   ![Standart protection](../Media/devices-2905.png) 
+   ![Standart protection](../Media/sc200-lab1-7.png) 
 
    >**Note:** If you don’t see the **Devices** under the **Assets** section in the **Defender portal**, sign out by selecting the circle with your initials in the top-right corner and choosing Sign out. You can also try refreshing the page using Ctrl+F5, waiting 30–45 minutes, or opening the portal in InPrivate mode. Then sign back in using your Tenant Email credentials. If the option is still not visible after trying these steps, it may be an issue with the Defender portal. In that case, please contact Cloudlabs-Support@spektrasystems.com for assistance.
 
@@ -166,9 +166,10 @@ In this task, you will assign preset security policies for Exchange Online Prote
 1. When the new workspace initialization completes successfully, the **Home** portal page will display a **Get your SIEM and XDR in one place** banner. And, in **Settings (1)**, the **Microsoft Defender XDR (2)** General settings for Account, Email notifications, Preview Features, Alert service settings, Permissions and roles and Streaming API are now turned on.
 
    ![Standart protection](../Media/home-2905.png)
-   ![Standart protection](../Media/lab1-s9.png)
+   
+   ![Standart protection](../Media/sc200-lab1-6.png) 
+   
    ![Standart protection](../Media/lab1-s10.png) 
-
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
