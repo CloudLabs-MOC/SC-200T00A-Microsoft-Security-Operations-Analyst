@@ -33,11 +33,15 @@ In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
 
     ![Lab overview.](../Media/lab9-s65.png)
 
+1. Select **UEBA**.
+
+    ![](../Media/lab9-june26-p2t1p13.png)
+
 1. On the **UEBA (User and Entity Behavior Analytics)** page, turn on **Turn on UEBA feature (1)**, verify **Microsoft Entra ID (2)** is enabled, and then select **Connect available data sources (3)**.
 
     ![Lab overview.](../Media/lab9-s67.png)
 
-1. Navigate back to **Workspaces**, select the **defender** workspace, expand **Anomalies (1)**, and then choose **Configure anomalies in analytics (2)**.
+1. At the top of the Microsoft Sentinel settings menu, SIEM workspaces and select **Workspaces**, select the **defender** workspace, expand **Anomalies (1)**, and then choose **Configure anomalies in analytics (2)**.
 
      ![Lab overview.](../Media/lab9-s68.png)
 
@@ -89,7 +93,7 @@ In this task, you will confirm Anomalies analytics rules are enabled.
 
     ![](../Media/lab9-s76.png)
 
-1. Select **Next: Review + Create** and then **Save** to update the rule.
+1. Select **Next: Review + Create>** and then **Save** to update the rule.
 
     >**Note:** You can upgrade the **Flighting** rule to **Production** by modifying the setting on this rule and saving the changes. The existing **Production** rule will then become the new **Flighting** rule.
     

@@ -62,7 +62,7 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
    ![Picture 1](../Media/lab10-s1.png)
 
-1. Select the checkbox of the results that shows the **Administrator (1)** SubjectUsername.
+1. Select the checkbox of the results that shows the **Administrator (1)** SubjectUsername. 
 
 1. In the middle command bar, select the **Add bookmark (2)** button.
 
@@ -128,15 +128,11 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
    ![Picture 1](../Media/lab10-ex1-2.png)
 
-1. Review that the **Status** is now **Running**. This is running every 30 seconds in the background and you'll receive a notification in the Azure portal (bell icon) when a new result is found. 
-
-   ![Picture 1](../Media/lab10-ex1-3.png)
-
 1. Select the **Bookmarks (1)** tab in the middle pane. Click on the bookmark you created from the results list **(2)**.
 
 1. On the right pane, scroll down and select the **Investigate (3)** button. **Hint:** It might take a couple of minutes to show the investigation graph.
 
-   ![Picture 1](../Media/lab10-s4.png)
+   ![Picture 1](../Media/lab9-june26-p13t2p2.png)
 
 1. Explore the Investigation graph just like you did in the previous module. Notice the high number of **Related alerts** for **WINServer**.
 
@@ -146,7 +142,7 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
 1. Select **Add to existing incident (1)**. All the incidents appear in the right pane.
 
-   ![Picture 1](../Media/lab10-s5.png)
+   ![Picture 1](../Media/lab9-june26-p13t2p3.png)
 
 1. Select one of the incidents **(1)** and then select **Add (2)**. 
 
@@ -195,7 +191,7 @@ In this task, instead of using a LiveStream, you'll create an NRT analytics quer
 
    ![Picture 1](../Media/lab10-s10.png)
 
-1. Close the **Logs** window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
+1. Close the **Advance Hunting** window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
 
 1. Under **Entity mapping**, provide the following details **(1)**:
      

@@ -48,6 +48,8 @@ In this task, you will explore using notebooks in Microsoft Sentinel.
 
      >**Note:** If Azure ML workspace is not created follow from step 2 in the same task and select the RG-MachineLearning rg, same options and create.
 
+     > **Note:** If the Azure ML workspace is not getting created, alternatively, you can search for **Azure Machine Learning** in the Azure portal and create the workspace directly from there using the same resource group, region, and naming conventions specified in this exercise.
+
 1. After **Your deployment is complete** message appears, return to the Microsoft Sentinel portal.
 
 1. Select **Notebooks (1)** again and then select the **Templates (2)** tab from the middle command bar. 
