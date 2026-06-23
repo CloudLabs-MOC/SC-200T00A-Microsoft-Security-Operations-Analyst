@@ -60,11 +60,9 @@ In this task, you will create an Azure DevOps repository.
 
 1. Then select **Continue**.
 
-1. On the **Almost done...** page, enter a name for your DevOps organization that you would not want to use in the future, like for example, your tenant prefix. **Hint:** It can be found in the Resources tab of your lab (WWLx...).
+1. Leave everything as default and click on **Continue**.
 
-1. **Enter characters you see**, then **Continue**.
-
-   ![Picture 1](../Media/ss114.png)
+   ![Picture 1](../Media/lab9-june26-p12t1p1.png)
 
 1. On the **Create a project to get started** page, enter **My Sentinel Content (1)** and then select **+ Create project (2)**.
 
@@ -76,7 +74,7 @@ In this task, you will create an Azure DevOps repository.
 
 1. The page should show the Files for the Repo.  the only file is README.me.
 
-1. On the Files (right side of the page) blade, the toolbar includes options **Set up build**, **Clone**, **...** Select the colon icon **(:)** to show more options.
+1. On the Files (right side of the page) blade, the toolbar includes options **Set up build**, **Clone**, **(⋮)** Select the colon icon **(⋮)** to show more options.
 
    ![Picture 1](../Media/ss117.png)
 
@@ -141,7 +139,9 @@ In this task, you will connect Microsoft Sentinel to Azure DevOps to manage cont
 
    - Then select **Create (6)**.
 
-     ![Picture 1](../Media/lab9-ex11-9.png)  
+     ![Picture 1](../Media/lab9-ex11-9.png)
+
+     >**Note:** You may receive an error when creating the deployment connection. This is expected in the hosted lab environment and does not indicate an issue with your configuration. Continue with the next steps in the exercise.  
 
 1. Go back to Microsoft Sentinel workspace if needed.
 

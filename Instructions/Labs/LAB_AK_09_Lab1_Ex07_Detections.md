@@ -121,7 +121,7 @@ In this task, you will create a detection for the first attack of the previous e
     |Setting|Value|
     |---|---|
     |Run Query every|5 minutes|
-    |Lookback|set automatically|
+    |Lookup data from the last|1 Days|
 
     >**Note:** We are purposely generating many incidents for the same data. This enables the Lab to use these alerts.
 

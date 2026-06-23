@@ -58,57 +58,63 @@ In this task, you will save a workbook template and modify it.
 
 1. Scroll down to the **Caller activities over time** area, look at the color of the **Activities** column since we are going to format those columns. Select the **Edit**.
 
-   ![Picture 1](../Media/lab9-ex9-7.png)
+   ![Picture 1](../Media/lab9-june26-p11t1p1.png)
 
-1. In the workbook edit view, select **Visual Formatting (1)**, expand **Column Settings (2)**, choose **Activities (Heatmap) (3)** under **Columns**, set **Column renderer (4)** to **Heatmap**, select **Categorical (5)** for **Color palette**, scroll down and then choose **Done Editing (6)**.
+1. In the workbook edit view, select **Visual Formatting**, expand **Column Settings (1)**, choose **Activitie (2)** under **Columns**, set **Column renderer (3)** to **Heatmap**, select **Categorical (4)** for **Color palette**,
 
-    ![Picture 1](../Media/lab9-ex9-8.png)
+    ![Picture 1](../Media/lab9-june26-p11t1p2.png)
+
+1. Now select **Apply Changes** at the top menu.
 
 1. Now select **Done Editing** at the top menu.
 
+   ![Picture 1](../Media/lab9-june26-p11t1p3.png)
+
 1. Then select the **Save** icon. 
 
-   ![Picture 1](../Media/lab9-ex9-9.png)
+   ![Picture 1](../Media/lab9-june26-p11t1p4.png)
+
+1. Return to the the **Microsoft Sentinel | Threat management | Workbooks** page.
 
 ### Task 3: Create a Workbook
 
 In this task, you will create a new workbook with advanced visualizations.
 
-1. You should be back at the **Workbooks (1)** area of the Microsoft Sentinel portal.
+1. You should be back at the **Workbooks** area of the Microsoft Sentinel portal.
 
-1. Select **+ Add workbook (2)** to create a new workbook from scratch. 
+1. Select **+ Add workbook** to create a new workbook from scratch. 
 
-   ![Picture 1](../Media/lab9-ex9-10.png)
+   ![Picture 1](../Media/lab9-june26-p11t1p5.png)
 
     >**Note:** Although it is a new workbook, a startup template is used.
 
-    >**Note:** if **Workbook** page is not loading try refreshing the browser.
+    >**Note:** If **Workbook** page is not loading try refreshing the browser.
     
 1. To edit the workbook, select **Edit** from the top bar.
 
    ![Picture 1](../Media/lab9-ex9-11.png)
 
-1. Select the **Edit** button above the new workbook overview of the workbook.
+1. Select the **Edit** icon above the new workbook overview of the workbook.
 
-   ![Picture 1](../Media/lab9-ex9-12.png)
+   ![Picture 1](../Media/lab9-june26-p11t1p6.png)
 
 1. Type **# My workbook (1)** in a new line on top of **## New workbook**.
 
-1. Select **Done Editing (2)** on the bottom of this section, **Editing text item: text - 2**. Notice that your header increased in size and name changed.
+1. Select **Apply Changes (2)** on the bottom of this section, **Editing text item: text - 2**. Notice that your header increased in size and name changed.
 
-   ![Picture 1](../Media/lab9-ex9-13.png)
+   ![Picture 1](../Media/lab9-june26-p11t1p7.png)
 
 1. In the bar chart section, select **Edit**.
 
-   ![Picture 1](../Media/lab9-ex9-13.1.png)
+   ![Picture 1](../Media/lab9-june26-p11t1p8.png)
 
-1. Review the KQL statement that provides a *union* statement of counts across all tables **(1)**. Scroll down and select the **Cancel (2)** on the bottom menu.
+1. Review the KQL statement that provides a *union* statement of counts across all tables.Select the **Discard Changes**.
 
-   ![Picture 1](../Media/lab9-ex9-14.png)
+   ![Picture 1](../Media/lab9-june26-p11t1p9.png)
 
-1. Select the drop-down arrow **(1)** next to **Edit**, choose **Add (2)**, and then select **Add data source + visualization (3)**.
+1. Select the ellipsis (...) **(1)** next to **Edit**, choose **Add (2)**, and then select **Add data source + visualization (3)**.
 
-   ![Picture 1](../Media/lab9-ex9-19.png)
+   ![Picture 1](../Media/lab9-june26-p11t1p10.png)
 
 1. Type **SecurityEvent (1)** into the query box.
 
@@ -128,7 +134,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. Select the drop-down arrow **(1)** next to **Edit**, choose **Add (2)**, and then select **Add data source + visualization (3)**.
 
-   ![Picture 1](../Media/lab9-ex9-19.png)
+   ![Picture 1](../Media/lab9-june26-p11t1p11.png)
 
 1. Type **SecurityEvent (1)** into the query box.
 
@@ -144,7 +150,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
 1. Select **Done Editing** in Workbook's top command bar.
 
-   ![Picture 1](../Media/lab9-ex9-22.png)
+   ![Picture 1](../Media/lab9-june26-p11t1p12.png)
 
 1. Select the **Save (1)** icon.
 
@@ -154,7 +160,7 @@ In this task, you will create a new workbook with advanced visualizations.
 
    - Select **Save (3)** to commit the changes. 
 
-     ![Picture 1](../Media/lab9-ex9-23.png)
+     ![Picture 1](../Media/lab9-june26-p11t1p13.png)
 
 1. Back in the **Workbooks (1)** page, select the **My workbooks (2)** tab.
 

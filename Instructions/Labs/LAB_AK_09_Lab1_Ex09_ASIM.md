@@ -29,13 +29,25 @@ In this task, you'll review the User Management Schema parsers that are included
 
     >**Note:** Refresh the browser if log page is not loading
 
-1. In **Advanced hunting**, select the **Functions (1)** tab, in the **Search** bar type **user (2)**, and scroll down through the ASIM parser functions until you see the following **_ASim_UserManagement (3)** for Microsoft Windows under the **Microsoft Sentinel** heading and then choose **Insert to query (4)**.
+1. Open the *Schema (1)* drop-down select **Function (2)**.
 
-    ![Picture 1](../Media/lab9-ex7-41.png)
+	![Picture 1](../Media/lab9-june26-p10t1p1.png)
 
-1. **Run** the ASIM function query. If you've completed the previous lab exercises you should see results and no error messages.
+1. In the *Search* bar type **registry (1)**, and scroll down through the ASIM parser functions until you see the following **_Im_RegistryEvent_MicrosoftWindowsEventxxx** for Microsoft Windows under the **Microsoft Sentinel** heading.
 
-   ![Picture 1](../Media/lab9-ex7-42.png)
+    >**Note:** We're using the xxx in the ASIM parser function name to account for version changes. At the time this lab was updated the function was _Im_RegistryEvent_MicrosoftWindowsEvent*V02*.
+
+1. Locate the **_Im_RegistryEvent_MicrosoftWindowsEventxxx** ASIM function and then select **Load the function code (3)** from the ellipsis icon **(...) (2)**.
+
+	![Picture 1](../Media/lab9-june26-p10t1p2.png)
+
+1. Review the KQL that is parsing the Event ID 4657 to simplifying your analysis of the data in the Microsoft Sentinel workspace.
+
+	![Picture 1](../Media/lab9-june26-p10t1p3.png)
+
+    >**Hint:** Typing ctrl+f in the code window brings up *Find* and makes searching for *EventID: 4657* much easier.
+
+1. **Run** the ASIM function query.
 
 ## Review
 In this lab, you have completed the following:
