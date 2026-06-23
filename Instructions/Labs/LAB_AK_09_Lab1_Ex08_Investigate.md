@@ -22,17 +22,15 @@ An incident can include multiple alerts. It is an aggregation of all the relevan
 
 In this task, you will investigate an incident.
 
-1. On the **Sentinal** page, select the **Incidents (1)** page.
+1. In the Microsoft Defender navigation menu, scroll down and expand the **Investigation & response (1)** section.
 
-1. Review the list of **incidents (2)**.
+1. Expand the **Incidents & alerts (2)** section and select **Incidents (3)**.
 
-   ![Picture 1](../Media/lab9-ex7-29.png)
+    ![Picture 1](../Media/lab9-june26-p2t1p34.png) 
 
-    > **Note:** If you do not see **incidents page** in the Microsoft Sentinel portal,try refreshing the browser. Wait 5 minutes and refresh again until it appears.
+1. Review the list of incidents.
 
-    >**Note:** If you see the message “This page has been moved to the Defender portal for the optimal, unified SecOps experience”, refresh the page and continue this lab in the Microsoft Azure portal, as the lab environment is configured for the Azure portal and the Microsoft Defender portal experience may take longer to load for this lab.
-
-    >**Note:** The Analytics rules are generating alerts and incidents on the same specific log entry. Remember that this was done in the **Query scheduling** configuration to generate more alerts and incidents to be utilized in the lab.
+    >**Note:** The Analytics rules are generating alerts and incidents on the same specific log entry. Remember that this was done in the *Query scheduling* configuration to generate more alerts and incidents to be utilized in the lab.
   
 1. Select one of the **Startup RegKey** incidents.
 

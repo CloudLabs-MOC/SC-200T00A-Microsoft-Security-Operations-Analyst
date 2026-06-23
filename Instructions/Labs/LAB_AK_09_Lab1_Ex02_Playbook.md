@@ -71,112 +71,110 @@ In this task, you'll create a Logic App that is used as a Playbook in Microsoft 
 
     >**Note:** Wait for the deployment to finish before proceeding to the next task.
 
+1. Select the **Close and go to playbook** button to open the Logic App designer for the playbook.
+
 ### Task 2: Update a Playbook in Microsoft Sentinel
 
-In this task, you’ll update the new playbook you created with the proper connection information.
+In this task, you update the new playbook you created with the proper connection information.
 
-1. Select **Automation (2)** under the **Configuration (1)** area and then select the **Active Playbooks (3)** tab.
+1. When the previous task completes you should be in the **Defender_XDR_Ransomware_Playbook_SecOps-Tasks | Logic app designer page**. If you aren't, complete steps 2-7 below.
 
-   > **Note:** If you do not see **Automation page** in the Microsoft Sentinel portal, try refreshing the browser. Wait 5 minutes and refresh again until it appears.
+    ![](../Media/lab9-june26-p2t1p4.png)
 
-1. Select **Refresh** from the command bar in case you don’t see any playbooks. You should see the playbook created from the previous step.
+1. In the Search bar of the Azure portal, type Sentinel, then select Microsoft Sentinel.
 
-1. Select the **Defender_XDR_Ransomware_Playbook_SecOps_Tasks (4)** playbook name.
+1. Select your Microsoft Sentinel Workspace.
 
-   ![](../Media/lab9-s30.png)
+1. Select Automation under the Configuration area and then select the *Active Playbooks* tab.
 
-1. It will navigate to azure portal, on the Logic App page for **Defender_XDR_Ransomware_Playbook_SecOps_Tasks**, in the command menu, select **Edit**.
+1. Select Refresh from the command bar in case you don’t see any playbooks. You should see the playbook created from the previous step.
 
-    ![](../Media/lab9-s31.png)
+1. Select the **Defender_XDR_Ransomware_Playbook_SecOps_Tasks** playbook name link.
 
-1.  On the Microsoft Sentinel incident page, select the **first block**.
+1. On the Logic app designer page for **Defender_XDR_Ransomware_Playbook_SecOps_Tasks**, in the command menu, select Edit.
 
-    ![](../Media/lab9-s32.png)
+    >**Note:** You may need to refresh the page.
 
-1. Select the **Change connection** link.
+1. Select the first block, **Microsoft Sentinel incident (1)**.
 
-    ![](../Media/lab9-s33.png)
+1. Select the **Change connection (2)** link.
 
-1. Select **Add new** and then select **Sign in**. 
+    ![](../Media/lab9-june26-p2t1p5.png)
 
-    ![](../Media/l9-e3-3.png)
+1. Scroll down the list of connections, select **Add new (1)** and select **Sign in (2)**.
 
-1. In the new window. Select your **Azure subscription (1)** then click on **Sign in (2)**.
+    ![](../Media/lab9-june26-p2t1p6.png)
 
-   ![](../Media/l9-e3-4.png)
+    ![](../Media/lab9-june26-p2t1p7.png)
 
-1. Select your **<inject key="AzureAdUserEmail"></inject>** Admin credentials when prompted.
+    >**Note:** If you see a **"The browser has blocked the popup window"** message while signing in, click the **Pop-up blocked** icon in the browser's address bar **(1)**, select **Always allow pop-ups and redirects from [https://portal.azure.com](https://portal.azure.com) (2)**, and then click **Done (3)**. After allowing pop-ups, click **Sign in** again to continue.
+
+    ![](../Media/lab9-june26-p2t1p8.png)
+
+1. In the new window, select your Azure subscription admin credentials **<inject key="AzureAdUserEmail"></inject>** when prompted. 
 
     ![](../Media/l9-e3-5.png)
 
-1. The last line of the block should now read **Connected to your-admin-username**.
+1. Your changes should auto-save, but selecting **Publish** on the command bar ensures they are applied.
 
-    ![](../Media/l9-e3-6.png)
+    ![](../Media/lab9-june26-p2t1p9.png)
 
-1. Select **Save** on the command bar. The Logic App will be used in a future lab.
-
-    ![](../Media/lab9-s34.png)
+1. Select the **X** on the window to close it. The Logic App will be used in a future lab.
 
 ### Task 3: Create an Automation Rule
 
 In this task, you will create an automation rule in Microsoft Sentinel that runs a playbook based on specific tactics.
 
+### Grant Microsoft Sentinel permissions to run the playbook
+
+1. In the Azure portal, open the **rg-playbooks** resource group. Select **Access control (IAM) (1)**, then select **Add (2)** > **Add role assignment (3)**.
+
+    ![](../Media/lab9-june26-p2t1p12(1).png)
+
+2. On the **Role** tab, search for **Microsoft Sentinel Automation Contributor (1)**, select the **Microsoft Sentinel Automation Contributor (2)** role, and then select **Review + assign (3)**.
+
+    ![](../Media/lab9-june26-p2t1p12(2).png)
+
+3. On the **Members** tab, ensure **User, group, or service principal (1)** is selected. Select **+ Select members (2)**, search for **Azure Security Insights (3)**, select **Azure Security Insights (4)**, and then select **Select (5)**.
+
+    ![](../Media/lab9-june26-p2t1p12(3).png)
+
+4. Verify that **Azure Security Insights** appears under **Members**, and then select **Review + assign** twice to assign the role.
+
+    ![](../Media/lab9-june26-p2t1p12(4).png)
+
 1. Navigate back to **Microsoft Sentinel** in Defender Portal.
 
-1. Select **Automation (1)** under **Configuration**.
+1. Select **Automation (2)** under the **Configuration (1)** area and then click on the **+ Create (3)** drop-down and then select **Automation rule (4)**.
 
-   > **Note:** If you do not see **Automation page** in the Microsoft Sentinel portal, try refreshing the browser. Wait 5 minutes and refresh again until it appears.
+    ![](../Media/lab9-june26-p2t1p10.png)
 
-1. Select **+ Create (2)** and choose **Automation Rule (3)**.
+1. On the **Create Automation rule pane**, under **Rule type (1)**, select **Standard rule**.
 
-   ![](../Media/lab9-s35.png)
+2. In the **Name (2)** field, enter a name **myautomationrule<inject key="DeploymentID" enableCopy="false"/>** for the automation rule.
 
-1. On the **Create new Automation Rule** page, provide the following details:
+3. Under **Trigger (3)**, leave the default value as **When an incident is created**.
 
-   - Give the rule a name as **myautomationrule<inject key="DeploymentID" enableCopy="false"/> (1)**
+4. Under the **Conditions** section, configure the following:
+    - Select **Tactics (4)** as the **Property**.
+    - Select **Contains (5)** as the **Operator**.
+    - Under **Value (6)**, select the following tactics:
+        - Reconnaissance
+        - Execution
+        - Persistence
+        - Command and Control
+        - Exfiltration
+        - PreAttack
 
-   - Select **Trigger** as **When incident is created (2)** 
-   - Leave the **incident provider** as **All (3)**
+5. Under **Actions**, select **Run Logic Apps playbook (7)**.
 
-   - Leave the **Analytic rule** name as **All (4)** 
+    > **Note:** If the playbook is unavailable, select **Manage playbook permissions** and grant Microsoft Sentinel the required permissions before continuing.
 
-   - Click **+ Add (5)** and Select **Condition(And) (6)**
+6. From the playbook list, select **Defender_XDR_Ransomware_Playbook_SecOps_Tasks (8)**.
 
-     ![](../Media/ss18.png)
+7. Select **Create (9)** to create the automation rule.
 
-      > **Note:** If the **Condition** section is not created automatically, manually add it as shown in the image below. If the **Incident provider** option is not available, ignore it and configure the **Analytic rule name** conditions accordingly (if available).
-
-      ![](../Media/l9-e3-8.png)
-
-1. From the drop down, select **Tactics (1)**.
-
-1. Select the **Contains (2)** operator from the dropdown.
-
-1. Select the following tactics **(3)**:
-    - Reconnaissance
-    - Execution
-    - Persistence
-    - Command and Control
-    - Exfiltration
-    - PreAttack
-
-      ![](../Media/lab9-s37.png)
-
-1. Under Actions, select **Run Playbook (1)**.
-
-1. Select the link to **Manage playbook permissions (2)**.
-
-   ![](../Media/ss19.png)
-
-1. On the **Manage Permissions** page, select the **rg-playbook (1)** resource group you created in the previous lab, and select **Apply (2)**.
-
-   ![](../Media/ss20.png)
-
-1. Now, create the Automation rule again follow from step 2 in the same task and select the same options
-
-1. From the drop down list, select the **Defender_XDR_Ransomware_Playbook_SecOps_Tasks (1)** playbook and then select **Apply (2)** at the bottom.
-
-    ![](../Media/lab9-s36.png)
+    ![Create Automation Rule](../Media/lab9-june26-p2t1p11.png)
 
 From here, depending on your role, you will either continue doing more architect exercises or you will pivot to the analyst exercises.
 

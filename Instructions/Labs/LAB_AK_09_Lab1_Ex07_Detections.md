@@ -31,6 +31,10 @@ In this task, you will create a detection for the first attack of the previous e
 
     ![Picture 1](../Media/lab9-ex7-1.png)
 
+1. Close the **Introducing Copilot Threat Hunting Agent** pop-up window.
+
+    ![Lab overview.](../Media/lab9-june26-p2t1p21.png)
+
 1. Provide the following KQL Statement again to recall the tables where we have this data **(1)**:
 
     ```KQL
@@ -40,6 +44,17 @@ In this task, you will create a detection for the first attack of the previous e
 1. **Run query(2)** the query, result with the event might take up to **5-10 minutes** to appear **(3)**.
 
    ![Picture 1](../Media/lab9-ex7-2.png)
+
+1. The table *SecurityEvent* looks to have the data already normalized and easy for us to query. Expand the row to see all the columns related to the record.
+
+1. From the results, we now know that the Threat Actor is using reg.exe to add keys to the Registry key and the program is located in C:\temp. **Run** the following statement to replace the *search* operator with the *where* operator in our query:
+
+    ```KQL
+    SecurityEvent 
+    | where Activity startswith "4688" 
+    | where Process == "reg.exe" 
+    | where CommandLine startswith "REG" 
+    ```
 
 1. It is important to help the Security Operations Center Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph. **Run query** the following query:
 
@@ -55,9 +70,9 @@ In this task, you will create a detection for the first attack of the previous e
 
 1. In **Advanced hunting**, select a result **(1)**, choose **Create detection rule (2)**, and then select **Create analytics rule instead** to continue with the unified experience.
 
-   ![Picture 1](../Media/lab9-ex7-4.png) 
+   ![Picture 1](../Media/lab9-june26-p2t1p23.png) 
 
-   ![Picture 1](../Media/lab9-ex7-5.png) 
+   ![Picture 1](../Media/lab9-june26-p2t1p24.png) 
 
 1. This starts the "Analytics rule wizard". For the **General** tab type:
 
@@ -76,25 +91,43 @@ In this task, you will create a detection for the first attack of the previous e
 
     |Entity|Identifier|Data Field|
     |:----|:----|:----|
-    |Account|FullName|AccountCustomEntity|
     |Host|Hostname|HostCustomEntity|
 
     ![Picture 1](../Media/lab9-ex7-7.png)  
 
-    ![Picture 1](../Media/lab9-ex7-8.png) 
+    ![Picture 1](../Media/lab9-june26-p2t1p27.png) 
 
+1. In the *Custom details* section, enter a key-value pair as follows:
+
+    |Key|Parameter|
+    |:----|:----|
+    |Activity|EventID|
+
+    ![Picture 1](../Media/lab9-june26-p2t1p28.png)
+
+    ![Picture 1](../Media/lab9-june26-p2t1p29.png) 
+
+1. On the *Alert settings* page, in the *Alert details* section, enter the following:
+    
+    |Setting|Value|
+    |---|---|
+    |Alert title|**Alert from {{Computer}}**|
+    |Description|**Alert from {{Process}} at {{TimeGenerated}}**|
+
+    ![Picture 1](../Media/lab9-june26-p2t1p30.png) 
+ 
 1. For **Query scheduling** set the following:
 
     |Setting|Value|
     |---|---|
-    |Run Query every|5 minutes **(1)**|
-    |Lookup data from the last|1 Days **(2)**|
+    |Run Query every|5 minutes|
+    |Lookback|set automatically|
 
     >**Note:** We are purposely generating many incidents for the same data. This enables the Lab to use these alerts.
 
-1. Leave the rest of the options with the defaults. Select **Next: Incident settings> (3)** button.
+    ![Picture 1](../Media/lab9-june26-p2t1p31.png) 
 
-   ![Picture 1](../Media/lab9-ex7-9.png) 
+1. Leave the rest of the options with the defaults. Select **Next: Incident settings >** button.
 
 1. For the **Incident settings** tab, leave the default values and select **Next: Automated response >** button.
 
@@ -142,6 +175,8 @@ In this task, you will create a detection for the second attack of the previous 
     | summarize count() by $table
     ```
 
+    ![Picture 1](../Media/lab9-june26-p2t1p32.png) 
+
 1. The result might show events from different tables.
 
    ![Picture 1](../Media/lab9-ex7-13.png)
@@ -188,7 +223,7 @@ In this task, you will create a detection for the second attack of the previous 
 
 1. In **Advanced hunting**, select a result **(1)**, choose **Create detection rule (2)**, and then select **Create analytics rule instead** to continue with the unified experience.
 
-   ![Picture 1](../Media/lab9-ex7-17.png)
+   ![Picture 1](../Media/lab9-june26-p2t1p33.png)
 
    ![Picture 1](../Media/lab9-ex7-5.png)
 

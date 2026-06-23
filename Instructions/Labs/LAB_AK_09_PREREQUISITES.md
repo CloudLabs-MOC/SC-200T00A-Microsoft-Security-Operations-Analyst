@@ -1,7 +1,7 @@
 
 # LAB PREREQUISITES
 
-## Estimated Timing: 40 Minutes
+### Estimated Timing: 40 Minutes
 
 ## Prerequisites to be completed before proceeding to further exercises
 
@@ -78,11 +78,11 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
      ![Picture 1](../Media/lab9-s6.png)
      
-1. Review the **Server details** and **Connectivity method** options. Keep the default values and select **Next** to get to the Tags tab.
+1. Review the **Server details** and **Connectivity method** options. Keep the default values and select **Next: Tags>** to get to the Tags tab.
 
-     ![Picture 1](../Media/lab9-s7.png)
+     ![Picture 1](../Media/lab9-june26-p2t1p1.png)
 
-1. Select **Next** to get to the Download and run script tab.
+1. Select **Next: Download and run script >** to get to the Download and run script tab.
 
 1. Scroll down and select the **Download** button. **Hint:** If your browser blocks the download, take action in the browser to allow it.
 
@@ -152,11 +152,12 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
      ![](../Media/lab6-s2.png)
 
-1. On the **Create Log Analytics workspace** provide the following details and click **Review + Create (4.)**
+1. On the **Create Log Analytics workspace** provide the following details and click **Review + Create (5)**.
 
       - Subscription: Leave the default subscription **(1)**
       - Resource group: Select **RG-DEFENDER (2)**
       - Name: Enter  **uniquenameDefender (3)**
+      - Region: **East US (4)**
 
         ![](../Media/lab6-s3.png)
 
@@ -182,15 +183,21 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
 1. On a new tab in the browser, go to **https://security.microsoft.com**
 
-1. In the left pane, expand **Microsoft Sentinel (1)** → **Configuration (2)** → select **Watchlist (3)**.
+1. Close the **Meet your improved security center** pop-up using **X**.
 
-     ![](../Media/lab8-s1.png)
+     ![](../Media/lab9-june26-p2t1p2.png)
 
-     > **Note:** If workspace is not connected, click on Connect workspace to connect. 
+1. In the left navigation pane, click **Show navigation (1)** to expand the menu if it is collapsed. Next, expand **Microsoft Sentinel (2)**, then expand **Content management (3)**, and select **Content hub (4)**.
+
+     ![](../Media/lab9-june26-p2t1p3.png)
+
+     > **Note:** If workspace is not connected, click on Connect workspace to connect.
 
 1. On the **Content hub** page, search for **Windows Security Events (1)**, press **Enter** and select **Windows Security Events (2)** and click on **Install (3)**.
 
      ![Picture 1](../Media/lab9-s14.png)
+
+     > **Note:** If the page does not appear after waiting for 5-10 minutes, sign out of the portal and sign back in. If the issue persists, open the same page in an InPrivate or Incognito browser window.
 
 1. Once the installation is completed, go to the **Data connector (1)** page and refresh you should find **Windows Security Events via AMA**.
 

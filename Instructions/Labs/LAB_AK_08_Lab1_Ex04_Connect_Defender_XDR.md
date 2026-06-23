@@ -32,7 +32,7 @@ In this task, you deploy the Microsoft Defender XDR connector.
 
 1. On the *Microsoft Sentinel* page, select the **Woodgrove-LogAnalyiticWorkspace (1)** Workspace.
 
-1. In the Microsoft Sentinel left menus, scroll down to the **Content management** section and select **Content Hub (1)**.
+1. In the Microsoft Sentinel left menus, scroll down to the **Content management** section and select **Content Hub (2)**.
 
 1. In the *Content hub*, search for the **Microsoft Defender XDR (3)** solution and select **Microsoft Defender XDR (4)** from the list.
 
