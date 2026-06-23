@@ -11,7 +11,7 @@ In this lab, you will perform:
 
 - **Task 2:** Apply Microsoft Defender XDR for Office 365 to present security policies
 
-- **Task 3:** Preparing the Microsoft Defender XDR workspace
+- **Task 3:** Preparing the Microsoft Defender XDR workspace (Read-Only)
     
 ## Estimated Timing: 90 Minutes
 
@@ -149,9 +149,11 @@ In this task, you will assign preset security policies for Exchange Online Prote
 1. Read the content under **Review and confirm your changes** and select **Confirm** to apply the changes, and then select **Done** to finish.
 
 
-### Task 3: Preparing the Microsoft Defender XDR workspace
+### Task 3: Preparing the Microsoft Defender XDR workspace (Read-Only)
 
 > **Note:** If you do not see **Devices** under the **Assets** section in the **Defender portal**, it may be due to a **glitch or an issue** in the **Microsoft Defender portal**. In this case, try refreshing the page. If it still doesn’t appear, just go through the lab guide for this task.  
+
+> **Note:** `The Devices option under the Assets section may take 24–48 hours to appear in the Microsoft Defender portal. This is expected behavior by design. Therefore, this task is provided as read-only for reference.`
 
 1. At the **Microsoft Defender** portal **Home** screen, scroll down the navigation menu items to the **Assets (1)** section, and select **Devices (2)**.
 
