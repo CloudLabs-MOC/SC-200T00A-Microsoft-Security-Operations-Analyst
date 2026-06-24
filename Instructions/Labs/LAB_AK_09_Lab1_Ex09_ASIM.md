@@ -49,6 +49,8 @@ In this task, you'll review the User Management Schema parsers that are included
 
 1. **Run** the ASIM function query.
 
+    >**Note:** A **Semantic error** may appear during this step. If it does, you can ignore the error and continue with the remaining steps.
+
 ## Review
 In this lab, you have completed the following:
 

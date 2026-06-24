@@ -33,10 +33,6 @@ In this task, you will explore Entity behavior analytics in Microsoft Sentinel.
 
     ![Lab overview.](../Media/lab9-s65.png)
 
-1. Select **UEBA**.
-
-    ![](../Media/lab9-june26-p2t1p13.png)
-
 1. On the **UEBA (User and Entity Behavior Analytics)** page, turn on **Turn on UEBA feature (1)**, verify **Microsoft Entra ID (2)** is enabled, and then select **Connect available data sources (3)**.
 
     ![Lab overview.](../Media/lab9-s67.png)

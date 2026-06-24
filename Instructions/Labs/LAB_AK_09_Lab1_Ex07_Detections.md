@@ -39,7 +39,11 @@ In this task, you will create a detection for the first attack of the previous e
 
     ```KQL
     search "temp\\startup.bat"
-    ```    
+    ```  
+
+    >**Note:** A result with the event might take up to 5 minutes to appear. Wait until it does. If it does not appear, make sure you have rebooted WINServer as instructed in the previous exercise and that you have completed the Task #3 of the Learning Path 6 Lab, Exercise 2.
+
+    >**Note:** A **Semantic error** may appear during this step. If it does, you can ignore the error and continue with the remaining steps.
 
 1. **Run query(2)** the query, result with the event might take up to **5-10 minutes** to appear **(3)**.
 
@@ -125,7 +129,7 @@ In this task, you will create a detection for the first attack of the previous e
 
     >**Note:** We are purposely generating many incidents for the same data. This enables the Lab to use these alerts.
 
-    ![Picture 1](../Media/lab9-june26-p2t1p31.png) 
+    ![Picture 1](../Media/page17-t1p2.png) 
 
 1. Leave the rest of the options with the defaults. Select **Next: Incident settings >** button.
 
@@ -176,6 +180,8 @@ In this task, you will create a detection for the second attack of the previous 
     ```
 
     ![Picture 1](../Media/lab9-june26-p2t1p32.png) 
+
+    >**Note:** A **Semantic error** may appear during this step. If it does, you can ignore the error and continue with the remaining steps.
 
 1. The result might show events from different tables.
 

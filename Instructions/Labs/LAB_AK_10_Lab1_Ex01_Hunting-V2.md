@@ -62,7 +62,7 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
    ![Picture 1](../Media/lab10-s1.png)
 
-1. Select the checkbox of the results that shows the **Administrator (1)** SubjectUsername. 
+1. Select the checkbox of the results that shows the **"-file c2.ps1" (1)** SubjectUsername. 
 
 1. In the middle command bar, select the **Add bookmark (2)** button.
 
@@ -140,7 +140,7 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
 1. Hide the right blade by selecting the **>>** icon and then scroll right until you see the ellipsis **(...)** icon.
 
-1. Select **Add to existing incident (1)**. All the incidents appear in the right pane.
+1. Select **Add to existing incident**. All the incidents appear in the right pane.
 
    ![Picture 1](../Media/lab9-june26-p13t2p3.png)
 

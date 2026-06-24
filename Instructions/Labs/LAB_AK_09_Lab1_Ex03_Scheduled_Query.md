@@ -35,9 +35,9 @@ In this task, you will create a scheduled query and connect it to the Teams chan
 
     > **Note:** If you do not see **Content hub page** in the Microsoft Sentinel portal, try refreshing the browser. Wait 5 minutes and refresh again until it appears.
 
-1. When the installation completes, go to **Data connectors (1)** page under **Configuration** in Microsoft Sentinel. The **Azure Activity** solution installs the **Azure Activity (2)** Data connector, 12 Analytic rules, 14 Hunting queries and 1 Workbook.
+1. When the installation completes, go to **Data connectors (2)** page under **Configuration (1)** in Microsoft Sentinel. The **Azure Activity** solution installs the **Azure Activity (3)** Data connector, 12 Analytic rules, 14 Hunting queries and 1 Workbook.
 
-   ![Picture 1](../Media/lab9-s39.png)
+   ![Picture 1](../Media/page17-t1p1.png)
 
 1. Select the **Azure Activity (1)** Data connector and select **Open connector page (2)**.
 
