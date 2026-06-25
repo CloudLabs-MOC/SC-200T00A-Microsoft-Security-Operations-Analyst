@@ -253,4 +253,4 @@ In this lab, you have completed the following:
 - Configured Roles
 - Configured Device Groups
 
-## Select **Next** to continue to Exercise 2
+## PROCEED TO  THE NEXT EXERCISE

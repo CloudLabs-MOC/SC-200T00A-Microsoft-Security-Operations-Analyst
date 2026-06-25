@@ -197,4 +197,4 @@ In this lab, you have completed the following:
 - Connected the Microsoft Defender for Cloud data connector
 - Connected the Azure Activity data connector
 
-## Select **Next** to continue to Exercise 2
+## PROCEED TO  THE NEXT EXERCISE

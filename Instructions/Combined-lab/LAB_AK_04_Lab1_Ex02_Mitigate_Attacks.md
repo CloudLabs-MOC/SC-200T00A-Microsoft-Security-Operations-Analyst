@@ -157,5 +157,5 @@ In this lab, you have completed the following:
 - Simulated an Attack
 - Investigated the simulated attack as a single incident
 
-## You have successfully completed the lab
+## PROCEED TO  THE NEXT EXERCISE
 

@@ -69,4 +69,4 @@ In this task, you'll assign preset security policies for Exchange Online Protect
 
    - Enabled Purview Audit logs
 
-## You have successfully completed the lab
+## PROCEED TO  THE NEXT EXERCISE

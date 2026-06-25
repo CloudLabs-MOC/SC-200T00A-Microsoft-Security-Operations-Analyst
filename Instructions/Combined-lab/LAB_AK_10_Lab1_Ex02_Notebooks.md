@@ -128,4 +128,4 @@ In this task, you will explore using notebooks in Microsoft Sentinel.
 In this lab, you have completed the following:
 - Explored AZURE ML Notebooks.
 
-## You have completed the lab 
+## PROCEED TO  THE NEXT EXERCISE

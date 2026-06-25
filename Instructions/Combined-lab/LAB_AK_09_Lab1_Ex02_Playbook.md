@@ -192,4 +192,4 @@ In this lab, you have completed the following:
 - Updated a Playbook in Microsoft Sentinel
 - Created an Automation Rule
 
-## Select **Next** to continue to Exercise 2
+## PROCEED TO  THE NEXT EXERCISE

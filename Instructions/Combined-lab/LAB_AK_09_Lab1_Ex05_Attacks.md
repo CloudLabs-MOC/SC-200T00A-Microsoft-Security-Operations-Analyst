@@ -218,4 +218,4 @@ In this lab
 
 - Understood Detection Modeling. 
 
-## Select **Next** to continue to Exercise 5
+## PROCEED TO  THE NEXT EXERCISE

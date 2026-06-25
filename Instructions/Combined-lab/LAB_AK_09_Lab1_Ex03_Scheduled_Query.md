@@ -214,4 +214,4 @@ In this lab, you have completed the following:
 - Edited the Scheduled Query
 - Tested the new rule. 
 
-## Select **Next** to continue to Exercise 3
+## PROCEED TO  THE NEXT EXERCISE

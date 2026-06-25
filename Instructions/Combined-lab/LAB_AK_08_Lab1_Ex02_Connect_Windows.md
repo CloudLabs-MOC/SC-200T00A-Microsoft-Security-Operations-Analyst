@@ -264,7 +264,7 @@ In this task, you'll add an Azure Arc-connected, non-Azure Windows virtual machi
 
    ![](../Media/lab8-s44.png)
 
-1. Once the **Vlidation Passed**, click on **Create**.
+1. Once the validation passes, click **Create**.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
@@ -281,4 +281,4 @@ In this lab, you have completed the following:
 - Connected an Azure Windows virtual machine
 - Connected a non-Azure Windows Machine
 
-## Select **Next** to continue to Exercise 3
+## PROCEED TO  THE NEXT EXERCISE

@@ -506,4 +506,4 @@ In this lab, you have completed the following:
 - Build multi-table statements in KQL
 - Worked with string data in KQL
 
-## You have successfully completed the lab
+## PROCEED TO  THE NEXT EXERCISE

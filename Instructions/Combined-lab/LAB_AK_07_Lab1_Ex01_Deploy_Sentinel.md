@@ -291,4 +291,4 @@ In this lab, you have completed the following:
 - Created a Threat Indicator
 - Configured log retention
 
-## You have successfully completed the lab
+## PROCEED TO  THE NEXT EXERCISE

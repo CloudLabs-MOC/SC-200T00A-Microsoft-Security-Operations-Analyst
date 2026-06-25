@@ -156,4 +156,4 @@ In this task, you will connect Microsoft Sentinel to Azure DevOps to manage cont
 - Created our Azure DevOps environment
 - Connected Sentinel to Azure DevOps
    
-## You have successfully completed the lab
+## PROCEED TO  THE NEXT EXERCISE

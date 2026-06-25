@@ -186,4 +186,4 @@ In this task, you will assign preset security policies for Exchange Online Prote
    - Created a Group in Microsoft Entra ID
    - Applied Microsoft Defender XDR for Office 365 preset security policies
 
-## You have successfully completed the lab
+## PROCEED TO  THE NEXT EXERCISE

@@ -128,4 +128,4 @@ In this lab, you have completed the following:
 - Connected Defender XDR
 - Connected Microsoft Sentinel and Microsoft Defender XDR
 
-## You have successfully completed this lab
+## PROCEED TO  THE NEXT EXERCISE

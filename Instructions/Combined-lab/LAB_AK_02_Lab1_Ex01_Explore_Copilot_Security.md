@@ -42,4 +42,4 @@ In this exercise, you explored the first run experience of Microsoft Security Co
 
 To run additional Microsoft Security Copilot use case simulations, browse to [Explore Microsoft Security Copilot use case simulations](/training/modules/security-copilot-exercises/)
 
-## You have successfully completed the lab
+## PROCEED TO  THE NEXT EXERCISE

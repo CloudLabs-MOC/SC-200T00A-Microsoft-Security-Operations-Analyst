@@ -151,4 +151,4 @@ In this lab, you have completed the following:
 - Command and Control Attack with DNS
 - Privileged Elevation Attack with User Add
 
-## Select **Next** to continue to Exercise 6
+## PROCEED TO  THE NEXT EXERCISE

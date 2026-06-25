@@ -302,4 +302,4 @@ In this lab, you have completed the following:
 - Persistence Attack Detection
 - Privileged Elevation Attack Detection
 
-## Select **Next** to continue to Exercise 7
+## PROCEED TO  THE NEXT EXERCISE

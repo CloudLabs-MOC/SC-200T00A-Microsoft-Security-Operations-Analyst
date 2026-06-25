@@ -15,7 +15,7 @@
 
 In this task, you will install Azure Arc and connect a non-Azure Windows virtual machine to Microsoft Sentinel.  
 
-> ### **Note:** <span style="color: maroon;">The steps up to this point were covered in a previous lab. You can skip them and proceed directly to **Step 40** of this task. If you would like a refresher or want to understand how the resources are being configured in this exercise, feel free to review the steps before continuing.</span>
+> ### **Note:** <span style="color: maroon;">The steps up to point **39** of task 1 were covered in a previous labs. You can skip them and proceed directly to **Step 40** of the task. If you would like a refresher or want to understand how the resources are being configured in this exercise, feel free to review the steps before continuing.</span>
 
 >**Important:** The next steps are done on a different machine than the one you were previously working on. Look for the Virtual Machine name references.
 
