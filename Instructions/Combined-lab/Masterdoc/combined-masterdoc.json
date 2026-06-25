@@ -5,11 +5,11 @@
     "BaseURL": "https://docs-api.cloudlabs.ai/repos//github.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/Combined-lab",
     "Files": [
       {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos//raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/Combined-lab/Instructions/Combined-lab/LabIntro-v2.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/Combined-lab/Instructions/Combined-lab/LabIntro-v2.md",
         "Order": 1
       },
       {
-        "RawFilePath": "https://docs-api.cloudlabs.ai/repos//raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/Combined-lab/Instructions/Combined-lab/LAB_AK_01_Lab1_Ex01_Explore_Defender_XDR.md",
+        "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/Combined-lab/Instructions/Combined-lab/LAB_AK_01_Lab1_Ex01_Explore_Defender_XDR.md",
         "Order": 2
       },
       {
