@@ -178,7 +178,7 @@ In this task, you will assign preset security policies for Exchange Online Prote
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-   <validation step="cd91c5ce-77b6-4769-8216-ebe3792185a5" />
+   <validation step="fe330160-b15b-4eb6-906a-ebb1b0711294" />
 
 ### Review
  In this lab, you have completed the following:

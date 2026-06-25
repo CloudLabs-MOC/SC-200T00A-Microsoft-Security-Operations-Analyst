@@ -233,7 +233,7 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.com. We are available 24/7 to help you out.
  
-<validation step="07c96102-f314-44cd-b6a4-10fbb89a449b" />
+<validation step="e476363a-77e4-4028-810f-f919e1cee4f0" />
 
 ## Review
 -  Connected a non-Azure Windows Machine

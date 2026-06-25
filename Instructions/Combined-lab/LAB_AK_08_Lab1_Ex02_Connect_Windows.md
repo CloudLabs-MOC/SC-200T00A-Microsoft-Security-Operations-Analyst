@@ -271,7 +271,7 @@ In this task, you'll add an Azure Arc-connected, non-Azure Windows virtual machi
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
- <validation step="cb8a9849-e7b9-487e-8717-e483d77a590a" />
+ <validation step="79c943cc-e4c3-403d-b81c-09bd1742ec15" />
 
 ## Review
 In this lab, you have completed the following:
