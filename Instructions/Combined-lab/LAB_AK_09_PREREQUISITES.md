@@ -1,4 +1,3 @@
-
 # LAB PREREQUISITES
 
 ### Estimated Timing: 40 Minutes

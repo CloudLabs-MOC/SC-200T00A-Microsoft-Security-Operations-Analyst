@@ -1,4 +1,4 @@
-# Lab 03: Explore Microsoft Purview Audit logs
+# Explore Microsoft Purview Audit logs
 
 ## Lab Scenario
 

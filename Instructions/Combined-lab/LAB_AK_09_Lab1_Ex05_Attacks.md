@@ -1,4 +1,4 @@
-# Lab 08 - Exercise 4: Prepare to perform simulated attacks
+# Prepare to perform simulated attacks
 
 ### Lab Scenario
 

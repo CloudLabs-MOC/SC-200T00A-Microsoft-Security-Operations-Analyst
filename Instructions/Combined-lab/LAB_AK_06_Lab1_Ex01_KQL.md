@@ -1,4 +1,4 @@
-# Lab 05 - Exercise 1: Create queries for Microsoft Sentinel using Kusto Query Language (KQL)
+# Create queries for Microsoft Sentinel using Kusto Query Language (KQL)
 
 ## Lab Scenario
 

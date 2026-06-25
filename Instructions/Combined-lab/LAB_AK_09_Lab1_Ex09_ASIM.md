@@ -1,4 +1,4 @@
-# Lab 08 - Exercise 8: Deploy ASIM parsers
+# Deploy ASIM parsers
 
 ## Lab Scenario
 

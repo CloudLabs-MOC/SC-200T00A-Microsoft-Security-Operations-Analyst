@@ -1,4 +1,4 @@
-# Lab 07 - Exercise 1: Connect data to Microsoft Sentinel using data connectors
+# Connect data to Microsoft Sentinel using data connectors
 
 ## Lab Scenario
 

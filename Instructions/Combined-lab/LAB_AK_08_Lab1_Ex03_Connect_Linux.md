@@ -1,4 +1,4 @@
-# Lab 07 - Exercise 3: Connect Linux hosts to Microsoft Sentinel using data connectors
+# Connect Linux hosts to Microsoft Sentinel using data connectors
 
 ## Lab Scenario
 

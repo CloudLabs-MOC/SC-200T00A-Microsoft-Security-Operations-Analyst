@@ -1,4 +1,3 @@
-
 # Getting Started with Your SC-200: Microsoft Security Operations Analyst Workshop
  
 Welcome to your SC-200: Microsoft Security Operations Analyst workshop! We've prepared a seamless environment for you to explore and learn about monitoring, identifying, investigating, and responding to threats in multi-cloud environments. Let's begin by making the most of this experience:

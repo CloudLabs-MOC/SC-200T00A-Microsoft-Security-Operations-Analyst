@@ -1,4 +1,4 @@
-# Lab 08 - Exercise 6: Create Detections
+# Create Detections
 
 ## Lab Scenario
 

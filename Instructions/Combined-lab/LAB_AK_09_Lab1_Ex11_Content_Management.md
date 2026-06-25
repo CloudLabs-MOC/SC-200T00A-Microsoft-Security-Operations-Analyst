@@ -1,4 +1,4 @@
-# Lab 08 - Exercise 10: Use Repositories in Microsoft Sentinel
+# Use Repositories in Microsoft Sentinel
 
 ## Lab scenario
 
