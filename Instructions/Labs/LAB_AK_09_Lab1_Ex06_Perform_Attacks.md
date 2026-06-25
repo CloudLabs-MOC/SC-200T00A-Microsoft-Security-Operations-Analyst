@@ -1,4 +1,4 @@
-# Lab 09 - Exercise 5: Conduct attacks
+# Lab - Exercise 5: Conduct attacks
 
 ## Lab Scenario
 

@@ -1,4 +1,4 @@
-# Lab 09 - Exercise 9: Create workbooks
+# Lab - Exercise 9: Create workbooks
 
 ## Lab Scenario
 

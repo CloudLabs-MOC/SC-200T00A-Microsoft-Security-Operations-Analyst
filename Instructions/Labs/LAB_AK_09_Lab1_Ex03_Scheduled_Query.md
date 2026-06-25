@@ -1,4 +1,4 @@
-# Lab 09 - Exercise 2: Create a Scheduled Query from a template
+# Lab - Exercise 2: Create a Scheduled Query from a template
 
 ## Lab Scenario
 

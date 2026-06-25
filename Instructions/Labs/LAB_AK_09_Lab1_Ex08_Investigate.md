@@ -1,4 +1,4 @@
-# Lab 09 - Exercise 7: Investigate Incidents
+# Lab - Exercise 7: Investigate Incidents
 
 ## Lab Scenario
 

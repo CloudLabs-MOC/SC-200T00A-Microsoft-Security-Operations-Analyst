@@ -1,4 +1,4 @@
-# Lab 08 - Exercise 2: Connect Windows devices to Microsoft Sentinel using data connectors
+# Lab - Exercise 2: Connect Windows devices to Microsoft Sentinel using data connectors
 
 ## Lab Scenario
 
