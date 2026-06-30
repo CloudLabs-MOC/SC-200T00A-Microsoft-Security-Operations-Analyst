@@ -9,9 +9,11 @@ You're a Security Operations Analyst working at a company that is implementing M
 ## Lab Objectives
  In this lab, you will perform the following:
 
-- Task 1: Create a Watchlist
-- Task 2: Create a Threat Indicator
-- Task 3: Configure log retention
+- Task 1: Create a Log Analytics Workspace
+- Task 2 : Deploy Microsoft Sentinel to a workspace
+- Task 3: Create a Watchlist
+- Task 4: Create a Threat Indicator
+- Task 5: Configure log retention
 
 ## Estimated Timing: 60 Minutes
 
@@ -19,7 +21,7 @@ You're a Security Operations Analyst working at a company that is implementing M
 
   ![Picture 1](../Media/SC200-Lab_Diagrams_Mod5_L1_Ex1.png)
 
-<!--
+
 ### Task 1: Create a Log Analytics Workspace
 
 In this task, you will create a Log Analytics workspace for use with Microsoft Defender for Cloud.
@@ -69,7 +71,7 @@ In this task, you will deploy Microsoft Sentinel to an existing Log Analytics wo
    ![](../Media/lab6-s8.png)
 -->
 
-### Task 1: Create a Watchlist
+### Task 3: Create a Watchlist
 
 In this task, you will create a watchlist in Microsoft Sentinel.
 
@@ -190,7 +192,7 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
   <validation step="d60e3723-097e-4021-92fe-9cde7976093b" />
   
-### Task 2: Create a Threat Indicator
+### Task 4: Create a Threat Indicator
 
 In this task, you will create an indicator in Microsoft Sentinel.
 
@@ -253,7 +255,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
      ![](../Media/lab6-06-8.png)
 
-### Task 3: Configure log retention
+### Task 5: Configure log retention
 
 In this task, you will change the retention period for the SecurityEvent table.
 
