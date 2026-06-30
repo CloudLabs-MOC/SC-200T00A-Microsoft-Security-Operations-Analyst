@@ -69,8 +69,7 @@ In this task, you will deploy Microsoft Sentinel to an existing Log Analytics wo
 1. In the Microsoft Sentinel free trial activated tab, select **Ok**.
 
    ![](../Media/lab6-s8.png)
--->
-
+   
 ### Task 3: Create a Watchlist
 
 In this task, you will create a watchlist in Microsoft Sentinel.
