@@ -1,5 +1,4 @@
-
-# Lab 04 - Exercise 2: Mitigate Attacks with Microsoft Defender for Endpoint (Read-Only)
+# Lab - Exercise 2: Mitigate Attacks with Microsoft Defender for Endpoint
 
 ## Lab Scenario
 
@@ -159,4 +158,3 @@ In this lab, you have completed the following:
 - Investigated the simulated attack as a single incident
 
 ## You have successfully completed the lab
-
