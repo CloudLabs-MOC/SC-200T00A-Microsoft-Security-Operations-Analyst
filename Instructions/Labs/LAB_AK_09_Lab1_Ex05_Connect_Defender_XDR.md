@@ -1,4 +1,4 @@
-# Connect Defender XDR to Microsoft Sentinel using data connectors
+# Lab - Connect Defender XDR to Microsoft Sentinel using data connectors
 
 ## Lab scenario
 
