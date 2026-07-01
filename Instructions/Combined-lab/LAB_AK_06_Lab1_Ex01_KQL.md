@@ -24,7 +24,7 @@ You're a Security Operations Analyst working at a company that is implementing M
 
 ## Architecture Diagram
 
-  ![Picture 1](../Media/lab6-arch.png)
+  ![Picture 1](../Media/lab6-06--arch.png)
 
 ### Task 1: Create a Log Analytics Workspace
 
@@ -94,6 +94,10 @@ In this task, you will connect an Azure Windows VM to Microsoft Sentinel by inst
 
        ![](../Media/lab6-06--01.png)
 
+       > **Note:** After opening the **Microsoft Defender portal**, it may take **5–10 minutes** for the **Microsoft Sentinel workspace** to appear in the **Workspaces** list. If no workspace is displayed initially, try refreshing the page using **Ctrl + F5**, signing out by selecting the circle with your initials in the top-right corner and choosing **Sign out**, and then signing back in using your **Tenant Email** credentials. You can also try opening the portal in **InPrivate/Incognito mode**. If the workspace is **already connected**, please **proceed to the next step**. 
+
+       > **Important:** The total lab duration already includes any waiting time required for deployments, data connectors, or services (such as the **5–10 minutes** mentioned above). Please do not worry if certain steps take additional time to complete, and plan your activities accordingly while performing the lab.
+
 1. Click on **Install** on the right navigation page that shows up, scroll down if you don't see the Install button.
 
      ![](../Media/lab6-06--02.png)
@@ -132,7 +136,7 @@ In this task, you will connect an Azure Windows VM to Microsoft Sentinel by inst
 
 1. On the **Resources** tab of the **Select a scope** page, perform the following steps:
 
-    - Expand the resource group **RG-Defender** under default subscription
+    - Expand the resource group **WIN-1** under default subscription
 
     - Select the Windows virtual machine named **WIN1 (1)**
 
@@ -157,6 +161,8 @@ In this task, you will connect an Azure Windows VM to Microsoft Sentinel by inst
 1. On the **Microsoft Sentinel | Configuration | Data connectors** page click on **Windows Security Events via AMA**, under configuration notice that now the **Windows Security Events via AMA** data connector is successfully connected with Microsoft Sentinel.
 
     ![](../Media/lab6-06--11.png)
+
+    > **Note:** It may take 15–20 minutes for the Windows Security Events data connector to show a Connected status after configuration.
 
 ### Task 4: Run Basic KQL Statements
 
@@ -184,6 +190,8 @@ In this task, you will build basic KQL statements.
 
     >**Note:** It may take 15-20 minutes for the query results to appear.
 
+    > **Note:** `Some KQL queries may initially return "No results found in the specified time frame." This can occur because Windows Security Events collected through the Azure Monitor Agent (AMA) may take several minutes to be ingested into the workspace, or because the specific event IDs used in the query have not yet been generated on the virtual machine. If this happens, wait 10–15 minutes and rerun the query. If the issue persists, try increasing the query time range (for example, from Last 1 hour to Last 24 hours or Last 7 days)`
+
 1. Change the **Time range** to **Last hour** in the Query Window.
 
     ![](../Media/lab6-06--14.png)
@@ -205,6 +213,8 @@ In this task, you will build basic KQL statements.
     ```KQL
     search in (SecurityEvent,SecurityAlert,A*) "err"
     ```
+
+    ![](../Media/sc200-l6--05.png)
 
 1. Change back the *Time range* to **Last 24 hours** in the Query Window.
 
@@ -259,7 +269,6 @@ In this task, you will build basic KQL statements.
     LowActivityAccounts
     ```
 
-
 ### Task 5: Analyze Results in KQL with the Summarize Operator
 
 In this task, you'll build KQL statements to aggregate data. **Summarize** groups the rows according to the **by** group columns, and calculates aggregations over each group.
@@ -272,6 +281,8 @@ In this task, you'll build KQL statements to aggregate data. **Summarize** group
     | summarize count() by Computer
     ```
 
+    > **Note:** It will take some time to reflect for some commands, you can move to other commands and check this later.
+
 1. The following statement demonstrates the **count()** function, but in this example, we name the column as *cnt*. In the Query Window, enter the following statement and select **Run**:
 
     ```KQL
@@ -279,6 +290,8 @@ In this task, you'll build KQL statements to aggregate data. **Summarize** group
     | where TimeGenerated > ago(7d) and EventID == 4624  
     | summarize cnt=count() by AccountType, Computer
     ```
+
+    ![](../Media/sc200-l6--06.png)
 
 1. The following statement demonstrates the **dcount()** function, which returns an approximate distinct count of the group elements. In the Query Window, enter the following statement and select **Run**:
 
@@ -339,6 +352,8 @@ In this task, you'll use generate visualizations with KQL statements.
     | render timechart
     ```
 
+    ![](../Media/sc200-l6--07.png)
+
 ### Task 7: Build multi-table statements in KQL
 
 In this task, you'll build multi-table KQL statements.
@@ -346,6 +361,8 @@ In this task, you'll build multi-table KQL statements.
 1. Change the **Time range** to **Last 7 days** in the Query Window. This limits our results for the following statements.
 
 1. The following statement demonstrates the **union** operator, which takes two or more tables and returns all their rows. Understanding how results are passed and impacted with the pipe character is essential. In the Query Window, enter the following statements and select **Run** for each query separately to see the results:
+
+    > **Note:** It will take some time to reflect for some commands, you can move to other commands and check this later.
 
     1. **Query 1** returns all rows of SecurityEvent and all rows of SigninLogs.
 
