@@ -183,7 +183,7 @@ In this task, you will build basic KQL statements.
 1. In the query editor, enter the following query **(1)** and select the **Run (2)** button. You should see the query results in the bottom window.
 
     ```KQL
-    SecurityEvent_CL
+    SecurityEvent
     ```
 
     ![](../Media/lab6-06--13.png)
@@ -211,7 +211,7 @@ In this task, you will build basic KQL statements.
 1. The following statement demonstrates **search** across tables listed within the **in** clause. In the Query Window, enter the following statement and select **Run**:
 
     ```KQL
-    search in (SecurityEvent,SecurityAlert,A*) "err"
+    search in (SecurityEvent,SecurityAlert,A*) "new"
     ```
 
     ![](../Media/sc200-l6--05.png)
