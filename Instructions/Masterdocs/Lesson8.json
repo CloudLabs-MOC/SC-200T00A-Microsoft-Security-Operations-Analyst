@@ -14,11 +14,11 @@
       },
       {
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/custom-labs/Instructions/Labs/LAB_AK_09_Lab1_Ex07_Detections.md",
-        "Order": 2
+        "Order": 3
       },
       {
         "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/custom-labs/Instructions/Labs/LAB_AK_09_Lab1_Ex08_Investigate.md",
-        "Order": 3
+        "Order": 4
       }
     ]
   }
