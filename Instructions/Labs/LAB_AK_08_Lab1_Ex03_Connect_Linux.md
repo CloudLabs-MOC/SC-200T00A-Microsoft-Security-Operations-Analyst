@@ -1,4 +1,4 @@
-# Lab - Exercise 3: Connect Linux hosts to Microsoft Sentinel using data connectors
+# Lab-9b: Connect Linux hosts to Microsoft Sentinel using data connectors
 
 ## Lab Scenario
 
@@ -70,11 +70,13 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
     
      >**Note:** Replace **insert your linux IP address here** with pasted on the notepad Public Ip address of **LIN1** and **insert linux username here** with **Admin Username:** **cloudlabs** provided under Resource group: **LIN1** in the **Environment Details** page of the lab guide.
 
+     ![](../Media/lab8-s51-ab.png)
+
 1. Enter **yes** to confirm the connection and then type the user's **password provided under Resource group: LIN1** in the Environment tab and press **enter**. Your screen should look something like this:
 
-   ![](../Media/lab8-s51.png)
-
    - **password/LIN1: <inject key="Admin Password"></inject>**
+
+   ![](../Media/lab8-s51.png)
 
 1. You are now ready to paste in the command that we copied from the earlier step. Make sure that the script from Azure is in the clipboard. In PowerShell, right-click the top bar and choose **Edit** and then **Paste**. Once pasted add a **3** to the word *python* as shown below:
 
@@ -218,9 +220,9 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
    
 1. Enter **yes** to confirm the connection and then type the user's **password provided under Resource group: LIN2** in the Environment tab and press Enter. Your screen should look something like this:
 
-   ![linux login](../Media/lab8-s86.png)
-
    - **password/LIN2: <inject key="Admin Password"></inject>**
+
+   ![linux login](../Media/lab8-s86.png)
 
 1. You are now ready to paste in the command that we copied from the earlier step. Make sure that the script from Azure is in the clipboard. In PowerShell, right-click the top bar and choose **Edit** and then **Paste**. Once pasted add a **3** to the word *python* as shown below:
 
@@ -255,3 +257,4 @@ In this lab, you have completed the following:
 - Connected a Linux Host using the Common Event Format connector
 - Connected a Linux host using the Syslog connector
 
+### Congratulations, you’ve successfully completed the hands-on lab!

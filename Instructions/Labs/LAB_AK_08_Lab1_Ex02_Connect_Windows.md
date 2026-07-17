@@ -1,4 +1,4 @@
-# Lab - Exercise 2: Connect Windows devices to Microsoft Sentinel using data connectors
+# Lab-9a: Connect Windows devices to Microsoft Sentinel using data connectors
 
 ## Lab Scenario
 
@@ -11,7 +11,7 @@ You're a Security Operations Analyst working at a company that implemented Micro
 - Task 3: Connect an Azure Windows virtual machine
 - Task 4: Connect a non-Azure Windows Machine
 
-### Estimated Timing: 30 Minutes
+### Estimated Timing: 60 Minutes
 
 ## Architecture Diagram
 
@@ -33,9 +33,7 @@ In this task, you'll create a Windows virtual machine in Azure.
 
     ![](../Media/windows-11-2-3005.png)
 
-1. Open the **Plan** drop-down list and select **Windows 11 Enterprise, version 24H2 (1)**.
-
-1. Select **Start with a pre-set configuration (2)** to continue.
+1. Open the **Plan** drop-down list and select **Windows 11 Enterprise, version 24H2 (1)**, select **Start with a pre-set configuration (2)** to continue.
 
    ![](../Media/lab7-06-11.png)
 
@@ -120,9 +118,7 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
    ![](../Media/lab8-s25.png)
 
-1. In the navigation pane under **Azure Arc resources** select **Machines (1)**
-
-1. Select **+ Onboard/Create (2)**, then select **Onboard existing machines (3)**.
+1. In the navigation pane under **Azure Arc resources** select **Machines (1)**, select **+ Onboard/Create (2)**, then select **Onboard existing machines (3)**.
 
    ![](../Media/lab8-s26.png)
 
@@ -198,7 +194,19 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
 In this task, you'll connect an Azure Windows virtual machine to Microsoft Sentinel.
 
-1. Navigate to **Microsoft Defender**, in Microsoft Sentinel left menus, scroll down to the **Content management** section and select **Content Hub**.
+1. On a new tab in the browser, go to **https://security.microsoft.com**
+
+1. Close the pop-up that appears.
+
+    ![](../Media/img1.png)
+
+1. On **Microsoft Defender** page, if the left navigation pane is collapsed, select **Show navigation** to expand it.
+
+   ![Picture 1](../Media/sc200-lab1-2.png)
+
+1. In the Microsoft Defender **Microsoft Sentinel (1)** navigation menu, scroll down to the **Content management (2)** section and select **Content Hub (3)**.
+
+     ![](../Media/lab7-06-12.png)
 
 1. In the **Content hub**, search for the **Windows Security Events (1)** solution and select **Windows Security Events (2)** from the list.
 
@@ -264,7 +272,7 @@ In this task, you'll add an Azure Arc-connected, non-Azure Windows virtual machi
 
    ![](../Media/lab8-s44.png)
 
-1. Once the **Vlidation Passed**, click on **Create**.
+1. Once the **Validation Passed**, click on **Create**.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
@@ -281,4 +289,4 @@ In this lab, you have completed the following:
 - Connected an Azure Windows virtual machine
 - Connected a non-Azure Windows Machine
 
-## Select **Next** to continue to Exercise 3
+### Congratulations, you’ve successfully completed the hands-on lab!
