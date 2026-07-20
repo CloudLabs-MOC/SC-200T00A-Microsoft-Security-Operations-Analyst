@@ -1,4 +1,3 @@
-
 # LAB PREREQUISITES
 
 ### Estimated Timing: 40 Minutes
@@ -10,8 +9,10 @@
  In this lab, you will perform the following:
 
  - Task 1: Connect a non-Azure Windows Machine
+ - Task 2: Persistence Attack with Registry Key Add
+ - Task 3: Command and Control Attack with DNS
 
-### Task 1: Connect a non-Azure Windows Machine
+## Task 1: Connect a non-Azure Windows Machine
 
 In this task, you will install Azure Arc and connect a non-Azure Windows virtual machine to Microsoft Sentinel.  
 
@@ -143,43 +144,6 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
     >**Note:** **xxxxxxxxxxx** will be a random suffix of the **WIN-**, as demonstrated in the below image. 
 
      ![Picture 1](../Media/lab9-s13.png)
-    
-1. In the Azure portal's search bar, type **Log Analytics workspaces (1)** and select **Log Analytics workspaces (2)**.
-
-     ![](../Media/lab6-s1.png)
-
-1. Click on **+ Create**.
-
-     ![](../Media/lab6-s2.png)
-
-1. On the **Create Log Analytics workspace** provide the following details and click **Review + Create (5)**.
-
-      - Subscription: Leave the default subscription **(1)**
-      - Resource group: Select **RG-DEFENDER (2)**
-      - Name: Enter  **uniquenameDefender (3)**
-      - Region: **East US (4)**
-
-        ![](../Media/lab6-s3.png)
-
-        >**Note:** If **uniquenameDefender** name is not available use **Defender<inject key="DeploymentID"></inject>**
-        
-1. Once the workspace validation has passed, select **Create**. Wait for the new workspace to be provisioned, this may take a few minutes.
-
-1. In the Azure portal search bar, type **Microsoft Sentinel (1)** and select it **Microsoft Sentinel (2)**.
-
-     ![](../Media/lab6-s5.png)
-
-1. On **Microsoft Sentinel** page, Click on **+ Create**.
-
-      ![](../Media/lab6-s6.png)
-
-1. Next, in Add Microsoft Sentinel to a workspace page select the **uniquenameDefender (1)** that was created in the previous lab, then select **Add (2)**. This could take a few minutes.
-
-     ![](../Media/lab6-s7.png)
-
-1. In the Microsoft Sentinel free trial activated tab, select **Ok**.
-
-   ![](../Media/lab6-s8.png)
 
 1. On a new tab in the browser, go to **https://security.microsoft.com**
 
@@ -227,12 +191,62 @@ In this task, you will install Azure Arc and connect a non-Azure Windows virtual
 
      ![Picture 1](../Media/lab9-s21.png)
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- If you receive a success message, you can proceed to the next task.
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.com. We are available 24/7 to help you out.
- 
-<validation step="07c96102-f314-44cd-b6a4-10fbb89a449b" />
+## Task 2: Persistence Attack with Registry Key Add
+
+In this task, you will simulate a persistence attack by adding a registry key that ensures a program runs each time the system starts.
+
+1. Click **Start (1)** on the **WINServer** Windows taskbar, select **Power (2)**, and then choose **Restart (3)**.
+
+    ![Lab overview.](../Media/ss50.png)
+
+     >**Note**: Choose **Others(Planned)** and then **Continue**.
+
+    ![Lab overview.](../Media/l9e6-1.png)
+
+1. Once the system restarts, log back into **WINServer** from the desktop.
+
+     ![Picture 1](../Media/46.png)
+
+1. If prompted, provide the Password `Password.1!!`.
+
+    ![Picture 1](../Media/sc-200-4.png)
+
+1. In the search of the task bar, enter **Command (1)**. Command Prompt will be displayed in the search results. Right-click on the Command Prompt and select **Run as Administrator (2)**. Select **Yes** in the User Account Control window that appears to allow the app to run.
+
+    ![Lab overview.](../Media/ss51.png)
+
+1. In the Command Prompt, create a Temp folder in the root directory. Remember to press Enter after the last row:
+
+    ```CommandPrompt
+    cd \
+    mkdir temp
+    cd temp
+    ```
+
+1. Copy and run this command to simulate program persistence:
+
+    ```CommandPrompt
+    REG ADD "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SOC Test" /t REG_SZ /F /D "C:\temp\startup.bat"
+    ```
+
+     ![Lab overview.](../Media/lab9-s77.png)    
+
+## Task 3: Privilege Elevation Attack with User Add
+
+In this task, you will simulate a privilege elevation attack by creating a new admin user on the system. This exercise demonstrates how an attacker could escalate their privileges on a machine by adding a new user to the Administrators group.
+
+1. Copy and run this command to simulate the creation of an Admin account. Remember to press Enter after the last row:
+
+    ```CommandPrompt
+    net user theusernametoadd /add
+    net user theusernametoadd ThePassword1!
+    net localgroup administrators theusernametoadd /add
+    ```
+
+     ![Lab overview.](../Media/lab9-s78.png)    
+    
+     >**Note:** If you encounter any issues while copying and pasting, try copying the prompt into **Notepad** first, then paste it into the **Command Prompt (CMD)**.
+
 
 ## Review
 -  Connected a non-Azure Windows Machine

@@ -1,4 +1,4 @@
-# Lab - Exercise 7: Investigate Incidents
+# Lab 6b-: Investigate Incidents
 
 ## Lab Scenario
 
@@ -18,7 +18,7 @@ An incident can include multiple alerts. It is an aggregation of all the relevan
 
   ![Lab overview.](../Media/SC-200ex8upd.png)
 
-### Task 1: Investigate an incident
+## Task 1: Investigate an incident
 
 In this task, you will investigate an incident.
 
@@ -27,14 +27,6 @@ In this task, you will investigate an incident.
 1. Expand the **Incidents & alerts (2)** section and select **Incidents (3)**.
 
     ![Picture 1](../Media/lab9-june26-p2t1p34.png) 
-
-1. Review the list of incidents.
-
-    >**Note:** The Analytics rules are generating alerts and incidents on the same specific log entry. Remember that this was done in the *Query scheduling* configuration to generate more alerts and incidents to be utilized in the lab.
-  
-1. In the Microsoft Defender navigation menu, scroll down and expand the **Investigation & response** section.
-
-1. Expand the **Incidents & alerts** section and select **Incidents**.
 
 1. Review the list of incidents.
 
@@ -124,5 +116,3 @@ In this task, you will investigate an incident.
 ## Review
 In this lab, you have completed the following:
 - Investigated an incident.
-
-## Select **Next** to continue to Exercise 8
