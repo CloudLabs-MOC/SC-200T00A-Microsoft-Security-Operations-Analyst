@@ -22,9 +22,13 @@ When a complex incident is identified in Microsoft Defender XDR—involving a co
 
 In this interactive guide, which takes approximately 10 minutes to complete, you investigate a security incident in Microsoft Defender XDR. You review incident and alert summaries, analyze related entities, and use Security Copilot insights to guide your investigation.
 
-**Select the image below to get started.**
+1. Launch **Microsoft Edge** from the desktop.
 
-[![Thumbnail for the Investigate security incidents in Defender XDR interactive guide.](../Media/sc200-lab2-1.png)](https://microsoftlearning.github.io/click-throughs/docs/IG/interactive-guide-investigate-security-incidents-in-microsoft-defender-web/story.html?azure-portal=true)
+    ![](../Media/launchedge.png)
+
+1. Copy the URL [interactive-guide-investigate-security-incidents-in-microsoft-defender-web](https://microsoftlearning.github.io/click-throughs/docs/IG/interactive-guide-investigate-security-incidents-in-microsoft-defender-web/story.html?azure-portal=true) paste it into the Microsoft Edge address bar.
+
+    ![](../Media/link1.png)
 
 ## Task 2: Analyze artifacts and pivot to advanced investigation
 
@@ -32,9 +36,13 @@ After you understand the overall incident context, the next step is to analyze i
 
 In this interactive guide, which guide takes approximately 10 minutes to complete, you continue your investigation by analyzing alerts in Microsoft Defender XDR. You review alert details, examine device and user context, and use Security Copilot to support advanced investigation.
 
-**Select the image below to get started.**
+1. Launch **Microsoft Edge** from the desktop.
 
-[![Thumbnail for the Analyze artifacts and investigations in Defender XDR interactive guide.](../Media/sc200-lab2-2.png)](https://microsoftlearning.github.io/click-throughs/docs/IG/interactive-guide-analyze-artifacts-investigations-in-defender-web/story.html?azure-portal=true)
+    ![](../Media/launchedge.png)
+
+1. Copy the URL [interactive-guide-analyze-artifacts-investigations-in-defender-web](https://microsoftlearning.github.io/click-throughs/docs/IG/interactive-guide-analyze-artifacts-investigations-in-defender-web/story.html?azure-portal=true) paste it into the Microsoft Edge address bar.
+
+    ![](../Media/link2.png)
 
 ## Summary and additional resources
 

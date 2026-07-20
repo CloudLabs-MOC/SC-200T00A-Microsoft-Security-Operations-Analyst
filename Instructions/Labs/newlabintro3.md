@@ -22,13 +22,13 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](../Media/12-8-25-g1-5.png)
+![Explore Lab Resources](../Media/envtab.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![Use the Split Window Feature](../Media/12-8-25-g1-3.png)
+![Use the Split Window Feature](../Media/splittab.png)
  
 ## Managing Your Virtual Machine
  
@@ -70,51 +70,11 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
  
 4. If prompted to stay signed in, you can click **No**.
 
-5. If **Action required** pop-up window appears, click on **Ask later**.
-   
-      ![Action Required](../Media/az500-2.png)
+   ![](../Media/sign-in-no.png)
  
 5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Maybe later**.
 
-## Steps to Proceed with MFA Setup if "Ask Later" Option is Not Visible
-
-1. If you see the pop-up **Stay Signed in?**, click **No**.
-
-1. If **Action required** pop-up window appears, click on **Next**.
-   
-   ![](../Media/mfa1.png)
-
-1. On **Start by getting the app** page, click on **Next**.
-1. Click on **Next** twice.
-1. In **android**, go to the play store and Search for **Microsoft Authenticator** and Tap on **Install**.
-
-   ![Install](../Media/mfa2.png)
-
-   > Note:For Ios, Open app store and repeat the steps.
-
-   > Note: Skip If already installed.
-
-1. Open the app and tap on **Scan a QR code**.
-
-1. Scan the QR code visible on the screen and click on **Next**.
-
-   ![QR code](../Media/mfa3.png)
-
-1. Enter the digit displayed on the Screen in the Authenticator app on mobile and tap on **Yes**.
-
-1. Once the notification is approved, click on **Next**.
-
-   ![Approved](../Media/mfa4.png)
-
-1. Click on **Done**.
-
-1. If prompted to stay signed in, you can click **"No"**.
-
-1. Tap on **Finish** in the Mobile Device.
-
-   > **NOTE:** While logging in again, enter the digits displayed on the screen in the **Authenticator app** and click on Yes.
-
-1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Maybe later**.
+   ![](../Media/Welcomeimg.png)
 
 ## Support Contact
  
