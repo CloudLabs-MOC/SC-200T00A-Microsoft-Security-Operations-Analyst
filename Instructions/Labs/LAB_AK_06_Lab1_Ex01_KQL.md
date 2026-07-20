@@ -1,4 +1,4 @@
-# Lab - Exercise 1: Create queries for Microsoft Sentinel using Kusto Query Language (KQL)
+# Lab - Assignment 1: Create queries for Microsoft Sentinel using Kusto Query Language (KQL)
 
 ## Lab Scenario
 
@@ -423,7 +423,7 @@ In this task, you'll work with structured and unstructured string fields with KQ
 
     ![](../Media/sc200-l6-07.png)
 
-1. Enter the name **PrivLogins (1)**in the **Function name** box.
+1. Enter the name **PrivLogins (1)** in the **Function name** box.
 
 1. In the **Location** field select **My functions (2)** or *Shared functions* from the dropdown menu. You can also create a new folder by selecting the **New folder** link.
 
