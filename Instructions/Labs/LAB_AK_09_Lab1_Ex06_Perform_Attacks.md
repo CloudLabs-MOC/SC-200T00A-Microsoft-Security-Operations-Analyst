@@ -12,7 +12,7 @@ You are going to simulate the attacks that you will later use to detect and inve
 - Task 2: Command and Control Attack with DNS
 - Task 3: Privilege Elevation Attack with User Add
 
-## Estimated Timing: 30 Minutes
+## Estimated Timing: 3 hours
 
 ## Architecture Diagram
 

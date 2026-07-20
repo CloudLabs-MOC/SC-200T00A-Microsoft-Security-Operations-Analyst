@@ -20,7 +20,7 @@ You are a Security Operations Analyst working at a company that implemented Micr
 
 In this task, you will access your Microsoft Sentinel workspace.
 
-1. On a new tab in the browser, go to **https://security.microsoft.com**
+1. On a new tab in the browser, go to **https://security.microsoft.com**.
 
 1. In the Microsoft Defender **Microsoft Sentinel (1)** navigation menu, scroll down to the **Content management (2)** section and select **Content Hub (3)**.
 

@@ -1,4 +1,4 @@
-# Lab - Exercise 1: Create a Playbook in Microsoft Sentinel
+# Lab-10 Create a Playbook in Microsoft Sentinel
 
 ## Lab Scenario
 
@@ -15,7 +15,7 @@ After completing this lab, you will be able to:
 - Task 2: Update a Playbook in Microsoft Sentinel
 - Task 3: Create an Automation Rule
 
-## Estimated Timing: 30 Minutes
+## Estimated Timing: 60 Minutes
 
 ## Architecture Diagram
 
@@ -25,7 +25,11 @@ After completing this lab, you will be able to:
 
 In this task, you'll create a Logic App that is used as a Playbook in Microsoft Sentinel.
 
-1. On a new tab in the browser, go to **https://security.microsoft.com**
+1. On a new tab in the browser, go to **https://security.microsoft.com**.
+
+1. Close the pop-up that appears.
+
+    ![](../Media/img1.png)
 
 1. In the Microsoft Defender **Microsoft Sentinel (1)** navigation menu, scroll down to the **Content management (2)** section and select **Content Hub (3)**.
 
@@ -45,7 +49,9 @@ In this task, you'll create a Logic App that is used as a Playbook in Microsoft 
 
     ![](../Media/lab9-s23.png)
 
-1. Find the **Defender_XDR_Ransomware_Playbook_for_SecOps-Tasks** playbook and select the name.
+1. Select the **Back** arrow to view the content items and access the connector page. 
+
+1. Find the **Defender_XDR_Ransomware_Playbook_for_SecOps-Tasks (1)** playbook and select the name, then select **Configuration (2)**.
 
    ![](../Media/lab9-s24.png)
 
@@ -81,23 +87,25 @@ In this task, you update the new playbook you created with the proper connection
 
     ![](../Media/lab9-june26-p2t1p4.png)
 
-1. In the Search bar of the Azure portal, type Sentinel, then select Microsoft Sentinel.
+1. In the Search bar of the Azure portal, type Sentinel, then select **Microsoft Sentinel**.
 
 1. Select your Microsoft Sentinel Workspace.
 
-1. Select Automation under the Configuration area and then select the *Active Playbooks* tab.
+1. Select **Automation (2)** under the **Configuration (1)** area and then select the **Active Playbooks (3)** tab.
 
-1. Select Refresh from the command bar in case you don’t see any playbooks. You should see the playbook created from the previous step.
+    ![](../Media/lab-10-img1.png)
+
+1. Select **Refresh** from the command bar in case you don’t see any playbooks. You should see the playbook created from the previous step.
 
 1. Select the **Defender_XDR_Ransomware_Playbook_SecOps_Tasks** playbook name link.
+
+    ![](../Media/lab10-ss2.png)
 
 1. On the Logic app designer page for **Defender_XDR_Ransomware_Playbook_SecOps_Tasks**, in the command menu, select Edit.
 
     >**Note:** You may need to refresh the page.
 
-1. Select the first block, **Microsoft Sentinel incident (1)**.
-
-1. Select the **Change connection (2)** link.
+1. Select the first block, **Microsoft Sentinel incident (1)**, select the **Change connection (2)** link.
 
     ![](../Media/lab9-june26-p2t1p5.png)
 
@@ -131,7 +139,7 @@ In this task, you will create an automation rule in Microsoft Sentinel that runs
 
     ![](../Media/lab9-june26-p2t1p12(1).png)
 
-2. On the **Role** tab, search for **Microsoft Sentinel Automation Contributor (1)**, select the **Microsoft Sentinel Automation Contributor (2)** role, and then select **Review + assign (3)**.
+2. On the **Role** tab, search for **Microsoft Sentinel Automation Contributor (1)**, select the **Microsoft Sentinel Automation Contributor (2)** role, and then select **Next (3)**.
 
     ![](../Media/lab9-june26-p2t1p12(2).png)
 
@@ -164,7 +172,7 @@ In this task, you will create an automation rule in Microsoft Sentinel that runs
         - Persistence
         - Command and Control
         - Exfiltration
-        - PreAttack
+        - PreAttack(Deprecated)
 
 5. Under **Actions**, select **Run Logic Apps playbook (7)**.
 
@@ -176,15 +184,6 @@ In this task, you will create an automation rule in Microsoft Sentinel that runs
 
     ![Create Automation Rule](../Media/lab9-june26-p2t1p11.png)
 
-From here, depending on your role, you will either continue doing more architect exercises or you will pivot to the analyst exercises.
-
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-   <validation step="9a03fda7-3dc7-407d-bbea-d9650d728011" />
-
 ### Review
 In this lab, you have completed the following:
 
@@ -192,4 +191,4 @@ In this lab, you have completed the following:
 - Updated a Playbook in Microsoft Sentinel
 - Created an Automation Rule
 
-## Select **Next** to continue to Exercise 2
+### Congratulations, you’ve successfully completed the hands-on lab!
