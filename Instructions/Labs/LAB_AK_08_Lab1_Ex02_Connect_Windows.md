@@ -269,13 +269,6 @@ In this task, you'll add an Azure Arc-connected, non-Azure Windows virtual machi
 
 1. Once the **Validation Passed**, click on **Create**.
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
- <validation step="cb8a9849-e7b9-487e-8717-e483d77a590a" />
-
 ## Review
 In this lab, you have completed the following:
 

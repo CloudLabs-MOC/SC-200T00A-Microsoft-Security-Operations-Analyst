@@ -1,4 +1,4 @@
-# Lab : Explore Microsoft Security Copilot
+# Lab -02: Explore Microsoft Security Copilot
 
 ## Lab Scenario
 

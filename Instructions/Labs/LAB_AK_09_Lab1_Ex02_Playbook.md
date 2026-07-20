@@ -1,4 +1,4 @@
-# Lab - Exercise 1: Create a Playbook in Microsoft Sentinel
+# Lab - 10: Create a Playbook in Microsoft Sentinel
 
 ## Lab Scenario
 
@@ -178,12 +178,6 @@ In this task, you will create an automation rule in Microsoft Sentinel that runs
 
 From here, depending on your role, you will either continue doing more architect exercises or you will pivot to the analyst exercises.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-   <validation step="9a03fda7-3dc7-407d-bbea-d9650d728011" />
 
 ### Review
 In this lab, you have completed the following:
@@ -191,5 +185,3 @@ In this lab, you have completed the following:
 - Created a Playbook in Microsoft Sentinel
 - Updated a Playbook in Microsoft Sentinel
 - Created an Automation Rule
-
-## Select **Next** to continue to Exercise 2
