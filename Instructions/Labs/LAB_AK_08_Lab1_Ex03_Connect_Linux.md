@@ -26,11 +26,7 @@ In this task, you will access your Microsoft Sentinel workspace.
 
      ![](../Media/lab7-06-12.png)
 
-### Task 2: Connect a Linux Host using the Common Event Format connector
-
-In this task, you will connect a Linux host to Microsoft Sentinel with the Common Event Format (CEF) connector.
-
-1. In **content hub** and search **Common Event Format (2)** and select **Common Event Format (3)** from list and click on **install (4)**.
+1. In **Content hub** and search **Common Event Format (1)** and select **Common Event Format (2)** from list and click on **Install (3)**.
 
    ![](../Media/lab8-s45.png)
 
@@ -38,9 +34,9 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
     ![](../Media/lab8-s46.png)
 
-1. From the Data Connectors tab, search for the **Common Event Format (CEF) via AMA (1)** connector and select it from the list.
+1. Select the **Back** arrow to view the content items and access the connector page.    
 
-1. Select the **Open connector page (2)** on the connector information blade.
+1. From the Data Connectors tab, search for the **Common Event Format (CEF) via AMA (1)** connector and select it from the list, select the **Open connector page (2)** on the connector information blade.
 
    ![](../Media/lab8-s47.png)
 
@@ -84,9 +80,13 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
    
     >**Note:** You can also copy from the notepad you have pasted earlier.
 
-1. Once the script is pasted in and adjusted, press Enter. The script will run against your Linux server remotely. When the script processes properly, it should look like this screen:
+1. Once the script is pasted in and adjusted, press **Enter**. The script will run against your Linux server remotely. When the script processes properly, it should look like this screen:
 
    ![](../Media/lab8-s52.png)
+
+### Task 2: Connect a Linux Host using the Common Event Format connector
+
+In this task, you will connect a Linux host to Microsoft Sentinel with the Common Event Format (CEF) connector.
 
 1. Navigate to **Microsoft Defender** portal, in the Microsoft Sentinel left navigation menu, scroll down to the **Content management** section and select **Content Hub (1)**.
 
@@ -112,15 +112,13 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
    ![](../Media/lab8-s56.png)
 
-1. On the **Resources** tab, expand your **MOC Subscription (1)** under **Scope**.
-
-1. Expand **LIN1 (2)** resource group, then select **LIN1 (3)**.
+1. On the **Resources** tab, expand your **MOC Subscription (1)** under **Scope**, expand **LIN1 (2)** resource group, then select **LIN1 (3)**, select **Next: Collect (4)**.
 
    ![](../Media/lab7-06-17.png)
 
     >**Note:** You're **LIN1** virtual machine may appear with a different name, like ubuntuxxx.
 
-1. Select **Next: Collect (4)**. In the **Collect** tab, select the  **LOG_ALERT** drop-down menu, and select **LOG_WARNING (1)**.
+1. In the **Collect** tab, select the  **LOG_ALERT** drop-down menu, and select **LOG_WARNING (1)**.
 
    ![](../Media/lab8-s58.png)
 
@@ -154,11 +152,13 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 In this task, you will connect a Linux host to Microsoft Sentinel with the Syslog connector.
 
-1. Go back to the Microsoft Defender portak. 
+1. Go back to the Microsoft Defender portal. 
 
-1. Go to the **Content hub (1)** in the data connector window, search for **Syslog (2)**, select **Syslog (3)** from the list and click on **Install**.
+1. Go to the **Content hub (1)** in the data connector window, search for **Syslog (2)**, select **Syslog (3)** from the list.
 
    ![](../Media/lab7-06-18.png)
+
+1. Click on **Install**.   
 
    ![](../Media/lab8-s62.png)
 
@@ -166,9 +166,9 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
     ![](../Media/lab8-s63.png)
 
-1. From the **Data Connectors tab**, search for the **Syslog via AMA (1)** connector and select it from the list.
+1. Select the **Back** arrow to view the content items and access the connector page.
 
-1. Select the **Open connector page (2)** on the connector information blade.
+1. From the **Data Connectors tab**, search for the **Syslog via AMA (1)** connector and select it from the list, select the **Open connector page (2)** on the connector information blade.
 
    ![](../Media/lab8-s64.png)
 
@@ -184,17 +184,17 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
     >**Hint:** You can expand the whole *Scope* hierarchy by selecting the ">" before the *Scope* column.
 
-1. Expand **LIN-2 (1)**, then select **LIN2 (2)**.
+1. Expand **LIN-2 (1)**, then select **LIN2 (2)**,then select **Next: Collect (3)**.
 
    ![](../Media/lab8-s67.png)
 
     >**Note:** You're *LIN2* virtual machine may appear with a different name, like ubuntuxxx.
 
-1. Select **Next: Collect (3)**. In the *Collect* tab, select the  *LOG_ALERT* drop-down menu, and select **LOG_WARNING (1)**.
-
-1. Select **Next: Review + create (2)**, and select **Create**. Wait for the deployment to finish.
+1. In the **Collect** tab, select the  *LOG_ALERT* drop-down menu, and select **LOG_WARNING (1)**, then select **Next: Review + create (2)**.
 
     ![](../Media/lab8-s68.png)
+
+1. Select **Create**. Wait for the deployment to finish.
 
 1. Next, in the **Configuration** section, **copy** the script to install the AMA Forwarder by using the "Copy to clipboard" icon.
 
@@ -216,7 +216,9 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
     ssh insert-your-linux-IP-address-here -l insert-linux-user-name-here
     ```
 
-    >**Note**: Replace **insert your linux IP address here** with pasted on the notepad Public Ip address of **LIN2** and **insert linux username here** with **Admin Username:** **cloudlabs** provided under Resource group: **LIN2** in the Environment tab
+    >**Note**: Replace **insert your linux IP address here** with pasted on the notepad Public Ip address of **LIN2** and **insert linux username here** with **Admin Username:** **cloudlabs** provided under Resource group: **LIN2** in the Environment tab.
+    
+    ![](../Media/lab8-s51-ab.png)
    
 1. Enter **yes** to confirm the connection and then type the user's **password provided under Resource group: LIN2** in the Environment tab and press Enter. Your screen should look something like this:
 
@@ -228,13 +230,11 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
    ![](../Media/lab7-06-19.png)
 
-1. At the linux prompt, paste the AMA Forwarder installation script you copied in the previous step.
+1. Once the script is pasted in and adjusted, press **Enter**. The script will run against your Linux server remotely. When the script processes properly, it should look like this screen:
 
     ![](../Media/lab8-s71.png)
 
     >**Note:** You can also copy from the notepad you have pasted earlier.
-
-1. Press **Enter** to run the script
 
 1. You should see the *Installation completed successfully* message.
 
