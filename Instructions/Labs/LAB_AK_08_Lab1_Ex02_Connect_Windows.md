@@ -189,7 +189,7 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
 In this task, you'll connect an Azure Windows virtual machine to Microsoft Sentinel.
 
-1. On a new tab in the browser, go to **https://security.microsoft.com**
+1. On a new tab in the browser, go to **https://security.microsoft.com**.
 
 1. Close the pop-up that appears.
 
