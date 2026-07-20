@@ -1,4 +1,4 @@
-# Lab - Exercise 6: Create Detections
+# Lab 6a: Create Detections
 
 ## Lab Scenario
 
@@ -31,9 +31,9 @@ In this task, you will create a detection for the first attack of the previous e
 
     ![Picture 1](../Media/lab9-ex7-1.png)
 
-1. Close the **Introducing Copilot Threat Hunting Agent** pop-up window.
+1. If the **Try out guided hunting** dialog appears, select **Not now**.
 
-    ![Lab overview.](../Media/lab9-june26-p2t1p21.png)
+    ![Lab overview.](../Media/labb6a-07-1.png)
 
 1. Provide the following KQL Statement again to recall the tables where we have this data **(1)**:
 
@@ -45,9 +45,9 @@ In this task, you will create a detection for the first attack of the previous e
 
     >**Note:** A **Semantic error** may appear during this step. If it does, you can ignore the error and continue with the remaining steps.
 
-1. **Run query(2)** the query, result with the event might take up to **5-10 minutes** to appear **(3)**.
+1. **Run query (2)** the query, result with the event might take up to **5-10 minutes** to appear **(3)**.
 
-   ![Picture 1](../Media/lab9-ex7-2.png)
+   ![Picture 1](../Media/labb6a-07-9.png)
 
 1. The table *SecurityEvent* looks to have the data already normalized and easy for us to query. Expand the row to see all the columns related to the record.
 
@@ -70,11 +70,11 @@ In this task, you will create a detection for the first attack of the previous e
     | extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = SubjectUserName
     ```
 
-     ![Picture 1](../Media/lab9-ex7-3.png)    
+     ![Picture 1](../Media/labb6a-07-3.png)    
 
-1. In **Advanced hunting**, select a result **(1)**, choose **Create detection rule (2)**, and then select **Create analytics rule instead** to continue with the unified experience.
+1. In **Advanced hunting**, select the query result **(1)**, select the **More actions (2)** menu, select **Create detection rule (3)**, and then select **Create analytics rule instead** to continue with the unified experience.
 
-   ![Picture 1](../Media/lab9-june26-p2t1p23.png) 
+   ![Picture 1](../Media/labb6a-07-2.png)  
 
    ![Picture 1](../Media/lab9-june26-p2t1p24.png) 
 
@@ -137,7 +137,7 @@ In this task, you will create a detection for the first attack of the previous e
 
 1. On the **Automated response** tab under **Automation rules**, select **+ Add new**.
 
-   ![Picture 1](../Media/lab9-ex7-10.png) 
+   ![Picture 1](../Media/labb6a-07-10.png) 
 
     >**Note:** If you are unable to add a new Automation Rule, follow these steps:  
     > 1. Open a new tab and navigate to your **Sentinel workspace**.  
@@ -166,7 +166,7 @@ In this task, you will create a detection for the first attack of the previous e
 
      ![Picture 1](../Media/lab9-ex7-12.png) 
 
-### Task 2: Privilege Elevation Attack Detection
+## Task 2: Privilege Elevation Attack Detection
 
 In this task, you will create a detection for the second attack of the previous exercise.
 
@@ -195,7 +195,7 @@ In this task, you will create a detection for the second attack of the previous 
     | where TargetAccount == "Builtin\\Administrators"
     ```
 
-    ![Picture 1](../Media/lab9-ex7-14.png)   
+    ![Picture 1](../Media/labb6a-07-4.png)   
 
 1. Expand the row to see all the columns related to the record. The username of the account added as Administrator does not show. The issue is that instead of storing the username, we have the Security IDentifier (SID). **Run** the following KQL to match the SID to the username that was added to the Administrators group:
 
@@ -210,7 +210,7 @@ In this task, you will create a detection for the second attack of the previous 
         | project Acct1 = TargetSid, MachId1 = SourceComputerId, UserName1 = TargetUserName) on $left.MachId == $right.MachId1, $left.Acct == $right.Acct1
     ```
 
-    ![Picture 1](../Media/lab9-ex7-15.png) 
+    ![Picture 1](../Media/labb6a-07-5.png) 
 
 1. Extend the row to show the resulting columns, in the last one, we see the name of the added user under the **UserName1** column we **project** within the KQL query. It is important to help the Security Operations Analyst by providing as much context about the alert as you can. This includes projecting Entities for use in the investigation graph. **Run** the following query:
 
@@ -225,11 +225,11 @@ In this task, you will create a detection for the second attack of the previous 
         | project Acct1 = TargetSid, MachId1 = SourceComputerId, UserName1 = TargetUserName) on $left.MachId == $right.MachId1, $left.Acct == $right.Acct1
     | extend timestamp = TimeGenerated, HostCustomEntity = Computer, AccountCustomEntity = UserName1
     ```
-    ![Picture 1](../Media/lab9-ex7-16.png)  
+    ![Picture 1](../Media/labb6a-07-6.png)  
 
-1. In **Advanced hunting**, select a result **(1)**, choose **Create detection rule (2)**, and then select **Create analytics rule instead** to continue with the unified experience.
+1. In **Advanced hunting**, select the query result **(1)**, select the **More actions (2)** menu, select **Create detection rule (3)**, and then select **Create analytics rule instead** to continue with the unified experience.
 
-   ![Picture 1](../Media/lab9-june26-p2t1p33.png)
+   ![Picture 1](../Media/labb6a-07-7.png)
 
    ![Picture 1](../Media/lab9-ex7-5.png)
 
@@ -302,4 +302,4 @@ In this lab, you have completed the following:
 - Persistence Attack Detection
 - Privileged Elevation Attack Detection
 
-## Select **Next** to continue to Exercise 7
+## Select **Next** to continue to Exercise
