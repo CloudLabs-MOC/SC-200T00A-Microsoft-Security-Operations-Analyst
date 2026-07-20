@@ -41,7 +41,7 @@ In this task, you'll create a Windows virtual machine in Azure.
 
    ![](../Media/lab8-s17.png)
 
-1. On **Create a virtual machine** page, configure the disk and then select **Review + create (11)**. 
+1. On **Create a virtual machine** page, configure the following settings: 
 
     | Setting | Value |
     | --- | --- |
@@ -64,14 +64,9 @@ In this task, you'll create a Windows virtual machine in Azure.
     | Username | Enter **azureuser(7)**  |
     | Password  | Enter **Password.1!! (8)**  |
     | Confirm Password  | Enter **Password.1!! (9)** |
+    | Select **Review + create (10)** |
 
       ![](../Media/lab8-s20.png)
-    
-    | Setting | Value |
-    | --- | --- |
-    | Licensing | Select the Checkbox **(10)** |
-
-     ![](../Media/lab8-s21.png)
 
 1. Select **Create**. Wait for the Resource to be created, this may take a few minutes.
 
@@ -176,7 +171,7 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
     ![](../Media/lab8-s32.png)
 
-1. The setup process opens a new Microsoft Edge browser tab to authenticate the Azure Arc agent. Select your admin account, wait for the message "Authentication complete," and then go back to the Windows PowerShell window.
+1. The setup process opens a new Microsoft Edge browser tab to authenticate the Azure Arc agent. Select your admin account, wait for the message **"Authentication complete"** and then go back to the Windows PowerShell window.
 
     ![](../Media/lab8-s33.png)
 
@@ -208,9 +203,7 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
      ![](../Media/lab7-06-12.png)
 
-1. In the **Content hub**, search for the **Windows Security Events (1)** solution and select **Windows Security Events (2)** from the list.
-
-1. On the **Windows Security Events** solution page select **Install (3)**.
+1. In the **Content hub**, search for the **Windows Security Events (1)** solution and select **Windows Security Events (2)** from the list, on the **Windows Security Events** solution page select **Install (3)**.
 
     ![](../Media/lab7-06-14.png)
 
@@ -221,6 +214,8 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
     ![](../Media/lab8-s37.png)
 
     >**Note:** The **Windows Security Events** solution installs both the **Windows Security Events via AMA** and the **Security Events via Legacy Agent** Data connectors, along with 2 Workbooks, 20 Analytic Rules, and 43 Hunting Queries.
+
+1. Select the **Back** arrow to view the content items and access the connector page.
 
 1. Select the **Windows Security Events via AMA (1)** Data connector, and select **Open connector page (2)** on the connector information blade.
 
@@ -236,11 +231,11 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
 1. Select **Next: Resources>** to select the Virtual Machine we created.
 
-1. Expand **RG-AZWIN01 (1)**, then select **AZWIN01 (2)**.
+1. Expand **RG-AZWIN01 (1)**, then select **AZWIN01 (2)**, next choose **Collect (3)**.
 
     ![](../Media/lab8-s41.png)
 
-1. Next, choose **Collect (3)**, review the various Security Event collection options, keep the setting for **All Security Events**, and then click on **Next: Review + Create**.
+1. Review the various Security Event collection options, keep the setting for **All Security Events**, and then click on **Next: Review + Create**.
 
 1. Select **Create** to save the Data Collection Rule.
 
