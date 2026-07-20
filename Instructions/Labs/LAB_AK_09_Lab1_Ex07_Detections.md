@@ -45,9 +45,9 @@ In this task, you will create a detection for the first attack of the previous e
 
     >**Note:** A **Semantic error** may appear during this step. If it does, you can ignore the error and continue with the remaining steps.
 
-1. **Run query(2)** the query, result with the event might take up to **5-10 minutes** to appear **(3)**.
+1. **Run query (2)** the query, result with the event might take up to **5-10 minutes** to appear **(3)**.
 
-   ![Picture 1](../Media/lab9-ex7-2.png)
+   ![Picture 1](../Media/labb6a-07-9.png)
 
 1. The table *SecurityEvent* looks to have the data already normalized and easy for us to query. Expand the row to see all the columns related to the record.
 
@@ -137,7 +137,7 @@ In this task, you will create a detection for the first attack of the previous e
 
 1. On the **Automated response** tab under **Automation rules**, select **+ Add new**.
 
-   ![Picture 1](../Media/lab9-ex7-10.png) 
+   ![Picture 1](../Media/labb6a-07-10.png) 
 
     >**Note:** If you are unable to add a new Automation Rule, follow these steps:  
     > 1. Open a new tab and navigate to your **Sentinel workspace**.  

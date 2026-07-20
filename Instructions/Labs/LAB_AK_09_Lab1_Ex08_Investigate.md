@@ -30,7 +30,7 @@ In this task, you will investigate an incident.
 
 1. Review the list of incidents.
 
-    >**Note:** The Analytics rules are generating alerts and incidents on the same specific log entry. Remember that this was done in the *Query scheduling* configuration to generate more alerts and incidents to be utilized in the lab.
+    >**Note:** The Analytics rules are generating alerts and incidents on the same specific log entry.
   
 1. Select one of the **Alert from WIN-xxxxxx** incidents.
 
