@@ -1,80 +1,38 @@
-# Lab: Explore Microsoft Defender XDR
+# Lab - 01: Configure Exchange Online Protection (EOP) Policies
 
 ## Lab Scenario
- You are a Security Operations Analyst working at a company that is implementing Microsoft Defender XDR. You start by assigning preset security policies in Exchange Online Protection (EOP) and Microsoft Defender XDR for Office 365.
+
+You're a Security Operations Analyst working at a company that relies on Exchange Online for email. Every organization that uses Exchange Online automatically gets **Exchange Online Protection (EOP)** — a built-in service that filters incoming and outgoing mail for spam, malware, and phishing before it ever reaches a user's inbox.
+
+Your job in this lab is to review and configure the core EOP policies so your organization is protected against the most common email-borne threats. You'll work directly with the anti-malware, anti-spam, and anti-phishing policies rather than using bundled presets, so you can see exactly what each protection does and how to tune it.
 
 ## Lab Objectives
 
 In this lab, you will perform:
 
-- **Task 1:** Create a Group in Microsoft Entra ID
+- **Task 1:** Navigate to Threat policies
 
-- **Task 2:** Apply Microsoft Defender XDR for Office 365 to present security policies
+- **Task 2:** Review and configure the anti-malware policy
 
-- **Task 3:** Preparing the Microsoft Defender XDR workspace (Read-Only)
+- **Task 3:** Configure the anti-spam policies (inbound and outbound)
+
+- **Task 4:** Configure the anti-phishing policy
+
+- **Task 5:** Verify your configuration
     
-## Estimated Timing: 90 Minutes
+## Estimated Timing: 120 Minutes
 
-## Architecture Diagram
+## Task 1: Navigate to Threat policies
 
-  ![Picture 1](../Media/archdialab1.png)
+1. On the **LabVM**, open **Edge** browser, go to the **Microsoft Defender portal** by visiting the following link: [Security portal](https://security.microsoft.com).
 
-### Task 1: Create a Group in Microsoft Entra ID
+1. In the **Sign in** dialog box, copy and paste **Email/Username: <inject key="AzureAdUserEmail"></inject>** and then select **Next**.
 
-In this task, you will create a new group in Microsoft Entra ID using the Azure portal.
+1. In the **Enter password** dialog box, copy and paste **Password: <inject key="AzureAdUserPassword"></inject>** and then select **Sign in**.
 
-1. In the Search bar of the Azure portal, type **Microsoft Entra ID (1)**, then select **Microsoft Entra ID (2)**.
+1. Close the welcome page in **Microsoft Defender** portal.
 
-   ![Picture 1](../Media/lab1-s3.png)
-
-1. Under **Manage** select **Groups** and then click on **New group**.
-
-   ![Picture 1](../Media/lab1-s4.png)
-
-   ![Picture 1](../Media/14-8-25-l1-1.png)
-
-1. Enter the below details for the new group page:
-
-   |Setting|Value|
-    |---|---|
-    |Group Type| **Microsoft 365 (1)** |
-    |Group Name| **Sg-IT-<inject key="DeploymentID" enableCopy="false"/> (2)**|
-
-   ![Picture 1](../Media/lab1-s1.png)
-
-1. Click on **No owners selected** and  select the **ODL_user <inject key="DeploymentID" enableCopy="false"/>** from the list and then click on **Select**.
-
-   ![Picture 1](../Media/create-group-2.png)
-
-1. Click on **No members selected** and select the **ODL_user <inject key="DeploymentID" enableCopy="false"/>** from the list and then click on **Select**.
-
-   >**Note:** Make sure you have selected **Group type** as **Microsoft 365**.
-
-1. On the **New Group** page, click on **Create**.
-
-   ![Picture 1](../Media/sc200-lab1-1.png)
-
-### Task 2: Apply Microsoft Defender XDR for Office 365 preset security policies
-
-In this task, you will assign preset security policies for Exchange Online Protection (EOP) and Microsoft Defender XDR for Office 365 in the Microsoft  security portal.
-
-1. In the Edge browser, navigate to the [Microsoft Defender XDR portal](https://security.microsoft.com) via the **Security portal**.
-
-1. You will see the **Sign into Microsoft Defender XDR portal** tab. Here, enter your credentials to log in:
- 
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
- 
-      ![Enter Your Username](../Media/sc900-image-1.png)
- 
-1. Now enter the Temporary Access Pass and click on **Sign in**.
- 
-   - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
- 
-      ![Enter Your Password](../Media/lab1-s2.png)
-
-     >**Note:** If you encounter the message **"The operation could not be completed. Please try again later. If the issue persists, contact Microsoft Support."**, click **OK** to continue.
-
-1. If prompted, please close the **Microsoft Defender XDR quick tour** to go ahead.
+   ![](../Media/sc200-close-welcome.png)
 
 1. On **Microsoft Defender** page, if the left navigation pane is collapsed, select **Show navigation** to expand it.
 
@@ -86,104 +44,166 @@ In this task, you will assign preset security policies for Exchange Online Prote
 
    ![Picture 1](../Media/sc200-lab1-3.png)
 
-1. On the **Threat policies** dashboard, select **Preset Security Policies**.
+1. Take a moment to look at the **Threat policies** page. Under the **Policies** heading you'll see entries including **Anti-phishing**, **Anti-spam**, and **Anti-malware** — the three policies you'll configure in this lab.
 
-   ![Picture 1](../Media/14-8-25-l1-3.png)
+   ![Picture 1](../Media/lab1-07-sc1.png)
 
-    >**Note:** If you receive the message **"Client Error - Error when getting bip rule"** select **OK** to continue. The error is due to the hydration status of your tenant at Office 365, which is not enabled by default.
+## Task 2: Review and configure the anti-malware policy
 
-    >**Note:** If you see the message **"Client Error - An error occurred when retrieving preset security policies. Please try again later."**, select **OK** to continue, then refresh your browser by pressing **Ctrl+F5**.
+In this task, you will assign preset security policies for Exchange Online Protection (EOP) and Microsoft Defender XDR for Office 365 in the Microsoft  security portal.
 
-1. On the **Learn about preset security policies** **pop-out** page, select **Cancel**.
+1. On the **Threat policies** page, under **Policies**, select **Anti-malware**.
 
-1. Under **Standard protection**, select **Manage protection settings**. 
+   ![Picture 1](../Media/lab1-07-sc2.png)
 
-   ![Standart protection](../Media/sc200-lab1-4.png)
+1. Select the **Default (Default) (1)** policy to open it, then scroll down, and  select **Edit protection settings (2)**.
 
-    >**Hint:** If this option appears greyed out, wait for 5 minutes and refresh your browser by pressing **Ctrl+F5** or opening the portal in InPrivate mode. Then sign back in using your Tenant Email credentials. If the option is still not visible after trying these steps, it may be an issue with the Defender portal. In that case, please contact Cloudlabs-Support@spektrasystems.com for assistance.
+   ![Picture 1](../Media/lab1-07-sc3.png)
 
-    >**Note:** After clicking **Manage protection settings**, the content may take **40 to 60 minutes** to load completely. Wait for the page to fully load, then revisit the same page after the waiting period. If needed, sign out of **Microsoft Defender XDR**, sign back in, and repeat the steps to continue.
+    >**What this does:** The anti-malware policy scans attachments and blocks messages that contain malicious files.
 
-1. In the **Apply Exchange Online Protection** page, select **Specific recipients (1)** under **Apply protection to:** and under **Domains** you can see that your **domain is selected (2)**. If not, start writing your tenant's domain name (eg: mocholxxxxxx.onmicrosoft.com), select it, and then select **Next (3)**.
+1. Review the **Protection settings**. Confirm that **Enable the common attachments filter** is turned **on**.
 
-   ![Standart protection](../Media/lab1-s5.png)                                                                    
-  
-    >**Hint:** The domain name for your tenant is the same as your admin account, usually in the format **mocholxxxxx.onmicrosoft.com**. This setup enforces policies for anti-spam, outbound spam filtering, anti-malware, and anti-phishing.
+    >**What this does:** The common attachments filter blocks file types that are frequently used to deliver malware (for example, executable files), even if no known malware signature is detected. Blocking by file type is a simple but powerful defense.
 
-1. On the **Apply Defender for Office 365 protection** page, apply the same configuration as in the previous step and select **Next**. This configuration enforces policies for **anti-phishing, Safe Attachments, and Safe Links**.
+1. Confirm that **Enable zero-hour auto purge (ZAP) for malware** is turned **on**.
 
-    ![Standart protection](../Media/lab1-s5.1.png)  
+    >**What this does:** ZAP retroactively removes malicious messages that were already delivered if they're later identified as malware — useful when a threat is discovered after the fact.
 
-1. In the Impersonation protection page, select **Next** for all next steps, i.e., 4x times, to continue.
+1. Leave the recipient notification and quarantine settings at their defaults, then select **Save** (or **Cancel** if you made no changes).
 
-1. If a popup appears for **Policy mode** page, make sure the **Turn on the policy when finished** radio button is selected, and then select **Next**.
+   ![Picture 1](../Media/lab1-07-sc4.png)
 
-1. Read the content under **Review and confirm your changes** and select **Confirm** to apply the changes, and then select **Done** to finish.
+   ![Picture 1](../Media/lab1-07-sc5.png)
 
-   > **Note:** If you see a pop-up stating _Organizational setup in progress_, please wait for 15 minutes and try signing in again to the Defender portal. 
+1. You should return to the anti-malware policy list with the default policy still shown as On.
 
-1. Under **Strict protection**, select **Manage protection settings**. **Hint:** **Strict protection** is found under "Email & Collaboration - Policies & rules - Threat policies - Preset security policies".
+   ![Picture 1](../Media/lab1-07-sc6.png)
 
-   ![Standart protection](../Media/sc200-lab1-5.png) 
+## Task 3: Configure the anti-spam policies (inbound and outbound)
 
-   > **Hint:** If this option appears greyed out, wait for 5 minutes and refresh your browser by pressing **Ctrl+F5** or opening the portal in InPrivate mode. Then sign back in using your Tenant Email credentials. If the option is still not visible after trying these steps, it may be an issue with the Defender portal. In that case, please contact Cloudlabs-Support@spektrasystems.com for assistance.
+Spam filtering runs in two directions: inbound (protecting your users from unwanted mail) and outbound (making sure your own users aren't sending spam, which often indicates a compromised account). You'll review both.
+
+### Task 3.1: Inbound spam
+
+1. Return to **Threat policies** by selecting **Threat policies** in the breadcrumb navigation.
+
+   ![Picture 1](../Media/lab1-07-sc7.png)
+
+2. On the **Threat policies** page, select **Anti-spam**.
    
-   > **Note:** You might need to scroll down to find Strict protection. 
+   ![Picture 1](../Media/lab1-07-sc8.png)
 
-1. In the **Apply Exchange Online Protection** page, select **Specific recipients (1)** and under **Groups** start writing **Sg-IT-<inject key="DeploymentID" enableCopy="false"/> (2)**, select it, and then select **Next (3)**. Note that this configuration applies policies for anti-spam, outbound spam filters, anti-malware, and anti-phishing protection.
+1. On the **Anti-spam policies** page, select **Anti-spam inbound policy (Default) (1)**, scroll down in the details pane, and then select **Edit spam threshold and properties (2)**.
 
-   ![Standart protection](../Media/lab1-s7.png) 
+   ![Picture 1](../Media/lab1-07-sc9.png)
 
-   >**Note:** If a group is already selected, ensure it is **Sg-IT-<inject key="DeploymentID" enableCopy="false"/>**. If not, remove the selected group and add the correct one.
+1. Review the **Bulk email threshold**. This is a slider (typically 1–9) that controls how aggressively bulk mail (like marketing newsletters) is treated as spam. A **lower** number is more aggressive.
 
-1. In the **Apply protection to** page, apply the same configuration as the previous step and select **Next**. Notice that this configuration applies policies for **anti-phishing, Safe Attachments, and Safe Links.**
+    >**Think about it:** A lower threshold catches more bulk mail but risks flagging legitimate newsletters. A higher threshold is more lenient. Most organizations start near the default and tune based on user feedback.
 
-   ![Enter Your Username](../Media/lab1-s8.png)
+1. Leave the threshold at its default (or adjust it to observe the option), then select **Save**.
 
-1. In the **Impersonation protection** page, select **Next** for next all steps i.e. (4x times) to continue.
+   ![Picture 1](../Media/lab1-07-sc10.png)
 
-1. In the **Policy mode** page, make sure the **Turn on the policy when finished (1)** radio button is selected, and then select **Next (2)**.
+1. Select **Edit actions** to review what happens to detected spam — for example, moving spam to the **Junk Email folder** and higher-confidence spam to **Quarantine**. Review the settings, then **Save** or **Cancel**.
 
-   ![Enter Your Username](../Media/lab1y4.png)
+   ![Picture 1](../Media/lab1-07-sc11.png)
 
-1. Read the content under **Review and confirm your changes** and select **Confirm** to apply the changes, and then select **Done** to finish.
+   ![Picture 1](../Media/lab1-07-sc12.png)
 
+    >**What this does:** These actions decide where suspicious mail goes. "Junk Email folder" keeps it accessible to the user; "Quarantine" holds it for admin or user review.
 
-### Task 3: Preparing the Microsoft Defender XDR workspace (Read-Only)
+### Task 3.2: Outbound spam
 
-> **Note:** If you do not see **Devices** under the **Assets** section in the **Defender portal**, it may be due to a **glitch or an issue** in the **Microsoft Defender portal**. In this case, try refreshing the page. If it still doesn’t appear, just go through the lab guide for this task.  
+1. Back on the **Anti-spam** page, select the **Anti-spam outbound policy (Default)**, then select **Edit protection settings**.
 
-> **Note:** `The Devices option under the Assets section may take 24–48 hours to appear in the Microsoft Defender portal. This is expected behavior by design. Therefore, this task is provided as read-only for reference.`
+   ![Picture 1](../Media/lab1-07-sc13.png)
 
-1. At the **Microsoft Defender** portal **Home** screen, scroll down the navigation menu items to the **Assets (1)** section, and select **Devices (2)**.
+1. Review the outbound message limits (for example, the maximum number of recipients per hour).
 
-   ![Standart protection](../Media/sc200-lab1-7.png) 
+    >**Why this matters:** If a user account is compromised, attackers often use it to blast spam. Outbound limits cap the damage by automatically restricting an account that suddenly exceeds normal sending volumes.
 
-   >**Note:** If you don’t see the **Devices** under the **Assets** section in the **Defender portal**, sign out by selecting the circle with your initials in the top-right corner and choosing Sign out. You can also try refreshing the page using Ctrl+F5, waiting 30–45 minutes, or opening the portal in InPrivate mode. Then sign back in using your Tenant Email credentials. If the option is still not visible after trying these steps, it may be an issue with the Defender portal. In that case, please contact Cloudlabs-Support@spektrasystems.com for assistance.
+1. Review the setting for **automatic forwarding** rules, then **Save** or **Cancel**.
 
-1. The process to deploy the Defender XDR workspace should start, and you should see messages saying **loading and Initializing** briefly displayed at the top of the page, and then you're going to see an image of a coffee mug and a message that reads: **Hang on! We're preparing new spaces for your data and connecting them.** It takes approximately 5 minutes to finish. **Leave the page open and make sure it finishes since it's required for the next Lab.**
+   ![Picture 1](../Media/lab1-07-sc14.png)
 
-    >**Note:** Disregard pop-up error messages saying **Some of your data cannot be retrieved**. If the message "Hang on! We're preparing new spaces for your data and connecting them" does not appear, or the "Settings > Microsoft Defender XDR > Account" page opens, but you see the message **Failed to load data storage location. Please try again later**, select "Alert service settings" from the "General" menu.
+    >**What this does:** Attackers sometimes set up auto-forwarding to secretly exfiltrate a victim's mail. Controlling automatic forwarding is an important outbound protection.
 
-1. When the new workspace initialization completes successfully, the **Home** portal page will display a **Get your SIEM and XDR in one place** banner. And, in **Settings (1)**, the **Microsoft Defender XDR (2)** General settings for Account, Email notifications, Preview Features, Alert service settings, Permissions and roles and Streaming API are now turned on.
+1. Both the inbound and outbound anti-spam policies should remain **On** in the anti-spam policy list.
 
-   ![Standart protection](../Media/home-2905.png)
-   
-   ![Standart protection](../Media/sc200-lab1-6.png) 
-   
-   ![Standart protection](../Media/lab1-s10.png) 
+   ![Picture 1](../Media/lab1-07-sc15.png)
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+## Task 4: Configure the anti-phishing policy
 
-   <validation step="cd91c5ce-77b6-4769-8216-ebe3792185a5" />
+Phishing messages try to trick recipients into revealing credentials or sensitive information, often by spoofing a trusted sender. EOP's anti-phishing policy provides spoof protection.
 
-### Review
- In this lab, you have completed the following:
+1. Return to **Threat policies** by selecting **Threat policies** in the breadcrumb navigation.
 
-   - Created a Group in Microsoft Entra ID
-   - Applied Microsoft Defender XDR for Office 365 preset security policies
+   ![Picture 1](../Media/lab1-07-sc16.png)
+
+1. On the **Threat policies** page, select **Anti-phishing**.
+
+   ![Picture 1](../Media/lab1-07-sc17.png)
+
+1. Select the **Office365 AntiPhish Default (Default)** policy, then select **Edit protection settings** settings.
+
+    ![Picture 1](../Media/lab1-07-sc18.png)
+
+    >**Note:** EOP anti-phishing focuses on **spoof intelligence** — detecting senders who forge your domain or a trusted domain. The more advanced *impersonation* protection (protecting named users like your CEO) is a Microsoft Defender for Office 365 feature and is not part of EOP.
+
+1. Confirm that **spoof intelligence** is turned **on**.
+
+    >**What this does:** Spoof intelligence learns the normal senders for your domains and flags messages that appear to forge a legitimate sender.
+
+1. Review the action taken on messages caught by spoof protection (for example, move to Junk Email or Quarantine), then **Save** or **Cancel**.
+
+    ![Picture 1](../Media/lab1-07-sc19.png)
+
+    >**Note:** If you receive the message that the *AntiPhishPolicy* URI *"is not valid for PUT operation..."*, select **OK**, then select **Cancel** to return to the main page. The default policy remains in effect.
+
+1. The anti-phishing default policy should remain **On**.
+
+   ![Picture 1](../Media/lab1-07-sc20.png)
+
+## Task 5: Verify your configuration
+
+Applying policy changes isn't the end of the job — a good analyst always confirms the change took effect. In this task you'll verify all three EOP policy types are enabled.
+
+1. Return to **Threat policies** (**Email & Collaboration > Policies & rules > Threat policies**).
+
+1. Open each policy list in turn and confirm the default policy shows a status of **On**:
+
+    - **Anti-malware** — default policy **On**
+    - **Anti-spam** — inbound default **On**, outbound default **On**
+    - **Anti-phishing** — default policy **On**
+
+    >**Tip:** If a status looks wrong, refresh with **Ctrl+F5**. It can take a moment for the portal to reflect a change.
+
+### Knowledge check
+
+Test your understanding. Answers are below.
+
+1. What is Exchange Online Protection, and which subscriptions include it?
+2. In which two directions does EOP filter mail, and why does outbound filtering matter?
+3. What does the common attachments filter do, and why is it useful even when no known malware is detected?
+4. What is the difference between sending spam to the Junk Email folder versus Quarantine?
+5. EOP anti-phishing provides spoof protection. Which more advanced anti-phishing capability is NOT part of EOP, and where does it come from?
+
+<details>
+<summary>Show answers</summary>
+
+1. EOP is the cloud-based mail-filtering service that inspects mail for spam, malware, and phishing. It's included with every Exchange Online subscription.
+2. EOP filters **inbound** mail (protecting users from incoming threats) and **outbound** mail. Outbound filtering matters because a compromised account is often used to send spam; outbound limits cap the damage.
+3. It blocks file types commonly used to deliver malware (like executables) based on the file type itself, so it stops dangerous attachments even when no known malware signature is present.
+4. Junk Email keeps the message accessible to the user in their mailbox; Quarantine holds it separately for admin or user review before release.
+5. **Impersonation protection** (protecting specific named users or domains) is not part of EOP — it comes from **Microsoft Defender for Office 365**.
+
+</details>
+
+---
+## Review
+
+In this lab you learned what Exchange Online Protection is and how it filters mail. You reviewed and configured the anti-malware policy, the inbound and outbound anti-spam policies, and the anti-phishing spoof protection, then verified all three were enabled. You now know the navigation path to the Threat policies page and can explain what each core EOP policy protects against.
 
 ## You have successfully completed the lab
