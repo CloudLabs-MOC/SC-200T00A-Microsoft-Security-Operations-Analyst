@@ -4,9 +4,9 @@
 
 ## Lab Scenario
 
-You're a Security Operations Analyst working at a company that wants to harden its Windows workstations against common attacks and make sure analysts can investigate a device when something looks suspicious. In this lab you'll apply the same endpoint-security concepts a large organization uses — attack surface reduction, ransomware protection, host firewall configuration, and device investigation — but you'll do it using tools that are built into Windows.
+You're a Security Operations Analyst working at a company that wants to harden its Windows workstations against common attacks and make sure analysts can investigate a device when something looks suspicious. In this lab you'll apply the same endpoint-security concepts a large organization uses attack surface reduction, ransomware protection, host firewall configuration, and device investigation but you'll do it using tools that are built into Windows.
 
-> **Where this lab runs:** You'll perform every step on the **WIN1 virtual machine** provided in your CloudLabs environment - a disposable, cloud-hosted lab VM you reach through your browser. **Do not use your personal computer.** Nothing in this lab touches your own device, and the WIN1 VM is reset after the course, so the safe test activities below have no lasting effect on any real machine.
+> **Where this lab runs:** You'll perform every step on the **WIN-1 virtual machine** provided in your CloudLabs environment - a disposable, cloud-hosted lab VM you reach through your browser. **Do not use your personal computer.** Nothing in this lab touches your own device, and the WIN-1 VM is reset after the course, so the safe test activities below have no lasting effect on any real machine.
 
 ## Lab objectives
 
@@ -377,14 +377,16 @@ In this task you'll run a summary check across the settings from Tasks 2-4, then
    ```
 
    **Verification checklist:**
-   - [ ] Two ASR rules are configured (actions 1 and 2).
-   - [ ] Controlled folder access returns 2 (Audit).
-   - [ ] All three firewall profiles are Enabled.
-   - [ ] You successfully listed processes, startup entries, and security events.
+   - Two ASR rules are configured (actions 1 and 2).
+   - Controlled folder access returns 2 (Audit).
+   - All three firewall profiles are Enabled.
+   - You successfully listed processes, startup entries, and security events.
 
      ![](../Media/lesson6-p1t1p24.png)
 
-2. **Clean up** — undo the changes so the VM is back to its starting state:
+2. This is optional:
+
+   **Clean up** - undo the changes so the VM is back to its starting state:
 
    ```powershell
    # Remove the two ASR rules you added
@@ -435,4 +437,4 @@ In this lab, you have completed the following:
 
 These are the same endpoint-security concepts used at enterprise scale, practiced directly on a single machine.
 
-## Select **Next** to continue to Lesson 7 Lab 5
+### You've successfully completed the hand's-on lab!
