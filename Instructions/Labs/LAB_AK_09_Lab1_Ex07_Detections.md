@@ -1,4 +1,4 @@
-# Lab 6a: Create Detections
+# Lab - 6a: Create Detections
 
 ## Lab Scenario
 
@@ -19,7 +19,7 @@ Analytics rules search for specific events or sets of events across your environ
 
   ![Lab overview.](../Media/sc200ex7upd.png)
 
-### Task 1: Persistence Attack Detection
+## Task 1: Persistence Attack Detection
 
 >**Important:** The next steps are done on a different machine than the one you were previously working on. Look for the Virtual Machine name references.
 
@@ -302,4 +302,5 @@ In this lab, you have completed the following:
 - Persistence Attack Detection
 - Privileged Elevation Attack Detection
 
-## Select **Next** to continue to Exercise
+## You have successfully completed the Lab. Click on Next >> to proceed with the next exercise.
+

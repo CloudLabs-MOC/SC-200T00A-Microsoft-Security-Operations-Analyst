@@ -4,8 +4,6 @@
 
 You're a Security Operations Analyst working at a company that is implementing Microsoft Sentinel. You're responsible for performing log data analysis to search for malicious activity, display visualizations, and perform threat hunting. To query log data, you use the Kusto Query Language (KQL).
 
->**Important:** The lab exercises for Learning Path #6 are in a *standalone* environment. If you exit the lab before completing it, you will be required to re-run any configurations steps again.
-
 <!--- >**Tip:** This lab involves entering many KQL scripts into Microsoft Sentinel. The scripts were provided in a file at the beginning of this lab. An alternate location to download them is:  <https://github.com/MicrosoftLearning/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/master/Allfiles> --->
 
 ## Lab Objectives
@@ -19,7 +17,7 @@ You're a Security Operations Analyst working at a company that is implementing M
 - Task 5: Build multi-table statements in KQL
 - Task 6: Work with string data in KQL
 
-## Estimated Timing: 90 Minutes
+## Estimated Timing: 120 Minutes
 
 ## Architecture Diagram
 
@@ -451,4 +449,4 @@ In this lab, you have completed the following:
 - Build multi-table statements in KQL
 - Work with string data in KQL
 
-## You have successfully completed the lab
+### You've successfully completed the hand's-on lab!

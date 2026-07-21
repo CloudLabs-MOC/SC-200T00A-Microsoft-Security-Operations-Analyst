@@ -4,72 +4,16 @@
 
 You're a Security Operations Analyst working at a company that is implementing Microsoft Sentinel. You're responsible for setting up the Microsoft Sentinel environment to meet the company requirements to minimize cost, meet compliance regulations, and provide the most manageable environment for your security team to perform their daily job responsibilities.
 
->**Important:** The lab exercises for Learning Path #7 are in a **standalone** environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
-
 ## Lab Objectives
  In this lab, you will perform the following:
 
-- Task 1: Create a Log Analytics Workspace
-- Task 2: Deploy Microsoft Sentinel to a workspace
-- Task 3: Create a Watchlist
-- Task 4: Create a Threat Indicator
-- Task 5: Configure log retention
+- Task 1: Create a Watchlist
+- Task 2: Create a Threat Indicator
+- Task 3: Configure log retention
 
-## Estimated Timing: 60 Minutes
+## Estimated Timing: 120 Minutes
 
-## Architecture Diagram
-
-  ![Picture 1](../Media/SC200-Lab_Diagrams_Mod5_L1_Ex1.png)
-
-### Task 1: Create a Log Analytics Workspace
-
-In this task, you will create a Log Analytics workspace for use with Microsoft Defender for Cloud.
-
-1. In the Search bar of the Azure portal, type **Log Analytics (1)**, then select **Log Analytics workspaces (2)**.
-
-   ![](../Media/lab6-s1.png)
-
-1. Select **+ Create** from the command bar.
-
-   ![](../Media/lab6-s2.png)
-
-1. To create a **log analytics workspace**, follow these steps:
-
-     - Subscription **Accept default subscription (1)**
-    - Select **rg-defender (2)**, for Resource group.
-    - For the Name, enter **uniquenameDefender (3)**.
-    - Leave the **default Region (4)**.
-    - Select **Review + Create (5)**.
-
-      ![Picture 1](../Media/lab7-s1.png)
-
-1. Once the workspace validation has passed, select **Create**.
-
-   ![](../Media/lab7-s2.png)
-
-1. Wait for the new workspace to be provisioned, this may take a few minutes.
-
-### Task 2 : Deploy Microsoft Sentinel to a workspace
-
-In this task, you will deploy Microsoft Sentinel to an existing Log Analytics workspace, enabling it to collect, detect, and respond to security threats.
-
-1. In the Search bar of the Azure portal, type **microsoft sentinel (1)**, then select **Microsoft Sentinel (2)**.
-
-   ![](../Media/lab6-s5.png)
-
-1. Select **+ Create** from the command bar.
-
-   ![](../Media/lab6-s6.png)
-
-1. Select the newly created **uniquenameDefender (1)** workspace and click on **Add (2)**.
-  
-   ![](../Media/lab6-s7.png)
-
-1. In the Microsoft Sentinel free trial activated tab, select **Ok**.
-
-   ![](../Media/lab6-s8.png)
-
-### Task 3: Create a Watchlist
+## Task 1: Create a Watchlist
 
 In this task, you will create a watchlist in Microsoft Sentinel.
 
@@ -114,10 +58,6 @@ In this task, you will create a watchlist in Microsoft Sentinel.
     ![](../Media/lab7-s11.png)
 
     > **Note:** After opening the **Microsoft Defender portal**, it may take **5–10 minutes** for the **Microsoft Sentinel workspace** to appear in the **Workspaces** list. If no workspace is displayed initially, try refreshing the page using **Ctrl + F5**, signing out by selecting the circle with your initials in the top-right corner and choosing **Sign out**, and then signing back in using your **Tenant Email** credentials. You can also try opening the portal in **InPrivate/Incognito mode**. If the workspace is **already connected**, please **proceed to the next step**. 
-
-    >**Note:** If the option is still not visible after trying these steps, it may be an issue with the Defender portal. In that case, please contact Cloudlabs-Support@spektrasystems.com for assistance.
-
-    > **Important:** The total lab duration already includes any waiting time required for deployments, data connectors, or services (such as the **5–10 minutes** mentioned above). Please do not worry if certain steps take additional time to complete, and plan your activities accordingly while performing the lab.
 
 1. On the **Choose a workspace** page, select the workspace **uniquenameDefender (1)**, and then click **Next (2)**.
 
@@ -183,14 +123,7 @@ In this task, you will create a watchlist in Microsoft Sentinel.
      
       >**Note:** You can now use the `_GetWatchlist('HighValueHosts')` in your own KQL statements to access the list. The column to reference would be **Hostname**.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. You can proceed to the next task if you receive a success message.
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-  <validation step="53b31791-6d4b-4f83-a56e-b7136bbba6a7" />
-  
-### Task 4: Create a Threat Indicator
+## Task 2: Create a Threat Indicator
 
 In this task, you will create an indicator in Microsoft Sentinel.
 
@@ -253,7 +186,7 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
      ![](../Media/lab6-06-8.png)
 
-### Task 5: Configure log retention
+## Task 3: Configure log retention
 
 In this task, you will change the retention period for the SecurityEvent table.
 
@@ -286,11 +219,9 @@ In this task, you will change the retention period for the SecurityEvent table.
 ## Review
 In this lab, you have completed the following:
 
-- Created a Log Analytics Workspace
-- Deployed Microsoft Sentinel to a workspace
 - Configured data retention
 - Created a Watchlist
 - Created a Threat Indicator
 - Configured log retention
 
-## You have successfully completed the lab
+### You've successfully completed the hand's-on lab!

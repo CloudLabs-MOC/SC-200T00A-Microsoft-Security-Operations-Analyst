@@ -251,4 +251,4 @@ In this task, you will simulate a privilege elevation attack by creating a new a
 ## Review
 -  Connected a non-Azure Windows Machine
 
-## PROCEED TO  THE NEXT EXERCISE
+## You have successfully completed the Lab. Click on Next >> to proceed with the next Lab.

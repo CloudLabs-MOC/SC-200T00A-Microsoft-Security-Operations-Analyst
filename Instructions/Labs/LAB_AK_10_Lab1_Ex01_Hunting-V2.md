@@ -1,12 +1,8 @@
-# Lab - Exercise 1: Perform Threat Hunting in Microsoft Sentinel
+# Assignment 3: Perform Threat Hunting in Microsoft Sentinel
 
 ## Lab scenario
 
 You're a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You have received threat intelligence about a Command and Control (C2 or C&C) technique. You need to perform a hunt and watch for the threat.
-
-   >**Important:** The lab exercises for Learning Path #10 are in a **standalone** environment. If you exit the lab before completing it, you will be required to re-run the configurations again.
-
-   >**Note:** The log data created in the previous Learning Path **Perform Attacks** lab exercises will not be available in this lab without rerunning the **Attack 3** on WIN1 server in Exercise 5.
 
 ## Lab objectives
  In this lab, you will perform the following:
@@ -15,13 +11,15 @@ You're a Security Operations Analyst working at a company that implemented Micro
  - Task 3: Create a Search
  - Task 4: Create a hunt that combines multiple queries into a MITRE tactic
  
-## Estimated timing: 40 Minutes
+## Estimated timing: 60 Minutes
+
+>**Important:** This lab uses the attack data (registry key, user add, and C2 PowerShell) that you generated in the **Lab Prerequisites**. After completing the prerequisites, allow **10–15 minutes** for these Security Events to be ingested into the `sentinelworkspace-01` workspace before starting this lab. During this time, the events also allow the pre-configured analytics rule to generate the incident used later in Task 1. Ensure the **c2.ps1** PowerShell window from the prerequisites is left **running**. If a query or step returns no data, wait a few more minutes and refresh/re-run it.
 
 ## Architecture Diagram
 
  ![](../Media/archdialab10ex1.png)
 
-### Task 1: Create a hunting query
+## Task 1: Create a hunting query
 
 In this task, you'll create a hunting query, bookmark a result, and create a Livestream.
 
@@ -29,9 +27,9 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
    ![Picture 1](../Media/sc-200-19.png)
 
-1. Navigate to **Microsoft Sentinel**, open the **uniquenamedefender (1)** workspace, expand the **General** section and select **Logs (2)** from the navigation menu and close the Log Analytics video pop-up window that appears **(3)**.
+1. Navigate to **Microsoft Sentinel**, open the **sentinelworkspace-01 (1)** workspace, expand the **General** section and select **Logs (2)** from the navigation menu and close the Log Analytics video pop-up window that appears **(3)**.
 
-   ![](../Media/lab6-s14.png)
+   ![](../Media/l15-07-1.png)
 
 1. Close the **Queries hub**.
 
@@ -58,15 +56,17 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
     | order by count_ desc nulls last 
     ```
 
+    >**Note:** Results are sorted by count (highest first), so the **`-file c2.ps1`** row has a low count and appears near the **bottom of the list** — scroll down to find it. If it's missing, the C2 data is still ingesting; wait a few minutes and re-run.
+
 1. Review the different results. You have now identified PowerShell requests that are running in your environment.
 
-   ![Picture 1](../Media/lab10-s1.png)
+   ![Picture 1](../Media/l15-07-4.png)
 
 1. Select the checkbox of the results that shows the **"-file c2.ps1" (1)** SubjectUsername. 
 
 1. In the middle command bar, select the **Add bookmark (2)** button.
 
-   ![Picture 1](../Media/lab10-s2.png)
+   ![Picture 1](../Media/l15-07-5.png)
 
 1. On the **Add bookmark** page,
 
@@ -82,7 +82,21 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
 1. Close the **Logs** window by selecting the **X** in the top-right of the window and select **OK** to discard the changes. 
 
-1. Navigate to **Microsoft Defender** portal, in the **Microsoft Sentinel** navigation menu, expand **Threat management (1)**, select **Hunting (2)**, switch to the **Queries (3)** tab, and then choose **New query (4)**.
+1. Open new tab in the browser and navigate to the **Defender portal** using the link below:
+
+     ```
+     https://security.microsoft.com/
+     ```
+
+1. On **Microsoft Defender** page, if the left navigation pane is collapsed, select **Show navigation** to expand it.
+
+   ![Picture 1](../Media/sc200-lab1-2.png)
+
+1. In the left navigation pane, expand **Microsoft Sentinel**.
+
+   ![Picture 1](../Media/l15-07-6.png)
+
+1. In the **Microsoft Sentinel** navigation menu, expand **Threat management (1)**, select **Hunting (2)**, switch to the **Queries (3)** tab, and then choose **New query (4)**.
 
    ![Picture 1](../Media/lab9-ex11-12.png)
 
@@ -124,7 +138,7 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
    ![Picture 1](../Media/lab9-ex11-15.png) 
 
-1. In the **Microsoft Sentinel** menu, select **Hunting (1)**, right-click the **PowerShell Hunt (2)** query and select **Add to livestream (3)**. **Hint:** This also can be done by sliding right and selecting the ellipsis **(...)** at the end of the row to open a context menu.
+1. Navigate to back the **Microsoft Sentinel** menu, select **Hunting (1)**,switch to the **Queries** tab, right-click the **PowerShell Hunt (2)** query and select **Add to livestream (3)**. **Hint:** This also can be done by sliding right and selecting the ellipsis **(...)** at the end of the row to open a context menu.
 
    ![Picture 1](../Media/lab10-ex1-2.png)
 
@@ -140,7 +154,7 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
 1. Hide the right blade by selecting the **>>** icon and then scroll right until you see the ellipsis **(...)** icon.
 
-1. Select **Add to existing incident**. All the incidents appear in the right pane.
+1. Right-click and select **Add to existing incident**. All the incidents appear in the right pane.
 
    ![Picture 1](../Media/lab9-june26-p13t2p3.png)
 
@@ -148,11 +162,13 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
    ![Picture 1](../Media/lab10-s6.png)
 
+   >**Note:** Incidents may take **10–15 minutes** to appear. If the list is empty, wait a few minutes, then refresh this pane and try again.
+
 1. Scroll left to notice that the **Severity** column is now populated with the incident's data.
 
    ![Picture 1](../Media/lab10-s7.png)
 
-### Task 2: Create an NRT query rule
+## Task 2: Create an NRT query rule
 
 In this task, instead of using a LiveStream, you'll create an NRT analytics query rule. NRT rules run every minute and lookback one minute. The benefit to NRT rules are they can use the alert and incident creation logic.
 
@@ -212,7 +228,7 @@ In this task, instead of using a LiveStream, you'll create an NRT analytics quer
 
     ![Picture 1](../Media/lab10-s12.png)
 
-### Task 3: Create a Search job
+## Task 3: Create a Search job
 
 In this task, you'll use a Search job to look for a C2.
 
@@ -222,7 +238,7 @@ In this task, you'll use a Search job to look for a C2.
 
    ![Picture 1](../Media/lab10-s13.png)
 
-1. In the **Logs** pane, select the **More options (1)** menu, and then choose **Search job (2)**.
+1. A new window running the query opens. In the **Logs** pane, select the **More options (1)** menu, and then choose **Search job (2)**.
 
    ![Picture 1](../Media/lab10-s13.1.png)
 
@@ -242,7 +258,7 @@ In this task, you'll use a Search job to look for a C2.
 
       >**Note:** If you were running the job, the restore would run for a couple of minutes and your data would be available in a new table.
 
-### Task 4: Create a hunt that combines multiple queries into a MITRE tactic
+## Task 4: Create a hunt that combines multiple queries into a MITRE tactic
 
 1. The MITRE ATT&CK map helps you identify specific gaps in your detection coverage. Use predefined hunting queries for specific MITRE ATT&CK techniques as a starting point to develop new detection logic.
 
@@ -314,4 +330,4 @@ In this lab, you have completed the following:
 - Created a Search.
 - Created a hunt that combines multiple queries into a MITRE tactic.
 
-## Click on **Next** to proceed to Exercise 2 
+### You've successfully completed the hand's-on lab!

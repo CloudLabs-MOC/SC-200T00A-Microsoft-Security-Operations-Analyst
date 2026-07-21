@@ -1,4 +1,4 @@
-# Lab 6b-: Investigate Incidents
+# Lab - 6b: Investigate Incidents
 
 ## Lab Scenario
 
@@ -116,3 +116,5 @@ In this task, you will investigate an incident.
 ## Review
 In this lab, you have completed the following:
 - Investigated an incident.
+
+### You've successfully completed the hand's-on lab!
