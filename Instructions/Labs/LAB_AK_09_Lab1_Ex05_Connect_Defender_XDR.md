@@ -2,130 +2,105 @@
 
 ## Lab scenario
 
-You're a Security Operations Analyst working at a company that deployed both Microsoft Defender XDR and Microsoft Sentinel. You need to prepare for the Unified Security Operations Platform connecting Microsoft Sentinel to Defender XDR. Your next step will be to install the Defender XDR Content Hub solution and deploy the Defender XDR data connector to Microsoft Sentinel.
+You're a Security Operations Analyst working at a company that has deployed both Microsoft Defender XDR and Microsoft Sentinel. You need to unify your security operations by connecting Microsoft Sentinel to the Microsoft Defender portal. Once connected, the Microsoft Defender XDR data connector streams Defender XDR incidents, alerts, and advanced hunting events into Microsoft Sentinel and keeps incidents synchronized between the two experiences. In this lab you connect your Sentinel workspace to the Defender portal, confirm the Defender XDR connector, and run an advanced hunting query against Microsoft Sentinel data.
 
->**Note:**
-> The environment for this exercise is a simulation generated from the product. As a limited simulation, links on a page may not be enabled and text-based inputs that fall outside of the specified script may not be supported. A pop-up message will display stating, "This feature is not available within the simulation." When this occurs, select OK and continue the exercise steps.
-
-![Pop-up error message](../Media/lab8-s87.png)
 
 ## Lab Objectives
  In this lab, you will perform the following:
-- Task 1: Connect Defender XDR
-- Task 2: Connect Microsoft Sentinel and Microsoft Defender XDR
 
-### Estimated Timing: 20 Minutes
+- Task 1: Connect the Microsoft Defender XDR connector
 
-## Architecture Diagram
+- Task 2: Explore Microsoft Sentinel in the Defender portal and run an advanced hunting query
 
-![Lab overview.](../Media/lab8-ex4-arch.png)
+- Task 3: Verify the Microsoft Defender XDR connector status
 
-### Task 1: Connect Defender XDR
+### Estimated Timing: 120 Minutes
 
-In this task, you deploy the Microsoft Defender XDR connector.
+## Task 1: Connect the Microsoft Defender XDR connector
 
-1. On Labvm in the Microsoft Edge browser, open the simulated environment by selecting this link: <https://app.highlights.guide/start/1c894b46-4b0a-40cb-b0f0-1e1c86c615f3?token=16d48b6c-eace-4a1f-8050-098d29d23a89>
+1. On the **LabVM**, open **Edge** browser, go to the **Microsoft Defender portal** by visiting the following link: [Security portal](https://security.microsoft.com).
 
-    <!--- [Azure portal]( https://app.highlights.guide/start/1c894b46-4b0a-40cb-b0f0-1e1c86c615f3?token=16d48b6c-eace-4a1f-8050-098d29d23a89). --->
+1. In the **Sign in** dialog box, copy and paste **Email/Username: <inject key="AzureAdUserEmail"></inject>** and then select **Next**.
 
-1. On the Azure portal *Home* page, select the **Microsoft Sentinel** icon.
+1. In the **Enter password** dialog box, copy and paste **Password: <inject key="AzureAdUserPassword"></inject>** and then select **Sign in**.
 
-1. On the *Microsoft Sentinel* page, select the **Woodgrove-LogAnalyiticWorkspace (1)** Workspace.
+1. Close the welcome page in **Microsoft Defender** portal.
 
-1. In the Microsoft Sentinel left menus, scroll down to the **Content management** section and select **Content Hub (2)**.
+   ![](../Media/sc200-close-welcome.png)
 
-1. In the *Content hub*, search for the **Microsoft Defender XDR (3)** solution and select **Microsoft Defender XDR (4)** from the list.
+1. On **Microsoft Defender** page, if the left navigation pane is collapsed, select **Show navigation** to expand it.
 
-1. On the *Microsoft Defender XDR* solution details page, select **Install (5)**.
+   ![Picture 1](../Media/sc200-lab1-2.png)
 
-     ![](../Media/lab8-s72.png)
+1. In the Microsoft Defender portal, confirm that **Microsoft Sentinel** appears in the left navigation pane. Expand it and note the available sections: **Search**, **Threat management**, **Content management**, and **Configuration**.
 
-1. When the installation completes,  search for the **Microsoft Defender XDR** solution and select it.
+     ![Picture 1](../Media/lab8-07-sc1.png)
 
-1. On the *Microsoft Defender XDR* solution details page, select **Manage**
+    >**Note:** There are capability differences between the Azure portal Microsoft Sentinel experience and Microsoft Sentinel in the Defender portal. See **[Portal capability differences](https://learn.microsoft.com/azure/sentinel/microsoft-sentinel-defender-portal#capability-differences-between-portals)**.
 
-     ![](../Media/lab8-s73.png)
+1. In the **Microsoft Sentinel** navigation menu, expand **Content management (1)**, select **Content hub (2)**, search for **Microsoft Defender XDR (3)**, and then select the **Microsoft Defender XDR (4)** solution.
 
-1. Select the **Microsoft Defender XDR (1)** Data connector check-box, and select **Open connector page (2)**.
+     ![Picture 1](../Media/lab8-07-sc2.png)
 
-     ![](../Media/lab8-s74.png)
+1. In the **Microsoft Defender XDR** solution pane, select **Install**.
 
-1. You should see a message that the connection was successful.
+     ![Picture 1](../Media/lab8-07-sc3.png)
 
-     ![](../Media/lab8-s75.png)
+## Task 2: Explore Microsoft Sentinel in the Defender portal and run an advanced hunting query
 
-### Task 2: Connect Microsoft Sentinel and Microsoft Defender XDR
+1. In the Microsoft Defender navigation menu, expand the **Investigation & Response (1)** section.
 
-In this task, you continue with the simulation and connect a Microsoft Sentinel workspace to Microsoft Defender XDR.
+1. Expand the **Hunting (2)** section and select **Advanced hunting (3)**.
 
-1. Navigate back to the Microsoft Sentinel *Content Hub* (using the "breadcrumb" menu link at the top of the page), and select **Overview (Preview)** from the navigation menu General section.
+   ![](../Media/lab6-06--12.png)
 
-1. Select the **Learn more** button on the *Get your SIEM and XDR in one place* message.
+1. In *Advanced hunting*, select the **Schema** tab. Scroll to the **Microsoft Sentinel** heading — your Microsoft Sentinel tables, functions, and queries appear under the corresponding tabs.
 
-     ![](../Media/lab8-s76.png)
+1. Double-click the **ThreatIntelligenceIndicator** table to add it to the query pane.
 
-1. Selecting the **Learn more** button opens a new tab in the browser for the *Microsoft Defender XDR* portal.
+    > **Note:** If your workspace has no threat intelligence indicators yet, this query will return no rows. To generate sample data, add indicators from the **Threat intelligence** page (**Microsoft Sentinel** > **Threat management** > **Threat intelligence**), or substitute a table you know contains data, such as `SecurityIncident` or `SecurityAlert`.
 
-1. On the **Defender Defender** portal **Home** screen, you should see a banner at the top with the message, *Get your SIEM and XDR in one place*. Select the **Connect a workspaces** button.
+1. In the *Query* pane, review the auto-generated KQL query that returns threat intelligence indicators, then select **Run query**.
 
-     ![](../Media/lab8-s77.png)
+1. Confirm that results are returned in the *Results* pane (or that the query runs successfully, if your workspace has no indicators yet).
 
-1. On the **Choose a workspace** page, select the **woodgrove-loganalyiticsworkspace (1)** Microsoft Sentinel workspace.
+## Task 3: Verify the Microsoft Defender XDR connector status
 
-1. Select the **Next (2)** button.
+In this task, you confirm that the Defender XDR connector is connected and streaming data.
 
-     ![](../Media/lab8-s78.png)
+1. In the **Microsoft Sentinel** navigation menu, expand **Content management (1)**, select **Content hub (2)**, search for **Microsoft Defender XDR (3)**, and then select the **Microsoft Defender XDR (4)** solution.
 
-1. On the **Set a primary workspace** page, you should see the **woodgrove-loganalyiticsworkspace** Microsoft Sentinel workspace in the drop-down menu. Select the **Next** button.
+     ![Picture 1](../Media/lab8-07-sc2.png)
 
-     ![](../Media/lab8-s79.png)
+1. On **Microsoft Defender XDR** page, select **Manage**.
 
-1. On the **Review and finish** page, verify that the *Workspace* selection is correct and review the bulleted items under the **What to expect when the workspace is connected** section. Select the **Connect** button.
+     ![Picture 1](../Media/lab8-07-sc4.png)
 
-     ![](../Media/lab8-s80.png)
+1. On the **Content hub** page, select **Microsoft Defender XDR (1)**, It should show a status of **Connected**. scroll down in the details pane, and then select **Open connector page (2)**.
 
-1. You should see a **You're about to connect a workspace** message. Select the **Connect** button.
+     ![Picture 1](../Media/lab8-07-sc6.png)
 
-     ![](../Media/lab8-s81.png)
+     > **Note:** Select the **Back** button to collapse the navigation pane and provide more space on the **Content hub** page.
 
-1. You should now be on the *Workspace successfully connected* page.
+     [Picture 1](../Media/lab8-07-sc5.png)
 
-1. Select the **Close** button.
+1. Review the data graph. It shows separate lines for incidents, alerts, and events, confirming ingestion.
 
-1. On the **Defender XDR** portal **Home** screen, you should see a banner at the top with the message, *Your unified SIEM and XDR is ready*. Select the **Start Hunting** button.
+1. (Optional) Verify Defender XDR incident ingestion with a query. In Microsoft Sentinel **Logs** (Azure portal) or **Advanced hunting** (Defender portal), run:
 
-     ![](../Media/lab8-s82.png)
+    ```kusto
+    SecurityIncident
+    | where ProviderName == "Microsoft XDR"
+    | take 20
+    ```
 
-1. In *Advanced hunting*, you should see a message to "Explore your content from Microsoft Sentinel". In the *Advanced hunting* navigation menu, you can find the *Microsoft Sentinel* tables, functions, and queries under the corresponding tabs.
+    Rows returned confirm that Defender XDR incidents are flowing into Microsoft Sentinel.
 
-     ![](../Media/lab8-s83.png)
+## Results
 
-1. Scroll down under the **Schema** tab to the **Microsoft Sentinel** heading, and then double-click the **ThreatIntelligenceIndicator (1)** table.
+After completing this lab you have:
 
-1. In the *Query* pane, you should see a (KQL) query that returns threat intelligence indicators. Select the **Run query (2)** button.
-
-     ![](../Media/lab8-s89.png)
-
-1. You should see results returned in the *Results* pane.
-
-     ![](../Media/lab8-s90.png)
-
-1. Expand the left main menu pane if collapsed and  expand the new **Microsoft Sentinel** menu items. You should see *Search*, *Threat management*, *Content management*, and *Configuration* selections.
-
-    >**Note:** Be aware that there are capability differences between the azure Microsoft Sentinel portal and Sentinel in the Microsoft Defender XDR portal **[Portal capability differences](https://learn.microsoft.com/azure/sentinel/microsoft-sentinel-defender-portal#capability-differences-between-portals)**.
-
-1. From the Microsoft Defender XDR **Microsoft Sentinel** menu items, then select **Configuration** and then **Data connectors**.
-
-     ![](../Media/lab8-s88.png)
-
-1. In the *Data connectors* page, you should see the **Azure Activity** and other data connectors listed with a status of **Connected**.
-
->**Note:** Feel free to explore and compare the other Microsoft Sentinel capabilities, but as this is a simulation, your ability to explore Microsoft Sentinel in the Microsoft Defender portal is limited. In a real environment, you would be able to explore the full Microsoft Sentinel capabilities in the Microsoft Defender portal..
-
-## Review
-In this lab, you have completed the following:
-
-- Connected Defender XDR
-- Connected Microsoft Sentinel and Microsoft Defender XDR
-
-## PROCEED TO  THE NEXT EXERCISE
+- Connected a Microsoft Sentinel workspace to the Microsoft Defender portal for a unified security operations experience.
+- Confirmed that the Microsoft Defender XDR data connector is connected (automatically, via onboarding) or connected it manually from the Azure portal.
+- Explored Microsoft Sentinel content in the Defender portal and run an advanced hunting query.
+- Verified that Defender XDR incidents and alerts are streaming into Microsoft Sentinel.
