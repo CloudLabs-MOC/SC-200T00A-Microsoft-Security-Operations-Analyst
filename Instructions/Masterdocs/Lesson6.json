@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "SC-200: Microsoft Security Operations Analyst",
+    "Language": "English",
+    "BaseURL": "https://github.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/custom-labs",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/custom-labs/Instructions/Labs/newlabintro1.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/custom-labs/Instructions/Labs/LAB_AK_Lesson6_Lab4_Deploy_Defender_for_Endpoint.md",
+        "Order": 2
+      }
+    ]
+  }
+]
