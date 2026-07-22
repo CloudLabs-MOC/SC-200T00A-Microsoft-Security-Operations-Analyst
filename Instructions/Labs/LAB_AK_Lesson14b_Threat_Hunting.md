@@ -1,0 +1,191 @@
+# Lab - Lesson 14 Lab 11b: Threat Hunting using Notebooks with Microsoft Sentinel (Optional)
+
+### Estimated Timing: 1 Hour
+
+## Lab Scenario
+
+You're a Security Operations Analyst at a company that implemented Microsoft Sentinel. You want to explore **notebooks** — an advanced hunting tool for Tier 2-3 analysts, incident investigators, and security data scientists. Notebooks let you do things the built-in Sentinel experience can't, such as custom Python analytics, machine-learning models, bespoke visualizations (custom timelines, process trees), and combining Sentinel data with outside data sources.
+
+> **This lab is optional.** In the Lesson 14 agenda, hunting with notebooks is marked _optional_. It's included for students who want deeper, code-based hunting experience. Prior familiarity with Visual Studio Code, Jupyter, and Python is helpful but not required — you can complete the exploration steps without writing code.
+
+> **Where this lab runs:** You'll work on the **WIN-1 virtual machine** in your CloudLabs environment (Visual Studio Code is already installed there). **Do not use your personal computer.** You'll sign in to Sentinel from that VM using the credentials CloudLabs provides.
+
+### How this lab handles data
+
+Notebooks query the Sentinel **data lake**, and getting _fresh_ data into the lake — and having new KQL/notebook jobs finish — involves ingestion and processing delays (often many minutes to hours). To avoid that wait, this lab uses **pre-populated data lake tables** and **provided sample notebooks**. Your focus is on _understanding and running_ notebooks against data that's already there, not on generating new data.
+
+> **What this means for you:** When you open a sample notebook, the tables it references (like `SecurityEvent`) are already populated, so cells return results without a wait. Running code cells is _encouraged but optional_ — the core skills (setting up the environment, connecting, and reading notebook structure) don't require it.
+
+## Lab objectives
+
+In this lab, you will perform the following:
+
+- Task 1: Sign in and open the Notebooks page
+- Task 2: Set up Visual Studio Code
+- Task 3: Connect Visual Studio Code to Microsoft Sentinel
+- Task 4: Explore a data lake table schema
+- Task 5: Explore and run a provided sample notebook
+
+### Background: notebooks vs. workbooks vs. playbooks
+
+Sentinel offers three tools that are easy to confuse. Here's the distinction:
+
+| Tool          | Primary use                                                           | Typical user                                       |
+| ------------- | --------------------------------------------------------------------- | -------------------------------------------------- |
+| **Playbooks** | Automation of repeatable tasks (ingestion, enrichment, remediation)   | SOC engineers, analysts                            |
+| **Workbooks** | Interactive dashboards and visualization                              | SOC engineers, analysts, managers                  |
+| **Notebooks** | Code-based querying, enrichment, ML, big-data analytics, deep hunting | Threat hunters, Tier 2-3 analysts, data scientists |
+
+A **notebook** is a document that mixes runnable code cells (usually Python) with formatted text (markdown) cells. It's the most powerful and flexible of the three — and the most technical — because you can pull in any Python library to analyze Sentinel data. Common libraries for this include **Kqlmagic** (run KQL from a notebook) and **MSTICPy** (Microsoft's Python security-investigation toolkit).
+
+### Task 1: Sign in and open the Notebooks page
+
+In this task you'll sign in to the Defender portal and open the Notebooks page inside Microsoft Sentinel.
+
+1. Log in to the **WIN-1** virtual machine as **Admin** using the password provided in your CloudLabs environment.
+
+1. In Microsoft Edge, go to the Defender portal at `https://security.microsoft.com`.
+
+1. Sign in with the **Tenant Email** and **Tenant Password** provided by CloudLabs (or the **TAP** if prompted).
+
+1. In the navigation menu, scroll down and expand the **Microsoft Sentinel** section.
+
+1. Expand **Data lake exploration** and select **Notebooks**.
+
+   ![](../Media/lesson14b-p1t1p1.png)
+
+1. Review the **Notebooks** page — it lists the setup steps and links to resources you'll use.
+
+   **What to expect:** A setup checklist with links to the extensions and connection steps you'll complete in the next two tasks.
+
+### Task 2: Set up Visual Studio Code
+
+Visual Studio Code (VS Code) is the environment you'll run notebooks in. In this task you'll add the extensions that connect it to Python, Jupyter, and Sentinel. These installs are local and take effect immediately.
+
+1. In the Windows search bar, type **Visual Studio Code** and open it.
+
+   > **Note:** Unless told otherwise, always install the **Microsoft**-published version of each extension.
+
+1. In the left menu bar, select the **Extensions** icon (the four-squares symbol).
+
+1. Search for and install each of these, one at a time:
+
+   | Extension              | Purpose                                     |
+   | ---------------------- | ------------------------------------------- |
+   | **Python**             | Runs Python code and notebooks              |
+   | **Jupyter**            | Adds Jupyter notebook support               |
+   | **GitHub Copilot**     | AI assistance for writing queries/code      |
+   | **Microsoft Sentinel** | Connects VS Code to your Sentinel data lake |
+
+   ![](../Media/lesson14b-p1t1p2.png)
+
+1. Wait for all extensions to finish installing.
+
+   **What to expect:** All four extensions show as installed in VS Code.
+
+### Task 3: Connect Visual Studio Code to Microsoft Sentinel
+
+In this task you'll add the Sentinel data-exploration connection so VS Code can see your workspace tables.
+
+1. Press **Ctrl+Shift+P** to open the command palette at the top.
+
+1. Type and select **MCP: Add server**.
+
+1. Choose the **HTTP** option and enter this URL:
+
+   ```text
+   https://sentinel.microsoft.com/mcp/data-exploration
+   ```
+
+1. Press **Enter** to accept the default server ID.
+
+1. When prompted to authenticate the server, select **Allow**.
+
+1. For account type, choose **Work or school account** (assigned by your organization) and select **Continue**.
+
+1. Enter the lab credentials you were given, select **Yes, all apps**, and when your device is registered select **Done**.
+
+   > **Note:** If prompted to sign in for _AI Features_, you can select **Continue with GitHub** and use or create a GitHub account with your student credentials. This is only needed for GitHub Copilot — you may skip it and still complete the lab, just without Copilot's AI suggestions.
+
+   ![](../Media/lesson14b-p1t1p3.png)
+
+   **What to expect:** VS Code is connected to the Sentinel data-exploration server.
+
+### Task 4: Explore a data lake table schema
+
+Before running a notebook, an analyst checks what data is available. In this task you'll browse the pre-populated tables.
+
+1. Select the **Microsoft Sentinel** icon (a stylized "S") in the left menu bar. Sign in with your lab credentials if prompted.
+
+1. In the **LAKE TABLES** section, expand **SentinelWorkspace-01**, then expand the **Security & Audits** group.
+
+1. Select the **SecurityEvent** table to display its **schema** — the list of columns and their data types.
+
+   ![](../Media/lesson14b-p1t1p4.png)
+
+   **What you're seeing:** The schema tells you what fields you can query — for example, `TimeGenerated`, `Computer`, `EventID`, and `CommandLine`. This is exactly the table you hunted through with KQL in the previous lab; here you're viewing its structure from the notebook environment.
+
+   **Why this matters:** Knowing the schema is the first step before writing any query or notebook cell — you can't hunt for a field that doesn't exist. Because the table is pre-populated, its schema and data are ready to explore immediately.
+
+### Task 5: Explore and run a provided sample notebook
+
+Rather than build a notebook from scratch and wait on new data, in this task you'll open one of Microsoft's provided tutorial notebooks and study how it's built. This teaches notebook structure and usage using data that's already there.
+
+1. In the **NOTEBOOK SAMPLES** section, expand **Tutorials** and select the **01_GettingStartedwithSentineldatalake** tutorial notebook.
+
+   ![](../Media/lesson14b-p1t1p5.png)
+
+1. Once it opens, review how the notebook is organized. Notice the two kinds of cells:
+
+   | Cell type          | Contains                    | Purpose                                           |
+   | ------------------ | --------------------------- | ------------------------------------------------- |
+   | **Markdown cells** | Formatted text              | Explains what each step does and why              |
+   | **Code cells**     | Python (and KQL via magics) | The runnable logic that queries and analyzes data |
+
+   **Why this structure is powerful:** A notebook is both the analysis _and_ its documentation. A hunter can hand a notebook to a colleague, who can read the markdown to understand the reasoning and re-run the code cells to reproduce the results — something a raw script can't do as clearly.
+
+1. Read through the markdown cells in order to follow the tutorial's narrative — what it connects to, what it queries, and what it demonstrates.
+
+1. **(Optional) Run the code cells.** If you'd like to see them execute:
+   - You must first select a **Kernel** (the engine that runs the code). Choose the **Microsoft Sentinel** kernel with the recommended **small pool (12 vCores) python3** option.
+   - Run cells top to bottom (each cell with the play button, or **Run All**). Because the data lake tables are pre-populated, queries return results without waiting on ingestion.
+
+   > **Note:** Running cells is not required to complete this lab. Reading the notebook's structure and understanding how code and markdown combine is the core objective. Your instructor can help with kernel selection if time permits.
+
+   ![](../Media/lesson14b-p1t1p6.png)
+
+1. If you created or modified a notebook and want to keep it, select **Keep** (bottom right) to save it.
+
+## Knowledge check
+
+Test your understanding. Answers are below.
+
+1. What makes a notebook different from a workbook or a playbook, and who typically uses notebooks?
+2. What are the two main types of cells in a Jupyter notebook, and what does each hold?
+3. Why is checking a table's schema an important first step before hunting with a notebook?
+4. Name one Python library used to run KQL or perform security investigations from a notebook.
+5. Why is a notebook often described as being both the analysis and its documentation?
+
+<details>
+<summary>Show answers</summary>
+
+1. Notebooks are code-based tools for querying, enrichment, machine learning, and deep hunting, offering the most flexibility. They're used by threat hunters, Tier 2-3 analysts, incident investigators, and security data scientists. (Workbooks are for visualization/dashboards; playbooks are for automation.)
+2. **Markdown cells** hold formatted explanatory text; **code cells** hold runnable code (Python, plus KQL via magics).
+3. The schema shows which columns/fields exist, so you know what you can actually query — you can't hunt on a field that isn't there.
+4. **Kqlmagic** (run KQL from a notebook) or **MSTICPy** (Microsoft Threat Intelligence Python Security Tools). Either is correct.
+5. Because it interleaves runnable code with markdown text that explains the reasoning, so a colleague can both read _why_ each step was taken and re-run the code to reproduce the results.
+
+</details>
+
+## Review
+
+In this lab, you have completed the following:
+
+- Set up Visual Studio Code with the Python, Jupyter, GitHub Copilot, and Microsoft Sentinel extensions
+- Connected Visual Studio Code to your Microsoft Sentinel data lake
+- Explored the schema of the pre-populated `SecurityEvent` data lake table
+- Opened and reviewed a provided sample notebook, and optionally ran its code cells
+
+These are the same code-based hunting skills used by Tier 2-3 analysts and security data scientists to go beyond what the built-in Sentinel experience can do.
+
+### You've successfully completed the hand's-on lab!

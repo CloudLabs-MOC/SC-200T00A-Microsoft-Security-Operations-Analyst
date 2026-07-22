@@ -1,0 +1,25 @@
+[
+  {
+    "Name": "SC-200: Microsoft Security Operations Analyst",
+    "Language": "English",
+    "BaseURL": "https://github.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/custom-labs",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/custom-labs/Instructions/Labs/newlabintro3.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/custom-labs/Instructions/Labs/LAB_Lesson15.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/custom-labs/Instructions/Labs/LAB_AK_Lesson14a_Threat_Hunting.md",
+        "Order": 3
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/custom-labs/Instructions/Labs/LAB_AK_Lesson14b_Threat_Hunting.md",
+        "Order": 4
+      }
+    ]
+  }
+]
