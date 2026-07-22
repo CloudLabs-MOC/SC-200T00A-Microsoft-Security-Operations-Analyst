@@ -55,9 +55,9 @@ Turning on auditing starts the recording. Do this early, because the pipeline ta
 
     >**Note:** It can take up to 60 minutes for recording to be fully active across all workloads. You don't need to wait here — continue with the lab.
 
-#### If the button doesn't appear or you get an error — PowerShell fallback
+    >**Note:** If the button doesn't appear or you get an error — PowerShell fallback
 
-If you don't see the blue bar, or enabling it returns an error, enable auditing directly with PowerShell. This is a common, fully supported alternative.
+1. If you don't see the blue bar, or enabling it returns an error, enable auditing directly with PowerShell. This is a common, fully supported alternative.
 
 1. On WIN1, type **PowerShell** in the Windows search box, right-click **Windows PowerShell**, and choose **Run as administrator**. Select **Yes** at the prompt.
 
@@ -100,15 +100,19 @@ If you don't see the blue bar, or enabling it returns an error, enable auditing 
 
     >**What to expect:** The config now shows **UnifiedAuditLogIngestionEnabled : True**.
 
-**Checkpoint:** Audit logging is enabled — either the blue bar is gone in the portal, or PowerShell reports `UnifiedAuditLogIngestionEnabled : True`.
-
 ## Task 3: Generate some auditable activity, then submit a search
 
 Because search results appear on a delay, you'll create activity now and submit a search to review later. This "submit and revisit" pattern is exactly how the wait is managed.
 
-1. Generate a few easy-to-find admin activities. The simplest is to navigate around the portals you're already signed in to — each sign-in and admin page view is auditable. To create a clearly identifiable event, do the following in the Purview portal: select **Settings** (gear icon) and open, then close, a settings page. Note the **approximate time** you did this.
+1. In the **Microsoft Purview portal**, select **Settings** (⚙️) from the top-right corner.
 
-    >**Why this matters:** You're deliberately creating a known activity at a known time so that, when logs populate, you'll have something specific to find — a common technique when validating that auditing works.
+2. Open any available **Settings** page, wait a few seconds, and then close the page or return to the previous page.
+
+3. Note the approximate time when you performed this activity. You will use this time later when reviewing the audit records.
+
+    ![Picture 1](../Media/lab3-07-sc5.png)
+
+    >**Why this matters:** You're deliberately creating a known activity at a known time so that, when logs populate, you'll have something specific to find - a common technique when validating that auditing works.
 
 1. Return to **Solutions > Audit** and the **Search** page. Take a moment to explore the search form. You'll see fields for:
 
@@ -120,20 +124,22 @@ Because search results appear on a delay, you'll create activity now and submit 
     | Users | Limit to activity by specific accounts |
     | Search name | A label so you can find this search later |
 
-1. Set up a broad search to validate auditing:
+    ![Picture 1](../Media/lab3-07-sc6.png)
 
-    - **Date range:** today (start of day to now).
+1. Configure a broad search to validate auditing:
+
+    - **Date range:** Set the start time to the beginning of today (00:00) and the end time to the current time **(1)**.
     - **Activities:** leave blank to capture all activity types (broadest search).
     - **Users:** enter your admin account, or leave blank for all users.
-    - **Search name:** type something identifiable like **Lab3-Validation**.
+    - **Search name:** Enter **Lab3-Validation (2)**.
 
-1. Select **Search** to submit it.
+1. Select **Search (3)** to submit it.
+
+    ![Picture 1](../Media/lab3-07-sc7.png)
 
     >**What to expect:** On a freshly enabled tenant, this search may return **few or no results right away** — that's normal and expected because of the ingestion delay. The search itself is saved and will keep running against the log.
 
 1. **Move on to the next tasks.** You'll come back to this search in Task 6 to see whether results have populated.
-
-**Checkpoint:** You created a known activity at a noted time and submitted a saved search named **Lab3-Validation**.
 
 ## Task 4: Create an audit log retention policy for patient data
 
@@ -175,7 +181,7 @@ By default, Audit (Standard) keeps logs for 180 days. For patient-data complianc
 
 Understanding the tier differences helps you advise the compliance team on what they need. This is a review/exploration task — no waiting involved.
 
-1. Review the comparison below, which reflects the two tiers:
+1. Review the following comparison of **Audit (Standard)** and **Audit (Premium)**:
 
     | Capability | Audit (Standard) | Audit (Premium) |
     |---|---|---|
@@ -185,17 +191,19 @@ Understanding the tier differences helps you advise the compliance team on what 
     | High-value ("intelligent insight") events | No | Yes — e.g., mail *read* (MailItemsAccessed), mailbox/SharePoint *search* terms |
     | Licensing | Most M365 subscriptions | E5 / A5 / G5 or Audit add-on |
 
-1. In the Purview portal Audit search form, look at the **Activities** list and notice the breadth of actions you can search for. Under Premium licensing, additional high-value activities such as **MailItemsAccessed** become available.
+1. In the **Microsoft Purview portal**, go to **Solutions > Audit** and open the **Search** page.
+
+1. Select the **Activities - friendly names** field and review the available activities.
 
     >**Why the Premium events matter for a breach:** If an attacker compromises a mailbox, the single most important question is often *"which emails did they actually read?"* The **MailItemsAccessed** event — a Premium capability — answers that. Standard auditing can tell you a sign-in happened; Premium can tell you what was accessed afterward.
 
-1. Consider the healthcare scenario: to prove which patient records were *viewed* (not just that a user signed in), and to retain that evidence beyond six months, the team would need **Audit (Premium)**.
+1. Consider the healthcare scenario and identify two reasons why the organization would choose **Audit (Premium)** over **Audit (Standard)**:
 
-**Checkpoint:** You can explain, in your own words, two concrete reasons this healthcare organization would choose Audit (Premium) over Standard.
+   * **Longer retention** helps preserve audit evidence when a breach is discovered months after it occurred.
 
----
+   * **High-value events**, such as **MailItemsAccessed**, provide more detailed information about data that was accessed during a breach investigation.
 
-### Task 6: Revisit your search and review results
+## Task 6: Revisit your search and review results
 
 Enough time has likely passed since Task 3 for some records to appear. Now you'll return to your search and practice reviewing and exporting results.
 
@@ -203,9 +211,11 @@ Enough time has likely passed since Task 3 for some records to appear. Now you'l
 
 1. Find and re-run your **Lab3-Validation** search (or submit it again with the same parameters).
 
+    ![Picture 1](../Media/lab3-07-sc8.png)
+
     >**What to expect:** You should now see audit records — sign-ins, admin actions, and page views from earlier in the lab. If results are still sparse, the ingestion delay simply hasn't fully caught up; note this as an expected characteristic rather than an error. Your instructor may also have a pre-seeded search with older, already-populated results to demonstrate with.
 
-1. Select an individual audit record to expand it. Review the details, which typically include:
+1. Select an individual audit record **(1)** to expand it. Review the details, which typically include **(2)**:
 
     - **Date/time** (UTC) of the activity
     - **User** who performed it
@@ -213,33 +223,15 @@ Enough time has likely passed since Task 3 for some records to appear. Now you'l
     - **Workload** (the service involved)
     - **Details** (the raw AuditData, often JSON, with item-level specifics)
 
+    ![Picture 1](../Media/lab3-07-sc9.png)
+
     >**What to look for:** For a patient-data investigation, you'd focus on the user, the file or mailbox item touched, and the timestamp — the who/what/when trail.
 
 1. Practice **exporting** results for offline analysis: select **Export** to download the results as a **CSV** file.
 
+    ![Picture 1](../Media/lab3-07-sc10.png)
+
     >**Why this matters:** Compliance teams often need to hand evidence to auditors or open it in Excel to sort and filter. Exporting to CSV is the standard way to package audit evidence.
-
-**Checkpoint:** You reviewed at least one expanded audit record and exported search results to CSV (or confirmed the export option and noted that results are still populating).
-
----
-
-### Task 7: Clean up and wrap up
-
-Unlike the local labs, most of what you configured here (enabling auditing, retention policy) is *meant to persist* — you generally would not disable auditing in a real tenant. For this training tenant:
-
-1. **Leave auditing enabled.** Turning it off would stop the compliance logging the scenario requires. (For reference, an admin *could* disable it with `Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $false`, but do not do so here.)
-
-1. Optionally, if your instructor asks you to reset the tenant, you may delete the **Patient-Data-Retention** retention policy from **Audit retention policies**. Otherwise, leave it in place.
-
-**Verification checklist:**
-
-- [ ] Audit logging is enabled (portal bar gone, or PowerShell shows `True`).
-- [ ] You submitted a saved search named **Lab3-Validation**.
-- [ ] You created the **Patient-Data-Retention** retention policy.
-- [ ] You can explain two differences between Audit (Standard) and (Premium).
-- [ ] You reviewed an audit record and/or exported results to CSV.
-
----
 
 ### Knowledge check
 
@@ -264,6 +256,8 @@ Test your understanding. Answers are below.
 
 ---
 
-## You have completed the lab
+## Review
 
 In this lab you enabled Microsoft Purview Audit (via the portal and the PowerShell fallback), explored the audit search interface and its filters, generated auditable activity and submitted a saved search, created a custom audit log retention policy for patient-data workloads, compared Audit (Standard) and (Premium), and reviewed and exported audit records. You managed the built-in ingestion delay by configuring early and revisiting your search later — the same approach a real compliance team uses when validating that auditing is working.
+
+### You have successfully completed the lab

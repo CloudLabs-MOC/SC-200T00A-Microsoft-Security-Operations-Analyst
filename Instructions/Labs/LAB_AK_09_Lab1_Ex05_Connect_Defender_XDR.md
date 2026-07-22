@@ -82,7 +82,7 @@ In this task, you confirm that the Defender XDR connector is connected and strea
 
      > **Note:** Select the **Back** button to collapse the navigation pane and provide more space on the **Content hub** page.
 
-     [Picture 1](../Media/lab8-07-sc5.png)
+     ![Picture 1](../Media/lab8-07-sc5.png)
 
 1. Review the data graph. It shows separate lines for incidents, alerts, and events, confirming ingestion.
 
