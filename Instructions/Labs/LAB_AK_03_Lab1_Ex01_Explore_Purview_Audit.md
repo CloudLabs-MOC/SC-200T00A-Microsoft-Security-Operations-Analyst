@@ -10,6 +10,16 @@ In this lab, you will perform:
 
 - **Task 1:** Sign in and open the Microsoft Purview portal
 
+- **Task 2:** Enable Purview Audit logging
+
+- **Task 3:** Generate some auditable activity, then submit a search
+
+- **Task 4:** Create an audit log retention policy for patient data
+
+- **Task 5:** Compare Audit (Standard) and Audit (Premium)
+
+- **Task 6:** Revisit your search and review results
+
 ### Estimated Timing: 120 Minutes
 
 ## Task 1: Sign in and open the Microsoft Purview portal
@@ -232,6 +242,10 @@ Enough time has likely passed since Task 3 for some records to appear. Now you'l
     ![Picture 1](../Media/lab3-07-sc10.png)
 
     >**Why this matters:** Compliance teams often need to hand evidence to auditors or open it in Excel to sort and filter. Exporting to CSV is the standard way to package audit evidence.
+
+1. In the **Export in Progress** dialog, select **OK**.
+
+    ![Picture 1](../Media/lab3-07-sc11.png)
 
 ### Knowledge check
 
