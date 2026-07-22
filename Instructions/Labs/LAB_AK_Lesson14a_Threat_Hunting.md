@@ -24,7 +24,7 @@ In this lab, you will perform the following:
 - Task 2: Write and run your first hunting query
 - Task 3: Refine the query to confirm the hypothesis
 - Task 4: Save your finding by linking results to an incident
-- Task 5: Save a reusable hunting query and a bookmark
+- Task 5: Save a reusable hunting query
 - Task 6: Organize and expand your hunt with MITRE ATT&CK
 
 ### Background: threat hunting concepts
@@ -41,33 +41,49 @@ The query language you'll use is **KQL (Kusto Query Language)** — the language
 
 In this task you'll sign in to the Microsoft Defender portal from the WIN-1 virtual machine and open the Microsoft Sentinel section.
 
-1. Log in to the **WIN-1** virtual machine as **Admin** using the password provided in your CloudLabs environment.
+1. Minimize the **WINServer** virtual machine that you were using during the prerequisite section of the lab. This will bring you back to the **WIN1** virtual machine.
 
-   > **Tip:** Credentials are on the **Resources** / **Environment Details** tab of your CloudLabs dashboard.
+1. Open the **Microsoft Edge** from the desktop, go to the Defender portal at `https://security.microsoft.com`.
 
-1. In Microsoft Edge, go to the Defender portal at `https://security.microsoft.com`.
+1. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
-1. In the **Sign in** dialog, paste the **Tenant Email** account provided by CloudLabs and select **Next**.
+     ![Enter Your Username](../Media/sc900-image-1.png)
 
-1. In the **Enter password** dialog, paste the **Tenant Password** and select **Sign in**.
+1. Next, provide your password:
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
 
-   > **Note:** You may be prompted for a _Temporary Access Pass_ (TAP) instead of a password — it's also on the Resources tab. Paste it and select **Sign in**.
+     ![Enter Your Username](../Media/lab9-s5.png)
 
-1. In the navigation menu, scroll down and expand the **Microsoft Sentinel** section so you can see its options.
+1. If prompted to stay signed in, you can click **No**.
+
+   ![](../Media/AZ-500-staysignedin.png)
+
+1. Close the **Meet your improved security center** pop-up using **X**.
+
+   ![](../Media/lab9-june26-p2t1p2.png)
+
+1. In the navigation menu, select **Show navigation (1)** and then scroll down and expand the **Microsoft Sentinel (2)** section so you can see its options.
 
    ![](../Media/lesson14a-p1t1p1.png)
 
-   **What to expect:** The Microsoft Sentinel section expands to show its sub-sections, including _Investigation & Response_ and _Threat management_ — these are where the rest of this lab happens.
+   **What to expect:** The Microsoft Sentinel section expands to show its sub-sections, including _Investigation & Response_ and _Threat management_ - these are where the rest of this lab happens.
 
 ### Task 2: Write and run your first hunting query
 
 In this task you'll translate your hypothesis into KQL and start hunting in **Advanced hunting**.
 
-1. In the navigation menu, expand **Investigation & Response**, then expand **Hunting** and select **Advanced hunting**.
+1. In the navigation menu, expand **Investigation & Response (1)**, then expand **Hunting (2)** and select **Advanced hunting (3)**.
 
-   > **Important:** Paste any KQL into Notepad first, then copy it from Notepad into the query window. This avoids formatting errors that can occur pasting directly into the browser.
+   ![](../Media/lesson14a-p1t1p2.png)
 
-1. Enter this query in the **New query** space. It looks in the last two days of `SecurityEvent` data for PowerShell process-creation events:
+   > **Note:** Paste any KQL into Notepad first, then copy it from Notepad into the query window. This avoids formatting errors that can occur pasting directly into the browser.
+
+1. If prompted with **Try out guided hunting** pop-up window, you can either select **Take tour** or **Not now**.
+
+   ![](<../Media/lesson14a-p1t1p2(1).png>)
+
+1. Copy & paste this query in the **New query (1)** space and select **Run query (2)**. It looks in the last two days of `SecurityEvent` data for PowerShell process-creation events:
 
    ```kql
    let lookback = 2d;
@@ -77,6 +93,8 @@ In this task you'll translate your hypothesis into KQL and start hunting in **Ad
    | extend PwshParam = trim(@"[^/\\]*powershell(.exe)+" , CommandLine)
    | project TimeGenerated, Computer, SubjectUserName, PwshParam
    ```
+
+   ![](../Media/lesson14a-p1t1p3.png)
 
    **Reading the query, line by line:**
    - `let lookback = 2d;` defines a variable for the time window.
@@ -86,19 +104,17 @@ In this task you'll translate your hypothesis into KQL and start hunting in **Ad
    - `extend PwshParam = ...` creates a new column with just the command-line parameters.
    - `project` chooses which columns to display.
 
-1. Select **Run query** from the command bar.
+1. Review the results. You've now surfaced every PowerShell execution in the environment - the raw material for your hunt.
 
-   ![](../Media/lesson14a-p1t1p2.png)
+   ![](../Media/lesson14a-p1t1p4.png)
 
-1. Review the results. You've now surfaced every PowerShell execution in the environment — the raw material for your hunt.
-
-   **What to look for:** Scan the **PwshParam** column for anything unusual. The C2 beacon shows up as PowerShell running **`-file c2.ps1`** — a script name that has no business running repeatedly on a normal machine.
+   **What to look for:** Scan the **PwshParam** column for anything unusual. The C2 beacon shows up as PowerShell running **`-file c2.ps1`** - a script name that has no business running repeatedly on a normal machine.
 
 ### Task 3: Refine the query to confirm the hypothesis
 
-A first query casts a wide net. In this task you'll refine it to focus on the suspicious activity and quantify it — a key hunting skill.
+A first query casts a wide net. In this task you'll refine it to focus on the suspicious activity and quantify it - a key hunting skill.
 
-1. Modify your query to filter directly for the suspicious script and count how often each host ran it. Replace the query with:
+1. Modify your query to filter directly for the suspicious script and count how often each host ran it. Replace the query with the following:
 
    ```kql
    let lookback = 2d;
@@ -111,6 +127,8 @@ A first query casts a wide net. In this task you'll refine it to focus on the su
    | order by Executions desc
    ```
 
+   ![](../Media/lesson14a-p1t1p5.png)
+
    **What changed and why:**
    - The new `where PwshParam has "c2.ps1"` line filters to just the suspicious script.
    - `summarize ... by` groups the results by host and user, giving you a **first-seen time** and an **execution count** — turning raw events into evidence.
@@ -118,11 +136,15 @@ A first query casts a wide net. In this task you'll refine it to focus on the su
 
 1. Select **Run query**.
 
-   ![](../Media/lesson14a-p1t1p3.png)
+   ![](../Media/lesson14a-p1t1p6.png)
+
+   > **Note:** If this query returns no results, wait about 10 minutes for the data to ingest and run it again. If it's still empty, go to the **WINServer** VM, close the terminal window running `c2.ps1`, and restart it using the command `Start PowerShell.exe -file c2.ps1` in the already open Command Prompt window again.
 
 1. Review the results.
 
-   **Interpreting the result:** A single host repeatedly executing `c2.ps1` many times over two days is exactly the beaconing pattern your hypothesis predicted. That repetition — many executions at regular intervals — is the signature of a C2 beacon, and it's strong evidence to escalate.
+   ![](../Media/lesson14a-p1t1p7.png)
+
+   **Interpreting the result:** A single host repeatedly executing `c2.ps1` many times is exactly the beaconing pattern your hypothesis predicted. That repetition many executions at regular intervals is the signature of a C2 beacon, and it's strong evidence to escalate.
 
    > **Think about it:** Why summarize instead of just listing every event? Because "this host ran the script 180 times in two days" is far more actionable than 180 individual rows. Summarization turns noise into a finding.
 
@@ -130,7 +152,7 @@ A first query casts a wide net. In this task you'll refine it to focus on the su
 
 Hunting is only useful if findings are captured. In this task you'll promote your evidence into an **incident** so the SOC can act on it.
 
-1. Re-run the first (unsummarized) query from Task 2 so you have individual result rows:
+1. Re-run the first (unsummarized) query from Task 2 by so you have individual result rows:
 
    ```kql
    let lookback = 2d;
@@ -142,44 +164,58 @@ Hunting is only useful if findings are captured. In this task you'll promote you
    | project TimeGenerated, Computer, SubjectUserName, PwshParam
    ```
 
+   ![](../Media/lesson14a-p1t1p8.png)
+
 1. In the results, select the checkbox next to one or more rows showing `-file c2.ps1`.
 
-1. In the **Results** command bar, select the **Link to incident** icon.
+   ![](../Media/lesson14a-p1t1p9.png)
 
-   ![](../Media/lesson14a-p1t1p4.png)
+1. In the **Results** command bar, click on **ellipsis (...) (1)** and select the **Link to incident (2)** icon.
 
-1. Leave **Create new incident** selected and fill in:
+   ![](../Media/lesson14a-p1t1p10.png)
 
-   | Setting             | Value                                          |
-   | ------------------- | ---------------------------------------------- |
-   | Alert title         | **PowerShell C2 Hunt**                         |
-   | Severity            | **High**                                       |
-   | Category            | **Command and Control**                        |
-   | MITRE techniques    | **T1094: Custom Command and Control Protocol** |
-   | Description         | **PowerShell C2 Hunt results**                 |
-   | Recommended actions | **Perform incident remediation**               |
+1. In the **Link to incident** pane, ensure **Create new incident (1)** is selected and fill in the following details:
 
-1. Select **Next**.
+   | Setting             | Value                                              |
+   | ------------------- | -------------------------------------------------- |
+   | Alert title         | **PowerShell C2 Hunt (2)**                         |
+   | Severity            | **High (3)**                                       |
+   | Category            | **Command and Control (4)**                        |
+   | MITRE techniques    | **T1094: Custom Command and Control Protocol (5)** |
+   | Description         | **PowerShell C2 Hunt results (6)**                 |
+   | Recommended actions | **Perform incident remediation (7)**               |
 
-1. On the **Entity mapping** pane, under _Impacted Assets_ select **+ Add assets**. For _Entity_ select **Device**, then **Hostname** and **Computer** for _Identifier_ and _Column_.
+   ![](../Media/lesson14a-p1t1p11.png)
 
-1. Select **Next**, then on the **Summary** pane select **Submit**, then **Done**.
+1. Select **Next (8)**.
 
-1. In the navigation menu, expand **Investigation & Response > Incidents & Alerts > Incidents**. Confirm the **PowerShell C2 Hunt** incident is listed.
+1. On the **Entity mapping** pane, under **Impacted Assets** select **+ Add assets (1)**. For _Entity_ select **Device (2)**, then **Hostname (3)** and **Computer (4)** for _Identifier_ and _Column_ and then select **Next (5)**.
 
-   ![](../Media/lesson14a-p1t1p5.png)
+   ![](../Media/lesson14a-p1t1p12.png)
+
+1. On the **Summary** pane select **Submit**, then **Done**.
+
+   ![](../Media/lesson14a-p1t1p13.png)
+
+1. In the left navigation menu, expand **Investigation & Response (1) > Incidents & Alerts (2) > Incidents (3)**. Confirm the **PowerShell C2 Hunt (4)** incident is listed.
+
+   ![](../Media/lesson14a-p1t1p14.png)
 
    **What to expect:** A new incident named **PowerShell C2 Hunt** appears in the Incidents list.
 
-### Task 5: Save a reusable hunting query and a bookmark
+### Task 5: Save a reusable hunting query
 
 Bookmarks preserve a query _and_ the specific results you found relevant, so you can return to your evidence later. In this task you'll save your hunt as a reusable query and bookmark a key result.
 
-1. In the **Microsoft Sentinel** section, expand **Threat management** and select **Hunting**.
+1. In the **Microsoft Sentinel (1)** section, expand **Threat management (2)** and select **Hunting (3)**.
 
-1. Select the **Queries** tab, then **+ New query** from the command bar.
+   ![](../Media/lesson14a-p1t1p15.png)
 
-1. In _Create custom query_, set **Name** to **PowerShell C2 Hunt** and paste this into _Custom query_:
+1. Select the **Queries (1)** tab, then **+ New query (2)** from the command bar.
+
+   ![](../Media/lesson14a-p1t1p16.png)
+
+1. In _Create custom query_, set **Name (1)** to **PowerShell C2 Hunt** and paste this **(2)** into _Custom query_:
 
    ```kql
    let lookback = 2d;
@@ -192,57 +228,73 @@ Bookmarks preserve a query _and_ the specific results you found relevant, so you
    | order by Executions desc
    ```
 
-1. Under _Entity mapping_, select **+ Add new entity**: set **Entity type** = **Host**, **Identifier** = **HostName**, **Value** = **Computer**.
+1. Under _Entity mapping_, select **+ Add new entity (3)**: set **Entity type** = **Host (4)**, **Identifier** = **HostName (5)**, **Value** = **Computer (6)**.
 
-1. Under _Tactics & Techniques_, select **Command and Control**, then select **Create**.
+   ![](../Media/lesson14a-p1t1p17.png)
 
-   ![](../Media/lesson14a-p1t1p6.png)
+1. Under _Tactics & Techniques_, select **Command and Control (7)**, then select **Create (8)**.
 
-1. Back on the **Hunting** page **Queries** tab, find **PowerShell C2 Hunt** in the list, right-click it, and select **Run**.
+   ![](../Media/lesson14a-p1t1p18.png)
 
-1. Review the number of results shown in the **Results** column — your saved query is now reusable any time you want to re-hunt.
+1. Back on the **Hunting** page **Queries** tab, find and select **PowerShell C2 Hunt (1)** in the list, and select **Run selected queries (2)**.
 
-1. To create a **bookmark**: with the query's results open, select a relevant result row and choose **Add bookmark** (or the bookmark option in the results pane). Give it a name like **C2 beacon evidence** and select **Create**.
+   ![](../Media/lesson14a-p1t1p19.png)
 
-   > **Why bookmarks matter:** A bookmark freezes a specific piece of evidence and the query that found it. Weeks later, during an investigation, you can reopen the exact result rather than trying to reconstruct your search.
+1. Review the number of results shown in the **Results** column - your saved query is now reusable any time you want to re-hunt.
 
-1. Select the **Bookmarks** tab to confirm your bookmark is saved.
-
-   ![](../Media/lesson14a-p1t1p7.png)
+   ![](../Media/lesson14a-p1t1p20.png)
 
 ### Task 6: Organize and expand your hunt with MITRE ATT&CK
 
 The **MITRE ATT&CK** framework catalogs attacker tactics and techniques. In this task, Sentinel maps hunting queries to ATT&CK so you can find coverage gaps and pull in related queries.
 
-1. In the **Microsoft Sentinel** section, expand **Threat management** and select **MITRE ATT&CK**.
+1. In the **Microsoft Sentinel** section, expand **Threat management (1)** and select **MITRE ATT&CK (2)**.
+
+   ![](../Media/lesson14a-p1t1p21.png)
 
 1. In the _Active rules_ drop-down, unselect the items so the view isn't filtered by active rules.
 
+   ![](../Media/lesson14a-p1t1p22.png)
+
 1. In the _Simulated rules_ filter, select **Hunting queries** to see which techniques have hunting queries available.
 
-   ![](../Media/lesson14a-p1t1p8.png)
+   ![](../Media/lesson14a-p1t1p23.png)
 
    **What you're seeing:** Each column is a **tactic** (the attacker's goal, like _Command and Control_) and each cell is a **technique** (how they achieve it). Coloring shows where you have detection or hunting coverage.
 
+   ![](../Media/lesson14a-p1t1p24.png)
+
 1. Select the card for **Account Manipulation**.
+
+   ![](../Media/lesson14a-p1t1p25.png)
 
 1. In the details pane, under _Simulated coverage_, select the **View** link next to _Hunting queries_. This opens a filtered list of hunting queries for that technique.
 
-1. Select all the queries for the technique using the checkbox at the top of the list.
+   ![](../Media/lesson14a-p1t1p26.png)
 
-1. Select the **Hunt actions** drop-down (above the filters) and choose **Create hunt**. The selected queries are cloned into a new hunt.
+1. Select all the queries for the technique using the checkbox at the top of the list **(1)**.
 
-1. Give the hunt a **name**, and in the **Description** write your hypothesis. Use the **Hypothesis** drop-down to set its status. Select **Create**.
+1. Select the **Hunt actions (2)** drop-down (above the filters) and choose **+ Create hunt (3)**. The selected queries are cloned into a new hunt.
 
-1. Select the **Hunts (Preview)** tab, then select your new hunt by name to open it.
+   ![](../Media/lesson14a-p1t1p27.png)
 
-1. In the hunt, select all queries using the checkbox next to the _Query_ column, then select **Run selected queries** (or right-click a single query and choose **Run**).
+1. Give the hunt a **name** as `Suspicious Local Admin Account Creation` **(1)**, and in the **Description** write your hypothesis `If an attacker is attempting privilege escalation on a compromised host, we should see a new local user account created and added to the Administrators group outside of normal, approved account-provisioning activity, within the last two days.` **(2)**. Use the **Status** drop-down to set it to **New (3)** and using **Hypothesis** drop-down select **Unknown (4)**. Select **Create (5)**.
 
-   ![](../Media/lesson14a-p1t1p9.png)
+   ![](../Media/lesson14a-p1t1p28.png)
 
-1. Review which queries returned results. Based on the evidence, decide whether your hypothesis is supported. If not, close the hunt and mark it **Invalidated** — a negative result is still a valid hunting outcome.
+1. Select the **Hunts (Preview) (1)** tab, then select your hunt `Suspicious Local Admin Account Creation` **(2)** to open it.
 
-   > **Think about it:** Why is "nothing found" still useful? Because a well-scoped hunt that finds nothing _reduces uncertainty_ — you've checked for that threat and can document that it isn't present, which is itself valuable to the SOC.
+   ![](../Media/lesson14a-p1t1p29.png)
+
+1. In the hunt, select all queries using the checkbox next to the _Query_ column **(1)**, then select **Run selected queries (2)** (or right-click a single query and choose **Run**).
+
+   ![](../Media/lesson14a-p1t1p30.png)
+
+1. Review which queries returned results. Based on the evidence, decide whether your hypothesis is supported. If not, close the hunt and mark it **Invalidated** - a negative result is still a valid hunting outcome.
+
+   ![](../Media/lesson14a-p1t1p31.png)
+
+   > **Think about it:** Why is "nothing found" still useful? Because a well-scoped hunt that finds nothing _reduces uncertainty_ - you've checked for that threat and can document that it isn't present, which is itself valuable to the SOC.
 
 ### Reference only: how the sample data was generated
 
