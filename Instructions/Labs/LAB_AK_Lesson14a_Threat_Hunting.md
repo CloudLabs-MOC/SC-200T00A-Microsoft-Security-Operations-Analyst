@@ -4,17 +4,15 @@
 
 ## Lab Scenario
 
-You're a Security Operations Analyst working at a company that implemented Microsoft Sentinel. Threat intelligence has warned you about a **Command-and-Control (C2)** technique in which malware on a compromised host quietly "beacons" out to an attacker's server — often disguised as ordinary DNS lookups. Your job is to _hunt_: proactively search your logs for signs of this activity, rather than waiting for an alert.
-
-> **Where this lab runs:** You'll work in the Microsoft Defender portal (which hosts Microsoft Sentinel), signed in from the **WIN-1 virtual machine** in your CloudLabs environment using the tenant credentials CloudLabs provides. **Do not use your personal computer.**
+You're a Security Operations Analyst working at a company that implemented Microsoft Sentinel. Threat intelligence has warned you about a **Command-and-Control (C2)** technique in which malware on a compromised host quietly "beacons" out to an attacker's server - often disguised as ordinary DNS lookups. Your job is to _hunt_: proactively search your logs for signs of this activity, rather than waiting for an alert.
 
 ### How this lab handles data
 
-Real threat hunting depends on log data already existing in your workspace. Getting fresh data into Sentinel involves a slow chain — connecting a server, configuring a data collection rule, running an attack, and waiting for events to ingest and for jobs to finish (often **hours**).
+Real threat hunting depends on log data already existing in your workspace. Getting fresh data into Sentinel involves a slow chain - connecting a server, configuring a data collection rule, running an attack, and waiting for events to ingest and for jobs to finish (often **hours**).
 
-**To keep you hunting instead of waiting, this lab uses pre-populated data.** Your workspace (**SentinelWorkspace-01**) has already been loaded with the `SecurityEvent` data from a simulated C2 attack, so every query you run returns results immediately. The data-generation steps (Azure Arc, the data collection rule, and the C2 script) have already been done for you and are summarized at the end for reference only — you do **not** need to run them.
+**To keep you hunting instead of waiting, this lab uses pre-populated data.** Your workspace (**SentinelWorkspace-01**) has already been loaded with the `SecurityEvent` data from a simulated C2 attack, so every query you run returns results immediately. The data-generation steps (Azure Arc, the data collection rule, and the C2 script) have already been done for you and are summarized at the end for reference only - you do **not** need to run them.
 
-> **Analogy:** Instead of asking you to plant a garden and wait months for it to grow, we've given you a garden that's already grown so you can get straight to the actual skill — hunting through it.
+> **Analogy:** Instead of asking you to plant a garden and wait months for it to grow, we've given you a garden that's already grown so you can get straight to the actual skill - hunting through it.
 
 ## Lab objectives
 
@@ -29,23 +27,23 @@ In this lab, you will perform the following:
 
 ### Background: threat hunting concepts
 
-**Threat hunting** is the practice of _proactively_ searching your environment for malicious activity that hasn't triggered an alert yet. That "not previously detected" part is what separates hunting from incident response — in hunting, you start from a hypothesis and go looking, rather than reacting to something the system already flagged.
+**Threat hunting** is the practice of _proactively_ searching your environment for malicious activity that hasn't triggered an alert yet. That "not previously detected" part is what separates hunting from incident response - in hunting, you start from a hypothesis and go looking, rather than reacting to something the system already flagged.
 
 A good **hunting hypothesis** is: achievable, narrow in scope, time-bound, useful, and tied to a real threat you're defending against. For this lab, your hypothesis is:
 
 > _"If a host on our network is running a C2 beacon, we should see PowerShell repeatedly executing a suspicious script (`c2.ps1`) that generates unusual outbound DNS queries, within the last two days."_
 
-The query language you'll use is **KQL (Kusto Query Language)** — the language Sentinel and Advanced hunting use to search log tables. You'll query the **SecurityEvent** table, which holds Windows security events including process-creation events (Event ID **4688**).
+The query language you'll use is **KQL (Kusto Query Language)** - the language Sentinel and Advanced hunting use to search log tables. You'll query the **SecurityEvent** table, which holds Windows security events including process-creation events (Event ID **4688**).
 
 ### Task 1: Sign in to Microsoft Sentinel
 
 In this task you'll sign in to the Microsoft Defender portal from the WIN-1 virtual machine and open the Microsoft Sentinel section.
 
-1. Minimize the **WINServer** virtual machine that you were using during the prerequisite section of the lab. This will bring you back to the **WIN1** virtual machine.
+1. Minimize the **WINserver** virtual machine that you were using during the prerequisite section of the lab. This will bring you back to the **WIN1** virtual machine.
 
 1. Open the **Microsoft Edge** from the desktop, go to the Defender portal at `https://security.microsoft.com`.
 
-1. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
+1. You'll see the **Sign in** tab. Here, enter your credentials:
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
      ![Enter Your Username](../Media/sc900-image-1.png)
@@ -112,7 +110,7 @@ In this task you'll translate your hypothesis into KQL and start hunting in **Ad
 
 ### Task 3: Refine the query to confirm the hypothesis
 
-A first query casts a wide net. In this task you'll refine it to focus on the suspicious activity and quantify it - a key hunting skill.
+In this task you'll refine it to focus on the suspicious activity and quantify it - a key hunting skill.
 
 1. Modify your query to filter directly for the suspicious script and count how often each host ran it. Replace the query with the following:
 
@@ -150,7 +148,7 @@ A first query casts a wide net. In this task you'll refine it to focus on the su
 
 ### Task 4: Save your finding by linking results to an incident
 
-Hunting is only useful if findings are captured. In this task you'll promote your evidence into an **incident** so the SOC can act on it.
+In this task you'll promote your evidence into an **incident** so the SOC can act on it.
 
 1. Re-run the first (unsummarized) query from Task 2 by so you have individual result rows:
 
@@ -205,7 +203,7 @@ Hunting is only useful if findings are captured. In this task you'll promote you
 
 ### Task 5: Save a reusable hunting query
 
-Bookmarks preserve a query _and_ the specific results you found relevant, so you can return to your evidence later. In this task you'll save your hunt as a reusable query and bookmark a key result.
+In this task you'll save your hunt as a reusable query..
 
 1. In the **Microsoft Sentinel (1)** section, expand **Threat management (2)** and select **Hunting (3)**.
 
@@ -246,7 +244,7 @@ Bookmarks preserve a query _and_ the specific results you found relevant, so you
 
 ### Task 6: Organize and expand your hunt with MITRE ATT&CK
 
-The **MITRE ATT&CK** framework catalogs attacker tactics and techniques. In this task, Sentinel maps hunting queries to ATT&CK so you can find coverage gaps and pull in related queries.
+In this task, Sentinel maps hunting queries to ATT&CK so you can find coverage gaps and pull in related queries.
 
 1. In the **Microsoft Sentinel** section, expand **Threat management (1)** and select **MITRE ATT&CK (2)**.
 
@@ -298,11 +296,11 @@ The **MITRE ATT&CK** framework catalogs attacker tactics and techniques. In this
 
 ### Reference only: how the sample data was generated
 
-You did **not** need to perform these steps — they were done for you to pre-populate the workspace. They're documented here so you understand where the data came from:
+You did **not** need to perform these steps - they were done for you to pre-populate the workspace. They're documented here so you understand where the data came from:
 
 1. **Azure Arc** connected an on-premises server (**WINServer**) to the Azure subscription, so its logs could flow to Azure.
 2. A **Data Collection Rule** (Windows Security Events via AMA) was created to ingest **All Security Events** from WINServer into **SentinelWorkspace-01**.
-3. A PowerShell script (**c2.ps1**) ran on WINServer, simulating a C2 beacon by issuing repeated randomized DNS queries — generating the process-creation (4688) events you hunted through.
+3. A PowerShell script (**c2.ps1**) ran on WINServer, simulating a C2 beacon by issuing repeated randomized DNS queries - generating the process-creation (4688) events you hunted through.
 
 The reason these are pre-done: each step involves ingestion and processing delays (often hours), which would otherwise block the actual hunting work.
 
@@ -319,9 +317,9 @@ Test your understanding. Answers are below.
 <details>
 <summary>Show answers</summary>
 
-1. Hunting is proactive — you start from a hypothesis and search for threats that haven't triggered an alert. Triage/incident response is reactive, starting from something the system already flagged.
+1. Hunting is proactive - you start from a hypothesis and search for threats that haven't triggered an alert. Triage/incident response is reactive, starting from something the system already flagged.
 2. Any three of: achievable, narrow in scope, time-bound, useful/efficient, tied to a real threat model.
-3. It groups events by host (and user), producing counts and first-seen times. "This host ran c2.ps1 180 times" is far more actionable than 180 individual rows — it turns noise into evidence.
+3. It groups events by host (and user), producing counts and first-seen times. "This host ran c2.ps1 180 times" is far more actionable than 180 individual rows - it turns noise into evidence.
 4. A bookmark preserves a specific query result you found relevant, along with the query, so you can return to that exact evidence later during an investigation.
 5. It shows which tactics/techniques have detection or hunting coverage, revealing gaps, and lets you pull in predefined hunting queries for a chosen technique to expand the hunt.
 
@@ -340,4 +338,6 @@ In this lab, you have completed the following:
 
 These are the same threat-hunting skills a SOC analyst uses to proactively find threats before they trigger an alert.
 
-### You've successfully completed the hand's-on lab!
+### The lesson has been completed successfully. Click Next >> to proceed to the next lesson.
+
+![](../Media/nextpage.png)

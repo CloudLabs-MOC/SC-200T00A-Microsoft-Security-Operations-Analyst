@@ -1,18 +1,16 @@
 # Lab - Lesson 14 Lab 11b: Threat Hunting using Notebooks with Microsoft Sentinel (Optional)
 
-### Estimated Timing: 1 Hour
+### Estimated Timing: 20 Minutes
 
 ## Lab Scenario
 
-You're a Security Operations Analyst at a company that implemented Microsoft Sentinel. You want to explore **notebooks** — an advanced hunting tool for Tier 2-3 analysts, incident investigators, and security data scientists. Notebooks let you do things the built-in Sentinel experience can't, such as custom Python analytics, machine-learning models, bespoke visualizations (custom timelines, process trees), and combining Sentinel data with outside data sources.
+You're a Security Operations Analyst at a company that implemented Microsoft Sentinel. You want to explore **notebooks** - an advanced hunting tool for Tier 2-3 analysts, incident investigators, and security data scientists. Notebooks let you do things the built-in Sentinel experience can't, such as custom Python analytics, machine-learning models, bespoke visualizations (custom timelines, process trees), and combining Sentinel data with outside data sources.
 
 > **This lab is optional.** In the Lesson 14 agenda, hunting with notebooks is marked _optional_. It's included for students who want deeper, code-based hunting experience. Prior familiarity with Visual Studio Code, Jupyter, and Python is helpful but not required — you can complete the exploration steps without writing code.
 
-> **Where this lab runs:** You'll work on the **WIN-1 virtual machine** in your CloudLabs environment (Visual Studio Code is already installed there). **Do not use your personal computer.** You'll sign in to Sentinel from that VM using the credentials CloudLabs provides.
-
 ### How this lab handles data
 
-Notebooks query the Sentinel **data lake**, and getting _fresh_ data into the lake — and having new KQL/notebook jobs finish — involves ingestion and processing delays (often many minutes to hours). To avoid that wait, this lab uses **pre-populated data lake tables** and **provided sample notebooks**. Your focus is on _understanding and running_ notebooks against data that's already there, not on generating new data.
+Notebooks query the Sentinel **data lake**, and getting _fresh_ data into the lake — and having new KQL/notebook jobs finish - involves ingestion and processing delays (often many minutes to hours). To avoid that wait, this lab uses **pre-populated data lake tables** and **provided sample notebooks**. Your focus is on _understanding and running_ notebooks against data that's already there, not on generating new data.
 
 > **What this means for you:** When you open a sample notebook, the tables it references (like `SecurityEvent`) are already populated, so cells return results without a wait. Running code cells is _encouraged but optional_ — the core skills (setting up the environment, connecting, and reading notebook structure) don't require it.
 
@@ -36,7 +34,7 @@ Sentinel offers three tools that are easy to confuse. Here's the distinction:
 | **Workbooks** | Interactive dashboards and visualization                              | SOC engineers, analysts, managers                  |
 | **Notebooks** | Code-based querying, enrichment, ML, big-data analytics, deep hunting | Threat hunters, Tier 2-3 analysts, data scientists |
 
-A **notebook** is a document that mixes runnable code cells (usually Python) with formatted text (markdown) cells. It's the most powerful and flexible of the three — and the most technical — because you can pull in any Python library to analyze Sentinel data. Common libraries for this include **Kqlmagic** (run KQL from a notebook) and **MSTICPy** (Microsoft's Python security-investigation toolkit).
+A **notebook** is a document that mixes runnable code cells (usually Python) with formatted text (markdown) cells. It's the most powerful and flexible of the three - and the most technical - because you can pull in any Python library to analyze Sentinel data. Common libraries for this include **Kqlmagic** (run KQL from a notebook) and **MSTICPy** (Microsoft's Python security-investigation toolkit).
 
 ### Task 1: Sign in and open the Notebooks page
 
@@ -46,7 +44,7 @@ In this task you'll sign in to the Defender portal and open the Notebooks page i
 
 1. In Microsoft Edge, go to the Defender portal at `https://security.microsoft.com`.
 
-1. If prompted with **Sign into Microsoft Azure** window. Enter the following credentials:
+1. If prompted with **Sign in** window. Enter the following credentials:
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
      ![Enter Your Username](../Media/sc900-image-1.png)
@@ -80,7 +78,7 @@ In this task you'll sign in to the Defender portal and open the Notebooks page i
 
 ### Task 2: Set up Visual Studio Code
 
-Visual Studio Code (VS Code) is the environment you'll run notebooks in. In this task you'll add the extensions that connect it to Python, Jupyter, and Sentinel. These installs are local and take effect immediately.
+In this task you'll add the extensions that connect it to Python, Jupyter, and Sentinel. These installs are local and take effect immediately.
 
 1. In the Windows search bar, type **Visual Studio Code (1)** and select it from the result **(2)**.
 
@@ -94,7 +92,9 @@ Visual Studio Code (VS Code) is the environment you'll run notebooks in. In this
 
 1. In the left menu bar, select the **Extensions** icon (the four-squares symbol).
 
-1. Search for and install each of these, one at a time:
+   ![](<../Media/lesson14b-p1t1p4(1).png>)
+
+1. These 4 extensions are already installed in VS Code for you:
 
    | Extension              | Purpose                                     |
    | ---------------------- | ------------------------------------------- |
@@ -102,10 +102,6 @@ Visual Studio Code (VS Code) is the environment you'll run notebooks in. In this
    | **Jupyter**            | Adds Jupyter notebook support               |
    | **GitHub Copilot**     | AI assistance for writing queries/code      |
    | **Microsoft Sentinel** | Connects VS Code to your Sentinel data lake |
-
-   ![](../Media/lesson14b-p1t1p2.png)
-
-1. Wait for all extensions to finish installing.
 
    **What to expect:** All four extensions show as installed in VS Code.
 
@@ -158,7 +154,7 @@ In this task you'll add the Sentinel data-exploration connection so VS Code can 
 
 ### Task 4: Explore a data lake table schema
 
-Before running a notebook, an analyst checks what data is available. In this task you'll browse the pre-populated tables.
+In this task you'll browse the pre-populated tables. Before running a notebook, an analyst checks what data is available.
 
 1. Select the **Microsoft Sentinel** icon (a stylized "S") in the left menu bar. Sign in with the following credentials if prompted.
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
@@ -181,7 +177,9 @@ Before running a notebook, an analyst checks what data is available. In this tas
 
 1. In the **LAKE TABLES** section, expand **SentinelWorkspace-01**, then expand the **Security & Audits** group.
 
-   > **Note:** Data lake access isn't available in every environment. If the connection doesn't succeed, that's fine since this lab is optional, skip ahead to the next task and complete it by reading through the sample notebook instead of running it.
+   > **Note:** Data lake access isn't available in every environment. If you get "Your tenant is not eligible for the data lake", that's fine since this lab is optional, skip ahead to the next task and complete it by reading through the sample notebook instead of running it.
+
+   ![](<../Media/lesson14b-p1t1p4(2).png>)
 
 1. Select the **SecurityEvent** table to display its **schema** - the list of columns and their data types.
 
@@ -191,7 +189,7 @@ Before running a notebook, an analyst checks what data is available. In this tas
 
 ### Task 5: Explore and run a provided sample notebook
 
-Rather than build a notebook from scratch and wait on new data, in this task you'll open one of Microsoft's provided tutorial notebooks and study how it's built. This teaches notebook structure and usage using data that's already there.
+In this task you'll open one of Microsoft's provided tutorial notebooks and study how it's built. This teaches notebook structure and usage using data that's already there.
 
 1. In the **NOTEBOOK SAMPLES** section, expand **Tutorials (1)** and select the **01_GettingStartedwithSentineldatalake (2)** tutorial notebook.
 
