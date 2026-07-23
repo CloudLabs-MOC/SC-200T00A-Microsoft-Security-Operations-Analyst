@@ -1,4 +1,6 @@
-# Lab-10 Create a Playbook in Microsoft Sentinel
+# Lab - 10: Create a Playbook in Microsoft Sentinel
+
+## Estimated Timing: 120 Minutes
 
 ## Lab Scenario
 
@@ -6,16 +8,12 @@ You're a Security Operations Analyst working at a company that implemented Micro
 
 With a playbook, you can help automate and orchestrate your threat response, integrate with other systems both internal and external, and can be set to run automatically in response to specific alerts or incidents, when triggered by an analytics rule or an automation rule, respectively.
 
->**Important:** The lab exercises for **Learning Path #9** are in a **standalone** environment. If you exit the lab before completing it, you will need to re-run the configurations upon re-entering.
-
 ## Lab Objectives
   
 After completing this lab, you will be able to:
 - Task 1: Create a Playbook in Microsoft Sentinel
 - Task 2: Update a Playbook in Microsoft Sentinel
 - Task 3: Create an Automation Rule
-
-## Estimated Timing: 60 Minutes
 
 ## Architecture Diagram
 
@@ -36,10 +34,6 @@ In this task, you'll create a Logic App that is used as a Playbook in Microsoft 
      ![](../Media/lab8-s1.png)
 
      > **Note:** After opening the **Microsoft Defender portal**, it may take **5–10 minutes** for the **Microsoft Sentinel workspace** to appear in the **Workspaces** list. If no workspace is displayed initially, **wait for a few minutes and refresh the page**, and then proceed to connect the workspace.  If the workspace is **already connected**, please **proceed to the next step**. 
-
-     >**Note:** If the option is still not visible after trying these steps, it may be an issue with the Defender portal. In that case, please contact Cloudlabs-Support@spektrasystems.com for assistance.  
-
-     > **Important:** The total lab duration already includes any waiting time required for deployments, data connectors, or services (such as the **5–10 minutes** mentioned above). Please do not worry if certain steps take additional time to complete, and plan your activities accordingly while performing the lab.
 
 1. Within the search bar, search for **Sentinel SOAR Essentials (1)**, press **Enter** then select **Sentinel SOAR Essentials (2)** and then click on **Install (3)**.
 

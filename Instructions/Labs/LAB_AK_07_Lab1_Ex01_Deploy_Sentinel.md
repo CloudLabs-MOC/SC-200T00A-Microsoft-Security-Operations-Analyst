@@ -1,5 +1,7 @@
 # Lab - 07: Configure your Microsoft Sentinel environment
 
+## Estimated Timing: 120 Minutes
+
 ## Lab Scenario
 
 You're a Security Operations Analyst working at a company that is implementing Microsoft Sentinel. You're responsible for setting up the Microsoft Sentinel environment to meet the company requirements to minimize cost, meet compliance regulations, and provide the most manageable environment for your security team to perform their daily job responsibilities.
@@ -10,8 +12,6 @@ You're a Security Operations Analyst working at a company that is implementing M
 - Task 1: Create a Watchlist
 - Task 2: Create a Threat Indicator
 - Task 3: Configure log retention
-
-## Estimated Timing: 120 Minutes
 
 ## Task 1: Create a Watchlist
 
@@ -49,33 +49,9 @@ In this task, you will create a watchlist in Microsoft Sentinel.
 
 1. On a new tab in the browser, go to **https://security.microsoft.com**
 
-1. In the left pane, expand **Microsoft Sentinel (1)** → **Configuration (2)** → select **Watchlist (3)**.
+1. In the left pane, expand **Microsoft Sentinel (1)** and select **Configuration (2)**.
 
-    ![](../Media/lab6-06-1.png)
-
-1. In the **Microsoft Defender portal**, on the **Workspaces** page, select **Connect workspace**.
-
-    ![](../Media/lab7-s11.png)
-
-    > **Note:** After opening the **Microsoft Defender portal**, it may take **5–10 minutes** for the **Microsoft Sentinel workspace** to appear in the **Workspaces** list. If no workspace is displayed initially, try refreshing the page using **Ctrl + F5**, signing out by selecting the circle with your initials in the top-right corner and choosing **Sign out**, and then signing back in using your **Tenant Email** credentials. You can also try opening the portal in **InPrivate/Incognito mode**. If the workspace is **already connected**, please **proceed to the next step**. 
-
-1. On the **Choose a workspace** page, select the workspace **uniquenameDefender (1)**, and then click **Next (2)**.
-
-    ![](../Media/lab7-s12.png)
-
-1. On the **Set a primary workspace** page, verify **uniquenameDefender (1)** is selected, and then click **Next (2)**.
-
-    ![](../Media/lab7-s13.png)
-
-1. On the **Review and finish** page, select **Connect**.
-
-    ![](../Media/lab7-s14.png)
-
-1. In the **You're about to connect a workspace** confirmation dialog, select **Connect**.
-
-    ![](../Media/lab7-s15.png)
-
-1. On the **Workspace successfully connected** page, select **Close**.
+    ![](../Media/lab6-06-1n.png)
 
 1. In Microsoft Sentinel, On the left menu, select the **Watchlist (1)** option under the **Configuration** area then Select **+ New (2)** from the command bar.
 
@@ -163,10 +139,6 @@ In this task, you will create an indicator in Microsoft Sentinel.
 
      > **Note:** In the default New Query 1 tab, the **_GetWatchList('HighValueHosts')** query should still be there, and will now produce results if run.
 
-1. Select the **+ sign** to create a new query editor.
-
-     ![](../Media/lab6-s16.png)
-
 1. Run the following KQL statement.
 
      ```KQL
@@ -216,7 +188,7 @@ In this task, you will change the retention period for the SecurityEvent table.
 
      ![](../Media/lab6-06-12.png)
 
-## Review
+## Summary
 In this lab, you have completed the following:
 
 - Configured data retention

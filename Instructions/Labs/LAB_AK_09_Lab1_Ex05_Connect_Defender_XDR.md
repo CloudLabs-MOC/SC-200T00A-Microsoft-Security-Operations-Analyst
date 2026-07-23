@@ -1,5 +1,7 @@
 # Lab - 08: Connect Defender XDR to Microsoft Sentinel using data connectors
 
+### Estimated Timing: 120 Minutes
+
 ## Lab scenario
 
 You're a Security Operations Analyst working at a company that has deployed both Microsoft Defender XDR and Microsoft Sentinel. You need to unify your security operations by connecting Microsoft Sentinel to the Microsoft Defender portal. Once connected, the Microsoft Defender XDR data connector streams Defender XDR incidents, alerts, and advanced hunting events into Microsoft Sentinel and keeps incidents synchronized between the two experiences. In this lab you connect your Sentinel workspace to the Defender portal, confirm the Defender XDR connector, and run an advanced hunting query against Microsoft Sentinel data.
@@ -12,8 +14,6 @@ You're a Security Operations Analyst working at a company that has deployed both
 - Task 2: Explore Microsoft Sentinel in the Defender portal and run an advanced hunting query
 
 - Task 3: Verify the Microsoft Defender XDR connector status
-
-### Estimated Timing: 120 Minutes
 
 ## Task 1: Connect Microsoft Sentinel to the Microsoft Defender portal
 
@@ -103,10 +103,10 @@ In this task, you confirm that the Defender XDR connector is connected and strea
     | take 20
     ```
 
-## Results
+## Summary
 
 After completing this lab you have:
 
 - Connected a Microsoft Sentinel workspace to the Microsoft Defender portal for a unified security operations experience.
-- Confirmed that the Microsoft Defender XDR data connector is connected (automatically, via onboarding) or connected it manually from the Azure portal.
+- Confirmed that the Microsoft Defender XDR data connector is connected (automatically, via onboarding)
 - Explored Microsoft Sentinel content in the Defender portal and run an advanced hunting query.

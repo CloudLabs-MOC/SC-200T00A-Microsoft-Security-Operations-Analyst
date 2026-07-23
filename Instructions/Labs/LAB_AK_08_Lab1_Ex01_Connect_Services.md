@@ -1,4 +1,6 @@
-# Assignment-2: Connect data to Microsoft Sentinel using data connectors
+# Lab Assignment 2: Connect data to Microsoft Sentinel using data connectors
+
+### Estimated Timing: 120 Minutes
 
 ## Lab Scenario
 
@@ -8,12 +10,6 @@ You are a Security Operations Analyst working at a company that implemented Micr
  In this lab, you will perform the following:
 - Task 1: Connect the Microsoft Defender for Cloud data connector
 - Task 2: Connect the Azure Activity data connector
-
-### Estimated Timing: 60 Minutes
-
-## Architecture Diagram
-
-  ![Picture 1](../Media/mod8arch.png)
 
 ### Task 1: Connect the Microsoft Defender for Cloud data connector
 
@@ -34,10 +30,6 @@ In this task, you will connect the Microsoft Defender for Cloud data connector.
      ![](../Media/lab7-06-12.png)
 
      > **Note:** If workspace is not connected, click on Connect workspace to connect. If no workspace is displayed initially, try refreshing the page using **Ctrl + F5**, signing out by selecting the circle with your initials in the top-right corner and choosing **Sign out**, and then signing back in using your **Tenant Email** credentials. You can also try opening the portal in **InPrivate/Incognito mode**. If the workspace is **already connected**, please **proceed to the next step**. 
-
-     >**Note:** If the workspace is not populated with 5-10 minutes it may be an issue with the Defender portal. In that case, please contact Cloudlabs-Support@spektrasystems.com for assistance. 
-
-     > **Important:** The total lab duration already includes any waiting time required for deployments, data connectors, or services (such as the **5–10 minutes** mentioned above). Please do not worry if certain steps take additional time to complete, and plan your activities accordingly while performing the lab.
 
 1.  In the **Content hub**, search for the **Microsoft Defender for Cloud (1)** solution and select **Microsoft Defender for Cloud (2)** from the list.
 
@@ -147,12 +139,11 @@ In this task, you will connect the **Azure Activity** data connector.
 
     ![](../Media/lab7-06-10.png)
 
-## Review
+## Summary
 In this lab, you have completed the following:
 
-- Created and accessed the Microsoft Sentinel Workspace
 - Connected the Microsoft Defender for Cloud data connector
 - Connected the Azure Activity data connector
 
-### Congratulations, you’ve successfully completed the hands-on lab!
+### You've successfully completed the hand's-on lab!
 

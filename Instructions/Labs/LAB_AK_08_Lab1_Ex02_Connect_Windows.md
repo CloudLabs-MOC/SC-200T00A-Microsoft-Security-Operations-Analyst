@@ -1,4 +1,6 @@
-# Lab-9a: Connect Windows devices to Microsoft Sentinel using data connectors
+# Lab - 9a: Connect Windows devices to Microsoft Sentinel using data connectors
+
+### Estimated Timing: 60 Minutes
 
 ## Lab Scenario
 
@@ -11,13 +13,11 @@ You're a Security Operations Analyst working at a company that implemented Micro
 - Task 3: Connect an Azure Windows virtual machine
 - Task 4: Connect a non-Azure Windows Machine
 
-### Estimated Timing: 60 Minutes
-
 ## Architecture Diagram
 
 ![Lab overview.](../Media/SC-200-Lab_Diagrams_Mod6_L1_Ex2.png)
 
-### Task 1: Create a Windows Virtual Machine in Azure
+## Task 1: Create a Windows Virtual Machine in Azure
 
 In this task, you'll create a Windows virtual machine in Azure.
 
@@ -74,7 +74,7 @@ In this task, you'll create a Windows virtual machine in Azure.
 
     >**Note:** If there is a **Networking** validation failure, select that tab, review its contents, and then select **Review + create** again.
 
-### Task 2: Install Azure Arc on an On-Premises Server
+## Task 2: Install Azure Arc on an On-Premises Server
 
 In this task, you install Azure Arc on an on-premises server to make onboarding easier.
 
@@ -185,7 +185,7 @@ In this task, you install Azure Arc on an on-premises server to make onboarding 
 
     >**Note:** This could take a couple of minutes.
 
-### Task 3: Connect an Azure Windows virtual machine
+## Task 3: Connect an Azure Windows virtual machine
 
 In this task, you'll connect an Azure Windows virtual machine to Microsoft Sentinel.
 
@@ -243,7 +243,7 @@ In this task, you'll connect an Azure Windows virtual machine to Microsoft Senti
 
 1. Wait a minute and then select **Refresh** to see the new data collection rule listed.
 
-### Task 4: Connect a non-Azure Windows Machine
+## Task 4: Connect a non-Azure Windows Machine
 
 In this task, you'll add an Azure Arc-connected, non-Azure Windows virtual machine to Microsoft Sentinel.  
 
@@ -277,4 +277,4 @@ In this lab, you have completed the following:
 - Connected an Azure Windows virtual machine
 - Connected a non-Azure Windows Machine
 
-### Congratulations, you’ve successfully completed the hands-on lab!
+### You have successfully completed the Lab. Click on Next >> to proceed with the next exercise.

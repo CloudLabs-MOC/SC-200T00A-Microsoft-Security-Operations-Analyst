@@ -1,4 +1,6 @@
-# Lab-9b: Connect Linux hosts to Microsoft Sentinel using data connectors
+# Lab - 9b: Connect Linux hosts to Microsoft Sentinel using data connectors
+
+## Estimated Timing: 60 Minutes
 
 ## Lab Scenario
 
@@ -10,13 +12,11 @@ You are a Security Operations Analyst working at a company that implemented Micr
 - Task 2: Connect a Linux Host using the Common Event Format connector
 - Task 3: Connect a Linux host using the Syslog connector
 
-## Estimated Timing: 60 Minutes
-
 ## Architecture Diagram
 
   ![](../Media/SC200-Lab_Diagrams_Mod6_L1_Ex3.png)
 
-### Task 1: Access the Microsoft Sentinel Workspace
+## Task 1: Access the Microsoft Sentinel Workspace
 
 In this task, you will access your Microsoft Sentinel workspace.
 
@@ -84,7 +84,7 @@ In this task, you will access your Microsoft Sentinel workspace.
 
    ![](../Media/lab8-s52.png)
 
-### Task 2: Connect a Linux Host using the Common Event Format connector
+## Task 2: Connect a Linux Host using the Common Event Format connector
 
 In this task, you will connect a Linux host to Microsoft Sentinel with the Common Event Format (CEF) connector.
 
@@ -148,7 +148,7 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Commo
 
 1. Type **exit** to close the remote shell connection to LIN1.
 
-### Task 3: Connect a Linux host using the Syslog connector
+## Task 3: Connect a Linux host using the Syslog connector
 
 In this task, you will connect a Linux host to Microsoft Sentinel with the Syslog connector.
 
