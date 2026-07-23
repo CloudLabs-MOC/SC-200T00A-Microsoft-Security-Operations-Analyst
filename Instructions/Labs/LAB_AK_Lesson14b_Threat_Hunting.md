@@ -6,13 +6,13 @@
 
 You're a Security Operations Analyst at a company that implemented Microsoft Sentinel. You want to explore **notebooks** - an advanced hunting tool for Tier 2-3 analysts, incident investigators, and security data scientists. Notebooks let you do things the built-in Sentinel experience can't, such as custom Python analytics, machine-learning models, bespoke visualizations (custom timelines, process trees), and combining Sentinel data with outside data sources.
 
-> **This lab is optional.** In the Lesson 14 agenda, hunting with notebooks is marked _optional_. It's included for students who want deeper, code-based hunting experience. Prior familiarity with Visual Studio Code, Jupyter, and Python is helpful but not required — you can complete the exploration steps without writing code.
+> **This lab is optional.** In the Lesson 14 agenda, hunting with notebooks is marked _optional_. It's included for students who want deeper, code-based hunting experience. Prior familiarity with Visual Studio Code, Jupyter, and Python is helpful but not required - you can complete the exploration steps without writing code.
 
 ### How this lab handles data
 
-Notebooks query the Sentinel **data lake**, and getting _fresh_ data into the lake — and having new KQL/notebook jobs finish - involves ingestion and processing delays (often many minutes to hours). To avoid that wait, this lab uses **pre-populated data lake tables** and **provided sample notebooks**. Your focus is on _understanding and running_ notebooks against data that's already there, not on generating new data.
+Notebooks query the Sentinel **data lake**, and getting _fresh_ data into the lake - and having new KQL/notebook jobs finish - involves ingestion and processing delays (often many minutes to hours). To avoid that wait, this lab uses **pre-populated data lake tables** and **provided sample notebooks**. Your focus is on _understanding and running_ notebooks against data that's already there, not on generating new data.
 
-> **What this means for you:** When you open a sample notebook, the tables it references (like `SecurityEvent`) are already populated, so cells return results without a wait. Running code cells is _encouraged but optional_ — the core skills (setting up the environment, connecting, and reading notebook structure) don't require it.
+> **What this means for you:** When you open a sample notebook, the tables it references (like `SecurityEvent`) are already populated, so cells return results without a wait. Running code cells is _encouraged but optional_ - the core skills (setting up the environment, connecting, and reading notebook structure) don't require it.
 
 ## Lab objectives
 
@@ -94,7 +94,7 @@ In this task you'll add the extensions that connect it to Python, Jupyter, and S
 
    ![](<../Media/lesson14b-p1t1p4(1).png>)
 
-1. These 4 extensions are already installed in VS Code for you:
+1. Install these 4 extensions in VS Code. Search the following extensions **(1)** and install them one by one by clicking **Install (2)**:
 
    | Extension              | Purpose                                     |
    | ---------------------- | ------------------------------------------- |
@@ -102,6 +102,8 @@ In this task you'll add the extensions that connect it to Python, Jupyter, and S
    | **Jupyter**            | Adds Jupyter notebook support               |
    | **GitHub Copilot**     | AI assistance for writing queries/code      |
    | **Microsoft Sentinel** | Connects VS Code to your Sentinel data lake |
+
+   ![](<../Media/lesson14b-p1t1p1(1).png>)
 
    **What to expect:** All four extensions show as installed in VS Code.
 
