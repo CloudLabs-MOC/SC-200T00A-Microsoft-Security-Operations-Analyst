@@ -1,5 +1,7 @@
 # Lab - 02: Explore Microsoft Security Copilot
 
+## Estimated Timing: 120 Minutes
+
 ## Lab Scenario
 
 The organization you work for wants to increase the efficiency and capabilities for its security operations analysts, and to improve security outcomes. In support of that objective, the office of the CISO determined that deploying Microsoft Security Copilot is a key step towards that objective. As a Security administrator for your organization, you're tasked with setting up Copilot.
@@ -11,8 +13,6 @@ Security Copilot integrates with Microsoft Defender XDR to help you investigate 
 - **Task 1:** Investigate incident context and activity
 
 - **Task 2:** Analyze artifacts and pivot to advanced investigation
-
-## Estimated Timing: 30 Minutes
 
 ## Task 1: Investigate incident context and activity
 
@@ -46,7 +46,7 @@ In this interactive guide, which guide takes approximately 10 minutes to complet
 
 1. Follow the on-screen instructions in the interactive guide to complete the advanced investigation using Microsoft Security Copilot.
 
-## Summary and additional resources
+## Summary
 
 In this exercise, you explored the first run experience of Microsoft Security Copilot, provisioned capacity, and explored the standalone and embedded experiences of Copilot. You investigated an incident in Microsoft Defender XDR, explored the incident summary, device summary, script analysis, and more. You also pivoted your investigation to the standalone experience and used the pin board as a way to share details of your investigation with your colleagues.
 

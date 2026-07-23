@@ -1,5 +1,7 @@
 # Lab - 6b: Investigate Incidents
 
+## Estimated Timing: 40 Minutes
+
 ## Lab Scenario
 
 You are a Security Operations Analyst working at a company that implemented Microsoft Sentinel. You already created Scheduled and Microsoft Security Analytics rules. The Fusion and Anomalies Analytics rules are also enabled in your environment. Now is the time to investigate the Incidents created by them.
@@ -11,12 +13,6 @@ An incident can include multiple alerts. It is an aggregation of all the relevan
 ## Lab Objectives
  In this lab, you will Understand the following:
  - Task 1: Investigate an incident
-
-## Estimated Timing: 20 Minutes
-
-## Architecture Diagram
-
-  ![Lab overview.](../Media/SC-200ex8upd.png)
 
 ## Task 1: Investigate an incident
 
@@ -113,7 +109,7 @@ In this task, you will investigate an incident.
 	![Picture 1](../Media/lab9-june26-p9t1p15.png)
 
 
-## Review
+## Summary
 In this lab, you have completed the following:
 - Investigated an incident.
 

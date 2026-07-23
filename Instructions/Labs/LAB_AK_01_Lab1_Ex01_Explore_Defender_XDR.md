@@ -1,5 +1,7 @@
 # Lab - 01: Configure Exchange Online Protection (EOP) Policies
 
+## Estimated Timing: 120 Minutes
+
 ## Lab Scenario
 
 You're a Security Operations Analyst working at a company that relies on Exchange Online for email. Every organization that uses Exchange Online automatically gets **Exchange Online Protection (EOP)** — a built-in service that filters incoming and outgoing mail for spam, malware, and phishing before it ever reaches a user's inbox.
@@ -19,10 +21,10 @@ In this lab, you will perform:
 - **Task 4:** Configure the anti-phishing policy
 
 - **Task 5:** Verify your configuration
-    
-## Estimated Timing: 120 Minutes
 
 ## Task 1: Navigate to Threat policies
+
+In this task you'll access the Microsoft Defender portal and review the available threat protection policies.
 
 1. On the **LabVM**, open **Edge** browser, go to the **Microsoft Defender portal** by visiting the following link: [Security portal](https://security.microsoft.com).
 
@@ -82,9 +84,11 @@ In this task, you will assign preset security policies for Exchange Online Prote
 
 ## Task 3: Configure the anti-spam policies (inbound and outbound)
 
-Spam filtering runs in two directions: inbound (protecting your users from unwanted mail) and outbound (making sure your own users aren't sending spam, which often indicates a compromised account). You'll review both.
+In this task you'll review the inbound and outbound anti-spam policies and their protection settings.
 
 ### Task 3.1: Inbound spam
+
+In this task you'll review the inbound anti-spam policy and its spam threshold and actions for detected spam messages.
 
 1. Return to **Threat policies** by selecting **Threat policies** in the breadcrumb navigation.
 
@@ -116,6 +120,8 @@ Spam filtering runs in two directions: inbound (protecting your users from unwan
 
 ### Task 3.2: Outbound spam
 
+In this task you'll review the outbound anti-spam policy, including message limits and automatic forwarding protection.
+
 1. Back on the **Anti-spam** page, select the **Anti-spam outbound policy (Default)**, then select **Edit protection settings**.
 
    ![Picture 1](../Media/lab1-07-sc13.png)
@@ -136,7 +142,7 @@ Spam filtering runs in two directions: inbound (protecting your users from unwan
 
 ## Task 4: Configure the anti-phishing policy
 
-Phishing messages try to trick recipients into revealing credentials or sensitive information, often by spoofing a trusted sender. EOP's anti-phishing policy provides spoof protection.
+In this task you'll review the anti-phishing policy and confirm spoof protection is enabled.
 
 1. Return to **Threat policies** by selecting **Threat policies** in the breadcrumb navigation.
 
@@ -168,7 +174,7 @@ Phishing messages try to trick recipients into revealing credentials or sensitiv
 
 ## Task 5: Verify your configuration
 
-Applying policy changes isn't the end of the job — a good analyst always confirms the change took effect. In this task you'll verify all three EOP policy types are enabled.
+In this task you'll verify that the anti-malware, anti-spam, and anti-phishing policies are enabled.
 
 1. Return to **Threat policies** (**Email & Collaboration > Policies & rules > Threat policies**).
 
@@ -201,9 +207,8 @@ Test your understanding. Answers are below.
 
 </details>
 
----
-## Review
+## Summary
 
 In this lab you learned what Exchange Online Protection is and how it filters mail. You reviewed and configured the anti-malware policy, the inbound and outbound anti-spam policies, and the anti-phishing spoof protection, then verified all three were enabled. You now know the navigation path to the Threat policies page and can explain what each core EOP policy protects against.
 
-## You have successfully completed the lab
+### You've successfully completed the hand's-on lab!

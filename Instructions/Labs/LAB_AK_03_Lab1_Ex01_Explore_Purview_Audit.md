@@ -1,5 +1,7 @@
 # Lab - 03: Explore Microsoft Purview Audit (Standard and Premium)
 
+### Estimated Timing: 120 Minutes
+
 ## Lab Scenario
 
 You're a Security Operations Analyst working at a company that is implementing Microsoft Defender XDR and Microsoft Purview. You're assisting the IT compliance team with configuring both **Purview Audit (Standard)** and **Audit (Premium)**. Their goal: make sure every access to and modification of patient data across a network of healthcare facilities is accurately logged, so the organization can meet health-data protection regulations.
@@ -20,11 +22,9 @@ In this lab, you will perform:
 
 - **Task 6:** Revisit your search and review results
 
-### Estimated Timing: 120 Minutes
-
 ## Task 1: Sign in and open the Microsoft Purview portal
 
-In this task, you'll assign preset security policies for Exchange Online Protection (EOP) and Microsoft Defender for Office 365 in the Microsoft 365 security portal.
+In this task you'll sign in to the Microsoft Purview portal and access the Audit solution.
 
 1. In the **Microsoft Edge** browser, navigate to the **Microsoft Defender XDR portal** at [Microsoft Defender XDR portal](https://security.microsoft.com).
 
@@ -49,7 +49,7 @@ In this task, you'll assign preset security policies for Exchange Online Protect
 
 ## Task 2: Enable Purview Audit logging
 
-Turning on auditing starts the recording. Do this early, because the pipeline takes time to fully activate.
+In this task you'll enable Purview Audit logging and verify that audit activity recording is enabled.
 
 1. Select **Solutions (1)** from the left sidebar, then select **Audit (2)**.
 
@@ -103,7 +103,7 @@ Turning on auditing starts the recording. Do this early, because the pipeline ta
 
     >**Note:** If you get an error that you can't run the command in your organization, first run `Enable-OrganizationCustomization`, then run the `Set-AdminAuditLogConfig` command again.
 
-    > **Note:**: On a freshly provisioned tenant, Set-AdminAuditLogConfig can keep throwing the same "you first need to run Enable-OrganizationCustomization" error even after Enable-OrganizationCustomization reports "This operation is not required. Organization is already enabled for customization" and Get-OrganizationConfig | FL IsDehydrated shows False. This is just backend replication lag — it may take 8+ hours for the backend to sync, and no command fixes it faster. Please proceed to Tasks 4 and 5 in the meantime, and re-check later with Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled.
+    > **Note:** On a freshly provisioned tenant, Set-AdminAuditLogConfig can keep throwing the same "you first need to run Enable-OrganizationCustomization" error even after Enable-OrganizationCustomization reports "This operation is not required. Organization is already enabled for customization" and Get-OrganizationConfig | FL IsDehydrated shows False. This is just backend replication lag — it may take 8+ hours for the backend to sync, and no command fixes it faster. Please proceed to Tasks 4 and 5 in the meantime, and re-check later with Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled.
 
 1. Confirm it's now enabled, then disconnect:
 
@@ -116,7 +116,7 @@ Turning on auditing starts the recording. Do this early, because the pipeline ta
 
 ## Task 3: Generate some auditable activity, then submit a search
 
-Because search results appear on a delay, you'll create activity now and submit a search to review later. This "submit and revisit" pattern is exactly how the wait is managed.
+In this task you'll generate an auditable activity and submit an audit search to find the activity later after the logs are available.
 
 1. In the **Microsoft Purview portal**, select **Settings** (⚙️) from the top-right corner.
 
@@ -157,7 +157,7 @@ Because search results appear on a delay, you'll create activity now and submit 
 
 ## Task 4: Create an audit log retention policy for patient data
 
-By default, Audit (Standard) keeps logs for 180 days. For patient-data compliance, the team wants certain activity retained longer. In this task you'll create a **custom audit log retention policy** — a configuration step that takes effect immediately and doesn't depend on logs having populated.
+In this task you'll create a custom audit log retention policy to retain patient-data activity records for a longer period.
 
 >**Note:** Creating retention policies requires the **Organization Configuration** role and appropriate (E5-level) licensing for the longest retention periods. In this trial tenant you may see options limited by license — that's fine; the goal is to learn the workflow.
 
@@ -193,7 +193,7 @@ By default, Audit (Standard) keeps logs for 180 days. For patient-data complianc
 
 ## Task 5: Compare Audit (Standard) and Audit (Premium)
 
-Understanding the tier differences helps you advise the compliance team on what they need. This is a review/exploration task — no waiting involved.
+In this task you'll compare Audit (Standard) and Audit (Premium) and understand the benefits of Premium for compliance and security investigations.
 
 1. Review the following comparison of **Audit (Standard)** and **Audit (Premium)**:
 
@@ -219,7 +219,7 @@ Understanding the tier differences helps you advise the compliance team on what 
 
 ## Task 6: Revisit your search and review results
 
-Enough time has likely passed since Task 3 for some records to appear. Now you'll return to your search and practice reviewing and exporting results.
+In this task you'll revisit the submitted audit search, review the available audit records and their details, and export the results for further analysis.
 
 1. In the Purview portal, go to **Solutions > Audit**.
 
@@ -274,8 +274,8 @@ Test your understanding. Answers are below.
 
 ---
 
-## Review
+## Summary
 
 In this lab you enabled Microsoft Purview Audit (via the portal and the PowerShell fallback), explored the audit search interface and its filters, generated auditable activity and submitted a saved search, created a custom audit log retention policy for patient-data workloads, compared Audit (Standard) and (Premium), and reviewed and exported audit records. You managed the built-in ingestion delay by configuring early and revisiting your search later — the same approach a real compliance team uses when validating that auditing is working.
 
-### You have successfully completed the lab
+### You've successfully completed the hand's-on lab!

@@ -247,8 +247,10 @@ In this task, you will simulate a privilege elevation attack by creating a new a
     
      >**Note:** If you encounter any issues while copying and pasting, try copying the prompt into **Notepad** first, then paste it into the **Command Prompt (CMD)**.
 
+## Summary
 
-## Review
--  Connected a non-Azure Windows Machine
+- Connected a non-Azure Windows Machine
+- Simulated a persistence attack by adding a registry key.
+- Simulated a privilege elevation attack by adding a user.
 
 ## You have successfully completed the Lab. Click on Next >> to proceed with the next Lab.
