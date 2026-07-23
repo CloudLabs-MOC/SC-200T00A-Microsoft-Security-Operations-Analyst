@@ -35,9 +35,11 @@ You're a Security Operations Analyst working at a company that has deployed both
 
      ![Picture 1](../Media/lab8-07-sc01.png)
 
-1. On the **SIEM workspaces** page, verify that **sentinelworkspace-01** is designated as the **Primary** workspace and that its **Status** is **Connected**.
+1. On the **SIEM workspaces** page, verify that **sentinelworkspace-01** is designated as the **Primary** workspace and its **Status** is **Connected**.
 
      ![Picture 1](../Media/lab8-07-sc02.png)
+
+     > **Note:** If the workspace is not connected, select the Microsoft Sentinel workspace to connect, select **Next**, complete the connection process, and then verify that the workspace status changes to **Connected**.
 
 ## Task 2: Explore Microsoft Sentinel in the Defender portal and run an advanced hunting query
 
@@ -59,7 +61,7 @@ You're a Security Operations Analyst working at a company that has deployed both
 
      ![Picture 1](../Media/lab8-07-sc03.png)
 
-    > **Note:** If the **ThreatIntelIndicators** table is not visible under **Microsoft Sentinel**, wait a few minutes and then refresh the page. It may take some time for the table to become available after the workspace is connected.
+    > **Note:** If the **ThreatIntelIndicators** table is not visible under **Microsoft Sentinel**, wait a 5-10 minutes and then refresh the page. It may take some time for the table to become available after the workspace is connected.
 
 1. In the *Query* pane, review the auto-generated KQL query that returns threat intelligence indicators, then select **Run query**.
 
@@ -78,6 +80,8 @@ In this task, you confirm that the Defender XDR connector is connected and strea
 1. On **Microsoft Defender XDR** page, select **Manage**.
 
      ![Picture 1](../Media/lab8-07-sc4.png)
+
+     > **Note:** If the **Microsoft Defender XDR** solution is not installed, select **Install**, wait for the installation to complete until the button changes to **Manage**, and then continue with the next step.
 
 1. On the **Content hub** page, select **Microsoft Defender XDR (1)**, It should show a status of **Connected**. scroll down in the details pane, and then select **Open connector page (2)**.
 

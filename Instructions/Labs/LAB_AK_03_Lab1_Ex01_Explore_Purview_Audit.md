@@ -69,7 +69,9 @@ Turning on auditing starts the recording. Do this early, because the pipeline ta
 
 1. If you don't see the blue bar, or enabling it returns an error, enable auditing directly with PowerShell. This is a common, fully supported alternative.
 
-1. On WIN1, type **PowerShell** in the Windows search box, right-click **Windows PowerShell**, and choose **Run as administrator**. Select **Yes** at the prompt.
+1. Select the **Start** button, type **PowerShell (1)**, then from the **Best match** section right-click on **Windows PowerShell (2)**, and choose **Run as administrator (3)**.
+
+   ![](../Media/lesson6-p1t1p1.png)
 
 1. Install the Exchange Online management module:
 
@@ -100,6 +102,8 @@ Turning on auditing starts the recording. Do this early, because the pipeline ta
     ```
 
     >**Note:** If you get an error that you can't run the command in your organization, first run `Enable-OrganizationCustomization`, then run the `Set-AdminAuditLogConfig` command again.
+
+    > **Note:**: On a freshly provisioned tenant, Set-AdminAuditLogConfig can keep throwing the same "you first need to run Enable-OrganizationCustomization" error even after Enable-OrganizationCustomization reports "This operation is not required. Organization is already enabled for customization" and Get-OrganizationConfig | FL IsDehydrated shows False. This is just backend replication lag — it may take 8+ hours for the backend to sync, and no command fixes it faster. Please proceed to Tasks 4 and 5 in the meantime, and re-check later with Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled.
 
 1. Confirm it's now enabled, then disconnect:
 
@@ -233,9 +237,9 @@ Enough time has likely passed since Task 3 for some records to appear. Now you'l
     - **Workload** (the service involved)
     - **Details** (the raw AuditData, often JSON, with item-level specifics)
 
-    ![Picture 1](../Media/lab3-07-sc9.png)
+      ![Picture 1](../Media/lab3-07-sc9.png)
 
-    >**What to look for:** For a patient-data investigation, you'd focus on the user, the file or mailbox item touched, and the timestamp — the who/what/when trail.
+      >**What to look for:** For a patient-data investigation, you'd focus on the user, the file or mailbox item touched, and the timestamp — the who/what/when trail.
 
 1. Practice **exporting** results for offline analysis: select **Export** to download the results as a **CSV** file.
 
