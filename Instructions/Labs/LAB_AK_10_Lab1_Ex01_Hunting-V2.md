@@ -68,6 +68,8 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
    ![Picture 1](../Media/l15-07-5.png)
 
+   > **Note:** If no results are displayed for **-file c2.ps1**, re-run the PowerShell script and wait a few moments for the data to be ingested. Then, refresh the page and search again before proceeding.
+
 1. On the **Add bookmark** page,
 
    - Select **+ Add new entity (1)** under **Entity mapping**.
@@ -162,8 +164,7 @@ In this task, you'll create a hunting query, bookmark a result, and create a Liv
 
    ![Picture 1](../Media/lab10-s6.png)
 
-   >**Note:** Incidents may take **10–15 minutes** to appear. If the list is empty, wait a few minutes, then refresh this pane and try again.
-
+   >**Note:** It may take **10–15** minutes for incidents to appear. If the list is empty, wait a few minutes, refresh the page, and continue. The incidents displayed may not exactly match those shown in the screenshot.
 1. Scroll left to notice that the **Severity** column is now populated with the incident's data.
 
    ![Picture 1](../Media/lab10-s7.png)
