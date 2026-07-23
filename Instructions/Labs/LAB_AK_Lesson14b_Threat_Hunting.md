@@ -42,19 +42,39 @@ A **notebook** is a document that mixes runnable code cells (usually Python) wit
 
 In this task you'll sign in to the Defender portal and open the Notebooks page inside Microsoft Sentinel.
 
-1. Log in to the **WIN-1** virtual machine as **Admin** using the password provided in your CloudLabs environment.
+1. You are logged in to the **WIN1** virtual machine.
 
 1. In Microsoft Edge, go to the Defender portal at `https://security.microsoft.com`.
 
-1. Sign in with the **Tenant Email** and **Tenant Password** provided by CloudLabs (or the **TAP** if prompted).
+1. If prompted with **Sign into Microsoft Azure** window. Enter the following credentials:
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
-1. In the navigation menu, scroll down and expand the **Microsoft Sentinel** section.
+     ![Enter Your Username](../Media/sc900-image-1.png)
 
-1. Expand **Data lake exploration** and select **Notebooks**.
+1. Next, provide your password:
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
+
+     ![Enter Your Username](../Media/lab9-s5.png)
+
+1. If prompted to stay signed in, you can click **No**.
+
+   ![](../Media/AZ-500-staysignedin.png)
+
+1. Close the **Meet your improved security center** pop-up using **X**.
+
+   ![](../Media/lab9-june26-p2t1p2.png)
+
+1. In the navigation menu, select **Show navigation (1)** and then scroll down and expand the **Microsoft Sentinel (2)** section so you can see its options.
+
+   ![](../Media/lesson14a-p1t1p1.png)
+
+1. Expand **Threat management (1)** and then select **Notebooks (2)**.
 
    ![](../Media/lesson14b-p1t1p1.png)
 
-1. Review the **Notebooks** page — it lists the setup steps and links to resources you'll use.
+1. Review the **Notebooks** page - it lists the setup steps and links to resources you'll use.
+
+   ![](../Media/lesson14b-p1t1p2.png)
 
    **What to expect:** A setup checklist with links to the extensions and connection steps you'll complete in the next two tasks.
 
@@ -62,9 +82,15 @@ In this task you'll sign in to the Defender portal and open the Notebooks page i
 
 Visual Studio Code (VS Code) is the environment you'll run notebooks in. In this task you'll add the extensions that connect it to Python, Jupyter, and Sentinel. These installs are local and take effect immediately.
 
-1. In the Windows search bar, type **Visual Studio Code** and open it.
+1. In the Windows search bar, type **Visual Studio Code (1)** and select it from the result **(2)**.
+
+   ![](../Media/lesson14b-p1t1p3.png)
 
    > **Note:** Unless told otherwise, always install the **Microsoft**-published version of each extension.
+
+1. If prompted with **Welcome to VS Code** pop-up window, select **X** from the right top corner to close it.
+
+   ![](../Media/lesson14b-p1t1p4.png)
 
 1. In the left menu bar, select the **Extensions** icon (the four-squares symbol).
 
@@ -87,27 +113,46 @@ Visual Studio Code (VS Code) is the environment you'll run notebooks in. In this
 
 In this task you'll add the Sentinel data-exploration connection so VS Code can see your workspace tables.
 
-1. Press **Ctrl+Shift+P** to open the command palette at the top.
+1. In VS Code, press **Ctrl+Shift+P** to open the command palette at the top.
 
-1. Type and select **MCP: Add server**.
+   ![](../Media/lesson14b-p1t1p5.png)
 
-1. Choose the **HTTP** option and enter this URL:
+1. Search for **MCP: Add server (1)** and select it **MCP: Add server (2)** from the result.
+
+   ![](../Media/lesson14b-p1t1p6.png)
+
+1. In **Choose the type of MCP server to add**, select **HTTP (HTTP or Server-Sent Events) (1)** and then enter the following URL **(2)**:
 
    ```text
    https://sentinel.microsoft.com/mcp/data-exploration
    ```
 
+   ![](../Media/lesson14b-p1t1p7.png)
+
+   ![](../Media/lesson14b-p1t1p8.png)
+
 1. Press **Enter** to accept the default server ID.
+
+   ![](../Media/lesson14b-p1t1p9.png)
 
 1. When prompted to authenticate the server, select **Allow**.
 
-1. For account type, choose **Work or school account** (assigned by your organization) and select **Continue**.
+   ![](../Media/lesson14b-p1t1p10.png)
 
-1. Enter the lab credentials you were given, select **Yes, all apps**, and when your device is registered select **Done**.
+1. Login using the following credentials:
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
+
+1. On the **Sign in to all apps and websites on this device?** pop-up, select **Yes**.
+
+   ![](../Media/lesson14b-p1t1p11.png)
+
+1. On the **Account added to this device** pop-up, select **Done**.
+
+   ![](../Media/lesson14b-p1t1p12.png)
 
    > **Note:** If prompted to sign in for _AI Features_, you can select **Continue with GitHub** and use or create a GitHub account with your student credentials. This is only needed for GitHub Copilot — you may skip it and still complete the lab, just without Copilot's AI suggestions.
-
-   ![](../Media/lesson14b-p1t1p3.png)
 
    **What to expect:** VS Code is connected to the Sentinel data-exploration server.
 
@@ -115,25 +160,42 @@ In this task you'll add the Sentinel data-exploration connection so VS Code can 
 
 Before running a notebook, an analyst checks what data is available. In this task you'll browse the pre-populated tables.
 
-1. Select the **Microsoft Sentinel** icon (a stylized "S") in the left menu bar. Sign in with your lab credentials if prompted.
+1. Select the **Microsoft Sentinel** icon (a stylized "S") in the left menu bar. Sign in with the following credentials if prompted.
+   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+   - **Password:** <inject key="AzureAdUserPassword"></inject>
+
+     ![](../Media/lesson14b-p1t1p13.png)
+
+1. From the **Microsoft Sentinel** pane, click on **Sign In** under **LAKE TABLES**.
+
+   ![](../Media/lesson14b-p1t1p14.png)
+
+1. On the **'Microsoft Sentinel' extension wants to sign in using Microsoft** dialog, select **Allow**.
+
+   ![](../Media/lesson14b-p1t1p15.png)
+
+1. Select the account **<inject key="AzureAdUserEmail"></inject>** when prompted.
+
+   ![](../Media/lesson14b-p1t1p16.png)
 
 1. In the **LAKE TABLES** section, expand **SentinelWorkspace-01**, then expand the **Security & Audits** group.
 
-1. Select the **SecurityEvent** table to display its **schema** — the list of columns and their data types.
+   > **Note:** Data lake access isn't available in every environment. If the connection doesn't succeed, that's fine since this lab is optional, skip ahead to the next task and complete it by reading through the sample notebook instead of running it.
 
-   ![](../Media/lesson14b-p1t1p4.png)
+1. Select the **SecurityEvent** table to display its **schema** - the list of columns and their data types.
 
    **What you're seeing:** The schema tells you what fields you can query — for example, `TimeGenerated`, `Computer`, `EventID`, and `CommandLine`. This is exactly the table you hunted through with KQL in the previous lab; here you're viewing its structure from the notebook environment.
 
-   **Why this matters:** Knowing the schema is the first step before writing any query or notebook cell — you can't hunt for a field that doesn't exist. Because the table is pre-populated, its schema and data are ready to explore immediately.
+   **Why this matters:** Knowing the schema is the first step before writing any query or notebook cell - you can't hunt for a field that doesn't exist. Because the table is pre-populated, its schema and data are ready to explore immediately.
 
 ### Task 5: Explore and run a provided sample notebook
 
 Rather than build a notebook from scratch and wait on new data, in this task you'll open one of Microsoft's provided tutorial notebooks and study how it's built. This teaches notebook structure and usage using data that's already there.
 
-1. In the **NOTEBOOK SAMPLES** section, expand **Tutorials** and select the **01_GettingStartedwithSentineldatalake** tutorial notebook.
+1. In the **NOTEBOOK SAMPLES** section, expand **Tutorials (1)** and select the **01_GettingStartedwithSentineldatalake (2)** tutorial notebook.
 
-   ![](../Media/lesson14b-p1t1p5.png)
+   ![](../Media/lesson14b-p1t1p17.png)
 
 1. Once it opens, review how the notebook is organized. Notice the two kinds of cells:
 
@@ -142,17 +204,15 @@ Rather than build a notebook from scratch and wait on new data, in this task you
    | **Markdown cells** | Formatted text              | Explains what each step does and why              |
    | **Code cells**     | Python (and KQL via magics) | The runnable logic that queries and analyzes data |
 
-   **Why this structure is powerful:** A notebook is both the analysis _and_ its documentation. A hunter can hand a notebook to a colleague, who can read the markdown to understand the reasoning and re-run the code cells to reproduce the results — something a raw script can't do as clearly.
+   **Why this structure is powerful:** A notebook is both the analysis _and_ its documentation. A hunter can hand a notebook to a colleague, who can read the markdown to understand the reasoning and re-run the code cells to reproduce the results - something a raw script can't do as clearly.
 
-1. Read through the markdown cells in order to follow the tutorial's narrative — what it connects to, what it queries, and what it demonstrates.
+1. Read through the markdown cells in order to follow the tutorial's narrative - what it connects to, what it queries, and what it demonstrates.
 
 1. **(Optional) Run the code cells.** If you'd like to see them execute:
    - You must first select a **Kernel** (the engine that runs the code). Choose the **Microsoft Sentinel** kernel with the recommended **small pool (12 vCores) python3** option.
    - Run cells top to bottom (each cell with the play button, or **Run All**). Because the data lake tables are pre-populated, queries return results without waiting on ingestion.
 
-   > **Note:** Running cells is not required to complete this lab. Reading the notebook's structure and understanding how code and markdown combine is the core objective. Your instructor can help with kernel selection if time permits.
-
-   ![](../Media/lesson14b-p1t1p6.png)
+     > **Note:** Running cells is not required to complete this lab. Reading the notebook's structure and understanding how code and markdown combine is the core objective. Your instructor can help with kernel selection if time permits.
 
 1. If you created or modified a notebook and want to keep it, select **Keep** (bottom right) to save it.
 
