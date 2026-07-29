@@ -314,17 +314,6 @@ Test your understanding. Answers are below.
 4. What is the purpose of a bookmark in Sentinel hunting?
 5. How does the MITRE ATT&CK view help a threat hunter decide where to hunt next?
 
-<details>
-<summary>Show answers</summary>
-
-1. Hunting is proactive - you start from a hypothesis and search for threats that haven't triggered an alert. Triage/incident response is reactive, starting from something the system already flagged.
-2. Any three of: achievable, narrow in scope, time-bound, useful/efficient, tied to a real threat model.
-3. It groups events by host (and user), producing counts and first-seen times. "This host ran c2.ps1 180 times" is far more actionable than 180 individual rows - it turns noise into evidence.
-4. A bookmark preserves a specific query result you found relevant, along with the query, so you can return to that exact evidence later during an investigation.
-5. It shows which tactics/techniques have detection or hunting coverage, revealing gaps, and lets you pull in predefined hunting queries for a chosen technique to expand the hunt.
-
-</details>
-
 ## Review
 
 In this lab, you have completed the following:

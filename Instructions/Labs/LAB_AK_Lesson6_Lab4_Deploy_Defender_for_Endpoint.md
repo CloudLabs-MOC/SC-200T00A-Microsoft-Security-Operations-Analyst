@@ -414,17 +414,6 @@ Test your understanding. Answers are below.
 4. The Windows Defender Firewall has three profiles. Which one is the strictest, and when is it used?
 5. During a device investigation, which security Event IDs indicate a successful sign-in and a failed sign-in?
 
-<details>
-<summary>Show answers</summary>
-
-1. ASR reduces the number of risky behaviors attackers can exploit. Example: blocking Office applications from creating child processes (or blocking executable content from email/webmail).
-2. **Enabled** actually blocks the behavior; **AuditMode** only logs what would have been blocked. You start in Audit mode to confirm the rule won't disrupt legitimate work before you enforce it.
-3. It only allows trusted applications to modify files in protected folders, so ransomware (an untrusted process) can't encrypt those files.
-4. The **Public** profile is the strictest; it's used on untrusted networks such as public Wi-Fi.
-5. **4624** is a successful sign-in; **4625** is a failed sign-in.
-
-</details>
-
 ## Review
 
 In this lab, you have completed the following:

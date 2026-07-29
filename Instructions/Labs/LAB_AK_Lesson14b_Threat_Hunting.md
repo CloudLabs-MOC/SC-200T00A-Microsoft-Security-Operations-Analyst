@@ -226,17 +226,6 @@ Test your understanding. Answers are below.
 4. Name one Python library used to run KQL or perform security investigations from a notebook.
 5. Why is a notebook often described as being both the analysis and its documentation?
 
-<details>
-<summary>Show answers</summary>
-
-1. Notebooks are code-based tools for querying, enrichment, machine learning, and deep hunting, offering the most flexibility. They're used by threat hunters, Tier 2-3 analysts, incident investigators, and security data scientists. (Workbooks are for visualization/dashboards; playbooks are for automation.)
-2. **Markdown cells** hold formatted explanatory text; **code cells** hold runnable code (Python, plus KQL via magics).
-3. The schema shows which columns/fields exist, so you know what you can actually query — you can't hunt on a field that isn't there.
-4. **Kqlmagic** (run KQL from a notebook) or **MSTICPy** (Microsoft Threat Intelligence Python Security Tools). Either is correct.
-5. Because it interleaves runnable code with markdown text that explains the reasoning, so a colleague can both read _why_ each step was taken and re-run the code to reproduce the results.
-
-</details>
-
 ## Review
 
 In this lab, you have completed the following:

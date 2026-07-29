@@ -50,6 +50,8 @@ In this task you'll access the Microsoft Defender portal and review the availabl
 
    ![Picture 1](../Media/lab1-07-sc1.png)
 
+   > **Note:** If the policies are not displayed on the **Threat policies** page, wait up to **5 minutes** and refresh the browser by pressing **Ctrl+F5**. Alternatively, open the Microsoft Defender portal in an **InPrivate** window and sign in again using your **Tenant Email** credentials.
+
 ## Task 2: Review and configure the anti-malware policy
 
 In this task, you will assign preset security policies for Exchange Online Protection (EOP) and Microsoft Defender XDR for Office 365 in the Microsoft  security portal.
@@ -195,17 +197,6 @@ Test your understanding. Answers are below.
 3. What does the common attachments filter do, and why is it useful even when no known malware is detected?
 4. What is the difference between sending spam to the Junk Email folder versus Quarantine?
 5. EOP anti-phishing provides spoof protection. Which more advanced anti-phishing capability is NOT part of EOP, and where does it come from?
-
-<details>
-<summary>Show answers</summary>
-
-1. EOP is the cloud-based mail-filtering service that inspects mail for spam, malware, and phishing. It's included with every Exchange Online subscription.
-2. EOP filters **inbound** mail (protecting users from incoming threats) and **outbound** mail. Outbound filtering matters because a compromised account is often used to send spam; outbound limits cap the damage.
-3. It blocks file types commonly used to deliver malware (like executables) based on the file type itself, so it stops dangerous attachments even when no known malware signature is present.
-4. Junk Email keeps the message accessible to the user in their mailbox; Quarantine holds it separately for admin or user review before release.
-5. **Impersonation protection** (protecting specific named users or domains) is not part of EOP — it comes from **Microsoft Defender for Office 365**.
-
-</details>
 
 ## Summary
 

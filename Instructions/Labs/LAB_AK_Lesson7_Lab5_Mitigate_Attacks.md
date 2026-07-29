@@ -287,17 +287,6 @@ Test your understanding. Answers are below.
 4. What is a command-and-control (C2) server, and why is an unexpected outbound connection suspicious?
 5. During a user-account investigation, which Windows Security Event IDs represent a successful sign-in and a failed sign-in, and what might a burst of failed sign-ins indicate?
 
-<details>
-<summary>Show answers</summary>
-
-1. File, process, IP address, domain/URL, and user account.
-2. A hash is a unique fingerprint of a file's contents. It identifies the exact file regardless of its name, so it can be checked against IoC lists and reputation services to see if the file is known-malicious.
-3. The chain of what launched what often reveals an attack — for example, a document or script spawning a process the user didn't start indicates automated, possibly malicious, activity.
-4. A C2 server is infrastructure an attacker uses to control a compromised machine. An unexpected outbound connection can be a compromised host "beaconing" to that server for instructions.
-5. **4624** = successful sign-in, **4625** = failed sign-in. A burst of 4625 events (especially before a success) can indicate password guessing / a brute-force attempt.
-
-</details>
-
 ## Review
 
 In this lab, you have completed the following:
