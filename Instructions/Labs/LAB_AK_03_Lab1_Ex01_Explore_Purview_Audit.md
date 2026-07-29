@@ -103,7 +103,7 @@ In this task you'll enable Purview Audit logging and verify that audit activity 
 
     >**Note:** If you get an error that you can't run the command in your organization, first run `Enable-OrganizationCustomization`, then run the `Set-AdminAuditLogConfig` command again.
 
-    > **Note:** On a freshly provisioned tenant, Set-AdminAuditLogConfig can keep throwing the same "you first need to run Enable-OrganizationCustomization" error even after Enable-OrganizationCustomization reports "This operation is not required. Organization is already enabled for customization" and Get-OrganizationConfig | FL IsDehydrated shows False. This is just backend replication lag — it may take 8+ hours for the backend to sync, and no command fixes it faster. Please proceed to Tasks 4 and 5 in the meantime, and re-check later with Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled.
+    > **Note:** `On a freshly provisioned tenant, Set-AdminAuditLogConfig can keep throwing the same "you first need to run Enable-OrganizationCustomization" error even after Enable-OrganizationCustomization reports "This operation is not required. Organization is already enabled for customization" and Get-OrganizationConfig | FL IsDehydrated shows False. This is just backend replication lag - it may take 8+ hours for the backend to sync, and no command fixes it faster. Please proceed to Tasks 4 and 5 in the meantime, and re-check later with Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled.`
 
 1. Confirm it's now enabled, then disconnect:
 
