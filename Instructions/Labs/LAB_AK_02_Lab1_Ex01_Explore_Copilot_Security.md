@@ -46,6 +46,17 @@ In this interactive guide, which guide takes approximately 10 minutes to complet
 
 1. Follow the on-screen instructions in the interactive guide to complete the advanced investigation using Microsoft Security Copilot.
 
+## Knowledge check
+
+Test your understanding.
+
+1. How can Security Copilot help an analyst understand a complex incident?
+2. Why should an analyst verify a Copilot-generated summary against the original evidence?
+3. What information can be obtained by reviewing an affected device?
+4. Why is the process tree useful when investigating suspicious activity?
+5. What factors should an analyst consider before isolating a device?
+6. What response actions would you recommend for the incident reviewed in this lab?
+
 ## Summary
 
 In this exercise, you explored the first run experience of Microsoft Security Copilot, provisioned capacity, and explored the standalone and embedded experiences of Copilot. You investigated an incident in Microsoft Defender XDR, explored the incident summary, device summary, script analysis, and more. You also pivoted your investigation to the standalone experience and used the pin board as a way to share details of your investigation with your colleagues.

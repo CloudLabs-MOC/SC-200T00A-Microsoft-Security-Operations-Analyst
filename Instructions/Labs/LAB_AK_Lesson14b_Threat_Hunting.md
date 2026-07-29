@@ -1,6 +1,6 @@
 # Lab - Lesson 14 Lab 11b: Threat Hunting using Notebooks with Microsoft Sentinel (Optional)
 
-### Estimated Timing: 20 Minutes
+### Estimated Timing: 60 Minutes
 
 ## Lab Scenario
 
@@ -218,7 +218,7 @@ In this task you'll open one of Microsoft's provided tutorial notebooks and stud
 
 ## Knowledge check
 
-Test your understanding. Answers are below.
+Test your understanding.
 
 1. What makes a notebook different from a workbook or a playbook, and who typically uses notebooks?
 2. What are the two main types of cells in a Jupyter notebook, and what does each hold?
@@ -226,7 +226,7 @@ Test your understanding. Answers are below.
 4. Name one Python library used to run KQL or perform security investigations from a notebook.
 5. Why is a notebook often described as being both the analysis and its documentation?
 
-## Review
+## Summary
 
 In this lab, you have completed the following:
 

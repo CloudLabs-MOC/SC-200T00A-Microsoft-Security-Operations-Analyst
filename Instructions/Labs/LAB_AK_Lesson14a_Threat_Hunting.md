@@ -1,6 +1,6 @@
 # Lab - Lesson 14 Lab 11a: Perform Threat Hunting in Microsoft Sentinel
 
-### Estimated Timing: 1 Hours
+### Estimated Timing: 80 Minutes
 
 ## Lab Scenario
 
@@ -306,7 +306,7 @@ The reason these are pre-done: each step involves ingestion and processing delay
 
 ## Knowledge check
 
-Test your understanding. Answers are below.
+Test your understanding.
 
 1. How does threat hunting differ from alert triage or incident response?
 2. List three qualities of a good threat-hunting hypothesis.
@@ -314,7 +314,7 @@ Test your understanding. Answers are below.
 4. What is the purpose of a bookmark in Sentinel hunting?
 5. How does the MITRE ATT&CK view help a threat hunter decide where to hunt next?
 
-## Review
+## Summary
 
 In this lab, you have completed the following:
 

@@ -190,7 +190,7 @@ In this task you'll verify that the anti-malware, anti-spam, and anti-phishing p
 
 ### Knowledge check
 
-Test your understanding. Answers are below.
+Test your understanding.
 
 1. What is Exchange Online Protection, and which subscriptions include it?
 2. In which two directions does EOP filter mail, and why does outbound filtering matter?

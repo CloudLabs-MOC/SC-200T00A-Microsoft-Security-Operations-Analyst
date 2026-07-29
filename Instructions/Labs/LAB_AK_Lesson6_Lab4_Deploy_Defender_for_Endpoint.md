@@ -406,7 +406,7 @@ In this task you'll run a summary check across the settings from Tasks 2-4, then
 
 ## Knowledge check
 
-Test your understanding. Answers are below.
+Test your understanding.
 
 1. What is the purpose of attack surface reduction, and give one example of a behavior an ASR rule can block.
 2. What's the difference between setting an ASR rule to **Enabled** versus **AuditMode**, and why might you start a new rule in Audit mode?
@@ -414,7 +414,7 @@ Test your understanding. Answers are below.
 4. The Windows Defender Firewall has three profiles. Which one is the strictest, and when is it used?
 5. During a device investigation, which security Event IDs indicate a successful sign-in and a failed sign-in?
 
-## Review
+## Summary
 
 In this lab, you have completed the following:
 

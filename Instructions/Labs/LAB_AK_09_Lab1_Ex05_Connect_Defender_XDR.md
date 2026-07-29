@@ -103,6 +103,16 @@ In this task, you confirm that the Defender XDR connector is connected and strea
     | take 20
     ```
 
+### Knowledge check
+
+Test your understanding.
+
+1. What workspace status did you verify after connecting Microsoft Sentinel to the Microsoft Defender portal?
+2. Which Microsoft Sentinel table did you run in **Advanced hunting** to view threat intelligence data?
+3. Where did you verify that the Microsoft Defender XDR connector was connected?
+4. What does the connector data graph display after the Microsoft Defender XDR connector is connected?
+5. Which KQL query did you use to verify Microsoft Defender XDR incident ingestion?
+
 ## Summary
 
 After completing this lab you have:

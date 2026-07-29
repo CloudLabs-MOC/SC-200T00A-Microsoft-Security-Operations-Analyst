@@ -188,6 +188,16 @@ In this task, you will change the retention period for the SecurityEvent table.
 
      ![](../Media/lab6-06-12.png)
 
+### Knowledge check
+
+Test your understanding.
+
+1. What was the purpose of creating the **HighValueHosts** watchlist in Microsoft Sentinel?
+2. Which KQL table did you query to verify that the threat indicator was created successfully?
+3. What type of observable did you create when adding the threat indicator?
+4. Which table's retention settings did you modify in Microsoft Sentinel?
+5. What analytics retention period did you configure for the **SecurityEvent** table?
+
 ## Summary
 In this lab, you have completed the following:
 

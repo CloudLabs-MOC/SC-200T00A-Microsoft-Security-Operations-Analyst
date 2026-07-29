@@ -279,7 +279,7 @@ In this task you'll build an incident summary that ties the entities together, t
 
 ## Knowledge check
 
-Test your understanding. Answers are below.
+Test your understanding.
 
 1. Name the five entity types an analyst pivots through during an investigation.
 2. What is a file hash, and why is it useful when checking a file against threat intelligence?
@@ -287,7 +287,7 @@ Test your understanding. Answers are below.
 4. What is a command-and-control (C2) server, and why is an unexpected outbound connection suspicious?
 5. During a user-account investigation, which Windows Security Event IDs represent a successful sign-in and a failed sign-in, and what might a burst of failed sign-ins indicate?
 
-## Review
+## Summary
 
 In this lab, you have completed the following:
 

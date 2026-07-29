@@ -178,7 +178,17 @@ In this task, you will create an automation rule in Microsoft Sentinel that runs
 
     ![Create Automation Rule](../Media/lab9-june26-p2t1p11.png)
 
-### Review
+### Knowledge check
+
+Test your understanding.
+
+1. Which solution did you install from the Content Hub before creating the playbook?
+2. What resource group did you create to store the playbook?
+3. Why did you update the playbook after it was created?
+4. Which Azure role did you assign to allow Microsoft Sentinel to run the playbook?
+5. What action was configured in the automation rule when an incident matched the selected tactics?
+
+### Summary
 In this lab, you have completed the following:
 
 - Created a Playbook in Microsoft Sentinel

@@ -253,26 +253,13 @@ In this task you'll revisit the submitted audit search, review the available aud
 
 ### Knowledge check
 
-Test your understanding. Answers are below.
+Test your understanding.
 
 1. What does Microsoft Purview Audit record, and why is it important for a healthcare organization's compliance?
 2. Why is there a delay between enabling auditing (or performing an activity) and being able to search for the result?
 3. What is the default retention period for Audit (Standard), and why might that be a problem for a breach discovered seven months later?
 4. Name one high-value event available in Audit (Premium) but not Standard, and explain why it matters during a breach investigation.
 5. What PowerShell command enables unified audit log ingestion, and what command confirms whether it's on?
-
-<details>
-<summary>Show answers</summary>
-
-1. It records user and admin activities across Microsoft 365 (who did what, when, in which service). For healthcare compliance it provides the evidence trail needed to prove who accessed patient data and to investigate suspected breaches.
-2. Audit data must be ingested and indexed before it's searchable. Enabling auditing can take up to ~60 minutes to fully activate, and individual records typically appear within minutes to a few hours after the activity.
-3. 180 days. If a breach is discovered about seven months later, the relevant records may already have been purged, leaving no evidence — which is why a longer custom retention policy (Premium) is valuable.
-4. **MailItemsAccessed** (mail read) — it reveals which emails a compromised account actually accessed, answering the key forensic question of what data was exposed. (Mailbox/SharePoint search terms are also acceptable.)
-5. Enable: `Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true`. Confirm: `Get-AdminAuditLogConfig | FL UnifiedAuditLogIngestionEnabled`.
-
-</details>
-
----
 
 ## Summary
 

@@ -108,6 +108,15 @@ In this task, you will investigate an incident.
 
 	![Picture 1](../Media/lab9-june26-p9t1p15.png)
 
+### Knowledge check
+
+Test your understanding.
+
+1. Why did you assign the incident to yourself during the investigation?
+2. What tag did you add to the incident, and why is tagging useful?
+3. Which playbook was available to run manually from the incident?
+4. What entity did you review in the **Attack story** to view additional information?
+5. What status and classification did you set before completing the investigation?
 
 ## Summary
 In this lab, you have completed the following:

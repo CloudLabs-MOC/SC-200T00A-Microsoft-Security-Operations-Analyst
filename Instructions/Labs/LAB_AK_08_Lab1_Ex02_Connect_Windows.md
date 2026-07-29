@@ -269,7 +269,17 @@ In this task, you'll add an Azure Arc-connected, non-Azure Windows virtual machi
 
 1. Once the **Validation Passed**, click on **Create**.
 
-## Review
+### Knowledge check
+
+Test your understanding.
+
+1. Why did you install Azure Arc on the non-Azure Windows machine before connecting it to Microsoft Sentinel?
+2. What was the name of the data collection rule you created to collect Windows Security Events?
+3. Which Windows Security Events data connector did you use to connect both Azure and non-Azure Windows machines?
+4. Which Azure virtual machine did you add to the data collection rule?
+5. Which non-Azure machine did you add to the data collection rule after it was connected through Azure Arc?
+
+## Summary
 In this lab, you have completed the following:
 
 - Created a Windows Virtual Machine in Azure

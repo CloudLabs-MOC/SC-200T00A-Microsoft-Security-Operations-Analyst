@@ -250,7 +250,17 @@ In this task, you will connect a Linux host to Microsoft Sentinel with the Syslo
 
 1. Type **exit** to close the remote shell connection to LIN2.
 
-## Review 
+### Knowledge check
+
+Test your understanding.
+
+1. Which Microsoft Sentinel solution did you install to connect the first Linux host using the Common Event Format (CEF)?
+2. What was the name of the data collection rule you created for the CEF connector?
+3. Which command did you run on the Linux host to verify that the syslog service was listening on port 514?
+4. What was the name of the data collection rule you created for the Syslog connector?
+5. Which table can you query to view Syslog events after configuring the Syslog connector?
+
+## Summary 
 In this lab, you have completed the following:
 
 - Accessed the Microsoft Sentinel Workspace

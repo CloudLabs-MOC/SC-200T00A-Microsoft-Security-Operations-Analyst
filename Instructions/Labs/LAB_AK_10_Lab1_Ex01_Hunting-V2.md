@@ -1,4 +1,4 @@
-# Assignment 3: Perform Threat Hunting in Microsoft Sentinel
+# Lab - Assignment 3: Perform Threat Hunting in Microsoft Sentinel
 
 ## Lab scenario
 
@@ -324,7 +324,8 @@ In this task, you'll use a Search job to look for a C2.
     - Add another filter.
     - Set the second filter to have techniques: T1098.
 
-## Review
+## Summary
+
 In this lab, you have completed the following:
 - Created a hunting query.
 - Created an NRT query rule.

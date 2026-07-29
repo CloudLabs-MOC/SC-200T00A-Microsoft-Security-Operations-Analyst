@@ -295,6 +295,16 @@ In this task, you will create a detection for the second attack of the previous 
   
 1. On the **Review and create** tab, select the **Save** button to create the new Scheduled Analytics rule.
 
+### Knowledge check
+
+Test your understanding.
+
+1. Which KQL query helped you identify the persistence attack involving registry key modifications?
+2. What information did you provide when creating the **Startup RegKey** analytics rule?
+3. Which Event ID was used to detect a user being added to the local Administrators group?
+4. Why did you configure entity mappings when creating the analytics rules?
+5. What automation action was configured to run when an incident was created?
+
 ## Summary
 In this lab, you have completed the following:
 - Persistence Attack Detection
