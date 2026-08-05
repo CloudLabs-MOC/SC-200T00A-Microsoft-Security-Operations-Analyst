@@ -5,7 +5,7 @@
     "BaseURL": "https://www.github.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/tree/Combined-lab",
     "Files": [
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/Combined-lab/Instructions/Labs/combined_gettingstarted_page",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/Combined-lab/Instructions/Combined-lab/combined_gettingstarted_page.md",
         "Order": 1
       },
       {
