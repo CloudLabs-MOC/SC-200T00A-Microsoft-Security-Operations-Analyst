@@ -1,4 +1,4 @@
-# Exercise 3: Getting a Connector via the Microsoft Security Store​
+# Lab 03: Getting a Connector via the Microsoft Security Store​
 
 ### Estimated Duration: 30 Minutes
 
@@ -69,7 +69,7 @@ In this exercise, you will complete the following tasks:
 
 In this exercise, you have deployed Microsoft Defender XDR solution for Sentinel solution from Microsoft Security Store and configured it
 
-## You have successfully completed the exercise!
+## You have successfully completed the lab!
 
 ### Now, click on **Next >>** from the lower right corner to move on to the next page.
 

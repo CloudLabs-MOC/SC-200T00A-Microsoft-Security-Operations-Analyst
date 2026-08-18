@@ -1,6 +1,6 @@
-# Exercise 1: Responding to Threats Using Automation
+# Lab 01: Responding to Threats Using Automation
 
-## Estimated Duration: 60 Minutes
+## Estimated Duration: 50 Minutes
 
 ## Overview
 
@@ -520,7 +520,7 @@ In this exercise, you successfully:
 - **Designed a playbook** that sends email notifications and enriches incidents
 - **Linked the playbook** to automation rules for automated triggering
 
-## You have successfully completed the exercise!
+## You have successfully completed the lab!
 
 ### Now, click on **Next >>** from the lower right corner to move on to the next page.
 

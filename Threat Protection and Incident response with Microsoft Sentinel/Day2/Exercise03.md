@@ -1,6 +1,6 @@
-# Exercise 3: Analytics Rules and Incident Management
+# Lab 03: Analytics Rules and Incident Management
 
-## Estimated Duration: 40 Minutes
+## Estimated Duration: 25 Minutes
 
 ## Overview
 In this exercise, you will configure **Microsoft Sentinel** to detect and respond to security threats. You will start by creating a Log Analytics Workspace and deploying Microsoft Sentinel to it. Next, you will create and export an analytics rule to detect suspicious activities. Finally, you will generate and investigate an incident to understand Sentinel’s incident management process.
@@ -171,7 +171,7 @@ In this task, you will create and investigate an incident.
 ## Summary
 In this exercise, you successfully created and exported an analytics rule, and investigated an incident. You have gained practical experience in configuring detection rules and managing security incidents within Sentinel.
 
-## You have successfully completed the exercise!
+## You have successfully completed the lab!
 
 ### Now, click on **Next >>** from the lower right corner to move on to the next page.
 

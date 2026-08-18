@@ -1,4 +1,4 @@
-# Exercise 5: Advanced Threat Hunting with Jupyter Notebooks in Microsoft Sentinel
+# Lab 05: Advanced Threat Hunting with Jupyter Notebooks in Microsoft Sentinel
 
 ## Estimated Duration: 30 Minutes
 
@@ -229,7 +229,7 @@ In this exercise, you successfully:
 - **Initialized MSTICPy** and established a secure connection to your Sentinel workspace
 - **Executed advanced threat hunting** queries using KQL within Python
 
-## You have successfully completed the exercise!
+## You have successfully completed the lab!
 
 ### Now, click on **Next >>** from the lower right corner to move on to the next page.
 

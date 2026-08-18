@@ -1,4 +1,4 @@
-# Exercise 4: Threat Intelligence connector and Content Hub
+# Lab 04: Threat Intelligence connector and Content Hub
 
 ## Estimated Duration: 30 Minutes
 
@@ -143,7 +143,7 @@ In this task, you will change the retention period for the SecurityEvent table.
 ### Summary
 his lab, you explored the Microsoft Sentinel Content Hub to discover and deploy relevant solutions, then connected the Threat Intelligence data connector to ingest threat data. You also created a Threat Indicator, enabling Sentinel to detect and correlate security events with known malicious indicators.
 
-## You have successfully completed the exercise!
+## You have successfully completed the lab!
 
 ### Now, click on **Next >>** from the lower right corner to move on to the next page.
 
