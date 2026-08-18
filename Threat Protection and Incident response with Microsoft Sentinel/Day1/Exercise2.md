@@ -1,6 +1,6 @@
-# Exercise 2 - Enabling Data Connectors in Microsoft Sentinel in Microsoft Defender Portal
+# Lab 02: Enabling Data Connectors in Microsoft Sentinel in Microsoft Defender Portal
 
-## Estimated Duration: 60 Minutes
+## Estimated Duration: 45 Minutes
 
 ## Overview
 
@@ -135,7 +135,7 @@ In this task, you will connect the Azure Activity connector.
 ### Summary
 In this lab, you have integrated log data from various data sources within the organization into Microsoft Sentinel using appropriate data connectors.
 
-## You have successfully completed the exercise!
+## You have successfully completed the lab!
 
 ### Now, click on **Next >>** from the lower right corner to move on to the next page.
 

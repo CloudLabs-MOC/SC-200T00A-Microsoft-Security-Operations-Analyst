@@ -21,6 +21,10 @@ By the end of this lab, participants will be able to:
 
   - **Enable and use UEBA** in Microsoft Sentinel to detect abnormal user and entity behaviours.
 
+  - **Operationalize the Sentinel data lake** by configuring table tiering across the Analytics, Basic, and Auxiliary tiers to balance query performance with long-term retention costs.
+
+  - **Use the Sentinel MCP server** to run AI-assisted, natural-language investigations against incidents, alerts, and advanced hunting data.
+
 Understand the role of each component in the threat detection and incident response workflow.
 
 ## Pre-requisites

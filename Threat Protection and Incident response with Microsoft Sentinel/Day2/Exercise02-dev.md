@@ -1,4 +1,4 @@
-# Exercise 2: Hunt Threats Using KQL Across the Data Lake
+# Lab 02: Hunt Threats Using KQL Across the Data Lake
 
 ## Estimated Duration: 30 Minutes
 
@@ -222,7 +222,7 @@ In this task, you will save your hunting queries as saved queries for future use
 
 In this exercise, you explored the Microsoft Sentinel data lake structure, created basic and advanced threat hunting queries using KQL, correlated data across multiple sources to identify sophisticated attack patterns, and saved hunting queries for team reuse. You have established the foundation for proactive threat hunting and continuous security monitoring across your organization.
 
-## You have successfully completed the exercise!
+## You have successfully completed the lab!
 
 ### Now, click on **Next >>** from the lower right corner to move on to the next page.
 

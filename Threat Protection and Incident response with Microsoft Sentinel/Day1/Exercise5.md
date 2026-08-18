@@ -1,5 +1,5 @@
 
-# Exercise 5 - UEBA with Microsoft Sentinel
+# Lab 05: UEBA with Microsoft Sentinel
 
 ## Estimated Duration: 30 Minutes
 
@@ -92,6 +92,7 @@ In this lab, you enabled UEBA in Microsoft Sentinel to profile entities, detect 
 
 ## You have successfully completed the lab!
 
-In this hands-on lab, **Threat Protection and Incident response with Microsoft Sentinel within Unified Platform**, you successfully deployed Microsoft Sentinel, integrated key data sources, enriched insights with threat intelligence, and applied UEBA for anomaly detection. You are now equipped to build a robust security monitoring setup, detect potential threats, and respond effectively to incidents.
+### Now, click on **Next >>** from the lower right corner to move on to the next page.
 
+   ![](./images/Next.png)
 
