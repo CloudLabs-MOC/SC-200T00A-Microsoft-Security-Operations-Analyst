@@ -42,15 +42,19 @@ Participants should have:
 
 ## Architecture
  
-In this lab, you will use Microsoft Sentinel to detect, investigate, and respond to security threats across your environment. Data from connected sources such as Azure Active Directory, Microsoft 365 Defender, and security appliances will be ingested into Sentinel, where Analytics Rules automatically identify suspicious activities and generate incidents for investigation. You will perform proactive threat hunting using Kusto Query Language (KQL) and enrich queries with Watchlists containing sensitive asset details or known threat indicators. Advanced features such as Content Hub for packaged detections, Threat Intelligence integration for external data enrichment. Finally, you will integrate Sentinel with GitHub or Azure DevOps repositories, enabling version-controlled collaboration on analytics rules, hunting queries, and security configurations, fostering a proactive, automated, and collaborative approach to enterprise threat protection and incident response.
+In this lab, you will use Microsoft Sentinel to detect, investigate, and respond to security threats across your environment. Data from connected sources such as Azure Active Directory, Microsoft 365 Defender, and security appliances will be ingested into Sentinel, where Analytics Rules automatically identify suspicious activities and generate incidents that Automation Rules and playbooks can respond to. You will perform proactive threat hunting using Kusto Query Language (KQL) across the Sentinel data lake and enrich queries with Watchlists containing sensitive asset details or known threat indicators. You will then move to advanced, code-driven investigation using Jupyter notebooks and MSTICPy, correlate multi-cloud telemetry from CrowdStrike, Palo Alto, Okta, and AWS into a single attack timeline, and finally automate cross-platform incident response, including real device isolation with Microsoft Defender for Endpoint (MDE), fostering a proactive, automated, and collaborative approach to enterprise threat protection and incident response.
 
 ## Architecture Diagram
 
-![Image](./images/ArcDay2.png)
+![Image](images/archi2.png)
 
 ## Explanation of Components
 
 The architecture for this lab involves the following key components:
+
+ 1. **Automation Rules & Playbooks:** Automation Rules orchestrate incident-handling logic in Sentinel and can trigger Logic Apps-based playbooks to take remediation actions automatically.
+    - Centralize and prioritize automation logic across analytics rules.
+    - Playbooks can enrich, notify, or remediate without analyst intervention.
 
  1. **Analytics Rules:** Analytics Rules are detection logic in Sentinel that automatically generate incidents when specific patterns of suspicious activity are detected in ingested logs. They can be created from built-in templates or customized using KQL.
     - Real-time or scheduled execution.
@@ -62,7 +66,7 @@ The architecture for this lab involves the following key components:
    - Entity enrichment for IPs, users, and devices.
    - Assignment, tagging, and closing workflows. 
 
-1. **Hunting Queries:** Hunting queries are analyst-driven searches for threats that may have bypassed automated detections. They allow proactive exploration of data using KQL.
+1. **Hunting Queries:** Hunting queries are analyst-driven searches for threats that may have bypassed automated detections. They allow proactive exploration of data using KQL across the Sentinel data lake.
 
    - Can be saved for reuse and scheduled.
    - Linked with bookmarks for potential incidents.
@@ -73,10 +77,17 @@ The architecture for this lab involves the following key components:
    - Join or filter data within KQL queries.
    - Dynamic update without modifying query logic.  
 
-1. **Repositories in Microsoft Sentinel:** Repositories allow integration of version-controlled detection rules, queries, and configurations from GitHub or Azure DevOps into Sentinel. This supports DevSecOps workflows for security teams.
-   - Continuous integration and delivery for security content.
-   - Synchronization between Sentinel and Git repositories.
-   - Collaboration and change tracking for analytics rules and hunting queries.         
+1. **Jupyter Notebooks & MSTICPy:** Code-driven investigation using an Azure Machine Learning workspace and the MSTICPy library extends hunting beyond native KQL.
+   - Builds reusable, shareable investigation workflows.
+   - Combines KQL, Python, and visualization in a single notebook.
+
+1. **Multi-Cloud Data Sources:** Sentinel ingests and correlates telemetry from third-party platforms such as CrowdStrike, Palo Alto, Okta, and AWS alongside Microsoft data.
+   - Enables a single, cross-platform attack timeline.
+   - Hunting queries can join across disparate log schemas.
+
+1. **Microsoft Defender for Endpoint (MDE) Integration:** Sentinel automation can reach into MDE to take real response actions on endpoints.
+   - Manual or automated device isolation from detection rules.
+   - Actions are reversible and tracked in the Action Center.
 
 ## Getting Started with Lab
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.

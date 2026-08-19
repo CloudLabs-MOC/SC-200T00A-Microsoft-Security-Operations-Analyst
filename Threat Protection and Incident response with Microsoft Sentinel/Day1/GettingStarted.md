@@ -4,8 +4,8 @@
 
 ## Overview
  
-In this lab, you will get hands-on experience with Microsoft Sentinel. Participants will learn how to deploy Sentinel, integrate critical data sources, enrich security insights using threat intelligence and content packs, and leverage User and Entity behaviour Analytics (UEBA) to detect anomalous activities.
-By completing this lab, learners will be equipped to set up a robust security monitoring environment, detect potential threats, and initiate effective incident response measures.
+In this lab, you will get hands-on experience with Microsoft Sentinel. Participants will learn how to deploy Sentinel, integrate critical data sources, enrich security insights using threat intelligence and content packs, and leverage User and Entity behaviour Analytics (UEBA) to detect anomalous activities. You will also operationalize the Sentinel data lake through table tiering and KQL jobs, and connect the Sentinel MCP server to GitHub Copilot to run AI-assisted, natural-language investigations.
+By completing this lab, learners will be equipped to set up a robust security monitoring environment, detect potential threats, and initiate effective incident response measures using both traditional and AI-assisted techniques.
 
 ## Objective
 
@@ -43,11 +43,11 @@ Participants should have:
 
 In this lab, you will use Microsoft Sentinel to collect, analyze, and respond to security events from multiple data sources. The workflow begins by deploying a Log Analytics workspace and enabling Microsoft Sentinel for centralized log collection. You will connect various security data sources using built-in data connectors, including Azure Active Directory, Microsoft 365 Defender, and other supported services. Threat intelligence will be integrated into Sentinel to enrich alerts with known malicious indicators, enhancing the accuracy of detections. You will explore the Content Hub to deploy prebuilt analytics rules, hunting queries, and workbooks for faster detection and visualization. Additionally, you will enable User and Entity Behavior Analytics (UEBA) to profile normal user activity and detect anomalies.
 
-Throughout the lab, you will investigate generated incidents, run hunting queries, and use automated playbooks to respond to threats, simulating a complete security operations workflow from detection to remediation.
+You will then operationalize the Sentinel data lake by configuring table tiering across the Analytics, Basic, and Auxiliary tiers to balance query performance against long-term retention costs, and use the Sentinel MCP server to run AI-assisted, natural-language investigations against incidents, alerts, and advanced hunting data, simulating a complete security operations workflow from detection to AI-assisted remediation.
 
 ## Architecture Diagram
 
-![Image](./images/903.png)
+![Image](./images/archi1.png)
 
 ## Explanation of Components
 
@@ -75,7 +75,15 @@ The architecture for this lab involves the following key components:
 
 1. **Kusto Query Language (KQL):** The query language used to search and analyze data within Sentinel.
    - Powers analytics rules, hunting queries, and workbooks.
-   - Essential for creating custom detections.         
+   - Essential for creating custom detections.
+
+1. **Sentinel Data Lake & Table Tiering:** Lets you assign ingested tables to the Analytics, Basic, or Auxiliary tier based on how often they need to be queried.
+   - Balances interactive query performance against long-term retention cost.
+   - KQL jobs can search across tiers for extended historical investigations.
+
+1. **Sentinel MCP Server:** Exposes Sentinel incidents, alerts, and advanced hunting data to AI assistants through the Model Context Protocol.
+   - Enables natural-language, AI-assisted investigation of incidents and attack timelines.
+   - Speeds up triage by summarizing findings and suggesting next investigative steps.
 
 ## Getting Started with Lab
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
