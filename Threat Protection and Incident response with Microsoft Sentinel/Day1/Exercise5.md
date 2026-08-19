@@ -1,4 +1,3 @@
-
 # Lab 05: UEBA with Microsoft Sentinel
 
 ## Estimated Duration: 30 Minutes
