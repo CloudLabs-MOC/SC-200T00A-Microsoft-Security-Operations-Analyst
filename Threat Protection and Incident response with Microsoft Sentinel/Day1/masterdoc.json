@@ -5,27 +5,27 @@
         "BaseURL": "https://github.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst.git",
         "Files": [
              {
-                "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/m-sandbox/Threat%20Protection%20and%20Incident%20response%20with%20Microsoft%20Sentinel/Day1/GettingStarted.md",
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/m-sandbox/Threat%20Protection%20and%20Incident%20response%20with%20Microsoft%20Sentinel/Day1/GettingStarted.md",
                 "Order": 1
              },
              {
-                "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/m-sandbox/Threat%20Protection%20and%20Incident%20response%20with%20Microsoft%20Sentinel/Day1/Exercise1.md",
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/m-sandbox/Threat%20Protection%20and%20Incident%20response%20with%20Microsoft%20Sentinel/Day1/Exercise1.md",
                 "Order": 2
              },
              {
-                "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/m-sandbox/Threat%20Protection%20and%20Incident%20response%20with%20Microsoft%20Sentinel/Day1/Exercise2.md",
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/m-sandbox/Threat%20Protection%20and%20Incident%20response%20with%20Microsoft%20Sentinel/Day1/Exercise2.md",
                 "Order": 3
              },
              {
-                "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/m-sandbox/Threat%20Protection%20and%20Incident%20response%20with%20Microsoft%20Sentinel/Day1/Exercise3.md",
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/m-sandbox/Threat%20Protection%20and%20Incident%20response%20with%20Microsoft%20Sentinel/Day1/Exercise3.md",
                 "Order": 4
              },
              {
-                "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/m-sandbox/Threat%20Protection%20and%20Incident%20response%20with%20Microsoft%20Sentinel/Day1/Exercise4.md",
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/m-sandbox/Threat%20Protection%20and%20Incident%20response%20with%20Microsoft%20Sentinel/Day1/Exercise4.md",
                 "Order": 5
              },
              {
-                "RawFilePath": "https://docs-api.cloudlabs.ai/repos/raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/m-sandbox/Threat%20Protection%20and%20Incident%20response%20with%20Microsoft%20Sentinel/Day1/Exercise5.md",
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/SC-200T00A-Microsoft-Security-Operations-Analyst/refs/heads/m-sandbox/Threat%20Protection%20and%20Incident%20response%20with%20Microsoft%20Sentinel/Day1/Exercise5.md",
                 "Order": 6
              }
         ]
