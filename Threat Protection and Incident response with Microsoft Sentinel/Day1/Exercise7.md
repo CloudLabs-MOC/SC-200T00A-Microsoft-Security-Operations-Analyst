@@ -12,8 +12,10 @@ In this lab, you will explore how the Model Context Protocol (MCP) brings AI-ass
 
 In this lab, you will perform the following:
 - Task 1: Verify Sentinel readiness and triage prerequisites
-- Task 2: Connect GitHub Copilot to Sentinel via the MCP triage collection
-- Task 3: Investigate real attacks using MCP and natural language
+- Task 2: Onboard a Windows Device to Microsoft Defender for Endpoint
+- Task 3: Verify Attack Data Exists in Advanced Hunting
+- Task 4: Connect GitHub Copilot to Sentinel via the MCP triage collection
+- Task 5: Investigate real attacks using MCP and natural language
 
 ### Task 1: Verify Sentinel Readiness and Triage Prerequisites
 
@@ -39,7 +41,71 @@ In this task, you will verify that your Microsoft Sentinel workspace is connecte
 
    > **Note:** The triage MCP collection requires your Sentinel workspace to be connected to the Defender portal (or Defender XDR / Defender for Endpoint), plus the **Security Reader** role. If you have Owner or Global Administrator, the role requirement is already satisfied.
 
-### Task 1.2: Verify Attack Data Exists in Advanced Hunting
+### Task 2: Onboard a Windows Device to Microsoft Defender for Endpoint
+
+In this task, you will download the Microsoft Defender for Endpoint onboarding package, onboard the Windows device using the local script, and verify that the device is successfully onboarded.
+
+1. In the **Microsoft Defender** portal, click on **Show navigation** from the left navigation pane, expand **Setup & configuration (1)**, select **Settings (2)**, and then select **Endpoints**.
+
+      ![](images/ex1.png)
+
+    >**Note:** If you are not able to see the **Endpoints** option under **Settings**, use the following direct URL to navigate to the **Endpoints.** It could take some time to load.
+
+    ```
+    https://security.microsoft.com/securitysettings/endpoints/integration
+    ```
+
+1. In the **Endpoints** settings page, select **Onboarding (1)**, verify **Windows 10 and 11 (2)** is selected as the operating system, and set the **Deployment method** to **Local Script (for up to 10 devices) (3)**.
+
+    ![](images/1.png)
+
+1. Scroll down and select **Download onboarding package** to download the Microsoft Defender for Endpoint onboarding package.
+
+    ![](images/2.png)
+
+1. Select **Search icon (1)** on the LabVM taskbar, enter **File (2)**, and then select **File Explorer (3)** from the search results.
+
+    ![](images/3.png)
+
+1. Right-click **WindowsDefenderATPOnboardingPackage (2)** in the **Downloads (1)** folder, and then select **Extract All... (3)** from the context menu to extract the contents of the compressed package.
+
+    ![](images/4.png)
+
+1. In the **Extract Compressed (Zipped) Folders** dialog, select **Extract** to choose the extraction location.
+
+    ![](images/5.png)
+
+1. Open the **Start** menu, type **cmd (1)**, right-click **Command Prompt (2)**, and then select **Run as administrator (3)**.
+
+    ![](images/6.png)
+
+1. In the **Administrator: Command Prompt** window, type the below prompt, paste the copied folder path, and press **Enter** to change to the **GatewayWindowsDefenderATPOnboardingPackage** directory.
+
+    ```
+    cd C:\Users\azureuser\Downloads\GatewayWindowsDefenderATPOnboardingPackage
+    ```
+
+    ![](images/7.png)
+
+1. In the **Administrator: Command Prompt** window, run the below script. When prompted, type **Y** and press **Enter** to confirm and start onboarding the device.
+
+    ```
+    WindowsDefenderATPLocalOnboardingScript.cmd
+    ```
+
+    ![](images/8.png) 
+
+1. Verify that the onboarding script completes successfully. When the message **Successfully onboarded machine to Microsoft Defender for Endpoint** appears, press any key to close the **Command Prompt** window.
+
+    ![](images/l1t1s18.png)
+
+1. Navigate back to the **Microsoft Defender > Endpoints** portal.
+
+1. Verify that the device onboarding status shows **First device onboarded: Completed (2)** on the **Onboarding (1)** page, confirming that the device has been successfully onboarded to Microsoft Defender for Endpoint.
+
+    ![](images/9.png)
+
+### Task 3: Verify Attack Data Exists in Advanced Hunting
 
 In this task, you will confirm that the pre-configured attack telemetry has been ingested and is available in Advanced Hunting before connecting AI tools.
 
@@ -53,32 +119,32 @@ In this task, you will confirm that the pre-configured attack telemetry has been
    | order by EventCount desc
    ```
 
-   ![](./images/mcp-image6.png)
+   ![](./images/10.png) 
 
    > **Expected result:** Multiple rows showing `cmd.exe` and `powershell.exe` executions on your lab VMs, confirming attack telemetry is ingested.
 
 3. Run a second validation query for credential-theft indicators:
 
    ```kql
-   SecurityAlert
-   | where TimeGenerated > ago(7d)
-   | summarize AlertCount = count() by AlertName, ProductName
+   AlertInfo
+   | where Timestamp > ago(7d)
+   | summarize AlertCount = count() by Title, ServiceSource
    | order by AlertCount desc
    ```
 
-   ![](./images/mcp-image7.png)
+   ![](./images/11.png)
 
    > **Expected result:** Alerts from Microsoft Defender for Endpoint (MDE), Microsoft Defender for Identity (MDI), and Microsoft Defender for Cloud (MDC), including LSASS access, Kerberoasting, and suspicious PowerShell activity.
 
 > **Checkpoint:** You have confirmed that Sentinel is connected to the Defender portal and that real attack data is available in Advanced Hunting. You are now ready to connect AI tools using the triage collection - no data lake needed.
 
-### Task 2: Connect GitHub Copilot to Sentinel via the MCP Triage Collection
+### Task 4: Connect GitHub Copilot to Sentinel via the MCP Triage Collection
 
 **Objective:** Establish a live connection between VS Code and Microsoft Sentinel using the MCP triage collection, enabling natural-language queries against your incidents, alerts, and advanced hunting data.
 
 > **What is MCP?** The Model Context Protocol is an open standard that lets AI tools (like GitHub Copilot) securely access external data sources. The Sentinel MCP triage collection lets you investigate security data using plain English instead of writing KQL - and it authenticates through Microsoft Entra ID.
 
-### Task 2.1: Add the Sentinel MCP Triage Server
+### Task 4.1: Add the Sentinel MCP Triage Server
 
 In this task, you will configure VS Code to connect to the Sentinel MCP triage endpoint.
 
@@ -142,7 +208,7 @@ In this task, you will configure VS Code to connect to the Sentinel MCP triage e
 
 1. On the next **Authorize Visual Studio Code** page, click **Authorize Visual Studio Code**, then click **Allow**.
 
-### Task 2.2: Test the MCP Connection
+### Task 4.2: Test the MCP Connection
 
 In this task, you will validate that the MCP connection works and that Copilot can access your Sentinel data.
 
@@ -160,13 +226,13 @@ In this task, you will validate that the MCP connection works and that Copilot c
 
    > **Success criteria:** Incident or alert data from your environment appears in the response. This confirms the MCP triage connection is working and Copilot can access your Sentinel data through Advanced Hunting.
 
-### Task 3: Investigate Real Attacks Using MCP and Natural Language
+### Task 5: Investigate Real Attacks Using MCP and Natural Language
 
 **Objective:** Use the MCP triage connection to investigate whatever attack evidence exists in your environment using natural language instead of KQL. The prompts in this task are generic on purpose — they work regardless of which specific alerts, devices, or accounts are present in your tenant.
 
 > **Context:** Instead of writing complex KQL queries, you will use natural language, and the triage tools will query your alerts and advanced hunting data behind the scenes. Your environment may contain different alerts, incidents, device names, and user accounts than the screenshots show — that is expected. Focus on the *investigation workflow*: ask a broad question, review what comes back, then drill deeper into whatever the AI surfaces.
 
-### Task 3.1: Investigate Alerts and Potential Compromise
+### Task 5.1: Investigate Alerts and Potential Compromise
 
 In this task, you will use Copilot (via MCP) to surface recent security alerts and investigate whatever suspicious activity exists in your environment.
 
@@ -198,7 +264,7 @@ In this task, you will use Copilot (via MCP) to surface recent security alerts a
 
    > **Important:** You may observe differences between Copilot's output and the lab screenshots. This is expected — Copilot does not always generate identical output, and your environment's data differs from the lab reference. The investigation workflow and the type of insights remain the same.
 
-### Task 3.2: Investigate Lateral Movement and Timeline
+### Task 5.2: Investigate Lateral Movement and Timeline
 
 In this task, you will analyze how activity is distributed across devices over time to identify possible lateral movement.
 
@@ -224,7 +290,7 @@ In this task, you will analyze how activity is distributed across devices over t
 
 4. Review the response. Depending on your data, Copilot may surface activity such as account or group enumeration, credential-access attempts, connections to other hosts, or persistence techniques. Note whatever it finds and how it connects the events together.
 
-### Task 3.3: Generate an Investigation Summary
+### Task 5.3: Generate an Investigation Summary
 
 In this task, you will use Copilot to generate a structured executive summary based on everything analyzed so far.
 
